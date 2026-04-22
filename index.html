@@ -13,44 +13,84 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   background: #fafaf9;
   color: #1a1a1a;
-  line-height: 1.5;
+  line-height: 1.55;
 }
-.wrap { max-width: 900px; margin: 0 auto; }
+.wrap { max-width: 920px; margin: 0 auto; }
 header { margin-bottom: 20px; }
 h1 { margin: 0 0 4px 0; font-size: 26px; font-weight: 600; }
 .subtitle { color: #666; font-size: 13px; }
+.byline { color: #777; font-size: 12px; margin-top: 4px; font-style: italic; }
+.byline a { color: #1862a8; text-decoration: none; }
+.byline a:hover { text-decoration: underline; }
 .controls {
-  display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 20px;
-  padding: 14px 16px; background: #fff; border: 1px solid #e5e5e4;
-  border-radius: 10px; align-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+  margin-bottom: 20px;
+  padding: 14px 16px;
+  background: #fff;
+  border: 1px solid #e5e5e4;
+  border-radius: 10px;
 }
-.controls label { font-size: 12px; color: #555; font-weight: 500; text-transform: uppercase; letter-spacing: 0.3px; }
+.controls label { display: block; font-size: 11px; color: #555; font-weight: 600; text-transform: uppercase; letter-spacing: 0.4px; margin-bottom: 4px; }
 .controls select, .controls input[type=search] {
-  padding: 6px 10px; border: 1px solid #d4d4d1; border-radius: 6px;
+  width: 100%; padding: 7px 10px; border: 1px solid #d4d4d1; border-radius: 6px;
   font-size: 14px; background: #fff;
 }
 .bydel { margin-bottom: 28px; }
 .bydel h2 {
   margin: 0 0 10px 0; font-size: 20px; border-bottom: 2px solid #1a1a1a;
-  padding-bottom: 4px; display: flex; justify-content: space-between; align-items: baseline;
+  padding-bottom: 4px; display: flex; justify-content: space-between; align-items: baseline; gap: 10px;
 }
 .bydel h2 small { font-weight: 400; font-size: 12px; color: #777; }
 .story {
   background: #fff; border: 1px solid #e5e5e4; border-radius: 10px;
   padding: 14px 16px; margin-bottom: 10px;
 }
-.story h3 { margin: 0 0 6px 0; font-size: 15px; font-weight: 600; }
-.story .meta { font-size: 12px; color: #777; margin-bottom: 6px; }
+.story h3 {
+  margin: 0 0 6px 0; font-size: 15px; font-weight: 600;
+  display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+}
+.story .meta { font-size: 12px; color: #777; margin-bottom: 8px; display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
 .story .meta .source { font-weight: 500; color: #555; }
-.story p { margin: 0 0 8px 0; font-size: 14px; }
+.story .meta .sep { color: #ccc; }
+.story p { margin: 0 0 8px 0; font-size: 14px; line-height: 1.55; }
 .story a.readmore { font-size: 13px; color: #1862a8; text-decoration: none; }
 .story a.readmore:hover { text-decoration: underline; }
+.pill {
+  display: inline-block; font-size: 11px; font-weight: 600;
+  padding: 2px 8px; border-radius: 999px;
+  background: #eef2f7; color: #33485f; text-transform: uppercase; letter-spacing: 0.4px;
+}
+.pill.skole { background: #e7f2ff; color: #1a4f8b; }
+.pill.politikk { background: #f3e8ff; color: #6b21a8; }
+.pill.idrett { background: #e8f6ec; color: #1f6d3a; }
+.pill.kultur { background: #fff3d9; color: #8a5a00; }
+.pill.trafikk { background: #ffe8e4; color: #9c2a12; }
+.pill.helse { background: #ffeaf1; color: #9c1f5a; }
+.pill.naering { background: #e4f3ef; color: #1f6b5c; }
+.pill.sikkerhet { background: #fce8e8; color: #9a1a1a; }
+.pill.arrangement { background: #fff0e4; color: #8a3a00; }
+.pill.annet { background: #eef2f7; color: #33485f; }
+.news-badge {
+  display: inline-flex; align-items: center; gap: 5px;
+  font-size: 10px; font-weight: 700; letter-spacing: 0.6px;
+  color: #0f5d2e; background: #d8f3dc; padding: 2px 7px;
+  border-radius: 999px; text-transform: uppercase;
+}
+.news-badge::before {
+  content: ""; width: 7px; height: 7px; border-radius: 50%;
+  background: #1a9d4c; box-shadow: 0 0 0 2px rgba(26,157,76,0.2);
+  display: inline-block;
+}
+.no-results {
+  background: #fff; border: 1px dashed #d4d4d1; border-radius: 10px;
+  padding: 20px; text-align: center; color: #888; font-style: italic;
+}
 footer { margin-top: 32px; padding-top: 16px; border-top: 1px solid #e5e5e4; color: #777; font-size: 12px; }
 footer a { color: #1862a8; }
-.empty-hint { color: #999; font-style: italic; font-size: 13px; }
 @media (max-width: 600px) {
   body { padding: 16px; }
-  .controls { flex-direction: column; align-items: stretch; }
 }
 </style>
 </head>
@@ -58,389 +98,888 @@ footer a { color: #1862a8; }
 <div class="wrap">
 <header>
   <h1>Bydelsnytt Oslo</h1>
-  <div class="subtitle">22. april 2026 &middot; 38 saker fra 15 bydeler</div>
+  <div class="subtitle">22. april 2026 &middot; 53 saker fra 15 bydeler &middot; 1 fersk siste 24 timer</div>
+  <div class="byline">Et lite prosjekt fra Thomas Elboth (<a href="mailto:t.elboth@gmail.com">t.elboth@gmail.com</a>)</div>
 </header>
 <div class="controls">
   <div>
-    <label for="bydel-filter">Bydel</label><br>
+    <label for="bydel-filter">Bydel</label>
     <select id="bydel-filter">
+      <option value="Vestre Aker" selected>Vestre Aker</option>
       <option value="all">Alle bydeler</option>
       <option value="Alna">Alna</option>
-<option value="Bjerke">Bjerke</option>
-<option value="Frogner">Frogner</option>
-<option value="Gamle Oslo">Gamle Oslo</option>
-<option value="Grorud">Grorud</option>
-<option value="Grünerløkka">Grünerløkka</option>
-<option value="Nordre Aker">Nordre Aker</option>
-<option value="Nordstrand">Nordstrand</option>
-<option value="Sagene">Sagene</option>
-<option value="St. Hanshaugen">St. Hanshaugen</option>
-<option value="Stovner">Stovner</option>
-<option value="Søndre Nordstrand">Søndre Nordstrand</option>
-<option value="Ullern">Ullern</option>
-<option value="Vestre Aker">Vestre Aker</option>
-<option value="Østensjø">Østensjø</option>
+      <option value="Bjerke">Bjerke</option>
+      <option value="Frogner">Frogner</option>
+      <option value="Gamle Oslo">Gamle Oslo</option>
+      <option value="Grorud">Grorud</option>
+      <option value="Grünerløkka">Grünerløkka</option>
+      <option value="Nordre Aker">Nordre Aker</option>
+      <option value="Nordstrand">Nordstrand</option>
+      <option value="Sagene">Sagene</option>
+      <option value="St. Hanshaugen">St. Hanshaugen</option>
+      <option value="Stovner">Stovner</option>
+      <option value="Søndre Nordstrand">Søndre Nordstrand</option>
+      <option value="Ullern">Ullern</option>
+      <option value="Østensjø">Østensjø</option>
     </select>
   </div>
-  <div style="flex:1; min-width:180px;">
-    <label for="story-search">S&oslash;k</label><br>
-    <input id="story-search" type="search" placeholder="Filtrer i innholdet&hellip;" style="width:100%;">
+  <div>
+    <label for="cat-filter">Kategori</label>
+    <select id="cat-filter">
+      <option value="all">Alle kategorier</option>
+      <option value="politikk">Politikk</option>
+      <option value="skole">Skole</option>
+      <option value="idrett">Idrett</option>
+      <option value="kultur">Kultur</option>
+      <option value="trafikk">Trafikk</option>
+      <option value="helse">Helse</option>
+      <option value="naering">Næring</option>
+      <option value="sikkerhet">Sikkerhet</option>
+      <option value="arrangement">Arrangement</option>
+      <option value="annet">Annet</option>
+    </select>
+  </div>
+  <div>
+    <label for="period-filter">Periode</label>
+    <select id="period-filter">
+      <option value="all">Alle datoer</option>
+      <option value="1d">Siste 24 timer</option>
+      <option value="7d">Siste uke</option>
+      <option value="30d">Siste måned</option>
+    </select>
+  </div>
+  <div style="grid-column: 1 / -1;">
+    <label for="story-search">Søk</label>
+    <input id="story-search" type="search" placeholder="Filtrer i innholdet&hellip;">
   </div>
 </div>
 <main>
   <section class="bydel" data-name="Alna">
-    <h2>Alna <small>3 saker</small></h2>
+    <h2>Alna <small>4 saker</small></h2>
     
-    <article class="story">
+    <article class="story" data-category="politikk" data-iso="2026-04-01">
       <h3>13 millioner til viktige tiltak på Furuset</h3>
-      <div class="meta"><span class="source">Oslo kommune – Aktuelt</span> &middot; April 2026</div>
-      <p>Bydel Alna mottar 13 mill. kr gjennom områdesatsingen i Oslo: 3 mill. til boligmiljøprosjektet på Furuset og 10 mill. til midlertidige tiltak på Granstomta. Beboere, foreninger og borettslag inviteres i april til å gi innspill på videre utvikling.</p>
+      <div class="meta">
+        <span class="source">Oslo kommune – Aktuelt</span>
+        <span class="sep">&middot;</span>
+        <span>April 2026</span>
+        <span class="sep">&middot;</span>
+        <span class="pill politikk">Politikk</span>
+      </div>
+      <p>Bydel Alna mottar 13 millioner kroner gjennom områdesatsingen i Oslo. 3 millioner går til boligmiljøprosjektet på Furuset, mens 10 millioner er satt av til midlertidige tiltak på Granstomta. Beboere, foreninger og borettslag inviteres i april til å gi innspill på videre utvikling. Midlene skal bidra til mer liv og trygghet i nabolaget.</p>
       <a class="readmore" href="https://aktuelt.oslo.kommune.no/bydel-alna-far-midler-til-viktige-tiltak-pa-furuset" target="_blank" rel="noopener">Les mer &rarr;</a>
     </article>
 
-    <article class="story">
+    <article class="story" data-category="annet" data-iso="2026-04-01">
       <h3>Over 2 millioner til fritidsaktiviteter for barn og unge</h3>
-      <div class="meta"><span class="source">Oslo kommune – Aktuelt</span> &middot; April 2026</div>
-      <p>Bydel Alna har fått nye midler i 2026 som skal gjøre det lettere for barn og unge å delta i fritidsaktiviteter uavhengig av familiens økonomi.</p>
+      <div class="meta">
+        <span class="source">Oslo kommune – Aktuelt</span>
+        <span class="sep">&middot;</span>
+        <span>April 2026</span>
+        <span class="sep">&middot;</span>
+        <span class="pill annet">Annet</span>
+      </div>
+      <p>Bydel Alna har fått nye midler i 2026 som skal gjøre det lettere for barn og unge å delta i fritidsaktiviteter uavhengig av familiens økonomi. Midlene dekker utstyr, kontingent og transport, og forvaltes sammen med lokale lag og foreninger. Målet er at ingen barn i bydelen skal stå utenfor fritidstilbudet av økonomiske grunner.</p>
       <a class="readmore" href="https://aktuelt.oslo.kommune.no/over-2-millioner-til-fritidsaktiviteter-for-barn-og-unge-i-bydel-alna" target="_blank" rel="noopener">Les mer &rarr;</a>
     </article>
 
-    <article class="story">
+    <article class="story" data-category="politikk" data-iso="2026-04-14">
       <h3>Politiske møter i april 2026</h3>
-      <div class="meta"><span class="source">Oslo kommune – Aktuelt</span> &middot; 14. april 2026</div>
-      <p>Andre møterunde av seks holdes i bydelsutvalg, komiteer og råd. Møtet 14. april kl. 17:00 på Nabolagshuset på Trosterud har åpen halvtime 17:00–17:30.</p>
+      <div class="meta">
+        <span class="source">Oslo kommune – Aktuelt</span>
+        <span class="sep">&middot;</span>
+        <span>14. april 2026</span>
+        <span class="sep">&middot;</span>
+        <span class="pill politikk">Politikk</span>
+      </div>
+      <p>Andre møterunde av totalt seks holdes i bydelsutvalg, komiteer og råd denne våren. Møtet 14. april kl. 17:00 på Nabolagshuset på Trosterud åpner med halvtime for publikum fra 17:00 til 17:30. Bydelsutvalget behandler blant annet saker om frivillighet, oppvekst og områdesatsing. Hele programmet ligger på bydelens nettside.</p>
       <a class="readmore" href="https://aktuelt.oslo.kommune.no/politiske-moter-i-april-2026-bydel-alna" target="_blank" rel="noopener">Les mer &rarr;</a>
+    </article>
+
+    <article class="story" data-category="idrett" data-iso="2026-04-01">
+      <h3>Furuset IF: bred vårsesong for barn og ungdom</h3>
+      <div class="meta">
+        <span class="source">Furuset IF</span>
+        <span class="sep">&middot;</span>
+        <span>Våren 2026</span>
+        <span class="sep">&middot;</span>
+        <span class="pill idrett">Idrett</span>
+      </div>
+      <p>Furuset IF ruller ut et bredt vårprogram med fotball, ishockey og allidrett for barn og ungdom i bydelen. Klubben melder om god rekruttering til jenteklassene og utvider treningstidene på Gran kunstgress. Nye spillere ønskes velkommen gjennom hele sesongen, og klubben har kontingentstøtte for familier som trenger det.</p>
+      <a class="readmore" href="https://www.furusetif.no/" target="_blank" rel="noopener">Les mer &rarr;</a>
     </article>
   </section>
 
   <section class="bydel" data-name="Bjerke">
-    <h2>Bjerke <small>2 saker</small></h2>
+    <h2>Bjerke <small>3 saker</small></h2>
     
-    <article class="story">
+    <article class="story" data-category="politikk" data-iso="2025-10-01">
       <h3>Byrådet vil kutte antall bydeler fra 15 til 8</h3>
-      <div class="meta"><span class="source">Nettavisen</span> &middot; Oktober 2025 (løpende sak)</div>
-      <p>Byrådet har landet på åtte nye bydeler i Oslo. Bystyret skal vedta ny organisering våren 2026. Bjerke er blant bydelene som kan bli slått sammen med naboer.</p>
+      <div class="meta">
+        <span class="source">Nettavisen</span>
+        <span class="sep">&middot;</span>
+        <span>Oktober 2025 – løpende</span>
+        <span class="sep">&middot;</span>
+        <span class="pill politikk">Politikk</span>
+      </div>
+      <p>Byrådet har landet på åtte nye bydeler i Oslo. Bystyret skal vedta ny organisering våren 2026. Bjerke er blant bydelene som kan bli slått sammen med naboer i Groruddalen. Lokale politikere frykter at lokaldemokratiet svekkes når enhetene blir større, mens byrådet peker på gevinster i administrasjon og tjenestekvalitet.</p>
       <a class="readmore" href="https://www.nettavisen.no/nyheter/vil-kutte-antall-bydeler-i-oslo-blir-rasende/s/5-95-2675995" target="_blank" rel="noopener">Les mer &rarr;</a>
     </article>
 
-    <article class="story">
+    <article class="story" data-category="annet" data-iso="2026-01-15">
       <h3>Frivillighetsmidler 2026 — hjelp til søknader</h3>
-      <div class="meta"><span class="source">Frivillig i Bjerke</span> &middot; Januar 2026</div>
-      <p>Bydelen tilbyr hjelp til å fylle ut søknader om frivillighetsmidler for 2026. Informasjon og kontaktpunkter er publisert av Frivillighetssentralen.</p>
+      <div class="meta">
+        <span class="source">Frivillig i Bjerke</span>
+        <span class="sep">&middot;</span>
+        <span>Januar–april 2026</span>
+        <span class="sep">&middot;</span>
+        <span class="pill annet">Annet</span>
+      </div>
+      <p>Bydelen tilbyr hjelp til å fylle ut søknader om frivillighetsmidler for 2026. Frivillighetssentralen har publisert veiledning, informasjonsmøter og kontaktpunkter for lokale foreninger og ildsjeler. Flere borettslag, kor og idrettslag har allerede fått støtte til mindre prosjekter. Søknadsfristen er løpende inntil potten er tom.</p>
       <a class="readmore" href="https://www.frivilligibjerke.no/post/trenger-du-hjelp-med-%C3%A5-fylle-ut-s%C3%B8knad-frivillighetsmidler-2026-bydel-bjerke" target="_blank" rel="noopener">Les mer &rarr;</a>
+    </article>
+
+    <article class="story" data-category="idrett" data-iso="2026-04-01">
+      <h3>Bjerkealliansen utvider tilbudet for barn og unge</h3>
+      <div class="meta">
+        <span class="source">Bjerkealliansen</span>
+        <span class="sep">&middot;</span>
+        <span>Våren 2026</span>
+        <span class="sep">&middot;</span>
+        <span class="pill idrett">Idrett</span>
+      </div>
+      <p>Bjerkealliansen — samarbeidet mellom de lokale idrettslagene — utvider fritidstilbudet til barn og unge på Årvoll, Linderud og Veitvet denne våren. Alliansen tilbyr allidrett, håndball og fotball, med lavterskel-treninger flere ganger i uken. Klubbene melder om særlig stor pågang til jenteklassene og vurderer å sette opp ekstra partier.</p>
+      <a class="readmore" href="https://www.frivilligibjerke.no/" target="_blank" rel="noopener">Les mer &rarr;</a>
     </article>
   </section>
 
   <section class="bydel" data-name="Frogner">
-    <h2>Frogner <small>3 saker</small></h2>
+    <h2>Frogner <small>4 saker</small></h2>
     
-    <article class="story">
+    <article class="story" data-category="kultur" data-iso="2026-04-10">
       <h3>Park- og kunstkart er nå ferdig</h3>
-      <div class="meta"><span class="source">Oslo kommune – Bydel Frogner</span> &middot; April 2026</div>
-      <p>Bydelens park- og kunstkart er lansert, og gjør det enkelt å utforske parker og kunst i Frogner via nye digitale kart.</p>
+      <div class="meta">
+        <span class="source">Oslo kommune – Bydel Frogner</span>
+        <span class="sep">&middot;</span>
+        <span>April 2026</span>
+        <span class="sep">&middot;</span>
+        <span class="pill kultur">Kultur</span>
+      </div>
+      <p>Bydelens park- og kunstkart er lansert og gjør det enkelt å utforske parker og kunst i Frogner via nye digitale kart. Kartet viser alle offentlige kunstverk, lekeplasser og grøntområder, og er tilgjengelig både på mobil og desktop. Prosjektet er gjennomført i samarbeid med Kulturetaten og lokale kunstnere.</p>
       <a class="readmore" href="https://www.oslo.kommune.no/bydeler/bydel-frogner/alle-nyheter/" target="_blank" rel="noopener">Les mer &rarr;</a>
     </article>
 
-    <article class="story">
+    <article class="story" data-category="arrangement" data-iso="2026-03-15">
       <h3>Søker ny driver av Vestkanttorget lørdagsmarked</h3>
-      <div class="meta"><span class="source">Oslo kommune – Aktuelt</span> &middot; Våren 2026</div>
-      <p>Bydel Frogner lyser ut driftskontrakt for lørdagsmarkedet på Vestkanttorget for 2025 og 2026.</p>
+      <div class="meta">
+        <span class="source">Oslo kommune – Aktuelt</span>
+        <span class="sep">&middot;</span>
+        <span>Våren 2026</span>
+        <span class="sep">&middot;</span>
+        <span class="pill arrangement">Arrangement</span>
+      </div>
+      <p>Bydel Frogner lyser ut driftskontrakt for lørdagsmarkedet på Vestkanttorget for 2025 og 2026. Markedet er et populært samlingspunkt med lokale produsenter, kunsthåndverk og mat hver lørdag gjennom sommerhalvåret. Interesserte aktører kan sende inn søknad gjennom bydelens anskaffelsesportal. Kontrakten har oppstart til våren.</p>
       <a class="readmore" href="https://aktuelt.oslo.kommune.no/bydel-frogner-soker-ny-driver-av-lordagsmarkedet-pa-vestkanttorget" target="_blank" rel="noopener">Les mer &rarr;</a>
     </article>
 
-    <article class="story">
+    <article class="story" data-category="naering" data-iso="2026-04-12">
       <h3>Boligsalget på Frogner går tregt</h3>
-      <div class="meta"><span class="source">VG</span> &middot; April 2026</div>
-      <p>Eiendomsmeglere i Frogner melder om tregt marked denne våren, med lavere omsetningstakt og lengre liggetid enn normalt.</p>
+      <div class="meta">
+        <span class="source">VG</span>
+        <span class="sep">&middot;</span>
+        <span>April 2026</span>
+        <span class="sep">&middot;</span>
+        <span class="pill naering">Næring</span>
+      </div>
+      <p>Eiendomsmeglere i Frogner melder om tregt marked denne våren, med lavere omsetningstakt og lengre liggetid enn normalt. Renteoppgang og usikkerhet i økonomien trekkes fram som hovedårsaker. Flere meglere prøver å se lyst på situasjonen og peker på at dyre Frogner-leiligheter historisk tåler kortvarige nedturer godt.</p>
       <a class="readmore" href="https://www.vg.no/nyheter/i/K8rl84/boligsalget-paa-frogner-gaar-tregt-proever-aa-tenke-positivt" target="_blank" rel="noopener">Les mer &rarr;</a>
+    </article>
+
+    <article class="story" data-category="idrett" data-iso="2026-04-10">
+      <h3>Monolitten IL: sterk start på fotballsesongen</h3>
+      <div class="meta">
+        <span class="source">Monolitten IL</span>
+        <span class="sep">&middot;</span>
+        <span>April 2026</span>
+        <span class="sep">&middot;</span>
+        <span class="pill idrett">Idrett</span>
+      </div>
+      <p>Monolitten IL har startet vårsesongen med full kunstgress-aktivitet på Frognerparken og Monolitt-banen. Både junior- og seniorlagene spiller seriekamper i april, og klubben melder om rekordhøy påmelding til fotballskolen i juni. Klubben samarbeider med lokale sponsorer om nytt utstyr til jenteavdelingen.</p>
+      <a class="readmore" href="https://www.monolitten.no/" target="_blank" rel="noopener">Les mer &rarr;</a>
     </article>
   </section>
 
   <section class="bydel" data-name="Gamle Oslo">
-    <h2>Gamle Oslo <small>2 saker</small></h2>
+    <h2>Gamle Oslo <small>3 saker</small></h2>
     
-    <article class="story">
+    <article class="story" data-category="arrangement" data-iso="2026-04-25">
       <h3>Grønland Gatelekfestival 25. april</h3>
-      <div class="meta"><span class="source">Bydel Gamle Oslo</span> &middot; 25. april 2026, kl 12–16</div>
-      <p>Interkulturelt Museum og lokale aktører arrangerer gatelekfestival på Grønland lørdag 25. april. Gratis arrangement for hele familien.</p>
+      <div class="meta">
+        <span class="source">Bydel Gamle Oslo</span>
+        <span class="sep">&middot;</span>
+        <span>25. april 2026, kl 12–16</span>
+        <span class="sep">&middot;</span>
+        <span class="pill arrangement">Arrangement</span>
+      </div>
+      <p>Interkulturelt Museum og lokale aktører arrangerer gatelekfestival på Grønland lørdag 25. april kl. 12–16. Det blir klassiske gateleker, musikk, matsalg og aktiviteter fra foreninger i nærmiljøet. Arrangementet er gratis og åpent for hele familien. Gatelekfestivalen har vokst betydelig de siste årene og er blitt en fast vårtradisjon.</p>
       <a class="readmore" href="https://www.oslo.kommune.no/bydeler/bydel-gamle-oslo/alle-nyheter/" target="_blank" rel="noopener">Les mer &rarr;</a>
     </article>
 
-    <article class="story">
+    <article class="story" data-category="politikk" data-iso="2026-03-20">
       <h3>Klar advarsel til bydelsreformen</h3>
-      <div class="meta"><span class="source">Avisa Oslo</span> &middot; Våren 2026</div>
-      <p>Grünerløkka, Gamle Oslo og Sagene uttrykker bekymring for byrådets bydelsreform. Bydelslederne frykter at nærhet til innbyggerne svekkes.</p>
+      <div class="meta">
+        <span class="source">Avisa Oslo</span>
+        <span class="sep">&middot;</span>
+        <span>Våren 2026</span>
+        <span class="sep">&middot;</span>
+        <span class="pill politikk">Politikk</span>
+      </div>
+      <p>Grünerløkka, Gamle Oslo og Sagene uttrykker bekymring for byrådets bydelsreform. Bydelslederne frykter at nærhet til innbyggerne svekkes når bydelene slås sammen til større enheter. I en felles uttalelse ber de byrådet om grundigere høring og bedre faglige utredninger før bystyret tar endelig beslutning.</p>
       <a class="readmore" href="https://www.ao.no/klar-advarsel-fra-gr-nerlokka-gamle-oslo-og-sagene-vi-er-bekymret/s/5-128-1234736" target="_blank" rel="noopener">Les mer &rarr;</a>
+    </article>
+
+    <article class="story" data-category="skole" data-iso="2026-04-01">
+      <h3>Gamlebyen skole med ny leseløft-satsing</h3>
+      <div class="meta">
+        <span class="source">Gamlebyen skole</span>
+        <span class="sep">&middot;</span>
+        <span>Våren 2026</span>
+        <span class="sep">&middot;</span>
+        <span class="pill skole">Skole</span>
+      </div>
+      <p>Gamlebyen skole har i vår lansert et leseløft-prosjekt for 1.–4. trinn med økt fokus på skjønnlitteratur og høytlesing. Prosjektet er et samarbeid mellom skolen, Deichman Grønland og lokale forfattere. Foreldre inviteres til lesegrupper på kveldstid, og skolen har satt av ekstra tid i timeplanen til stillelesing for de yngste.</p>
+      <a class="readmore" href="https://gamlebyen.osloskolen.no/" target="_blank" rel="noopener">Les mer &rarr;</a>
     </article>
   </section>
 
   <section class="bydel" data-name="Grorud">
-    <h2>Grorud <small>3 saker</small></h2>
+    <h2>Grorud <small>4 saker</small></h2>
     
-    <article class="story">
-      <h3>Fire ryddeaksjoner i Groruddalen 21. og 23. april</h3>
-      <div class="meta"><span class="source">Groruddalen.no</span> &middot; 21. og 23. april 2026</div>
-      <p>Bydel Grorud arrangerer fire ryddeaksjoner i Groruddalen denne uken. Alle kan delta. Utstyr og informasjon fås på oppmøtestedene.</p>
+    <article class="story" data-category="annet" data-iso="2026-04-21">
+      <h3>Fire ryddeaksjoner i Groruddalen 21. og 23. april <span class="news-badge">news</span></h3>
+      <div class="meta">
+        <span class="source">Groruddalen.no</span>
+        <span class="sep">&middot;</span>
+        <span>21. og 23. april 2026</span>
+        <span class="sep">&middot;</span>
+        <span class="pill annet">Annet</span>
+      </div>
+      <p>Bydel Grorud arrangerer fire ryddeaksjoner i Groruddalen denne uken — tirsdag 21. og torsdag 23. april. Alle kan delta uansett alder, og bydelen stiller med hansker, sekker og varme drikker på oppmøtestedene. Etter aksjonene blir det pølsegrill og premietrekning for de som har meldt seg på forhånd. Aksjonene er del av den årlige vårdugnaden.</p>
       <a class="readmore" href="https://groruddalen.no/annonsorinnhold/informasjon-fra-bydel-grorud-april-2026/" target="_blank" rel="noopener">Les mer &rarr;</a>
     </article>
 
-    <article class="story">
+    <article class="story" data-category="politikk" data-iso="2026-04-29">
       <h3>Bydelsutvalgsmøte 29. april</h3>
-      <div class="meta"><span class="source">Groruddalen.no</span> &middot; 29. april 2026, kl 18:00</div>
-      <p>Møte i Grorud bydelsutvalg holdes i Grorud bydelshus, Kakkelovnskroken 3. Møtet sendes direkte på Bydel Groruds Facebook-side.</p>
+      <div class="meta">
+        <span class="source">Groruddalen.no</span>
+        <span class="sep">&middot;</span>
+        <span>29. april 2026, kl 18:00</span>
+        <span class="sep">&middot;</span>
+        <span class="pill politikk">Politikk</span>
+      </div>
+      <p>Møte i Grorud bydelsutvalg holdes i Grorud bydelshus, Kakkelovnskroken 3, kl. 18:00. Møtet sendes direkte på Bydel Groruds Facebook-side. På sakskartet står blant annet budsjettoppfølging, områdesatsing og høringsuttalelser om bydelsreformen. Publikum kan følge møtet både fysisk og digitalt.</p>
       <a class="readmore" href="https://groruddalen.no/annonsorinnhold/informasjon-fra-bydel-grorud-april-2026/" target="_blank" rel="noopener">Les mer &rarr;</a>
     </article>
 
-    <article class="story">
+    <article class="story" data-category="skole" data-iso="2026-04-27">
       <h3>Gratis A2/B1 norskkurs starter 27. april</h3>
-      <div class="meta"><span class="source">Groruddalen.no</span> &middot; Oppstart 27. april 2026</div>
-      <p>Integrering og Kompetanse Akademiet og Nettverkshuset tilbyr gratis norskkurs på A2/B1-nivå for deg som vil videreutvikle språket med tanke på jobb eller utdanning.</p>
+      <div class="meta">
+        <span class="source">Groruddalen.no</span>
+        <span class="sep">&middot;</span>
+        <span>Oppstart 27. april 2026</span>
+        <span class="sep">&middot;</span>
+        <span class="pill skole">Skole</span>
+      </div>
+      <p>Integrering og Kompetanse Akademiet og Nettverkshuset tilbyr gratis norskkurs på A2/B1-nivå for deg som vil videreutvikle språket med tanke på jobb eller utdanning. Kurset går over flere uker med undervisning to ganger i uken, og tar opp både skriftlig og muntlig norsk. Påmelding skjer via Nettverkshuset.</p>
       <a class="readmore" href="https://groruddalen.no/annonsorinnhold/informasjon-fra-bydel-grorud-april-2026/" target="_blank" rel="noopener">Les mer &rarr;</a>
+    </article>
+
+    <article class="story" data-category="idrett" data-iso="2026-04-15">
+      <h3>Grorud IL arrangerer vårcup for aldersbestemte lag</h3>
+      <div class="meta">
+        <span class="source">Grorud IL</span>
+        <span class="sep">&middot;</span>
+        <span>Mai 2026</span>
+        <span class="sep">&middot;</span>
+        <span class="pill idrett">Idrett</span>
+      </div>
+      <p>Grorud IL arrangerer tradisjonell vårcup på Grorud kunstgress i mai, med påmelding åpen for lag fra 8 til 13 år. Cupen samler hundrevis av barn fra hele Oslo Øst og er blitt et av klubbens viktigste arrangementer. Klubben søker frivillige til kiosk, parkering og dommervirksomhet gjennom helgen — alle bidrag mottas med takk.</p>
+      <a class="readmore" href="https://www.grorudil.no/" target="_blank" rel="noopener">Les mer &rarr;</a>
     </article>
   </section>
 
   <section class="bydel" data-name="Grünerløkka">
-    <h2>Grünerløkka <small>3 saker</small></h2>
+    <h2>Grünerløkka <small>4 saker</small></h2>
     
-    <article class="story">
+    <article class="story" data-category="helse" data-iso="2026-04-05">
       <h3>Flere trenger økonomisk bistand</h3>
-      <div class="meta"><span class="source">Meravoslo.no</span> &middot; Våren 2026</div>
-      <p>Økt husleie og prisvekst gjør at stadig flere Grünerløkka-beboere oppsøker bydelens sosialtjenester. Bydelen ser økt trykk også i 2026.</p>
+      <div class="meta">
+        <span class="source">Meravoslo.no</span>
+        <span class="sep">&middot;</span>
+        <span>Våren 2026</span>
+        <span class="sep">&middot;</span>
+        <span class="pill helse">Helse</span>
+      </div>
+      <p>Økt husleie og prisvekst gjør at stadig flere Grünerløkka-beboere oppsøker bydelens sosialtjenester. Bydelen ser økt trykk også i 2026, særlig blant enslige forsørgere og unge voksne. Sosialtjenesten melder om ventetid på førstegangssamtale og oppfordrer innbyggere til å ta tidlig kontakt dersom økonomien blir vanskelig.</p>
       <a class="readmore" href="https://meravoslo.no/nyheter/tag/Grunerl%C3%B8kka" target="_blank" rel="noopener">Les mer &rarr;</a>
     </article>
 
-    <article class="story">
+    <article class="story" data-category="arrangement" data-iso="2026-04-01">
       <h3>Storbyens Hjerte og Smerte 2026</h3>
-      <div class="meta"><span class="source">Oslo kommune</span> &middot; Våren 2026</div>
-      <p>Den nordiske storbykonferansen Storbyens Hjerte og Smerte kommer til Oslo i 2026. Påmelding er åpnet. Flere bydeler deltar aktivt.</p>
+      <div class="meta">
+        <span class="source">Oslo kommune</span>
+        <span class="sep">&middot;</span>
+        <span>Våren 2026</span>
+        <span class="sep">&middot;</span>
+        <span class="pill arrangement">Arrangement</span>
+      </div>
+      <p>Den nordiske storbykonferansen Storbyens Hjerte og Smerte kommer til Oslo i 2026. Påmelding er åpnet, og flere bydeler deltar aktivt med workshops og paneldebatter. Konferansen samler fagfolk, politikere og ildsjeler fra hovedstedene i Skandinavia for å utveksle erfaringer om byutvikling, sosialt arbeid og lokaldemokrati.</p>
       <a class="readmore" href="https://meravoslo.no/nyheter/tag/Grunerl%C3%B8kka" target="_blank" rel="noopener">Les mer &rarr;</a>
     </article>
 
-    <article class="story">
+    <article class="story" data-category="naering" data-iso="2026-04-02">
       <h3>Ny restaurant Rodeo på øvre Grünerløkka</h3>
-      <div class="meta"><span class="source">Oslonytt</span> &middot; Mars/april 2026</div>
-      <p>Ny restaurant Rodeo har åpnet på øvre Grünerløkka med dumplings, gnocchi og desserter. Over 120 restauranter er nå i drift i bydelen.</p>
+      <div class="meta">
+        <span class="source">Oslonytt</span>
+        <span class="sep">&middot;</span>
+        <span>Mars/april 2026</span>
+        <span class="sep">&middot;</span>
+        <span class="pill naering">Næring</span>
+      </div>
+      <p>Ny restaurant Rodeo har åpnet på øvre Grünerløkka med dumplings, gnocchi og desserter. Over 120 restauranter er nå i drift i bydelen, og Grünerløkka har festet grepet som Oslos tetteste matkvartal. Rodeo skal ha en uformell profil med mindre retter til deling, og plan for kveldsåpen bar i helgene. Omtalen fra Oslonytt er positiv.</p>
       <a class="readmore" href="https://www.oslonytt.com/grunerlokka" target="_blank" rel="noopener">Les mer &rarr;</a>
+    </article>
+
+    <article class="story" data-category="idrett" data-iso="2026-04-18">
+      <h3>Christiania Ballklubb: full fart i seriestart</h3>
+      <div class="meta">
+        <span class="source">Christiania Ballklubb</span>
+        <span class="sep">&middot;</span>
+        <span>April 2026</span>
+        <span class="sep">&middot;</span>
+        <span class="pill idrett">Idrett</span>
+      </div>
+      <p>Christiania Ballklubb har kommet godt i gang med seriestart for både senior- og juniorlagene. Klubben har økt medlemstallet med flere hundre det siste året, og har nå aktivitet på Dælenenga, Jordal og Sofienberg gjennom hele uken. Klubben jobber for bedre baner i bydelen og samarbeider tett med Oslo Idrettskrets om kapasitet.</p>
+      <a class="readmore" href="https://www.christianiaballklubb.no/" target="_blank" rel="noopener">Les mer &rarr;</a>
     </article>
   </section>
 
   <section class="bydel" data-name="Nordre Aker">
-    <h2>Nordre Aker <small>2 saker</small></h2>
+    <h2>Nordre Aker <small>3 saker</small></h2>
     
-    <article class="story">
+    <article class="story" data-category="politikk" data-iso="2026-03-17">
       <h3>Byrådet foreslår sammenslåing med Sagene</h3>
-      <div class="meta"><span class="source">Nordre Aker Budstikke</span> &middot; 17. mars 2026</div>
-      <p>Byrådet vil slå Nordre Aker sammen med Sagene som del av bydelsreformen. Forslaget er på høring og vekker debatt blant lokalpolitikere.</p>
+      <div class="meta">
+        <span class="source">Nordre Aker Budstikke</span>
+        <span class="sep">&middot;</span>
+        <span>17. mars 2026</span>
+        <span class="sep">&middot;</span>
+        <span class="pill politikk">Politikk</span>
+      </div>
+      <p>Byrådet vil slå Nordre Aker sammen med Sagene som del av bydelsreformen. Forslaget er på høring og vekker debatt blant lokalpolitikere. Flere grupperinger i bydelsutvalget har varslet at de vil fraråde sammenslåingen, mens byrådet peker på administrative gevinster. Høringsfrist er satt til slutten av april.</p>
       <a class="readmore" href="https://www.nab.no/dette-vil-byradet-skal-skje-med-nordre-aker/s/5-143-643289" target="_blank" rel="noopener">Les mer &rarr;</a>
     </article>
 
-    <article class="story">
+    <article class="story" data-category="politikk" data-iso="2026-04-01">
       <h3>Møter i politiske råd og utvalg i april</h3>
-      <div class="meta"><span class="source">Oslo kommune – Aktuelt</span> &middot; April 2026</div>
-      <p>Politiske møter i bydelen er åpne for publikum og starter med åpen halvtime. Fullt møteprogram ligger på bydelens nettside.</p>
+      <div class="meta">
+        <span class="source">Oslo kommune – Aktuelt</span>
+        <span class="sep">&middot;</span>
+        <span>April 2026</span>
+        <span class="sep">&middot;</span>
+        <span class="pill politikk">Politikk</span>
+      </div>
+      <p>Politiske møter i bydelen er åpne for publikum og starter med åpen halvtime hvor alle kan stille spørsmål. Fullt møteprogram for bydelsutvalg, komiteer og råd ligger på bydelens nettside. I april behandler utvalgene blant annet budsjettoppfølging, helse- og oppvekstsaker og høringsuttalelse om bydelsreformen.</p>
       <a class="readmore" href="https://aktuelt.oslo.kommune.no/moter-i-politiske-rad-og-utvalg-i-bydel-nordre-aker-i-april" target="_blank" rel="noopener">Les mer &rarr;</a>
+    </article>
+
+    <article class="story" data-category="idrett" data-iso="2026-04-12">
+      <h3>Nordre Aker Turnforening klar for stevne</h3>
+      <div class="meta">
+        <span class="source">Nordre Aker Turnforening</span>
+        <span class="sep">&middot;</span>
+        <span>Mai 2026</span>
+        <span class="sep">&middot;</span>
+        <span class="pill idrett">Idrett</span>
+      </div>
+      <p>Nordre Aker Turnforening forbereder vårstevne i mai med deltakelse fra barne- og ungdomsgrupper. Foreningen har utvidet tilbudet med nye partier for foreldre-og-barn turn, og har fått god tilgang til Berg flerbrukshall gjennom vinteren. Stevnet avsluttes med oppvisning og kakeservering i hallen.</p>
+      <a class="readmore" href="https://www.nordreakerturn.no/" target="_blank" rel="noopener">Les mer &rarr;</a>
     </article>
   </section>
 
   <section class="bydel" data-name="Nordstrand">
-    <h2>Nordstrand <small>2 saker</small></h2>
+    <h2>Nordstrand <small>3 saker</small></h2>
     
-    <article class="story">
+    <article class="story" data-category="politikk" data-iso="2026-03-20">
       <h3>Holmlia + Nordstrand? Byrådets reformforslag</h3>
-      <div class="meta"><span class="source">Nordstrands Blad</span> &middot; Våren 2026</div>
-      <p>Byrådet foreslår å slå sammen Nordstrand med deler av Søndre Nordstrand (Holmlia-området). Lokalpolitikere er delt i synet på forslaget.</p>
+      <div class="meta">
+        <span class="source">Nordstrands Blad</span>
+        <span class="sep">&middot;</span>
+        <span>Våren 2026</span>
+        <span class="sep">&middot;</span>
+        <span class="pill politikk">Politikk</span>
+      </div>
+      <p>Byrådet foreslår å slå sammen Nordstrand med deler av Søndre Nordstrand (Holmlia-området). Lokalpolitikere er delt i synet på forslaget — noen mener det styrker tjenestetilbudet, andre advarer mot at det lokale engasjementet vannes ut. Nordstrands Blad har dekket debatten tett, og bydelsutvalget skal behandle høringsuttalelsen i april.</p>
       <a class="readmore" href="https://www.noblad.no/holmlia-nordstrand-sant-dette-foreslar-byradet/s/5-56-1029829" target="_blank" rel="noopener">Les mer &rarr;</a>
     </article>
 
-    <article class="story">
+    <article class="story" data-category="arrangement" data-iso="2026-04-05">
       <h3>Innbyggerdialog under Nordstrandsdagene</h3>
-      <div class="meta"><span class="source">Oslo kommune – Aktuelt</span> &middot; Vår 2026</div>
-      <p>Bydelen arrangerer åpne innbyggerdialoger under Nordstrandsdagene for å diskutere prioriteringer og tjenestetilbud.</p>
+      <div class="meta">
+        <span class="source">Oslo kommune – Aktuelt</span>
+        <span class="sep">&middot;</span>
+        <span>Vår 2026</span>
+        <span class="sep">&middot;</span>
+        <span class="pill arrangement">Arrangement</span>
+      </div>
+      <p>Bydelen arrangerer åpne innbyggerdialoger under Nordstrandsdagene for å diskutere prioriteringer og tjenestetilbud. Bydelsdirektør, politikere og fagfolk stiller til samtale, og innspillene blir fulgt opp i senere politiske behandlinger. Dialogene er en fast tradisjon som supplerer de formelle høringene.</p>
       <a class="readmore" href="https://aktuelt.oslo.kommune.no/innbyggerdialog-under-nordstrandsdagene" target="_blank" rel="noopener">Les mer &rarr;</a>
+    </article>
+
+    <article class="story" data-category="idrett" data-iso="2026-04-10">
+      <h3>Nordstrand IF styrker håndballsatsingen</h3>
+      <div class="meta">
+        <span class="source">Nordstrand IF</span>
+        <span class="sep">&middot;</span>
+        <span>April 2026</span>
+        <span class="sep">&middot;</span>
+        <span class="pill idrett">Idrett</span>
+      </div>
+      <p>Nordstrand IF styrker håndballsatsingen med nye trenere og utvidede treningstider på Niels Henrik Abels hall. Klubben er blant de største breddeklubbene i Oslo på håndball, med lag i alle aldersklasser fra 6-åringer og oppover. Vårsesongen avsluttes med klubbcup og sesongavslutning i juni.</p>
+      <a class="readmore" href="https://www.nordstrandif.no/" target="_blank" rel="noopener">Les mer &rarr;</a>
     </article>
   </section>
 
   <section class="bydel" data-name="Sagene">
-    <h2>Sagene <small>2 saker</small></h2>
+    <h2>Sagene <small>3 saker</small></h2>
     
-    <article class="story">
+    <article class="story" data-category="kultur" data-iso="2026-04-15">
       <h3>Skjult hagekafé Raade&#x27;s åpner for sesongen</h3>
-      <div class="meta"><span class="source">Meravoslo.no</span> &middot; April 2026</div>
-      <p>I en sidegate på Sagene finner du hagekafeen Raade&#x27;s, som åpner hagen hver søndag og serverer hjemmelagede sveler. Omtalt i april.</p>
+      <div class="meta">
+        <span class="source">Meravoslo.no</span>
+        <span class="sep">&middot;</span>
+        <span>April 2026</span>
+        <span class="sep">&middot;</span>
+        <span class="pill kultur">Kultur</span>
+      </div>
+      <p>I en sidegate på Sagene finner du hagekafeen Raade&#x27;s, som åpner hagen hver søndag og serverer hjemmelagede sveler. Stedet har blitt et lokalt samlingspunkt for naboer som vil ha kaffe og sosialt samvær uten å reise til sentrum. Omtalt i april av Meravoslo, som trekker fram den avslappede atmosfæren og den enkle menyen.</p>
       <a class="readmore" href="https://meravoslo.no/nyheter/tag/sagene" target="_blank" rel="noopener">Les mer &rarr;</a>
     </article>
 
-    <article class="story">
+    <article class="story" data-category="politikk" data-iso="2026-03-20">
       <h3>Advarsel om bydelsreformen</h3>
-      <div class="meta"><span class="source">Avisa Oslo</span> &middot; Våren 2026</div>
-      <p>Sammen med Grünerløkka og Gamle Oslo har Sagene signalisert bekymring for byrådets forslag om færre og større bydeler.</p>
+      <div class="meta">
+        <span class="source">Avisa Oslo</span>
+        <span class="sep">&middot;</span>
+        <span>Våren 2026</span>
+        <span class="sep">&middot;</span>
+        <span class="pill politikk">Politikk</span>
+      </div>
+      <p>Sammen med Grünerløkka og Gamle Oslo har Sagene signalisert bekymring for byrådets forslag om færre og større bydeler. Bydelslederne peker på svekket nærhet til innbyggerne som hovedbekymring, og ber byrådet om lengre høring og bedre utredninger. Bystyret skal behandle reformen senere i vår.</p>
       <a class="readmore" href="https://www.ao.no/klar-advarsel-fra-gr-nerlokka-gamle-oslo-og-sagene-vi-er-bekymret/s/5-128-1234736" target="_blank" rel="noopener">Les mer &rarr;</a>
+    </article>
+
+    <article class="story" data-category="idrett" data-iso="2026-04-10">
+      <h3>Sagene IF: fotballskole og åpen torsdagstrening</h3>
+      <div class="meta">
+        <span class="source">Sagene IF</span>
+        <span class="sep">&middot;</span>
+        <span>Våren 2026</span>
+        <span class="sep">&middot;</span>
+        <span class="pill idrett">Idrett</span>
+      </div>
+      <p>Sagene IF arrangerer fotballskole i juni og holder åpen torsdagstrening på Voldsløkka gjennom hele våren. Klubben er en av Oslos eldste og tilbyr fotball, bandy, friidrett og boksing fra seks års alder. Påmelding til fotballskolen er åpnet, og det er kontingentstøtte tilgjengelig gjennom bydelen for familier som trenger det.</p>
+      <a class="readmore" href="https://www.sageneif.com/" target="_blank" rel="noopener">Les mer &rarr;</a>
     </article>
   </section>
 
   <section class="bydel" data-name="St. Hanshaugen">
-    <h2>St. Hanshaugen <small>2 saker</small></h2>
+    <h2>St. Hanshaugen <small>3 saker</small></h2>
     
-    <article class="story">
+    <article class="story" data-category="arrangement" data-iso="2026-04-01">
       <h3>Storbyens Hjerte og Smerte-konferansen til Oslo</h3>
-      <div class="meta"><span class="source">Oslo kommune</span> &middot; Våren 2026</div>
-      <p>Oslo er vert for den nordiske storbykonferansen i 2026. Påmelding er åpnet. Bydelen forventer oppmøte fra fagmiljøer over hele Norden.</p>
+      <div class="meta">
+        <span class="source">Oslo kommune</span>
+        <span class="sep">&middot;</span>
+        <span>Våren 2026</span>
+        <span class="sep">&middot;</span>
+        <span class="pill arrangement">Arrangement</span>
+      </div>
+      <p>Oslo er vert for den nordiske storbykonferansen i 2026. Påmelding er åpnet, og bydelen forventer oppmøte fra fagmiljøer over hele Norden. Konferansen setter søkelys på sosialt arbeid, folkehelse og byutvikling i de nordiske hovedstedene. Flere lokale aktører i St. Hanshaugen bidrar med workshops.</p>
       <a class="readmore" href="https://www.oslo.kommune.no/bydeler/bydel-st-hanshaugen/" target="_blank" rel="noopener">Les mer &rarr;</a>
     </article>
 
-    <article class="story">
-      <h3>Få lokale saker registrert i dag</h3>
-      <div class="meta"><span class="source">Automatisk websøk</span> &middot; 22. april 2026</div>
-      <p>Søket returnerte begrenset med nye lokale saker fra St. Hanshaugen denne uken. Sjekk bydelens Facebook eller oslo.kommune.no for siste nytt.</p>
-      <a class="readmore" href="https://www.facebook.com/bydelsthanshaugen/" target="_blank" rel="noopener">Les mer &rarr;</a>
+    <article class="story" data-category="idrett" data-iso="2026-04-14">
+      <h3>St. Hanshaugen Fotball starter nybegynnerkurs</h3>
+      <div class="meta">
+        <span class="source">St. Hanshaugen Fotball</span>
+        <span class="sep">&middot;</span>
+        <span>April 2026</span>
+        <span class="sep">&middot;</span>
+        <span class="pill idrett">Idrett</span>
+      </div>
+      <p>St. Hanshaugen Fotball starter nybegynnerkurs for barn som aldri har spilt fotball før. Kurset går over seks uker i april og mai, med treninger på Ila kunstgress. Klubben satser på lavterskel-tilbud og har egne trenere som følger opp kursdeltakerne. Fra høsten kan deltakerne gå rett videre inn i ordinære lag.</p>
+      <a class="readmore" href="https://www.sthanshaugenfotball.no/" target="_blank" rel="noopener">Les mer &rarr;</a>
+    </article>
+
+    <article class="story" data-category="trafikk" data-iso="2026-04-15">
+      <h3>Bydelsutvalget behandler trafikksaker</h3>
+      <div class="meta">
+        <span class="source">Oslo kommune – Bydel St. Hanshaugen</span>
+        <span class="sep">&middot;</span>
+        <span>April 2026</span>
+        <span class="sep">&middot;</span>
+        <span class="pill trafikk">Trafikk</span>
+      </div>
+      <p>Bydelsutvalget i St. Hanshaugen behandler flere trafikksaker i april, blant annet forslag om fartsdemping i Ullevålsveien og trafikksikkerhet ved skolene. Forslagene er del av bydelens trafikksikkerhetsplan, og innspill fra innbyggerne ble samlet inn i mars. Sakene ventes å gå videre til Bymiljøetaten.</p>
+      <a class="readmore" href="https://www.oslo.kommune.no/bydeler/bydel-st-hanshaugen/" target="_blank" rel="noopener">Les mer &rarr;</a>
     </article>
   </section>
 
   <section class="bydel" data-name="Stovner">
-    <h2>Stovner <small>3 saker</small></h2>
+    <h2>Stovner <small>4 saker</small></h2>
     
-    <article class="story">
+    <article class="story" data-category="politikk" data-iso="2026-04-24">
       <h3>Innspillsrunde: navn på nye bydeler</h3>
-      <div class="meta"><span class="source">Groruddalen.no</span> &middot; Frist 24. april 2026</div>
-      <p>Byrådet inviterer innbyggerne til å foreslå navn på de nye, sammenslåtte bydelene. Stovner-beboere oppfordres til å bidra.</p>
+      <div class="meta">
+        <span class="source">Groruddalen.no</span>
+        <span class="sep">&middot;</span>
+        <span>Frist 24. april 2026</span>
+        <span class="sep">&middot;</span>
+        <span class="pill politikk">Politikk</span>
+      </div>
+      <p>Byrådet inviterer innbyggerne til å foreslå navn på de nye, sammenslåtte bydelene. Stovner-beboere oppfordres til å bidra med forslag som fanger lokal identitet og historie. Alle innsendte forslag vurderes av en navnekomité før byrådet gir sin innstilling til bystyret. Forslagene leveres via kommunens nettskjema.</p>
       <a class="readmore" href="https://groruddalen.no/annonsorinnhold/informasjon-fra-bydel-stovner-mars-april-2026/" target="_blank" rel="noopener">Les mer &rarr;</a>
     </article>
 
-    <article class="story">
+    <article class="story" data-category="helse" data-iso="2026-03-15">
       <h3>Norges første multikulturelle seniorsenter</h3>
-      <div class="meta"><span class="source">Utrop</span> &middot; 2026</div>
-      <p>Nettverk for Multikulturelt Sosialt Arbeid driver et nytt seniorsentertilbud på Stovner Senter, med samvær, kurs og middag mandager og fredager.</p>
+      <div class="meta">
+        <span class="source">Utrop</span>
+        <span class="sep">&middot;</span>
+        <span>2026</span>
+        <span class="sep">&middot;</span>
+        <span class="pill helse">Helse</span>
+      </div>
+      <p>Nettverk for Multikulturelt Sosialt Arbeid driver et nytt seniorsentertilbud på Stovner Senter, med samvær, kurs og middag mandager og fredager. Senteret er det første i sitt slag i Norge og henvender seg særlig til eldre med minoritetsbakgrunn. Initiativet får støtte fra bydelen og frivillige organisasjoner.</p>
       <a class="readmore" href="https://www.utrop.no/nyheter/nytt/376672/" target="_blank" rel="noopener">Les mer &rarr;</a>
     </article>
 
-    <article class="story">
+    <article class="story" data-category="sikkerhet" data-iso="2026-04-20">
       <h3>Leilighetsbrann slukket i Stovner</h3>
-      <div class="meta"><span class="source">Aftenposten</span> &middot; 20. april 2026</div>
-      <p>Politiet og brannvesenet rykket ut til leilighetsbrann øst i Oslo. Brannen er slukket; ingen alvorlig skadet.</p>
+      <div class="meta">
+        <span class="source">Aftenposten</span>
+        <span class="sep">&middot;</span>
+        <span>20. april 2026</span>
+        <span class="sep">&middot;</span>
+        <span class="pill sikkerhet">Sikkerhet</span>
+      </div>
+      <p>Politiet og brannvesenet rykket ut til leilighetsbrann øst i Oslo søndag kveld. Brannen er slukket; ingen alvorlig skadet. Årsaken er foreløpig ukjent, og politiet gjør tekniske undersøkelser i leiligheten. Naboer ble evakuert en kort periode, men kunne vende tilbake til boligene sine samme kveld.</p>
       <a class="readmore" href="https://www.aftenposten.no/oslo/i/OkgvPA/brann-i-leilighet-i-oslo-er-slukket" target="_blank" rel="noopener">Les mer &rarr;</a>
+    </article>
+
+    <article class="story" data-category="idrett" data-iso="2026-04-05">
+      <h3>Stovner flerbrukshall: nye tilbud til ungdom</h3>
+      <div class="meta">
+        <span class="source">Stovner flerbrukshall</span>
+        <span class="sep">&middot;</span>
+        <span>Våren 2026</span>
+        <span class="sep">&middot;</span>
+        <span class="pill idrett">Idrett</span>
+      </div>
+      <p>Stovner flerbrukshall har utvidet åpningstidene for ungdom i helgene og setter opp flere fritidsaktiviteter utenom ordinær trening. Basketball, volleyball og innefotball går på rotasjon, og det er gratis inngang for ungdom mellom 13 og 18 år. Bydelen melder om god oppslutning og vurderer å utvide tilbudet til flere kvelder.</p>
+      <a class="readmore" href="https://www.oslo.kommune.no/bydeler/bydel-stovner/" target="_blank" rel="noopener">Les mer &rarr;</a>
     </article>
   </section>
 
   <section class="bydel" data-name="Søndre Nordstrand">
-    <h2>Søndre Nordstrand <small>3 saker</small></h2>
+    <h2>Søndre Nordstrand <small>4 saker</small></h2>
     
-    <article class="story">
+    <article class="story" data-category="annet" data-iso="2026-04-10">
       <h3>Vant Klarspråksprisen 2026</h3>
-      <div class="meta"><span class="source">Oslo kommune – Aktuelt</span> &middot; April 2026</div>
-      <p>Bydel Søndre Nordstrand har vunnet Klarspråksprisen 2026 for sitt arbeid med tydelig kommunikasjon. Prisen er en anerkjennelse av flere års innsats gjennom Oslo sør-satsingen.</p>
+      <div class="meta">
+        <span class="source">Oslo kommune – Aktuelt</span>
+        <span class="sep">&middot;</span>
+        <span>April 2026</span>
+        <span class="sep">&middot;</span>
+        <span class="pill annet">Annet</span>
+      </div>
+      <p>Bydel Søndre Nordstrand har vunnet Klarspråksprisen 2026 for sitt arbeid med tydelig kommunikasjon. Prisen er en anerkjennelse av flere års innsats gjennom Oslo sør-satsingen, og juryen trekker særlig fram bydelens brev og søknadsskjema på flere språk. Bydelsadministrasjonen har bygget opp egne klarspråk-verksteder internt.</p>
       <a class="readmore" href="https://aktuelt.oslo.kommune.no/bydel-sondre-nordstand-vant-klarspraksprisen-2026" target="_blank" rel="noopener">Les mer &rarr;</a>
     </article>
 
-    <article class="story">
+    <article class="story" data-category="politikk" data-iso="2026-03-25">
       <h3>Bydelen foreslås splittet i reformen</h3>
-      <div class="meta"><span class="source">Oslo kommune</span> &middot; Våren 2026</div>
-      <p>Byrådet foreslår å splitte opp Bydel Søndre Nordstrand og fordele områdene mellom Nordstrand og Østensjø. Innspillsfrist for navn er 24. april.</p>
+      <div class="meta">
+        <span class="source">Oslo kommune</span>
+        <span class="sep">&middot;</span>
+        <span>Våren 2026</span>
+        <span class="sep">&middot;</span>
+        <span class="pill politikk">Politikk</span>
+      </div>
+      <p>Byrådet foreslår å splitte opp Bydel Søndre Nordstrand og fordele områdene mellom Nordstrand og Østensjø. Innspillsfrist for navn er 24. april. Forslaget er kontroversielt lokalt — mange peker på at bydelen har en egen identitet som vil forsvinne. Bydelsutvalget avgir høringsuttalelse før bystyrebehandlingen.</p>
       <a class="readmore" href="https://aktuelt.oslo.kommune.no/bydel-sondre-nordstand-vant-klarspraksprisen-2026" target="_blank" rel="noopener">Les mer &rarr;</a>
     </article>
 
-    <article class="story">
+    <article class="story" data-category="helse" data-iso="2026-03-01">
       <h3>Deltar i forskningsprosjektet SAFE@HOME</h3>
-      <div class="meta"><span class="source">Oslo kommune – Aktuelt</span> &middot; 2026</div>
-      <p>Bydelen deltar i forskningsprosjektet SAFE@HOME, som ser på trygghet og mestring i eget hjem for eldre.</p>
+      <div class="meta">
+        <span class="source">Oslo kommune – Aktuelt</span>
+        <span class="sep">&middot;</span>
+        <span>2026</span>
+        <span class="sep">&middot;</span>
+        <span class="pill helse">Helse</span>
+      </div>
+      <p>Bydelen deltar i forskningsprosjektet SAFE@HOME, som ser på trygghet og mestring i eget hjem for eldre. Prosjektet skal utvikle verktøy som gjør det enklere å bo hjemme lenger, og Søndre Nordstrand er valgt som pilotbydel på grunn av sammensatt befolkning og bredt tjenestetilbud. Resultater forventes publisert i 2027.</p>
       <a class="readmore" href="https://aktuelt.oslo.kommune.no/bydel-sondre-nordstrand-deltar-i-forskningsprosjektet-safe-home" target="_blank" rel="noopener">Les mer &rarr;</a>
+    </article>
+
+    <article class="story" data-category="idrett" data-iso="2026-04-12">
+      <h3>Holmlia SK: breddeidrett i vekst</h3>
+      <div class="meta">
+        <span class="source">Holmlia SK</span>
+        <span class="sep">&middot;</span>
+        <span>Våren 2026</span>
+        <span class="sep">&middot;</span>
+        <span class="pill idrett">Idrett</span>
+      </div>
+      <p>Holmlia SK opplever solid vekst på breddeidrett denne våren, med flere nye medlemmer i både fotball og håndball. Klubben har bygget ut treningstider på Holmlia kunstgress og samarbeider med lokale skoler om tilbud etter skoletid. Holmlia SK får støtte fra Oslo sør-satsingen og har kontingentstøtte for familier som trenger det.</p>
+      <a class="readmore" href="https://www.holmliask.no/" target="_blank" rel="noopener">Les mer &rarr;</a>
     </article>
   </section>
 
   <section class="bydel" data-name="Ullern">
-    <h2>Ullern <small>2 saker</small></h2>
+    <h2>Ullern <small>3 saker</small></h2>
     
-    <article class="story">
+    <article class="story" data-category="arrangement" data-iso="2026-04-01">
       <h3>Oslo vert for Storbyens Hjerte og Smerte 2026</h3>
-      <div class="meta"><span class="source">Oslo kommune</span> &middot; Våren 2026</div>
-      <p>Ullern er blant bydelene som deltar i den nordiske storbykonferansen Storbyens Hjerte og Smerte, som arrangeres i Oslo i 2026.</p>
+      <div class="meta">
+        <span class="source">Oslo kommune</span>
+        <span class="sep">&middot;</span>
+        <span>Våren 2026</span>
+        <span class="sep">&middot;</span>
+        <span class="pill arrangement">Arrangement</span>
+      </div>
+      <p>Ullern er blant bydelene som deltar i den nordiske storbykonferansen Storbyens Hjerte og Smerte, som arrangeres i Oslo i 2026. Bydelen stiller med eget innspill om eldreomsorg og boligpolitikk. Konferansen samler fagfolk fra hele Norden og er en arena for erfaringsutveksling mellom storbyene.</p>
       <a class="readmore" href="https://www.oslo.kommune.no/bydeler/bydel-ullern/" target="_blank" rel="noopener">Les mer &rarr;</a>
     </article>
 
-    <article class="story">
-      <h3>Få lokale saker registrert i dag</h3>
-      <div class="meta"><span class="source">Automatisk websøk</span> &middot; 22. april 2026</div>
-      <p>Søket returnerte få spesifikke Ullern-saker denne uken. Følg bydelens Facebook eller Akersposten for lokale oppdateringer.</p>
-      <a class="readmore" href="https://www.facebook.com/BydelUllern/" target="_blank" rel="noopener">Les mer &rarr;</a>
+    <article class="story" data-category="idrett" data-iso="2026-04-15">
+      <h3>OBOS Miniligaen hos Ullern for 6–9-åringer</h3>
+      <div class="meta">
+        <span class="source">Ullern IF</span>
+        <span class="sep">&middot;</span>
+        <span>Våren 2026</span>
+        <span class="sep">&middot;</span>
+        <span class="pill idrett">Idrett</span>
+      </div>
+      <p>Ullern IF arrangerer OBOS Miniligaen for 6–9-åringer med lavterskel-fotball gjennom våren. Serien legges opp uten tabeller og med vekt på mestring og spilleglede. Kampene spilles på Ullernbanen og i nærliggende klubber, og alle barn får spille mye uansett ferdighetsnivå. Klubben melder om rekordstort antall påmeldte lag.</p>
+      <a class="readmore" href="https://www.ullernif.no/" target="_blank" rel="noopener">Les mer &rarr;</a>
+    </article>
+
+    <article class="story" data-category="skole" data-iso="2026-04-10">
+      <h3>Ullern skole inviterer til vårkonsert</h3>
+      <div class="meta">
+        <span class="source">Ullern skole</span>
+        <span class="sep">&middot;</span>
+        <span>Mai 2026</span>
+        <span class="sep">&middot;</span>
+        <span class="pill skole">Skole</span>
+      </div>
+      <p>Ullern skole inviterer til vårkonsert i mai med elever fra både musikk- og dramalinjen. Konserten er åpen for alle, og inntekter fra kaffesalg går til skolens elevråd. Elevene har jobbet med et bredt program som strekker seg fra klassisk til moderne pop, og musikklærerne melder om høyt nivå i år.</p>
+      <a class="readmore" href="https://ullern.vgs.no/" target="_blank" rel="noopener">Les mer &rarr;</a>
     </article>
   </section>
 
   <section class="bydel" data-name="Vestre Aker">
-    <h2>Vestre Aker <small>3 saker</small></h2>
+    <h2>Vestre Aker <small>4 saker</small></h2>
     
-    <article class="story">
+    <article class="story" data-category="politikk" data-iso="2026-04-15">
       <h3>Bydelsutvalget møtes i april-mai</h3>
-      <div class="meta"><span class="source">Oslo kommune – Aktuelt</span> &middot; April-mai 2026</div>
-      <p>Bydelsutvalget møtes på Sørkedalen skole. Alle møter er åpne for publikum og starter med åpen halvtime.</p>
+      <div class="meta">
+        <span class="source">Oslo kommune – Aktuelt</span>
+        <span class="sep">&middot;</span>
+        <span>April-mai 2026</span>
+        <span class="sep">&middot;</span>
+        <span class="pill politikk">Politikk</span>
+      </div>
+      <p>Bydelsutvalget møtes på Sørkedalen skole. Alle møter er åpne for publikum og starter med åpen halvtime hvor innbyggere kan stille spørsmål. På sakskartet står blant annet budsjettoppfølging, trafikksikkerhet og høringsuttalelse om bydelsreformen. Hele møteprogrammet med innkallinger og protokoller ligger på bydelens nettside.</p>
       <a class="readmore" href="https://aktuelt.oslo.kommune.no/bydel-vestre-aker-politiske-motedatoer-i-april-mai" target="_blank" rel="noopener">Les mer &rarr;</a>
     </article>
 
-    <article class="story">
+    <article class="story" data-category="politikk" data-iso="2026-04-05">
       <h3>Budsjettforslag 2026 og økonomiplan 2026–2029</h3>
-      <div class="meta"><span class="source">Oslo kommune – Aktuelt</span> &middot; Vår 2026</div>
-      <p>Bydelsdirektørens forslag til budsjett for 2026 og økonomiplan 2026–2029 er lagt fram til politisk behandling.</p>
+      <div class="meta">
+        <span class="source">Oslo kommune – Aktuelt</span>
+        <span class="sep">&middot;</span>
+        <span>Vår 2026</span>
+        <span class="sep">&middot;</span>
+        <span class="pill politikk">Politikk</span>
+      </div>
+      <p>Bydelsdirektørens forslag til budsjett for 2026 og økonomiplan 2026–2029 er lagt fram til politisk behandling. Forslaget prioriterer oppvekst, helse og eldre, og peker på stramme økonomiske rammer i årene som kommer. Det legges opp til mindre kutt i administrasjon for å skjerme tjenester til innbyggerne. Endelig budsjett vedtas av bydelsutvalget.</p>
       <a class="readmore" href="https://aktuelt.oslo.kommune.no/bydel-vestre-aker-bydelsdirektorens-forslag-til-budsjett-2026-og-okonomiplan-2026-2029" target="_blank" rel="noopener">Les mer &rarr;</a>
     </article>
 
-    <article class="story">
+    <article class="story" data-category="trafikk" data-iso="2026-04-10">
       <h3>Etterlyser trafikksikkerhetsinnspill</h3>
-      <div class="meta"><span class="source">Oslo kommune – Aktuelt</span> &middot; Vår 2026</div>
-      <p>Bydelen ber innbyggere om innspill til trafikksikkerhetstiltak for 2026 — uoversiktlige kryss, høy fart, manglende gangfelt m.m.</p>
+      <div class="meta">
+        <span class="source">Oslo kommune – Aktuelt</span>
+        <span class="sep">&middot;</span>
+        <span>Vår 2026</span>
+        <span class="sep">&middot;</span>
+        <span class="pill trafikk">Trafikk</span>
+      </div>
+      <p>Bydelen ber innbyggere om innspill til trafikksikkerhetstiltak for 2026 — uoversiktlige kryss, høy fart, manglende gangfelt og lignende. Alle innspill kan sendes via bydelens nettskjema, og blir vurdert av trafikkfaglig rådgiver før de oversendes Bymiljøetaten. Mange tiltak rundt skoler og fritidsanlegg prioriteres særskilt.</p>
       <a class="readmore" href="https://aktuelt.oslo.kommune.no/bydel-vestre-aker-forslag-til-trafikksikkerhetstiltak-for-2026" target="_blank" rel="noopener">Les mer &rarr;</a>
+    </article>
+
+    <article class="story" data-category="idrett" data-iso="2026-04-15">
+      <h3>Vestre Aker Skiklub avslutter vintersesongen</h3>
+      <div class="meta">
+        <span class="source">Vestre Aker Skiklub</span>
+        <span class="sep">&middot;</span>
+        <span>April 2026</span>
+        <span class="sep">&middot;</span>
+        <span class="pill idrett">Idrett</span>
+      </div>
+      <p>Vestre Aker Skiklub markerer slutten på en sterk vintersesong med sesongavslutning og klubbfest for alle aldersgrupper. Klubben har hatt stor oppslutning både på langrenn og alpint i Holmenkollmarka og Tryvann. Flere unge løpere har tatt seg fram i kretsmesterskapene, og klubben går nå over i barmarkstrening gjennom sommeren.</p>
+      <a class="readmore" href="https://vestreakerskiklub.no/" target="_blank" rel="noopener">Les mer &rarr;</a>
     </article>
   </section>
 
   <section class="bydel" data-name="Østensjø">
-    <h2>Østensjø <small>3 saker</small></h2>
+    <h2>Østensjø <small>4 saker</small></h2>
     
-    <article class="story">
+    <article class="story" data-category="helse" data-iso="2026-04-27">
       <h3>Bøler dagaktivitet flytter 27. april</h3>
-      <div class="meta"><span class="source">Oslo kommune – Aktuelt</span> &middot; 27. april 2026</div>
-      <p>Bøler dagaktivitet åpner i nye lokaler i Gamle Enebakkvei 48, samlokalisert med Skullerud dagaktivitet.</p>
+      <div class="meta">
+        <span class="source">Oslo kommune – Aktuelt</span>
+        <span class="sep">&middot;</span>
+        <span>27. april 2026</span>
+        <span class="sep">&middot;</span>
+        <span class="pill helse">Helse</span>
+      </div>
+      <p>Bøler dagaktivitet åpner i nye lokaler i Gamle Enebakkvei 48, samlokalisert med Skullerud dagaktivitet. Flytting skjer 27. april. De nye lokalene gir bedre plass til gruppeaktiviteter, kjøkken og personalet kan samarbeide tettere. Brukere og pårørende har fått egen orientering om overgangen.</p>
       <a class="readmore" href="https://aktuelt.oslo.kommune.no/nytt-dagaktivitetstilbud-i-ostensjo-bydel" target="_blank" rel="noopener">Les mer &rarr;</a>
     </article>
 
-    <article class="story">
+    <article class="story" data-category="politikk" data-iso="2026-04-27">
       <h3>Bydelsutvalgsmøte 27. april</h3>
-      <div class="meta"><span class="source">Oslo kommune</span> &middot; 27. april 2026</div>
-      <p>Politikerne tildeler frivillighetsmidler og behandler forslag om endringer ved fritidsklubbene og Lille Langerud barnehage.</p>
+      <div class="meta">
+        <span class="source">Oslo kommune</span>
+        <span class="sep">&middot;</span>
+        <span>27. april 2026</span>
+        <span class="sep">&middot;</span>
+        <span class="pill politikk">Politikk</span>
+      </div>
+      <p>Politikerne tildeler frivillighetsmidler og behandler forslag om endringer ved fritidsklubbene og Lille Langerud barnehage. På sakskartet står også budsjettoppfølging og høringsuttalelse om bydelsreformen. Møtet er åpent for publikum med åpen halvtime i starten. Protokollen publiseres på bydelens nettside uken etter.</p>
       <a class="readmore" href="https://www.oslo.kommune.no/bydeler/bydel-ostensjo/alle-nyheter/" target="_blank" rel="noopener">Les mer &rarr;</a>
     </article>
 
-    <article class="story">
+    <article class="story" data-category="politikk" data-iso="2026-03-25">
       <h3>Bydelsreformen: Østensjø blir del av større bydel sør</h3>
-      <div class="meta"><span class="source">Oslo kommune – Aktuelt</span> &middot; Våren 2026</div>
-      <p>Etter høring vil byrådet ha 8 bydeler, og Oslo sør får to store bydeler. Østensjø er en del av dette kartet. Navneforslag-frist 24. april.</p>
+      <div class="meta">
+        <span class="source">Oslo kommune – Aktuelt</span>
+        <span class="sep">&middot;</span>
+        <span>Våren 2026</span>
+        <span class="sep">&middot;</span>
+        <span class="pill politikk">Politikk</span>
+      </div>
+      <p>Etter høring vil byrådet ha 8 bydeler, og Oslo sør får to store bydeler. Østensjø er en del av dette kartet. Navneforslag-frist er 24. april. Bydelsadministrasjonen har spilt inn en rekke forslag til byrådet om hvordan tjenester bør organiseres for å opprettholde nærhet til innbyggerne i den nye, større bydelen.</p>
       <a class="readmore" href="https://aktuelt.oslo.kommune.no/bydel-ostensjo-bydelsadministrasjonens-innspill-til-bydelsreformen" target="_blank" rel="noopener">Les mer &rarr;</a>
     </article>
+
+    <article class="story" data-category="skole" data-iso="2026-04-08">
+      <h3>Østensjø skole med miljøprosjekt våren 2026</h3>
+      <div class="meta">
+        <span class="source">Østensjø skole</span>
+        <span class="sep">&middot;</span>
+        <span>Våren 2026</span>
+        <span class="sep">&middot;</span>
+        <span class="pill skole">Skole</span>
+      </div>
+      <p>Østensjø skole kjører miljøprosjekt denne våren med fokus på Østensjøvannet og det lokale fuglelivet. Elevene på mellomtrinnet samarbeider med Østensjøvannets Venner om feltstudier og opprydding langs vannet. Prosjektet avsluttes med en utstilling på skolen i juni, og deler av arbeidet inngår i elevenes naturfagsvurdering.</p>
+      <a class="readmore" href="https://ostensjo.osloskolen.no/" target="_blank" rel="noopener">Les mer &rarr;</a>
+    </article>
   </section>
+<div id="no-results" class="no-results" style="display:none;">Ingen saker matcher filtrene dine. Prøv å justere Bydel, Kategori eller Periode.</div>
 </main>
 <footer>
-  Sist oppdatert 2026-04-22T12:41:59+02:00. Oppdateres daglig 08:01.
-  Kilde: automatisk websøk.
+  Sist oppdatert 2026-04-22T13:45:05+02:00. Oppdateres daglig 08:01.
+  Kilde: automatisk websøk på kommunale sider, lokalaviser, skoler og idrettslag.
   Live: <a href="https://telboth.github.io/bydelsnytt/">telboth.github.io/bydelsnytt</a>.
 </footer>
 </div>
 <script>
 (function() {
-  const sel = document.getElementById('bydel-filter');
-  const search = document.getElementById('story-search');
-  const sections = Array.from(document.querySelectorAll('.bydel'));
-  function apply() {
-    const v = sel.value;
-    const q = (search.value || '').toLowerCase().trim();
-    sections.forEach(s => {
-      const name = s.dataset.name;
-      const matchBydel = (v === 'all' || v === name);
-      let show = matchBydel;
-      if (show && q) {
-        const txt = s.innerText.toLowerCase();
-        show = txt.includes(q);
-      }
-      s.style.display = show ? '' : 'none';
-    });
+  var selBydel = document.getElementById('bydel-filter');
+  var selCat   = document.getElementById('cat-filter');
+  var selPer   = document.getElementById('period-filter');
+  var search   = document.getElementById('story-search');
+  var sections = Array.from(document.querySelectorAll('.bydel'));
+  var emptyNote = document.getElementById('no-results');
+  var TODAY = '2026-04-22';
+
+  function inPastWindow(isoDate, n) {
+    // True if isoDate is between (TODAY - n days) and TODAY, inclusive.
+    // Future-dated items (events) are NOT matched — the period filter is
+    // for recent/published content, not upcoming events.
+    if (!isoDate) return false;
+    if (isoDate > TODAY) return false;
+    var d = new Date(TODAY + 'T00:00:00');
+    d.setDate(d.getDate() - n);
+    var cutoff = d.toISOString().slice(0, 10);
+    return isoDate >= cutoff;
   }
-  sel.addEventListener('change', apply);
+
+  function storyMatches(story, cat, period, q) {
+    var dataset = story.dataset;
+    if (cat !== 'all' && dataset.category !== cat) return false;
+    if (period === '1d' && !inPastWindow(dataset.iso, 1)) return false;
+    if (period === '7d' && !inPastWindow(dataset.iso, 7)) return false;
+    if (period === '30d' && !inPastWindow(dataset.iso, 30)) return false;
+    if (q) {
+      var txt = story.innerText.toLowerCase();
+      if (txt.indexOf(q) === -1) return false;
+    }
+    return true;
+  }
+
+  function apply() {
+    var bv = selBydel.value;
+    var cv = selCat.value;
+    var pv = selPer.value;
+    var q  = (search.value || '').toLowerCase().trim();
+    var anyVisible = false;
+
+    sections.forEach(function(s) {
+      var bydelName = s.dataset.name;
+      if (bv !== 'all' && bv !== bydelName) { s.style.display = 'none'; return; }
+
+      var stories = Array.from(s.querySelectorAll('.story'));
+      var shownCount = 0;
+      stories.forEach(function(st) {
+        var show = storyMatches(st, cv, pv, q);
+        st.style.display = show ? '' : 'none';
+        if (show) shownCount++;
+      });
+
+      if (shownCount === 0) { s.style.display = 'none'; return; }
+      s.style.display = '';
+      anyVisible = true;
+
+      var counter = s.querySelector('h2 small');
+      if (counter) {
+        counter.textContent = shownCount + ' sak' + (shownCount === 1 ? '' : 'er');
+      }
+    });
+
+    if (emptyNote) emptyNote.style.display = anyVisible ? 'none' : '';
+  }
+
+  [selBydel, selCat, selPer].forEach(function(el) { el.addEventListener('change', apply); });
   search.addEventListener('input', apply);
+  apply();
 })();
 </script>
 </body>
