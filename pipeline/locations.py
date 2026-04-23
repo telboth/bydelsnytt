@@ -1,0 +1,146 @@
+"""Venue -> (lat, lng)-tabell for Leaflet-kart."""
+
+VENUES = [
+    # Idrettslag
+    ("url_contains", "heming.no", 59.952, 10.708),
+    ("url_contains", "roail.no", 59.942, 10.637),
+    ("url_contains", "njard.no", 59.928, 10.705),
+    ("url_contains", "kjelsaas.no", 59.967, 10.792),
+    ("url_contains", "fklyn.no", 59.959, 10.761),
+    ("url_contains", "il-try.no", 59.948, 10.680),  # Gressbanen / Slemdal
+    ("url_contains", "rustadil.no", 59.894, 10.832),
+    ("url_contains", "tryvann", 59.983, 10.667),
+    ("url_contains", "vestreakerskiklub", 59.974, 10.677),
+    ("url_contains", "furusetif", 59.941, 10.864),
+    ("url_contains", "sageneif", 59.939, 10.761),
+    ("url_contains", "grorudil", 59.961, 10.881),
+    ("url_contains", "nordstrandif", 59.866, 10.786),
+    ("url_contains", "nordreakerturn", 59.945, 10.765),
+    ("url_contains", "monolitten", 59.925, 10.708),
+    ("url_contains", "christiania", 59.925, 10.770),
+    ("url_contains", "ullernif", 59.923, 10.648),
+    ("url_contains", "holmliask", 59.849, 10.821),
+    ("url_contains", "sthanshaugenfotball", 59.923, 10.733),
+    ("url_contains", "obik.no", 59.939, 10.761),
+    ("url_contains", "skiforeningen", 59.965, 10.672),
+    ("url_contains", "skeid.no", 59.933, 10.751),
+    ("url_contains", "vif-fotball.no", 59.916, 10.785),
+    ("url_contains", "bolerif.no", 59.892, 10.830),
+    # Markastuer
+    ("url_contains", "kobberhaug", 60.033, 10.728),
+    ("url_contains", "ullevalseter", 60.005, 10.736),
+    ("url_contains", "lilloseter", 60.015, 10.822),
+    # Skoler
+    ("url_contains", "gamlebyen.osloskolen", 59.903, 10.776),
+    ("url_contains", "ostensjo.osloskolen", 59.895, 10.827),
+    ("url_contains", "ullern.vgs", 59.921, 10.660),
+    # Oslo kommune / etater
+    ("url_contains", "bymiljoetaten", 59.911, 10.753),
+    ("url_contains", "ruter.no/avvik", 59.910, 10.731),   # Jernbanetorget - kollektivknutepunkt
+    ("url_contains", "politiet.no", 59.915, 10.760),      # Oslo politihus, Gr\u00f8nlandsleiret
+    # Arrangements-venues
+    ("url_contains", "sentrumslopet", 59.911, 10.733),
+    ("url_contains", "oslomaraton", 59.911, 10.733),
+    ("url_contains", "bygdoymila", 59.907, 10.686),
+    ("url_contains", "grefsenkollenopp", 59.962, 10.793),
+    ("url_contains", "tryvannopp", 59.983, 10.667),
+    ("url_contains", "oslosbratteste", 59.983, 10.667),
+    ("url_contains", "holmenkollstafetten", 59.917, 10.727),
+    ("url_contains", "styrkeproven", 59.925, 10.708),
+    ("url_contains", "oslograndprix", 59.911, 10.733),
+    ("url_contains", "oslotri.com", 59.976, 10.732),
+    ("url_contains", "oslotriathlon", 59.976, 10.732),
+    ("url_contains", "norwaycup", 59.894, 10.770),
+    ("url_contains", "oyafestival", 59.918, 10.775),
+    ("url_contains", "musikkfest", 59.911, 10.733),
+    ("url_contains", "oslopride", 59.914, 10.740),
+    ("url_contains", "oslojazz", 59.917, 10.738),
+    ("url_contains", "kulturnatt.oslo", 59.913, 10.739),
+    ("url_contains", "infernofestival", 59.917, 10.738),
+    ("url_contains", "holmenkollmarsjen", 59.965, 10.672),
+    ("url_contains", "holmenkollen-skifest", 59.965, 10.672),
+    ("url_contains", "sognsvannrundt", 59.976, 10.732),
+    ("url_contains", "oslo.kommune.no/17-mai", 59.917, 10.727),
+    # Skoler (loppemarkeder)
+    ("url_contains", "ris.osloskolen", 59.953, 10.682),
+    ("url_contains", "nordberg.osloskolen", 59.959, 10.743),
+    ("url_contains", "tasen.osloskolen", 59.952, 10.741),
+    ("url_contains", "vahl.osloskolen", 59.913, 10.763),
+    ("url_contains", "ellingsrudasen.osloskolen", 59.938, 10.890),
+    # Speidergrupper
+    ("url_contains", "rispeiderne", 59.953, 10.682),
+    ("url_contains", "nordstrandspeiderne", 59.866, 10.790),
+    ("url_contains", "sagenespeiderne", 59.939, 10.761),
+    ("url_contains", "norges-speiderforbund.no/gruppe/grorud", 59.961, 10.881),
+    ("url_contains", "norges-speiderforbund.no/gruppe/holmlia", 59.849, 10.821),
+    ("url_contains", "norges-speiderforbund.no/gruppe/grunerlokka", 59.925, 10.760),
+    # Lions-klubber
+    ("url_contains", "lions.no/oslonordstrand", 59.866, 10.790),
+    ("url_contains", "lions.no/oslovestreaker", 59.961, 10.682),
+    ("url_contains", "lions.no/oslogroruddalen", 59.961, 10.881),
+    ("url_contains", "lions.no/oslogamleoslo", 59.910, 10.770),
+    # Kinosaler
+    ("url_contains", "vegascene", 59.920, 10.748),
+    ("url_contains", "oslokino.no/kino/saga", 59.914, 10.735),
+    ("url_contains", "oslokino.no/kino/colosseum", 59.930, 10.715),
+    ("url_contains", "oslokino.no/kino/gimle", 59.922, 10.705),
+    # Teater
+    ("url_contains", "nationaltheatret", 59.914, 10.734),
+    ("url_contains", "detnorsketeatret", 59.914, 10.736),
+    ("url_contains", "oslonye", 59.920, 10.742),
+    ("url_contains", "operaen.no", 59.907, 10.753),
+    # Konsertscener
+    ("url_contains", "oslokonserthus", 59.914, 10.728),
+    ("url_contains", "sentrumscene", 59.916, 10.746),
+    ("url_contains", "rockefeller.no", 59.915, 10.748),
+    ("url_contains", "oslospektrum", 59.912, 10.753),
+    ("url_contains", "jakobkulturkirke", 59.924, 10.761),
+]
+
+BYDEL_CENTERS = {
+    "Alna":              (59.930, 10.885),
+    "Bjerke":            (59.945, 10.822),
+    "Frogner":           (59.925, 10.710),
+    "Gamle Oslo":        (59.910, 10.770),
+    "Grorud":            (59.960, 10.878),
+    "Gr\u00fcnerl\u00f8kka":       (59.925, 10.760),
+    "Nordre Aker":       (59.955, 10.760),
+    "Nordstrand":        (59.866, 10.790),
+    "Sagene":            (59.937, 10.754),
+    "St. Hanshaugen":    (59.928, 10.738),
+    "Stovner":           (59.962, 10.924),
+    "S\u00f8ndre Nordstrand": (59.845, 10.820),
+    "Ullern":            (59.922, 10.655),
+    "Vestre Aker":       (59.961, 10.682),
+    "\u00d8stensj\u00f8":          (59.885, 10.828),
+}
+
+
+def resolve(story):
+    url = (story.get("url") or "").lower()
+    title = (story.get("title") or "").lower()
+    source = story.get("source") or ""
+    for mtype, mval, lat, lng in VENUES:
+        if mtype == "url_contains" and mval in url:
+            return lat, lng, True
+        if mtype == "title_contains" and mval.lower() in title:
+            return lat, lng, True
+        if mtype == "source_equals" and mval == source:
+            return lat, lng, True
+    bydel = story.get("bydel")
+    if bydel in BYDEL_CENTERS:
+        lat, lng = BYDEL_CENTERS[bydel]
+        return lat, lng, False
+    return 59.913, 10.739, False
+
+
+def enrich(stories):
+    out = []
+    for s in stories:
+        lat, lng, precise = resolve(s)
+        s = dict(s)
+        s["lat"] = lat
+        s["lng"] = lng
+        s["location_precise"] = precise
+        out.append(s)
+    return out

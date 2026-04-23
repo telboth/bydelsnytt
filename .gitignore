@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+.DS_Store
+bydelsnytt_artifact.html
+bydelsnytt_publish.html

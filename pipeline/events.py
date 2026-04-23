@@ -1,0 +1,382 @@
+"""Kuratert seed-liste av Oslo-arrangementer: loep, sykkelritt, skirenn,
+fotballkamper, festivaler, kulturarrangementer.
+
+Data kommer fra aarlige, tilbakevendende arrangementer. Datoer er beste estimat
+basert paa typisk helg-moenster (f.eks. Oslo Maraton = 3. loerdag i september).
+Sjekk arranger-siden for eksakt dato/tid.
+
+Hver event er et dict som matcher RawStory.to_dict()-formatet. Pipeline-run
+merge-er disse paa lik linje med RSS/HTML-scrapede saker, og classify-modulen
+respekterer kategorien vi setter her.
+"""
+from __future__ import annotations
+
+import hashlib
+from datetime import datetime, timezone
+
+
+def _event_id(url: str, title: str) -> str:
+    h = hashlib.sha1()
+    h.update(url.lower().strip().encode())
+    h.update(b"|")
+    h.update(title.lower().strip().encode())
+    return h.hexdigest()[:16]
+
+
+# Tuples: (tittel, url, bydel, date_iso, category, summary)
+EVENTS = [
+    # --- Loep / mosjonsloep -------------------------------------------------
+    ("Sentrumsloepet 2026",
+     "https://www.sentrumslopet.no/",
+     "Frogner", "2026-04-25", "idrett",
+     "Oslos klassiske bygateloepet gjennom sentrum. 10 km med start og maal "
+     "paa Raadhusplassen. Ett av Norges stoerste byloep, arrangeres aarlig "
+     "siste loerdag i april."),
+
+    ("Holmenkollstafetten 2026",
+     "https://holmenkollstafetten.no/",
+     "Frogner", "2026-05-09", "idrett",
+     "Aarets store stafettlopp med 15 etapper i sentrum. 2. loerdag i mai. "
+     "Trekker over 40.000 loepere fra skoler, bedrifter og klubber."),
+
+    ("Styrkeproeven 2026 (Trondheim-Oslo)",
+     "https://www.styrkeproven.no/",
+     "Frogner", "2026-06-20", "idrett",
+     "Nordens stoerste sykkelritt paa landevei. 540 km fra Trondheim til "
+     "Oslo; maal i Frognerparken. Arrangeres tredje helg i juni."),
+
+    ("Oslo Grand Prix 2026 (sykkel)",
+     "https://www.oslograndprix.no/",
+     "Frogner", "2026-06-13", "idrett",
+     "Kriteriumritt i Oslo sentrum. Profesjonelle og mosjonist-ritt samme "
+     "dag. Ruten gaar gjennom Frogner og sentrum."),
+
+    ("Oslo Triathlon 2026",
+     "https://oslotri.com/",
+     "Nordre Aker", "2026-08-22", "idrett",
+     "Byens stoerste triatlon med svoemming i Sognsvann, sykkel og loep "
+     "rundt Nordmarka/Nordre Aker. Sprint-, olympisk og halv-distanse."),
+
+    ("Norway Cup 2026",
+     "https://www.norwaycup.no/",
+     "Gamle Oslo", "2026-07-26", "idrett",
+     "Verdens stoerste fotballturnering for barn og ungdom paa "
+     "Ekebergsletta. En ukes spill med over 2000 lag fra hele verden."),
+
+    ("Grefsenkollen opp 2026",
+     "https://www.grefsenkollenopp.no/",
+     "Nordre Aker", "2026-09-05", "idrett",
+     "Motbakkeloep fra Storo til Grefsenkollen restaurant. 4,7 km med "
+     "478 hm stigning. Klassiker hver hoest."),
+
+    ("Oslos bratteste 2026 (tidligere Tryvann opp)",
+     "https://oslosbratteste.no/",
+     "Vestre Aker", "2026-09-12", "idrett",
+     "Motbakkeloep fra Frognerseteren til Tryvannstaarnet. Kort men bratt, "
+     "ca 3,5 km. Tidligere kjent som Tryvann opp, omdoept til Oslos bratteste."),
+
+    ("Oslo Maraton 2026",
+     "https://www.oslomaraton.no/",
+     "Frogner", "2026-09-19", "idrett",
+     "Norges stoerste maraton. Maratonloep, halvmaraton, 10 km og barneloep "
+     "gjennom sentrum, Frogner, Bjoervika og Groenerloekka. Start/maal paa "
+     "Raadhusplassen."),
+
+    ("Bygdoymila 2026",
+     "https://www.bygdoymila.no/",
+     "Frogner", "2026-10-18", "idrett",
+     "Terrengloep rundt Bygdoey. Klassisk halvmaraton paa stier gjennom "
+     "kongsgaarden og Bygdoey-skogen. Aarlig i oktober."),
+
+    # --- Kultur / festivaler ------------------------------------------------
+    ("17. mai-feiringen 2026",
+     "https://www.oslo.kommune.no/17-mai/",
+     "Frogner", "2026-05-17", "kultur",
+     "Barnetoget gaar opp Karl Johan forbi Slottet der Kongefamilien hilser. "
+     "Hovedarrangementer i Slottsparken og langs paraderuten."),
+
+    ("Musikkfest Oslo 2026",
+     "https://www.musikkfest.no/",
+     "St. Hanshaugen", "2026-06-20", "kultur",
+     "Gratis musikkfestival med over 1000 artister paa scenes i hele "
+     "sentrum. Arrangeres loerdag naermest sankthans hver sommer."),
+
+    ("Oslo Pride Parade 2026",
+     "https://www.oslopride.no/",
+     "Frogner", "2026-06-27", "kultur",
+     "Paraden gaar fra Groenland til Raadhusplassen. Pride Park arrangeres "
+     "samme uke i Spikersuppa og Kontraskjaeret."),
+
+    ("Oeyafestivalen 2026",
+     "https://www.oyafestivalen.no/",
+     "Gamle Oslo", "2026-08-04", "kultur",
+     "Norges stoerste urbane musikkfestival i Toeyenparken. Fire dager med "
+     "nasjonale og internasjonale hovedartister. Klimanoeytral og "
+     "oekologisk profilert."),
+
+    ("Oslo Jazzfestival 2026",
+     "https://www.oslojazz.no/",
+     "St. Hanshaugen", "2026-08-17", "kultur",
+     "En uke med jazz paa scener rundt Oslo sentrum: Nasjonal jazzscene, "
+     "Rockefeller, Kulturkirken Jakob og flere utearenaer."),
+
+    ("Kulturnatt Oslo 2026",
+     "https://kulturnatt.oslo.no/",
+     "St. Hanshaugen", "2026-09-11", "kultur",
+     "En kveld der over 150 kulturinstitusjoner holder aapent gratis. "
+     "Museer, teatre, gallerier og bibliotek i hele sentrum."),
+
+    ("Inferno Metal Festival 2026",
+     "https://infernofestival.net/",
+     "St. Hanshaugen", "2026-04-29", "kultur",
+     "Internasjonal metalfestival over 4 dager paa Rockefeller og John "
+     "Dee. Paaskehoelt med norske og internasjonale hovedartister."),
+
+    # --- Skirenn (vinter 2027) ----------------------------------------------
+    ("Holmenkollmarsjen 2027",
+     "https://www.holmenkollmarsjen.no/",
+     "Vestre Aker", "2027-03-06", "idrett",
+     "Turrenn paa 42 km eller 21 km i Nordmarka. Start og maal ved "
+     "Holmenkollen skistadion. Forste loerdag i mars."),
+
+    ("FIS World Cup Holmenkollen 2027",
+     "https://www.holmenkollen-skifest.no/",
+     "Vestre Aker", "2027-03-13", "idrett",
+     "Verdenscup-helg i langrenn, hopp og kombinert paa Holmenkollen. "
+     "Over 100.000 tilskuere over tre dager."),
+
+    ("Sognsvann rundt medsols 2027",
+     "https://www.sognsvannrundt.no/",
+     "Nordre Aker", "2027-02-07", "idrett",
+     "Turrenn rundt Sognsvann og inn i Nordmarka. Tre distanser: 5 km, "
+     "10 km og 20 km. Klassisk familie-skirenn."),
+
+
+    # --- Loppemarkeder (vaarloppis 2026) -----------------------------------
+    ("Ris skoles loppemarked 2026",
+     "https://ris.osloskolen.no/for-elever-og-foresatte/fau/loppemarked/",
+     "Vestre Aker", "2026-05-02", "arrangement",
+     "Aarlig vaarloppis arrangert av FAU paa Ris skole. Inntekter gaar til "
+     "elevaktiviteter. Innlevering fredag, salg loerdag. Klassiker paa "
+     "vestkanten."),
+
+    ("Nordberg skoles loppemarked 2026",
+     "https://nordberg.osloskolen.no/",
+     "Nordre Aker", "2026-05-09", "arrangement",
+     "FAU-loppis paa Nordberg skole med klaer, boeker, sportsutstyr og "
+     "kjoekkenting. Salg loerdag 10-14 i gymsalen."),
+
+    ("T\u00e5sen skoles loppemarked 2026",
+     "https://tasen.osloskolen.no/",
+     "Nordre Aker", "2026-04-25", "arrangement",
+     "Tradisjonsrik vaarloppis paa T\u00e5sen skole. FAU dekker overskudd "
+     "til skoleturer. Innlevering torsdag, salg loerdag 10-13."),
+
+    ("Vahl skoles loppemarked 2026",
+     "https://vahl.osloskolen.no/",
+     "Gamle Oslo", "2026-05-16", "arrangement",
+     "Vaarloppis paa Vahl skole paa Gr\u00f8nland. Mangfoldig loppis med "
+     "fokus paa baerekraftig gjenbruk i lokalmiljoeet."),
+
+    ("Ellingsrudaasen skoles h\u00f8stloppis 2026",
+     "https://ellingsrudasen.osloskolen.no/",
+     "Alna", "2026-09-26", "arrangement",
+     "H\u00f8st-loppemarked i Furuset-omraadet. Innsamling i forkant, stort "
+     "utvalg av ting til hjem og fritid."),
+
+    # --- Speidergrupper (lokale aktiviteter) -------------------------------
+    ("Ris speidergruppe - ukentlige m\u00f8ter",
+     "https://www.rispeiderne.no/",
+     "Vestre Aker", "2026-04-22", "arrangement",
+     "Ris speidergruppe har ukentlige m\u00f8ter for bevere, smaaspeidere, "
+     "speidere og rovere. M\u00f8tested: Speiderhuset ved Ris stasjon. "
+     "Aktiviteter: friluftsliv, patruljearbeid, hiking i Nordmarka."),
+
+    ("Nordstrand speidergruppe - aktiviteter v\u00e5r 2026",
+     "https://www.nordstrandspeiderne.no/",
+     "Nordstrand", "2026-04-24", "arrangement",
+     "Nordstrand speidergruppe - en av Oslos stoerste. Ukentlige m\u00f8ter "
+     "paa Tallberget. V\u00e5rens hoeydepunkt: patruljetur i Oestmarka "
+     "og pinseleir for alle aldersgrupper."),
+
+    ("Sagene speidergruppe - aktiviteter",
+     "https://sagenespeiderne.no/",
+     "Sagene", "2026-04-23", "arrangement",
+     "Sagene speidergruppe samler speidere fra Sagene, Torshov og "
+     "Bjoelsen. M\u00f8ter ved Bjoerkelunden. Fokus paa byspeiding og "
+     "tur til Oslomarka."),
+
+    ("Grorud speidergruppe",
+     "https://norges-speiderforbund.no/gruppe/grorud/",
+     "Grorud", "2026-04-25", "arrangement",
+     "Grorud speidergruppe m\u00f8tes ukentlig ved Grorud kirke. "
+     "Aktiviteter spenner fra friluftsliv i Lillomarka til sosiale "
+     "prosjekter i bydelen."),
+
+    ("Holmlia speidergruppe",
+     "https://norges-speiderforbund.no/gruppe/holmlia/",
+     "S\u00f8ndre Nordstrand", "2026-04-22", "arrangement",
+     "Holmlia speidergruppe - aktiv gruppe i et flerkulturelt nabolag. "
+     "M\u00f8ter i Holmlia-omraadet med fokus paa integrering og "
+     "friluftsliv i Oestmarka."),
+
+    ("Gr\u00fcnerl\u00f8kka speidergruppe",
+     "https://norges-speiderforbund.no/gruppe/grunerlokka/",
+     "Gr\u00fcnerl\u00f8kka", "2026-04-28", "arrangement",
+     "Gr\u00fcnerl\u00f8kka speidergruppe - byspeidere paa oestkanten. "
+     "M\u00f8ter paa Sofienberg. Kombinerer urbane aktiviteter med "
+     "turer til Marka."),
+
+    # --- Lions-klubber i Oslo ---------------------------------------------
+    ("Lions Club Oslo Nordstrand - aktiviteter",
+     "https://www.lions.no/oslonordstrand/",
+     "Nordstrand", "2026-05-05", "arrangement",
+     "Lions Club Oslo Nordstrand stoetter lokalt ungdomsarbeid og "
+     "humanitaere prosjekter. Maanedlige m\u00f8ter + aarlig juleaksjon "
+     "og innsamling til Lions Tulipan."),
+
+    ("Lions Club Oslo/Vestre Aker",
+     "https://www.lions.no/oslovestreaker/",
+     "Vestre Aker", "2026-05-12", "arrangement",
+     "Lions Club Oslo/Vestre Aker - aktive siden 1965. Arrangerer "
+     "julemarked, tulipan-aksjon og stoetter eldrearbeid i bydelen."),
+
+    ("Lions Club Oslo/Groruddalen",
+     "https://www.lions.no/oslogroruddalen/",
+     "Grorud", "2026-05-19", "arrangement",
+     "Lions Club Oslo/Groruddalen drifter aarlig loppemarked og "
+     "tulipan-aksjon. Midler gaar til ungdomsaktiviteter og "
+     "humanitaert arbeid lokalt i Groruddalen."),
+
+    ("Lions Club Oslo/Gamle Oslo",
+     "https://www.lions.no/oslogamleoslo/",
+     "Gamle Oslo", "2026-05-26", "arrangement",
+     "Lions Club Oslo/Gamle Oslo stoetter mangfoldige lokale "
+     "prosjekter paa Toeyen og Gr\u00f8nland. Aktive i Tulipanaksjonen "
+     "hver vaar og i julehjelp hver desember."),
+
+    # --- Kinopremierer / kinosaler ----------------------------------------
+    ("Vega Scene - aktuelle filmer",
+     "https://www.vegascene.no/program",
+     "Gamle Oslo", "2026-04-22", "kultur",
+     "Vega Scene paa Hausmannsplass viser arthouse-film, kortfilm og "
+     "dokumentarer. Kinotek-profil med norske og internasjonale "
+     "premierer, Q&A og filmklubber."),
+
+    ("Saga Kino - storfilmer vaaren 2026",
+     "https://www.oslokino.no/kino/saga/",
+     "Frogner", "2026-04-22", "kultur",
+     "Saga Kino ved Klingenberg viser storfilmer paa stor leredet. "
+     "Aktuell vaarsesong med norske og amerikanske premierer."),
+
+    ("Colosseum Kino - IMAX og premierer",
+     "https://www.oslokino.no/kino/colosseum/",
+     "Frogner", "2026-04-22", "kultur",
+     "Colosseum paa Majorstua - Nordens stoerste kinosal. Storfilm-"
+     "premierer, IMAX-visninger og spesialarrangementer. Klassisk "
+     "kinopalass bygd i 1928."),
+
+    ("Gimle Kino - arthouse og repertoire",
+     "https://www.oslokino.no/kino/gimle/",
+     "Frogner", "2026-04-22", "kultur",
+     "Gimle Kino paa Bygdoey all\u00e9 viser kuraterte filmer og "
+     "klassikere i koselige lokaler. Premiere for utvalgte norske og "
+     "europeiske filmer."),
+
+    # --- Teater-forestillinger --------------------------------------------
+    ("Nationaltheatret - aktuelt program",
+     "https://www.nationaltheatret.no/forestillinger",
+     "Frogner", "2026-04-22", "kultur",
+     "Nationaltheatret spiller klassikere og samtidsdrama paa "
+     "Hovedscenen og Amfiscenen. Oslos hovedteater med norsk og "
+     "internasjonal dramatikk."),
+
+    ("Det Norske Teatret - nynorsk scene",
+     "https://www.detnorsketeatret.no/repertoar",
+     "St. Hanshaugen", "2026-04-22", "kultur",
+     "Det Norske Teatret paa Kristian IV's gate - Norges nynorsk-"
+     "scene. Spiller egne produksjoner og gjestende ensembler. "
+     "Inkluderende program for unge."),
+
+    ("Oslo Nye Teater",
+     "https://www.oslonye.no/repertoar",
+     "St. Hanshaugen", "2026-04-22", "kultur",
+     "Oslo Nye Teater paa Centralteatret + Hovedscenen. Bredt "
+     "repertoar med familie-forestillinger, stand-up, moderne og "
+     "klassisk drama."),
+
+    ("Den Norske Opera og Ballett - program",
+     "https://operaen.no/forestillinger/",
+     "Gamle Oslo", "2026-04-22", "kultur",
+     "Operaen i Bjoervika - hovedhuset for opera og ballett i Norge. "
+     "Aktuelle forestillinger + konserter i Scenen og vinterhagen."),
+
+    # --- Konserter / konserthus -------------------------------------------
+    ("Oslo Konserthus - klassiske konserter",
+     "https://www.oslokonserthus.no/program/",
+     "Frogner", "2026-04-22", "kultur",
+     "Oslo Konserthus i Vika - hjemmet for Oslo-Filharmonien. "
+     "Klassiske konserter + jazz, verdensmusikk og gjestende artister."),
+
+    ("Sentrum Scene - pop/rock-konserter",
+     "https://sentrumscene.no/arrangementer/",
+     "St. Hanshaugen", "2026-04-22", "kultur",
+     "Sentrum Scene paa Arbeidersamfunnets plass - klassiker for "
+     "norske og internasjonale band. Program dekker pop, rock, hiphop "
+     "og klubb."),
+
+    ("Rockefeller Music Hall",
+     "https://www.rockefeller.no/program/",
+     "St. Hanshaugen", "2026-04-22", "kultur",
+     "Rockefeller i Torggata - ikonisk konsertscene siden 1986. "
+     "Aktuelle konserter: norske hovedband, internasjonale stjerner "
+     "og klubb-arrangementer."),
+
+    ("Oslo Spektrum - store konserter",
+     "https://www.oslospektrum.no/arrangementer",
+     "Gamle Oslo", "2026-04-22", "kultur",
+     "Oslo Spektrum ved Jernbanetorget - Norges stoerste innendoers-"
+     "arena. Verdensstjerner, store show og idretts-arrangementer. "
+     "Sjekk siden for vaar/sommer-kalender."),
+
+    ("Kulturkirken Jakob - intime konserter",
+     "https://jakobkulturkirke.no/program",
+     "Gr\u00fcnerl\u00f8kka", "2026-04-22", "kultur",
+     "Kulturkirken Jakob paa Torshovgate - tidligere Jakob kirke, "
+     "n\u00e5 intimscene for jazz, folk, viser og kammermusikk med "
+     "spesiell akustikk."),
+]
+
+
+def load_events() -> list[dict]:
+    """Returner eventene som normaliserte story-dicts."""
+    now_iso = datetime.now(timezone.utc).isoformat()
+    out: list[dict] = []
+    for title, url, bydel, date_iso, category, summary in EVENTS:
+        out.append({
+            "id": _event_id(url, title),
+            "bydel": bydel,
+            "title": title,
+            "url": url,
+            "source": "Bydelsnytt kuratert",
+            "source_id": "events",
+            "published_iso": f"{date_iso}T00:00:00+00:00",
+            "date_iso": date_iso,
+            "summary": summary,
+            "category": category,
+            "fetched_at_iso": now_iso,
+        })
+    return out
+
+
+if __name__ == "__main__":
+    events = load_events()
+    print(f"Totalt {len(events)} kuratere arrangementer")
+    from collections import Counter
+    per_cat = Counter(e["category"] for e in events)
+    per_bydel = Counter(e["bydel"] for e in events)
+    for k, v in per_cat.items():
+        print(f"  kategori {k}: {v}")
+    print("---")
+    for k, v in per_bydel.items():
+        print(f"  bydel {k}: {v}")
