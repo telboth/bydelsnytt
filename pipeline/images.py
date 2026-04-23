@@ -64,6 +64,14 @@ def save_cache(cache: dict) -> None:
         json.dump(cache, f, ensure_ascii=False, indent=2, sort_keys=True)
 
 
+# Kjente placeholder-URLer som enkelte CMS-er returnerer som og:image uten
+# at bildet faktisk finnes (il-try.no peker ofte mot /images/teaser uten filnavn).
+_PLACEHOLDER_RE = re.compile(
+    r'(/images/teaser/?$|/placeholder\.?(png|jpg|jpeg)?$|/default-og\.?(png|jpg|jpeg)?$)',
+    re.I,
+)
+
+
 def _extract_og_image(html: str, base_url: str) -> Optional[str]:
     for pat in (OG_RE, OG_RE_REVERSE, TWITTER_RE):
         m = pat.search(html)
@@ -75,6 +83,8 @@ def _extract_og_image(html: str, base_url: str) -> Optional[str]:
                 img = "https:" + img
             elif img.startswith("/"):
                 img = urllib.parse.urljoin(base_url, img)
+            if _PLACEHOLDER_RE.search(img):
+                continue  # hopp over kjente placeholders
             return img
     return None
 
@@ -149,19 +159,4 @@ def enrich_images(stories, max_new=MAX_NEW_FETCHES_PER_RUN):
                 added += 1
             else:
                 failed += 1
-            time.sleep(0.05)
-            entry = cache[url]
-
-        if entry and entry.get("image"):
-            s["image_url"] = entry["image"]
-            if not need_fetch:
-                from_cache += 1
-
-    save_cache(cache)
-    return {
-        "added": added,
-        "from_cache": from_cache,
-        "fetched_new": fetched_new,
-        "failed": failed,
-        "cache_size": len(cache),
-    }
+          

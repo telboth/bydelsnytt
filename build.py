@@ -1842,7 +1842,9 @@ def render_story(story, bydel_name=""):
             f'<a class="thumb" href="{esc(story["url"])}" target="_blank" '
             f'rel="noopener" aria-hidden="true">'
             f'<img src="{esc(img_url)}" loading="lazy" alt="" '
-            f'onerror="this.parentElement.remove()"></a>'
+            f'onerror="var a=this.closest(&quot;article&quot;);'
+            f'if(a)a.classList.remove(&quot;has-thumb&quot;);'
+            f'this.parentElement.remove()"></a>'
         )
     return f"""
     <article id="{sid}" class="story{' has-thumb' if img_url else ''}" data-category="{esc(cat)}" data-iso="{esc(date_iso)}" data-first-seen="{esc(first_seen)}">
@@ -2228,8 +2230,6 @@ try:
         print("[build] feed.xml: pipeline.cache ikke tilgjengelig, hopper over")
 except Exception as e:
     print(f"[build] feed.xml feilet: {e}")
-
-# --- Ukentlig digest ------
 
 # --- Ukentlig digest -------------------------------------------------------
 try:
