@@ -175,6 +175,22 @@ RSS_SOURCES = [
         "weight": 0.6,
         "resolver": "fixed_bydel",
     },
+    {
+        "id": "dagsavisen",
+        "name": "Dagsavisen",
+        "url": "https://www.dagsavisen.no/rss",
+        "bydel": "St. Hanshaugen",
+        "weight": 0.5,
+        "resolver": "text_match_bydel_fallback",
+    },
+    {
+        "id": "reddit-oslo",
+        "name": "r/oslo",
+        "url": "https://www.reddit.com/r/oslo/new.rss",
+        "bydel": "Gamle Oslo",
+        "weight": 0.3,
+        "resolver": "text_match_bydel_fallback",
+    },
 ]
 
 HTML_SOURCES = [
@@ -245,6 +261,16 @@ HTML_SOURCES = [
         ],
         "limit": 15,
         "weight": 0.5,
+    },
+    {
+        "id": "vartoslo",
+        "name": "Vårt Oslo",
+        "scraper": "vartoslo",
+        "urls": [
+            "https://www.vartoslo.no/",
+        ],
+        "limit": 30,
+        "weight": 0.6,
     },
 ]
 

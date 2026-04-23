@@ -650,6 +650,108 @@ def fetch_from_html_deichman(source: dict) -> Iterable[RawStory]:
                 return
 
 
+# --- Vårt Oslo -----------------------------------------------------------
+_VARTOSLO_LINK_RE = re.compile(
+    r'href="(/[a-z0-9-]+/[a-z0-9-]+/(\d{6,}))"[^>]*>\s*([^<]{15,250})',
+    re.I,
+)
+
+_VARTOSLO_BYDEL_MAP = {
+    "bydel-alna": "Alna",
+    "bydel-bjerke": "Bjerke",
+    "bydel-frogner": "Frogner",
+    "bydel-gamle-oslo": "Gamle Oslo",
+    "bydel-grorud": "Grorud",
+    "bydel-grunerlokka": "Grünerløkka",
+    "bydel-nordre-aker": "Nordre Aker",
+    "bydel-nordstrand": "Nordstrand",
+    "bydel-sagene": "Sagene",
+    "bydel-st-hanshaugen": "St. Hanshaugen",
+    "bydel-stovner": "Stovner",
+    "bydel-sondre-nordstrand": "Søndre Nordstrand",
+    "bydel-ullern": "Ullern",
+    "bydel-vestre-aker": "Vestre Aker",
+    "bydel-ostensjo": "Østensjø",
+}
+
+
+_VARTOSLO_URL_RE = re.compile(
+    r'href="(/([a-z0-9-]+)/([a-z0-9-]+)/(\d{6,}))"', re.I
+)
+_VARTOSLO_HTAG_RE = re.compile(
+    r'<(h[1-6]|span|p)[^>]*>\s*([^<][\s\S]{10,250}?)\s*</\1>'
+)
+
+
+def _slug_to_title(slug: str) -> str:
+    """Fallback: omvend kebab-slug til lesbar tittel."""
+    words = slug.replace("-", " ").strip()
+    return words[:1].upper() + words[1:] if words else ""
+
+
+def fetch_from_html_vartoslo(source: dict):
+    """Vårt Oslo — bydelsavisa for hele Oslo.
+
+    URL-mønster: /tag1-tag2-tag3/slug/{id}. Bydel hentes fra tag-delen hvis
+    'bydel-<navn>' finnes, ellers fallback til source['bydel']. Tittel
+    plukkes fra nærmeste h-tag etter lenken, eller slug som fallback.
+    """
+    fetched_at = datetime.now(timezone.utc).isoformat()
+    bydel_default = source.get("bydel") or "St. Hanshaugen"
+    limit = source.get("limit", 30)
+    seen = set()
+    count = 0
+    for list_url in source.get("urls", []):
+        html_txt = _fetch_html(list_url)
+        if not html_txt:
+            continue
+        for m in _VARTOSLO_URL_RE.finditer(html_txt):
+            href = m.group(1)
+            tags_part = m.group(2).lower()
+            slug = m.group(3)
+            story_id = m.group(4)
+            if story_id in seen:
+                continue
+            seen.add(story_id)
+
+            # Tittel: let etter nærmeste h-tag i ~800 tegn etter lenken
+            window = html_txt[m.end():m.end() + 800]
+            title = ""
+            h = _VARTOSLO_HTAG_RE.search(window)
+            if h:
+                raw = re.sub(r"<[^>]+>", " ", h.group(2))
+                title = re.sub(r"\s+", " ", raw).strip()
+            if len(title) < 10:
+                title = _slug_to_title(slug)
+            if len(title) < 10:
+                continue
+
+            # Bydel
+            bydel_match = bydel_default
+            for key, name in _VARTOSLO_BYDEL_MAP.items():
+                if key in tags_part:
+                    bydel_match = name
+                    break
+
+            full_url = "https://www.vartoslo.no" + href
+            yield RawStory(
+                id=_make_id(full_url, title),
+                bydel=bydel_match,
+                title=title,
+                url=full_url,
+                source=source.get("name", "Vårt Oslo"),
+                source_id=source["id"],
+                published_iso=fetched_at,
+                date_iso=fetched_at[:10],
+                summary="",
+                category="annet",
+                fetched_at_iso=fetched_at,
+            )
+            count += 1
+            if count >= limit:
+                return
+
+
 SCRAPERS = {
     "iltry": fetch_from_html_iltry,
     "kondis": fetch_from_html_kondis,
@@ -658,6 +760,7 @@ SCRAPERS = {
     "oslomet": fetch_from_html_oslomet,
     "bi": fetch_from_html_bi,
     "deichman": fetch_from_html_deichman,
+    "vartoslo": fetch_from_html_vartoslo,
 }
 
 

@@ -1174,6 +1174,7 @@ def _ingest_cache(bydeler_list):
             "url": s.get("url", ""),
             "first_seen_iso": s.get("first_seen_iso"),
             "extra_sources": s.get("extra_sources") or [],
+            "image_url": s.get("image_url") or "",
         }
         by_name[bydel]["stories"].append(story)
         known[bydel].add(url_key)
@@ -1311,6 +1312,23 @@ h1 { margin: 0 0 4px 0; font-size: 26px; font-weight: 600; }
 .story {
   background: #fff; border: 1px solid #e5e5e4; border-radius: 10px;
   padding: 14px 16px; margin-bottom: 10px;
+}
+.story.has-thumb {
+  display: grid; grid-template-columns: 120px 1fr; gap: 14px;
+  align-items: start;
+}
+.story .thumb {
+  display: block; overflow: hidden; border-radius: 6px;
+  aspect-ratio: 4 / 3; background: #f0f0ee;
+}
+.story .thumb img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+  transition: transform 0.25s ease;
+}
+.story .thumb:hover img { transform: scale(1.04); }
+.story .story-body { min-width: 0; }
+@media (max-width: 540px) {
+  .story.has-thumb { grid-template-columns: 88px 1fr; gap: 10px; }
 }
 .story h3 {
   margin: 0 0 6px 0; font-size: 15px; font-weight: 600;
@@ -1675,19 +1693,31 @@ def render_story(story, bydel_name=""):
                 '<div class="extra-sources">Ogsaa omtalt i: '
                 + ", ".join(links) + "</div>"
             )
+    img_url = story.get("image_url") or ""
+    thumb_html = ""
+    if img_url:
+        thumb_html = (
+            f'<a class="thumb" href="{esc(story["url"])}" target="_blank" '
+            f'rel="noopener" aria-hidden="true">'
+            f'<img src="{esc(img_url)}" loading="lazy" alt="" '
+            f'onerror="this.parentElement.remove()"></a>'
+        )
     return f"""
-    <article id="{sid}" class="story" data-category="{esc(cat)}" data-iso="{esc(date_iso)}" data-first-seen="{esc(first_seen)}">
-      <h3>{esc(story['title'])}{badge}<span class="new-badge" hidden>NYTT</span></h3>
-      <div class="meta">
-        <span class="source">{esc(story['source'])}</span>
-        <span class="sep">&middot;</span>
-        <span>{esc(story['date'])}</span>
-        <span class="sep">&middot;</span>
-        <span class="pill {esc(cat)}">{esc(cat_label)}</span>
+    <article id="{sid}" class="story{' has-thumb' if img_url else ''}" data-category="{esc(cat)}" data-iso="{esc(date_iso)}" data-first-seen="{esc(first_seen)}">
+      {thumb_html}
+      <div class="story-body">
+        <h3>{esc(story['title'])}{badge}<span class="new-badge" hidden>NYTT</span></h3>
+        <div class="meta">
+          <span class="source">{esc(story['source'])}</span>
+          <span class="sep">&middot;</span>
+          <span>{esc(story['date'])}</span>
+          <span class="sep">&middot;</span>
+          <span class="pill {esc(cat)}">{esc(cat_label)}</span>
+        </div>
+        <p>{esc(story['summary'])}</p>
+        <a class="readmore" href="{esc(story['url'])}" target="_blank" rel="noopener">Les mer &rarr;</a>
+        {extra_html}
       </div>
-      <p>{esc(story['summary'])}</p>
-      <a class="readmore" href="{esc(story['url'])}" target="_blank" rel="noopener">Les mer &rarr;</a>
-      {extra_html}
     </article>"""
 
 
@@ -1841,7 +1871,8 @@ def render_page(include_cowork_meta):
 <footer>
   Sist oppdatert {esc(TIMESTAMP_ISO)}. Oppdateres daglig 08:01.
   Kilde: automatiske RSS-feeds (Oslo kommune, Groruddalen, NRK Oslo/Viken) + håndkuratert innhold fra skoler og idrettslag.
-  Live: <a href="https://telboth.github.io/bydelsnytt/">telboth.github.io/bydelsnytt</a>.
+  <br>
+  <a href="feed.xml">RSS-feed</a> · <a href="weekly/">Ukesarkiv</a> · Live: <a href="https://telboth.github.io/bydelsnytt/">telboth.github.io/bydelsnytt</a>.
   <span class="visit-counter" id="visit-counter" style="margin-left: 8px; padding-left: 8px; border-left: 1px solid #ddd; color: #888;">Besøk: <span id="visit-count">…</span></span>
 </footer>
 </div>
@@ -1885,3 +1916,25 @@ print("publish  bytes:", os.path.getsize(f"{out_dir}/bydelsnytt_publish.html"))
 print("total stories:", sum(len(b['stories']) for b in BYDELER))
 print("fresh stories:", sum(1 for b in BYDELER for s in b["stories"] if is_fresh(s.get("date_iso"))))
 print("map points:", len(_build_map_data(BYDELER)))
+
+# --- RSS feed.xml ----------------------------------------------------------
+try:
+    from pipeline import feed as _feed
+    if _cache is not None:
+        _stories = _cache.load().get("stories", [])
+        feed_xml = _feed.build_feed(_stories)
+        with open(f"{out_dir}/feed.xml", "w", encoding="utf-8") as f:
+            f.write(feed_xml)
+        print("feed.xml bytes:", os.path.getsize(f"{out_dir}/feed.xml"))
+    else:
+        print("[build] feed.xml: pipeline.cache ikke tilgjengelig, hopper over")
+except Exception as e:
+    print(f"[build] feed.xml feilet: {e}")
+
+# --- Ukentlig digest -------------------------------------------------------
+try:
+    from pipeline import weekly as _weekly
+    wp = _weekly.write_weekly_digest()
+    print(f"weekly: {wp.name} ({os.path.getsize(wp)} bytes)")
+except Exception as e:
+    print(f"[build] weekly feilet: {e}")

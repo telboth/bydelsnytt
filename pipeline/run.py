@@ -7,7 +7,7 @@ from __future__ import annotations
 
 from collections import Counter
 
-from . import cache, classify, dedup, events, fetcher, health, locations
+from . import cache, classify, dedup, events, fetcher, health, images, locations
 
 
 def run() -> dict:
@@ -22,6 +22,8 @@ def run() -> dict:
     merged = cache.merge(existing, enriched)
     pruned = cache.prune(merged)
     deduped = dedup.deduplicate(pruned)
+    image_stats = images.enrich_images(deduped)
+    print(f"[run] image enrich: {image_stats}")
     cache.replace_and_save(deduped)
     health.save(health_data)
 
@@ -41,6 +43,7 @@ def run() -> dict:
         "precise_locations": sum(1 for s in deduped
                                  if s.get("location_precise") and not s.get("hidden")),
         "stale_sources": [s["id"] for s in stale],
+        "image_enrich": image_stats,
     }
     return stats
 
