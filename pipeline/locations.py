@@ -18,12 +18,12 @@ VENUES = [
     ("title_contains", "orientering: nattuglen", 59.979, 10.686),         # Frognerseteren
     ("title_contains", "orientering: o-troll", 59.976, 10.732),           # Sognsvann
     # O-loep klubber (URL-fallback)
-    ("url_contains", "nydalensil.no", 59.976, 10.732),                    # Sognsvann/Nydalen
-    ("url_contains", "lillomarkaol", 59.975, 10.818),                     # Linderudkollen
-    ("url_contains", "koll.no", 59.862, 10.852),                          # Skullerud
-    ("url_contains", "osi-o.no", 59.942, 10.720),                         # Blindern
-    ("url_contains", "fossumif", 59.937, 10.580),                         # Fossum
-    ("url_contains", "eventor.orientering", 59.976, 10.732),              # Sognsvann (generisk)
+    ("url_contains", "nydalensil.no", 59.976, 10.732),
+    ("url_contains", "lillomarkaol", 59.975, 10.818),
+    ("url_contains", "koll.no", 59.862, 10.852),
+    ("url_contains", "osi-o.no", 59.942, 10.720),
+    ("url_contains", "fossumif", 59.937, 10.580),
+    ("url_contains", "eventor.orientering", 59.976, 10.732),
     # Idrettslag
     ("url_contains", "heming.no", 59.952, 10.708),
     ("url_contains", "roail.no", 59.942, 10.637),
@@ -59,8 +59,8 @@ VENUES = [
     ("url_contains", "ullern.vgs", 59.921, 10.660),
     # Oslo kommune / etater
     ("url_contains", "bymiljoetaten", 59.911, 10.753),
-    ("url_contains", "ruter.no/avvik", 59.910, 10.731),   # Jernbanetorget - kollektivknutepunkt
-    ("url_contains", "politiet.no", 59.915, 10.760),      # Oslo politihus, Gr\u00f8nlandsleiret
+    ("url_contains", "ruter.no/avvik", 59.910, 10.731),
+    ("url_contains", "politiet.no", 59.915, 10.760),
     # Arrangements-venues
     ("url_contains", "sentrumslopet", 59.911, 10.733),
     ("url_contains", "oslomaraton", 59.911, 10.733),
@@ -109,4 +109,61 @@ VENUES = [
     ("url_contains", "oslokino.no/kino/gimle", 59.922, 10.705),
     # Teater
     ("url_contains", "nationaltheatret", 59.914, 10.734),
-    ("url_contains", "detnorsketeatret", 59.914,
+    ("url_contains", "detnorsketeatret", 59.914, 10.736),
+    ("url_contains", "oslonye", 59.920, 10.742),
+    ("url_contains", "operaen.no", 59.907, 10.753),
+    # Konsertscener
+    ("url_contains", "oslokonserthus", 59.914, 10.728),
+    ("url_contains", "sentrumscene", 59.916, 10.746),
+    ("url_contains", "rockefeller.no", 59.915, 10.748),
+    ("url_contains", "oslospektrum", 59.912, 10.753),
+    ("url_contains", "jakobkulturkirke", 59.924, 10.761),
+]
+
+BYDEL_CENTERS = {
+    "Alna":              (59.930, 10.885),
+    "Bjerke":            (59.945, 10.822),
+    "Frogner":           (59.925, 10.710),
+    "Gamle Oslo":        (59.910, 10.770),
+    "Grorud":            (59.960, 10.878),
+    "Gr\u00fcnerl\u00f8kka":       (59.925, 10.760),
+    "Nordre Aker":       (59.955, 10.760),
+    "Nordstrand":        (59.866, 10.790),
+    "Sagene":            (59.937, 10.754),
+    "St. Hanshaugen":    (59.928, 10.738),
+    "Stovner":           (59.962, 10.924),
+    "S\u00f8ndre Nordstrand": (59.845, 10.820),
+    "Ullern":            (59.922, 10.655),
+    "Vestre Aker":       (59.961, 10.682),
+    "\u00d8stensj\u00f8":          (59.885, 10.828),
+}
+
+
+def resolve(story):
+    url = (story.get("url") or "").lower()
+    title = (story.get("title") or "").lower()
+    source = story.get("source") or ""
+    for mtype, mval, lat, lng in VENUES:
+        if mtype == "url_contains" and mval in url:
+            return lat, lng, True
+        if mtype == "title_contains" and mval.lower() in title:
+            return lat, lng, True
+        if mtype == "source_equals" and mval == source:
+            return lat, lng, True
+    bydel = story.get("bydel")
+    if bydel in BYDEL_CENTERS:
+        lat, lng = BYDEL_CENTERS[bydel]
+        return lat, lng, False
+    return 59.913, 10.739, False
+
+
+def enrich(stories):
+    out = []
+    for s in stories:
+        lat, lng, precise = resolve(s)
+        s = dict(s)
+        s["lat"] = lat
+        s["lng"] = lng
+        s["location_precise"] = precise
+        out.append(s)
+    return out
