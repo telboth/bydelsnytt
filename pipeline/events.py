@@ -345,6 +345,115 @@ EVENTS = [
      "Kulturkirken Jakob paa Torshovgate - tidligere Jakob kirke, "
      "n\u00e5 intimscene for jazz, folk, viser og kammermusikk med "
      "spesiell akustikk."),
+
+    # --- O-loep / orientering ---------------------------------------------
+    ("Orientering: Oslo Cup 1 - Sognsvann",
+     "https://www.nydalensil.no/orientering/",
+     "Nordre Aker", "2026-04-29", "idrett",
+     "Oslo Cup er en aarlig serie med korte naerloep (5-8 km) "
+     "arrangert av Oslo-klubbene i rotasjon. Vaarens aapningsloep "
+     "med utgangspunkt Sognsvann. Aapne klasser for alle nivaaer. "
+     "Arrangoer: Nydalens SK. Paamelding via Eventor."),
+
+    ("Orientering: Lillomarka OL naerloep - Linderudkollen",
+     "https://www.lillomarkaol.no/",
+     "Grorud", "2026-05-06", "idrett",
+     "Naerloep i Lillomarka med utgangspunkt Linderudkollen skisenter. "
+     "Korte loeyper (C/D) for familier og nybegynnere samt lange "
+     "A-loeyper for konkurranseloepere. Arrangeres jevnlig hele "
+     "vaar-/sommer-sesongen."),
+
+    ("Orientering: Heming naerloep - Holmenkollen",
+     "https://www.heming.no/orientering/",
+     "Vestre Aker", "2026-05-13", "idrett",
+     "Naerloep arrangert av Heming orientering med start ved "
+     "Holmenkollen/Tryvann. Teknisk Nordmarka-terreng med myr, stein "
+     "og stier. Paamelding via Eventor; gratis for Heming-medlemmer."),
+
+    ("Orientering: Pinseloepet 2026",
+     "https://eventor.orientering.no/Events",
+     "Vestre Aker", "2026-05-24", "idrett",
+     "Tradisjonsrikt pinseloep med base Frognerseteren. "
+     "Langdistanse og mellomdistanse paa pinseloerdag og -soendag. "
+     "Trekker orienterings-loepere fra hele Norden."),
+
+    ("Orientering: KM sprint Akershus og Oslo",
+     "https://eventor.orientering.no/Events",
+     "Frogner", "2026-06-06", "idrett",
+     "Kretsmesterskap i sprint-orientering for Akershus og Oslo "
+     "Orienteringskrets. Hurtige sprint-traser i Frognerparken og "
+     "omliggende bygater. Raske veivalg mellom parkveier og bakker."),
+
+    ("Orientering: Oslo Cup 3 - Oestmarksetra",
+     "https://www.nydalensil.no/orientering/",
+     "\u00d8stensj\u00f8", "2026-06-17", "idrett",
+     "Midtsommer-loep i Oslo Cup-serien. Utgangspunkt Oestmarksetra, "
+     "teknisk terreng med mye stein og myr. A-loeype opp mot 12 km, "
+     "D-loeype 3 km med enkle poster for barn og nybegynnere."),
+
+    ("Orientering: Koll naerloep - Skullerud",
+     "https://koll.no/",
+     "Nordstrand", "2026-06-24", "idrett",
+     "Naerloep arrangert av IL Koll med start ved Skullerud. "
+     "Oestmarka-terreng med variert skog og kupert landskap. Korte og "
+     "lange loeyper; gratis proeveloepning for ikke-medlemmer."),
+
+    ("Orientering: Oslo 3-dagers 2026",
+     "https://eventor.orientering.no/Events",
+     "Vestre Aker", "2026-08-14", "idrett",
+     "Tredagers etappefest i Nordmarka med base Frognerseteren. "
+     "Ulikt terreng og distanse hver dag; sammenlagtpremier etter "
+     "3 etapper. Aapne klasser for alle aldre fra 10 til 85+."),
+
+    ("Orientering: OSI Blindern-sprint",
+     "https://osi-o.no/",
+     "Nordre Aker", "2026-08-29", "idrett",
+     "Sprintloep paa Universitetet i Oslo / Blindern-campus og "
+     "omliggende gater. Teknisk sprint-orientering med raske veivalg "
+     "mellom bygninger. Arrangoer: Oslo Studenters IL. Aapen "
+     "deltakelse."),
+
+    ("Orientering: Oslo-mesterskapet langdistanse",
+     "https://eventor.orientering.no/Events",
+     "Nordre Aker", "2026-09-05", "idrett",
+     "OM individuelt paa lang distanse. Terreng i Nordmarka, ofte "
+     "utgangspunkt Ullevaalseter eller Kobberhaug. Klasser H/D 10-85 "
+     "samt aapne klasser. Arrangoer roterer blant Oslo-klubbene."),
+
+    ("Orientering: OM stafett 2026",
+     "https://eventor.orientering.no/Events",
+     "\u00d8stensj\u00f8", "2026-09-12", "idrett",
+     "Oslo-mesterskapet stafett med lag fra alle Oslo-klubbene. "
+     "3-etappers stafett med vaktskifte paa Skullerud. Profesjonelle "
+     "lag og aapne mosjonsklasser samme dag."),
+
+    ("Orientering: Fossum IF naerloep - Vestmarka",
+     "https://www.fossumif.no/",
+     "Ullern", "2026-09-19", "idrett",
+     "Naerloep i Vestmarka/Baerumsmarka arrangert av Fossum IF. "
+     "Utgangspunkt Oesternvann. Variert skog med god laebarhet. "
+     "Del av ukentlig naerloep-serie mai-september."),
+
+    ("Orientering: Blodslitet 2026",
+     "https://eventor.orientering.no/Events",
+     "Nordre Aker", "2026-10-10", "idrett",
+     "Klassisk langdistanse-loep i Nordmarka. 15-20 km for A-loeypen. "
+     "Krevende terreng med myrdrag og sti-kaos. Tradisjonsrikt hoest-"
+     "loep som trekker loepere fra hele Oestlandet."),
+
+    ("Orientering: Nattuglen - nattloep i Nordmarka",
+     "https://eventor.orientering.no/Events",
+     "Vestre Aker", "2026-11-07", "idrett",
+     "Nattloep i Nordmarka med hodelykt. Ca. 5-8 km teknisk terreng "
+     "i moerket. Del av Nattuglen-karusellen november-februar; "
+     "arrangeres i rotasjon av Oslo-klubbene."),
+
+    ("Orientering: O-troll-loepet (for barn)",
+     "https://eventor.orientering.no/Events",
+     "Vestre Aker", "2026-05-02", "idrett",
+     "Barne- og nybegynner-loep med korte, merkede loeyper. Laerings-"
+     "poster med moro-oppgaver og enkel navigasjon. Ingen tidmaaling "
+     "- ferdigheter og mestring er hovedfokus."),
 ]
 
 
