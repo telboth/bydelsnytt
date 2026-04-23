@@ -131,7 +131,39 @@ RSS_SOURCES = [
         "id": "vegvesen",
         "name": "Statens vegvesen",
         "url": "https://www.vegvesen.no/om-oss/presse/aktuelt/rss/",
-        "bydel": "Frogner",  # hovedkontor; tekst-matcher kan overstyre
+        "bydel": "Frogner",
+        "weight": 0.4,
+        "resolver": "text_match_bydel_fallback",
+    },
+    {
+        "id": "e24",
+        "name": "E24",
+        "url": "https://e24.no/rss",
+        "bydel": "Frogner",
+        "weight": 0.5,
+        "resolver": "text_match_bydel_fallback",
+    },
+    {
+        "id": "tu",
+        "name": "Teknisk Ukeblad",
+        "url": "https://www.tu.no/rss",
+        "bydel": "Frogner",
+        "weight": 0.4,
+        "resolver": "text_match_bydel_fallback",
+    },
+    {
+        "id": "kampanje",
+        "name": "Kampanje",
+        "url": "https://kampanje.com/rss",
+        "bydel": "Gr\u00fcnerl\u00f8kka",
+        "weight": 0.4,
+        "resolver": "text_match_bydel_fallback",
+    },
+    {
+        "id": "nho",
+        "name": "NHO",
+        "url": "https://www.nho.no/rss",
+        "bydel": "Frogner",
         "weight": 0.4,
         "resolver": "text_match_bydel_fallback",
     },
@@ -159,7 +191,7 @@ HTML_SOURCES = [
         "id": "politi-oslo",
         "name": "Oslo politidistrikt",
         "scraper": "politi-oslo",
-        "bydel": "Frogner",  # hovedkvarter; tittel-match kan overstyre
+        "bydel": "Frogner",
         "urls": ["https://www.politiet.no/nyheter-og-presse/oslo"],
         "limit": 15,
         "weight": 0.6,
@@ -168,7 +200,7 @@ HTML_SOURCES = [
         "id": "ruter-avvik",
         "name": "Ruter avvik",
         "scraper": "ruter-sx",
-        "bydel": "Frogner",  # Ruter HQ paa Aker Brygge; tekst-match kan overstyre
+        "bydel": "Frogner",
         "urls": ["https://api.entur.io/realtime/v1/rest/sx?datasetId=RUT&maxSize=100"],
         "limit": 25,
         "weight": 0.5,
@@ -236,14 +268,18 @@ def resolve_fixed_bydel(entry):
     return None  # fetcher bruker source['bydel'] direkte
 
 
-# Nasjonale kilder (vegvesen, politi) dekker hele landet. Vi filtrerer
-# paa Oslo-relevans: bydel-/stroek-treff foerst, deretter stikkord som viser
-# at saken handler om Oslo-omraadet.
+# Nasjonale kilder (vegvesen, politi, E24, TU, Kampanje, NHO) dekker hele
+# landet. Vi filtrerer paa Oslo-relevans: bydel-/stroek-treff foerst, deretter
+# stikkord som viser at saken handler om Oslo-omraadet.
 _OSLO_KEYWORDS = [
     "oslo", "ring 1", "ring 2", "ring 3", "operatunnel", "svartdalstunnel",
     "ekebergtunnel", "festningstunnel", "tasen", "\u00e5sen", "carl berner",
     "majorstu", "grefsen", "storo", "br\u00f8bekk", "akershus", "stor-oslo",
     "e6 oslo", "e18 oslo",
+    # Naering-relevante Oslo-stikkord
+    "oslo b\u00f8rs", "osloborsen", "aker brygge", "tjuvholmen", "barcode",
+    "bj\u00f8rvika", "sk\u00f8yen", "nydalen", "oslo kommune", "schibsted",
+    "dnb", "storebrand", "gjensidige", "aker asa", "equinor", "telenor",
 ]
 
 

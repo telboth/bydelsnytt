@@ -21,6 +21,8 @@ RULES: list[tuple[str, list[str]]] = [
         "skole", "elev", "barnehage", "osloskolen", "sfo", "aks",
         "lærer", "rektor", "1. trinn", "10. trinn", "mellomtrinn",
         "ungdomsskole", "barneskole", "videregåend", "utdanning",
+        "universitet", "uio", "høgskole", "studenter", "studium",
+        "forsker", "forskning", "pensum", "fakultet", "phd",
     ]),
     ("idrett", [
         "idrettslag", "fotball", "håndball", "hockey", "allidrett",
@@ -55,6 +57,26 @@ RULES: list[tuple[str, list[str]]] = [
         "restaurant", "bar", "kafé", "kafe", "butikk", "næring",
         "eiendomsmegler", "boligsalg", "boligmarked", "meglerhus",
         "bedrift", "gründer", "næringsliv", "arbeidsledighet",
+        # Børs / finans
+        "oslo børs", "børs", "aksje", "aksjer", "emisjon", "ipo",
+        "notering", "utbytte", "kvartalsrapport", "kvartalsresultat",
+        "årsregnskap", "omsetning", "driftsresultat", "fusjon",
+        "oppkjøp", "konkurs", "gjeldsforhandling",
+        # Startup / tech
+        "startup", "scaleup", "venturefond", "investor",
+        "vc-fond", "såkornfond", "innovasjon", "accelerator",
+        "finansiering", "kapitalinnhenting",
+        # Bransjer
+        "netthandel", "varehandel", "reiseliv", "turisme",
+        "hotell", "cruise", "fintech",
+        "energibransje", "energiselskap", "oljeselskap", "fornybar",
+        "eiendom", "eiendomsutvikler", "næringseiendom",
+        # Jobb / ansettelser
+        "nyansatt", "permittering", "oppsigelse", "lederstilling",
+        "ny sjef", "ny direktør", "rekruttering",
+        # Stor-Oslo selskaper
+        "dnb", "storebrand", "gjensidige", "schibsted", "equinor",
+        "telenor", "aker asa", "yara", "nordea", "orkla",
     ]),
     ("sikkerhet", [
         "brann", "politi", "politiet", "innbrudd", "tyveri",
@@ -68,6 +90,8 @@ STRONG_HINTS = {
     "markastue": "arrangement",
     "bymiljøetaten": "trafikk",
     "bydelsutvalget": "politikk",
+    "oslo børs": "naering",
+    "oslomet": "skole",
 }
 
 
@@ -123,6 +147,11 @@ if __name__ == "__main__":
         ("Festival i Vigelandsparken i juni", ""),
         ("Gamlebyen skole med leseløft", ""),
         ("Politiet rykket ut til brann", ""),
+        ("Oslo Børs åpner med oppgang", ""),
+        ("DNB leverer rekordresultat", ""),
+        ("Startup henter 50 millioner", ""),
+        ("UiO åpner nytt forskningssenter", ""),
+        ("OsloMet utvider tilbud", ""),
     ]
     for t, s in tests:
         print(f"  {classify_story(t, s):14s} <- {t}")
