@@ -454,6 +454,149 @@ EVENTS = [
      "Barne- og nybegynner-loep med korte, merkede loeyper. Laerings-"
      "poster med moro-oppgaver og enkel navigasjon. Ingen tidmaaling "
      "- ferdigheter og mestring er hovedfokus."),
+
+    # --- Deichman / Oslo bibliotek ----------------------------------------
+    ("Sommerles 2026: lesekampanje for barn",
+     "https://www.sommerles.no/",
+     "Gamle Oslo", "2026-06-01", "kultur",
+     "Nasjonal lesekampanje for 1.-7. trinn som starter 1. juni. Deichman "
+     "deler ut premier for boeker lest gjennom sommeren. Alle Oslo-filialer "
+     "deltar."),
+
+    ("Deichman Bjoervika: Barneloerdag",
+     "https://www.deichman.no/bjorvika",
+     "Gamle Oslo", "2026-05-09", "kultur",
+     "Loerdagsprogram med eventyr, sang og verksted for barn 3-9 aar. Fast "
+     "tilbud foerste loerdag hver maaned i hovedbiblioteket."),
+
+    ("Deichman Gr\u00fcnerl\u00f8kka: Forfatterkveld",
+     "https://www.deichman.no/grunerlokka",
+     "Gr\u00fcnerl\u00f8kka", "2026-05-15", "kultur",
+     "Forfatterbesoek og samtale over en halv time, deretter kaffe og "
+     "mingling. Foelg Deichman-programmet for hvem som kommer neste gang."),
+
+    ("Deichman T\u00f8yen: Spraakkafe",
+     "https://www.deichman.no/toyen",
+     "Gamle Oslo", "2026-05-06", "kultur",
+     "Uformell spraakkafe for norsk-laerere og internasjonale Oslo-borgere. "
+     "Onsdag ettermiddag, alle nivaa velkommen."),
+
+    ("Deichman Majorstuen: Bokstrikk",
+     "https://www.deichman.no/majorstuen",
+     "Frogner", "2026-05-14", "kultur",
+     "Strikkegruppe som moetes over kaffe og en bok. Fast torsdagstilbud. "
+     "Gratis, ta med eget prosjekt."),
+
+    ("Deichman Torshov: Lokalhistorielauget",
+     "https://www.deichman.no/torshov",
+     "Sagene", "2026-05-21", "kultur",
+     "Maanedlig foredragskveld om lokalhistorie i Sagene og Torshov. "
+     "Samarbeid med Oslo byarkiv og lokale eldre-informanter."),
+
+    ("Deichman Lambertseter: Familiesoendag",
+     "https://www.deichman.no/lambertseter",
+     "Nordstrand", "2026-05-03", "kultur",
+     "Soendags-familieverksted med hoeytlesing, tegning og bokprat. "
+     "Passer best 4-10 aar, men hele familien velkommen."),
+
+    ("Deichman Furuset: Flerkulturell leseklubb",
+     "https://www.deichman.no/furuset",
+     "Alna", "2026-05-20", "kultur",
+     "Leseklubb som diskuterer boeker paa flere spraak. Urdu, somali, "
+     "arabisk og norsk representert. Annenhver uke."),
+
+    ("Nordisk bibliotekuke 2026",
+     "https://www.deichman.no/",
+     "Gamle Oslo", "2026-11-09", "kultur",
+     "Felles nordisk leseuke der bibliotek i Oslo holder hoeytlesing "
+     "paa morgenen og skumring. Samtlige Deichman-filialer deltar."),
+
+    ("Bokstart Oslo: bokpakker til 1-aaringer",
+     "https://www.deichman.no/bokstart",
+     "Gamle Oslo", "2026-09-15", "kultur",
+     "Gratis bokpakke til alle 1-aaringer i Oslo. Leveres via helsestasjon "
+     "eller hentes paa Deichman-filialer i loepet av hoesten."),
+
+    # --- Oslo kommune signatur-arrangementer ------------------------------
+    ("17. mai: Barnetoget paa Karl Johan",
+     "https://www.oslo.kommune.no/17-mai",
+     "St. Hanshaugen", "2026-05-17", "arrangement",
+     "Det tradisjonelle barnetoget der alle Oslos skoler deltar. Starter "
+     "kl 10 fra Akershus festning og gaar opp Karl Johan til Slottet. "
+     "Hilsen fra kongefamilien paa balkongen."),
+
+    ("17. mai: Russeparaden gjennom sentrum",
+     "https://www.oslo.kommune.no/17-mai",
+     "St. Hanshaugen", "2026-05-17", "arrangement",
+     "Russen gaar gjennom sentrum etter barnetoget. Samling paa Egertorvet, "
+     "felles parade ned Karl Johan og avslutning paa Raadhusplassen."),
+
+    ("Ungdommens Kulturmoenstring Oslo 2026",
+     "https://ukm.no/oslo",
+     "Gr\u00fcnerl\u00f8kka", "2026-03-14", "kultur",
+     "Fylkesmoenstringen for Oslo med unge artister fra hele byen. Dans, "
+     "musikk, visuell kunst og film. Vinnerne gaar videre til UKM-festivalen "
+     "i Trondheim."),
+
+    ("Oslo Mangfoldsfestival 2026",
+     "https://www.oslo.kommune.no/mangfold",
+     "Gamle Oslo", "2026-06-06", "arrangement",
+     "Aarlig festival som feirer kulturell og spraaklig mangfold i Oslo. "
+     "Matboder, musikk og dans fra over 40 kulturer i T\u00f8yenparken."),
+
+    ("Sankthansbaal ved Frognerkilen",
+     "https://www.oslo.kommune.no/sankthans",
+     "Frogner", "2026-06-23", "arrangement",
+     "Offisielt kommune-baal paa Frognerkilen, arrangert av Bymiljoeetaten. "
+     "Familiearrangement fra kl 19 med poelsegrilling og friluftsmusikk."),
+
+    ("Frivillighetsdagen 2026",
+     "https://www.oslo.kommune.no/frivillighet",
+     "St. Hanshaugen", "2026-12-05", "arrangement",
+     "Oslo kommune hedrer byens frivillige. Priser, seremoni paa Raadhuset "
+     "og stands paa Raadhusplassen for over 200 frivillige organisasjoner."),
+
+    ("Julegrantenning paa Stortorvet",
+     "https://www.oslo.kommune.no/jul",
+     "Gamle Oslo", "2026-11-28", "arrangement",
+     "Den offisielle julegrantenningen i Oslo sentrum. Ordfoerer holder "
+     "tale, barnekor synger og grana tennes kl 17. Start paa julesesongen."),
+
+    ("Filmhuset hoestprogram 2026",
+     "https://www.filmhuset.no/",
+     "St. Hanshaugen", "2026-09-01", "kultur",
+     "Cinemateket i Filmhuset aapner hoestsesongen med retrospektiv og "
+     "internasjonale klassikere. Maanedlige tema-programmer."),
+
+    ("Operaens lunsjkonserter 2026 vaar",
+     "https://operaen.no/lunsjkonserter",
+     "Gamle Oslo", "2026-05-08", "kultur",
+     "Gratis 30-min lunsjkonserter i foajeen fredag kl 12. Operaens "
+     "musikere og ensembler. Mest klassisk, av og til crossover."),
+
+    ("Byarkivets aapne dag 2026",
+     "https://www.oslo.kommune.no/byarkivet",
+     "St. Hanshaugen", "2026-10-17", "arrangement",
+     "Byarkivet viser fram kildene: gamle bygningstegninger, skoleprotokoller "
+     "og familiedokumenter. Slektsforskere og lokalhistorikere til stede."),
+
+    ("Nasjonalmuseets sommerutstilling 2026",
+     "https://www.nasjonalmuseet.no/",
+     "Frogner", "2026-06-12", "kultur",
+     "Storformat-utstilling paa nybygget. Tema og kurator offentliggjoeres "
+     "paa vaarparten. Barnefamilieaktiviteter hele sommeren."),
+
+    ("Munchmuseet: Sommersesong 2026",
+     "https://www.munchmuseet.no/",
+     "Gamle Oslo", "2026-06-01", "kultur",
+     "Sommersesongens hovedutstilling aapnes i Munchmuseet paa Bjoervika. "
+     "Lengre aapningstider og ekstra guidede turer gjennom sommeren."),
+
+    ("Oslo Internasjonale Filmfestival 2026",
+     "https://oslofilmfestival.com/",
+     "St. Hanshaugen", "2026-10-28", "kultur",
+     "Oslos eldste filmfestival. Over 150 filmer paa Vega, Saga, Gimle og "
+     "andre sentrumskinoer. Fra dokumentar til kunstfilm."),
 ]
 
 

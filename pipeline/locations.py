@@ -118,6 +118,32 @@ VENUES = [
     ("url_contains", "rockefeller.no", 59.915, 10.748),
     ("url_contains", "oslospektrum", 59.912, 10.753),
     ("url_contains", "jakobkulturkirke", 59.924, 10.761),
+    # Deichman-filialer
+    ("url_contains", "deichman.no/bjorvika", 59.909, 10.757),
+    ("url_contains", "deichman.no/grunerlokka", 59.924, 10.762),
+    ("url_contains", "deichman.no/toyen", 59.916, 10.777),
+    ("url_contains", "deichman.no/majorstuen", 59.929, 10.716),
+    ("url_contains", "deichman.no/torshov", 59.938, 10.758),
+    ("url_contains", "deichman.no/lambertseter", 59.862, 10.797),
+    ("url_contains", "deichman.no/furuset", 59.941, 10.864),
+    ("url_contains", "deichman.no/bokstart", 59.909, 10.757),
+    ("url_contains", "sommerles.no", 59.909, 10.757),
+    # Kommune-venues / 17. mai-ruten / markeringer
+    ("url_contains", "oslo.kommune.no/17-mai", 59.914, 10.737),
+    ("url_contains", "oslo.kommune.no/mangfold", 59.913, 10.777),
+    ("url_contains", "oslo.kommune.no/sankthans", 59.908, 10.696),
+    ("url_contains", "oslo.kommune.no/frivillighet", 59.913, 10.733),
+    ("url_contains", "oslo.kommune.no/jul", 59.914, 10.744),
+    ("url_contains", "oslo.kommune.no/byarkivet", 59.931, 10.757),
+    ("url_contains", "ukm.no/oslo", 59.913, 10.754),
+    # Museer / film / sentrum
+    ("url_contains", "filmhuset.no", 59.912, 10.742),
+    ("url_contains", "nasjonalmuseet.no", 59.912, 10.729),
+    ("url_contains", "munchmuseet.no", 59.907, 10.757),
+    ("url_contains", "oslofilmfestival.com", 59.914, 10.738),
+    ("url_contains", "operaen.no/lunsjkonserter", 59.907, 10.753),
+    # Fallback: generisk deichman.no
+    ("url_contains", "deichman.no", 59.909, 10.757),
 ]
 
 BYDEL_CENTERS = {

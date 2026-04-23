@@ -17,7 +17,7 @@
       "lng": 10.682,
       "location_precise": false,
       "first_seen_iso": "2026-04-22T12:16:33.445401+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "99eb1c190a955f85",
@@ -35,7 +35,7 @@
       "lng": 10.79,
       "location_precise": false,
       "first_seen_iso": "2026-04-22T12:16:33.445401+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "419ef22c28495bf6",
@@ -53,7 +53,7 @@
       "lng": 10.738,
       "location_precise": false,
       "first_seen_iso": "2026-04-22T12:16:33.445401+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "d3c522b892af4fc9",
@@ -65,13 +65,13 @@
       "published_iso": "2026-04-20T05:46:00+00:00",
       "date_iso": "2026-04-20",
       "summary": "Bydel Søndre Nordstrand er partner i forsknings- og innovasjonsprosjektet SAFE@HOME, som skal bidra til at eldre med minoritetsbakgrunn kan bo trygt hjemme lenger.",
-      "category": "annet",
+      "category": "skole",
       "fetched_at_iso": "2026-04-22T12:16:33.445401+00:00",
       "lat": 59.845,
       "lng": 10.82,
       "location_precise": false,
       "first_seen_iso": "2026-04-22T12:16:33.445401+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "f21ed5b0db06098c",
@@ -89,7 +89,7 @@
       "lng": 10.828,
       "location_precise": false,
       "first_seen_iso": "2026-04-22T12:16:33.445401+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "2d1c3094ec582b72",
@@ -107,7 +107,7 @@
       "lng": 10.82,
       "location_precise": false,
       "first_seen_iso": "2026-04-22T12:16:33.445401+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "30f06f172cac34c0",
@@ -125,7 +125,7 @@
       "lng": 10.885,
       "location_precise": false,
       "first_seen_iso": "2026-04-22T12:16:33.445401+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "d8b0081881f2af07",
@@ -143,7 +143,7 @@
       "lng": 10.82,
       "location_precise": false,
       "first_seen_iso": "2026-04-22T12:16:33.445401+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "d9b60abb1af20b6f",
@@ -161,7 +161,7 @@
       "lng": 10.885,
       "location_precise": false,
       "first_seen_iso": "2026-04-22T12:16:33.445401+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "37c7a740a2bec65c",
@@ -179,7 +179,7 @@
       "lng": 10.682,
       "location_precise": false,
       "first_seen_iso": "2026-04-22T12:16:33.445401+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "079235a93167628c",
@@ -197,7 +197,7 @@
       "lng": 10.885,
       "location_precise": false,
       "first_seen_iso": "2026-04-22T12:16:33.445401+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "536b12bf636cdcc3",
@@ -215,7 +215,7 @@
       "lng": 10.76,
       "location_precise": false,
       "first_seen_iso": "2026-04-22T12:16:33.445401+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "ccfeefc4327f32b3",
@@ -233,7 +233,7 @@
       "lng": 10.885,
       "location_precise": false,
       "first_seen_iso": "2026-04-22T12:16:33.445401+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "23e804bcb7136137",
@@ -251,7 +251,7 @@
       "lng": 10.82,
       "location_precise": false,
       "first_seen_iso": "2026-04-22T12:16:33.445401+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "ee961a5c47e08933",
@@ -269,7 +269,7 @@
       "lng": 10.82,
       "location_precise": false,
       "first_seen_iso": "2026-04-22T12:16:33.445401+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "13ec006537981282",
@@ -287,7 +287,7 @@
       "lng": 10.71,
       "location_precise": false,
       "first_seen_iso": "2026-04-22T12:16:33.445401+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "5938a9fb441800b2",
@@ -301,11 +301,11 @@
       "summary": "På møte i Østensjø bydelsutvalg 27. april skal politikerne tildele midler til frivilligheten og behandle forslag om endringer ved fritidsklubbene og Lille Langerud barnehage.",
       "category": "politikk",
       "fetched_at_iso": "2026-04-22T12:16:33.445401+00:00",
-      "lat": 59.885,
-      "lng": 10.828,
-      "location_precise": false,
+      "lat": 59.913,
+      "lng": 10.733,
+      "location_precise": true,
       "first_seen_iso": "2026-04-22T12:16:33.445401+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "f7bc2321c5fd377a",
@@ -323,7 +323,7 @@
       "lng": 10.82,
       "location_precise": false,
       "first_seen_iso": "2026-04-22T12:16:33.445401+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "10efd8b33795cd4a",
@@ -341,7 +341,7 @@
       "lng": 10.682,
       "location_precise": false,
       "first_seen_iso": "2026-04-22T12:16:33.445401+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "ac245a3dece1bf56",
@@ -359,7 +359,7 @@
       "lng": 10.82,
       "location_precise": false,
       "first_seen_iso": "2026-04-22T12:16:33.445401+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "362b1b1a1c1cefcd",
@@ -377,7 +377,7 @@
       "lng": 10.71,
       "location_precise": false,
       "first_seen_iso": "2026-04-22T12:16:33.445401+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "088dfe4960367c39",
@@ -395,7 +395,7 @@
       "lng": 10.822,
       "location_precise": false,
       "first_seen_iso": "2026-04-22T12:16:33.774619+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "5fa018ca600754df",
@@ -413,7 +413,7 @@
       "lng": 10.878,
       "location_precise": false,
       "first_seen_iso": "2026-04-22T12:16:33.774619+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "47b8965c7d91485f",
@@ -431,7 +431,7 @@
       "lng": 10.878,
       "location_precise": false,
       "first_seen_iso": "2026-04-22T12:16:33.774619+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "8111df192b5b89f8",
@@ -467,7 +467,7 @@
       "lng": 10.878,
       "location_precise": false,
       "first_seen_iso": "2026-04-22T12:16:33.774619+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-22T14:14:47.262389+00:00"
     },
     {
       "id": "055fd92282c881e2",
@@ -485,7 +485,7 @@
       "lng": 10.878,
       "location_precise": false,
       "first_seen_iso": "2026-04-22T12:16:33.774619+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-22T14:14:47.262389+00:00"
     },
     {
       "id": "40a3992bccd3d4da",
@@ -521,7 +521,7 @@
       "lng": 10.878,
       "location_precise": false,
       "first_seen_iso": "2026-04-22T12:16:33.774619+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-22T14:14:47.262389+00:00"
     },
     {
       "id": "f7fa7f7092267865",
@@ -539,7 +539,7 @@
       "lng": 10.878,
       "location_precise": false,
       "first_seen_iso": "2026-04-22T12:16:33.774619+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-22T14:14:47.262389+00:00"
     },
     {
       "id": "baf0bd85fd4e9980",
@@ -557,7 +557,7 @@
       "lng": 10.878,
       "location_precise": false,
       "first_seen_iso": "2026-04-22T12:16:33.774619+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-22T14:14:47.262389+00:00"
     },
     {
       "id": "0f47256ae54a3ac0",
@@ -575,7 +575,7 @@
       "lng": 10.878,
       "location_precise": false,
       "first_seen_iso": "2026-04-22T12:16:33.774619+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-22T14:14:47.262389+00:00"
     },
     {
       "id": "13dd2ad0ad20c634",
@@ -593,7 +593,7 @@
       "lng": 10.878,
       "location_precise": false,
       "first_seen_iso": "2026-04-22T12:16:33.774619+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-22T14:14:47.262389+00:00"
     },
     {
       "id": "14d60e00e385ce41",
@@ -611,7 +611,7 @@
       "lng": 10.924,
       "location_precise": false,
       "first_seen_iso": "2026-04-22T12:16:33.774619+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-22T14:14:47.262389+00:00"
     },
     {
       "id": "728af7e811c6c97f",
@@ -629,7 +629,7 @@
       "lng": 10.878,
       "location_precise": false,
       "first_seen_iso": "2026-04-22T12:16:33.774619+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-22T14:14:47.262389+00:00"
     },
     {
       "id": "b94bdd25d9c668e6",
@@ -647,7 +647,7 @@
       "lng": 10.878,
       "location_precise": false,
       "first_seen_iso": "2026-04-22T12:16:33.774619+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-22T14:14:47.262389+00:00"
     },
     {
       "id": "26ac11b39a06e2b1",
@@ -755,7 +755,7 @@
       "lng": 10.878,
       "location_precise": false,
       "first_seen_iso": "2026-04-22T12:45:33.126321+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "b1cf22dc02f413d1",
@@ -773,7 +773,7 @@
       "lng": 10.733,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T12:45:33.853693+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "825088c200d31609",
@@ -791,7 +791,7 @@
       "lng": 10.727,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T12:45:33.853693+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "621819a774bc5caf",
@@ -809,7 +809,7 @@
       "lng": 10.708,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T12:45:33.853693+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "1841c793617f53b9",
@@ -827,7 +827,7 @@
       "lng": 10.733,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T12:45:33.853693+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "6e64cb0883dad758",
@@ -845,7 +845,7 @@
       "lng": 10.77,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T12:45:33.853693+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "cfc0192161a9b689",
@@ -863,7 +863,7 @@
       "lng": 10.793,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T12:45:33.853693+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "c3a438c27157cb2e",
@@ -881,7 +881,7 @@
       "lng": 10.733,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T12:45:33.853693+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "bbada012264376a0",
@@ -899,7 +899,7 @@
       "lng": 10.686,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T12:45:33.853693+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "d351525b0521592f",
@@ -917,7 +917,7 @@
       "lng": 10.727,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T12:45:33.853693+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "2c7cf9a4495c2bb9",
@@ -935,7 +935,7 @@
       "lng": 10.733,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T12:45:33.853693+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "e71000fe903e0139",
@@ -953,7 +953,7 @@
       "lng": 10.74,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T12:45:33.853693+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "0e56cd0db3b2c923",
@@ -971,7 +971,7 @@
       "lng": 10.775,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T12:45:33.853693+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "f0cb0b595e49ce13",
@@ -989,7 +989,7 @@
       "lng": 10.738,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T12:45:33.853693+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "dd16b77d0e56e749",
@@ -1007,7 +1007,7 @@
       "lng": 10.739,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T12:45:33.853693+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "06893ecd91fe81b7",
@@ -1025,7 +1025,7 @@
       "lng": 10.738,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T12:45:33.853693+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "13cc19958ececa7a",
@@ -1043,7 +1043,7 @@
       "lng": 10.672,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T12:45:33.853693+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "78fa3f5ff9173b14",
@@ -1061,7 +1061,7 @@
       "lng": 10.672,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T12:45:33.853693+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "f34a9665ebd17c82",
@@ -1079,7 +1079,7 @@
       "lng": 10.732,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T12:45:33.853693+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "361f6f5d550603f4",
@@ -1088,7 +1088,7 @@
       "url": "https://il-try.no/post/292",
       "source": "IL Try",
       "source_id": "iltry",
-      "published_iso": "2026-04-23T06:24:02.241563+00:00",
+      "published_iso": "2026-04-23T16:20:49.936608+00:00",
       "date_iso": "2026-04-23",
       "summary": "I perioden 16.-29. mars. Fra 20% til 50% rabatt på ordinære priser på fotballsko og utstyr ... se vedlagte flyer for full informasjon.",
       "category": "idrett",
@@ -1097,7 +1097,7 @@
       "lng": 10.68,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T12:45:55.580754+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "97aa39d77d5c0ae7",
@@ -1106,7 +1106,7 @@
       "url": "https://il-try.no/post/288",
       "source": "IL Try",
       "source_id": "iltry",
-      "published_iso": "2026-04-23T06:24:02.241563+00:00",
+      "published_iso": "2026-04-23T16:20:49.936608+00:00",
       "date_iso": "2026-04-23",
       "summary": "TRY IL trenger ditt engasjement! TRY IL er tuftet på frivillighet. Vi er mange som bidrar i forskjellige roller, både i styret, og i de enkelt grener i TRY for at barna våre skal få en aktiv og fin oppvekst!",
       "category": "idrett",
@@ -1115,7 +1115,7 @@
       "lng": 10.68,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T12:45:55.580754+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "188e4eff94b443a7",
@@ -1124,7 +1124,7 @@
       "url": "https://il-try.no/post/285",
       "source": "IL Try",
       "source_id": "iltry",
-      "published_iso": "2026-04-23T06:24:02.241563+00:00",
+      "published_iso": "2026-04-23T16:20:49.936608+00:00",
       "date_iso": "2026-04-23",
       "summary": "Og da tenker vi ikke på de som gikk på ski, men de herlige dugnadsgjengene som ga saft suse til alle og kunne nyte den strålende vinterdagen på stasjonene i Marka! Se så flotte TRYgjenger - klikk deg videre ..",
       "category": "idrett",
@@ -1133,7 +1133,7 @@
       "lng": 10.68,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T12:45:55.580754+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "2eea62da52bd18e1",
@@ -1142,7 +1142,7 @@
       "url": "https://il-try.no/post/282",
       "source": "IL Try",
       "source_id": "iltry",
-      "published_iso": "2026-04-23T06:24:02.241563+00:00",
+      "published_iso": "2026-04-23T16:20:49.936608+00:00",
       "date_iso": "2026-04-23",
       "summary": "Kl. 19:30 på Grindbakken Skole",
       "category": "skole",
@@ -1151,7 +1151,7 @@
       "lng": 10.68,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T12:45:55.580754+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "261de4423b7a3a60",
@@ -1160,7 +1160,7 @@
       "url": "https://il-try.no/post/278",
       "source": "IL Try",
       "source_id": "iltry",
-      "published_iso": "2026-04-23T06:24:02.241563+00:00",
+      "published_iso": "2026-04-23T16:20:49.936608+00:00",
       "date_iso": "2026-04-23",
       "summary": "Siri i alles hjerter og på alles lepper, med 19 treff og solid fart i sporet!! Nå snakker alle kommentatorene om Siri - hva skjer, OL? EM? Uansett - hun er eneste norske kvinne på fellesstarten på søndag!! Bare å glede seg!",
       "category": "naering",
@@ -1169,7 +1169,7 @@
       "lng": 10.68,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T12:45:55.580754+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "13e2071150aa77a6",
@@ -1178,7 +1178,7 @@
       "url": "https://il-try.no/post/272",
       "source": "IL Try",
       "source_id": "iltry",
-      "published_iso": "2026-04-23T06:24:02.241563+00:00",
+      "published_iso": "2026-04-23T16:20:49.936608+00:00",
       "date_iso": "2026-04-23",
       "summary": "TRY har flere lag for både barn, ungdom og voksne (veteran)",
       "category": "idrett",
@@ -1187,7 +1187,7 @@
       "lng": 10.68,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T12:45:55.580754+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "42dbe05764ed173a",
@@ -1196,7 +1196,7 @@
       "url": "https://il-try.no/post/270",
       "source": "IL Try",
       "source_id": "iltry",
-      "published_iso": "2026-04-23T06:24:02.241563+00:00",
+      "published_iso": "2026-04-23T16:20:49.936608+00:00",
       "date_iso": "2026-04-23",
       "summary": "For informasjon, bestillingsfrister og link til bestilling, klikk deg videre",
       "category": "idrett",
@@ -1205,7 +1205,7 @@
       "lng": 10.68,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T12:45:55.580754+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "e6f222468469cd36",
@@ -1214,7 +1214,7 @@
       "url": "https://il-try.no/post/262",
       "source": "IL Try",
       "source_id": "iltry",
-      "published_iso": "2026-04-23T06:24:02.241563+00:00",
+      "published_iso": "2026-04-23T16:20:49.936608+00:00",
       "date_iso": "2026-04-23",
       "summary": "For TRY rabatter - fremgangsmåte for å bli registrert som bruker og bruke koden 0712, klikk deg videre",
       "category": "idrett",
@@ -1223,7 +1223,7 @@
       "lng": 10.68,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T12:45:55.580754+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "222a4337a8d729e2",
@@ -1232,7 +1232,7 @@
       "url": "https://il-try.no/post/259",
       "source": "IL Try",
       "source_id": "iltry",
-      "published_iso": "2026-04-23T06:24:02.241563+00:00",
+      "published_iso": "2026-04-23T16:20:49.936608+00:00",
       "date_iso": "2026-04-23",
       "summary": "TRYs tradisjonelle Skogsløp for ALLE i klubben og gjerne ungene i nabolaget også, er på den vakreste høstdagen, hver høst! NB! OPPDATERT INFORMASJON! Søndagens Skogsløp ble \"en magisk dag og godt arrangert\" for å sitere en tilbakemelding, der barna og voksne koste seg skikkelig! Med godt over 210 deltakere ble alle boller borte vekk i en fei!",
       "category": "idrett",
@@ -1241,7 +1241,7 @@
       "lng": 10.68,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T12:45:55.580754+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "de36c0298af43789",
@@ -1250,7 +1250,7 @@
       "url": "https://il-try.no/post/256",
       "source": "IL Try",
       "source_id": "iltry",
-      "published_iso": "2026-04-23T06:24:02.241563+00:00",
+      "published_iso": "2026-04-23T16:20:49.936608+00:00",
       "date_iso": "2026-04-23",
       "summary": "Kontakt Niclas Giving for eventuell bruk, sms eller whatsapp til +47 91745400",
       "category": "annet",
@@ -1259,7 +1259,7 @@
       "lng": 10.68,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T12:45:55.580754+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "5b11e9c29ca86fbd",
@@ -1268,7 +1268,7 @@
       "url": "https://il-try.no/post/251",
       "source": "IL Try",
       "source_id": "iltry",
-      "published_iso": "2026-04-23T06:24:02.241563+00:00",
+      "published_iso": "2026-04-23T16:20:49.936608+00:00",
       "date_iso": "2026-04-23",
       "summary": "Påmelding er åpen for alle født 2018 eller som begynner i 2. trinn. Klikk på \"Les mer\" for link til påmeldingen.",
       "category": "idrett",
@@ -1277,7 +1277,7 @@
       "lng": 10.68,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T12:45:55.580754+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "d01fe7d332eaeb6f",
@@ -1286,7 +1286,7 @@
       "url": "https://il-try.no/post/248",
       "source": "IL Try",
       "source_id": "iltry",
-      "published_iso": "2026-04-23T06:24:02.241563+00:00",
+      "published_iso": "2026-04-23T16:20:49.936608+00:00",
       "date_iso": "2026-04-23",
       "summary": "Arbeidet er i gang ... dette blir supert!",
       "category": "trafikk",
@@ -1295,7 +1295,7 @@
       "lng": 10.68,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T12:45:55.580754+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "4c856cf16b88e066",
@@ -1304,7 +1304,7 @@
       "url": "https://www.kondis.no/idrett/finsk-storloper-har-flytta-til-norge-og-loper-holmenkollstafetten-for-sk-vidar/1560039",
       "source": "Kondis.no",
       "source_id": "kondis",
-      "published_iso": "2026-04-23T06:24:02.723765+00:00",
+      "published_iso": "2026-04-23T16:20:50.548315+00:00",
       "date_iso": "2026-04-23",
       "summary": "",
       "category": "annet",
@@ -1313,7 +1313,7 @@
       "lng": 10.727,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T12:59:01.938232+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "38f18af4dd5a3046",
@@ -1322,7 +1322,7 @@
       "url": "https://www.kondis.no/idrett/nydalen-og-ntnui-med-stafettseier-i-halden-o-meeting/1560374",
       "source": "Kondis.no",
       "source_id": "kondis",
-      "published_iso": "2026-04-23T06:24:02.723765+00:00",
+      "published_iso": "2026-04-23T16:20:50.548315+00:00",
       "date_iso": "2026-04-23",
       "summary": "",
       "category": "annet",
@@ -1331,7 +1331,7 @@
       "lng": 10.76,
       "location_precise": false,
       "first_seen_iso": "2026-04-22T12:59:01.938232+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "da7a11c28e1b3af7",
@@ -1349,7 +1349,7 @@
       "lng": 10.732,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T13:05:00.377482+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "75c79cf4be052166",
@@ -1367,7 +1367,7 @@
       "lng": 10.71,
       "location_precise": false,
       "first_seen_iso": "2026-04-22T13:15:18.144380+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "01d5c477609f4311",
@@ -1385,7 +1385,7 @@
       "lng": 10.71,
       "location_precise": false,
       "first_seen_iso": "2026-04-22T13:15:18.144380+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "fb85d433a9579757",
@@ -1403,7 +1403,7 @@
       "lng": 10.878,
       "location_precise": false,
       "first_seen_iso": "2026-04-22T13:15:18.144380+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "01df0f468677d849",
@@ -1421,7 +1421,7 @@
       "lng": 10.77,
       "location_precise": false,
       "first_seen_iso": "2026-04-22T13:15:18.144380+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "0194d3d15cbc4a5a",
@@ -1475,7 +1475,7 @@
       "lng": 10.751,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T13:15:18.526329+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "02ed05324227c7cf",
@@ -1493,7 +1493,7 @@
       "lng": 10.751,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T13:15:18.526329+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "21316bd7b0d05b1f",
@@ -1511,7 +1511,7 @@
       "lng": 10.751,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T13:15:18.526329+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "1b2c8d707879b54b",
@@ -1529,7 +1529,7 @@
       "lng": 10.751,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T13:15:18.526329+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "111963705844e30a",
@@ -1547,7 +1547,7 @@
       "lng": 10.751,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T13:15:18.526329+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "f0e3451cc18d66cd",
@@ -1565,7 +1565,7 @@
       "lng": 10.751,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T13:15:18.526329+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "bc11e0c2de6ca438",
@@ -1583,7 +1583,7 @@
       "lng": 10.751,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T13:15:18.526329+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "76bedd5d25198ce0",
@@ -1601,7 +1601,7 @@
       "lng": 10.751,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T13:15:18.526329+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "7b8e4935887b500c",
@@ -1619,7 +1619,7 @@
       "lng": 10.751,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T13:15:18.526329+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "dd2349600fdaceb0",
@@ -1637,7 +1637,7 @@
       "lng": 10.751,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T13:15:18.526329+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "5a15ade7aa13e81b",
@@ -1655,7 +1655,7 @@
       "lng": 10.751,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T13:15:18.526329+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "efb670bb6a2f976a",
@@ -1673,7 +1673,7 @@
       "lng": 10.751,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T13:15:18.526329+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "999ccf4ed79b8608",
@@ -1691,7 +1691,7 @@
       "lng": 10.751,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T13:15:18.526329+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "807510e942e255f7",
@@ -1709,7 +1709,7 @@
       "lng": 10.751,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T13:15:18.526329+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "c2948f40ffadcacf",
@@ -1727,7 +1727,7 @@
       "lng": 10.751,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T13:15:18.526329+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "bf04ff48680f73b5",
@@ -1745,7 +1745,7 @@
       "lng": 10.751,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T13:15:18.526329+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "a3ff35325f874eea",
@@ -1763,7 +1763,7 @@
       "lng": 10.751,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T13:15:18.526329+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "b11b9ee6d58770f3",
@@ -1781,7 +1781,7 @@
       "lng": 10.751,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T13:15:18.526329+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "1c64e9330033c3d7",
@@ -1799,7 +1799,7 @@
       "lng": 10.751,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T13:15:18.526329+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "083a731335199f24",
@@ -1817,7 +1817,7 @@
       "lng": 10.751,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T13:15:18.526329+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-22T14:14:47.262389+00:00"
     },
     {
       "id": "bed61c654e92a5cc",
@@ -1835,7 +1835,7 @@
       "lng": 10.785,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T13:15:19.026917+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "937eb23d53aba38a",
@@ -1853,7 +1853,7 @@
       "lng": 10.785,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T13:15:19.026917+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "3f40fe09cdeeaf8b",
@@ -1871,7 +1871,7 @@
       "lng": 10.785,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T13:15:19.026917+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "145a7d2acbcc1b3a",
@@ -1889,7 +1889,7 @@
       "lng": 10.785,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T13:15:19.026917+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "830aeb4d947acfdd",
@@ -1907,7 +1907,7 @@
       "lng": 10.785,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T13:15:19.026917+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "eaafe2d9364453ea",
@@ -1925,7 +1925,7 @@
       "lng": 10.785,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T13:15:19.026917+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "3fa6d0a7dc1b0db3",
@@ -1943,7 +1943,7 @@
       "lng": 10.785,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T13:15:19.026917+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "c543d261e977f016",
@@ -1961,7 +1961,7 @@
       "lng": 10.785,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T13:15:19.026917+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "1dd9ef0d7fc03dd9",
@@ -1979,7 +1979,7 @@
       "lng": 10.785,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T13:15:19.026917+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "c80a8e76211d340e",
@@ -1997,7 +1997,7 @@
       "lng": 10.785,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T13:15:19.026917+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "b69e093b65a3b031",
@@ -2015,7 +2015,7 @@
       "lng": 10.785,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T13:15:19.026917+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "44fb7c2cbf667041",
@@ -2033,7 +2033,7 @@
       "lng": 10.785,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T13:15:19.026917+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "af6409b89fbb8003",
@@ -2051,7 +2051,7 @@
       "lng": 10.785,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T13:15:19.026917+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "6292d0091caacb83",
@@ -2069,7 +2069,7 @@
       "lng": 10.785,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T13:15:19.026917+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "2bb77a746d23e89b",
@@ -2087,7 +2087,7 @@
       "lng": 10.785,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T13:15:19.026917+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "a7b755ef2944d6ff",
@@ -2105,7 +2105,7 @@
       "lng": 10.785,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T13:15:19.026917+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "13be709ecb73fb59",
@@ -2123,7 +2123,7 @@
       "lng": 10.785,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T13:15:19.026917+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "c5ae9c59a044fcdb",
@@ -2141,7 +2141,7 @@
       "lng": 10.785,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T13:15:19.026917+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "987e195073b49db8",
@@ -2159,7 +2159,7 @@
       "lng": 10.785,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T13:15:19.026917+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "cf47993950b69fa3",
@@ -2177,7 +2177,7 @@
       "lng": 10.785,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T13:15:19.026917+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "0492bd3b239b7f74",
@@ -2195,7 +2195,7 @@
       "lng": 10.83,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T13:15:19.305293+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "3f89ec54ad202986",
@@ -2213,7 +2213,7 @@
       "lng": 10.83,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T13:15:19.305293+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "c0a1ca197b74dbbc",
@@ -2231,7 +2231,7 @@
       "lng": 10.83,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T13:15:19.305293+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "50424cf201c82a90",
@@ -2249,7 +2249,7 @@
       "lng": 10.83,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T13:15:19.305293+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "2090b224cb743c37",
@@ -2267,7 +2267,7 @@
       "lng": 10.83,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T13:15:19.305293+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "c952c61adf2b344d",
@@ -2303,7 +2303,7 @@
       "lng": 10.71,
       "location_precise": false,
       "first_seen_iso": "2026-04-22T13:44:48.799832+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "8f5cc37a85b8ae0c",
@@ -2321,7 +2321,7 @@
       "lng": 10.71,
       "location_precise": false,
       "first_seen_iso": "2026-04-22T13:44:48.799832+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "822da7038b0ab323",
@@ -2339,7 +2339,7 @@
       "lng": 10.71,
       "location_precise": false,
       "first_seen_iso": "2026-04-22T13:44:48.799832+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "0699007705ed16c6",
@@ -2357,7 +2357,7 @@
       "lng": 10.76,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T13:44:49.540959+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "d10a4697fd126b5d",
@@ -2375,7 +2375,7 @@
       "lng": 10.76,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T13:44:49.540959+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "3ed1c4ee79ebb5df",
@@ -2393,7 +2393,7 @@
       "lng": 10.76,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T13:44:49.540959+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "82a6f2406ce6f28a",
@@ -2411,7 +2411,7 @@
       "lng": 10.667,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T13:44:49.889146+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "deecacf717b1cdb7",
@@ -2429,7 +2429,7 @@
       "lng": 10.682,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T13:54:31.155879+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "c6cbfbb5a4c3e33d",
@@ -2447,7 +2447,7 @@
       "lng": 10.743,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T13:54:31.155879+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "1ccd504fd21e07b8",
@@ -2465,7 +2465,7 @@
       "lng": 10.741,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T13:54:31.155879+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "42cfbcf540ef9b4c",
@@ -2483,7 +2483,7 @@
       "lng": 10.763,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T13:54:31.155879+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "42aa86cd65faad7a",
@@ -2501,7 +2501,7 @@
       "lng": 10.89,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T13:54:31.155879+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "744a4f5bfd3ef954",
@@ -2519,7 +2519,7 @@
       "lng": 10.682,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T13:54:31.155879+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "7ac0d453cfe95c60",
@@ -2537,7 +2537,7 @@
       "lng": 10.79,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T13:54:31.155879+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "b032020e97bf8eb2",
@@ -2555,7 +2555,7 @@
       "lng": 10.761,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T13:54:31.155879+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "a7bee92abf7a3618",
@@ -2573,7 +2573,7 @@
       "lng": 10.881,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T13:54:31.155879+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "17aa16e58f30d64d",
@@ -2591,7 +2591,7 @@
       "lng": 10.821,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T13:54:31.155879+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "985471ebc2fa1407",
@@ -2609,7 +2609,7 @@
       "lng": 10.76,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T13:54:31.155879+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "399f234f776ceb40",
@@ -2627,7 +2627,7 @@
       "lng": 10.79,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T13:54:31.155879+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "97616474ee627f92",
@@ -2645,7 +2645,7 @@
       "lng": 10.682,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T13:54:31.155879+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "33aa708362f89473",
@@ -2663,7 +2663,7 @@
       "lng": 10.881,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T13:54:31.155879+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "c951ec6162350418",
@@ -2681,7 +2681,7 @@
       "lng": 10.77,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T13:54:31.155879+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "6ff81f58577890e5",
@@ -2699,7 +2699,7 @@
       "lng": 10.748,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T13:54:31.155879+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "c0658f87c5c1031f",
@@ -2717,7 +2717,7 @@
       "lng": 10.735,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T13:54:31.155879+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "10519e541590b845",
@@ -2735,7 +2735,7 @@
       "lng": 10.715,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T13:54:31.155879+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "ea947eac149368e9",
@@ -2753,7 +2753,7 @@
       "lng": 10.705,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T13:54:31.155879+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "abe5d79dc32d622d",
@@ -2771,7 +2771,7 @@
       "lng": 10.734,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T13:54:31.155879+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "167a37bb23d20c52",
@@ -2789,7 +2789,7 @@
       "lng": 10.736,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T13:54:31.155879+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "e5339a01c0a6386b",
@@ -2807,7 +2807,7 @@
       "lng": 10.742,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T13:54:31.155879+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "ecff156b40c1cfd8",
@@ -2825,7 +2825,7 @@
       "lng": 10.753,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T13:54:31.155879+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "f932813ae2ba0473",
@@ -2843,7 +2843,7 @@
       "lng": 10.728,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T13:54:31.155879+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "5eab75c6a6c91eca",
@@ -2861,7 +2861,7 @@
       "lng": 10.746,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T13:54:31.155879+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "474500439170ffe0",
@@ -2879,7 +2879,7 @@
       "lng": 10.748,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T13:54:31.155879+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "51fa3ae35dc93c7e",
@@ -2897,7 +2897,7 @@
       "lng": 10.753,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T13:54:31.155879+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "fec4bfc222531a28",
@@ -2915,7 +2915,7 @@
       "lng": 10.761,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T13:54:31.155879+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "74337f3605404b10",
@@ -2933,7 +2933,7 @@
       "lng": 10.731,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T14:14:46.986615+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "23a5ca14b256dcee",
@@ -2969,7 +2969,7 @@
       "lng": 10.731,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T14:14:46.986615+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "f4723ef96f7c9bea",
@@ -3005,7 +3005,7 @@
       "lng": 10.731,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T14:14:46.986615+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-22T14:14:47.262389+00:00"
     },
     {
       "id": "7d1acfc9986e16f8",
@@ -3023,7 +3023,7 @@
       "lng": 10.731,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T14:14:46.986615+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-22T14:14:47.262389+00:00"
     },
     {
       "id": "1c68a8caab195397",
@@ -3059,7 +3059,7 @@
       "lng": 10.731,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T14:14:46.986615+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-22T14:14:47.262389+00:00"
     },
     {
       "id": "3f2374ac3a4ee0d9",
@@ -3077,7 +3077,7 @@
       "lng": 10.731,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T14:14:46.986615+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-22T14:14:47.262389+00:00"
     },
     {
       "id": "e1ca6dc4c7f9b8df",
@@ -3095,7 +3095,7 @@
       "lng": 10.731,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T14:14:46.986615+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-22T14:14:47.262389+00:00"
     },
     {
       "id": "30c931292113256b",
@@ -3113,7 +3113,7 @@
       "lng": 10.731,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T14:14:46.986615+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-22T14:14:47.262389+00:00"
     },
     {
       "id": "aa5848105cd16f83",
@@ -3131,7 +3131,7 @@
       "lng": 10.731,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T14:14:46.986615+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "64b385b4563735a8",
@@ -3149,7 +3149,7 @@
       "lng": 10.731,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T14:14:46.986615+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "5f4ae7b3c94869f0",
@@ -3167,7 +3167,7 @@
       "lng": 10.731,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T14:14:46.986615+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-22T14:14:47.262389+00:00"
     },
     {
       "id": "830a5d386640e5e3",
@@ -3185,7 +3185,7 @@
       "lng": 10.731,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T14:14:46.986615+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-22T14:14:47.262389+00:00"
     },
     {
       "id": "86ea8b4d6a478c76",
@@ -3203,7 +3203,7 @@
       "lng": 10.731,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T14:14:46.986615+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "ea0f37b3803796e8",
@@ -3221,7 +3221,7 @@
       "lng": 10.731,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T14:14:46.986615+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-22T14:14:47.262389+00:00"
     },
     {
       "id": "5d3f39648ec15857",
@@ -3239,7 +3239,7 @@
       "lng": 10.731,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T14:14:46.986615+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-22T14:14:47.262389+00:00"
     },
     {
       "id": "d02c83fd11747d6b",
@@ -3275,7 +3275,7 @@
       "lng": 10.731,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T14:14:46.986615+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-22T14:14:47.262389+00:00"
     },
     {
       "id": "1db7e98499ae933b",
@@ -3293,25 +3293,223 @@
       "lng": 10.731,
       "location_precise": true,
       "first_seen_iso": "2026-04-22T14:14:46.986615+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
-      "id": "9a0fc9a666a7f39f",
+      "id": "eb5f85a5a23bcdba",
       "bydel": "Grorud",
-      "title": "Solrik torsdag med stigende temperaturer",
-      "url": "https://groruddalen.no/nyheter/solrik-torsdag-med-stigende-temperaturer/",
+      "title": "Knockout-debut i NM: Kongepokalen ble med hjem til Grorud",
+      "url": "https://groruddalen.no/sport/knockout-debut-i-nm-kongepokalen-ble-med-hjem-til-grorud/",
       "source": "Groruddalen",
       "source_id": "groruddalen",
-      "published_iso": "2026-04-23T03:59:46+00:00",
+      "published_iso": "2026-04-23T13:30:18+00:00",
       "date_iso": "2026-04-23",
-      "summary": "Torsdagen her i Groruddalen starter kjølig, men utvikler seg til en mild og solrik dag med temperaturer opp mot 18 grader. Vinden er gjennomgående svak fra nordlige retninger, men øker noe utover ettermiddagen til lett bris med enkelte kraftigere vindkast. Værvarselet er levert av yr.no.",
+      "summary": "Abdrahman El Moutaouakkel (18) fra Grorud tok storeslem i taekwondo-NM. Norgesmestertittel og kongepokal. På første forsøk!",
       "category": "annet",
-      "fetched_at_iso": "2026-04-23T06:17:23.459776+00:00",
+      "fetched_at_iso": "2026-04-23T16:20:47.915347+00:00",
       "lat": 59.96,
       "lng": 10.878,
       "location_precise": false,
-      "first_seen_iso": "2026-04-23T06:17:23.459776+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "first_seen_iso": "2026-04-23T16:20:47.915347+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "0006de14c039832d",
+      "bydel": "Grorud",
+      "title": "Bydelsreform: Ti grunner til at SV sier nei",
+      "url": "https://groruddalen.no/groruddalsdebatt/bydelsreform-ti-grunner-til-at-sv-sier-nei/",
+      "source": "Groruddalen",
+      "source_id": "groruddalen",
+      "published_iso": "2026-04-23T13:30:02+00:00",
+      "date_iso": "2026-04-23",
+      "summary": "Mer demokrati og bedre tjenester er en forutsetning for at SV skal kunne støtte en ny bydelsreform.",
+      "category": "politikk",
+      "fetched_at_iso": "2026-04-23T16:20:47.915347+00:00",
+      "lat": 59.96,
+      "lng": 10.878,
+      "location_precise": false,
+      "first_seen_iso": "2026-04-23T16:20:47.915347+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "16b98d2d2b5d8474",
+      "bydel": "Alna",
+      "title": "Hele Groruddalen rydder: I dag er det Stovner og Alnas tur",
+      "url": "https://groruddalen.no/nyheter/hele-groruddalen-rydder-i-dag-er-det-alnas-tur/",
+      "source": "Groruddalen",
+      "source_id": "groruddalen",
+      "published_iso": "2026-04-23T12:21:04+00:00",
+      "date_iso": "2026-04-23",
+      "summary": "Vårrusken er godt i gang, og denne uka er det ekstraaksjoner rundt om i Groruddalen. Hvis du vil være med på å gjøre dalen vårflott, så er det bare å møte opp ved Frivilligsentralen på Stovner eller Nabolagshuset på Trosterud i ettermiddag. Vaffeljernene står klare!",
+      "category": "naering",
+      "fetched_at_iso": "2026-04-23T16:20:47.915347+00:00",
+      "lat": 59.93,
+      "lng": 10.885,
+      "location_precise": false,
+      "first_seen_iso": "2026-04-23T16:20:47.915347+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "609a1a8aed6f78c7",
+      "bydel": "Bjerke",
+      "title": "Tulipan som takk",
+      "url": "https://groruddalen.no/kultur/tulipan-som-takk/",
+      "source": "Groruddalen",
+      "source_id": "groruddalen",
+      "published_iso": "2026-04-23T09:30:43+00:00",
+      "date_iso": "2026-04-23",
+      "summary": "Våren er tulipanens tid til å skinne, og Lions-klubber over hele landet skal denne helgen selge tulipaner. Samtidig så understreker Ivar Tollefsrud, president i Lions Club Oslo/Bjerke, at det handler om så mye mer enn selve tulipanene.",
+      "category": "idrett",
+      "fetched_at_iso": "2026-04-23T16:20:47.915347+00:00",
+      "lat": 59.945,
+      "lng": 10.822,
+      "location_precise": false,
+      "first_seen_iso": "2026-04-23T16:20:47.915347+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "d6bb4019b71c1855",
+      "bydel": "Grorud",
+      "title": "Ny rapport om hatkriminalitet: – Mørketallene fortsatt høye",
+      "url": "https://groruddalen.no/nyheter/ny-rapport-om-hatkriminalitet-morketallene-fortsatt-hoye/",
+      "source": "Groruddalen",
+      "source_id": "groruddalen",
+      "published_iso": "2026-04-23T09:30:04+00:00",
+      "date_iso": "2026-04-23",
+      "summary": "Antallet anmeldelser for hatkriminalitet i Norge gikk noe ned i 2025, men nivået er fortsatt høyt, og utviklingen preges av både stabile og skiftende trender. Det kommer fram i årsrapporten fra Oslo politidistrikt.",
+      "category": "idrett",
+      "fetched_at_iso": "2026-04-23T16:20:47.915347+00:00",
+      "lat": 59.96,
+      "lng": 10.878,
+      "location_precise": false,
+      "first_seen_iso": "2026-04-23T16:20:47.915347+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "6811f8904b45a5ad",
+      "bydel": "Grorud",
+      "title": "Over 150.000 har søkt studier",
+      "url": "https://groruddalen.no/nyheter/over-150-000-har-sokt-studier/",
+      "source": "Groruddalen",
+      "source_id": "groruddalen",
+      "published_iso": "2026-04-23T08:23:32+00:00",
+      "date_iso": "2026-04-23",
+      "summary": "Søkertallene til høyere utdanning har fått et kraftig hopp i år. Fortsatt er jus, økonomi og medisinstudier populære, men det er også flere som ønsker å bli barnehagelærer enn tidligere, og søkertallene til sykepleier- og lærerutdanningene holder seg stabile. Det bekrefter Kunnskapsdepartementet. Oslo fortsetter å være populær som studieby, og mange har et studium i [&#8230;]",
+      "category": "skole",
+      "fetched_at_iso": "2026-04-23T16:20:47.915347+00:00",
+      "lat": 59.96,
+      "lng": 10.878,
+      "location_precise": false,
+      "first_seen_iso": "2026-04-23T16:20:47.915347+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "081750fb05769437",
+      "bydel": "Grorud",
+      "title": "Regelendring for el-billading",
+      "url": "https://groruddalen.no/nyheter/regelendring-for-el-billading/",
+      "source": "Groruddalen",
+      "source_id": "groruddalen",
+      "published_iso": "2026-04-23T08:18:35+00:00",
+      "date_iso": "2026-04-23",
+      "summary": "Svært mange velger en elektrisk bil når de kjøper ny bil i disse dager. Har man garasje eller fast parkeringsplass har man kanskje en egen lader knyttet til egen bolig som man betaler for, men hvis ikke er man avhengig av å kunne lade gatelangs. Nå innfører Oslo kommune en ny prismodell for kommunal elbillading. [&#8230;]",
+      "category": "trafikk",
+      "fetched_at_iso": "2026-04-23T16:20:47.915347+00:00",
+      "lat": 59.96,
+      "lng": 10.878,
+      "location_precise": false,
+      "first_seen_iso": "2026-04-23T16:20:47.915347+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "a44aa807c47a2842",
+      "bydel": "Grorud",
+      "title": "For dårlige til å sortere",
+      "url": "https://groruddalen.no/nyheter/for-darlige-til-a-sortere/",
+      "source": "Groruddalen",
+      "source_id": "groruddalen",
+      "published_iso": "2026-04-23T08:11:30+00:00",
+      "date_iso": "2026-04-23",
+      "summary": "Oslofolk er dårlige til å sortere ut matavfallet sitt, slår Oslo kommune fast. I gjennomsnitt kaster hver person 74 kilo med matavfall hvert år, men kun halvparten sorteres riktig. Da ender matavfallet opp med å bli brent, i stedet for at det kan bli brukt til å produsere biogass og biogjødsel. I tillegg kreves det [&#8230;]",
+      "category": "annet",
+      "fetched_at_iso": "2026-04-23T16:20:47.915347+00:00",
+      "lat": 59.96,
+      "lng": 10.878,
+      "location_precise": false,
+      "first_seen_iso": "2026-04-23T16:20:47.915347+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "7bb536f1d6593952",
+      "bydel": "Grorud",
+      "title": "Når Anders Berg gir seg, må bydelen finne en ny bydelsdirektør",
+      "url": "https://groruddalen.no/nyheter/anders-berg-gir-seg-alna-trenger-ny-bydelsdirektor/",
+      "source": "Groruddalen",
+      "source_id": "groruddalen",
+      "published_iso": "2026-04-23T08:00:42+00:00",
+      "date_iso": "2026-04-23",
+      "summary": "Den populære bydelsdirektøren blir ny kommunaldirektør i byrådsavdeling for byutvikling. Da etterlater han seg samtidig det åpenbare spørsmålet: Hvem skal ta over sjefsstolen i en av de største bydelene våre?",
+      "category": "politikk",
+      "fetched_at_iso": "2026-04-23T16:20:47.915347+00:00",
+      "lat": 59.96,
+      "lng": 10.878,
+      "location_precise": false,
+      "first_seen_iso": "2026-04-23T16:20:47.915347+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "d56bbd6599be4d0a",
+      "bydel": "Grorud",
+      "title": "Hovedveier i Groruddalen skal bli grønne",
+      "url": "https://groruddalen.no/nyheter/hovedveier-i-groruddalen-skal-bli-gronne/",
+      "source": "Groruddalen",
+      "source_id": "groruddalen",
+      "published_iso": "2026-04-23T07:41:38+00:00",
+      "date_iso": "2026-04-23",
+      "summary": "Trondheimsveien kan ende opp med å ligne Dronning Eufemias gate ved Bjørvika innen 2040 om kommuneplanen blir som tenkt. Dronning Eufemias gate består i dag av sykkelfelt, kollektivfelt og ett felt for biler i hver retning. I tillegg er det plantet trær i midten. Byråd for miljø og samferdsel trekker fram dette som inspirasjon. Også [&#8230;]",
+      "category": "politikk",
+      "fetched_at_iso": "2026-04-23T16:20:47.915347+00:00",
+      "lat": 59.96,
+      "lng": 10.878,
+      "location_precise": false,
+      "first_seen_iso": "2026-04-23T16:20:47.915347+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "8979394549d5cee7",
+      "bydel": "Grorud",
+      "title": "Arbeiderpartiet sier ja til reform",
+      "url": "https://groruddalen.no/nyheter/arbeiderpartiet-sier-ja-til-reform/",
+      "source": "Groruddalen",
+      "source_id": "groruddalen",
+      "published_iso": "2026-04-23T07:38:20+00:00",
+      "date_iso": "2026-04-23",
+      "summary": "Onsdag landet Arbeiderpartiet på at de vil gå inn i forhandlingene med byrådspartiene om bydelsreformen, som skal opp for bystyret i slutten av mai. Etter diskusjoner landet flertallet på at man ønsker reformen, men med strenge krav til innholdet i den. Dermed ligger det an til et solid flertall i bystyret. Fra før av har [&#8230;]",
+      "category": "politikk",
+      "fetched_at_iso": "2026-04-23T16:20:47.915347+00:00",
+      "lat": 59.96,
+      "lng": 10.878,
+      "location_precise": false,
+      "first_seen_iso": "2026-04-23T16:20:47.915347+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "4c322b966d4536a8",
+      "bydel": "Grorud",
+      "title": "Brann i kjøretøy",
+      "url": "https://groruddalen.no/nyheter/brann-i-kjoretoy/",
+      "source": "Groruddalen",
+      "source_id": "groruddalen",
+      "published_iso": "2026-04-23T07:35:21+00:00",
+      "date_iso": "2026-04-23",
+      "summary": "Nødetatene rykket natt til torsdag ut til Spireaveien på Økern etter melding om brann i et kjøretøy. Politiet meldte om brannen klokka 04.22. Klokka fem på morgenen var brannen slukket, men politi og brannvesen kunne ikke umiddelbart si noe om årsaken til brannen. Bilen ble berget fra stedet for undersøkelser. Det er ikke meldt om [&#8230;]",
+      "category": "sikkerhet",
+      "fetched_at_iso": "2026-04-23T16:20:47.915347+00:00",
+      "lat": 59.96,
+      "lng": 10.878,
+      "location_precise": false,
+      "first_seen_iso": "2026-04-23T16:20:47.915347+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "ce33c38b883b580d",
@@ -3324,12 +3522,12 @@
       "date_iso": "2026-04-23",
       "summary": "Hovedmantraet til Nordic Black Xpress er at de skal gjenspeile mangfoldet i dagens Norge. Derfor har samtlige av skuespillerne i «Heksene i Salem» minoritetsbakgrunn. Målet er å vise at det går an å bli skuespiller uansett bakgrunn.",
       "category": "annet",
-      "fetched_at_iso": "2026-04-23T06:17:23.459776+00:00",
+      "fetched_at_iso": "2026-04-23T16:20:47.915347+00:00",
       "lat": 59.96,
       "lng": 10.878,
       "location_precise": false,
-      "first_seen_iso": "2026-04-23T06:17:23.459776+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "first_seen_iso": "2026-04-23T16:20:47.915347+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "c22bff9fe8ff25dc",
@@ -3342,12 +3540,12 @@
       "date_iso": "2026-04-23",
       "summary": "Mens loppemarkedsdebatten raser etter høye priser på vestkanten, holder Lindebergskolenes musikkorps fast på loppemarkedets opprinnelige ånd: rimelig gjenbruk og gode kupp som skaper musikk til 17. mai-toget. I år er det ekstra viktig at du stikker innom.",
       "category": "arrangement",
-      "fetched_at_iso": "2026-04-23T06:17:23.459776+00:00",
+      "fetched_at_iso": "2026-04-23T16:20:47.915347+00:00",
       "lat": 59.96,
       "lng": 10.878,
       "location_precise": false,
-      "first_seen_iso": "2026-04-23T06:17:23.459776+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "first_seen_iso": "2026-04-23T16:20:47.915347+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "375aaa9bcbaeaeae",
@@ -3360,12 +3558,12 @@
       "date_iso": "2026-04-22",
       "summary": "Stovner fikk en etterlengtet opptur med avansement i NM, og neste hinder på veien mot Ullevaal er Grei. Det blir et oppgjør mellom storebror og lillebror – bokstavelig talt.",
       "category": "annet",
-      "fetched_at_iso": "2026-04-23T06:17:23.459776+00:00",
+      "fetched_at_iso": "2026-04-23T16:20:47.915347+00:00",
       "lat": 59.962,
       "lng": 10.924,
       "location_precise": false,
-      "first_seen_iso": "2026-04-23T06:17:23.459776+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "first_seen_iso": "2026-04-23T16:20:47.915347+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "40c2b458fd8f5f79",
@@ -3378,30 +3576,480 @@
       "date_iso": "2026-04-22",
       "summary": "Etter tolv år med engasjement i Høybråten skoles musikkorps, takket Robin Friis av med sitt siste loppemarked i helgen. Det ble en verdig avslutning – markert med både gode resultater og et antrekk utenom det vanlige.",
       "category": "skole",
-      "fetched_at_iso": "2026-04-23T06:17:23.459776+00:00",
+      "fetched_at_iso": "2026-04-23T16:20:47.915347+00:00",
       "lat": 59.96,
       "lng": 10.878,
       "location_precise": false,
-      "first_seen_iso": "2026-04-23T06:17:23.459776+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "first_seen_iso": "2026-04-23T16:20:47.915347+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
-      "id": "231bf7c83334bf79",
-      "bydel": "Grorud",
-      "title": "Nye Aker sykehus: – Frykter at regningen havner hos pasientene",
-      "url": "https://groruddalen.no/nyheter/nye-aker-sykehus-frykter-regningen-havner-hos-pasientene/",
-      "source": "Groruddalen",
-      "source_id": "groruddalen",
-      "published_iso": "2026-04-21T18:00:11+00:00",
-      "date_iso": "2026-04-21",
-      "summary": "Byggingen av det nye gigantsykehuset på Aker er i gang. Betyr ikke det at kampen er vunnet for Aker Sykehus Venner?",
-      "category": "idrett",
-      "fetched_at_iso": "2026-04-23T06:17:23.459776+00:00",
-      "lat": 59.96,
-      "lng": 10.878,
+      "id": "ef49e57072f2faac",
+      "bydel": "Stovner",
+      "title": "Brannen på Vestli: Mann bekreftet død",
+      "url": "https://www.nrk.no/stor-oslo/brannen-pa-vestli_-mann-bekreftet-dod-1.17858148",
+      "source": "Toppsaker – Stor-Oslo",
+      "source_id": "nrk-oslo-viken",
+      "published_iso": "2026-04-23T09:02:46+00:00",
+      "date_iso": "2026-04-23",
+      "summary": "Mannen som ble funnet skadd etter at det brant i en leilighet på Vestli mandag kveld, er bekreftet død.",
+      "category": "sikkerhet",
+      "fetched_at_iso": "2026-04-23T16:20:48.029904+00:00",
+      "lat": 59.962,
+      "lng": 10.924,
       "location_precise": false,
-      "first_seen_iso": "2026-04-23T06:17:23.459776+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "first_seen_iso": "2026-04-23T16:20:48.029904+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "0197fa113ed0271e",
+      "bydel": "Nordre Aker",
+      "title": "Kro og Skeid gjenopptar sitt historiske samarbeid",
+      "url": "https://www.skeid.no/nyheter/kro-og-skeid-gjenopptar-sitt-historiske-samarbeid",
+      "source": "Nyheter / SKEID",
+      "source_id": "skeid",
+      "published_iso": "2026-04-23T14:05:41+00:00",
+      "date_iso": "2026-04-23",
+      "summary": "Kro Produksjon er tilbake",
+      "category": "annet",
+      "fetched_at_iso": "2026-04-23T16:20:48.381768+00:00",
+      "lat": 59.933,
+      "lng": 10.751,
+      "location_precise": true,
+      "first_seen_iso": "2026-04-23T16:20:48.381768+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "83331b126859bc65",
+      "bydel": "Østensjø",
+      "title": "Stengte Hovedbanen: Lokomotiv kom rett fra verksted – tok fyr",
+      "url": "https://www.tu.no/artikler/brann-i-lokomotiv-i-oslo-hovedbanen-stengt/571303",
+      "source": "Siste saker fra Tu.no",
+      "source_id": "tu",
+      "published_iso": "2026-04-23T12:49:15+00:00",
+      "date_iso": "2026-04-23",
+      "summary": "Et godslokomotiv begynte å ryke umiddelbart etter å ha blitt hentet ut fra verksted i Oslo. Hendelsen førte til stans på Hovedbanen ved Bryn.",
+      "category": "trafikk",
+      "fetched_at_iso": "2026-04-23T16:20:49.423868+00:00",
+      "lat": 59.885,
+      "lng": 10.828,
+      "location_precise": false,
+      "first_seen_iso": "2026-04-23T16:20:49.423868+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "4bfce7658907a4d3",
+      "bydel": "Frogner",
+      "title": "[Ekstra] Det siste kraft fra land-prosjektet på sokkelen er skrinlagt",
+      "url": "https://www.tu.no/artikler/det-siste-kraft-fra-land-prosjektet-pa-sokkelen-er-skrinlagt/571270",
+      "source": "Siste saker fra Tu.no",
+      "source_id": "tu",
+      "published_iso": "2026-04-23T06:59:02+00:00",
+      "date_iso": "2026-04-23",
+      "summary": "Equinor og Vår Energi har lagt bort planene for elektrifisering av Grane/Balder.",
+      "category": "naering",
+      "fetched_at_iso": "2026-04-23T16:20:49.423868+00:00",
+      "lat": 59.925,
+      "lng": 10.71,
+      "location_precise": false,
+      "first_seen_iso": "2026-04-23T16:20:49.423868+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "9a4a09f5df6c8cbf",
+      "bydel": "Grünerløkka",
+      "title": "Markedstopp går fra software til hudpleie",
+      "url": "https://www.kampanje.com/markedsforing/markedstopp-gar-fra-software-til-hudpleie/997192",
+      "source": "Kampanje - nyheter innen media, kommunikasjon, reklame, PR, markedsføring, teknologi, jobb og ledige stillinger.",
+      "source_id": "kampanje",
+      "published_iso": "2026-04-23T05:25:37+00:00",
+      "date_iso": "2026-04-23",
+      "summary": "Oslo Skin Lab har ansatt Villen Olander som ny kommersiell direktør.",
+      "category": "idrett",
+      "fetched_at_iso": "2026-04-23T16:20:49.653518+00:00",
+      "lat": 59.925,
+      "lng": 10.76,
+      "location_precise": false,
+      "first_seen_iso": "2026-04-23T16:20:49.653518+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "ec973c18b398f212",
+      "bydel": "Grünerløkka",
+      "title": "VG rykker inn i TV-fotballen: - Vi starter på ingen måte på null",
+      "url": "https://www.kampanje.com/premium/vg-rykker-inn-i-tv-fotballen-vi-starter-pa-ingen-mate-pa-null/996452",
+      "source": "Kampanje - nyheter innen media, kommunikasjon, reklame, PR, markedsføring, teknologi, jobb og ledige stillinger.",
+      "source_id": "kampanje",
+      "published_iso": "2026-04-20T12:42:12+00:00",
+      "date_iso": "2026-04-20",
+      "summary": "VG-sjef Gard Steiro sier Schibsted vil se til Sverige og Finland for å sikre det norske fotballpublikum et best mulig fotballprodukt.",
+      "category": "idrett",
+      "fetched_at_iso": "2026-04-23T16:20:49.653518+00:00",
+      "lat": 59.925,
+      "lng": 10.76,
+      "location_precise": false,
+      "first_seen_iso": "2026-04-23T16:20:49.653518+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "32fcfcda7ed493a5",
+      "bydel": "Grünerløkka",
+      "title": "Lander milliardavtale: - Forpliktet til å maksimere verdien",
+      "url": "https://www.kampanje.com/premium/lander-milliardavtale-forpliktet-til-a-maksimere-verdien/996335",
+      "source": "Kampanje - nyheter innen media, kommunikasjon, reklame, PR, markedsføring, teknologi, jobb og ledige stillinger.",
+      "source_id": "kampanje",
+      "published_iso": "2026-04-20T08:48:21+00:00",
+      "date_iso": "2026-04-20",
+      "summary": "Jens Haugland, daglig leder i Norsk Toppfotball er fornøyd, lettet og stolt over å ha fått landet medieavtalen med TV 2, Amedia og Schibsted.",
+      "category": "naering",
+      "fetched_at_iso": "2026-04-23T16:20:49.653518+00:00",
+      "lat": 59.925,
+      "lng": 10.76,
+      "location_precise": false,
+      "first_seen_iso": "2026-04-23T16:20:49.653518+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "a7a5ba4dd2c6d66f",
+      "bydel": "Grünerløkka",
+      "title": "TV 2 og Amedia kjøper norsk seriefotball – Schibsted tar cupen",
+      "url": "https://www.kampanje.com/premium/tv-2-og-amedia-kjoper-norsk-seriefotball-schibsted-tar-cupen/996263",
+      "source": "Kampanje - nyheter innen media, kommunikasjon, reklame, PR, markedsføring, teknologi, jobb og ledige stillinger.",
+      "source_id": "kampanje",
+      "published_iso": "2026-04-20T07:30:00+00:00",
+      "date_iso": "2026-04-20",
+      "summary": "De tre mediekonsernene betaler totalt over fire milliarder kroner for en ny femårsavtale.",
+      "category": "idrett",
+      "fetched_at_iso": "2026-04-23T16:20:49.653518+00:00",
+      "lat": 59.925,
+      "lng": 10.76,
+      "location_precise": false,
+      "first_seen_iso": "2026-04-23T16:20:49.653518+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "19ea3e61af153039",
+      "bydel": "Grünerløkka",
+      "title": "Blokkerer over en halv milliard nettsider og forsøk på kriminalitet",
+      "url": "https://www.kampanje.com/premium/blokkerer-over-en-halv-milliard-nettsider-og-forsok-pa-kriminalitet/996850",
+      "source": "Kampanje - nyheter innen media, kommunikasjon, reklame, PR, markedsføring, teknologi, jobb og ledige stillinger.",
+      "source_id": "kampanje",
+      "published_iso": "2026-04-22T05:32:44+00:00",
+      "date_iso": "2026-04-22",
+      "summary": "Telenor hadde nok å gjøre i første kvartal.",
+      "category": "naering",
+      "fetched_at_iso": "2026-04-23T16:20:49.653518+00:00",
+      "lat": 59.925,
+      "lng": 10.76,
+      "location_precise": false,
+      "first_seen_iso": "2026-04-23T16:20:49.653518+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "276a2695c62dcce6",
+      "bydel": "Grünerløkka",
+      "title": "Kommer med cup-advarsel til Schibsted: - Smerteterskelen er nådd",
+      "url": "https://www.kampanje.com/premium/kommer-med-cup-advarsel-til-schibsted-smerteterskelen-er-nadd/996523",
+      "source": "Kampanje - nyheter innen media, kommunikasjon, reklame, PR, markedsføring, teknologi, jobb og ledige stillinger.",
+      "source_id": "kampanje",
+      "published_iso": "2026-04-22T05:07:28+00:00",
+      "date_iso": "2026-04-22",
+      "summary": "Fotballentusiast og tidligere avisredaktør Gard Michalsen tror Schibsted kan bli et godt hjem for norsk cupfotball, men kommer med en advarsel.",
+      "category": "idrett",
+      "fetched_at_iso": "2026-04-23T16:20:49.653518+00:00",
+      "lat": 59.925,
+      "lng": 10.76,
+      "location_precise": false,
+      "first_seen_iso": "2026-04-23T16:20:49.653518+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "51363d4ad9da64bc",
+      "bydel": "Vestre Aker",
+      "title": "- Bransjen elsker å henge ut dårlig bruk av KI",
+      "url": "https://www.kampanje.com/tech-og-design/bransjen-elsker-a-henge-ut-darlig-bruk-av-ki/996511",
+      "source": "Kampanje - nyheter innen media, kommunikasjon, reklame, PR, markedsføring, teknologi, jobb og ledige stillinger.",
+      "source_id": "kampanje",
+      "published_iso": "2026-04-21T09:17:05+00:00",
+      "date_iso": "2026-04-21",
+      "summary": "- Skillet mellom «KI-slop» og god kommunikasjon ikke ligger i verktøyet, men i hvem som tar beslutningene og utfører arbeidet, skriver Deniz Huseby Yabar.",
+      "category": "idrett",
+      "fetched_at_iso": "2026-04-23T16:20:49.653518+00:00",
+      "lat": 59.961,
+      "lng": 10.682,
+      "location_precise": false,
+      "first_seen_iso": "2026-04-23T16:20:49.653518+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "f66a03f19b5a69b1",
+      "bydel": "Frogner",
+      "title": "NHO besøkte Akademiet Norsk Restaurantskole sammen med byråden for utdanning: – Elevene skal ikke bare lære om yrket, men faktisk utøve det",
+      "url": "https://www.nho.no/regionforeninger/nho-viken-oslo/artikkelarkiv/2026/nho-besokte-akademiet-norsk-restaurantskole-sammen-med-byraden-for-utdanning--elevene-skal-ikke-bare-lare-om-yrket-men-faktisk-utove-det/",
+      "source": "NHO - Næringslivets Hovedorganisasjon",
+      "source_id": "nho",
+      "published_iso": "2026-04-23T07:38:03+00:00",
+      "date_iso": "2026-04-23",
+      "summary": "Sammen med NHO besøkte byråden for utdanning i Oslo kommune, Julie Remen Midtgarden (H), Akademiet Norsk Restaurantskole. Besøket ga innblikk i hvordan en praksisnær skolehverdag kan bidra til økt gjennomføring, sterkere motivasjon og flere fagarbeidere til en bransje med stort behov.",
+      "category": "politikk",
+      "fetched_at_iso": "2026-04-23T16:20:49.858254+00:00",
+      "lat": 59.925,
+      "lng": 10.71,
+      "location_precise": false,
+      "first_seen_iso": "2026-04-23T16:20:49.858254+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "830c05bb436c8df1",
+      "bydel": "Frogner",
+      "title": "Invitasjon til togtur - Dovrebanen på skinner",
+      "url": "https://www.nho.no/regionforeninger/nho-innlandet/artikkelarkiv/invitasjon-til-togtur---dovrebanen-pa-skinner/",
+      "source": "NHO - Næringslivets Hovedorganisasjon",
+      "source_id": "nho",
+      "published_iso": "2026-04-17T10:32:18+00:00",
+      "date_iso": "2026-04-17",
+      "summary": "Mandag 4. mai fyller partene i arbeidslivet tog fra Oslo og Trondheim til en tverrpolitisk mobilisering der næringslivet spiller en sentral rolle.",
+      "category": "idrett",
+      "fetched_at_iso": "2026-04-23T16:20:49.858254+00:00",
+      "lat": 59.925,
+      "lng": 10.71,
+      "location_precise": false,
+      "first_seen_iso": "2026-04-23T16:20:49.858254+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "d475bddbe6fdd204",
+      "bydel": "Frogner",
+      "title": "Står sterkere sammen: NHO Viken Oslo samlet næringsforeningene i regionen",
+      "url": "https://www.nho.no/regionforeninger/nho-viken-oslo/artikkelarkiv/star-sterkere-sammen-nho-viken-oslo-samlet-naringsforeningene-i-regionen/",
+      "source": "NHO - Næringslivets Hovedorganisasjon",
+      "source_id": "nho",
+      "published_iso": "2026-03-27T11:51:54+00:00",
+      "date_iso": "2026-03-27",
+      "summary": "NHO Viken Oslo samlet denne uken næringsforeninger fra hele regionen for å styrke samarbeidet og sikre større gjennomslag for næringspolitikken, både regionalt og lokalt.",
+      "category": "naering",
+      "fetched_at_iso": "2026-04-23T16:20:49.858254+00:00",
+      "lat": 59.925,
+      "lng": 10.71,
+      "location_precise": false,
+      "first_seen_iso": "2026-04-23T16:20:49.858254+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "f8e42ec84fb256fe",
+      "bydel": "Nordre Aker",
+      "title": "Søkertallene 2026: Rekordmange søkere har UiO som førstevalg",
+      "url": "https://www.uio.no/om/aktuelt/aktuelle-saker/2026/sokertallene-2026.html",
+      "source": "Aktuelle saker – Universitetet i Oslo",
+      "source_id": "uio",
+      "published_iso": "2026-04-23T08:00:00+00:00",
+      "date_iso": "2026-04-23",
+      "summary": "Universitetet i Oslo har rekord i antall førstevalgsøkere. Kriminologi, økonomi og finans og psykologi er de mest populære studiene. Nye studier, som kvanteteknologi, har også slått godt an hos søkerne.",
+      "category": "skole",
+      "fetched_at_iso": "2026-04-23T16:20:49.936148+00:00",
+      "lat": 59.955,
+      "lng": 10.76,
+      "location_precise": false,
+      "first_seen_iso": "2026-04-23T16:20:49.936148+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "39c427df4b16bb91",
+      "bydel": "Nordre Aker",
+      "title": "Oppfølging av Sannhets- og forsoningskommisjonen",
+      "url": "https://www.uio.no/om/aktuelt/aktuelle-saker/2026/oppfolging-av-sannhets--og-forsoningskommisjonen-.html",
+      "source": "Aktuelle saker – Universitetet i Oslo",
+      "source_id": "uio",
+      "published_iso": "2026-03-27T11:41:43+00:00",
+      "date_iso": "2026-03-27",
+      "summary": "UiO skal undersøke hvordan universitetet kan bidra mer til utdanning, forskning og formidling som omhandler samisk, kvensk og skogfinsk kultur, språk, historie og samfunn. En tverrfaglig arbeidsgruppe leverer sin rapport før sommeren.",
+      "category": "skole",
+      "fetched_at_iso": "2026-04-23T16:20:49.936148+00:00",
+      "lat": 59.955,
+      "lng": 10.76,
+      "location_precise": false,
+      "first_seen_iso": "2026-04-23T16:20:49.936148+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "6b21c07bd5d06413",
+      "bydel": "Nordre Aker",
+      "title": "Fra mørk energi til middelalder: UiO lykkes i FRIPRO-tildeling",
+      "url": "https://www.uio.no/om/aktuelt/aktuelle-saker/2026/fripro-2026-topp-start-for-toppforskning-ved-uio.html",
+      "source": "Aktuelle saker – Universitetet i Oslo",
+      "source_id": "uio",
+      "published_iso": "2026-03-19T13:37:45+00:00",
+      "date_iso": "2026-03-19",
+      "summary": "UiOs forskere mottar 7 av 22 prosjekter i årets første nasjonale FRIPRO-tildeling fra Norges forskningsråd. 40 millioner går til å skape et verdensledende forskningsmiljø på UiO som skal forske på mørk energi.",
+      "category": "skole",
+      "fetched_at_iso": "2026-04-23T16:20:49.936148+00:00",
+      "lat": 59.955,
+      "lng": 10.76,
+      "location_precise": false,
+      "first_seen_iso": "2026-04-23T16:20:49.936148+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "fee2a58558dfeb89",
+      "bydel": "Nordre Aker",
+      "title": "Flere UiO-studenter fullfører studiene på normert tid",
+      "url": "https://www.uio.no/om/aktuelt/aktuelle-saker/2026/flere-uio-studenter-fullforer-studiene-pa-normert-.html",
+      "source": "Aktuelle saker – Universitetet i Oslo",
+      "source_id": "uio",
+      "published_iso": "2026-03-19T11:45:56+00:00",
+      "date_iso": "2026-03-19",
+      "summary": "UiO har gode søkertall, stabil studiepoengproduksjon og stadig flere studenter som gjennomfører studiene til normert tid. Samtidig peker årsrapporten for 2025 på behov for en mer bærekraftig studieportefølje.",
+      "category": "skole",
+      "fetched_at_iso": "2026-04-23T16:20:49.936148+00:00",
+      "lat": 59.955,
+      "lng": 10.76,
+      "location_precise": false,
+      "first_seen_iso": "2026-04-23T16:20:49.936148+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "f68d101026c7ca19",
+      "bydel": "Nordre Aker",
+      "title": "Sterkt forskningsår for UiO nasjonalt og internasjonalt",
+      "url": "https://www.uio.no/om/aktuelt/aktuelle-saker/2026/sterkt-forskningsar-for-uio-nasjonalt-og-internasj.html",
+      "source": "Aktuelle saker – Universitetet i Oslo",
+      "source_id": "uio",
+      "published_iso": "2026-03-13T14:28:06+00:00",
+      "date_iso": "2026-03-13",
+      "summary": "Nye sentre for fagspråk i bruk, KI, kvanteteknologi og bærekraft, og dobling i FRIPRO-tildelinger, bidro til et sterkt 2025 for UiOs forskere i tøff konkurranse.",
+      "category": "skole",
+      "fetched_at_iso": "2026-04-23T16:20:49.936148+00:00",
+      "lat": 59.955,
+      "lng": 10.76,
+      "location_precise": false,
+      "first_seen_iso": "2026-04-23T16:20:49.936148+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "91bbe2d9bbc1afcb",
+      "bydel": "Nordre Aker",
+      "title": "UiO-styrets vedtak om forskningssamarbeid",
+      "url": "https://www.uio.no/om/aktuelt/aktuelle-saker/2026/uio-styrets-vedtak-om-forskningssamarbeid-.html",
+      "source": "Aktuelle saker – Universitetet i Oslo",
+      "source_id": "uio",
+      "published_iso": "2026-03-10T15:55:04+00:00",
+      "date_iso": "2026-03-10",
+      "summary": "– Universitetsstyret bekreftet dagens praksis med at vi inntil videre ikke skal inngå overordnede institusjonelle avtaler med israelske institusjoner. Styret klargjorde at Horisont Europa-prosjekter hvor israelske institusjoner er formelle partnere, kan inngås, sier rektor Ragnhild Hennum ved UiO.",
+      "category": "politikk",
+      "fetched_at_iso": "2026-04-23T16:20:49.936148+00:00",
+      "lat": 59.955,
+      "lng": 10.76,
+      "location_precise": false,
+      "first_seen_iso": "2026-04-23T16:20:49.936148+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "2cb8c53c4aa36f09",
+      "bydel": "Nordre Aker",
+      "title": "Studenter i Midtøsten",
+      "url": "https://www.uio.no/om/aktuelt/aktuelle-saker/2026/studenter-i-midtosten.html",
+      "source": "Aktuelle saker – Universitetet i Oslo",
+      "source_id": "uio",
+      "published_iso": "2026-03-03T11:10:32+00:00",
+      "date_iso": "2026-03-03",
+      "summary": "28.februar brøt det ut på nytt en krig i Midtøsten da Israel og USA angrep Iran. UiO har 18 studenter på opphold i Amman, Jordan og har anbefalt at disse reiser hjem hvis det er mulig.",
+      "category": "skole",
+      "fetched_at_iso": "2026-04-23T16:20:49.936148+00:00",
+      "lat": 59.955,
+      "lng": 10.76,
+      "location_precise": false,
+      "first_seen_iso": "2026-04-23T16:20:49.936148+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "3d3e875e2158aa41",
+      "bydel": "Nordre Aker",
+      "title": "Syv prestisjestipend til UiO i tøff konkurranse",
+      "url": "https://www.uio.no/om/aktuelt/aktuelle-saker/2026/syv-prestisjestipend-til-uio.html",
+      "source": "Aktuelle saker – Universitetet i Oslo",
+      "source_id": "uio",
+      "published_iso": "2026-02-14T10:17:25+00:00",
+      "date_iso": "2026-02-14",
+      "summary": "UiO er tildelt syv Marie Skłodowska-Curie- prosjekter fra Horisont Europa. Gjennom ordningen får forskere et toårig opphold ved et utenlandsk universitet.",
+      "category": "skole",
+      "fetched_at_iso": "2026-04-23T16:20:49.936148+00:00",
+      "lat": 59.955,
+      "lng": 10.76,
+      "location_precise": false,
+      "first_seen_iso": "2026-04-23T16:20:49.936148+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "2de17f65b1b5f9ce",
+      "bydel": "Nordre Aker",
+      "title": "Leieavtale om Livsvitenskapsbygget",
+      "url": "https://www.uio.no/om/aktuelt/aktuelle-saker/2026/leieavtale-om-livsvitenskapsbygget.html",
+      "source": "Aktuelle saker – Universitetet i Oslo",
+      "source_id": "uio",
+      "published_iso": "2026-02-13T14:15:44+00:00",
+      "date_iso": "2026-02-13",
+      "summary": "Den 13. februar signerte Universitetet i Oslo husleieavtale med Statsbygg for leie av arealer i Livsvitenskapsbygget.",
+      "category": "skole",
+      "fetched_at_iso": "2026-04-23T16:20:49.936148+00:00",
+      "lat": 59.955,
+      "lng": 10.76,
+      "location_precise": false,
+      "first_seen_iso": "2026-04-23T16:20:49.936148+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "06446684f68e5b8a",
+      "bydel": "Nordre Aker",
+      "title": "UiO-studentene trives",
+      "url": "https://www.uio.no/om/aktuelt/aktuelle-saker/2026/studiebarometeret.html",
+      "source": "Aktuelle saker – Universitetet i Oslo",
+      "source_id": "uio",
+      "published_iso": "2026-02-13T08:31:44+00:00",
+      "date_iso": "2026-02-13",
+      "summary": "Ferske tall fra Studiebarometeret 2025 viser at studentene på Universitetet i Oslo (UiO) er svært tilfredse med studieprogrammet de går på. Studentene bruker mer tid på organisert undervisning, og er i stor grad på campus.",
+      "category": "skole",
+      "fetched_at_iso": "2026-04-23T16:20:49.936148+00:00",
+      "lat": 59.955,
+      "lng": 10.76,
+      "location_precise": false,
+      "first_seen_iso": "2026-04-23T16:20:49.936148+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "b9f6ae4508146e94",
+      "bydel": "Nordre Aker",
+      "title": "Dette er årets nye studier ved Universitetet i Oslo",
+      "url": "https://www.uio.no/om/aktuelt/aktuelle-saker/2026/nye-studier.html",
+      "source": "Aktuelle saker – Universitetet i Oslo",
+      "source_id": "uio",
+      "published_iso": "2026-01-29T08:20:43+00:00",
+      "date_iso": "2026-01-29",
+      "summary": "Universitetet i Oslo (UiO) lanserer i 2026 flere nye studier, som skal møte morgendagens behov i arbeidslivet. Nytt av året er blant annet kvanteteknologi, dobbeltkompetanse i språk og samfunn og kombinasjonen økonomi og finans.",
+      "category": "skole",
+      "fetched_at_iso": "2026-04-23T16:20:49.936148+00:00",
+      "lat": 59.955,
+      "lng": 10.76,
+      "location_precise": false,
+      "first_seen_iso": "2026-04-23T16:20:49.936148+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "c733723d311aba8b",
+      "bydel": "Nordre Aker",
+      "title": "UiO-underviser og forskere hedret av Olav Thon Stiftelsen",
+      "url": "https://www.uio.no/om/aktuelt/aktuelle-saker/2026/uio-underviser-og-forskere-hedret.html",
+      "source": "Aktuelle saker – Universitetet i Oslo",
+      "source_id": "uio",
+      "published_iso": "2026-01-19T09:00:00+00:00",
+      "date_iso": "2026-01-19",
+      "summary": "Professor Odd Martin Vallersnes er tildelt Olav Thon Stiftelsens pris for fremragende undervisning, mens professor Rune Enger og professor Koen Gerard Alois Vervaeke mottar finansiell støtte til nordisk forskningssamarbeid, alle tre innen medisin.",
+      "category": "skole",
+      "fetched_at_iso": "2026-04-23T16:20:49.936148+00:00",
+      "lat": 59.955,
+      "lng": 10.76,
+      "location_precise": false,
+      "first_seen_iso": "2026-04-23T16:20:49.936148+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "06e7ad5e850ae615",
@@ -3410,70 +4058,160 @@
       "url": "https://www.kondis.no/idrett/young-vik-og-fosser-best-i-oslo-city-cup-3/1561746",
       "source": "Kondis.no",
       "source_id": "kondis",
-      "published_iso": "2026-04-23T06:24:02.723765+00:00",
+      "published_iso": "2026-04-23T16:20:50.548315+00:00",
       "date_iso": "2026-04-23",
       "summary": "",
       "category": "idrett",
-      "fetched_at_iso": "2026-04-23T06:17:25.017856+00:00",
+      "fetched_at_iso": "2026-04-23T16:20:50.548310+00:00",
       "lat": 59.925,
       "lng": 10.71,
       "location_precise": false,
-      "first_seen_iso": "2026-04-23T06:17:25.017856+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "first_seen_iso": "2026-04-23T16:20:50.548310+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
-      "id": "0a7d77c3af96c6ae",
+      "id": "73986a2d8c3c59ce",
       "bydel": "Frogner",
-      "title": "Linje 21 stopper ikke fra Tjuvholmen til Rosenborg",
-      "url": "https://ruter.no/avvik/?s=2026-12837-1",
+      "title": "Forsinkelser på linje 71",
+      "url": "https://ruter.no/avvik/?s=2026-13120-10",
       "source": "Ruter avvik",
       "source_id": "ruter-avvik",
-      "published_iso": "2026-04-25T13:45:00+02:00",
-      "date_iso": "2026-04-25",
-      "summary": "Linjer: 21. Linje 21 stopper ikke fra Tjuvholmen til Rosenborg — Linje 21 stopper ikke fra og med Tjuvholmen til og med Rosenborg. Dette skyldes et arrangement.",
+      "published_iso": "2026-04-23T16:20:00+02:00",
+      "date_iso": "2026-04-23",
+      "summary": "Linjer: 71. Forsinkelser på linje 71 — Det er forsinkelser på linje 71. Dette skyldes mye trafikk og kø.",
       "category": "trafikk",
-      "fetched_at_iso": "2026-04-23T06:17:25.462391+00:00",
+      "fetched_at_iso": "2026-04-23T16:20:50.994362+00:00",
       "lat": 59.91,
       "lng": 10.731,
       "location_precise": true,
-      "first_seen_iso": "2026-04-23T06:17:25.462391+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "first_seen_iso": "2026-04-23T16:20:50.994362+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
-      "id": "a576de4cc4a10a01",
-      "bydel": "Nordre Aker",
-      "title": "Linje 15: endring av plattform",
-      "url": "https://ruter.no/avvik/?s=740411",
+      "id": "df44490fd81a80f3",
+      "bydel": "Frogner",
+      "title": "Forsinkelser på linje 85",
+      "url": "https://ruter.no/avvik/?s=2026-13120-29",
       "source": "Ruter avvik",
       "source_id": "ruter-avvik",
-      "published_iso": "2026-04-25T14:00:00+02:00",
-      "date_iso": "2026-04-25",
-      "summary": "Linjer: 15. Linje 15: endring av plattform — Linje 15 går fra plattform F mot Kjelsås (i Biskop Gunnerus gate)",
+      "published_iso": "2026-04-23T16:20:00+02:00",
+      "date_iso": "2026-04-23",
+      "summary": "Linjer: 85. Forsinkelser på linje 85 — Det er forsinkelser på linje 85. Dette skyldes mye trafikk og kø.",
       "category": "trafikk",
-      "fetched_at_iso": "2026-04-23T06:17:25.462391+00:00",
+      "fetched_at_iso": "2026-04-23T16:20:50.994362+00:00",
       "lat": 59.91,
       "lng": 10.731,
       "location_precise": true,
-      "first_seen_iso": "2026-04-23T06:17:25.462391+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "first_seen_iso": "2026-04-23T16:20:50.994362+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
-      "id": "9c960a01814017fd",
-      "bydel": "Gamle Oslo",
-      "title": "Linje 13 stopper ikke mellom Skøyen og Bjørvika",
-      "url": "https://ruter.no/avvik/?s=2026-12834-1",
+      "id": "d61aad107158170a",
+      "bydel": "Frogner",
+      "title": "Forsinkelser på linje 125E",
+      "url": "https://ruter.no/avvik/?s=2026-13120-20",
       "source": "Ruter avvik",
       "source_id": "ruter-avvik",
-      "published_iso": "2026-04-25T14:00:00+02:00",
-      "date_iso": "2026-04-25",
-      "summary": "Linjer: 13. Linje 13 stopper ikke mellom Skøyen og Bjørvika — Linje 13 stopper ikke mellom Skøyen og Bjørvika. Dette skyldes et arrangement.",
+      "published_iso": "2026-04-23T16:20:00+02:00",
+      "date_iso": "2026-04-23",
+      "summary": "Linjer: 3125. Forsinkelser på linje 125E — Det er forsinkelser på linje 125E. Dette skyldes mye trafikk og kø.",
       "category": "trafikk",
-      "fetched_at_iso": "2026-04-23T06:17:25.462391+00:00",
+      "fetched_at_iso": "2026-04-23T16:20:50.994362+00:00",
       "lat": 59.91,
       "lng": 10.731,
       "location_precise": true,
-      "first_seen_iso": "2026-04-23T06:17:25.462391+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "first_seen_iso": "2026-04-23T16:20:50.994362+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "74f26c1b7a1534d7",
+      "bydel": "Frogner",
+      "title": "Forsinkelser på linje 375",
+      "url": "https://ruter.no/avvik/?s=2026-13120-19",
+      "source": "Ruter avvik",
+      "source_id": "ruter-avvik",
+      "published_iso": "2026-04-23T16:20:00+02:00",
+      "date_iso": "2026-04-23",
+      "summary": "Linjer: 375. Forsinkelser på linje 375 — Det er forsinkelser på linje 375. Dette skyldes mye trafikk og kø.",
+      "category": "trafikk",
+      "fetched_at_iso": "2026-04-23T16:20:50.994362+00:00",
+      "lat": 59.91,
+      "lng": 10.731,
+      "location_precise": true,
+      "first_seen_iso": "2026-04-23T16:20:50.994362+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "b3d21cdb58dff635",
+      "bydel": "Frogner",
+      "title": "Linje 74 stopper ikke på Øgården",
+      "url": "https://ruter.no/avvik/?s=2026-13050-1",
+      "source": "Ruter avvik",
+      "source_id": "ruter-avvik",
+      "published_iso": "2026-04-23T10:12:00+02:00",
+      "date_iso": "2026-04-23",
+      "summary": "Linjer: 74. Linje 74 stopper ikke på Øgården — Linje 74 stopper ikke på Øgården. Dette skyldes veiarbeid langs ruta.",
+      "category": "trafikk",
+      "fetched_at_iso": "2026-04-23T16:20:50.994362+00:00",
+      "lat": 59.91,
+      "lng": 10.731,
+      "location_precise": true,
+      "first_seen_iso": "2026-04-23T16:20:50.994362+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "7d8e696ff7eb5dfc",
+      "bydel": "Frogner",
+      "title": "Forsinkelser på linje 37",
+      "url": "https://ruter.no/avvik/?s=2026-13120-8",
+      "source": "Ruter avvik",
+      "source_id": "ruter-avvik",
+      "published_iso": "2026-04-23T16:20:00+02:00",
+      "date_iso": "2026-04-23",
+      "summary": "Linjer: 37. Forsinkelser på linje 37 — Det er forsinkelser på linje 37. Dette skyldes mye trafikk og kø.",
+      "category": "trafikk",
+      "fetched_at_iso": "2026-04-23T16:20:50.994362+00:00",
+      "lat": 59.91,
+      "lng": 10.731,
+      "location_precise": true,
+      "first_seen_iso": "2026-04-23T16:20:50.994362+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "535b529fbf6230d3",
+      "bydel": "Frogner",
+      "title": "Forsinkelser på linje 505",
+      "url": "https://ruter.no/avvik/?s=2026-13120-27",
+      "source": "Ruter avvik",
+      "source_id": "ruter-avvik",
+      "published_iso": "2026-04-23T16:20:00+02:00",
+      "date_iso": "2026-04-23",
+      "summary": "Linjer: 505. Forsinkelser på linje 505 — Det er forsinkelser på linje 505. Dette skyldes mye trafikk og kø.",
+      "category": "trafikk",
+      "fetched_at_iso": "2026-04-23T16:20:50.994362+00:00",
+      "lat": 59.91,
+      "lng": 10.731,
+      "location_precise": true,
+      "first_seen_iso": "2026-04-23T16:20:50.994362+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "173026909160f185",
+      "bydel": "Frogner",
+      "title": "Forsinkelser på linje 31",
+      "url": "https://ruter.no/avvik/?s=2026-13120-12",
+      "source": "Ruter avvik",
+      "source_id": "ruter-avvik",
+      "published_iso": "2026-04-23T16:20:00+02:00",
+      "date_iso": "2026-04-23",
+      "summary": "Linjer: 31. Forsinkelser på linje 31 — Det er forsinkelser på linje 31. Dette skyldes mye trafikk og kø.",
+      "category": "trafikk",
+      "fetched_at_iso": "2026-04-23T16:20:50.994362+00:00",
+      "lat": 59.91,
+      "lng": 10.731,
+      "location_precise": true,
+      "first_seen_iso": "2026-04-23T16:20:50.994362+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     },
     {
       "id": "1b3b940b717d718a",
@@ -3486,13 +4224,1435 @@
       "date_iso": "2026-04-24",
       "summary": "Linjer: 130. Linje 130 stopper ikke på Vækerø — Linje 130 stopper ikke på Vækerø. Dette skyldes veiarbeid langs ruta.",
       "category": "trafikk",
-      "fetched_at_iso": "2026-04-23T06:17:25.462391+00:00",
+      "fetched_at_iso": "2026-04-23T16:20:50.994362+00:00",
       "lat": 59.91,
       "lng": 10.731,
       "location_precise": true,
-      "first_seen_iso": "2026-04-23T06:17:25.462391+00:00",
-      "last_seen_iso": "2026-04-23T06:24:03.517615+00:00"
+      "first_seen_iso": "2026-04-23T16:20:50.994362+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "611015018c925b3f",
+      "bydel": "Frogner",
+      "title": "Avgangen stopper ikke fra Lysakerlokket til Blokkajordet",
+      "url": "https://ruter.no/avvik/?s=2026-13182-2",
+      "source": "Ruter avvik",
+      "source_id": "ruter-avvik",
+      "published_iso": "2026-04-23T17:29:00+02:00",
+      "date_iso": "2026-04-23",
+      "summary": "Avgangen stopper ikke fra Lysakerlokket til Blokkajordet — Avgangen fra Lysakerlokket kl. 17:29 i retning Simensbråten stopper ikke fra og med Lysakerlokket kl. 17:29 til og med Blokkajordet kl. 17:38. Dette skyldes mye trafikk og kø.",
+      "category": "trafikk",
+      "fetched_at_iso": "2026-04-23T16:20:50.994362+00:00",
+      "lat": 59.91,
+      "lng": 10.731,
+      "location_precise": true,
+      "first_seen_iso": "2026-04-23T16:20:50.994362+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "f70cddd2d133383d",
+      "bydel": "Frogner",
+      "title": "Linje 31 stopper ikke mellom Maritim og Hausmanns bru",
+      "url": "https://ruter.no/avvik/?s=2026-12904-1",
+      "source": "Ruter avvik",
+      "source_id": "ruter-avvik",
+      "published_iso": "2026-04-25T13:00:00+02:00",
+      "date_iso": "2026-04-25",
+      "summary": "Linjer: 31. Linje 31 stopper ikke mellom Maritim og Hausmanns bru — Linje 31 stopper ikke mellom Maritim og Hausmanns bru. Dette skyldes et arrangement.",
+      "category": "trafikk",
+      "fetched_at_iso": "2026-04-23T16:20:50.994362+00:00",
+      "lat": 59.91,
+      "lng": 10.731,
+      "location_precise": true,
+      "first_seen_iso": "2026-04-23T16:20:50.994362+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "9a812574d30a2efb",
+      "bydel": "Frogner",
+      "title": "Forsinkelser på linje 79",
+      "url": "https://ruter.no/avvik/?s=2026-13120-1",
+      "source": "Ruter avvik",
+      "source_id": "ruter-avvik",
+      "published_iso": "2026-04-23T16:20:00+02:00",
+      "date_iso": "2026-04-23",
+      "summary": "Linjer: 79. Forsinkelser på linje 79 — Det er forsinkelser på linje 79. Dette skyldes mye trafikk og kø.",
+      "category": "trafikk",
+      "fetched_at_iso": "2026-04-23T16:20:50.994362+00:00",
+      "lat": 59.91,
+      "lng": 10.731,
+      "location_precise": true,
+      "first_seen_iso": "2026-04-23T16:20:50.994362+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "f26a36015b46a4ac",
+      "bydel": "Frogner",
+      "title": "Forsinkelser på linje 60",
+      "url": "https://ruter.no/avvik/?s=2026-13120-16",
+      "source": "Ruter avvik",
+      "source_id": "ruter-avvik",
+      "published_iso": "2026-04-23T16:20:00+02:00",
+      "date_iso": "2026-04-23",
+      "summary": "Linjer: 60. Forsinkelser på linje 60 — Det er forsinkelser på linje 60. Dette skyldes mye trafikk og kø.",
+      "category": "trafikk",
+      "fetched_at_iso": "2026-04-23T16:20:50.994362+00:00",
+      "lat": 59.91,
+      "lng": 10.731,
+      "location_precise": true,
+      "first_seen_iso": "2026-04-23T16:20:50.994362+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "86236cd2f80ab91c",
+      "bydel": "Frogner",
+      "title": "Linje 250 stopper ikke på Huitfeldts gate",
+      "url": "https://ruter.no/avvik/?s=2026-12910-1",
+      "source": "Ruter avvik",
+      "source_id": "ruter-avvik",
+      "published_iso": "2026-04-25T13:05:00+02:00",
+      "date_iso": "2026-04-25",
+      "summary": "Linjer: 250. Linje 250 stopper ikke på Huitfeldts gate — Linje 250 stopper ikke på Huitfeldts gate. Dette skyldes et arrangement.",
+      "category": "trafikk",
+      "fetched_at_iso": "2026-04-23T16:20:50.994362+00:00",
+      "lat": 59.91,
+      "lng": 10.731,
+      "location_precise": true,
+      "first_seen_iso": "2026-04-23T16:20:50.994362+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "45ea6b7852f459a7",
+      "bydel": "Frogner",
+      "title": "Linje 250: Endring av plattform",
+      "url": "https://ruter.no/avvik/?s=740416",
+      "source": "Ruter avvik",
+      "source_id": "ruter-avvik",
+      "published_iso": "2026-04-25T13:05:00+02:00",
+      "date_iso": "2026-04-25",
+      "summary": "Linjer: 250. Linje 250: Endring av plattform — Grunnet arrangement starter buss 250 fra plattform N på Nationaltheatret i Haakon VIIs gate",
+      "category": "trafikk",
+      "fetched_at_iso": "2026-04-23T16:20:50.994362+00:00",
+      "lat": 59.91,
+      "lng": 10.731,
+      "location_precise": true,
+      "first_seen_iso": "2026-04-23T16:20:50.994362+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "c24c3df82d8fb131",
+      "bydel": "Frogner",
+      "title": "Forsinkelser på linje 21",
+      "url": "https://ruter.no/avvik/?s=2026-13120-24",
+      "source": "Ruter avvik",
+      "source_id": "ruter-avvik",
+      "published_iso": "2026-04-23T16:20:00+02:00",
+      "date_iso": "2026-04-23",
+      "summary": "Linjer: 21. Forsinkelser på linje 21 — Det er forsinkelser på linje 21. Dette skyldes mye trafikk og kø.",
+      "category": "trafikk",
+      "fetched_at_iso": "2026-04-23T16:20:50.994362+00:00",
+      "lat": 59.91,
+      "lng": 10.731,
+      "location_precise": true,
+      "first_seen_iso": "2026-04-23T16:20:50.994362+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "8bc6b928798b052c",
+      "bydel": "Frogner",
+      "title": "Linje 3: Buss for T-bane etter kl. 21",
+      "url": "https://ruter.no/avvik/?s=740408",
+      "source": "Ruter avvik",
+      "source_id": "ruter-avvik",
+      "published_iso": "2026-05-02T20:30:00+02:00",
+      "date_iso": "2026-05-02",
+      "summary": "Linjer: 3. Linje 3: Buss for T-bane etter kl. 21 — Vi kjører buss for T-bane mellom Kolsås og Ringstabekk etter kl. 21:00. Bussene går mellom Kolsås og Jar.",
+      "category": "trafikk",
+      "fetched_at_iso": "2026-04-23T16:20:50.994362+00:00",
+      "lat": 59.91,
+      "lng": 10.731,
+      "location_precise": true,
+      "first_seen_iso": "2026-04-23T16:20:50.994362+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "d932f29b441644e4",
+      "bydel": "Søndre Nordstrand",
+      "title": "Buss 79 og 19N stopper ikke på Ljabru hovedgård, plattformendring Hauketo",
+      "url": "https://ruter.no/avvik/?s=740297",
+      "source": "Ruter avvik",
+      "source_id": "ruter-avvik",
+      "published_iso": "2026-03-04T03:00:00+01:00",
+      "date_iso": "2026-03-04",
+      "summary": "Linjer: 3919, 79. Buss 79 og 19N stopper ikke på Ljabru hovedgård, plattformendring Hauketo — Bussene stopper på holdeplass Kronveien i Ljabruveien. På Hauketo stasjon stopper bussene på plattform E.",
+      "category": "trafikk",
+      "fetched_at_iso": "2026-04-23T16:20:50.994362+00:00",
+      "lat": 59.91,
+      "lng": 10.731,
+      "location_precise": true,
+      "first_seen_iso": "2026-04-23T16:20:50.994362+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "df4e298ddb865dbf",
+      "bydel": "Nordre Aker",
+      "title": "Dobbelt så mange barn er bostedsløse Minst 500 barn var bostedsløse i fjor.",
+      "url": "https://www.oslomet.no/forskning/forskningsnyheter/dobling-barn-bostedslose",
+      "source": "OsloMet",
+      "source_id": "oslomet",
+      "published_iso": "2026-04-23T16:20:51.239761+00:00",
+      "date_iso": "2026-04-23",
+      "summary": "Det er dobbelt så mange som for ti år siden.",
+      "category": "skole",
+      "fetched_at_iso": "2026-04-23T16:20:51.239761+00:00",
+      "lat": 59.955,
+      "lng": 10.76,
+      "location_precise": false,
+      "first_seen_iso": "2026-04-23T16:20:51.239761+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "b8625e772319494f",
+      "bydel": "Nordre Aker",
+      "title": "Hvorfor strander gode byprosjekter?",
+      "url": "https://www.oslomet.no/forskning/forskningsnyheter/hvorfor-strander-gode-byprosjekter",
+      "source": "OsloMet",
+      "source_id": "oslomet",
+      "published_iso": "2026-04-23T16:20:51.239761+00:00",
+      "date_iso": "2026-04-23",
+      "summary": "Prosjekter som skal gjøre byen bedre stopper ofte ikke på grunn av ideene. De stopper fordi mennesker og systemer sliter med å endre seg.",
+      "category": "skole",
+      "fetched_at_iso": "2026-04-23T16:20:51.239761+00:00",
+      "lat": 59.955,
+      "lng": 10.76,
+      "location_precise": false,
+      "first_seen_iso": "2026-04-23T16:20:51.239761+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "59066b2c93d5d53f",
+      "bydel": "Nordre Aker",
+      "title": "Motstand mot arbeidsinkludering: - Mykje går føre seg i det skjulte Augnebryn som blir løfta, blikk som blir veksla og ei veksande misnøye.",
+      "url": "https://www.oslomet.no/forskning/forskningsnyheter/motstand-mot-arbeidsinkludering-i-det-skjulte2",
+      "source": "OsloMet",
+      "source_id": "oslomet",
+      "published_iso": "2026-04-23T16:20:51.239761+00:00",
+      "date_iso": "2026-04-23",
+      "summary": "Motstand mot arbeidsinkludering kan ha mange former.",
+      "category": "skole",
+      "fetched_at_iso": "2026-04-23T16:20:51.239761+00:00",
+      "lat": 59.955,
+      "lng": 10.76,
+      "location_precise": false,
+      "first_seen_iso": "2026-04-23T16:20:51.239761+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "06832eeb016d08a0",
+      "bydel": "Nordre Aker",
+      "title": "Lite tyder på «eliteflukt» frå Noreg Svært få personar med innvandrarforeldre flyttar frå Noreg, viser den første grundige kartlegginga av temaet.",
+      "url": "https://www.oslomet.no/forskning/forskningsnyheter/lite-eliteflukt-noreg",
+      "source": "OsloMet",
+      "source_id": "oslomet",
+      "published_iso": "2026-04-23T16:20:51.239761+00:00",
+      "date_iso": "2026-04-23",
+      "summary": "– Eigne ambisjonar er ei vel så viktig drivkraft for å flytte som opphavet til foreldra, seier forskar.",
+      "category": "skole",
+      "fetched_at_iso": "2026-04-23T16:20:51.239761+00:00",
+      "lat": 59.955,
+      "lng": 10.76,
+      "location_precise": false,
+      "first_seen_iso": "2026-04-23T16:20:51.239761+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "0509b80070f9f91b",
+      "bydel": "Nordre Aker",
+      "title": "Driv du med jobbpynting?",
+      "url": "https://www.oslomet.no/forskning/forskningsnyheter/jobbpynting",
+      "source": "OsloMet",
+      "source_id": "oslomet",
+      "published_iso": "2026-04-23T16:20:51.239761+00:00",
+      "date_iso": "2026-04-23",
+      "summary": "Dei fleste arbeidstakarar gjer det for at jobben skal sjå meir interessant ut.",
+      "category": "skole",
+      "fetched_at_iso": "2026-04-23T16:20:51.239761+00:00",
+      "lat": 59.955,
+      "lng": 10.76,
+      "location_precise": false,
+      "first_seen_iso": "2026-04-23T16:20:51.239761+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "28017bc54ed18c30",
+      "bydel": "Nordre Aker",
+      "title": "Naturlig, økologisk og vegansk: Nå er grønnvaskingen mer skjult enn før Regulering av markedsføring virker, men det har ikke blitt lettere for forbrukerne å ta bærekraftige valg når de handler klær og",
+      "url": "https://www.oslomet.no/forskning/forskningsnyheter/naturlig-okologisk-og-vegansk-na-er-gronnvaskingen-mer-skjult-enn-for",
+      "source": "OsloMet",
+      "source_id": "oslomet",
+      "published_iso": "2026-04-23T16:20:51.239761+00:00",
+      "date_iso": "2026-04-23",
+      "summary": "",
+      "category": "skole",
+      "fetched_at_iso": "2026-04-23T16:20:51.239761+00:00",
+      "lat": 59.955,
+      "lng": 10.76,
+      "location_precise": false,
+      "first_seen_iso": "2026-04-23T16:20:51.239761+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "b6e70462e4ec6a6f",
+      "bydel": "Nordre Aker",
+      "title": "Éin lærar og altfor mange elevar – kva skjer med dei praktiske ferdigheitene?",
+      "url": "https://www.oslomet.no/forskning/forskningsnyheter/ein-laerar-altfor-mange-elevar-praktiske-ferdigheiter",
+      "source": "OsloMet",
+      "source_id": "oslomet",
+      "published_iso": "2026-04-23T16:20:51.239761+00:00",
+      "date_iso": "2026-04-23",
+      "summary": "Når éin lærar har for mange elevar i kunst- og handverksfag, får det konsekvensar. Når gruppene blir for store, blir det mindre bruk av spesialrom, enklare oppgåver og mindre utforsking, ifølgje ny forsking.",
+      "category": "skole",
+      "fetched_at_iso": "2026-04-23T16:20:51.239761+00:00",
+      "lat": 59.955,
+      "lng": 10.76,
+      "location_precise": false,
+      "first_seen_iso": "2026-04-23T16:20:51.239761+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "039e51a3e57e3f34",
+      "bydel": "Nordre Aker",
+      "title": "Lesekrise eller leseboom?",
+      "url": "https://www.oslomet.no/forskning/forskningsnyheter/lesekrise-leseboom",
+      "source": "OsloMet",
+      "source_id": "oslomet",
+      "published_iso": "2026-04-23T16:20:51.239761+00:00",
+      "date_iso": "2026-04-23",
+      "summary": "Norske elevar har aldri vore dårlegare til å lese, men samtidig snakkar mange om ein leseboom inspirert av BookTok. Kan begge delar vere sant samtidig?",
+      "category": "skole",
+      "fetched_at_iso": "2026-04-23T16:20:51.239761+00:00",
+      "lat": 59.955,
+      "lng": 10.76,
+      "location_precise": false,
+      "first_seen_iso": "2026-04-23T16:20:51.239761+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "b5cc02ff3ba10903",
+      "bydel": "Nordre Aker",
+      "title": "Seks fjellvettregler for et sunnere digitalt arbeidsliv – Når digital tilkobling gjør det mulig å jobbe fra skiheiser og fjelltopper, både i og utenom arbeidstid, må man snakke åpent om forventninger,",
+      "url": "https://www.oslomet.no/forskning/forskningsnyheter/seks-fjellvettregler-for-et-sunnere-digitalt-arbeidsliv",
+      "source": "OsloMet",
+      "source_id": "oslomet",
+      "published_iso": "2026-04-23T16:20:51.239761+00:00",
+      "date_iso": "2026-04-23",
+      "summary": "",
+      "category": "skole",
+      "fetched_at_iso": "2026-04-23T16:20:51.239761+00:00",
+      "lat": 59.955,
+      "lng": 10.76,
+      "location_precise": false,
+      "first_seen_iso": "2026-04-23T16:20:51.239761+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "63ab997fef79488e",
+      "bydel": "Nordre Aker",
+      "title": "Barnehagelærarar med master: - Vi må ha ein plan for å rekruttere og behalde dei Masterutdanning gir barnehagelærarar ei djupare forståing av pedagogikken i barnehagen, viser avhandling.",
+      "url": "https://www.oslomet.no/forskning/forskningsnyheter/barnehagelerarar-med-master-vi-ma-ha-ein-plan-for-rekruttere-behalde-dei",
+      "source": "OsloMet",
+      "source_id": "oslomet",
+      "published_iso": "2026-04-23T16:20:51.239761+00:00",
+      "date_iso": "2026-04-23",
+      "summary": "Men barnehageeigarar har ikkje alltid høve til å ta i bruk kompetansen deira.",
+      "category": "skole",
+      "fetched_at_iso": "2026-04-23T16:20:51.239761+00:00",
+      "lat": 59.955,
+      "lng": 10.76,
+      "location_precise": false,
+      "first_seen_iso": "2026-04-23T16:20:51.239761+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "d9bf2074d0436da3",
+      "bydel": "Nordre Aker",
+      "title": "– Danskane fullfører oftare enn nordmenn Forsking viser at det er betrakteleg fleire som fullfører høgare utdanning i Danmark enn i Noreg.",
+      "url": "https://www.oslomet.no/forskning/forskningsnyheter/danskane-fullforer-oftare",
+      "source": "OsloMet",
+      "source_id": "oslomet",
+      "published_iso": "2026-04-23T16:20:51.239761+00:00",
+      "date_iso": "2026-04-23",
+      "summary": "",
+      "category": "skole",
+      "fetched_at_iso": "2026-04-23T16:20:51.239761+00:00",
+      "lat": 59.955,
+      "lng": 10.76,
+      "location_precise": false,
+      "first_seen_iso": "2026-04-23T16:20:51.239761+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "d8100fec16eee979",
+      "bydel": "Nordre Aker",
+      "title": "Ungdom lærer for lite i seksualitetsundervisningen – de finner ofte svar om kropp og sex på nett og blant venner Mange sier at innholdet i seksualitetsundervisningen på skolen ikke samsvarer med tinge",
+      "url": "https://www.oslomet.no/forskning/forskningsnyheter/ungdom-larer-lite-i-seksualitetsundervisningen",
+      "source": "OsloMet",
+      "source_id": "oslomet",
+      "published_iso": "2026-04-23T16:20:51.239761+00:00",
+      "date_iso": "2026-04-23",
+      "summary": "Det kan gjøre kropp og seksualitet vanskelig.",
+      "category": "skole",
+      "fetched_at_iso": "2026-04-23T16:20:51.239761+00:00",
+      "lat": 59.955,
+      "lng": 10.76,
+      "location_precise": false,
+      "first_seen_iso": "2026-04-23T16:20:51.239761+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "c8db25b3901d513c",
+      "bydel": "Nordre Aker",
+      "title": "Investorstaten trenger også diplomati",
+      "url": "https://www.bi.no/forskning/business-review/articles/2026/04/investorstaten-trenger-ogsa-diplomati/",
+      "source": "BI Business Review",
+      "source_id": "bi-business-review",
+      "published_iso": "2026-04-01T12:00:00+00:00",
+      "date_iso": "2026-04-01",
+      "summary": "",
+      "category": "naering",
+      "fetched_at_iso": "2026-04-23T16:20:51.757311+00:00",
+      "lat": 59.955,
+      "lng": 10.76,
+      "location_precise": false,
+      "first_seen_iso": "2026-04-23T16:20:51.757311+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "0ee5b1ff16f9dd12",
+      "bydel": "Nordre Aker",
+      "title": "Påskelesing for rolige dager",
+      "url": "https://www.bi.no/forskning/business-review/articles/2026/03/paskelesing-for-rolige-dager/",
+      "source": "BI Business Review",
+      "source_id": "bi-business-review",
+      "published_iso": "2026-03-01T12:00:00+00:00",
+      "date_iso": "2026-03-01",
+      "summary": "",
+      "category": "naering",
+      "fetched_at_iso": "2026-04-23T16:20:51.757311+00:00",
+      "lat": 59.955,
+      "lng": 10.76,
+      "location_precise": false,
+      "first_seen_iso": "2026-04-23T16:20:51.757311+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "459b61e210f64777",
+      "bydel": "Nordre Aker",
+      "title": "Kunsten å unnskylde seg",
+      "url": "https://www.bi.no/forskning/business-review/articles/2026/04/kunsten-a-unnskylde-seg/",
+      "source": "BI Business Review",
+      "source_id": "bi-business-review",
+      "published_iso": "2026-04-01T12:00:00+00:00",
+      "date_iso": "2026-04-01",
+      "summary": "",
+      "category": "naering",
+      "fetched_at_iso": "2026-04-23T16:20:51.757311+00:00",
+      "lat": 59.955,
+      "lng": 10.76,
+      "location_precise": false,
+      "first_seen_iso": "2026-04-23T16:20:51.757311+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "6825d33810465d78",
+      "bydel": "Nordre Aker",
+      "title": "Bør alle selskaper ha en gal KI-mann på toppen?",
+      "url": "https://www.bi.no/forskning/business-review/articles/2026/04/bor-alle-selskaper-ha-en-gal-ki-mann-pa-toppen/",
+      "source": "BI Business Review",
+      "source_id": "bi-business-review",
+      "published_iso": "2026-04-01T12:00:00+00:00",
+      "date_iso": "2026-04-01",
+      "summary": "",
+      "category": "naering",
+      "fetched_at_iso": "2026-04-23T16:20:51.757311+00:00",
+      "lat": 59.955,
+      "lng": 10.76,
+      "location_precise": false,
+      "first_seen_iso": "2026-04-23T16:20:51.757311+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "160b3f3ca39c0a5e",
+      "bydel": "Nordre Aker",
+      "title": "Ledelse som virker – helt konkret",
+      "url": "https://www.bi.no/forskning/business-review/articles/2026/01/ledelse-som-virker--helt-konkret/",
+      "source": "BI Business Review",
+      "source_id": "bi-business-review",
+      "published_iso": "2026-01-01T12:00:00+00:00",
+      "date_iso": "2026-01-01",
+      "summary": "",
+      "category": "naering",
+      "fetched_at_iso": "2026-04-23T16:20:51.757311+00:00",
+      "lat": 59.955,
+      "lng": 10.76,
+      "location_precise": false,
+      "first_seen_iso": "2026-04-23T16:20:51.757311+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "5a57e5bb7baddf27",
+      "bydel": "Gamle Oslo",
+      "title": "Realisme fra en større virkelighet",
+      "url": "https://www.deichman.no/aktuelt/realisme-fra-en-større-virkelighet_I3k40sfp2e",
+      "source": "Deichman",
+      "source_id": "deichman-aktuelt",
+      "published_iso": "2026-04-23T16:20:51.888926+00:00",
+      "date_iso": "2026-04-23",
+      "summary": "",
+      "category": "kultur",
+      "fetched_at_iso": "2026-04-23T16:20:51.888926+00:00",
+      "lat": 59.909,
+      "lng": 10.757,
+      "location_precise": true,
+      "first_seen_iso": "2026-04-23T16:20:51.888926+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "55524dbfbd8e9e9b",
+      "bydel": "Gamle Oslo",
+      "title": "Et slags kjærlighetsbrev til livet",
+      "url": "https://www.deichman.no/aktuelt/et-slags-kjærlighetsbrev-til-livet-_TJwthh5QgU",
+      "source": "Deichman",
+      "source_id": "deichman-aktuelt",
+      "published_iso": "2026-04-23T16:20:51.888926+00:00",
+      "date_iso": "2026-04-23",
+      "summary": "",
+      "category": "kultur",
+      "fetched_at_iso": "2026-04-23T16:20:51.888926+00:00",
+      "lat": 59.909,
+      "lng": 10.757,
+      "location_precise": true,
+      "first_seen_iso": "2026-04-23T16:20:51.888926+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "861e3ed7fb04a472",
+      "bydel": "Gamle Oslo",
+      "title": "Midlertidig stopp i transporten mellom bibliotekene",
+      "url": "https://www.deichman.no/aktuelt/midlertidig-stopp-i-transporten-mellom-bibliotekene_Reej80pDl9",
+      "source": "Deichman",
+      "source_id": "deichman-aktuelt",
+      "published_iso": "2026-04-23T16:20:51.888926+00:00",
+      "date_iso": "2026-04-23",
+      "summary": "",
+      "category": "kultur",
+      "fetched_at_iso": "2026-04-23T16:20:51.888926+00:00",
+      "lat": 59.909,
+      "lng": 10.757,
+      "location_precise": true,
+      "first_seen_iso": "2026-04-23T16:20:51.888926+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "0f8df4ac83b5a509",
+      "bydel": "Gamle Oslo",
+      "title": "DEICHMAN ANNUALEN - OPEN CALL",
+      "url": "https://www.deichman.no/aktuelt/deichman-annualen---open-call_91gw5pi-DN",
+      "source": "Deichman",
+      "source_id": "deichman-aktuelt",
+      "published_iso": "2026-04-23T16:20:51.888926+00:00",
+      "date_iso": "2026-04-23",
+      "summary": "",
+      "category": "kultur",
+      "fetched_at_iso": "2026-04-23T16:20:51.888926+00:00",
+      "lat": 59.909,
+      "lng": 10.757,
+      "location_precise": true,
+      "first_seen_iso": "2026-04-23T16:20:51.888926+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "94e663c3d32459f1",
+      "bydel": "Gamle Oslo",
+      "title": "«Det er nærmest ingen som husker hva jeg sa i forrige episode av Nytt på nytt»",
+      "url": "https://www.deichman.no/aktuelt/-«det-er-nærmest-ingen-som-husker-hva-jeg-sa-i-forrige-episode-av-nytt-på-nytt»_dHzfGnJD0f",
+      "source": "Deichman",
+      "source_id": "deichman-aktuelt",
+      "published_iso": "2026-04-23T16:20:51.888926+00:00",
+      "date_iso": "2026-04-23",
+      "summary": "",
+      "category": "kultur",
+      "fetched_at_iso": "2026-04-23T16:20:51.888926+00:00",
+      "lat": 59.909,
+      "lng": 10.757,
+      "location_precise": true,
+      "first_seen_iso": "2026-04-23T16:20:51.888926+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "a9a4c048154cee5b",
+      "bydel": "Gamle Oslo",
+      "title": "Menn uten midje kan også intervjues om litteratur",
+      "url": "https://www.deichman.no/aktuelt/menn-uten-midje-kan-også-intervjues-om-litteratur_8WW7QD3uWw",
+      "source": "Deichman",
+      "source_id": "deichman-aktuelt",
+      "published_iso": "2026-04-23T16:20:51.888926+00:00",
+      "date_iso": "2026-04-23",
+      "summary": "",
+      "category": "kultur",
+      "fetched_at_iso": "2026-04-23T16:20:51.888926+00:00",
+      "lat": 59.909,
+      "lng": 10.757,
+      "location_precise": true,
+      "first_seen_iso": "2026-04-23T16:20:51.888926+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "3cc22f650645f68a",
+      "bydel": "Gamle Oslo",
+      "title": "Deichman Annualen: Søk utstillingsplass",
+      "url": "https://www.deichman.no/aktuelt/deichman-annualen:-søk-utstillingsplass_k1Qpa37ZsO",
+      "source": "Deichman",
+      "source_id": "deichman-aktuelt",
+      "published_iso": "2026-04-23T16:20:51.888926+00:00",
+      "date_iso": "2026-04-23",
+      "summary": "",
+      "category": "kultur",
+      "fetched_at_iso": "2026-04-23T16:20:51.888926+00:00",
+      "lat": 59.909,
+      "lng": 10.757,
+      "location_precise": true,
+      "first_seen_iso": "2026-04-23T16:20:51.888926+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "6f980f56dc90f858",
+      "bydel": "Gamle Oslo",
+      "title": "Sjakkfest i Deichman Bjørvika",
+      "url": "https://www.deichman.no/aktuelt/sjakkfest-i-deichman-bjørvika_ioqKwUGcfr",
+      "source": "Deichman",
+      "source_id": "deichman-aktuelt",
+      "published_iso": "2026-04-23T16:20:51.888926+00:00",
+      "date_iso": "2026-04-23",
+      "summary": "",
+      "category": "kultur",
+      "fetched_at_iso": "2026-04-23T16:20:51.888926+00:00",
+      "lat": 59.909,
+      "lng": 10.757,
+      "location_precise": true,
+      "first_seen_iso": "2026-04-23T16:20:51.888926+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "1ec6c5cd6e399a7f",
+      "bydel": "Gamle Oslo",
+      "title": "Lettere å finne fram i Bjørvika – prøv vårt digitale bokkart",
+      "url": "https://www.deichman.no/aktuelt/lettere-å-finne-fram-i-bjørvika-–-prøv-vårt-digitale-bokkart_77-wgPHwJ3",
+      "source": "Deichman",
+      "source_id": "deichman-aktuelt",
+      "published_iso": "2026-04-23T16:20:51.888926+00:00",
+      "date_iso": "2026-04-23",
+      "summary": "",
+      "category": "kultur",
+      "fetched_at_iso": "2026-04-23T16:20:51.888926+00:00",
+      "lat": 59.909,
+      "lng": 10.757,
+      "location_precise": true,
+      "first_seen_iso": "2026-04-23T16:20:51.888926+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "f6b311a9758c9471",
+      "bydel": "Gamle Oslo",
+      "title": "Souljazzen som varmer deg opp etter vinteren",
+      "url": "https://www.deichman.no/aktuelt/souljazzen-som-varmer-deg-opp-etter-vinteren_TsPA8hOu22",
+      "source": "Deichman",
+      "source_id": "deichman-aktuelt",
+      "published_iso": "2026-04-23T16:20:51.888926+00:00",
+      "date_iso": "2026-04-23",
+      "summary": "",
+      "category": "kultur",
+      "fetched_at_iso": "2026-04-23T16:20:51.888926+00:00",
+      "lat": 59.909,
+      "lng": 10.757,
+      "location_precise": true,
+      "first_seen_iso": "2026-04-23T16:20:51.888926+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "85495c2fb7151cbd",
+      "bydel": "Gamle Oslo",
+      "title": "Bli med på feiringen av verdens bokdag 23. april",
+      "url": "https://www.deichman.no/aktuelt/bli-med-på-feiringen-av-verdens-bokdag-23.-april_tfXTTBFrNe",
+      "source": "Deichman",
+      "source_id": "deichman-aktuelt",
+      "published_iso": "2026-04-23T16:20:51.888926+00:00",
+      "date_iso": "2026-04-23",
+      "summary": "",
+      "category": "kultur",
+      "fetched_at_iso": "2026-04-23T16:20:51.888926+00:00",
+      "lat": 59.909,
+      "lng": 10.757,
+      "location_precise": true,
+      "first_seen_iso": "2026-04-23T16:20:51.888926+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "87a2c25977afa0dd",
+      "bydel": "Gamle Oslo",
+      "title": "Deichman Biblo Tøyen fyller 10 år",
+      "url": "https://www.deichman.no/aktuelt/deichman-biblo-tøyen-fyller-10-år_VIFvgnPB6M",
+      "source": "Deichman",
+      "source_id": "deichman-aktuelt",
+      "published_iso": "2026-04-23T16:20:51.888926+00:00",
+      "date_iso": "2026-04-23",
+      "summary": "",
+      "category": "kultur",
+      "fetched_at_iso": "2026-04-23T16:20:51.888926+00:00",
+      "lat": 59.909,
+      "lng": 10.757,
+      "location_precise": true,
+      "first_seen_iso": "2026-04-23T16:20:51.888926+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "9898829bf512006a",
+      "bydel": "Gamle Oslo",
+      "title": "Kongelig besøk 25. mars: Praktisk info til lånere",
+      "url": "https://www.deichman.no/aktuelt/kongelig-besøk-25.-mars:-praktisk-info-til-lånere_sMNqe4TGJb",
+      "source": "Deichman",
+      "source_id": "deichman-aktuelt",
+      "published_iso": "2026-04-23T16:20:51.888926+00:00",
+      "date_iso": "2026-04-23",
+      "summary": "",
+      "category": "kultur",
+      "fetched_at_iso": "2026-04-23T16:20:51.888926+00:00",
+      "lat": 59.909,
+      "lng": 10.757,
+      "location_precise": true,
+      "first_seen_iso": "2026-04-23T16:20:51.888926+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "d3ce01a022f8ca98",
+      "bydel": "Gamle Oslo",
+      "title": "«Det er overraskende ubehagelig å ha suksess!»",
+      "url": "https://www.deichman.no/aktuelt/«det-er-overraskende-ubehagelig-å-ha-suksess!»_VTx4KDeRkB",
+      "source": "Deichman",
+      "source_id": "deichman-aktuelt",
+      "published_iso": "2026-04-23T16:20:51.888926+00:00",
+      "date_iso": "2026-04-23",
+      "summary": "",
+      "category": "kultur",
+      "fetched_at_iso": "2026-04-23T16:20:51.888926+00:00",
+      "lat": 59.909,
+      "lng": 10.757,
+      "location_precise": true,
+      "first_seen_iso": "2026-04-23T16:20:51.888926+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "4dec9b41fa6d7960",
+      "bydel": "Gamle Oslo",
+      "title": "Alt du trenger til påske",
+      "url": "https://www.deichman.no/aktuelt/alt-du-trenger-til-påske_qY5zwr3vHg",
+      "source": "Deichman",
+      "source_id": "deichman-aktuelt",
+      "published_iso": "2026-04-23T16:20:51.888926+00:00",
+      "date_iso": "2026-04-23",
+      "summary": "",
+      "category": "kultur",
+      "fetched_at_iso": "2026-04-23T16:20:51.888926+00:00",
+      "lat": 59.909,
+      "lng": 10.757,
+      "location_precise": true,
+      "first_seen_iso": "2026-04-23T16:20:51.888926+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "cd130ab1d00e5170",
+      "bydel": "Nordre Aker",
+      "title": "Orientering: Oslo Cup 1 - Sognsvann",
+      "url": "https://www.nydalensil.no/orientering/",
+      "source": "Bydelsnytt kuratert",
+      "source_id": "events",
+      "published_iso": "2026-04-29T00:00:00+00:00",
+      "date_iso": "2026-04-29",
+      "summary": "Oslo Cup er en aarlig serie med korte naerloep (5-8 km) arrangert av Oslo-klubbene i rotasjon. Vaarens aapningsloep med utgangspunkt Sognsvann. Aapne klasser for alle nivaaer. Arrangoer: Nydalens SK. Paamelding via Eventor.",
+      "category": "idrett",
+      "fetched_at_iso": "2026-04-23T16:20:52.125386+00:00",
+      "lat": 59.976,
+      "lng": 10.732,
+      "location_precise": true,
+      "first_seen_iso": "2026-04-23T16:20:52.125386+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "52fc8f7c3a102a28",
+      "bydel": "Grorud",
+      "title": "Orientering: Lillomarka OL naerloep - Linderudkollen",
+      "url": "https://www.lillomarkaol.no/",
+      "source": "Bydelsnytt kuratert",
+      "source_id": "events",
+      "published_iso": "2026-05-06T00:00:00+00:00",
+      "date_iso": "2026-05-06",
+      "summary": "Naerloep i Lillomarka med utgangspunkt Linderudkollen skisenter. Korte loeyper (C/D) for familier og nybegynnere samt lange A-loeyper for konkurranseloepere. Arrangeres jevnlig hele vaar-/sommer-sesongen.",
+      "category": "idrett",
+      "fetched_at_iso": "2026-04-23T16:20:52.125386+00:00",
+      "lat": 59.975,
+      "lng": 10.818,
+      "location_precise": true,
+      "first_seen_iso": "2026-04-23T16:20:52.125386+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "d1d56c8e77205937",
+      "bydel": "Vestre Aker",
+      "title": "Orientering: Heming naerloep - Holmenkollen",
+      "url": "https://www.heming.no/orientering/",
+      "source": "Bydelsnytt kuratert",
+      "source_id": "events",
+      "published_iso": "2026-05-13T00:00:00+00:00",
+      "date_iso": "2026-05-13",
+      "summary": "Naerloep arrangert av Heming orientering med start ved Holmenkollen/Tryvann. Teknisk Nordmarka-terreng med myr, stein og stier. Paamelding via Eventor; gratis for Heming-medlemmer.",
+      "category": "idrett",
+      "fetched_at_iso": "2026-04-23T16:20:52.125386+00:00",
+      "lat": 59.983,
+      "lng": 10.667,
+      "location_precise": true,
+      "first_seen_iso": "2026-04-23T16:20:52.125386+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "88b13342e1b00851",
+      "bydel": "Vestre Aker",
+      "title": "Orientering: Pinseloepet 2026",
+      "url": "https://eventor.orientering.no/Events",
+      "source": "Bydelsnytt kuratert",
+      "source_id": "events",
+      "published_iso": "2026-05-24T00:00:00+00:00",
+      "date_iso": "2026-05-24",
+      "summary": "Tradisjonsrikt pinseloep med base Frognerseteren. Langdistanse og mellomdistanse paa pinseloerdag og -soendag. Trekker orienterings-loepere fra hele Norden.",
+      "category": "idrett",
+      "fetched_at_iso": "2026-04-23T16:20:52.125386+00:00",
+      "lat": 59.979,
+      "lng": 10.686,
+      "location_precise": true,
+      "first_seen_iso": "2026-04-23T16:20:52.125386+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "c69ab0dbae0d1319",
+      "bydel": "Frogner",
+      "title": "Orientering: KM sprint Akershus og Oslo",
+      "url": "https://eventor.orientering.no/Events",
+      "source": "Bydelsnytt kuratert",
+      "source_id": "events",
+      "published_iso": "2026-06-06T00:00:00+00:00",
+      "date_iso": "2026-06-06",
+      "summary": "Kretsmesterskap i sprint-orientering for Akershus og Oslo Orienteringskrets. Hurtige sprint-traser i Frognerparken og omliggende bygater. Raske veivalg mellom parkveier og bakker.",
+      "category": "idrett",
+      "fetched_at_iso": "2026-04-23T16:20:52.125386+00:00",
+      "lat": 59.925,
+      "lng": 10.708,
+      "location_precise": true,
+      "first_seen_iso": "2026-04-23T16:20:52.125386+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "14247a9ed1378c7a",
+      "bydel": "Østensjø",
+      "title": "Orientering: Oslo Cup 3 - Oestmarksetra",
+      "url": "https://www.nydalensil.no/orientering/",
+      "source": "Bydelsnytt kuratert",
+      "source_id": "events",
+      "published_iso": "2026-06-17T00:00:00+00:00",
+      "date_iso": "2026-06-17",
+      "summary": "Midtsommer-loep i Oslo Cup-serien. Utgangspunkt Oestmarksetra, teknisk terreng med mye stein og myr. A-loeype opp mot 12 km, D-loeype 3 km med enkle poster for barn og nybegynnere.",
+      "category": "idrett",
+      "fetched_at_iso": "2026-04-23T16:20:52.125386+00:00",
+      "lat": 59.878,
+      "lng": 10.867,
+      "location_precise": true,
+      "first_seen_iso": "2026-04-23T16:20:52.125386+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "352505e97d8b90b8",
+      "bydel": "Nordstrand",
+      "title": "Orientering: Koll naerloep - Skullerud",
+      "url": "https://koll.no/",
+      "source": "Bydelsnytt kuratert",
+      "source_id": "events",
+      "published_iso": "2026-06-24T00:00:00+00:00",
+      "date_iso": "2026-06-24",
+      "summary": "Naerloep arrangert av IL Koll med start ved Skullerud. Oestmarka-terreng med variert skog og kupert landskap. Korte og lange loeyper; gratis proeveloepning for ikke-medlemmer.",
+      "category": "idrett",
+      "fetched_at_iso": "2026-04-23T16:20:52.125386+00:00",
+      "lat": 59.862,
+      "lng": 10.852,
+      "location_precise": true,
+      "first_seen_iso": "2026-04-23T16:20:52.125386+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "44c954d69831309a",
+      "bydel": "Vestre Aker",
+      "title": "Orientering: Oslo 3-dagers 2026",
+      "url": "https://eventor.orientering.no/Events",
+      "source": "Bydelsnytt kuratert",
+      "source_id": "events",
+      "published_iso": "2026-08-14T00:00:00+00:00",
+      "date_iso": "2026-08-14",
+      "summary": "Tredagers etappefest i Nordmarka med base Frognerseteren. Ulikt terreng og distanse hver dag; sammenlagtpremier etter 3 etapper. Aapne klasser for alle aldre fra 10 til 85+.",
+      "category": "idrett",
+      "fetched_at_iso": "2026-04-23T16:20:52.125386+00:00",
+      "lat": 59.979,
+      "lng": 10.686,
+      "location_precise": true,
+      "first_seen_iso": "2026-04-23T16:20:52.125386+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "6798f9f4fe983c47",
+      "bydel": "Nordre Aker",
+      "title": "Orientering: OSI Blindern-sprint",
+      "url": "https://osi-o.no/",
+      "source": "Bydelsnytt kuratert",
+      "source_id": "events",
+      "published_iso": "2026-08-29T00:00:00+00:00",
+      "date_iso": "2026-08-29",
+      "summary": "Sprintloep paa Universitetet i Oslo / Blindern-campus og omliggende gater. Teknisk sprint-orientering med raske veivalg mellom bygninger. Arrangoer: Oslo Studenters IL. Aapen deltakelse.",
+      "category": "idrett",
+      "fetched_at_iso": "2026-04-23T16:20:52.125386+00:00",
+      "lat": 59.942,
+      "lng": 10.72,
+      "location_precise": true,
+      "first_seen_iso": "2026-04-23T16:20:52.125386+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "17dd08ab112ef922",
+      "bydel": "Nordre Aker",
+      "title": "Orientering: Oslo-mesterskapet langdistanse",
+      "url": "https://eventor.orientering.no/Events",
+      "source": "Bydelsnytt kuratert",
+      "source_id": "events",
+      "published_iso": "2026-09-05T00:00:00+00:00",
+      "date_iso": "2026-09-05",
+      "summary": "OM individuelt paa lang distanse. Terreng i Nordmarka, ofte utgangspunkt Ullevaalseter eller Kobberhaug. Klasser H/D 10-85 samt aapne klasser. Arrangoer roterer blant Oslo-klubbene.",
+      "category": "idrett",
+      "fetched_at_iso": "2026-04-23T16:20:52.125386+00:00",
+      "lat": 59.976,
+      "lng": 10.732,
+      "location_precise": true,
+      "first_seen_iso": "2026-04-23T16:20:52.125386+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "707590356da7eed6",
+      "bydel": "Østensjø",
+      "title": "Orientering: OM stafett 2026",
+      "url": "https://eventor.orientering.no/Events",
+      "source": "Bydelsnytt kuratert",
+      "source_id": "events",
+      "published_iso": "2026-09-12T00:00:00+00:00",
+      "date_iso": "2026-09-12",
+      "summary": "Oslo-mesterskapet stafett med lag fra alle Oslo-klubbene. 3-etappers stafett med vaktskifte paa Skullerud. Profesjonelle lag og aapne mosjonsklasser samme dag.",
+      "category": "idrett",
+      "fetched_at_iso": "2026-04-23T16:20:52.125386+00:00",
+      "lat": 59.862,
+      "lng": 10.852,
+      "location_precise": true,
+      "first_seen_iso": "2026-04-23T16:20:52.125386+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "40934d193165dfd3",
+      "bydel": "Ullern",
+      "title": "Orientering: Fossum IF naerloep - Vestmarka",
+      "url": "https://www.fossumif.no/",
+      "source": "Bydelsnytt kuratert",
+      "source_id": "events",
+      "published_iso": "2026-09-19T00:00:00+00:00",
+      "date_iso": "2026-09-19",
+      "summary": "Naerloep i Vestmarka/Baerumsmarka arrangert av Fossum IF. Utgangspunkt Oesternvann. Variert skog med god laebarhet. Del av ukentlig naerloep-serie mai-september.",
+      "category": "idrett",
+      "fetched_at_iso": "2026-04-23T16:20:52.125386+00:00",
+      "lat": 59.937,
+      "lng": 10.58,
+      "location_precise": true,
+      "first_seen_iso": "2026-04-23T16:20:52.125386+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "d6fb2e5d2129f7f5",
+      "bydel": "Nordre Aker",
+      "title": "Orientering: Blodslitet 2026",
+      "url": "https://eventor.orientering.no/Events",
+      "source": "Bydelsnytt kuratert",
+      "source_id": "events",
+      "published_iso": "2026-10-10T00:00:00+00:00",
+      "date_iso": "2026-10-10",
+      "summary": "Klassisk langdistanse-loep i Nordmarka. 15-20 km for A-loeypen. Krevende terreng med myrdrag og sti-kaos. Tradisjonsrikt hoest-loep som trekker loepere fra hele Oestlandet.",
+      "category": "idrett",
+      "fetched_at_iso": "2026-04-23T16:20:52.125386+00:00",
+      "lat": 59.99,
+      "lng": 10.735,
+      "location_precise": true,
+      "first_seen_iso": "2026-04-23T16:20:52.125386+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "5b3b70ac96aacbca",
+      "bydel": "Vestre Aker",
+      "title": "Orientering: Nattuglen - nattloep i Nordmarka",
+      "url": "https://eventor.orientering.no/Events",
+      "source": "Bydelsnytt kuratert",
+      "source_id": "events",
+      "published_iso": "2026-11-07T00:00:00+00:00",
+      "date_iso": "2026-11-07",
+      "summary": "Nattloep i Nordmarka med hodelykt. Ca. 5-8 km teknisk terreng i moerket. Del av Nattuglen-karusellen november-februar; arrangeres i rotasjon av Oslo-klubbene.",
+      "category": "idrett",
+      "fetched_at_iso": "2026-04-23T16:20:52.125386+00:00",
+      "lat": 59.979,
+      "lng": 10.686,
+      "location_precise": true,
+      "first_seen_iso": "2026-04-23T16:20:52.125386+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "65fca14cfa44918e",
+      "bydel": "Vestre Aker",
+      "title": "Orientering: O-troll-loepet (for barn)",
+      "url": "https://eventor.orientering.no/Events",
+      "source": "Bydelsnytt kuratert",
+      "source_id": "events",
+      "published_iso": "2026-05-02T00:00:00+00:00",
+      "date_iso": "2026-05-02",
+      "summary": "Barne- og nybegynner-loep med korte, merkede loeyper. Laerings-poster med moro-oppgaver og enkel navigasjon. Ingen tidmaaling - ferdigheter og mestring er hovedfokus.",
+      "category": "idrett",
+      "fetched_at_iso": "2026-04-23T16:20:52.125386+00:00",
+      "lat": 59.976,
+      "lng": 10.732,
+      "location_precise": true,
+      "first_seen_iso": "2026-04-23T16:20:52.125386+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "2b8388cc2d0531de",
+      "bydel": "Gamle Oslo",
+      "title": "Sommerles 2026: lesekampanje for barn",
+      "url": "https://www.sommerles.no/",
+      "source": "Bydelsnytt kuratert",
+      "source_id": "events",
+      "published_iso": "2026-06-01T00:00:00+00:00",
+      "date_iso": "2026-06-01",
+      "summary": "Nasjonal lesekampanje for 1.-7. trinn som starter 1. juni. Deichman deler ut premier for boeker lest gjennom sommeren. Alle Oslo-filialer deltar.",
+      "category": "kultur",
+      "fetched_at_iso": "2026-04-23T16:20:52.125386+00:00",
+      "lat": 59.909,
+      "lng": 10.757,
+      "location_precise": true,
+      "first_seen_iso": "2026-04-23T16:20:52.125386+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "8aa841351da98712",
+      "bydel": "Gamle Oslo",
+      "title": "Deichman Bjoervika: Barneloerdag",
+      "url": "https://www.deichman.no/bjorvika",
+      "source": "Bydelsnytt kuratert",
+      "source_id": "events",
+      "published_iso": "2026-05-09T00:00:00+00:00",
+      "date_iso": "2026-05-09",
+      "summary": "Loerdagsprogram med eventyr, sang og verksted for barn 3-9 aar. Fast tilbud foerste loerdag hver maaned i hovedbiblioteket.",
+      "category": "kultur",
+      "fetched_at_iso": "2026-04-23T16:20:52.125386+00:00",
+      "lat": 59.909,
+      "lng": 10.757,
+      "location_precise": true,
+      "first_seen_iso": "2026-04-23T16:20:52.125386+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "e9ffe5ccf09fe936",
+      "bydel": "Grünerløkka",
+      "title": "Deichman Grünerløkka: Forfatterkveld",
+      "url": "https://www.deichman.no/grunerlokka",
+      "source": "Bydelsnytt kuratert",
+      "source_id": "events",
+      "published_iso": "2026-05-15T00:00:00+00:00",
+      "date_iso": "2026-05-15",
+      "summary": "Forfatterbesoek og samtale over en halv time, deretter kaffe og mingling. Foelg Deichman-programmet for hvem som kommer neste gang.",
+      "category": "kultur",
+      "fetched_at_iso": "2026-04-23T16:20:52.125386+00:00",
+      "lat": 59.924,
+      "lng": 10.762,
+      "location_precise": true,
+      "first_seen_iso": "2026-04-23T16:20:52.125386+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "1f8c86e84fec045c",
+      "bydel": "Gamle Oslo",
+      "title": "Deichman Tøyen: Spraakkafe",
+      "url": "https://www.deichman.no/toyen",
+      "source": "Bydelsnytt kuratert",
+      "source_id": "events",
+      "published_iso": "2026-05-06T00:00:00+00:00",
+      "date_iso": "2026-05-06",
+      "summary": "Uformell spraakkafe for norsk-laerere og internasjonale Oslo-borgere. Onsdag ettermiddag, alle nivaa velkommen.",
+      "category": "kultur",
+      "fetched_at_iso": "2026-04-23T16:20:52.125386+00:00",
+      "lat": 59.916,
+      "lng": 10.777,
+      "location_precise": true,
+      "first_seen_iso": "2026-04-23T16:20:52.125386+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "eb40e3614f0343a6",
+      "bydel": "Frogner",
+      "title": "Deichman Majorstuen: Bokstrikk",
+      "url": "https://www.deichman.no/majorstuen",
+      "source": "Bydelsnytt kuratert",
+      "source_id": "events",
+      "published_iso": "2026-05-14T00:00:00+00:00",
+      "date_iso": "2026-05-14",
+      "summary": "Strikkegruppe som moetes over kaffe og en bok. Fast torsdagstilbud. Gratis, ta med eget prosjekt.",
+      "category": "kultur",
+      "fetched_at_iso": "2026-04-23T16:20:52.125386+00:00",
+      "lat": 59.929,
+      "lng": 10.716,
+      "location_precise": true,
+      "first_seen_iso": "2026-04-23T16:20:52.125386+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "2dc7cf1f8174fdce",
+      "bydel": "Sagene",
+      "title": "Deichman Torshov: Lokalhistorielauget",
+      "url": "https://www.deichman.no/torshov",
+      "source": "Bydelsnytt kuratert",
+      "source_id": "events",
+      "published_iso": "2026-05-21T00:00:00+00:00",
+      "date_iso": "2026-05-21",
+      "summary": "Maanedlig foredragskveld om lokalhistorie i Sagene og Torshov. Samarbeid med Oslo byarkiv og lokale eldre-informanter.",
+      "category": "kultur",
+      "fetched_at_iso": "2026-04-23T16:20:52.125386+00:00",
+      "lat": 59.938,
+      "lng": 10.758,
+      "location_precise": true,
+      "first_seen_iso": "2026-04-23T16:20:52.125386+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "cef2388330f9d5f0",
+      "bydel": "Nordstrand",
+      "title": "Deichman Lambertseter: Familiesoendag",
+      "url": "https://www.deichman.no/lambertseter",
+      "source": "Bydelsnytt kuratert",
+      "source_id": "events",
+      "published_iso": "2026-05-03T00:00:00+00:00",
+      "date_iso": "2026-05-03",
+      "summary": "Soendags-familieverksted med hoeytlesing, tegning og bokprat. Passer best 4-10 aar, men hele familien velkommen.",
+      "category": "kultur",
+      "fetched_at_iso": "2026-04-23T16:20:52.125386+00:00",
+      "lat": 59.862,
+      "lng": 10.797,
+      "location_precise": true,
+      "first_seen_iso": "2026-04-23T16:20:52.125386+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "d4ac76a7b2b736ad",
+      "bydel": "Alna",
+      "title": "Deichman Furuset: Flerkulturell leseklubb",
+      "url": "https://www.deichman.no/furuset",
+      "source": "Bydelsnytt kuratert",
+      "source_id": "events",
+      "published_iso": "2026-05-20T00:00:00+00:00",
+      "date_iso": "2026-05-20",
+      "summary": "Leseklubb som diskuterer boeker paa flere spraak. Urdu, somali, arabisk og norsk representert. Annenhver uke.",
+      "category": "kultur",
+      "fetched_at_iso": "2026-04-23T16:20:52.125386+00:00",
+      "lat": 59.941,
+      "lng": 10.864,
+      "location_precise": true,
+      "first_seen_iso": "2026-04-23T16:20:52.125386+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "8bfeb00e1849e6b9",
+      "bydel": "Gamle Oslo",
+      "title": "Nordisk bibliotekuke 2026",
+      "url": "https://www.deichman.no/",
+      "source": "Bydelsnytt kuratert",
+      "source_id": "events",
+      "published_iso": "2026-11-09T00:00:00+00:00",
+      "date_iso": "2026-11-09",
+      "summary": "Felles nordisk leseuke der bibliotek i Oslo holder hoeytlesing paa morgenen og skumring. Samtlige Deichman-filialer deltar.",
+      "category": "kultur",
+      "fetched_at_iso": "2026-04-23T16:20:52.125386+00:00",
+      "lat": 59.909,
+      "lng": 10.757,
+      "location_precise": true,
+      "first_seen_iso": "2026-04-23T16:20:52.125386+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "2bb05f21545b7ba0",
+      "bydel": "Gamle Oslo",
+      "title": "Bokstart Oslo: bokpakker til 1-aaringer",
+      "url": "https://www.deichman.no/bokstart",
+      "source": "Bydelsnytt kuratert",
+      "source_id": "events",
+      "published_iso": "2026-09-15T00:00:00+00:00",
+      "date_iso": "2026-09-15",
+      "summary": "Gratis bokpakke til alle 1-aaringer i Oslo. Leveres via helsestasjon eller hentes paa Deichman-filialer i loepet av hoesten.",
+      "category": "kultur",
+      "fetched_at_iso": "2026-04-23T16:20:52.125386+00:00",
+      "lat": 59.909,
+      "lng": 10.757,
+      "location_precise": true,
+      "first_seen_iso": "2026-04-23T16:20:52.125386+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "277a81daeee165ed",
+      "bydel": "St. Hanshaugen",
+      "title": "17. mai: Barnetoget paa Karl Johan",
+      "url": "https://www.oslo.kommune.no/17-mai",
+      "source": "Bydelsnytt kuratert",
+      "source_id": "events",
+      "published_iso": "2026-05-17T00:00:00+00:00",
+      "date_iso": "2026-05-17",
+      "summary": "Det tradisjonelle barnetoget der alle Oslos skoler deltar. Starter kl 10 fra Akershus festning og gaar opp Karl Johan til Slottet. Hilsen fra kongefamilien paa balkongen.",
+      "category": "arrangement",
+      "fetched_at_iso": "2026-04-23T16:20:52.125386+00:00",
+      "lat": 59.917,
+      "lng": 10.727,
+      "location_precise": true,
+      "first_seen_iso": "2026-04-23T16:20:52.125386+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "25ed4fad94ae0917",
+      "bydel": "St. Hanshaugen",
+      "title": "17. mai: Russeparaden gjennom sentrum",
+      "url": "https://www.oslo.kommune.no/17-mai",
+      "source": "Bydelsnytt kuratert",
+      "source_id": "events",
+      "published_iso": "2026-05-17T00:00:00+00:00",
+      "date_iso": "2026-05-17",
+      "summary": "Russen gaar gjennom sentrum etter barnetoget. Samling paa Egertorvet, felles parade ned Karl Johan og avslutning paa Raadhusplassen.",
+      "category": "arrangement",
+      "fetched_at_iso": "2026-04-23T16:20:52.125386+00:00",
+      "lat": 59.917,
+      "lng": 10.727,
+      "location_precise": true,
+      "first_seen_iso": "2026-04-23T16:20:52.125386+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "a20de949462c6d99",
+      "bydel": "Grünerløkka",
+      "title": "Ungdommens Kulturmoenstring Oslo 2026",
+      "url": "https://ukm.no/oslo",
+      "source": "Bydelsnytt kuratert",
+      "source_id": "events",
+      "published_iso": "2026-03-14T00:00:00+00:00",
+      "date_iso": "2026-03-14",
+      "summary": "Fylkesmoenstringen for Oslo med unge artister fra hele byen. Dans, musikk, visuell kunst og film. Vinnerne gaar videre til UKM-festivalen i Trondheim.",
+      "category": "kultur",
+      "fetched_at_iso": "2026-04-23T16:20:52.125386+00:00",
+      "lat": 59.913,
+      "lng": 10.754,
+      "location_precise": true,
+      "first_seen_iso": "2026-04-23T16:20:52.125386+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "8742e385f3ec77ab",
+      "bydel": "Gamle Oslo",
+      "title": "Oslo Mangfoldsfestival 2026",
+      "url": "https://www.oslo.kommune.no/mangfold",
+      "source": "Bydelsnytt kuratert",
+      "source_id": "events",
+      "published_iso": "2026-06-06T00:00:00+00:00",
+      "date_iso": "2026-06-06",
+      "summary": "Aarlig festival som feirer kulturell og spraaklig mangfold i Oslo. Matboder, musikk og dans fra over 40 kulturer i Tøyenparken.",
+      "category": "arrangement",
+      "fetched_at_iso": "2026-04-23T16:20:52.125386+00:00",
+      "lat": 59.913,
+      "lng": 10.777,
+      "location_precise": true,
+      "first_seen_iso": "2026-04-23T16:20:52.125386+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "68b2e339d2515f06",
+      "bydel": "Frogner",
+      "title": "Sankthansbaal ved Frognerkilen",
+      "url": "https://www.oslo.kommune.no/sankthans",
+      "source": "Bydelsnytt kuratert",
+      "source_id": "events",
+      "published_iso": "2026-06-23T00:00:00+00:00",
+      "date_iso": "2026-06-23",
+      "summary": "Offisielt kommune-baal paa Frognerkilen, arrangert av Bymiljoeetaten. Familiearrangement fra kl 19 med poelsegrilling og friluftsmusikk.",
+      "category": "arrangement",
+      "fetched_at_iso": "2026-04-23T16:20:52.125386+00:00",
+      "lat": 59.908,
+      "lng": 10.696,
+      "location_precise": true,
+      "first_seen_iso": "2026-04-23T16:20:52.125386+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "c7744c7feb809bf0",
+      "bydel": "St. Hanshaugen",
+      "title": "Frivillighetsdagen 2026",
+      "url": "https://www.oslo.kommune.no/frivillighet",
+      "source": "Bydelsnytt kuratert",
+      "source_id": "events",
+      "published_iso": "2026-12-05T00:00:00+00:00",
+      "date_iso": "2026-12-05",
+      "summary": "Oslo kommune hedrer byens frivillige. Priser, seremoni paa Raadhuset og stands paa Raadhusplassen for over 200 frivillige organisasjoner.",
+      "category": "arrangement",
+      "fetched_at_iso": "2026-04-23T16:20:52.125386+00:00",
+      "lat": 59.913,
+      "lng": 10.733,
+      "location_precise": true,
+      "first_seen_iso": "2026-04-23T16:20:52.125386+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "8471dd58aa3d7813",
+      "bydel": "Gamle Oslo",
+      "title": "Julegrantenning paa Stortorvet",
+      "url": "https://www.oslo.kommune.no/jul",
+      "source": "Bydelsnytt kuratert",
+      "source_id": "events",
+      "published_iso": "2026-11-28T00:00:00+00:00",
+      "date_iso": "2026-11-28",
+      "summary": "Den offisielle julegrantenningen i Oslo sentrum. Ordfoerer holder tale, barnekor synger og grana tennes kl 17. Start paa julesesongen.",
+      "category": "arrangement",
+      "fetched_at_iso": "2026-04-23T16:20:52.125386+00:00",
+      "lat": 59.914,
+      "lng": 10.744,
+      "location_precise": true,
+      "first_seen_iso": "2026-04-23T16:20:52.125386+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "7b30052ad072628d",
+      "bydel": "St. Hanshaugen",
+      "title": "Filmhuset hoestprogram 2026",
+      "url": "https://www.filmhuset.no/",
+      "source": "Bydelsnytt kuratert",
+      "source_id": "events",
+      "published_iso": "2026-09-01T00:00:00+00:00",
+      "date_iso": "2026-09-01",
+      "summary": "Cinemateket i Filmhuset aapner hoestsesongen med retrospektiv og internasjonale klassikere. Maanedlige tema-programmer.",
+      "category": "kultur",
+      "fetched_at_iso": "2026-04-23T16:20:52.125386+00:00",
+      "lat": 59.912,
+      "lng": 10.742,
+      "location_precise": true,
+      "first_seen_iso": "2026-04-23T16:20:52.125386+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "5eb160a317214c45",
+      "bydel": "Gamle Oslo",
+      "title": "Operaens lunsjkonserter 2026 vaar",
+      "url": "https://operaen.no/lunsjkonserter",
+      "source": "Bydelsnytt kuratert",
+      "source_id": "events",
+      "published_iso": "2026-05-08T00:00:00+00:00",
+      "date_iso": "2026-05-08",
+      "summary": "Gratis 30-min lunsjkonserter i foajeen fredag kl 12. Operaens musikere og ensembler. Mest klassisk, av og til crossover.",
+      "category": "kultur",
+      "fetched_at_iso": "2026-04-23T16:20:52.125386+00:00",
+      "lat": 59.907,
+      "lng": 10.753,
+      "location_precise": true,
+      "first_seen_iso": "2026-04-23T16:20:52.125386+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "7e515ed84c230bb7",
+      "bydel": "St. Hanshaugen",
+      "title": "Byarkivets aapne dag 2026",
+      "url": "https://www.oslo.kommune.no/byarkivet",
+      "source": "Bydelsnytt kuratert",
+      "source_id": "events",
+      "published_iso": "2026-10-17T00:00:00+00:00",
+      "date_iso": "2026-10-17",
+      "summary": "Byarkivet viser fram kildene: gamle bygningstegninger, skoleprotokoller og familiedokumenter. Slektsforskere og lokalhistorikere til stede.",
+      "category": "arrangement",
+      "fetched_at_iso": "2026-04-23T16:20:52.125386+00:00",
+      "lat": 59.931,
+      "lng": 10.757,
+      "location_precise": true,
+      "first_seen_iso": "2026-04-23T16:20:52.125386+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "df2d3b7815af5db3",
+      "bydel": "Frogner",
+      "title": "Nasjonalmuseets sommerutstilling 2026",
+      "url": "https://www.nasjonalmuseet.no/",
+      "source": "Bydelsnytt kuratert",
+      "source_id": "events",
+      "published_iso": "2026-06-12T00:00:00+00:00",
+      "date_iso": "2026-06-12",
+      "summary": "Storformat-utstilling paa nybygget. Tema og kurator offentliggjoeres paa vaarparten. Barnefamilieaktiviteter hele sommeren.",
+      "category": "kultur",
+      "fetched_at_iso": "2026-04-23T16:20:52.125386+00:00",
+      "lat": 59.912,
+      "lng": 10.729,
+      "location_precise": true,
+      "first_seen_iso": "2026-04-23T16:20:52.125386+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "0ad320d542039ded",
+      "bydel": "Gamle Oslo",
+      "title": "Munchmuseet: Sommersesong 2026",
+      "url": "https://www.munchmuseet.no/",
+      "source": "Bydelsnytt kuratert",
+      "source_id": "events",
+      "published_iso": "2026-06-01T00:00:00+00:00",
+      "date_iso": "2026-06-01",
+      "summary": "Sommersesongens hovedutstilling aapnes i Munchmuseet paa Bjoervika. Lengre aapningstider og ekstra guidede turer gjennom sommeren.",
+      "category": "kultur",
+      "fetched_at_iso": "2026-04-23T16:20:52.125386+00:00",
+      "lat": 59.907,
+      "lng": 10.757,
+      "location_precise": true,
+      "first_seen_iso": "2026-04-23T16:20:52.125386+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
+    },
+    {
+      "id": "d845142a1a352f4c",
+      "bydel": "St. Hanshaugen",
+      "title": "Oslo Internasjonale Filmfestival 2026",
+      "url": "https://oslofilmfestival.com/",
+      "source": "Bydelsnytt kuratert",
+      "source_id": "events",
+      "published_iso": "2026-10-28T00:00:00+00:00",
+      "date_iso": "2026-10-28",
+      "summary": "Oslos eldste filmfestival. Over 150 filmer paa Vega, Saga, Gimle og andre sentrumskinoer. Fra dokumentar til kunstfilm.",
+      "category": "kultur",
+      "fetched_at_iso": "2026-04-23T16:20:52.125386+00:00",
+      "lat": 59.914,
+      "lng": 10.738,
+      "location_precise": true,
+      "first_seen_iso": "2026-04-23T16:20:52.125386+00:00",
+      "last_seen_iso": "2026-04-23T16:20:52.151100+00:00"
     }
   ],
-  "updatedAt": "2026-04-23T06:24:03.519316+00:00"
+  "updatedAt": "2026-04-23T16:20:52.159025+00:00"
 }

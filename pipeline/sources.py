@@ -167,6 +167,14 @@ RSS_SOURCES = [
         "weight": 0.4,
         "resolver": "text_match_bydel_fallback",
     },
+    {
+        "id": "uio",
+        "name": "Universitetet i Oslo",
+        "url": "https://www.uio.no/om/aktuelt/aktuelle-saker/?vrtx=feed",
+        "bydel": "Nordre Aker",  # Blindern ligger her
+        "weight": 0.6,
+        "resolver": "fixed_bydel",
+    },
 ]
 
 HTML_SOURCES = [
@@ -203,6 +211,39 @@ HTML_SOURCES = [
         "bydel": "Frogner",
         "urls": ["https://api.entur.io/realtime/v1/rest/sx?datasetId=RUT&maxSize=100"],
         "limit": 25,
+        "weight": 0.5,
+    },
+    {
+        "id": "oslomet",
+        "name": "OsloMet",
+        "scraper": "oslomet",
+        "bydel": "Nordre Aker",
+        "urls": [
+            "https://www.oslomet.no/forskning/forskningsnyheter",
+        ],
+        "limit": 12,
+        "weight": 0.5,
+    },
+    {
+        "id": "bi-business-review",
+        "name": "BI Business Review",
+        "scraper": "bi",
+        "bydel": "Nordre Aker",
+        "urls": [
+            "https://www.bi.no/forskning/business-review/",
+        ],
+        "limit": 10,
+        "weight": 0.4,
+    },
+    {
+        "id": "deichman-aktuelt",
+        "name": "Deichman",
+        "scraper": "deichman",
+        "bydel": "Gamle Oslo",
+        "urls": [
+            "https://www.deichman.no/aktuelt",
+        ],
+        "limit": 15,
         "weight": 0.5,
     },
 ]
@@ -297,7 +338,6 @@ def resolve_text_match_bydel_fallback(entry):
         if kw in haystack:
             return None  # None -> fetcher bruker source['bydel'] som fallback
     return SKIP
-
 
 RESOLVERS = {
     "oslo_kommune_tags": resolve_oslo_kommune_tags,

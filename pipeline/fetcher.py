@@ -480,11 +480,184 @@ def fetch_from_html_ruter(source: dict) -> Iterable[RawStory]:
                 break
 
 
+
+# --- OsloMet forskningsnyheter + institusjonelle nyheter ------------------
+_OSLOMET_LINK_RE = re.compile(
+    r'<a[^>]+href="(/(?:forskning/forskningsnyheter|om/nyheter)/[^"#?]+)"[^>]*>'
+    r'([\s\S]{1,600}?)</a>'
+)
+
+
+def fetch_from_html_oslomet(source: dict) -> Iterable[RawStory]:
+    """OsloMet /forskning/forskningsnyheter + /om/nyheter.
+
+    Listingen har lenker <a href="/forskning/forskningsnyheter/..."> der
+    lenketeksten inneholder bade tittel og et kort ingress. Vi splitter paa
+    foerste dobbeltmellomrom/overskrift og bruker resten som summary.
+    """
+    fetched_at = datetime.now(timezone.utc).isoformat()
+    bydel_default = source.get("bydel") or "Nordre Aker"
+    limit = source.get("limit", 15)
+    seen = set()
+    count = 0
+    for list_url in source.get("urls", []):
+        html_txt = _fetch_html(list_url)
+        if not html_txt:
+            continue
+        for m in _OSLOMET_LINK_RE.finditer(html_txt):
+            href = m.group(1)
+            block = m.group(2)
+            text = re.sub(r"<[^>]+>", " ", block)
+            text = re.sub(r"\s+", " ", text).strip()
+            if len(text) < 8:
+                continue
+            # Del paa foerste punktum for tittel/summary-split
+            parts = re.split(r"(?<=[.!?])\s+", text, maxsplit=1)
+            title = parts[0][:200].strip()
+            summary = parts[1].strip() if len(parts) > 1 else ""
+            full_url = "https://www.oslomet.no" + href
+            if full_url in seen:
+                continue
+            seen.add(full_url)
+            now_iso = fetched_at
+            yield RawStory(
+                id=_make_id(full_url, title),
+                bydel=bydel_default,
+                title=title,
+                url=full_url,
+                source=source.get("name", "OsloMet"),
+                source_id=source["id"],
+                published_iso=now_iso,
+                date_iso=now_iso[:10],
+                summary=summary[:600],
+                category="skole",
+                fetched_at_iso=fetched_at,
+            )
+            count += 1
+            if count >= limit:
+                return
+
+
+# --- BI Business Review / presserom ---------------------------------------
+_BI_LINK_RE = re.compile(
+    r'<a[^>]+href="(/forskning/business-review/articles/(\d{4})/(\d{2})/[^"#?]+)"[^>]*>'
+    r'([\s\S]{1,600}?)</a>'
+)
+
+
+def fetch_from_html_bi(source: dict) -> Iterable[RawStory]:
+    """BI Business Review - forskningsartikler.
+
+    Articles ligger paa /forskning/business-review/articles/YYYY/MM/slug/.
+    Dato hentes fra URL-en. Lenketeksten har ofte seksjonsprefiks
+    "BI Business Review" som strippes.
+    """
+    fetched_at = datetime.now(timezone.utc).isoformat()
+    bydel_default = source.get("bydel") or "Nordre Aker"
+    limit = source.get("limit", 15)
+    seen = set()
+    count = 0
+    for list_url in source.get("urls", []):
+        html_txt = _fetch_html(list_url)
+        if not html_txt:
+            continue
+        for m in _BI_LINK_RE.finditer(html_txt):
+            href, yr, mo, block = m.group(1), m.group(2), m.group(3), m.group(4)
+            text = re.sub(r"<[^>]+>", " ", block)
+            text = re.sub(r"\s+", " ", text).strip()
+            # Strip section-prefix
+            text = re.sub(r"^(BI Business Review|BI Presserom)\s+", "", text)
+            if len(text) < 8:
+                continue
+            title = text[:200].strip()
+            full_url = "https://www.bi.no" + href
+            if full_url in seen:
+                continue
+            seen.add(full_url)
+            date_iso = f"{yr}-{mo}-01"
+            yield RawStory(
+                id=_make_id(full_url, title),
+                bydel=bydel_default,
+                title=title,
+                url=full_url,
+                source=source.get("name", "BI Business Review"),
+                source_id=source["id"],
+                published_iso=f"{date_iso}T12:00:00+00:00",
+                date_iso=date_iso,
+                summary="",
+                category="naering",
+                fetched_at_iso=fetched_at,
+            )
+            count += 1
+            if count >= limit:
+                return
+
+
+# --- Deichman aktuelt ------------------------------------------------------
+_DEICHMAN_LINK_RE = re.compile(
+    r'<a[^>]+href="(/aktuelt/[^"#?]+)"[^>]*>([\s\S]{1,500}?)</a>'
+)
+
+
+def fetch_from_html_deichman(source: dict) -> Iterable[RawStory]:
+    """Deichman /aktuelt - nyheter fra bibliotekene.
+
+    SPA-likt grensesnitt, men listesiden server-renderer artikkel-lenker med
+    tittel i klartekst. Dato finnes ikke i URL; vi bruker fetched_at.
+    """
+    fetched_at = datetime.now(timezone.utc).isoformat()
+    bydel_default = source.get("bydel") or "Gamle Oslo"
+    limit = source.get("limit", 15)
+    seen = set()
+    count = 0
+    for list_url in source.get("urls", []):
+        html_txt = _fetch_html(list_url)
+        if not html_txt:
+            continue
+        for m in _DEICHMAN_LINK_RE.finditer(html_txt):
+            href = m.group(1)
+            block = m.group(2)
+            text = re.sub(r"<[^>]+>", " ", block)
+            text = re.sub(r"\s+", " ", text).strip()
+            if len(text) < 5 or "biblioteket" == text.lower():
+                continue
+            title = text[:200].strip()
+            # Avkod %XX i URL for renere link
+            try:
+                import urllib.parse as up
+                href_decoded = up.unquote(href)
+            except Exception:
+                href_decoded = href
+            full_url = "https://www.deichman.no" + href_decoded
+            if full_url in seen:
+                continue
+            seen.add(full_url)
+            yield RawStory(
+                id=_make_id(full_url, title),
+                bydel=bydel_default,
+                title=title,
+                url=full_url,
+                source=source.get("name", "Deichman"),
+                source_id=source["id"],
+                published_iso=fetched_at,
+                date_iso=fetched_at[:10],
+                summary="",
+                category="kultur",
+                fetched_at_iso=fetched_at,
+            )
+            count += 1
+            if count >= limit:
+                return
+
+
 SCRAPERS = {
     "iltry": fetch_from_html_iltry,
     "kondis": fetch_from_html_kondis,
     "politi-oslo": fetch_from_html_politi,
     "ruter-sx": fetch_from_html_ruter,
+    "oslomet": fetch_from_html_oslomet,
+    "bi": fetch_from_html_bi,
+    "deichman": fetch_from_html_deichman,
 }
 
 
