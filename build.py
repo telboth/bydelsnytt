@@ -1309,6 +1309,92 @@ h1 { margin: 0 0 4px 0; font-size: 26px; font-weight: 600; }
   padding-bottom: 4px; display: flex; justify-content: space-between; align-items: baseline; gap: 10px;
 }
 .bydel h2 small { font-weight: 400; font-size: 12px; color: #777; }
+.bydel h2 .h2-left { display: flex; align-items: baseline; gap: 8px; flex: 1; min-width: 0; }
+.bydel h2 .h2-right { display: flex; align-items: center; gap: 8px; flex: none; }
+.pin-bydel {
+  background: transparent; border: none; padding: 2px 6px; cursor: pointer;
+  font-size: 16px; line-height: 1; color: #bbb; border-radius: 4px;
+  transition: color 0.12s, background 0.12s;
+}
+.pin-bydel:hover { color: #d4a017; background: #fff8e0; }
+.pin-bydel.active { color: #d4a017; }
+.pin-bydel.active:hover { color: #b8860b; }
+.bydel.pinned {
+  border-left: 4px solid #d4a017; padding-left: 14px;
+  background: linear-gradient(90deg, #fff8e0 0%, transparent 60%);
+}
+.pinned-badge {
+  display: inline-block; background: #d4a017; color: #fff;
+  font-size: 10px; padding: 2px 8px; border-radius: 999px;
+  text-transform: uppercase; letter-spacing: 0.4px; font-weight: 700;
+  vertical-align: middle; margin-left: 4px;
+}
+.topp-saker {
+  margin: 0 0 26px 0;
+  padding: 16px 18px 14px;
+  background: linear-gradient(180deg, #fffbee 0%, #fff 100%);
+  border: 1px solid #e8d68a;
+  border-radius: 12px;
+}
+.topp-saker h2 {
+  margin: 0 0 12px 0; font-size: 15px; font-weight: 700;
+  color: #7a5e00; text-transform: uppercase; letter-spacing: 0.6px;
+  border: none; padding: 0;
+  display: flex; align-items: baseline; gap: 10px;
+}
+.topp-saker h2 small {
+  font-size: 11px; font-weight: 400; color: #a08947;
+  text-transform: none; letter-spacing: 0;
+}
+.topp-grid {
+  display: grid; gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+.topp-card {
+  display: flex; gap: 10px; padding: 10px; text-decoration: none;
+  background: #fff; border: 1px solid #efeadf; border-radius: 8px;
+  transition: border-color 0.12s, transform 0.12s, box-shadow 0.12s;
+  color: inherit; min-width: 0;
+}
+.topp-card:hover {
+  border-color: #d4a017; transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(212,160,23,0.15);
+}
+.topp-thumb {
+  flex: none; width: 72px; height: 54px; border-radius: 5px;
+  overflow: hidden; background: #f0f0ee;
+}
+.topp-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.topp-body { display: flex; flex-direction: column; gap: 3px; min-width: 0; flex: 1; }
+.topp-bydel {
+  font-size: 10px; color: #7a5e00; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.4px;
+}
+.topp-title {
+  font-size: 13px; font-weight: 600; line-height: 1.35; color: #1a1a1a;
+  display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.topp-meta {
+  display: flex; gap: 6px; align-items: center; flex-wrap: wrap;
+  font-size: 11px; color: #888; margin-top: 2px;
+}
+.topp-src { font-style: italic; }
+.topp-date { font-variant-numeric: tabular-nums; color: #aaa; }
+.topp-pill {
+  font-size: 9px; padding: 1px 6px; border-radius: 999px;
+  background: #eef2f7; color: #33485f;
+  text-transform: uppercase; letter-spacing: 0.3px; font-weight: 600;
+}
+.topp-pill.skole { background: #e7f2ff; color: #1a4f8b; }
+.topp-pill.politikk { background: #f3e8ff; color: #6b21a8; }
+.topp-pill.idrett { background: #e8f6ec; color: #1f6d3a; }
+.topp-pill.kultur { background: #fff3d9; color: #8a5a00; }
+.topp-pill.trafikk { background: #ffe8e4; color: #9c2a12; }
+.topp-pill.naering { background: #e4f3ef; color: #1f6b5c; }
+.topp-pill.sikkerhet { background: #fce8e8; color: #9a1a1a; }
+.topp-pill.helse { background: #ffeaf1; color: #9c1f5a; }
+.topp-pill.arrangement { background: #fff0e4; color: #8a3a00; }
 .story {
   background: #fff; border: 1px solid #e5e5e4; border-radius: 10px;
   padding: 14px 16px; margin-bottom: 10px;
@@ -1420,6 +1506,7 @@ SCRIPT = r"""
   var btnNone = document.getElementById('cat-chip-none');
   var selPer   = document.getElementById('period-filter');
   var search   = document.getElementById('story-search');
+  var searchCount = document.getElementById('search-count');
   var sections = Array.from(document.querySelectorAll('.bydel'));
   var emptyNote = document.getElementById('no-results');
   var TODAY = '__TODAY__';
@@ -1472,6 +1559,7 @@ SCRIPT = r"""
     var pv = selPer.value;
     var q  = (search.value || '').toLowerCase().trim();
     var anyVisible = false;
+    var totalShown = 0;
 
     sections.forEach(function(s) {
       var bydelName = s.dataset.name;
@@ -1485,6 +1573,7 @@ SCRIPT = r"""
         if (show) shownCount++;
       });
 
+      totalShown += shownCount;
       if (shownCount === 0) { s.style.display = 'none'; return; }
       s.style.display = '';
       anyVisible = true;
@@ -1496,6 +1585,13 @@ SCRIPT = r"""
     });
 
     if (emptyNote) emptyNote.style.display = anyVisible ? 'none' : '';
+    if (searchCount) {
+      if (q) {
+        searchCount.textContent = totalShown + ' treff på \u00ab' + q + '\u00bb';
+      } else {
+        searchCount.textContent = '';
+      }
+    }
   }
 
   [selBydel, selPer].forEach(function(el) { if (el) el.addEventListener('change', apply); });
@@ -1513,6 +1609,52 @@ SCRIPT = r"""
   search.addEventListener('input', apply);
   syncChipUi();
   apply();
+
+  // --- "Min bydel": stjerne-toggle lagrer valget i localStorage og flytter
+  // den valgte bydelen til toppen av main ved side-lasting.
+  try {
+    var MB_KEY = 'bydelsnytt:myBydel';
+    var myBydel = null;
+    try { myBydel = window.localStorage.getItem(MB_KEY); } catch (e) {}
+
+    var main = document.querySelector('main');
+    function applyPin(name) {
+      sections.forEach(function(s) {
+        var btn = s.querySelector('.pin-bydel');
+        if (s.dataset.name === name) {
+          s.classList.add('pinned');
+          if (btn) {
+            btn.classList.add('active');
+            btn.title = 'Fjern som min bydel';
+          }
+          if (main && s.parentNode === main && main.firstElementChild !== s) {
+            main.insertBefore(s, main.firstElementChild);
+          }
+        } else {
+          s.classList.remove('pinned');
+          if (btn) {
+            btn.classList.remove('active');
+            btn.title = 'Sett som min bydel';
+          }
+        }
+      });
+    }
+    if (myBydel) applyPin(myBydel);
+
+    document.querySelectorAll('.pin-bydel').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var name = btn.dataset.bydel;
+        if (myBydel === name) {
+          myBydel = null;
+          try { window.localStorage.removeItem(MB_KEY); } catch (e) {}
+        } else {
+          myBydel = name;
+          try { window.localStorage.setItem(MB_KEY, name); } catch (e) {}
+        }
+        applyPin(myBydel);
+      });
+    });
+  } catch (e) {}
 
   // "NYTT siden sist"-badge: merker saker som er dukket opp i cachen etter
   // brukerens forrige besøk. Lagrer en timestamp per nettleser i localStorage
@@ -1726,9 +1868,163 @@ def render_bydel(b):
     stories_html = "\n".join(render_story(s, b['name']) for s in b['stories'])
     return f"""
   <section class="bydel" data-name="{esc(b['name'])}">
-    <h2>{esc(b['name'])} <small>{count} sak{'er' if count != 1 else ''}</small></h2>
+    <h2>
+      <span class="h2-left">{esc(b['name'])} <small>{count} sak{'er' if count != 1 else ''}</small></span>
+      <span class="h2-right">
+        <button class="pin-bydel" type="button" data-bydel="{esc(b['name'])}" title="Sett som min bydel" aria-label="Sett som min bydel">&#9733;</button>
+      </span>
+    </h2>
     {stories_html}
   </section>"""
+
+
+# --- Topp-saker --------------------------------------------------------------
+# Scorer hver sak ut fra ferskhet, kilde-kvalitet, kategori-relevans og
+# bydels-sjeldenhet (saker i underdekte bydeler scorer hoeyere). Plukker
+# topp-5 med diversitetskrav: hver bydel kan kun vaere representert en gang,
+# hver kategori maksimalt to ganger.
+
+_TOPP_CAT_WEIGHT = {
+    "sikkerhet": 1.3, "trafikk": 1.15, "politikk": 1.05, "helse": 1.0,
+    "skole": 0.95, "naering": 0.85, "kultur": 0.75, "idrett": 0.75,
+    "arrangement": 0.55, "annet": 0.45,
+}
+_TOPP_SOURCE_WEIGHT = {
+    "oslo-kommune-aktuelt": 1.15, "groruddalen": 1.05, "nrk-oslo-viken": 1.15,
+    "politi-oslo": 1.2, "vartoslo": 1.05, "dagsavisen": 1.0, "vegvesen": 1.05,
+    "ruter-avvik": 1.0, "ruter-sx": 1.0, "e24": 0.95, "tu": 0.95,
+    "oslomet": 0.9, "uio": 0.95, "bi-business-review": 0.9, "kampanje": 0.9,
+    "deichman-aktuelt": 0.9, "kondis": 0.85, "nho": 0.85,
+    "skeid": 0.7, "vif-fotball": 0.75, "boeler-if": 0.7, "iltry": 0.7,
+    "reddit-oslo": 0.6, "events": 0.55,
+}
+
+def _topp_score(story, bydel_name, today_iso, bydel_activity):
+    iso = (story.get("date_iso") or "")[:10]
+    if not iso or iso > today_iso:
+        return 0.0
+    # Ferskhet: 1.0 i dag, 0.85 i gaar, 0.6 to dager siden, 0.35 siste uke, 0.1 ellers
+    try:
+        from datetime import date as _date
+        d_story = _date.fromisoformat(iso)
+        d_today = _date.fromisoformat(today_iso)
+        days_ago = (d_today - d_story).days
+    except ValueError:
+        return 0.0
+    if days_ago < 0:
+        return 0.0
+    if days_ago == 0:
+        freshness = 1.0
+    elif days_ago == 1:
+        freshness = 0.85
+    elif days_ago <= 3:
+        freshness = 0.55
+    elif days_ago <= 7:
+        freshness = 0.3
+    else:
+        return 0.0  # eldre enn en uke teller ikke som topp
+
+    cat = story.get("category") or "annet"
+    cat_w = _TOPP_CAT_WEIGHT.get(cat, 0.45)
+
+    src_id = story.get("source_id") or ""
+    src_w = _TOPP_SOURCE_WEIGHT.get(src_id, 0.75)
+
+    # Bydels-sjeldenhetsbonus: saker i underdekte bydeler scorer hoeyere
+    n = bydel_activity.get(bydel_name, 1)
+    scarcity = 1.0 + max(0.0, (12 - n) / 24.0)  # opp til ~1.5x for sjeldne
+
+    # Tittel-kvalitet: lengre, mer spesifikk tittel gir liten bonus
+    title_len = len(story.get("title") or "")
+    title_bonus = min(title_len / 80.0, 1.0) * 0.15 + 0.85
+
+    return freshness * cat_w * src_w * scarcity * title_bonus
+
+
+def _pick_top_stories(bydeler_list, today_iso, n=5):
+    # Bygg bydel-aktivitet (saker siste 7 dager per bydel) for scarcity-bonus
+    from datetime import date as _date, timedelta as _td
+    try:
+        cutoff = (_date.fromisoformat(today_iso) - _td(days=7)).isoformat()
+    except ValueError:
+        cutoff = "0000-00-00"
+    bydel_activity = {}
+    for b in bydeler_list:
+        count = sum(
+            1 for s in b["stories"]
+            if (s.get("date_iso") or "")[:10] >= cutoff
+        )
+        bydel_activity[b["name"]] = count
+
+    candidates = []
+    for b in bydeler_list:
+        bname = b["name"]
+        for s in b["stories"]:
+            score = _topp_score(s, bname, today_iso, bydel_activity)
+            if score > 0:
+                candidates.append((score, bname, s))
+
+    candidates.sort(key=lambda t: -t[0])
+
+    picked = []
+    used_bydeler = set()
+    used_cats = {}
+    for score, bname, s in candidates:
+        if bname in used_bydeler:
+            continue
+        cat = s.get("category") or "annet"
+        if used_cats.get(cat, 0) >= 2:
+            continue
+        picked.append((score, bname, s))
+        used_bydeler.add(bname)
+        used_cats[cat] = used_cats.get(cat, 0) + 1
+        if len(picked) >= n:
+            break
+    return picked
+
+
+def _render_topp_saker(bydeler_list, today_iso):
+    top = _pick_top_stories(bydeler_list, today_iso, n=5)
+    if not top:
+        return ""
+    cards = []
+    for score, bname, s in top:
+        title = esc(s.get("title", "") or "(uten tittel)")
+        url = esc(s.get("url", "") or "#")
+        source = esc(s.get("source", "") or "")
+        cat = s.get("category") or "annet"
+        cat_label = esc(CAT_LABEL.get(cat, cat))
+        date_iso = esc((s.get("date_iso") or "")[:10])
+        img_url = s.get("image_url") or ""
+        img_html = ""
+        if img_url:
+            img_html = (
+                f'<span class="topp-thumb" aria-hidden="true">'
+                f'<img src="{esc(img_url)}" loading="lazy" alt="" '
+                f'onerror="this.parentElement.style.display=&quot;none&quot;"></span>'
+            )
+        cards.append(
+            f'<a class="topp-card" href="{url}" target="_blank" rel="noopener">'
+            f'{img_html}'
+            f'<span class="topp-body">'
+            f'<span class="topp-bydel">{esc(bname)}</span>'
+            f'<span class="topp-title">{title}</span>'
+            f'<span class="topp-meta">'
+            f'<span class="topp-src">{source}</span>'
+            f'<span class="topp-pill {esc(cat)}">{cat_label}</span>'
+            f'<span class="topp-date">{date_iso}</span>'
+            f'</span>'
+            f'</span>'
+            f'</a>'
+        )
+    return (
+        '<section class="topp-saker" aria-label="Topp saker i dag">'
+        '<h2>Topp saker i dag <small>utvalgt av algoritmen</small></h2>'
+        '<div class="topp-grid">'
+        + "".join(cards)
+        + '</div>'
+        '</section>'
+    )
 
 
 def _build_map_data(bydeler_list):
@@ -1820,6 +2116,7 @@ def render_page(include_cowork_meta):
 
     script_js = SCRIPT.replace("__TODAY__", TODAY_ISO)
     health_banner_html = _render_health_banner()
+    topp_saker_html = _render_topp_saker(BYDELER, TODAY_ISO)
 
 
     return f"""<!DOCTYPE html>
@@ -1859,10 +2156,11 @@ def render_page(include_cowork_meta):
     </select>
   </div>
   <div style="grid-column: 1 / -1;">
-    <label for="story-search">Søk</label>
-    <input id="story-search" type="search" placeholder="Filtrer i innholdet&hellip;">
+    <label for="story-search">Søk <span id="search-count" style="font-weight:400;text-transform:none;color:#1862a8;margin-left:6px;"></span></label>
+    <input id="story-search" type="search" placeholder="Filtrer i innholdet (f.eks. &laquo;trikk&raquo;, &laquo;bibliotek&raquo;, &laquo;17. mai&raquo;)&hellip;">
   </div>
 </div>
+{topp_saker_html}
 <label class="map-toggle"><input type="checkbox" id="map-toggle" checked> Vis kart</label>
 <div id="map"></div>
 <main>{body}
@@ -1930,6 +2228,8 @@ try:
         print("[build] feed.xml: pipeline.cache ikke tilgjengelig, hopper over")
 except Exception as e:
     print(f"[build] feed.xml feilet: {e}")
+
+# --- Ukentlig digest ------
 
 # --- Ukentlig digest -------------------------------------------------------
 try:
