@@ -1226,6 +1226,7 @@ def _ingest_cache(bydeler_list):
             "first_seen_iso": s.get("first_seen_iso"),
             "extra_sources": s.get("extra_sources") or [],
             "image_url": s.get("image_url") or "",
+            "event_date": s.get("event_date") or "",
         }
         by_name[bydel]["stories"].append(story)
         known[bydel].add(url_key)
@@ -1386,6 +1387,62 @@ h1 { margin: 0 0 4px 0; font-size: 26px; font-weight: 600; }
   background: linear-gradient(180deg, #fffbee 0%, #fff 100%);
   border: 1px solid #e8d68a;
   border-radius: 12px;
+}
+.upcoming {
+  margin: 0 0 26px 0;
+  padding: 0;
+  background: linear-gradient(180deg, #f1f8ff 0%, #fff 100%);
+  border: 1px solid #b8d9f4;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.upcoming > summary {
+  padding: 14px 18px;
+  cursor: pointer;
+  list-style: none;
+  font-size: 15px; font-weight: 700;
+  color: #1862a8;
+  text-transform: uppercase; letter-spacing: 0.6px;
+  display: flex; align-items: baseline; gap: 10px;
+}
+.upcoming > summary::-webkit-details-marker { display: none; }
+.upcoming > summary::before {
+  content: "▶"; font-size: 10px; color: #1862a8;
+  transform: translateY(-1px); transition: transform 0.15s;
+}
+.upcoming[open] > summary::before { transform: rotate(90deg) translateX(-1px); }
+.upcoming-count {
+  font-size: 11px; font-weight: 400; color: #4e80a8;
+  text-transform: none; letter-spacing: 0;
+}
+.upcoming-body { padding: 4px 18px 16px 18px; }
+.upcoming-group { margin-top: 10px; }
+.upcoming-month {
+  font-size: 12px; font-weight: 700; color: #365e82;
+  text-transform: uppercase; letter-spacing: 0.4px;
+  margin: 8px 0 6px 0; padding: 0; border: none;
+}
+.upcoming-list { list-style: none; margin: 0; padding: 0; }
+.upcoming-item {
+  display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap;
+  padding: 6px 0; border-top: 1px solid #e8f0f8;
+}
+.upcoming-item:first-child { border-top: none; }
+.upcoming-date {
+  flex: 0 0 auto; min-width: 62px;
+  font-size: 13px; font-weight: 700; color: #1862a8;
+  font-variant-numeric: tabular-nums;
+}
+.upcoming-title { flex: 1 1 auto; color: #222; text-decoration: none; font-size: 14px; }
+.upcoming-title:hover { text-decoration: underline; }
+.upcoming-meta {
+  flex: 0 0 auto; display: flex; align-items: center; gap: 8px;
+  font-size: 12px; color: #666;
+}
+.upcoming-bydel { color: #666; }
+@media (max-width: 560px) {
+  .upcoming-item { padding: 8px 0; }
+  .upcoming-meta { flex-basis: 100%; padding-left: 72px; }
 }
 .topp-saker h2 {
   margin: 0 0 12px 0; font-size: 15px; font-weight: 700;
@@ -1662,17 +1719,61 @@ SCRIPT = r"""
     }
   }
 
-  [selBydel, selPer].forEach(function(el) { if (el) el.addEventListener('change', apply); });
+  // --- Brukervalg huskes i localStorage -------------------------------
+  var PREFS_KEY = 'bydelsnytt:filterState';
+  function loadPrefs() {
+    try {
+      var raw = window.localStorage.getItem(PREFS_KEY);
+      if (!raw) return null;
+      return JSON.parse(raw);
+    } catch (e) { return null; }
+  }
+  function savePrefs() {
+    try {
+      var state = {
+        bydel: selBydel ? selBydel.value : null,
+        period: selPer ? selPer.value : null,
+        cats: catInputs.filter(function(cb) { return cb.checked; }).map(function(cb) { return cb.value; }),
+        v: 1
+      };
+      window.localStorage.setItem(PREFS_KEY, JSON.stringify(state));
+    } catch (e) { /* ignorerer */ }
+  }
+  (function restorePrefs() {
+    var prefs = loadPrefs();
+    if (!prefs) return;
+    if (prefs.bydel && selBydel) {
+      var found = false;
+      for (var i = 0; i < selBydel.options.length; i++) {
+        if (selBydel.options[i].value === prefs.bydel) { found = true; break; }
+      }
+      if (found) selBydel.value = prefs.bydel;
+    }
+    if (prefs.period && selPer) {
+      for (var j = 0; j < selPer.options.length; j++) {
+        if (selPer.options[j].value === prefs.period) { selPer.value = prefs.period; break; }
+      }
+    }
+    if (prefs.cats && Array.isArray(prefs.cats)) {
+      var set = {};
+      prefs.cats.forEach(function(c) { set[c] = true; });
+      catInputs.forEach(function(cb) { cb.checked = !!set[cb.value]; });
+    }
+  })();
+
+  [selBydel, selPer].forEach(function(el) {
+    if (el) el.addEventListener('change', function() { apply(); savePrefs(); });
+  });
   catInputs.forEach(function(cb) {
-    cb.addEventListener('change', function() { syncChipUi(); apply(); });
+    cb.addEventListener('change', function() { syncChipUi(); apply(); savePrefs(); });
   });
   if (btnAll) btnAll.addEventListener('click', function() {
     catInputs.forEach(function(cb) { cb.checked = true; });
-    syncChipUi(); apply();
+    syncChipUi(); apply(); savePrefs();
   });
   if (btnNone) btnNone.addEventListener('click', function() {
     catInputs.forEach(function(cb) { cb.checked = false; });
-    syncChipUi(); apply();
+    syncChipUi(); apply(); savePrefs();
   });
   search.addEventListener('input', apply);
   syncChipUi();
@@ -1938,8 +2039,9 @@ def render_story(story, bydel_name=""):
             f'if(a)a.classList.remove(&quot;has-thumb&quot;);'
             f'this.parentElement.remove()"></a>'
         )
+    event_date = story.get("event_date") or ""
     return f"""
-    <article id="{sid}" class="story{' has-thumb' if img_url else ''}" data-category="{esc(cat)}" data-iso="{esc(date_iso)}" data-first-seen="{esc(first_seen)}">
+    <article id="{sid}" class="story{' has-thumb' if img_url else ''}" data-category="{esc(cat)}" data-iso="{esc(date_iso)}" data-first-seen="{esc(first_seen)}" data-event-date="{esc(event_date)}">
       {thumb_html}
       <div class="story-body">
         <h3>{esc(story['title'])}{badge}<span class="new-badge" hidden>NYTT</span></h3>
@@ -2122,6 +2224,80 @@ def _render_topp_saker(bydeler_list, today_iso):
     )
 
 
+def _render_upcoming_events(bydeler_list, today_iso):
+    """Rendre en 'Hva skjer fremover'-seksjon med arrangementer som har
+    event_date i fremtiden. Sorteres etter event_date stigende. Saker
+    med passert event_date tas ikke med. Rendres som <details> slik at
+    den er sammenklappet som default."""
+    upcoming = []
+    for b in bydeler_list:
+        bname = b["name"]
+        for s in b["stories"]:
+            ev = s.get("event_date") or ""
+            if not ev or ev <= today_iso:
+                continue
+            upcoming.append((ev, bname, s))
+    if not upcoming:
+        return ""
+    upcoming.sort(key=lambda t: (t[0], t[1]))
+
+    from datetime import date as _date
+    month_no = {
+        1: "Januar", 2: "Februar", 3: "Mars", 4: "April",
+        5: "Mai", 6: "Juni", 7: "Juli", 8: "August",
+        9: "September", 10: "Oktober", 11: "November", 12: "Desember"
+    }
+    groups: dict[str, list] = {}
+    group_order: list[str] = []
+    for ev, bname, s in upcoming:
+        try:
+            d = _date.fromisoformat(ev)
+            key = f"{month_no[d.month]} {d.year}"
+        except ValueError:
+            key = ev[:7]
+        if key not in groups:
+            groups[key] = []
+            group_order.append(key)
+        groups[key].append((ev, bname, s))
+
+    parts = []
+    for key in group_order:
+        items = []
+        for ev, bname, s in groups[key]:
+            try:
+                d = _date.fromisoformat(ev)
+                day_label = f"{d.day}. {month_no[d.month].lower()[:3]}."
+            except ValueError:
+                day_label = ev[5:]
+            cat = s.get("category") or "annet"
+            cat_label = esc(CAT_LABEL.get(cat, cat))
+            title = esc(s.get("title", "") or "(uten tittel)")
+            url = esc(s.get("url", "") or "#")
+            items.append(
+                f'<li class="upcoming-item">'
+                f'<span class="upcoming-date">{esc(day_label)}</span>'
+                f'<a class="upcoming-title" href="{url}" target="_blank" rel="noopener">{title}</a>'
+                f'<span class="upcoming-meta">'
+                f'<span class="pill {esc(cat)}">{cat_label}</span>'
+                f'<span class="upcoming-bydel">{esc(bname)}</span>'
+                f'</span>'
+                f'</li>'
+            )
+        parts.append(
+            f'<div class="upcoming-group">'
+            f'<h3 class="upcoming-month">{esc(key)}</h3>'
+            f'<ul class="upcoming-list">{"".join(items)}</ul>'
+            f'</div>'
+        )
+
+    return (
+        '<details class="upcoming" id="upcoming-events">'
+        f'<summary>Hva skjer fremover <span class="upcoming-count">{len(upcoming)} arrangementer</span></summary>'
+        f'<div class="upcoming-body">{"".join(parts)}</div>'
+        '</details>'
+    )
+
+
 def _build_map_data(bydeler_list):
     data = []
     for b in bydeler_list:
@@ -2213,6 +2389,7 @@ def render_page(include_cowork_meta):
     script_js = SCRIPT.replace("__TODAY__", TODAY_ISO)
     health_banner_html = _render_health_banner()
     topp_saker_html = _render_topp_saker(BYDELER, TODAY_ISO)
+    upcoming_html = _render_upcoming_events(BYDELER, TODAY_ISO)
 
 
     return f"""<!DOCTYPE html>
@@ -2257,6 +2434,7 @@ def render_page(include_cowork_meta):
   </div>
 </div>
 {topp_saker_html}
+{upcoming_html}
 <label class="map-toggle"><input type="checkbox" id="map-toggle" checked> Vis kart</label>
 <div id="map"></div>
 <main>{body}

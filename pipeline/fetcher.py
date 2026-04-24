@@ -436,6 +436,20 @@ def fetch_from_html_ruter(source: dict) -> Iterable[RawStory]:
                 continue
             if len(summary) < 10:
                 continue
+            # Filtrer bort saker som ligger utenfor Oslo kommune.
+            # Ruter dekker hele Viken — vi vil kun ha Oslo-saker.
+            _NON_OSLO_PLACES = (
+                "drøbak", "frogn kommune", "ås ", "ås,", "ås.", "ås -",
+                "nesodden", "bærum", "asker", "lillestrøm", "lørenskog",
+                "skedsmo", "strømmen", "nittedal", "rælingen", "enebakk",
+                "ski ", "ski,", "ski.", "nordre follo", "vestby",
+                "sørum", "fet", "aurskog", "høland", "nannestad",
+                "gjerdrum", "ullensaker", "jessheim", "eidsvoll",
+                "nannestad", "hurdal",
+            )
+            _haystack = f"{summary} {description or ''}".lower()
+            if any(p in _haystack for p in _NON_OSLO_PLACES):
+                continue
             lines = []
             for ln in pt.iter(f"{{{_SIRI_NS['s']}}}LineRef"):
                 txt = (ln.text or "").strip()
@@ -941,23 +955,3 @@ def fetch_all(health_data: dict | None = None) -> list[RawStory]:
             count += 1
         print(f"[fetcher] rss {src['id']}: {count} saker mappet til bydel")
         if health_data is not None:
-            H.record(health_data, src["id"], src.get("name", src["id"]), count)
-    for src in getattr(S, "HTML_SOURCES", []):
-        print(f"[fetcher] html {src['id']} -> {len(src.get('urls', []))} sider")
-        count = 0
-        for story in fetch_from_html(src):
-            out.append(story)
-            count += 1
-        print(f"[fetcher] html {src['id']}: {count} saker scrapet")
-        if health_data is not None:
-            H.record(health_data, src["id"], src.get("name", src["id"]), count)
-    return out
-
-
-if __name__ == "__main__":
-    stories = fetch_all()
-    print(f"\nTotalt: {len(stories)} saker")
-    from collections import Counter
-    per_bydel = Counter(s.bydel for s in stories)
-    for b, n in sorted(per_bydel.items(), key=lambda x: -x[1]):
-        print(f"  {b}: {n}")

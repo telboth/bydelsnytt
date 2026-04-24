@@ -209,14 +209,6 @@ RSS_SOURCES = [
         "weight": 0.5,
         "resolver": "text_match_bydel_fallback",
     },
-    {
-        "id": "reddit-oslo",
-        "name": "r/oslo",
-        "url": "https://www.reddit.com/r/oslo/new.rss",
-        "bydel": "Gamle Oslo",
-        "weight": 0.3,
-        "resolver": "text_match_bydel_fallback",
-    },
 ]
 
 HTML_SOURCES = [

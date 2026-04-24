@@ -6,7 +6,7 @@ VENUES = [
     ("title_contains", "orientering: oslo 3-dagers", 59.979, 10.686),    # Frognerseteren
     ("title_contains", "orientering: km sprint", 59.925, 10.708),         # Frognerparken
     ("title_contains", "orientering: oslo cup 1", 59.976, 10.732),        # Sognsvann
-    ("title_contains", "orientering: oslo cup 3", 59.878, 10.867),        # Oestmarksetra
+    ("title_contains", "orientering: oslo cup 3", 59.878, 10.867),        # Østmarksetra
     ("title_contains", "orientering: lillomarka", 59.975, 10.818),        # Linderudkollen
     ("title_contains", "orientering: heming", 59.983, 10.667),            # Tryvann/Holmenkollen
     ("title_contains", "orientering: koll", 59.862, 10.852),              # Skullerud
@@ -69,7 +69,7 @@ VENUES = [
     ("url_contains", "romsas-bad", 59.9541, 10.8983),
     ("title_contains", "økern bad", 59.9362, 10.8093),
     ("url_contains", "okern-bad", 59.9362, 10.8093),
-    # Markastuer (nord i Nordmarka, oestover i Oestmarka)
+    # Markastuer (nord i Nordmarka, oestover i Østmarka)
     ("url_contains", "kobberhaug", 60.033, 10.728),
     ("url_contains", "ullevalseter", 60.005, 10.736),
     ("url_contains", "lilloseter", 60.015, 10.822),
@@ -78,7 +78,7 @@ VENUES = [
     ("title_contains", " kikut ", 60.067, 10.714),
     ("title_contains", "mariholtet", 59.973, 10.935),
     ("title_contains", "lilloseter", 60.015, 10.822),
-    ("title_contains", "sinober", 59.975, 10.937),
+    ("title_contains", "sinober", 59.998, 10.835),
     ("title_contains", "rustadsaga", 59.870, 10.872),
     ("title_contains", "sandbakken", 59.873, 10.884),
     ("title_contains", "kobberhaug", 60.033, 10.728),
