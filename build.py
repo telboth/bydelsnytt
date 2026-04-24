@@ -14,7 +14,7 @@ Kategorier:
   politikk, skole, idrett, kultur, trafikk, helse, næring, sikkerhet, arrangement, annet
 """
 from datetime import datetime, timezone, timedelta
-import json, html, os, sys, pathlib
+import json, html, os, sys, pathlib, urllib.parse
 
 # Make the pipeline package importable when build.py is run directly
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
@@ -1426,6 +1426,11 @@ h1 { margin: 0 0 4px 0; font-size: 26px; font-weight: 600; }
 .story p { margin: 0 0 8px 0; font-size: 14px; line-height: 1.55; }
 .story a.readmore { font-size: 13px; color: #1862a8; text-decoration: none; }
 .story a.readmore:hover { text-decoration: underline; }
+.story a.report {
+  font-size: 11px; color: #aaa; text-decoration: none; margin-left: 10px;
+  border-bottom: 1px dotted #ccc;
+}
+.story a.report:hover { color: #a04a4a; border-bottom-color: #a04a4a; }
 .pill {
   display: inline-block; font-size: 11px; font-weight: 600;
   padding: 2px 8px; border-radius: 999px;
@@ -1808,6 +1813,30 @@ def _story_id(story, bydel_name):
     return "s-" + h.hexdigest()[:10]
 
 
+REPORT_EMAIL = "thomas.elboth@xlent.no"
+
+
+def _report_mailto(story, bydel_name, sid):
+    """Bygger en mailto-URL med prefilled emne og body for feilrapport."""
+    title = story.get("title", "")
+    url = story.get("url", "") or ""
+    source = story.get("source", "") or ""
+    subject = f"Bydelsnytt-feil: {title[:80]}"
+    body = (
+        f"Sak-ID: {sid}\n"
+        f"Bydel: {bydel_name}\n"
+        f"Kilde: {source}\n"
+        f"Tittel: {title}\n"
+        f"URL: {url}\n\n"
+        f"Hva er feil?\n"
+        f"(f.eks. dødt bilde, feil bydel, feil kategori, bør skjules)\n"
+    )
+    q = urllib.parse.urlencode(
+        {"subject": subject, "body": body}, quote_via=urllib.parse.quote
+    )
+    return f"mailto:{REPORT_EMAIL}?{q}"
+
+
 def render_story(story, bydel_name=""):
     fresh = is_fresh(story.get("date_iso"))
     badge = ' <span class="news-badge">news</span>' if fresh else ""
@@ -1860,6 +1889,7 @@ def render_story(story, bydel_name=""):
         </div>
         <p>{esc(story['summary'])}</p>
         <a class="readmore" href="{esc(story['url'])}" target="_blank" rel="noopener">Les mer &rarr;</a>
+        <a class="report" href="{esc(_report_mailto(story, bydel_name, sid))}" title="Rapporter problem med denne saken">Rapporter</a>
         {extra_html}
       </div>
     </article>"""
@@ -2213,28 +2243,3 @@ with open(f"{out_dir}/bydelsnytt_publish.html", "w", encoding="utf-8") as f:
 
 print("artifact bytes:", os.path.getsize(f"{out_dir}/bydelsnytt_artifact.html"))
 print("publish  bytes:", os.path.getsize(f"{out_dir}/bydelsnytt_publish.html"))
-print("total stories:", sum(len(b['stories']) for b in BYDELER))
-print("fresh stories:", sum(1 for b in BYDELER for s in b["stories"] if is_fresh(s.get("date_iso"))))
-print("map points:", len(_build_map_data(BYDELER)))
-
-# --- RSS feed.xml ----------------------------------------------------------
-try:
-    from pipeline import feed as _feed
-    if _cache is not None:
-        _stories = _cache.load().get("stories", [])
-        feed_xml = _feed.build_feed(_stories)
-        with open(f"{out_dir}/feed.xml", "w", encoding="utf-8") as f:
-            f.write(feed_xml)
-        print("feed.xml bytes:", os.path.getsize(f"{out_dir}/feed.xml"))
-    else:
-        print("[build] feed.xml: pipeline.cache ikke tilgjengelig, hopper over")
-except Exception as e:
-    print(f"[build] feed.xml feilet: {e}")
-
-# --- Ukentlig digest -------------------------------------------------------
-try:
-    from pipeline import weekly as _weekly
-    wp = _weekly.write_weekly_digest()
-    print(f"weekly: {wp.name} ({os.path.getsize(wp)} bytes)")
-except Exception as e:
-    print(f"[build] weekly feilet: {e}")

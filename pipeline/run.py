@@ -24,6 +24,15 @@ def run() -> dict:
     deduped = dedup.deduplicate(pruned)
     image_stats = images.enrich_images(deduped)
     print(f"[run] image enrich: {image_stats}")
+
+    # Rydd foreldreloese entries i images.json (saker som er blitt prunet bort).
+    img_cache = images.load_cache()
+    story_urls = {(s.get("url") or "").strip() for s in deduped}
+    removed = images.prune_orphan_images(img_cache, story_urls)
+    if removed:
+        images.save_cache(img_cache)
+    image_stats["orphans_removed"] = removed
+
     cache.replace_and_save(deduped)
     health.save(health_data)
 

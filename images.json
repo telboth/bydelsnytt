@@ -199,6 +199,10 @@
     "fetched_at": "2026-04-23T17:55:04.281241+00:00",
     "image": "https://groruddalen.imgix.net/2026/04/IMG_1807.jpg?auto=format%2Ccompress&crop=faces&cs=srgb&fit=crop&h=819&ixlib=php-2.1.1&w=1560"
   },
+  "https://groruddalen.no/nyheter/leder-hva-var-arbeiderpartiet-sa-redde-for/": {
+    "fetched_at": "2026-04-23T19:16:52.291998+00:00",
+    "image": "https://groruddalen.imgix.net/2026/04/image0-15.jpeg?auto=format%2Ccompress&crop=faces&cs=srgb&fit=crop&h=819&ixlib=php-2.1.1&w=1560"
+  },
   "https://groruddalen.no/nyheter/lover-satsing-pa-tveita-senter/": {
     "fetched_at": "2026-04-23T17:55:06.856425+00:00",
     "image": "https://groruddalen.no/wp-content/uploads/2023/06/logo.jpeg"
@@ -238,6 +242,10 @@
   "https://groruddalen.no/nyheter/ssb-vi-har-ikke-darligere-rad/": {
     "fetched_at": "2026-04-23T17:55:06.348059+00:00",
     "image": "https://groruddalen.no/wp-content/uploads/2023/06/logo.jpeg"
+  },
+  "https://groruddalen.no/nyheter/tentativt-oslo-ap-ja-ja-til-forhandling-ikke-til-bydelsreformen/": {
+    "fetched_at": "2026-04-23T19:16:52.033316+00:00",
+    "image": "https://groruddalen.imgix.net/2026/04/Tamina-Rauf2.jpg?auto=format%2Ccompress&crop=faces&cs=srgb&fit=crop&h=819&ixlib=php-2.1.1&w=1560"
   },
   "https://groruddalen.no/sport/ga-kjempen-kamp-men-grei-tapte-til-slutt/": {
     "fetched_at": "2026-04-23T17:55:05.828291+00:00",
@@ -374,6 +382,10 @@
   "https://www.dagsavisen.no/nyheter/sikter-pa-en-plass-i-bystyret-i-oslo/10303162": {
     "fetched_at": "2026-04-23T17:57:29.896020+00:00",
     "image": "https://image.dagsavisen.no/10303166.jpg?imageId=10303166&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683"
+  },
+  "https://www.dagsavisen.no/nyheter/streiker-for-bedre-lonn-dette-tjener-hotellansatte-i-dag/10312740": {
+    "fetched_at": "2026-04-23T19:16:52.395573+00:00",
+    "image": "https://image.dagsavisen.no/10313323.jpg?imageId=10313323&x=0&y=28.33&cropw=100&croph=71.67&panox=0&panoy=28.33&panow=100&panoh=71.67&width=1200&height=683"
   },
   "https://www.dagsavisen.no/nyheter/tigerstadens-brol-slik-fikk-oslo-kallenavnet-sitt/10191531": {
     "fetched_at": "2026-04-23T17:57:29.337281+00:00",
@@ -774,6 +786,10 @@
   "https://www.vartoslo.no/boligbygg-bydel-gruenerlokka-hanne-hardy/narkoblokka-hanne-foler-seg-fanget-i-den-belastete-bygarden-jeg-liker-ikke-a-bo-her-men-har-ikke-noe-annet-valg/1134203": {
     "fetched_at": "2026-04-23T17:57:32.167983+00:00",
     "image": "https://image.vartoslo.no/1134214.jpg?imageId=1134214&x=0&y=3.06&cropw=100&croph=71.67&panox=0&panoy=3.06&panow=100&panoh=71.67&width=1200&height=683"
+  },
+  "https://www.vartoslo.no/deichman-norsk-bibliotektransport-terje-eid-hviding/konkurs-hos-transportoren-forer-til-flere-strandede-boker-hos-deichman/1158523": {
+    "fetched_at": "2026-04-23T19:16:52.504494+00:00",
+    "image": "https://image.vartoslo.no/1139616.jpg?imageId=1139616&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683"
   },
   "https://www.vegvesen.no/om-oss/presse/aktuelt/2026/03/varrengjoring-pa-hovedveiene-i-oslo-starter-7.-april": {
     "fetched_at": "2026-04-23T17:57:05.662088+00:00",
