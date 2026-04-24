@@ -52,6 +52,23 @@ VENUES = [
     # UiO / OsloMet (fiks: unngaa fallback til Nordre Aker-senter = Nydalen)
     ("url_contains", "uio.no", 59.9395, 10.7186),  # Blindern
     ("url_contains", "oslomet.no", 59.9178, 10.7356),  # Pilestredet
+    # Svoemmehaller (Oslo kommunes bad)
+    ("title_contains", "tøyenbadet", 59.9174, 10.7704),
+    ("url_contains", "toyenbadet", 59.9174, 10.7704),
+    ("title_contains", "frognerbadet", 59.9269, 10.7040),
+    ("url_contains", "frognerbadet", 59.9269, 10.7040),
+    ("title_contains", "holmlia bad", 59.8540, 10.8147),
+    ("url_contains", "holmlia-bad", 59.8540, 10.8147),
+    ("title_contains", "bøler bad", 59.8802, 10.8230),
+    ("url_contains", "boler-bad", 59.8802, 10.8230),
+    ("title_contains", "manglerud bad", 59.8879, 10.8175),
+    ("url_contains", "manglerud-bad", 59.8879, 10.8175),
+    ("title_contains", "furuset bad", 59.9421, 10.8611),
+    ("url_contains", "furuset-bad", 59.9421, 10.8611),
+    ("title_contains", "romsås bad", 59.9541, 10.8983),
+    ("url_contains", "romsas-bad", 59.9541, 10.8983),
+    ("title_contains", "økern bad", 59.9362, 10.8093),
+    ("url_contains", "okern-bad", 59.9362, 10.8093),
     # Markastuer (nord i Nordmarka, oestover i Oestmarka)
     ("url_contains", "kobberhaug", 60.033, 10.728),
     ("url_contains", "ullevalseter", 60.005, 10.736),

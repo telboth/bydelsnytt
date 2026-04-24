@@ -752,6 +752,160 @@ def fetch_from_html_vartoslo(source: dict):
                 return
 
 
+
+# --- Bymiljoetaten kunngjoringer (Algolia-API) -----------------------------
+_BYM_ALGOLIA_URL = (
+    "https://NJ4QX1MFJ2-dsn.algolia.net/1/indexes/prod_oslo_kommune_no_numerical_desc/query"
+)
+_BYM_ALGOLIA_KEY = "4ce897d2ad7bca6a9fbcac2888b35801"
+_BYM_ALGOLIA_APP = "NJ4QX1MFJ2"
+
+
+def fetch_from_html_bym_kunngjoringer(source: dict):
+    """BYM kunngjoeringer via oslo.kommune.no sitt Algolia-soekeindeks.
+
+    Siden er JS-rendret, men Algolia-API er offentlig. Vi spoer etter
+    hoeringer, utlysninger og kunngjoeringer knyttet til Bymiljoetaten,
+    og bruker text_match mot et par bydelsstikkord for aa plassere saken.
+    """
+    import json as _json
+    fetched_at = datetime.now(timezone.utc).isoformat()
+    bydel_default = source.get("bydel") or "Frogner"
+    limit = source.get("limit", 20)
+
+    payload = _json.dumps({
+        "params": (
+            "query=bymiljoetaten&hitsPerPage=30"
+            "&filters=meta.type:entry_article_announcement"
+        )
+    }).encode()
+    req = urllib.request.Request(
+        _BYM_ALGOLIA_URL,
+        data=payload,
+        headers={
+            "User-Agent": UA,
+            "X-Algolia-Api-Key": _BYM_ALGOLIA_KEY,
+            "X-Algolia-Application-Id": _BYM_ALGOLIA_APP,
+            "Content-Type": "application/json",
+        },
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=15, context=SSL_CTX) as r:
+            data = _json.loads(r.read().decode("utf-8"))
+    except Exception as e:
+        print(f"  [fetcher] WARN: BYM Algolia feilet: {e}")
+        return
+
+    count = 0
+    for hit in data.get("hits", []):
+        meta = hit.get("meta") or {}
+        url = (meta.get("url") or "").strip()
+        title = (hit.get("name") or "").strip()
+        if not url or not title:
+            continue
+
+        # Strukturert summary fra editorial_content
+        summary = ""
+        for ec in hit.get("editorial_content") or []:
+            if ec.get("type") == "lead" and ec.get("content"):
+                summary = ec["content"].strip()[:400]
+                break
+
+        published = (meta.get("published_at") or "").strip()
+        if not published:
+            published = fetched_at
+        date_iso = (published or fetched_at)[:10]
+
+        # Bydel-heuristikk: bruk stroek-tabellen fra sources for full daekning
+        haystack = (title + " " + summary).lower()
+        bydel = None
+        for stroek, b in S.STROEK_TIL_BYDEL.items():
+            if stroek in haystack:
+                bydel = b
+                break
+        # Spesialtilfelle: akerselva -> Gruenerloekka
+        if bydel is None and "akerselva" in haystack:
+            bydel = "Gr\u00fcnerl\u00f8kka"
+        if bydel is None:
+            # Direkte bydelsnavn i haystack?
+            for b in S.BYDELER:
+                if b.lower() in haystack:
+                    bydel = b
+                    break
+        if bydel is None:
+            bydel = bydel_default
+
+        yield RawStory(
+            id=_make_id(url, title),
+            bydel=bydel,
+            title=title,
+            url=url,
+            source=source.get("name", "Bymiljoetaten"),
+            source_id=source["id"],
+            published_iso=published,
+            date_iso=date_iso,
+            summary=summary,
+            category="politikk",
+            fetched_at_iso=fetched_at,
+        )
+        count += 1
+        if count >= limit:
+            return
+
+
+# --- Skiforeningen ---------------------------------------------------------
+_SKIFORENINGEN_ARTICLE_RE = re.compile(
+    r'href="(/nyheter/[a-z0-9-]+/)"[^>]*>\s*([^<]{5,120})</a>',
+    re.IGNORECASE,
+)
+
+
+def fetch_from_html_skiforeningen(source: dict):
+    """Skiforeningen /nyheter — skraper artikkel-lenker fra oversiktssiden.
+
+    Siden har ingen RSS. Artikkel-lenker foelger moensteret /nyheter/<slug>/.
+    """
+    fetched_at = datetime.now(timezone.utc).isoformat()
+    bydel_default = source.get("bydel") or "Vestre Aker"  # Holmenkollen
+    limit = source.get("limit", 20)
+    seen: set[str] = set()
+    count = 0
+    for list_url in source.get("urls", []):
+        html_txt = _fetch_html(list_url)
+        if not html_txt:
+            continue
+        # Finn alle /nyheter/<slug>/-lenker (ekskluder selve oversiktssiden)
+        for m in re.finditer(r'href="(/nyheter/[a-z0-9-]+/?)"', html_txt):
+            path = m.group(1)
+            if path in seen or path.rstrip("/") == "/nyheter":
+                continue
+            seen.add(path)
+
+            # Tittel: slug -> Title Case
+            slug = path.strip("/").split("/")[-1]
+            title = slug.replace("-", " ").strip().capitalize()
+            if len(title) < 5:
+                continue
+
+            full_url = "https://www.skiforeningen.no" + path
+            yield RawStory(
+                id=_make_id(full_url, title),
+                bydel=bydel_default,
+                title=title,
+                url=full_url,
+                source=source.get("name", "Skiforeningen"),
+                source_id=source["id"],
+                published_iso=fetched_at,
+                date_iso=fetched_at[:10],
+                summary="",
+                category="idrett",
+                fetched_at_iso=fetched_at,
+            )
+            count += 1
+            if count >= limit:
+                return
+
+
 SCRAPERS = {
     "iltry": fetch_from_html_iltry,
     "kondis": fetch_from_html_kondis,
@@ -761,6 +915,8 @@ SCRAPERS = {
     "bi": fetch_from_html_bi,
     "deichman": fetch_from_html_deichman,
     "vartoslo": fetch_from_html_vartoslo,
+    "bym-kunngjoringer": fetch_from_html_bym_kunngjoringer,
+    "skiforeningen": fetch_from_html_skiforeningen,
 }
 
 

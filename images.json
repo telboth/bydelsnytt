@@ -103,6 +103,10 @@
     "fetched_at": "2026-04-24T07:56:18.049978+00:00",
     "image": "https://groruddalen.imgix.net/2026/04/IMG_0386.jpg?auto=format%2Ccompress&crop=faces&cs=srgb&fit=crop&h=819&ixlib=php-2.1.1&w=1560"
   },
+  "https://groruddalen.no/bildeserier/stovner-videregaende-feiret-mangfoldet-vi-laerer-noe-nytt-hele-tiden/": {
+    "fetched_at": "2026-04-24T11:17:06.849612+00:00",
+    "image": "https://groruddalen.imgix.net/2026/04/stovner-kulturdag-18.jpeg?auto=format%2Ccompress&crop=faces&cs=srgb&fit=crop&h=819&ixlib=php-2.1.1&w=1560"
+  },
   "https://groruddalen.no/groruddalsdebatt/bydelsreform-ti-grunner-til-at-sv-sier-nei/": {
     "fetched_at": "2026-04-23T17:57:06.619700+00:00",
     "image": "https://groruddalen.imgix.net/2026/04/IMG_7877.jpeg?auto=format%2Ccompress&crop=faces&cs=srgb&fit=crop&h=819&ixlib=php-2.1.1&w=1560"
@@ -154,6 +158,10 @@
   "https://groruddalen.no/kultur/vannposten-en-ny-var-er-det-ikke-det-man-sier/": {
     "fetched_at": "2026-04-23T17:55:04.795959+00:00",
     "image": "https://groruddalen.imgix.net/2026/04/IMG_2029.jpg?auto=format%2Ccompress&crop=faces&cs=srgb&fit=crop&h=819&ixlib=php-2.1.1&w=1560"
+  },
+  "https://groruddalen.no/nyheter/123507/": {
+    "fetched_at": "2026-04-24T11:17:06.307396+00:00",
+    "image": "https://groruddalen.no/wp-content/uploads/2023/06/logo.jpeg"
   },
   "https://groruddalen.no/nyheter/anders-berg-gir-seg-alna-trenger-ny-bydelsdirektor/": {
     "fetched_at": "2026-04-23T17:57:08.409608+00:00",
@@ -267,6 +275,10 @@
     "fetched_at": "2026-04-23T17:57:09.945096+00:00",
     "image": "https://groruddalen.imgix.net/2026/04/stovner-sk-2026-2.jpg?auto=format%2Ccompress&crop=faces&cs=srgb&fit=crop&h=819&ixlib=php-2.1.1&w=1560"
   },
+  "https://groruddalen.no/sport/varcup-pa-ellingsrud-kjempeturneringen-er-arets-hoydepunkt/": {
+    "fetched_at": "2026-04-24T11:17:06.577011+00:00",
+    "image": "https://groruddalen.imgix.net/2026/04/Varcup-Ellingsrud-IL.jpg?auto=format%2Ccompress&crop=faces&cs=srgb&fit=crop&h=819&ixlib=php-2.1.1&w=1560"
+  },
   "https://il-try.no/post/248": {
     "fetched_at": "2026-04-23T17:55:12.304975+00:00",
     "image": "https://il-try.no/images/teaser/php1Luaj1.jpg"
@@ -335,6 +347,10 @@
     "fetched_at": "2026-04-23T17:57:24.517205+00:00",
     "image": "https://www.bi.no/contentassets/6c111678f69048ffbea9c763d0bf8108/banner-bibr.jpg"
   },
+  "https://www.bi.no/forskning/business-review/articles/2026/04/renten-virker--ikke-glem-inflasjonsforventningene/": {
+    "fetched_at": "2026-04-24T11:17:07.913320+00:00",
+    "image": "https://www.bi.no/contentassets/d98fa797b21f4af28d699a4af9912ccb/opengraph-bibr-idawb.jpg"
+  },
   "https://www.dagsavisen.no/kommentar/ferdaminne-langs-gamle-spor/10213732": {
     "fetched_at": "2026-04-23T17:57:30.030505+00:00",
     "image": "https://image.dagsavisen.no/10214636.jpg?imageId=10214636&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683"
@@ -378,6 +394,10 @@
   "https://www.dagsavisen.no/nyheter/holmenkolbanen-fra-byen-til-vintereventyret-i-marka/10227616": {
     "fetched_at": "2026-04-23T17:57:29.196326+00:00",
     "image": "https://image.dagsavisen.no/10227650.jpg?imageId=10227650&x=6.79&y=16.22&cropw=89.73&croph=64.18&panox=6.79&panoy=16.22&panow=89.73&panoh=64.18&width=1200&height=683"
+  },
+  "https://www.dagsavisen.no/nyheter/jeg-har-fulgt-mange-i-kampen-for-a-fa-bli-i-norge/10190609": {
+    "fetched_at": "2026-04-24T11:17:07.005451+00:00",
+    "image": "https://image.dagsavisen.no/10191009.jpg?imageId=10191009&x=0&y=6.39&cropw=100&croph=71.67&panox=0&panoy=6.39&panow=100&panoh=71.67&width=1200&height=683"
   },
   "https://www.dagsavisen.no/nyheter/kollen-helg-slik-tok-skifesten-form/10251109": {
     "fetched_at": "2026-04-23T17:57:28.893753+00:00",
@@ -683,6 +703,26 @@
     "fetched_at": "2026-04-24T07:56:29.071874+00:00",
     "image": "https://www.oppsalhandball.no/wp-content/uploads/sites/38/2025/03/Oda-16-9.jpg"
   },
+  "https://www.oslo.kommune.no/kunngjoringer/bymiljoetaten-leier-ut-paviljong-i-spikersuppa-for-sommersesongen-2026/": {
+    "fetched_at": "2026-04-24T11:17:10.180702+00:00",
+    "image": "https://ukeweb-public.s3.dualstack.eu-central-1.amazonaws.com/assets/FallbackImage4.png"
+  },
+  "https://www.oslo.kommune.no/kunngjoringer/horing-av-arbeid-med-forvaltningsplan-for-akerselva-miljopark/": {
+    "fetched_at": "2026-04-24T11:17:08.694758+00:00",
+    "image": "https://ukeweb-public.s3.dualstack.eu-central-1.amazonaws.com/assets/FallbackImage4.png"
+  },
+  "https://www.oslo.kommune.no/kunngjoringer/horing-av-revidert-versjon-av-gatenormal-for-oslo/": {
+    "fetched_at": "2026-04-24T11:17:09.199246+00:00",
+    "image": "https://ukeweb-public.s3.dualstack.eu-central-1.amazonaws.com/assets/FallbackImage4.png"
+  },
+  "https://www.oslo.kommune.no/kunngjoringer/horing-ny-forskrift-om-beboerparkering-i-oslo-kommune/": {
+    "fetched_at": "2026-04-24T11:17:09.727495+00:00",
+    "image": "https://ukeweb-public.s3.dualstack.eu-central-1.amazonaws.com/assets/FallbackImage4.png"
+  },
+  "https://www.oslo.kommune.no/kunngjoringer/undersokelsen-og-innspill-til-utvikling-av-holbergs-plass/": {
+    "fetched_at": "2026-04-24T11:17:10.749906+00:00",
+    "image": "https://ukeweb-public.s3.dualstack.eu-central-1.amazonaws.com/assets/FallbackImage4.png"
+  },
   "https://www.oslomet.no/forskning/forskningsnyheter/barnehagelerarar-med-master-vi-ma-ha-ein-plan-for-rekruttere-behalde-dei": {
     "fetched_at": "2026-04-23T17:57:22.645313+00:00",
     "image": "https://www.oslomet.no/var/oslomet/storage/images/5/4/5/9/1439545-80-nor-NO/2fec309296ee-barnehagelerer-2400.jpg"
@@ -706,6 +746,10 @@
   "https://www.oslomet.no/forskning/forskningsnyheter/jobbpynting": {
     "fetched_at": "2026-04-23T17:57:19.019710+00:00",
     "image": "https://www.oslomet.no/var/oslomet/storage/images/1/9/1/7/1457191-2-nor-NO/6b0c7f13dcc2-NTB_pa5uvpbqjo42400x1200.jpg"
+  },
+  "https://www.oslomet.no/forskning/forskningsnyheter/kan-du-redde-planeten-med-brukte-kler": {
+    "fetched_at": "2026-04-24T11:17:07.733145+00:00",
+    "image": "https://www.oslomet.no/var/oslomet/storage/images/4/1/8/5/1485814-1-nor-NO/96d4f36aaa57-P1001142-2400px.jpg"
   },
   "https://www.oslomet.no/forskning/forskningsnyheter/lesekrise-leseboom": {
     "fetched_at": "2026-04-23T17:57:21.059867+00:00",
@@ -741,6 +785,10 @@
   },
   "https://www.politiet.no/nyheter-og-presse/oslo/nyhet/2026-04-21/hatkriminalitet-i-norge--arsrapport-2025": {
     "fetched_at": "2026-04-23T17:57:05.801752+00:00",
+    "image": "https://www.politiet.no/globalassets/forside-admin/politiet.png"
+  },
+  "https://www.politiet.no/nyheter-og-presse/oslo/nyhet/2026-04-24/mann-siktet-for-atte-overfall-av-kvinner": {
+    "fetched_at": "2026-04-24T11:17:07.162165+00:00",
     "image": "https://www.politiet.no/globalassets/forside-admin/politiet.png"
   },
   "https://www.skeid.no/nyheter/abonner-pa-skeid": {
@@ -826,6 +874,86 @@
   "https://www.skeid.no/nyheter/vi-sparket-i-gang": {
     "fetched_at": "2026-04-23T17:57:00.649529+00:00",
     "image": "https://www.skeid.no/nyheter/vi-sparket-i-gang/_/image/5d84f916-27f3-45ff-8722-920945982976:9b71af80021d11bac298e51967880f0c3d1a80e5/block-1200-630/20260324_201443.jpg?quality=85"
+  },
+  "https://www.skiforeningen.no/nyheter/barnas-holmenkolldag-2026/": {
+    "fetched_at": "2026-04-24T11:17:12.527692+00:00",
+    "image": "https://www.skiforeningen.no/globalassets/1.-2026/barnas-holmenkolldag-2026/ch_barnasholmenkolldag-26-11.jpg?format=webp&v=156402&quality=80&width=1210&height=0&rmode=crop&rsampler=bicubic&rxy=0.43,0.39&ranchor=topleft&compand=true"
+  },
+  "https://www.skiforeningen.no/nyheter/derfor-blir-snoen-pratsom-i-kulda/": {
+    "fetched_at": "2026-04-24T11:17:13.819098+00:00",
+    "image": "https://www.skiforeningen.no/globalassets/1.-2026/kaldt-derfor-knirker-snoen/ch_sf_marka_vinter-34.jpg?format=webp&v=155163&quality=80&width=1210&height=0&rmode=crop&rsampler=bicubic&rxy=0.45,0.93&ranchor=topleft&compand=true"
+  },
+  "https://www.skiforeningen.no/nyheter/fellesskapet-holmenkollmarsjen/": {
+    "fetched_at": "2026-04-24T11:17:13.031297+00:00",
+    "image": "https://www.skiforeningen.no/globalassets/2024_2025/holmenkollmarsjen/hkm-2026/christians-bilder/trim2.jpg?format=webp&v=155743&quality=80&width=1210&height=0&rmode=crop&rsampler=bicubic&rxy=0.5,0.5&ranchor=topleft&compand=true"
+  },
+  "https://www.skiforeningen.no/nyheter/fem-enkle-markavettregler/": {
+    "fetched_at": "2026-04-24T11:17:11.524024+00:00",
+    "image": "https://www.skiforeningen.no/globalassets/1.-2026/brovoll_2021_magnus-nylokken.jpg?format=webp&v=157617&quality=80&width=1210&height=0&rmode=crop&rsampler=bicubic&rxy=0.5,0.5&ranchor=topleft&compand=true"
+  },
+  "https://www.skiforeningen.no/nyheter/generalforsamling-2026/": {
+    "fetched_at": "2026-04-24T11:17:12.821917+00:00",
+    "image": "https://www.skiforeningen.no/UI/login/skiforeningen-logo.svg?width=1210&height=0&rsampler=bicubic&compand=true"
+  },
+  "https://www.skiforeningen.no/nyheter/heidi-weng-far-holmenkollmedaljen/": {
+    "fetched_at": "2026-04-24T11:17:12.117987+00:00",
+    "image": "https://www.skiforeningen.no/globalassets/1.-2026/heidi-weng_ol-2026_foto-natacha-pisarenko-ap-ntb.jpg?format=webp&v=156895&quality=80&width=1210&height=0&rmode=crop&rsampler=bicubic&rxy=0.53,0.4&ranchor=topleft&compand=true"
+  },
+  "https://www.skiforeningen.no/nyheter/helgekurs-pa-ringkollen/": {
+    "fetched_at": "2026-04-24T11:17:13.965262+00:00",
+    "image": "https://www.skiforeningen.no/globalassets/1.-2026/barnas-skiskole-pa-ringkollen/ringkollen-helg-1.jpg?format=webp&v=154151&quality=80&width=1210&height=0&rmode=crop&rsampler=bicubic&rxy=0.43,0.58&ranchor=topleft&compand=true"
+  },
+  "https://www.skiforeningen.no/nyheter/kikutstua-bygges-om/": {
+    "fetched_at": "2026-04-24T11:17:13.651479+00:00",
+    "image": "https://www.skiforeningen.no/globalassets/2024_2025/markastuene/kikutstua/kikut2.jpg?format=webp&v=155280&quality=80&width=1210&height=0&rmode=crop&rsampler=bicubic&rxy=0.5,0.5&ranchor=topleft&compand=true"
+  },
+  "https://www.skiforeningen.no/nyheter/mitt-marka-adele-heidenreich/": {
+    "fetched_at": "2026-04-24T11:17:13.186167+00:00",
+    "image": "https://www.skiforeningen.no/globalassets/1.-2026/mitt-marka-2026/adele-heidenreich/image2.jpeg?format=webp&v=155764&quality=80&width=1210&height=0&rmode=crop&rsampler=bicubic&rxy=0.25,0.37&ranchor=topleft&compand=true"
+  },
+  "https://www.skiforeningen.no/nyheter/mitt-marka-emil-gukild/": {
+    "fetched_at": "2026-04-24T11:17:14.127871+00:00",
+    "image": "https://www.skiforeningen.no/globalassets/1.-2026/mitt-marka-2026/emil-gukild/emil-og-hytte.jpg?format=webp&v=154080&quality=80&width=1210&height=0&rmode=crop&rsampler=bicubic&rxy=0.5,0.5&ranchor=topleft&compand=true"
+  },
+  "https://www.skiforeningen.no/nyheter/mitt-marka-henriette-steenstrup/": {
+    "fetched_at": "2026-04-24T11:17:12.291055+00:00",
+    "image": "https://www.skiforeningen.no/globalassets/1.-2026/mitt-marka-2026/henriette-steenstrup/henriette_bredde.jpg?format=webp&v=156528&quality=80&width=1210&height=0&rmode=crop&rsampler=bicubic&rxy=0.5,0.5&ranchor=topleft&compand=true"
+  },
+  "https://www.skiforeningen.no/nyheter/mitt-marka-ingerid-stenvold/": {
+    "fetched_at": "2026-04-24T11:17:12.674956+00:00",
+    "image": "https://www.skiforeningen.no/globalassets/1.-2026/ingrid-stenvold_bredde_mittmarka1.jpg?format=webp&v=156327&quality=80&width=1210&height=0&rmode=crop&rsampler=bicubic&rxy=0.5,0.5&ranchor=topleft&compand=true"
+  },
+  "https://www.skiforeningen.no/nyheter/nils-erik-ulset/": {
+    "fetched_at": "2026-04-24T11:17:11.976089+00:00",
+    "image": "https://www.skiforeningen.no/globalassets/1.-2026/nils-erik-ulset_skiskytterforbundet.jpeg?format=webp&v=157146&quality=80&width=1210&height=0&rmode=crop&rsampler=bicubic&rxy=0.5,0.5&ranchor=topleft&compand=true"
+  },
+  "https://www.skiforeningen.no/nyheter/ostmarkas-fineste-lopeturer/": {
+    "fetched_at": "2026-04-24T11:17:11.341062+00:00",
+    "image": "https://www.skiforeningen.no/globalassets/1.-2026/stiloping-i-ostmarka/ostmarka_svaberg_lutvann_cecilieskog2.jpeg?format=webp&v=157859&quality=80&width=1210&height=0&rmode=crop&rsampler=bicubic&rxy=0.5,0.5&ranchor=topleft&compand=true"
+  },
+  "https://www.skiforeningen.no/nyheter/paske-i-marka/": {
+    "fetched_at": "2026-04-24T11:17:11.834588+00:00",
+    "image": "https://www.skiforeningen.no/globalassets/1.-sporet_foto_foremelding/1.-mars-26/paske_.jpeg?format=webp&v=157453&quality=80&width=1210&height=0&rmode=crop&rsampler=bicubic&rxy=0.4,0.59&ranchor=topleft&compand=true"
+  },
+  "https://www.skiforeningen.no/nyheter/paskegave-fra-sparebankstiftelsen/": {
+    "fetched_at": "2026-04-24T11:17:11.678926+00:00",
+    "image": "https://www.skiforeningen.no/globalassets/2024_2025/loyper/ny-maskin-krokskogen-jan23.jpg?format=webp&v=157531&quality=80&width=1210&height=0&rmode=crop&rsampler=bicubic&rxy=0.47,0.59&ranchor=topleft&compand=true"
+  },
+  "https://www.skiforeningen.no/nyheter/rasterkt-startfelt/": {
+    "fetched_at": "2026-04-24T11:17:13.501920+00:00",
+    "image": "https://www.skiforeningen.no/globalassets/2024_2025/holmenkollmarsjen/hkm-2026/utovere/stadaas_2024_malgang.jpg?format=webp&v=155551&quality=80&width=1210&height=0&rmode=crop&rsampler=bicubic&rxy=0.5,0.5&ranchor=topleft&compand=true"
+  },
+  "https://www.skiforeningen.no/nyheter/ring-4-gjennom-marka/": {
+    "fetched_at": "2026-04-24T11:17:11.194690+00:00",
+    "image": "https://www.skiforeningen.no/UI/login/skiforeningen-logo.svg?width=1210&height=0&rsampler=bicubic&compand=true"
+  },
+  "https://www.skiforeningen.no/nyheter/slik-blir-nye-trantjern-gard/": {
+    "fetched_at": "2026-04-24T11:17:10.973385+00:00",
+    "image": "https://www.skiforeningen.no/globalassets/1.-2026/markastuene-2026/trantjern/02-fugleperspektiv-sommer_vigsnaskosberg-arkitekter.jpg?format=webp&v=158143&quality=80&width=1210&height=0&rmode=crop&rsampler=bicubic&rxy=0.5,0.5&ranchor=topleft&compand=true"
+  },
+  "https://www.skiforeningen.no/nyheter/vinnere-holmenkollmarsjen/": {
+    "fetched_at": "2026-04-24T11:17:13.354134+00:00",
+    "image": "https://www.skiforeningen.no/globalassets/2024_2025/holmenkollmarsjen/hkm-2026/christians-bilder/ch_marsjen26-1-2.jpg?format=webp&v=155650&quality=80&width=1210&height=0&rmode=crop&rsampler=bicubic&rxy=0.5,0.5&ranchor=topleft&compand=true"
   },
   "https://www.tu.no/artikler/brann-i-lokomotiv-i-oslo-hovedbanen-stengt/571303": {
     "fetched_at": "2026-04-23T17:57:10.660886+00:00",

@@ -298,6 +298,24 @@ HTML_SOURCES = [
         "limit": 30,
         "weight": 0.6,
     },
+    {
+        "id": "bym-kunngjoringer",
+        "name": "Bymiljøetaten kunngjøringer",
+        "scraper": "bym-kunngjoringer",
+        "bydel": "Frogner",
+        "urls": ["https://www.oslo.kommune.no/etater-foretak-og-ombud/bymiljoetaten/kunngjoringer/"],
+        "limit": 20,
+        "weight": 0.5,
+    },
+    {
+        "id": "skiforeningen",
+        "name": "Skiforeningen",
+        "scraper": "skiforeningen",
+        "bydel": "Vestre Aker",
+        "urls": ["https://www.skiforeningen.no/nyheter"],
+        "limit": 20,
+        "weight": 0.5,
+    },
 ]
 
 

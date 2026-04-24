@@ -652,6 +652,55 @@ EVENTS = [
      "DNT Oslo og Omegn sin betjente hytte i Nordmarka. Overnatting, "
      "middag og frokost. Kort avstand fra Blaataarn og Kikutstua."),
 
+    # --- Svoemmehaller ------------------------------------------------------
+    ("Tøyenbadet — sommersesong 2026",
+     "https://www.oslo.kommune.no/natur-kultur-og-fritid/svommehaller-i-oslo/toyenbadet/",
+     "Gamle Oslo", "2026-05-01", "arrangement",
+     "Tøyenbadet er Oslos nye store svømmehall — 50 m basseng, stupetårn, "
+     "terapi- og barnebasseng. Utvidede åpningstider i sommerferien."),
+
+    ("Frognerbadet åpner for sommeren",
+     "https://www.oslo.kommune.no/natur-kultur-og-fritid/svommehaller-i-oslo/frognerbadet/",
+     "Frogner", "2026-05-22", "arrangement",
+     "Frognerbadet er Norges største utendørsbad. 50 m basseng, stupetårn, "
+     "varmtvannsbasseng og store plener. Sesong mai–august."),
+
+    ("Holmlia bad",
+     "https://www.oslo.kommune.no/natur-kultur-og-fritid/svommehaller-i-oslo/holmlia-bad/",
+     "Søndre Nordstrand", "2026-04-25", "arrangement",
+     "Holmlia bad — 25 m basseng, barnebasseng og terapibasseng. "
+     "Tilbud om svømmekurs og familiesvømming hele året."),
+
+    ("Bøler bad",
+     "https://www.oslo.kommune.no/natur-kultur-og-fritid/svommehaller-i-oslo/boler-bad/",
+     "Østensjø", "2026-04-25", "arrangement",
+     "Bøler bad — 25 m basseng med varmtvannsbasseng. "
+     "Svømmeklubber og rehabilitering. Åpent hele året."),
+
+    ("Manglerud bad",
+     "https://www.oslo.kommune.no/natur-kultur-og-fritid/svommehaller-i-oslo/manglerud-bad/",
+     "Østensjø", "2026-04-25", "arrangement",
+     "Manglerud bad — svømmehall med 25 m basseng og undervisningsbasseng. "
+     "Hverdagsdrift for skoler og publikum."),
+
+    ("Furuset bad",
+     "https://www.oslo.kommune.no/natur-kultur-og-fritid/svommehaller-i-oslo/furuset-bad/",
+     "Alna", "2026-04-25", "arrangement",
+     "Furuset bad — moderne anlegg med 25 m basseng, barnebasseng og "
+     "stupetårn. Mye brukt av skoleklasser og svømmeklubber i Groruddalen."),
+
+    ("Romsås bad",
+     "https://www.oslo.kommune.no/natur-kultur-og-fritid/svommehaller-i-oslo/romsas-bad/",
+     "Grorud", "2026-04-25", "arrangement",
+     "Romsås bad — kombinasjonsanlegg med svømmebasseng, terapibasseng og "
+     "varmtvannsbasseng. Knutepunkt i bydel Grorud."),
+
+    ("Økern bad",
+     "https://www.oslo.kommune.no/natur-kultur-og-fritid/svommehaller-i-oslo/okern-bad/",
+     "Bjerke", "2026-04-25", "arrangement",
+     "Økern bad — tradisjonsrik svømmehall. 25 m basseng og terapibasseng. "
+     "Populært blant eldre og svømmeklubber."),
+
 ]
 
 
