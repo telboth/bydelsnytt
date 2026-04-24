@@ -54,6 +54,7 @@ def merge(existing: list[dict], incoming: Iterable[dict]) -> list[dict]:
                 "title", "url", "summary", "category",
                 "source", "source_id", "bydel",
                 "lat", "lng", "location_precise",
+                "event_date",
             ) if k in new})
             # Fyll inn date_iso/published_iso bare hvis de mangler fra foer
             for field in ("date_iso", "published_iso"):

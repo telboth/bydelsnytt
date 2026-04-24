@@ -1440,9 +1440,33 @@ h1 { margin: 0 0 4px 0; font-size: 26px; font-weight: 600; }
   font-size: 12px; color: #666;
 }
 .upcoming-bydel { color: #666; }
+.upcoming-toolbar {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 10px;
+  padding: 6px 0 10px 0; margin-bottom: 4px;
+  border-bottom: 1px dashed #cfe0ef; font-size: 13px;
+}
+.upcoming-sync {
+  display: flex; align-items: center; gap: 6px;
+  font-weight: 600; color: #1862a8; cursor: pointer;
+}
+.upcoming-sync input { margin: 0; cursor: pointer; }
+.upcoming-hint { color: #6b7f90; font-size: 12px; }
+.upcoming-ics {
+  flex: 0 0 auto; background: transparent; border: 1px solid #d9e4ef;
+  border-radius: 4px; padding: 2px 7px; font-size: 13px; cursor: pointer;
+  line-height: 1.2; color: #1862a8;
+  transition: background 0.12s, border-color 0.12s;
+}
+.upcoming-ics:hover { background: #e8f2fa; border-color: #1862a8; }
+.upcoming-item.hidden-filter, .upcoming-group.hidden-filter { display: none; }
+a.story-ics {
+  margin-right: 8px;
+  background: transparent;
+}
 @media (max-width: 560px) {
   .upcoming-item { padding: 8px 0; }
   .upcoming-meta { flex-basis: 100%; padding-left: 72px; }
+  .upcoming-hint { flex-basis: 100%; }
 }
 .topp-saker h2 {
   margin: 0 0 12px 0; font-size: 15px; font-weight: 700;
@@ -1857,6 +1881,188 @@ SCRIPT = r"""
       if (header) header.appendChild(tag);
     }
   } catch (e) { /* localStorage not available; silently skip */ }
+
+  // --- "Hva skjer fremover": filter-synk med globale filtre + ICS-eksport ----
+  function pad2(n) { return (n < 10 ? '0' : '') + n; }
+  function icsEsc(s) {
+    return String(s || '').replace(/\\/g, '\\\\').replace(/\n/g, '\\n')
+      .replace(/,/g, '\\,').replace(/;/g, '\\;');
+  }
+  function buildIcs(title, urlStr, isoDate, description) {
+    var d = isoDate.replace(/-/g, '');
+    var dt = new Date();
+    var stamp = dt.getUTCFullYear() +
+      pad2(dt.getUTCMonth()+1) + pad2(dt.getUTCDate()) + 'T' +
+      pad2(dt.getUTCHours()) + pad2(dt.getUTCMinutes()) + pad2(dt.getUTCSeconds()) + 'Z';
+    var nextDay = new Date(isoDate + 'T00:00:00Z');
+    nextDay.setUTCDate(nextDay.getUTCDate() + 1);
+    var dEnd = nextDay.getUTCFullYear() +
+      pad2(nextDay.getUTCMonth()+1) + pad2(nextDay.getUTCDate());
+    return [
+      'BEGIN:VCALENDAR',
+      'VERSION:2.0',
+      'PRODID:-//Bydelsnytt Oslo//telboth.github.io//NO',
+      'CALSCALE:GREGORIAN',
+      'METHOD:PUBLISH',
+      'BEGIN:VEVENT',
+      'UID:' + d + '-' + Math.random().toString(36).slice(2, 10) + '@bydelsnytt',
+      'DTSTAMP:' + stamp,
+      'DTSTART;VALUE=DATE:' + d,
+      'DTEND;VALUE=DATE:' + dEnd,
+      'SUMMARY:' + icsEsc(title),
+      'DESCRIPTION:' + icsEsc(description || ''),
+      'URL:' + icsEsc(urlStr || ''),
+      'END:VEVENT',
+      'END:VCALENDAR',
+      ''
+    ].join('\r\n');
+  }
+  function downloadIcs(filename, content) {
+    var blob = new Blob([content], { type: 'text/calendar;charset=utf-8' });
+    var u = URL.createObjectURL(blob);
+    var a = document.createElement('a');
+    a.href = u;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    setTimeout(function() {
+      document.body.removeChild(a);
+      URL.revokeObjectURL(u);
+    }, 100);
+  }
+  function slugFor(s) {
+    return String(s || 'arrangement').toLowerCase()
+      .replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 40) || 'arrangement';
+  }
+
+  try {
+    var upcoming = document.getElementById('upcoming-events');
+    var syncCb = document.getElementById('upcoming-sync-filter');
+    if (upcoming && syncCb) {
+      var upItems = upcoming.querySelectorAll('.upcoming-item');
+      var upGroups = upcoming.querySelectorAll('.upcoming-group');
+      var countEl = upcoming.querySelector('.upcoming-count');
+      var totalN = parseInt((countEl && countEl.getAttribute('data-total')) || upItems.length, 10);
+
+      function applyUpcomingFilter() {
+        if (!syncCb.checked) {
+          upItems.forEach(function(li) { li.classList.remove('hidden-filter'); });
+          upGroups.forEach(function(g) { g.classList.remove('hidden-filter'); });
+          if (countEl) countEl.textContent = totalN + ' arrangementer';
+          return;
+        }
+        var bv = selBydel ? selBydel.value : 'all';
+        var activeCats = {};
+        catInputs.forEach(function(cb) { if (cb.checked) activeCats[cb.value] = true; });
+        var anyCat = Object.keys(activeCats).length > 0;
+        var visible = 0;
+        upItems.forEach(function(li) {
+          var bOk = (bv === 'all' || bv === li.dataset.bydel);
+          var cOk = !anyCat || !!activeCats[li.dataset.category];
+          if (bOk && cOk) {
+            li.classList.remove('hidden-filter');
+            visible++;
+          } else {
+            li.classList.add('hidden-filter');
+          }
+        });
+        upGroups.forEach(function(g) {
+          var any = g.querySelectorAll('.upcoming-item:not(.hidden-filter)').length;
+          g.classList.toggle('hidden-filter', any === 0);
+        });
+        if (countEl) countEl.textContent = visible + ' arrangementer';
+      }
+
+      var UP_KEY = 'bydelsnytt:upcomingSync';
+      try {
+        var stored = window.localStorage.getItem(UP_KEY);
+        if (stored === '1') syncCb.checked = true;
+      } catch (e) {}
+      syncCb.addEventListener('change', function() {
+        try { window.localStorage.setItem(UP_KEY, syncCb.checked ? '1' : '0'); } catch (e) {}
+        applyUpcomingFilter();
+      });
+      [selBydel, selPer].forEach(function(el) {
+        if (el) el.addEventListener('change', applyUpcomingFilter);
+      });
+      catInputs.forEach(function(cb) {
+        cb.addEventListener('change', applyUpcomingFilter);
+      });
+      if (btnAll) btnAll.addEventListener('click', applyUpcomingFilter);
+      if (btnNone) btnNone.addEventListener('click', applyUpcomingFilter);
+      applyUpcomingFilter();
+
+      upcoming.querySelectorAll('.upcoming-ics').forEach(function(btn) {
+        btn.addEventListener('click', function(e) {
+          e.preventDefault();
+          var li = btn.closest('.upcoming-item');
+          if (!li) return;
+          var title = li.dataset.title || '';
+          var ev = li.dataset.eventDate || '';
+          if (!ev) return;
+          var link = li.querySelector('.upcoming-title');
+          var urlStr = link ? link.href : '';
+          var bydel = li.dataset.bydel || '';
+          var desc = (bydel ? bydel + ' - ' : '') + 'Bydelsnytt Oslo\n' + urlStr;
+          downloadIcs('bydelsnytt-' + slugFor(title) + '.ics', buildIcs(title, urlStr, ev, desc));
+        });
+      });
+    }
+  } catch (e) { /* no-op */ }
+
+  // --- ICS-eksport på arrangement-saker i hovedfeeden -------------------------
+  try {
+    var today = new Date().toISOString().slice(0, 10);
+    document.querySelectorAll('.story[data-event-date]').forEach(function(art) {
+      var ev = art.dataset.eventDate || '';
+      if (!ev || ev < today) return;
+      if (art.querySelector('.story-ics')) return;
+      var titleEl = art.querySelector('h3');
+      var linkEl = art.querySelector('a.readmore');
+      var title = (titleEl ? (titleEl.childNodes[0] ? titleEl.childNodes[0].textContent.trim() : '') : '') || 'Arrangement';
+      var urlStr = linkEl ? linkEl.href : '';
+      var btn = document.createElement('a');
+      btn.href = '#';
+      btn.className = 'report story-ics';
+      btn.title = 'Legg til i kalender';
+      btn.textContent = 'Kalender';
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        downloadIcs('bydelsnytt-' + slugFor(title) + '.ics',
+          buildIcs(title, urlStr, ev, 'Bydelsnytt Oslo\n' + urlStr));
+      });
+      var reportBtn = art.querySelector('.report');
+      if (reportBtn && reportBtn.parentNode) {
+        reportBtn.parentNode.insertBefore(btn, reportBtn);
+      } else {
+        var body = art.querySelector('.story-body');
+        if (body) body.appendChild(btn);
+      }
+    });
+  } catch (e) { /* no-op */ }
+
+  // --- Auto-scroll til min bydel ved innlasting -------------------------------
+  try {
+    var targetBydel = null;
+    try { targetBydel = window.localStorage.getItem('bydelsnytt:myBydel'); } catch (e) {}
+    if (!targetBydel) {
+      try {
+        var raw = window.localStorage.getItem('bydelsnytt:filterState');
+        if (raw) {
+          var obj = JSON.parse(raw);
+          if (obj && obj.bydel && obj.bydel !== 'all') targetBydel = obj.bydel;
+        }
+      } catch (e) {}
+    }
+    if (targetBydel && !location.hash) {
+      var target = document.querySelector('.bydel[data-name="' + targetBydel.replace(/"/g,'\\"') + '"]');
+      if (target) {
+        setTimeout(function() {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 250);
+      }
+    }
+  } catch (e) {}
 })();
 """
 
@@ -2093,7 +2299,7 @@ _TOPP_SOURCE_WEIGHT = {
     "oslomet": 0.9, "uio": 0.95, "bi-business-review": 0.9, "kampanje": 0.9,
     "deichman-aktuelt": 0.9, "kondis": 0.85, "nho": 0.85,
     "skeid": 0.7, "vif-fotball": 0.75, "boeler-if": 0.7, "iltry": 0.7,
-    "reddit-oslo": 0.6, "events": 0.55,
+    "reddit-oslo": 0.6, "events": 0.55, "oslo-arrangement": 0.6,
 }
 
 def _topp_score(story, bydel_name, today_iso, bydel_activity):
@@ -2274,9 +2480,10 @@ def _render_upcoming_events(bydeler_list, today_iso):
             title = esc(s.get("title", "") or "(uten tittel)")
             url = esc(s.get("url", "") or "#")
             items.append(
-                f'<li class="upcoming-item">'
+                f'<li class="upcoming-item" data-bydel="{esc(bname)}" data-category="{esc(cat)}" data-event-date="{esc(ev)}" data-title="{esc(s.get("title","") or "")}">'
                 f'<span class="upcoming-date">{esc(day_label)}</span>'
                 f'<a class="upcoming-title" href="{url}" target="_blank" rel="noopener">{title}</a>'
+                f'<button type="button" class="upcoming-ics" title="Legg til i kalender" aria-label="Legg til i kalender">&#128197;</button>'
                 f'<span class="upcoming-meta">'
                 f'<span class="pill {esc(cat)}">{cat_label}</span>'
                 f'<span class="upcoming-bydel">{esc(bname)}</span>'
@@ -2284,16 +2491,23 @@ def _render_upcoming_events(bydeler_list, today_iso):
                 f'</li>'
             )
         parts.append(
-            f'<div class="upcoming-group">'
+            f'<div class="upcoming-group" data-month="{esc(key)}">'
             f'<h3 class="upcoming-month">{esc(key)}</h3>'
             f'<ul class="upcoming-list">{"".join(items)}</ul>'
             f'</div>'
         )
 
+    toolbar = (
+        '<div class="upcoming-toolbar">'
+        '<label class="upcoming-sync"><input type="checkbox" id="upcoming-sync-filter">'
+        ' Synk med filter ovenfor</label>'
+        '<span class="upcoming-hint">Skjuler arrangementer som ikke matcher bydel og kategori</span>'
+        '</div>'
+    )
     return (
         '<details class="upcoming" id="upcoming-events">'
-        f'<summary>Hva skjer fremover <span class="upcoming-count">{len(upcoming)} arrangementer</span></summary>'
-        f'<div class="upcoming-body">{"".join(parts)}</div>'
+        f'<summary>Hva skjer fremover <span class="upcoming-count" data-total="{len(upcoming)}">{len(upcoming)} arrangementer</span></summary>'
+        f'<div class="upcoming-body">{toolbar}{"".join(parts)}</div>'
         '</details>'
     )
 

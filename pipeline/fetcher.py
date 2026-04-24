@@ -35,6 +35,7 @@ class RawStory:
     summary: str
     category: str = "annet"
     fetched_at_iso: str = ""
+    event_date: str = ""  # ISO-timestamp for arrangement (valgfri)
 
     def to_dict(self):
         return asdict(self)
@@ -955,3 +956,23 @@ def fetch_all(health_data: dict | None = None) -> list[RawStory]:
             count += 1
         print(f"[fetcher] rss {src['id']}: {count} saker mappet til bydel")
         if health_data is not None:
+            H.record(health_data, src["id"], src.get("name", src["id"]), count)
+    for src in getattr(S, "HTML_SOURCES", []):
+        print(f"[fetcher] html {src['id']} -> {len(src.get('urls', []))} sider")
+        count = 0
+        for story in fetch_from_html(src):
+            out.append(story)
+            count += 1
+        print(f"[fetcher] html {src['id']}: {count} saker scrapet")
+        if health_data is not None:
+            H.record(health_data, src["id"], src.get("name", src["id"]), count)
+    return out
+
+
+if __name__ == "__main__":
+    stories = fetch_all()
+    print(f"\nTotalt: {len(stories)} saker")
+    from collections import Counter
+    per_bydel = Counter(s.bydel for s in stories)
+    for b, n in sorted(per_bydel.items(), key=lambda x: -x[1]):
+        print(f"  {b}: {n}")
