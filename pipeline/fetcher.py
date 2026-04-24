@@ -921,6 +921,101 @@ def fetch_from_html_skiforeningen(source: dict):
                 return
 
 
+# --- Akersposten (Oslo vest: Vestre Aker, Ullern, Frogner) -----------------
+_AKERSPOSTEN_URL_RE = re.compile(
+    r'href="(?://www\.akersposten\.no)?(/([a-z0-9-]+)/s/5-\d+-(\d+))"',
+    re.IGNORECASE,
+)
+
+# Strok/omraade -> bydel. Lengst forst for aa unngaa prefix-match.
+_AKERSPOSTEN_STROEK = [
+    ("vinderen", "Vestre Aker"),
+    ("holmenkollen", "Vestre Aker"),
+    ("diakonhjemmet", "Vestre Aker"),
+    ("sorkedalen", "Vestre Aker"),
+    ("soerkedalen", "Vestre Aker"),
+    ("slemdal", "Vestre Aker"),
+    ("smestad", "Vestre Aker"),
+    ("roa", "Vestre Aker"),
+    ("hovseter", "Vestre Aker"),
+    ("voksenkollen", "Vestre Aker"),
+    ("ris", "Vestre Aker"),
+    ("gaustad", "Vestre Aker"),
+    ("sognsvann", "Vestre Aker"),
+    ("ullern", "Ullern"),
+    ("skoyen", "Ullern"),
+    ("skoeyen", "Ullern"),
+    ("bestum", "Ullern"),
+    ("lilleaker", "Ullern"),
+    ("montebello", "Ullern"),
+    ("sollerud", "Ullern"),
+    ("bygdoy", "Frogner"),
+    ("bygdoey", "Frogner"),
+    ("frogner", "Frogner"),
+    ("majorstu", "Frogner"),
+    ("skillebekk", "Frogner"),
+    ("sogn", "Nordre Aker"),
+    ("nordberg", "Nordre Aker"),
+    ("tasen", "Nordre Aker"),
+]
+
+
+def _akersposten_bydel_from_text(text: str, default: str) -> str:
+    t = text.lower()
+    for needle, bydel in _AKERSPOSTEN_STROEK:
+        if needle in t:
+            return bydel
+    return default
+
+
+def fetch_from_html_akersposten(source: dict):
+    """Akersposten - lokalavis for Oslo vest.
+
+    Artikkel-URL-moenster: /<slug>/s/5-<sec>-<id>. Bydel bestemmes av
+    stroek-navn i slug; default faller til Vestre Aker (dekningens tyngdepunkt).
+    Mange saker er paywalled, men vi lenker videre uansett.
+    """
+    fetched_at = datetime.now(timezone.utc).isoformat()
+    bydel_default = source.get("bydel") or "Vestre Aker"
+    limit = source.get("limit", 20)
+    seen: set[str] = set()
+    count = 0
+    for list_url in source.get("urls", []):
+        html_txt = _fetch_html(list_url)
+        if not html_txt:
+            continue
+        for m in _AKERSPOSTEN_URL_RE.finditer(html_txt):
+            path = m.group(1)
+            slug = m.group(2)
+            story_id = m.group(3)
+            if story_id in seen:
+                continue
+            seen.add(story_id)
+
+            title = _slug_to_title(slug)
+            if len(title) < 10:
+                continue
+
+            bydel = _akersposten_bydel_from_text(slug, bydel_default)
+            full_url = "https://www.akersposten.no" + path
+            yield RawStory(
+                id=_make_id(full_url, title),
+                bydel=bydel,
+                title=title,
+                url=full_url,
+                source=source.get("name", "Akersposten"),
+                source_id=source["id"],
+                published_iso=fetched_at,
+                date_iso=fetched_at[:10],
+                summary="",
+                category="annet",
+                fetched_at_iso=fetched_at,
+            )
+            count += 1
+            if count >= limit:
+                return
+
+
 SCRAPERS = {
     "iltry": fetch_from_html_iltry,
     "kondis": fetch_from_html_kondis,
@@ -932,6 +1027,7 @@ SCRAPERS = {
     "vartoslo": fetch_from_html_vartoslo,
     "bym-kunngjoringer": fetch_from_html_bym_kunngjoringer,
     "skiforeningen": fetch_from_html_skiforeningen,
+    "akersposten": fetch_from_html_akersposten,
 }
 
 

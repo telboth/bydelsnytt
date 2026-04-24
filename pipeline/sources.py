@@ -308,6 +308,15 @@ HTML_SOURCES = [
         "limit": 20,
         "weight": 0.5,
     },
+    {
+        "id": "akersposten",
+        "name": "Akersposten",
+        "scraper": "akersposten",
+        "bydel": "Vestre Aker",
+        "urls": ["https://akersposten.no/"],
+        "limit": 18,
+        "weight": 0.6,
+    },
 ]
 
 
