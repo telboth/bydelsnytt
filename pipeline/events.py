@@ -597,6 +597,61 @@ EVENTS = [
      "St. Hanshaugen", "2026-10-28", "kultur",
      "Oslos eldste filmfestival. Over 150 filmer paa Vega, Saga, Gimle og "
      "andre sentrumskinoer. Fra dokumentar til kunstfilm."),
+    # --- Markastuer ---------------------------------------------------------
+    ("Skjennungstua aapner sommersesongen",
+     "https://skjennungstua.no/",
+     "Nordre Aker", "2026-05-02", "arrangement",
+     "Skjennungstua, Skiforeningens serveringsstue i Nordmarka nord for "
+     "Sognsvann, aapner loerdags- og soendags-kafeen for sommeren. Vaffelduft "
+     "og utsikt mot Skjennungen. Turstart fra Frognerseteren eller Sognsvann."),
+
+    ("Kikutstua / Kikut (DNT-hytte)",
+     "https://kikut.dntoslo.no/",
+     "Nordre Aker", "2026-05-16", "arrangement",
+     "DNT Oslo og Omegn sin hytte ved Kikut i Nordmarka. Overnatting, kafe "
+     "og betjent servering paa helger. Populaer stoppestasjon paa lange "
+     "skiturer og sykkelturer gjennom Nordmarka."),
+
+    ("Mariholtet serveringsstue aapner",
+     "https://mariholtet.no/",
+     "Alna", "2026-04-25", "arrangement",
+     "Mariholtet i Oestmarka aapner vaffelkafeen for vaar- og sommersesongen. "
+     "Populaer endestasjon paa turer fra Haugerud, Oppsal og Sarabraaten. "
+     "Bamsen Brumm-tradisjon og skogsvandring."),
+
+    ("Lilloseter serveringsstue",
+     "https://lilloseter.no/",
+     "Nordre Aker", "2026-05-02", "arrangement",
+     "Lilloseter i Nordmarka — betjent stue med vafler og kaffe. "
+     "Kort avstand fra Lillomarka skistadion og Solemskogen. "
+     "Turstart fra Movann eller Linderudkollen."),
+
+    ("Sinober kafe og overnatting",
+     "https://sinober.no/",
+     "Alna", "2026-05-16", "arrangement",
+     "Sinober i Oestmarka — kafe og liten overnatting helgene. "
+     "Kort gaatur fra Nokleholtet. Betjent sesong fra mai."),
+
+    ("Rustadsaga sportsstue",
+     "https://rustadsaga.no/",
+     "\u00d8stensj\u00f8", "2026-04-25", "arrangement",
+     "Rustadsaga ved Noeklevann — serveringsstue og badeplass. "
+     "Populaer utgangsport for tur, jogging og bading i Oestmarka. "
+     "Kafeen er aapen hele sommeren."),
+
+    ("Sandbakken sportsstue",
+     "https://sandbakken-oestmarka.no/",
+     "Nordstrand", "2026-04-25", "arrangement",
+     "Sandbakken i Oestmarka — sportsstue og servering. "
+     "Klassisk tur-maal fra Skullerud. Paasketradisjon og sommer-kafe. "
+     "Grillplass og teltomraade like ved."),
+
+    ("Kobberhaughytta",
+     "https://kobberhaug.dntoslo.no/",
+     "Nordre Aker", "2026-06-01", "arrangement",
+     "DNT Oslo og Omegn sin betjente hytte i Nordmarka. Overnatting, "
+     "middag og frokost. Kort avstand fra Blaataarn og Kikutstua."),
+
 ]
 
 

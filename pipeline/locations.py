@@ -30,7 +30,7 @@ VENUES = [
     ("url_contains", "njard.no", 59.928, 10.705),
     ("url_contains", "kjelsaas.no", 59.967, 10.792),
     ("url_contains", "fklyn.no", 59.959, 10.761),
-    ("url_contains", "il-try.no", 59.948, 10.680),  # Gressbanen / Slemdal
+    ("url_contains", "il-try.no", 59.957, 10.681),  # Grindbakken skole
     ("url_contains", "rustadil.no", 59.894, 10.832),
     ("url_contains", "tryvann", 59.983, 10.667),
     ("url_contains", "vestreakerskiklub", 59.974, 10.677),
@@ -49,10 +49,23 @@ VENUES = [
     ("url_contains", "skeid.no", 59.933, 10.751),
     ("url_contains", "vif-fotball.no", 59.916, 10.785),
     ("url_contains", "bolerif.no", 59.892, 10.830),
-    # Markastuer
+    # UiO / OsloMet (fiks: unngaa fallback til Nordre Aker-senter = Nydalen)
+    ("url_contains", "uio.no", 59.9395, 10.7186),  # Blindern
+    ("url_contains", "oslomet.no", 59.9178, 10.7356),  # Pilestredet
+    # Markastuer (nord i Nordmarka, oestover i Oestmarka)
     ("url_contains", "kobberhaug", 60.033, 10.728),
     ("url_contains", "ullevalseter", 60.005, 10.736),
     ("url_contains", "lilloseter", 60.015, 10.822),
+    ("title_contains", "skjennungstua", 59.994, 10.714),
+    ("title_contains", "kikutstua", 60.067, 10.714),
+    ("title_contains", " kikut ", 60.067, 10.714),
+    ("title_contains", "mariholtet", 59.973, 10.935),
+    ("title_contains", "lilloseter", 60.015, 10.822),
+    ("title_contains", "sinober", 59.975, 10.937),
+    ("title_contains", "rustadsaga", 59.870, 10.872),
+    ("title_contains", "sandbakken", 59.873, 10.884),
+    ("title_contains", "kobberhaug", 60.033, 10.728),
+    ("title_contains", "skjennungen", 59.994, 10.714),
     # Skoler
     ("url_contains", "gamlebyen.osloskolen", 59.903, 10.776),
     ("url_contains", "ostensjo.osloskolen", 59.895, 10.827),
