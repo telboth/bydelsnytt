@@ -32,8 +32,41 @@ OSLO_TZ = timezone(timedelta(hours=2))  # CEST, april
 NOW = datetime.now(OSLO_TZ)
 TODAY_ISO = NOW.date().isoformat()
 YESTERDAY_ISO = (NOW.date() - timedelta(days=1)).isoformat()
-DATE_NO = "22. april 2026"
 TIMESTAMP_ISO = NOW.isoformat(timespec="seconds")
+
+_MONTHS_NO = [
+    "", "januar", "februar", "mars", "april", "mai", "juni",
+    "juli", "august", "september", "oktober", "november", "desember",
+]
+DATE_NO = f"{NOW.day}. {_MONTHS_NO[NOW.month]} {NOW.year}"
+
+
+def _check_stories_freshness(stories_path: pathlib.Path, max_age_hours: float = 20.0) -> None:
+    """Advar hvis stories.json er eldre enn max_age_hours — tegn paa at
+    daglig RSS-kjoering har feilet eller at vi bygger paa stale data."""
+    try:
+        data = json.loads(stories_path.read_text(encoding="utf-8"))
+        updated = data.get("updatedAt")
+        if not updated:
+            print("[build] ADVARSEL: stories.json mangler updatedAt", file=sys.stderr)
+            return
+        t = datetime.fromisoformat(updated.replace("Z", "+00:00"))
+        age_h = (datetime.now(t.tzinfo) - t).total_seconds() / 3600.0
+        if age_h > max_age_hours:
+            print(
+                f"[build] ADVARSEL: stories.json er {age_h:.1f} timer gammel "
+                f"(updatedAt={updated}). Daglig RSS-kjoering kan ha feilet.",
+                file=sys.stderr,
+            )
+        else:
+            print(f"[build] stories.json er {age_h:.1f} timer gammel — OK")
+    except FileNotFoundError:
+        print(f"[build] ADVARSEL: stories.json ikke funnet: {stories_path}", file=sys.stderr)
+    except Exception as e:
+        print(f"[build] kunne ikke sjekke freshness: {e}", file=sys.stderr)
+
+
+_check_stories_freshness(pathlib.Path(__file__).resolve().parent / "stories.json")
 
 CATEGORIES = [
     ("politikk", "Politikk"),
