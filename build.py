@@ -49,12 +49,30 @@ CATEGORIES = [
 ]
 CAT_LABEL = dict(CATEGORIES)
 
-def is_fresh(date_iso):
-    """True if story is from the last 24 hours — published between
-    yesterday and today (inclusive). Future-dated events are NOT fresh."""
-    if not date_iso:
+def is_fresh(story_or_date):
+    """True hvis saken foerst ble sett i loepet av siste 24 timer.
+
+    Tar enten en hel story-dict (foretrukket) eller en ren date_iso-string
+    for bakoverkompatibilitet. Bruker first_seen_iso foerst — det er den
+    mest paalitelige markoeren for "denne dukket akkurat opp hos oss", og
+    er robust mot scrapere som re-stamper date_iso paa hver kjoering.
+    Faller tilbake til date_iso hvis first_seen_iso mangler.
+    """
+    # Back-compat: rent string-argument behandles som date_iso
+    if isinstance(story_or_date, str) or story_or_date is None:
+        d = story_or_date or ""
+        if not d:
+            return False
+        return YESTERDAY_ISO <= d <= TODAY_ISO
+
+    story = story_or_date
+    first_seen = (story.get("first_seen_iso") or "")[:10]
+    if first_seen:
+        return YESTERDAY_ISO <= first_seen <= TODAY_ISO
+    d = story.get("date_iso") or ""
+    if not d:
         return False
-    return YESTERDAY_ISO <= date_iso <= TODAY_ISO
+    return YESTERDAY_ISO <= d <= TODAY_ISO
 
 # ---------------------------------------------------------------------------
 # Innhold — 15 bydeler, kommunale kilder + aviser + skoler + idrettslag
@@ -1838,7 +1856,7 @@ def _report_mailto(story, bydel_name, sid):
 
 
 def render_story(story, bydel_name=""):
-    fresh = is_fresh(story.get("date_iso"))
+    fresh = is_fresh(story)
     badge = ' <span class="news-badge">news</span>' if fresh else ""
     cat = story.get("category", "annet")
     cat_label = CAT_LABEL.get(cat, "Annet")
@@ -2144,7 +2162,7 @@ def render_page(include_cowork_meta):
     map_points_json = json.dumps(_build_map_data(BYDELER), ensure_ascii=False)
 
     total_stories = sum(len(b['stories']) for b in BYDELER)
-    fresh_count = sum(1 for b in BYDELER for s in b['stories'] if is_fresh(s.get("date_iso")))
+    fresh_count = sum(1 for b in BYDELER for s in b['stories'] if is_fresh(s))
 
     script_js = SCRIPT.replace("__TODAY__", TODAY_ISO)
     health_banner_html = _render_health_banner()
