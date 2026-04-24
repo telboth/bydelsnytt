@@ -1596,9 +1596,21 @@ SCRIPT = r"""
     return isoDate >= cutoff;
   }
 
+  function inPastHours(isoTimestamp, hours) {
+    // True if isoTimestamp (full ISO med tidssone) er innen siste N timer.
+    // Bruker first_seen_iso (data-first-seen) for finere granularitet enn date_iso.
+    if (!isoTimestamp) return false;
+    var t = Date.parse(isoTimestamp);
+    if (isNaN(t)) return false;
+    var nowMs = Date.now();
+    if (t > nowMs) return false;
+    return (nowMs - t) <= hours * 3600 * 1000;
+  }
+
   function storyMatches(story, cats, period, q) {
     var dataset = story.dataset;
     if (!cats[dataset.category]) return false;
+    if (period === '12h' && !inPastHours(dataset.firstSeen, 12)) return false;
     if (period === '1d' && !inPastWindow(dataset.iso, 1)) return false;
     if (period === '7d' && !inPastWindow(dataset.iso, 7)) return false;
     if (period === '30d' && !inPastWindow(dataset.iso, 30)) return false;
@@ -2186,6 +2198,7 @@ def render_page(include_cowork_meta):
     cat_chips_html = "\n      ".join(cat_chips)
 
     period_options_html = """<option value="all">Alle datoer</option>
+      <option value="12h">Siste 12 timer</option>
       <option value="1d">Siste 24 timer</option>
       <option value="7d">Siste uke</option>
       <option value="30d">Siste måned</option>"""

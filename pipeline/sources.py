@@ -128,6 +128,38 @@ RSS_SOURCES = [
         "resolver": "fixed_bydel",
     },
     {
+        "id": "grorud-il",
+        "name": "Grorud IL",
+        "url": "https://www.grorud-il.no/rss-nyheter",
+        "bydel": "Grorud",
+        "weight": 0.5,
+        "resolver": "fixed_bydel",
+    },
+    {
+        "id": "lyn",
+        "name": "Lyn (lyn.no)",
+        "url": "https://www.lyn.no/nyheter?format=rss",
+        "bydel": "Nordre Aker",  # Ullevaal stadion / Sognsvann
+        "weight": 0.4,
+        "resolver": "fixed_bydel",
+    },
+    {
+        "id": "heming",
+        "name": "Heming",
+        "url": "https://www.heming.no/feed/",
+        "bydel": "Vestre Aker",  # anlegg ved Holmenkollen/Slemdal
+        "weight": 0.5,
+        "resolver": "fixed_bydel",
+    },
+    {
+        "id": "oppsal-handball",
+        "name": "Oppsal H\u00e5ndball",
+        "url": "https://www.oppsalhandball.no/feed/",
+        "bydel": "\u00d8stensj\u00f8",
+        "weight": 0.5,
+        "resolver": "fixed_bydel",
+    },
+    {
         "id": "vegvesen",
         "name": "Statens vegvesen",
         "url": "https://www.vegvesen.no/om-oss/presse/aktuelt/rss/",
@@ -135,14 +167,8 @@ RSS_SOURCES = [
         "weight": 0.4,
         "resolver": "text_match_bydel_fallback",
     },
-    {
-        "id": "e24",
-        "name": "E24",
-        "url": "https://e24.no/rss",
-        "bydel": "Frogner",
-        "weight": 0.5,
-        "resolver": "text_match_bydel_fallback",
-    },
+    # E24 fjernet 24.04.2026: RSS-feeden har bare 4 siste saker og naesten
+    # ingen nevner Oslo — ga bare frustrasjon i source-health-banneret.
     {
         "id": "tu",
         "name": "Teknisk Ukeblad",
