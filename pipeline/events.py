@@ -702,6 +702,203 @@ EVENTS = [
      "Økern bad — tradisjonsrik svømmehall. 25 m basseng og terapibasseng. "
      "Populært blant eldre og svømmeklubber."),
 
+
+    # --- Signaturfestivaler sommer/høst 2026 -------------------------------
+    ("Øyafestivalen 2026",
+     "https://www.oyafestivalen.no/",
+     "Gamle Oslo", "2026-08-11", "kultur",
+     "Norges største musikkfestival i Tøyenparken. 11.-15. august 2026. "
+     "Internasjonale og norske artister på seks scener. Arena for mat, drikke og kunst."),
+
+    ("Oslo Pride 2026",
+     "https://www.oslopride.no/",
+     "Frogner", "2026-06-26", "kultur",
+     "Oslos største skeive markering. Pride Park i Spikersuppa, paradeløpet "
+     "gjennom sentrum og arrangementer i hele byen. 19.-27. juni 2026."),
+
+    ("Oslo Jazzfestival 2026",
+     "https://oslojazz.no/",
+     "Frogner", "2026-08-17", "kultur",
+     "Byens jazz-uke med konserter på Nasjonalmuseet, Sentralen, Victoria "
+     "og Oslo Konserthus. Internasjonale navn og norsk toppklasse. Midten av august."),
+
+    ("Norwegian Wood 2026",
+     "https://www.norwegianwood.no/",
+     "Frogner", "2026-06-13", "kultur",
+     "Rockfestival på Frognerbadet i Frognerparken. Klassikere og nye navn "
+     "på Oslos mest sjarmerende konsertarena. Sankthanshelgen."),
+
+    ("MELA-festivalen 2026",
+     "https://melafestivalen.no/",
+     "St. Hanshaugen", "2026-08-22", "kultur",
+     "Oslos gratis verdensmusikk-festival på Rådhusplassen. Musikk, mat og "
+     "kunsthåndverk fra hele verden. Midten/slutten av august."),
+
+    ("Kulturnatten Oslo 2026",
+     "https://kulturnatt.oslo.kommune.no/",
+     "St. Hanshaugen", "2026-09-18", "kultur",
+     "Hundrevis av gratis arrangementer på museer, teatre, biblioteker og "
+     "gallerier over hele Oslo. Tredje fredag i september."),
+
+    ("Elvelangs Akerselva 2026",
+     "https://www.oslo.kommune.no/",
+     "Sagene", "2026-09-18", "kultur",
+     "Fakkel- og lanterneopplevelse langs Akerselva på Kulturnatten. "
+     "Musikk, lys og kunstinstallasjoner fra Grefsen til Vaterland."),
+
+    ("Oslo World 2026",
+     "https://osloworld.no/",
+     "Gamle Oslo", "2026-10-28", "kultur",
+     "Verdensmusikkfestival på Rockefeller, Kulturkirken Jakob og Cosmopolite. "
+     "Artister fra Afrika, Asia, Latin-Amerika og Midtøsten. Slutten av oktober."),
+
+    ("Oslo Bokfestival 2026",
+     "https://www.oslobokfestival.no/",
+     "Frogner", "2026-09-26", "kultur",
+     "Litteraturfest på Litteraturhuset og Oslo Konserthus. Debatt, "
+     "forfatterintervjuer og boklanseringer. Siste helg i september."),
+
+    ("Ultima Samtidsmusikkfestival 2026",
+     "https://www.ultima.no/",
+     "St. Hanshaugen", "2026-09-11", "kultur",
+     "Nordens største festival for samtidsmusikk. Konserter på Sentralen, "
+     "Oslo Konserthus og Operaen. Andre/tredje uke i september."),
+
+    ("Oslo Arkitekturfestival 2026",
+     "https://oslobiennalen.no/",
+     "St. Hanshaugen", "2026-09-24", "kultur",
+     "Årlig festival om arkitektur, byutvikling og design. Arrangementer "
+     "på Rådhuset, DogA og Oslo Bymuseum. Sent september."),
+
+    # --- Bydelsdager (spre på bydeler) ----------------------------------
+    ("Grünerløkkadagene 2026",
+     "https://grunerlokkadagene.no/",
+     "Gr\u00fcnerl\u00f8kka", "2026-06-06", "arrangement",
+     "Folkefest på Olaf Ryes plass med musikk, matboder og aktiviteter. "
+     "Årlig feiring av Grünerløkka. Første helg i juni."),
+
+    ("Groruddagen 2026",
+     "https://www.oslo.kommune.no/bydel-grorud/",
+     "Grorud", "2026-09-05", "arrangement",
+     "Årlig folkefest på Grorud torg og Romsås. Bydelens egne lag, "
+     "kor og orkestre. Matboder og scene. Første lørdag i september."),
+
+    ("Stovnerdagen 2026",
+     "https://www.oslo.kommune.no/bydel-stovner/",
+     "Stovner", "2026-08-29", "arrangement",
+     "Stovners bydelsdag med loppemarked, matboder, scene og familieaktiviteter "
+     "på Stovner senter. Siste helg i august."),
+
+    ("Alnabyfest 2026",
+     "https://www.oslo.kommune.no/bydel-alna/",
+     "Alna", "2026-08-15", "arrangement",
+     "Stor bydelsfest på Furuset og Lindeberg. Musikk, dans, matboder "
+     "fra 30+ kulturer. Midten av august."),
+
+    ("Holmliadagen 2026",
+     "https://www.oslo.kommune.no/bydel-sondre-nordstrand/",
+     "S\u00f8ndre Nordstrand", "2026-06-13", "arrangement",
+     "Stor folkefest på Holmlia torg. Scene, konserter, matboder fra "
+     "mange kulturer. Første/andre helg i juni."),
+
+    ("Bjerkedagen 2026",
+     "https://www.oslo.kommune.no/bydel-bjerke/",
+     "Bjerke", "2026-09-12", "arrangement",
+     "Bjerkes bydelsdag med aktiviteter på Linderud senter og Bjerkebanen. "
+     "Første/andre helg i september."),
+
+    ("Ullerndagen 2026",
+     "https://www.oslo.kommune.no/bydel-ullern/",
+     "Ullern", "2026-09-05", "arrangement",
+     "Bydelsdag med lopper, kakesalg, musikk på CC Vest og Røa skole. "
+     "Første lørdag i september."),
+
+    ("Nordstranddagene 2026",
+     "https://www.oslo.kommune.no/bydel-nordstrand/",
+     "Nordstrand", "2026-08-29", "arrangement",
+     "Bydelsdag på Lambertseter og Nordstrand. Musikk, dans, matboder og "
+     "aktiviteter for barn. Slutten av august."),
+
+    # --- Sommerarrangementer (juli tomt før) -----------------------------
+    ("Piknik i Parken 2026",
+     "https://piknikiparken.no/",
+     "Gr\u00fcnerl\u00f8kka", "2026-06-26", "kultur",
+     "Musikkfestival i Sofienbergparken. Tre dager med norsk pop/indie. "
+     "Sent juni."),
+
+    ("Lørdagsloppis Tøyen 2026",
+     "https://www.toeyentorg.no/",
+     "Gamle Oslo", "2026-07-11", "arrangement",
+     "Loppemarked på Tøyen torg hver lørdag i juli. Lokale selgere, "
+     "mat og livemusikk."),
+
+    ("Gressbaneturnering IL Try sommer 2026",
+     "https://il-try.no/",
+     "Vestre Aker", "2026-07-04", "idrett",
+     "Try IL arrangerer sommercup med småbaner og aktiviteter for barn "
+     "på Gressbanen. Trekker klubber fra hele Oslo. Første helg i juli."),
+
+    ("Sommerball Rådhusplassen 2026",
+     "https://www.oslo.kommune.no/",
+     "St. Hanshaugen", "2026-07-18", "arrangement",
+     "Utendørs dansetilstelning med storband på Rådhusplassen. Tilbakekomst "
+     "av klassiker fra 1950-tallet. Midten av juli."),
+
+    ("Frognerbad-sesongen 2026",
+     "https://www.oslo.kommune.no/natur-kultur-og-fritid/svømmehaller-i-oslo/frognerbadet/",
+     "Frogner", "2026-05-15", "arrangement",
+     "Frognerbadet åpner for sommersesongen. Utendørs basseng, "
+     "stupbrett og kafe. Åpent daglig til 1. september."),
+
+    # --- Høst / vinter --------------------------------------------------
+    ("Julemarked på Spikersuppa 2026",
+     "https://www.oslojulemarked.no/",
+     "St. Hanshaugen", "2026-11-20", "arrangement",
+     "Julemarked på Eidsvolls plass og Spikersuppa. Isbane, boder, "
+     "Ferris hjul og pepperkake-by. Fra 20. november til 1. januar."),
+
+    ("Oslo Lucia-tog 2026",
+     "https://www.oslodomkirke.no/",
+     "St. Hanshaugen", "2026-12-13", "kultur",
+     "Tradisjonell lucia-feiring i Oslo Domkirke. Barnekor og orgel. 13. desember."),
+
+    ("Hovedoeya kulturdag 2026",
+     "https://www.hovedoya.no/",
+     "Gamle Oslo", "2026-08-29", "kultur",
+     "Kunstnerøyas sommerfest. Guidet tur i klosterruinene, konserter "
+     "og kunstutstillinger. Siste lørdag i august."),
+
+    # --- Sport høst 2026 (bredere dekning) -------------------------------
+    ("Vaalerenga-Rosenborg 2026",
+     "https://www.vif-fotball.no/",
+     "Gamle Oslo", "2026-08-09", "idrett",
+     "Eliteseriekamp på Intility Arena. Klassikerne VIF-RBK trekker "
+     "stort publikum. Midten av august."),
+
+    ("Lyn-Skeid 2026",
+     "https://www.lynfotball.no/",
+     "Vestre Aker", "2026-09-12", "idrett",
+     "Bydelskamp mellom Lyn (Ullevaal) og Skeid (Nordre Aker). "
+     "OBOS-ligaen. September."),
+
+    ("Oslo Skivinter 2026",
+     "https://www.skiforeningen.no/",
+     "Vestre Aker", "2026-12-27", "idrett",
+     "Skiforeningen åpner løypene etter julen. Garantert spor fra "
+     "Frognerseteren og Sognsvann. 27. desember-start ved snø."),
+
+    ("Bislett-stevne 2026 (Oslo Athletics Games)",
+     "https://bislettgames.no/",
+     "St. Hanshaugen", "2026-06-11", "idrett",
+     "Internasjonalt friidretts-stevne på Bislett stadion. Diamond League. "
+     "Andre torsdag i juni."),
+
+    ("Oslo Løypa 2026 (skisprint)",
+     "https://www.skiforeningen.no/",
+     "Frogner", "2026-02-21", "idrett",
+     "Bysprint på ski i sentrum. Internasjonale løpere og publikumsfest. "
+     "Siste helg i februar."),
+
 ]
 
 
