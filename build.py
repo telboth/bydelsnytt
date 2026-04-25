@@ -1658,6 +1658,8 @@ footer a { color: #1862a8; }
 }
 .story .meta { flex-wrap: wrap; align-items: center; gap: 4px 8px; }
 .story.is-hidden { display: none !important; }
+.bydel.is-hidden { display: none !important; }
+.upcoming-item.is-hidden { display: none !important; }
 
 /* Preferanse-knapp i header */
 .prefs-btn {
@@ -1694,19 +1696,27 @@ footer a { color: #1862a8; }
   background: #fff;
   border-radius: 8px;
   padding: 20px 22px;
-  max-width: 480px;
+  max-width: 560px;
   width: calc(100% - 40px);
-  max-height: 80vh;
+  max-height: 85vh;
   overflow-y: auto;
   box-shadow: 0 8px 32px rgba(0,0,0,0.2);
 }
 .prefs-modal h3 { margin-top: 0; }
+.prefs-modal h4 {
+  margin: 18px 0 6px; font-size: 14px;
+  color: #444; text-transform: uppercase; letter-spacing: 0.04em;
+}
 .prefs-modal-close {
   float: right; background: transparent; border: none;
   font-size: 22px; cursor: pointer; color: #888; line-height: 1;
 }
 .prefs-modal-close:hover { color: #b32a2a; }
-.prefs-hidden-list { list-style: none; padding: 0; margin: 12px 0; }
+.prefs-section { margin-bottom: 14px; }
+.prefs-section-hint {
+  color: #666; font-size: 13px; margin: 4px 0 8px;
+}
+.prefs-hidden-list { list-style: none; padding: 0; margin: 8px 0 12px; }
 .prefs-hidden-list li {
   display: flex; align-items: center; justify-content: space-between;
   padding: 8px 10px; border: 1px solid #eee; border-radius: 4px;
@@ -1719,9 +1729,23 @@ footer a { color: #1862a8; }
 }
 .prefs-hidden-list .unhide:hover { background: #154e85; }
 .prefs-empty {
-  color: #888; font-style: italic; padding: 12px;
+  color: #888; font-style: italic; padding: 8px 12px;
   background: #f8f8f8; border-radius: 4px; text-align: center;
+  font-size: 13px;
 }
+.prefs-checkbox-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 4px 12px;
+  margin: 4px 0 6px;
+}
+.prefs-checkbox-grid label {
+  display: flex; align-items: center; gap: 6px;
+  padding: 4px 6px; cursor: pointer; font-size: 13px;
+  border-radius: 4px;
+}
+.prefs-checkbox-grid label:hover { background: #f5f5f5; }
+.prefs-checkbox-grid input { margin: 0; }
 .prefs-modal .clear-all {
   margin-top: 8px; background: transparent; border: 1px solid #b32a2a;
   color: #b32a2a; padding: 5px 10px; border-radius: 4px; cursor: pointer;
@@ -2163,13 +2187,17 @@ SCRIPT = r"""
 })();
 
 (function() {
-  // Per-bruker preferanse: skjul saker fra bestemte kilder.
-  // Lagrer en liste av source_id i localStorage som bydelsnytt:hiddenSources.
+  // Per-bruker preferanser:
+  //   bydelsnytt:hiddenSources    – source_id -> visningsnavn
+  //   bydelsnytt:hiddenBydeler    – array av bydelsnavn
+  //   bydelsnytt:hiddenCategories – array av kategori-slugs
   var HS_KEY = 'bydelsnytt:hiddenSources';
+  var HB_KEY = 'bydelsnytt:hiddenBydeler';
+  var HC_KEY = 'bydelsnytt:hiddenCategories';
 
-  function load() {
+  function loadMap(key) {
     try {
-      var raw = window.localStorage.getItem(HS_KEY);
+      var raw = window.localStorage.getItem(key);
       if (!raw) return {};
       var arr = JSON.parse(raw);
       var map = {};
@@ -2186,16 +2214,37 @@ SCRIPT = r"""
     } catch (e) { return {}; }
   }
 
-  function save(map) {
+  function saveMap(key, map) {
     try {
       var arr = Object.keys(map).map(function(id) {
         return { id: id, name: map[id] };
       });
-      window.localStorage.setItem(HS_KEY, JSON.stringify(arr));
+      window.localStorage.setItem(key, JSON.stringify(arr));
     } catch (e) {}
   }
 
-  var hidden = load();
+  function loadSet(key) {
+    try {
+      var raw = window.localStorage.getItem(key);
+      if (!raw) return {};
+      var arr = JSON.parse(raw);
+      var set = {};
+      if (Array.isArray(arr)) {
+        arr.forEach(function(s) { if (typeof s === 'string') set[s] = true; });
+      }
+      return set;
+    } catch (e) { return {}; }
+  }
+
+  function saveSet(key, set) {
+    try {
+      window.localStorage.setItem(key, JSON.stringify(Object.keys(set)));
+    } catch (e) {}
+  }
+
+  var hiddenSources = loadMap(HS_KEY);
+  var hiddenBydeler = loadSet(HB_KEY);
+  var hiddenCats = loadSet(HC_KEY);
 
   // Bygg modal-DOM
   var modal = document.createElement('div');
@@ -2203,33 +2252,30 @@ SCRIPT = r"""
   modal.innerHTML = ''
     + '<div class="prefs-modal-content">'
     + '  <button class="prefs-modal-close" aria-label="Lukk">&times;</button>'
-    + '  <h3>Skjulte kilder</h3>'
-    + '  <p style="color:#666;font-size:14px;margin:4px 0 12px;">Saker fra disse kildene vises ikke. Klikk &laquo;Vis igjen&raquo; for &aring; reaktivere.</p>'
-    + '  <ul class="prefs-hidden-list" id="prefs-hidden-list"></ul>'
-    + '  <button class="clear-all" id="prefs-clear-all">Fjern alle skjulinger</button>'
+    + '  <h3>Preferanser</h3>'
+    + '  <div class="prefs-section">'
+    + '    <h4>Skjulte kilder</h4>'
+    + '    <p class="prefs-section-hint">Saker fra disse kildene vises ikke. Bruk &laquo;Vis igjen&raquo; for &aring; reaktivere.</p>'
+    + '    <ul class="prefs-hidden-list" id="prefs-hidden-list"></ul>'
+    + '  </div>'
+    + '  <div class="prefs-section">'
+    + '    <h4>Skjul bydeler</h4>'
+    + '    <p class="prefs-section-hint">Huk av bydeler du ikke vil se saker fra.</p>'
+    + '    <div class="prefs-checkbox-grid" id="prefs-bydel-grid"></div>'
+    + '  </div>'
+    + '  <div class="prefs-section">'
+    + '    <h4>Skjul kategorier</h4>'
+    + '    <p class="prefs-section-hint">Huk av kategorier du ikke vil se.</p>'
+    + '    <div class="prefs-checkbox-grid" id="prefs-cat-grid"></div>'
+    + '  </div>'
+    + '  <button class="clear-all" id="prefs-clear-all">Fjern alle preferanser</button>'
     + '</div>';
   document.body.appendChild(modal);
 
   var modalList = modal.querySelector('#prefs-hidden-list');
+  var bydelGrid = modal.querySelector('#prefs-bydel-grid');
+  var catGrid   = modal.querySelector('#prefs-cat-grid');
   var clearAllBtn = modal.querySelector('#prefs-clear-all');
-  var closeBtn = modal.querySelector('.prefs-modal-close');
-
-  function renderModalList() {
-    var ids = Object.keys(hidden);
-    if (ids.length === 0) {
-      modalList.innerHTML = '<li class="prefs-empty">Ingen kilder er skjult</li>';
-      clearAllBtn.style.display = 'none';
-      return;
-    }
-    clearAllBtn.style.display = '';
-    modalList.innerHTML = ids.map(function(id) {
-      var name = hidden[id] || id;
-      return '<li>'
-        + '<span class="src-name">' + escapeHtml(name) + '</span>'
-        + '<button class="unhide" data-src-id="' + escapeAttr(id) + '">Vis igjen</button>'
-        + '</li>';
-    }).join('');
-  }
 
   function escapeHtml(s) {
     return String(s).replace(/[&<>"']/g, function(c) {
@@ -2238,27 +2284,112 @@ SCRIPT = r"""
   }
   function escapeAttr(s) { return escapeHtml(s); }
 
-  function applyHidden() {
-    var stories = document.querySelectorAll('.story[data-source-id]');
-    stories.forEach(function(st) {
-      var srcId = st.dataset.sourceId;
-      if (srcId && hidden[srcId]) {
-        st.classList.add('is-hidden');
-      } else {
-        st.classList.remove('is-hidden');
+  // Hent komplette lister av bydeler og kategorier fra DOM
+  function discoverBydeler() {
+    var seen = {};
+    var out = [];
+    document.querySelectorAll('.bydel[data-name]').forEach(function(el) {
+      var n = el.dataset.name;
+      if (n && !seen[n]) { seen[n] = true; out.push(n); }
+    });
+    out.sort(function(a, b) { return a.localeCompare(b, 'no'); });
+    return out;
+  }
+
+  function discoverCategories() {
+    // Bruk eksisterende kategori-chips som autoritativ kilde for label/slug
+    var out = [];
+    var seen = {};
+    document.querySelectorAll('.cat-chip-input').forEach(function(cb) {
+      var slug = cb.value;
+      var label = cb.parentElement ? (cb.parentElement.textContent || '').trim() : slug;
+      if (slug && !seen[slug]) {
+        seen[slug] = true;
+        out.push({ slug: slug, label: label || slug });
       }
     });
-    // Re-trigger the global apply() to update bydel-tellere og no-results
-    var ev = new Event('change');
+    return out;
+  }
+
+  function renderModalList() {
+    var ids = Object.keys(hiddenSources);
+    if (ids.length === 0) {
+      modalList.innerHTML = '<li class="prefs-empty">Ingen kilder er skjult</li>';
+    } else {
+      modalList.innerHTML = ids.map(function(id) {
+        var name = hiddenSources[id] || id;
+        return '<li>'
+          + '<span class="src-name">' + escapeHtml(name) + '</span>'
+          + '<button class="unhide" data-src-id="' + escapeAttr(id) + '">Vis igjen</button>'
+          + '</li>';
+      }).join('');
+    }
+  }
+
+  function renderBydelGrid() {
+    var bs = discoverBydeler();
+    bydelGrid.innerHTML = bs.map(function(name) {
+      var checked = hiddenBydeler[name] ? ' checked' : '';
+      return '<label><input type="checkbox" class="prefs-bydel-cb" value="'
+        + escapeAttr(name) + '"' + checked + '> ' + escapeHtml(name) + '</label>';
+    }).join('');
+  }
+
+  function renderCatGrid() {
+    var cs = discoverCategories();
+    catGrid.innerHTML = cs.map(function(c) {
+      var checked = hiddenCats[c.slug] ? ' checked' : '';
+      return '<label><input type="checkbox" class="prefs-cat-cb" value="'
+        + escapeAttr(c.slug) + '"' + checked + '> ' + escapeHtml(c.label) + '</label>';
+    }).join('');
+  }
+
+  function applyHidden() {
+    // Stories: skjul hvis kilde, bydel eller kategori er skjult
+    var stories = document.querySelectorAll('.story');
+    stories.forEach(function(st) {
+      var srcId = st.dataset.sourceId;
+      var cat   = st.dataset.category;
+      // Bydel hentes fra parent <section class="bydel">
+      var section = st.closest('.bydel');
+      var bydel = section ? section.dataset.name : '';
+      var hide = false;
+      if (srcId && hiddenSources[srcId]) hide = true;
+      else if (cat && hiddenCats[cat]) hide = true;
+      else if (bydel && hiddenBydeler[bydel]) hide = true;
+      if (hide) st.classList.add('is-hidden');
+      else st.classList.remove('is-hidden');
+    });
+
+    // Skjul hele bydel-seksjoner (gjelder alle visninger – ogsaa naar
+    // bydel-filteret er paa "alle"). Det gir samme effekt for "min bydel"-
+    // markering og topp-saker som filtrerer mot DOM.
+    document.querySelectorAll('.bydel[data-name]').forEach(function(sec) {
+      if (hiddenBydeler[sec.dataset.name]) sec.classList.add('is-hidden');
+      else sec.classList.remove('is-hidden');
+    });
+
+    // Hva skjer fremover-elementer
+    document.querySelectorAll('.upcoming-item').forEach(function(li) {
+      var b = li.dataset.bydel;
+      var c = li.dataset.category;
+      var hide = (b && hiddenBydeler[b]) || (c && hiddenCats[c]);
+      if (hide) li.classList.add('is-hidden');
+      else li.classList.remove('is-hidden');
+    });
+
+    // Trigger re-apply av eksisterende filter for tellere/no-results
     var sel = document.getElementById('bydel-filter');
-    if (sel) sel.dispatchEvent(ev);
+    if (sel) sel.dispatchEvent(new Event('change'));
     updatePrefsButton();
   }
 
   function updatePrefsButton() {
     var btn = document.getElementById('open-prefs-btn');
     if (!btn) return;
-    var n = Object.keys(hidden).length;
+    var n = Object.keys(hiddenSources).length
+          + Object.keys(hiddenBydeler).length
+          + Object.keys(hiddenCats).length;
     var countEl = btn.querySelector('.prefs-btn-count');
     if (n === 0) {
       if (countEl) countEl.remove();
@@ -2283,10 +2414,10 @@ SCRIPT = r"""
       var name = btn.dataset.srcName || id;
       if (!id) return;
       var label = name || id;
-      var ok = window.confirm('Skjul alle saker fra "' + label + '"?\n\nDu kan reaktivere kilden via "Preferanser" øverst.');
+      var ok = window.confirm('Skjul alle saker fra "' + label + '"?\n\nDu kan reaktivere kilden via "Preferanser" \u00f8verst.');
       if (!ok) return;
-      hidden[id] = name;
-      save(hidden);
+      hiddenSources[id] = name;
+      saveMap(HS_KEY, hiddenSources);
       applyHidden();
       return;
     }
@@ -2294,9 +2425,9 @@ SCRIPT = r"""
     var unhideBtn = e.target.closest('.unhide');
     if (unhideBtn) {
       var rid = unhideBtn.dataset.srcId;
-      if (rid && hidden[rid]) {
-        delete hidden[rid];
-        save(hidden);
+      if (rid && hiddenSources[rid]) {
+        delete hiddenSources[rid];
+        saveMap(HS_KEY, hiddenSources);
         renderModalList();
         applyHidden();
       }
@@ -2307,6 +2438,8 @@ SCRIPT = r"""
     if (openBtn) {
       e.preventDefault();
       renderModalList();
+      renderBydelGrid();
+      renderCatGrid();
       modal.classList.add('open');
       return;
     }
@@ -2317,11 +2450,39 @@ SCRIPT = r"""
     }
   });
 
+  // Bydel-checkboxes
+  bydelGrid.addEventListener('change', function(e) {
+    var cb = e.target.closest('.prefs-bydel-cb');
+    if (!cb) return;
+    var name = cb.value;
+    if (cb.checked) hiddenBydeler[name] = true;
+    else delete hiddenBydeler[name];
+    saveSet(HB_KEY, hiddenBydeler);
+    applyHidden();
+  });
+
+  // Kategori-checkboxes
+  catGrid.addEventListener('change', function(e) {
+    var cb = e.target.closest('.prefs-cat-cb');
+    if (!cb) return;
+    var slug = cb.value;
+    if (cb.checked) hiddenCats[slug] = true;
+    else delete hiddenCats[slug];
+    saveSet(HC_KEY, hiddenCats);
+    applyHidden();
+  });
+
   clearAllBtn.addEventListener('click', function() {
-    if (!window.confirm('Reaktivere alle skjulte kilder?')) return;
-    hidden = {};
-    save(hidden);
+    if (!window.confirm('Fjern alle skjulte kilder, bydeler og kategorier?')) return;
+    hiddenSources = {};
+    hiddenBydeler = {};
+    hiddenCats = {};
+    saveMap(HS_KEY, hiddenSources);
+    saveSet(HB_KEY, hiddenBydeler);
+    saveSet(HC_KEY, hiddenCats);
     renderModalList();
+    renderBydelGrid();
+    renderCatGrid();
     applyHidden();
   });
 
@@ -2906,7 +3067,7 @@ def render_page(include_cowork_meta):
   <h1>Bydelsnytt Oslo</h1>
   <div class="subtitle">{esc(DATE_NO)} &middot; {total_stories} saker fra 15 bydeler &middot; {fresh_count} fersk{'' if fresh_count == 1 else 'e'} siste 24 timer</div>
   <div class="byline">Et lite prosjekt fra Thomas Elboth (<a href="mailto:t.elboth@gmail.com">t.elboth@gmail.com</a> eller jobb <a href="mailto:thomas.elboth@xlent.no">thomas.elboth@xlent.no</a>)</div>
-  <button id="open-prefs-btn" class="prefs-btn" type="button" title="Administrer skjulte kilder">&#9881; Preferanser</button>
+  <button id="open-prefs-btn" class="prefs-btn" type="button" title="Administrer preferanser (skjul kilder, bydeler, kategorier)">&#9881; Preferanser</button>
 </header>
 {health_banner_html}
 <div class="controls">

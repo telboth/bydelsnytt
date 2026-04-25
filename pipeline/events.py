@@ -899,6 +899,101 @@ EVENTS = [
      "Bysprint på ski i sentrum. Internasjonale løpere og publikumsfest. "
      "Siste helg i februar."),
 
+    # --- Hand-kurerte arrangementer for underdekte bydeler -----------------
+    # Sagene
+    ("Sagene kirke konsertserie 2026",
+     "https://kirken.no/sagene",
+     "Sagene", "2026-05-14", "kultur",
+     "Sagene kirke har konsertserie med klassisk og kor hver torsdag "
+     "kveld i mai-juni. Gratis inngang, kollekt ved utgangen."),
+
+    ("Iladalen sommerfest 2026",
+     "https://www.iladalenvel.no/",
+     "Sagene", "2026-06-13", "arrangement",
+     "Bydelsfest i Iladalen park med korps, loppemarked, kakebord og "
+     "leker for barn. Arrangeres av Iladalen vel andre lørdag i juni."),
+
+    ("Bjølsen kulturkirke - jazzkveld 2026",
+     "https://www.bjolsenkulturkirke.no/",
+     "Sagene", "2026-04-30", "kultur",
+     "Månedlig jazzkveld i Bjølsen kulturkirke med lokale band. "
+     "Siste torsdag i måneden, gratis adgang."),
+
+    ("Sagene torgs loppemarked 2026",
+     "https://www.facebook.com/Sagenetorg/",
+     "Sagene", "2026-05-09", "arrangement",
+     "Månedlig loppemarked på Sagene torg, andre lørdag fra mai til "
+     "september. Lokale selgere, mat og live musikk."),
+
+    # Stovner
+    ("Stovner bibliotek - barnetimen 2026",
+     "https://deichman.no/biblioteker/stovner",
+     "Stovner", "2026-04-28", "kultur",
+     "Hver tirsdag kl 11 leser bibliotekarene bøker for barn 1-5 år "
+     "på Stovner bibliotek. Gratis, drop-in."),
+
+    ("Stovner senter mat- og kulturmarked 2026",
+     "https://stovnersenter.no/",
+     "Stovner", "2026-05-23", "arrangement",
+     "Stort utendørs marked på Stovner senter med matboder fra 30+ "
+     "kulturer, dans og scene. Tredje lørdag i mai og september."),
+
+    ("Liastua skikurs for barn 2026",
+     "https://www.liaillagrend.no/",
+     "Stovner", "2026-12-12", "idrett",
+     "Skiforeningen og Lia IL holder skikurs for barn 4-10 år på "
+     "Liastua i Lillomarka. Andre lørdag i desember ved snøfall."),
+
+    ("Stovner kirke - barnekor 2026",
+     "https://kirken.no/stovner",
+     "Stovner", "2026-05-17", "kultur",
+     "Stovner kirkes barnekor opptrer på 17. mai med tradisjonelle "
+     "sanger. Familiegudstjeneste fra kl 11."),
+
+    # Bjerke
+    ("Linderud julemarked 2026",
+     "https://www.linderudsenter.no/",
+     "Bjerke", "2026-11-28", "arrangement",
+     "Tradisjonelt julemarked på Linderud senter med boder, glogg, "
+     "barneaktiviteter og julenisse. Første helg i adventstiden."),
+
+    ("Veitvet senter aktivitetsdag 2026",
+     "https://www.veitvetsenter.no/",
+     "Bjerke", "2026-09-19", "arrangement",
+     "Høstfest på Veitvet senter med musikk, mat og leker for barn. "
+     "Tredje lørdag i september."),
+
+    ("Refstad allmenningsfest 2026",
+     "https://www.refstadvel.no/",
+     "Bjerke", "2026-08-22", "arrangement",
+     "Sommerfest på Refstad allmenning med grilling, korps og "
+     "fellestilstelning. Arrangeres av Refstad vel siste helg i august."),
+
+    ("Bjerke Travbane - V75 søndag 2026",
+     "https://www.bjerketravbane.no/",
+     "Bjerke", "2026-05-03", "idrett",
+     "V75-søndager på Bjerke travbane med Norges største travløp. "
+     "Familieaktiviteter, mat og publikumsadgang fra kl 12."),
+
+    # Ullern
+    ("Ullern kulturhus - kammerkonsert 2026",
+     "https://www.ullernkulturhus.no/",
+     "Ullern", "2026-05-09", "kultur",
+     "Månedlige kammerkonserter på Ullern kulturhus med musikere fra "
+     "Oslo Filharmonien. Andre lørdag i måneden."),
+
+    ("Bestum vel sommerfest 2026",
+     "https://www.bestumvel.no/",
+     "Ullern", "2026-06-20", "arrangement",
+     "Bestum vels årlige sommerfest på Bestum skole. Korps, kakesalg, "
+     "tombola og leker. Tredje lørdag i juni."),
+
+    ("Skøyen Lions loppemarked 2026",
+     "https://www.lions.no/",
+     "Ullern", "2026-04-25", "arrangement",
+     "Skøyen Lions arrangerer loppemarked på Skøyen skole vår og høst. "
+     "Inntekter går til lokale veldedige formål."),
+
 ]
 
 
