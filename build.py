@@ -2112,34 +2112,78 @@ SCRIPT = r"""
     });
   } catch (e) {}
 
-  // "NYTT siden sist"-badge: merker saker som er dukket opp i cachen etter
-  // brukerens forrige besøk. Lagrer en timestamp per nettleser i localStorage
-  // slik at hver bruker ser sine egne nyheter.
+  // "Siden sist"-badge: merker saker som er dukket opp i cachen etter
+  // brukerens forrige besoek. Personlig pr nettleser via localStorage.
+  // Multi-bydel-aware: hvis brukeren har pinnet bydeler, vises "i dine bydeler".
   try {
     var KEY = 'bydelsnytt:lastVisit';
     var lastVisit = null;
     try { lastVisit = window.localStorage.getItem(KEY); } catch (e) {}
+
+    // Hent pinnede bydeler (samme noekkel som multi-bydel-IIFE-en)
+    var pinnedSet = {};
+    try {
+      var rawP = window.localStorage.getItem('bydelsnytt:myBydeler');
+      if (rawP) {
+        var arrP = JSON.parse(rawP);
+        if (Array.isArray(arrP)) arrP.forEach(function(n) { if (n) pinnedSet[n] = true; });
+      }
+    } catch (e) {}
+    var hasPinned = Object.keys(pinnedSet).length > 0;
+
+    // Formater previous-visit som "21. apr" hvis tilgjengelig
+    var MONTHS_NO = ['jan','feb','mar','apr','mai','jun','jul','aug','sep','okt','nov','des'];
+    var sinceLabel = '';
+    if (lastVisit) {
+      var d = new Date(lastVisit);
+      if (!isNaN(d.getTime())) {
+        sinceLabel = d.getDate() + '. ' + MONTHS_NO[d.getMonth()];
+      }
+    }
+
     var stories = document.querySelectorAll('.story[data-first-seen]');
-    var newCount = 0;
+    var newTotal = 0;
+    var newPinned = 0;
     stories.forEach(function(st) {
       var fs = st.dataset.firstSeen;
       if (!fs) return;
       if (lastVisit && fs <= lastVisit) return;
       var badge = st.querySelector('.new-badge');
       if (badge) {
+        badge.textContent = sinceLabel ? ('Siden ' + sinceLabel) : 'Nytt';
         badge.hidden = false;
-        newCount++;
+        // Skjul 24t-pillen for aa unngaa dobbel-badging
+        var newsPill = st.querySelector('.news-badge');
+        if (newsPill) newsPill.style.display = 'none';
+      }
+      newTotal++;
+      // Sjekk om saken ligger i en pinnet bydel
+      var section = st.closest('section[data-name]');
+      if (section && pinnedSet[section.dataset.name]) {
+        newPinned++;
       }
     });
-    // Oppdater timestamp noen sekunder etter at siden er lastet,
-    // slik at brukeren rekker å se badgene før de "forsvinner" neste gang
+
+    // Oppdater lastVisit etter 3s slik at brukeren rekker aa se badgene
     setTimeout(function() {
       try { window.localStorage.setItem(KEY, new Date().toISOString()); } catch (e) {}
     }, 3000);
-    if (newCount > 0) {
+
+    // Header-summary: foretrekker pinnede bydeler hvis brukeren har valgt noen
+    var summaryText = '';
+    if (hasPinned && newPinned > 0) {
+      summaryText = 'Du har ' + newPinned + ' ny' + (newPinned === 1 ? '' : 'e')
+        + ' sak' + (newPinned === 1 ? '' : 'er') + ' i dine bydeler';
+      if (sinceLabel) summaryText += ' siden ' + sinceLabel;
+    } else if (newTotal > 0) {
+      summaryText = newTotal + ' ny' + (newTotal === 1 ? '' : 'e')
+        + ' sak' + (newTotal === 1 ? '' : 'er');
+      summaryText += sinceLabel ? (' siden ' + sinceLabel) : ' siden sist';
+    }
+    if (summaryText) {
       var tag = document.createElement('div');
       tag.className = 'new-summary';
-      tag.textContent = newCount + ' ny' + (newCount === 1 ? '' : 'e') + ' sak' + (newCount === 1 ? '' : 'er') + ' siden sist';
+      tag.textContent = summaryText;
       var header = document.querySelector('header');
       if (header) header.appendChild(tag);
     }
