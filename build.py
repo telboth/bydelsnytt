@@ -3324,6 +3324,9 @@ def render_page(include_cowork_meta):
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Bydelsnytt Oslo &ndash; {esc(DATE_NO)}</title>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#1862a8">
+<link rel="icon" type="image/svg+xml" href="icon.svg">
 <style>{STYLE}</style>
 </head>
 <body>
@@ -3397,6 +3400,13 @@ def render_page(include_cowork_meta):
     }})
     .catch(function() {{ el.parentNode.style.display = 'none'; }});
 }})();
+</script>
+<script>
+if ('serviceWorker' in navigator) {{
+  window.addEventListener('load', function() {{
+    navigator.serviceWorker.register('sw.js').catch(function(){{}});
+  }});
+}}
 </script>
 </body>
 </html>
