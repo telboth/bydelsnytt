@@ -614,27 +614,6 @@ footer { color: var(--bn-muted); border-top-color: var(--bn-border); }
 </header>
 
 <div class="controls">
-  <div>
-    <label for="bydel-filter">Bydel</label>
-    <select id="bydel-filter">
-      <option value="Vestre Aker" selected>Vestre Aker</option>
-      <option value="all">Alle bydeler</option>
-      <option value="Alna">Alna</option>
-      <option value="Bjerke">Bjerke</option>
-      <option value="Frogner">Frogner</option>
-      <option value="Gamle Oslo">Gamle Oslo</option>
-      <option value="Grorud">Grorud</option>
-      <option value="Grünerløkka">Grünerløkka</option>
-      <option value="Nordre Aker">Nordre Aker</option>
-      <option value="Nordstrand">Nordstrand</option>
-      <option value="Sagene">Sagene</option>
-      <option value="St. Hanshaugen">St. Hanshaugen</option>
-      <option value="Stovner">Stovner</option>
-      <option value="Søndre Nordstrand">Søndre Nordstrand</option>
-      <option value="Ullern">Ullern</option>
-      <option value="Østensjø">Østensjø</option>
-    </select>
-  </div>
   <div style="grid-column: 1 / -1;">
     <label>Kategori <span style="font-weight:400;text-transform:none;color:#777;">(klikk for å vise/skjule)</span></label>
     <div class="cat-chips" id="cat-chips">
@@ -11868,7 +11847,7 @@ footer { color: var(--bn-muted); border-top-color: var(--bn-border); }
 <div id="no-results" class="no-results" style="display:none;">Ingen saker matcher filtrene dine. Prøv å huke av flere kategorier eller endre Bydel/Periode.</div>
 </main>
 <footer>
-  Sist oppdatert 2026-04-25T13:27:12+02:00. Oppdateres daglig 08:01.
+  Sist oppdatert 2026-04-25T13:33:17+02:00. Oppdateres daglig 08:01.
   Kilde: automatiske RSS-feeds (Oslo kommune, Groruddalen, NRK Oslo/Viken) + håndkuratert innhold fra skoler og idrettslag.
   <br>
   <a href="feed.xml">RSS-feed</a> · <a href="weekly/">Ukesarkiv</a> · Live: <a href="https://telboth.github.io/bydelsnytt/">telboth.github.io/bydelsnytt</a>.
@@ -11947,7 +11926,7 @@ footer { color: var(--bn-muted); border-top-color: var(--bn-border); }
   }
 
   function apply() {
-    var bv = selBydel.value;
+    var bv = selBydel ? selBydel.value : 'all';
     var cats = getCheckedCats();
     var pv = selPer.value;
     var q  = (search.value || '').toLowerCase().trim();
@@ -12842,7 +12821,8 @@ footer { color: var(--bn-muted); border-top-color: var(--bn-border); }
   }
 
   function refreshMap() {
-    var selBydel = document.getElementById('bydel-filter').value;
+    var elBydel = document.getElementById('bydel-filter');
+    var selBydel = elBydel ? elBydel.value : 'all';
     var cats = getCheckedCats();
     allMarkers.forEach(function(m) {
       var p = m._bydelsnytt;

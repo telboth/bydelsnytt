@@ -1932,7 +1932,7 @@ SCRIPT = r"""
   }
 
   function apply() {
-    var bv = selBydel.value;
+    var bv = selBydel ? selBydel.value : 'all';
     var cats = getCheckedCats();
     var pv = selPer.value;
     var q  = (search.value || '').toLowerCase().trim();
@@ -2828,7 +2828,8 @@ MAP_SCRIPT = r"""
   }
 
   function refreshMap() {
-    var selBydel = document.getElementById('bydel-filter').value;
+    var elBydel = document.getElementById('bydel-filter');
+    var selBydel = elBydel ? elBydel.value : 'all';
     var cats = getCheckedCats();
     allMarkers.forEach(function(m) {
       var p = m._bydelsnytt;
@@ -3326,14 +3327,6 @@ def render_page(include_cowork_meta):
     if include_cowork_meta:
         meta_tag = f'<script type="application/json" id="cowork-artifact-meta">\n{json.dumps(COWORK_META, ensure_ascii=False, indent=2)}\n</script>\n'
 
-    bydel_options = ['<option value="Vestre Aker" selected>Vestre Aker</option>']
-    bydel_options.append('<option value="all">Alle bydeler</option>')
-    for b in BYDELER:
-        if b["name"] == "Vestre Aker":
-            continue
-        bydel_options.append(f'<option value="{esc(b["name"])}">{esc(b["name"])}</option>')
-    bydel_options_html = "\n      ".join(bydel_options)
-
     cat_chips = []
     for key, label in CATEGORIES:
         cat_chips.append(
@@ -3388,12 +3381,6 @@ def render_page(include_cowork_meta):
 </header>
 {health_banner_html}
 <div class="controls">
-  <div>
-    <label for="bydel-filter">Bydel</label>
-    <select id="bydel-filter">
-      {bydel_options_html}
-    </select>
-  </div>
   <div style="grid-column: 1 / -1;">
     <label>Kategori <span style="font-weight:400;text-transform:none;color:#777;">(klikk for å vise/skjule)</span></label>
     <div class="cat-chips" id="cat-chips">
