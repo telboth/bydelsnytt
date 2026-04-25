@@ -1752,6 +1752,14 @@ footer a { color: #1862a8; }
   font-size: 12px;
 }
 .prefs-modal .clear-all:hover { background: #b32a2a; color: #fff; }
+.about-modal-content p { line-height: 1.55; color: #333; margin: 8px 0 12px; }
+.about-modal-content .about-link { color: #0a66c2; text-decoration: none; font-weight: 500; }
+.about-modal-content .about-link:hover { text-decoration: underline; }
+.about-modal-content ul.about-stack {
+  list-style: disc; padding-left: 20px; margin: 4px 0 12px;
+  color: #444; font-size: 14px;
+}
+.about-modal-content ul.about-stack li { margin: 2px 0; }
 """
 
 SCRIPT = r"""
@@ -2497,6 +2505,50 @@ SCRIPT = r"""
   applyHidden();
   updatePrefsButton();
 })();
+
+(function() {
+  // Om denne siden-modal.
+  var modal = document.createElement('div');
+  modal.className = 'prefs-modal about-modal';
+  modal.innerHTML = ''
+    + '<div class="prefs-modal-content about-modal-content">'
+    + '  <button class="prefs-modal-close" aria-label="Lukk">&times;</button>'
+    + '  <h3>Om denne siden</h3>'
+    + '  <p>Bydelsnytt Oslo samler nyheter og hendelser fra alle 15 bydeler i Oslo p\u00e5 ett sted. '
+    + 'Sakene hentes automatisk fra lokalaviser, bydelssider, kommunens kunngj\u00f8ringer, idrettslag, '
+    + 'kulturhus og kalendertjenester. En liten algoritme klassifiserer dem i kategorier som politikk, '
+    + 'skole, idrett, trafikk og arrangement, og pinner dem p\u00e5 kartet n\u00e5r vi kjenner stedet.</p>'
+    + '  <p>Pipelinen kj\u00f8rer hver morgen og oppdaterer feeden. Du kan filtrere p\u00e5 bydel, kategori og '
+    + 'periode, s\u00f8ke i innholdet, og bruke <strong>Preferanser</strong> til \u00e5 skjule kilder, bydeler '
+    + 'eller kategorier du ikke vil se. Valgene dine lagres lokalt i nettleseren.</p>'
+    + '  <p>Denne websiden er laget av Thomas Elboth. Den er et lite hobbyprosjekt for \u00e5 se hva en '
+    + 'kan utvikle ved hjelp av moderne kodeverkt\u00f8y. '
+    + '<a class="about-link" href="' + 'https://www.linkedin.com/in/thomas-elboth/' + '" target="_blank" rel="noopener">Se min LinkedIn-profil</a>.</p>'
+    + '  <p style="font-size:13px;color:#666;">Kildekoden ligger \u00e5pent p\u00e5 '
+    + '<a class="about-link" href="https://github.com/telboth/bydelsnytt" target="_blank" rel="noopener">GitHub</a>. '
+    + 'Funnet feil eller noe som mangler? Send en e-post til '
+    + '<a class="about-link" href="mailto:t.elboth@gmail.com">t.elboth@gmail.com</a>.</p>'
+    + '</div>';
+  document.body.appendChild(modal);
+
+  document.addEventListener('click', function(e) {
+    var openBtn = e.target.closest('#open-about-btn');
+    if (openBtn) {
+      e.preventDefault();
+      modal.classList.add('open');
+      return;
+    }
+    if (e.target === modal || (modal.classList.contains('open') && e.target.closest('.about-modal .prefs-modal-close'))) {
+      modal.classList.remove('open');
+    }
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && modal.classList.contains('open')) {
+      modal.classList.remove('open');
+    }
+  });
+})();
 """
 
 MAP_SCRIPT = r"""
@@ -3068,6 +3120,7 @@ def render_page(include_cowork_meta):
   <div class="subtitle">{esc(DATE_NO)} &middot; {total_stories} saker fra 15 bydeler &middot; {fresh_count} fersk{'' if fresh_count == 1 else 'e'} siste 24 timer</div>
   <div class="byline">Et lite prosjekt fra Thomas Elboth (<a href="mailto:t.elboth@gmail.com">t.elboth@gmail.com</a> eller jobb <a href="mailto:thomas.elboth@xlent.no">thomas.elboth@xlent.no</a>)</div>
   <button id="open-prefs-btn" class="prefs-btn" type="button" title="Administrer preferanser (skjul kilder, bydeler, kategorier)">&#9881; Preferanser</button>
+  <button id="open-about-btn" class="prefs-btn" type="button" title="Om denne siden">&#9432; Om denne siden</button>
 </header>
 {health_banner_html}
 <div class="controls">
