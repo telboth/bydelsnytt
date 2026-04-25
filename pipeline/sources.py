@@ -160,6 +160,46 @@ RSS_SOURCES = [
         "resolver": "fixed_bydel",
     },
     {
+        "id": "sageneif",
+        "name": "Sagene IF",
+        "url": "https://sageneif.no/rss-feed",
+        "bydel": "Sagene",
+        "weight": 0.5,
+        "resolver": "fixed_bydel",
+    },
+    {
+        "id": "heming",
+        "name": "Heming",
+        "url": "https://www.heming.no/feed/",
+        "bydel": "Vestre Aker",
+        "weight": 0.5,
+        "resolver": "fixed_bydel",
+    },
+    {
+        "id": "lyn1896",
+        "name": "Lyn Fotball",
+        "url": "https://www.lyn1896.no/rss-nyheter",
+        "bydel": "Nordre Aker",
+        "weight": 0.5,
+        "resolver": "fixed_bydel",
+    },
+    {
+        "id": "skeid",
+        "name": "Skeid",
+        "url": "https://www.skeid.no/rss-nyheter",
+        "bydel": "Sagene",
+        "weight": 0.5,
+        "resolver": "fixed_bydel",
+    },
+    {
+        "id": "ltsk",
+        "name": "Lille T\u00f8yen SK",
+        "url": "https://ltsk.no/wp/feed/",
+        "bydel": "Gamle Oslo",
+        "weight": 0.5,
+        "resolver": "fixed_bydel",
+    },
+    {
         "id": "ofa",
         "name": "OFA — Oslomarkas Fiskeadministrasjon",
         "url": "https://ofa.no/feed/",
@@ -244,6 +284,15 @@ RSS_SOURCES = [
 ]
 
 HTML_SOURCES = [
+    {
+        "id": "kjelsaas",
+        "name": "Kjels\u00e5s IL",
+        "scraper": "kjelsaas",
+        "bydel": "Nordre Aker",
+        "urls": ["https://www.kjelsaas.no/"],
+        "limit": 12,
+        "weight": 0.5,
+    },
     {
         "id": "iltry",
         "name": "IL Try",

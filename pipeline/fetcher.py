@@ -1016,6 +1016,72 @@ def fetch_from_html_akersposten(source: dict):
                 return
 
 
+def fetch_from_html_kjelsaas(source: dict) -> Iterable[RawStory]:
+    """Scrape Kjelsaas IL — custom blog-CMS via /next/blog/post/."""
+    import re, urllib.parse, html as _html
+    base = source["urls"][0]
+    body = _fetch_html(base)
+    if not body:
+        return
+    # Click-URLer paa formen /next/blog/click?id=NN&url=ENCODED_POST_URL
+    clicks = re.findall(
+        r'/next/blog/click\?id=\d+(?:&amp;|&)url=([^"\']+)', body
+    )
+    seen: set[str] = set()
+    posts: list[str] = []
+    for raw in clicks:
+        decoded = urllib.parse.unquote(raw.replace('&amp;', '&'))
+        m = re.search(r'/next/blog/post/(\d+)/([\w\-]+)', decoded)
+        if not m:
+            continue
+        pid = m.group(1)
+        if pid in seen:
+            continue
+        seen.add(pid)
+        full_url = 'https://www.kjelsaas.no/next/blog/post/' + pid + '/' + m.group(2)
+        posts.append(full_url)
+    limit = source.get("limit", 12)
+    posts = posts[:limit]
+    bydel = source.get("bydel", "Nordre Aker")
+    for url in posts:
+        page = _fetch_html(url)
+        if not page:
+            continue
+        def _meta(prop: str) -> str:
+            mm = re.search(
+                r'<meta\s+(?:name|property)="' + re.escape(prop)
+                + r'"\s+content="([^"]*)"', page
+            )
+            return _html.unescape(mm.group(1)).strip() if mm else ""
+        title = _meta("og:title") or _meta("twitter:title")
+        if not title:
+            t = re.search(r'<title[^>]*>([^<]+)</title>', page)
+            title = _html.unescape(t.group(1)).strip() if t else ""
+        if not title:
+            continue
+        summary = _clean_summary(_meta("og:description") or _meta("description"))
+        image = _meta("og:image")
+        # Dato: Kjelsaas eksponerer ikke pubDate. Bruk image-URL-mønstret
+        # /froala/.../YYYY/M/D/... naar tilgjengelig, ellers tom string.
+        date_iso = ""
+        if image:
+            mm = re.search(r'/(\d{4})/(\d{1,2})/(\d{1,2})/', image)
+            if mm:
+                yy, mo, dd = mm.group(1), mm.group(2).zfill(2), mm.group(3).zfill(2)
+                date_iso = yy + '-' + mo + '-' + dd
+        yield RawStory(
+            id=_make_id(url, title),
+            bydel=bydel,
+            title=title,
+            url=url,
+            source=source.get("name", source["id"]),
+            source_id=source["id"],
+            published_iso=date_iso,
+            date_iso=date_iso,
+            summary=summary,
+        )
+
+
 SCRAPERS = {
     "iltry": fetch_from_html_iltry,
     "kondis": fetch_from_html_kondis,
@@ -1028,6 +1094,7 @@ SCRAPERS = {
     "bym-kunngjoringer": fetch_from_html_bym_kunngjoringer,
     "skiforeningen": fetch_from_html_skiforeningen,
     "akersposten": fetch_from_html_akersposten,
+    "kjelsaas": fetch_from_html_kjelsaas,
 }
 
 

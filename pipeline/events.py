@@ -994,6 +994,59 @@ EVENTS = [
      "Skøyen Lions arrangerer loppemarked på Skøyen skole vår og høst. "
      "Inntekter går til lokale veldedige formål."),
 
+    # --- Alpinbakker / vinterarenaer ---------------------------------------
+    ("Oslo Vinterpark (Tryvann) — sesongåpning",
+     "https://www.oslovinterpark.no/",
+     "Marka", "2026-12-12", "idrett",
+     "Oslos største alpinanlegg åpner for sesongen 2026/27. 18 nedfarter, snø-park, 13 heiser. Vanligvis åpning andre helg i desember når snøforholdene tillater."),
+
+    ("Wyllerløkka — sesongåpning",
+     "https://wyller.no/",
+     "Vestre Aker", "2026-12-19", "idrett",
+     "Wyllerløkka alpinanlegg ved Holmenkollen åpner for ny vintersesong. Familievennlig anlegg med skiskole, skileie og kveldskjøring."),
+
+    ("Grefsenkollen alpinanlegg — sesongstart",
+     "https://grefsenkollenalpin.no/",
+     "Nordre Aker", "2026-12-26", "idrett",
+     "Grefsenkollen alpinanlegg åpner typisk i romjulen. Bynære nedfarter med utsikt over Oslofjorden. Kveldsåpent og lysløyper i tilkobling."),
+
+    ("Trollvann lysløype — sesongåpning",
+     "https://trollvannlysloype.no/",
+     "Nordre Aker", "2026-12-15", "idrett",
+     "Lysløypa rundt Trollvann åpner for sesongen når snøen kommer. 2,5 km flat sløyfe perfekt for nybegynnere og barn. Helt opplyst om kvelden."),
+
+    ("Linderudkollen skistadion — vintersesong",
+     "https://linderudkollen.no/",
+     "Bjerke", "2026-12-12", "idrett",
+     "Linderudkollen skistadion i Lillomarka åpner ski- og biathlon-anlegget når snøforholdene tillater. Kunstsnø brukes ved behov. Renn og treninger."),
+
+    # --- Ishaller / hockey-arenaer ----------------------------------------
+    ("Jordal Amfi — Vålerenga Hockey sluttspill",
+     "https://vif-hockey.no/",
+     "Gamle Oslo", "2026-04-30", "idrett",
+     "Vålerenga Ishockey spiller hjemmekamper i Jordal Amfi. Sjekk kampoppsett for vårens sluttspill og høstens seriestart i september."),
+
+    ("Manglerud Star — sesongstart hockey",
+     "https://www.manglerudstar.no/",
+     "Østensjø", "2026-09-15", "idrett",
+     "Manglerud Star Ishall er hjemmebanen til Manglerud Star Hockey. Sesongstart i 1. divisjon i midten av september."),
+
+    ("Furuset Forum — isidrett",
+     "https://furusethockey.no/",
+     "Alna", "2026-09-20", "idrett",
+     "Furuset Forum huser Furuset Hockey. Sesongåpning seriespill tredje helg i september. Kveldsskøyteis åpen for publikum gjennom hele sesongen."),
+
+    # --- Klatre- og urbansport-haller -------------------------------------
+    ("Klatreverket Løren",
+     "https://klatreverket.no/loren/",
+     "Grünerløkka", "2026-04-26", "idrett",
+     "Klatreverket Løren er en av Oslos største klatresentre. Tau- og buldreklatring, kurser og barneklubber. Åpent daglig hele året."),
+
+    ("Vulkan Klatresenter",
+     "https://vulkanklatresenter.no/",
+     "Grünerløkka", "2026-04-26", "idrett",
+     "Klatresenter på Vulkan i Grünerløkka. Buldring og topptau, caféområde. Populært for både nybegynnere og erfarne klatrere."),
+
 ]
 
 

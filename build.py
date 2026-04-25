@@ -3118,6 +3118,49 @@ def _is_blacklisted_image(url: str) -> bool:
     return False
 
 
+# Standard orientering-symbol (IOF kontroll-marker) — public domain.
+# 188-byte SVG inlinet som data URI. Brukes som fallback for o-loep-saker.
+_ORIENTEERING_SVG_DATA_URI = (
+    "data:image/svg+xml;base64,"
+    "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2Zy"
+    "B4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1"
+    "MDAiIGhlaWdodD0iNTAwIj4KPHBhdGggZD0iTTUwMiwwSDBWNTAyIiBmaW"
+    "xsPSIjRkZGIi8+CjxwYXRoIGQ9Ik0wLDUwMEg1MDBWMCIgZmlsbD0iI0Y3"
+    "NkQyMiIvPgo8L3N2Zz4="
+)
+
+_ORIENTEERING_KEYWORDS = (
+    "o-l\u00f8p",
+    "o-loep",
+    "orienteringsl\u00f8p",
+    "orienteringsloep",
+    "orientering ",
+    "orientering:",
+    "n\u00e6rl\u00f8p",
+    "naerloep",
+    "kontrollpost",
+    "stafett-orientering",
+    "rankingl\u00f8p",
+    "rankingloep",
+    "kart og kompass",
+)
+
+
+def _is_orienteering(story) -> bool:
+    """Sjekk om en sak handler om orientering (o-loep)."""
+    title = (story.get("title") or "").lower()
+    summary = (story.get("summary") or "").lower()
+    cat = (story.get("category") or "").lower()
+    text = title + " " + summary
+    for kw in _ORIENTEERING_KEYWORDS:
+        if kw in text:
+            return True
+    # Hvis tittelen starter med "Orientering:" (vi har mange slike events)
+    if title.startswith("orientering"):
+        return True
+    return False
+
+
 def render_story(story, bydel_name=""):
     fresh = is_fresh(story)
     badge = ' <span class="news-badge">news</span>' if fresh else ""
@@ -3160,6 +3203,9 @@ def render_story(story, bydel_name=""):
     img_url = story.get("image_url") or ""
     if _is_blacklisted_image(img_url):
         img_url = ""
+    # Fallback: bruk orienteringssymbol for o-loep-saker uten bilde
+    if not img_url and _is_orienteering(story):
+        img_url = _ORIENTEERING_SVG_DATA_URI
     thumb_html = ""
     if img_url:
         thumb_html = (
@@ -3335,6 +3381,8 @@ def _render_topp_saker(bydeler_list, today_iso):
         img_url = s.get("image_url") or ""
         if _is_blacklisted_image(img_url):
             img_url = ""
+        if not img_url and _is_orienteering(s):
+            img_url = _ORIENTEERING_SVG_DATA_URI
         img_html = ""
         if img_url:
             img_html = (
