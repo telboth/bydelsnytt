@@ -1549,6 +1549,15 @@ a.story-ics {
 @media (max-width: 540px) {
   .story.has-thumb { grid-template-columns: 88px 1fr; gap: 10px; }
 }
+/* To-kolonners desktop-visning naar bruker har valgt det i Preferanser */
+@media (min-width: 768px) {
+  body.two-cols .bydel {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 14px;
+  }
+  body.two-cols .bydel h2 { grid-column: 1 / -1; }
+}
 .story h3 {
   margin: 0 0 6px 0; font-size: 15px; font-weight: 600;
   display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
@@ -2454,6 +2463,10 @@ SCRIPT = r"""
     + '    <p class="prefs-section-hint">Hak av kategoriene du vil se. Alle er p&aring; som standard.</p>'
     + '    <div class="prefs-checkbox-grid" id="prefs-cat-grid"></div>'
     + '  </div>'
+    + '  <div class="prefs-section">'
+    + '    <h4>Visning</h4>'
+    + '    <label><input type="checkbox" id="prefs-two-cols"> Vis saker i to kolonner (kun desktop)</label>'
+    + '  </div>'
     + '  <button class="clear-all" id="prefs-clear-all">Fjern alle preferanser</button>'
     + '</div>';
   document.body.appendChild(modal);
@@ -2663,13 +2676,16 @@ SCRIPT = r"""
   });
 
   clearAllBtn.addEventListener('click', function() {
-    if (!window.confirm('Fjern alle skjulte kilder, bydeler og kategorier?')) return;
+    if (!window.confirm('Fjern alle preferanser (skjulte kilder/bydeler/kategorier + 2-kolonner)?')) return;
     hiddenSources = {};
     hiddenBydeler = {};
     hiddenCats = {};
     saveMap(HS_KEY, hiddenSources);
     saveSet(HB_KEY, hiddenBydeler);
     saveSet(HC_KEY, hiddenCats);
+    try { window.localStorage.removeItem(TC_KEY); } catch (e) {}
+    applyTwoCols(false);
+    syncTwoColsCheckbox();
     renderModalList();
     renderBydelGrid();
     renderCatGrid();
@@ -2683,8 +2699,34 @@ SCRIPT = r"""
     }
   });
 
+  // Two-cols (desktop) preferanse: lagrer som '1' / '0' i localStorage
+  var TC_KEY = 'bydelsnytt:twoCols';
+  function readTwoCols() {
+    try { return window.localStorage.getItem(TC_KEY) === '1'; } catch (e) { return false; }
+  }
+  function applyTwoCols(on) {
+    if (on) document.body.classList.add('two-cols');
+    else document.body.classList.remove('two-cols');
+  }
+  function syncTwoColsCheckbox() {
+    var cb = modal.querySelector('#prefs-two-cols');
+    if (cb) cb.checked = readTwoCols();
+  }
+  modal.addEventListener('change', function(e) {
+    var cb = e.target.closest('#prefs-two-cols');
+    if (!cb) return;
+    try { window.localStorage.setItem(TC_KEY, cb.checked ? '1' : '0'); } catch (e2) {}
+    applyTwoCols(cb.checked);
+  });
+  // Sett checkbox-state hver gang modalen aapnes
+  var origOpenBtn = document.getElementById('open-prefs-btn');
+  if (origOpenBtn) {
+    origOpenBtn.addEventListener('click', function() { setTimeout(syncTwoColsCheckbox, 0); });
+  }
+
   // Initial filtrering ved sidelasting
   applyHidden();
+  applyTwoCols(readTwoCols());
   updatePrefsButton();
 })();
 
