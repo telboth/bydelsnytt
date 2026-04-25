@@ -1218,6 +1218,7 @@ def _ingest_cache(bydeler_list):
         story = {
             "title": s.get("title", ""),
             "source": s.get("source", ""),
+            "source_id": s.get("source_id", ""),
             "date": display_date,
             "date_iso": s.get("date_iso"),
             "category": s.get("category", "annet"),
@@ -1632,6 +1633,101 @@ footer a { color: #1862a8; }
 @media (max-width: 600px) {
   body { padding: 16px; }
 }
+/* Per-bruker skjul-kilde --------------------------------- */
+.hide-src-btn {
+  background: transparent;
+  border: 1px solid #d6d6d6;
+  color: #888;
+  font-size: 14px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+.hide-src-btn:hover {
+  background: #f0f0f0;
+  color: #1862a8;
+  border-color: #b8d4eb;
+}
+.hide-src-btn.active {
+  background: #fde6e6;
+  color: #b32a2a;
+  border-color: #f0c0c0;
+}
+.story .meta { flex-wrap: wrap; align-items: center; gap: 4px 8px; }
+.story.is-hidden { display: none !important; }
+
+/* Preferanse-knapp i header */
+.prefs-btn {
+  background: transparent;
+  border: 1px solid #cfcfcf;
+  border-radius: 6px;
+  padding: 6px 10px;
+  cursor: pointer;
+  font-size: 13px;
+  color: #444;
+  margin-top: 6px;
+}
+.prefs-btn:hover { background: #f5f5f5; border-color: #888; }
+.prefs-btn-count {
+  display: inline-block;
+  background: #b32a2a;
+  color: #fff;
+  font-size: 11px;
+  padding: 1px 6px;
+  border-radius: 8px;
+  margin-left: 4px;
+}
+
+/* Modal */
+.prefs-modal {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.45);
+  display: none;
+  align-items: center; justify-content: center;
+  z-index: 9999;
+}
+.prefs-modal.open { display: flex; }
+.prefs-modal-content {
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px 22px;
+  max-width: 480px;
+  width: calc(100% - 40px);
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+}
+.prefs-modal h3 { margin-top: 0; }
+.prefs-modal-close {
+  float: right; background: transparent; border: none;
+  font-size: 22px; cursor: pointer; color: #888; line-height: 1;
+}
+.prefs-modal-close:hover { color: #b32a2a; }
+.prefs-hidden-list { list-style: none; padding: 0; margin: 12px 0; }
+.prefs-hidden-list li {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 8px 10px; border: 1px solid #eee; border-radius: 4px;
+  margin-bottom: 6px; gap: 10px;
+}
+.prefs-hidden-list .src-name { font-weight: 500; }
+.prefs-hidden-list .unhide {
+  background: #1862a8; color: #fff; border: none;
+  padding: 4px 10px; border-radius: 4px; cursor: pointer; font-size: 12px;
+}
+.prefs-hidden-list .unhide:hover { background: #154e85; }
+.prefs-empty {
+  color: #888; font-style: italic; padding: 12px;
+  background: #f8f8f8; border-radius: 4px; text-align: center;
+}
+.prefs-modal .clear-all {
+  margin-top: 8px; background: transparent; border: 1px solid #b32a2a;
+  color: #b32a2a; padding: 5px 10px; border-radius: 4px; cursor: pointer;
+  font-size: 12px;
+}
+.prefs-modal .clear-all:hover { background: #b32a2a; color: #fff; }
 """
 
 SCRIPT = r"""
@@ -1690,6 +1786,7 @@ SCRIPT = r"""
 
   function storyMatches(story, cats, period, q) {
     var dataset = story.dataset;
+    if (story.classList.contains('is-hidden')) return false;
     if (!cats[dataset.category]) return false;
     if (period === '12h' && !inPastHours(dataset.firstSeen, 12)) return false;
     if (period === '1d' && !inPastWindow(dataset.iso, 1)) return false;
@@ -2064,6 +2161,181 @@ SCRIPT = r"""
     }
   } catch (e) {}
 })();
+
+(function() {
+  // Per-bruker preferanse: skjul saker fra bestemte kilder.
+  // Lagrer en liste av source_id i localStorage som bydelsnytt:hiddenSources.
+  var HS_KEY = 'bydelsnytt:hiddenSources';
+
+  function load() {
+    try {
+      var raw = window.localStorage.getItem(HS_KEY);
+      if (!raw) return {};
+      var arr = JSON.parse(raw);
+      var map = {};
+      if (Array.isArray(arr)) {
+        arr.forEach(function(item) {
+          if (typeof item === 'string') {
+            map[item] = item;
+          } else if (item && item.id) {
+            map[item.id] = item.name || item.id;
+          }
+        });
+      }
+      return map;
+    } catch (e) { return {}; }
+  }
+
+  function save(map) {
+    try {
+      var arr = Object.keys(map).map(function(id) {
+        return { id: id, name: map[id] };
+      });
+      window.localStorage.setItem(HS_KEY, JSON.stringify(arr));
+    } catch (e) {}
+  }
+
+  var hidden = load();
+
+  // Bygg modal-DOM
+  var modal = document.createElement('div');
+  modal.className = 'prefs-modal';
+  modal.innerHTML = ''
+    + '<div class="prefs-modal-content">'
+    + '  <button class="prefs-modal-close" aria-label="Lukk">&times;</button>'
+    + '  <h3>Skjulte kilder</h3>'
+    + '  <p style="color:#666;font-size:14px;margin:4px 0 12px;">Saker fra disse kildene vises ikke. Klikk &laquo;Vis igjen&raquo; for &aring; reaktivere.</p>'
+    + '  <ul class="prefs-hidden-list" id="prefs-hidden-list"></ul>'
+    + '  <button class="clear-all" id="prefs-clear-all">Fjern alle skjulinger</button>'
+    + '</div>';
+  document.body.appendChild(modal);
+
+  var modalList = modal.querySelector('#prefs-hidden-list');
+  var clearAllBtn = modal.querySelector('#prefs-clear-all');
+  var closeBtn = modal.querySelector('.prefs-modal-close');
+
+  function renderModalList() {
+    var ids = Object.keys(hidden);
+    if (ids.length === 0) {
+      modalList.innerHTML = '<li class="prefs-empty">Ingen kilder er skjult</li>';
+      clearAllBtn.style.display = 'none';
+      return;
+    }
+    clearAllBtn.style.display = '';
+    modalList.innerHTML = ids.map(function(id) {
+      var name = hidden[id] || id;
+      return '<li>'
+        + '<span class="src-name">' + escapeHtml(name) + '</span>'
+        + '<button class="unhide" data-src-id="' + escapeAttr(id) + '">Vis igjen</button>'
+        + '</li>';
+    }).join('');
+  }
+
+  function escapeHtml(s) {
+    return String(s).replace(/[&<>"']/g, function(c) {
+      return { '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' }[c];
+    });
+  }
+  function escapeAttr(s) { return escapeHtml(s); }
+
+  function applyHidden() {
+    var stories = document.querySelectorAll('.story[data-source-id]');
+    stories.forEach(function(st) {
+      var srcId = st.dataset.sourceId;
+      if (srcId && hidden[srcId]) {
+        st.classList.add('is-hidden');
+      } else {
+        st.classList.remove('is-hidden');
+      }
+    });
+    // Re-trigger the global apply() to update bydel-tellere og no-results
+    var ev = new Event('change');
+    var sel = document.getElementById('bydel-filter');
+    if (sel) sel.dispatchEvent(ev);
+    updatePrefsButton();
+  }
+
+  function updatePrefsButton() {
+    var btn = document.getElementById('open-prefs-btn');
+    if (!btn) return;
+    var n = Object.keys(hidden).length;
+    var countEl = btn.querySelector('.prefs-btn-count');
+    if (n === 0) {
+      if (countEl) countEl.remove();
+    } else {
+      if (countEl) {
+        countEl.textContent = n;
+      } else {
+        var s = document.createElement('span');
+        s.className = 'prefs-btn-count';
+        s.textContent = n;
+        btn.appendChild(s);
+      }
+    }
+  }
+
+  // Per-saks skjul-knapp
+  document.addEventListener('click', function(e) {
+    var btn = e.target.closest('.hide-src-btn');
+    if (btn) {
+      e.preventDefault();
+      var id = btn.dataset.srcId;
+      var name = btn.dataset.srcName || id;
+      if (!id) return;
+      var label = name || id;
+      var ok = window.confirm('Skjul alle saker fra "' + label + '"?\n\nDu kan reaktivere kilden via "Preferanser" øverst.');
+      if (!ok) return;
+      hidden[id] = name;
+      save(hidden);
+      applyHidden();
+      return;
+    }
+    // Reaktiver kilde
+    var unhideBtn = e.target.closest('.unhide');
+    if (unhideBtn) {
+      var rid = unhideBtn.dataset.srcId;
+      if (rid && hidden[rid]) {
+        delete hidden[rid];
+        save(hidden);
+        renderModalList();
+        applyHidden();
+      }
+      return;
+    }
+    // Aapne modal
+    var openBtn = e.target.closest('#open-prefs-btn');
+    if (openBtn) {
+      e.preventDefault();
+      renderModalList();
+      modal.classList.add('open');
+      return;
+    }
+    // Lukk modal
+    if (e.target === modal || e.target.closest('.prefs-modal-close')) {
+      modal.classList.remove('open');
+      return;
+    }
+  });
+
+  clearAllBtn.addEventListener('click', function() {
+    if (!window.confirm('Reaktivere alle skjulte kilder?')) return;
+    hidden = {};
+    save(hidden);
+    renderModalList();
+    applyHidden();
+  });
+
+  // Lukk paa Esc
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && modal.classList.contains('open')) {
+      modal.classList.remove('open');
+    }
+  });
+
+  // Initial filtrering ved sidelasting
+  applyHidden();
+  updatePrefsButton();
+})();
 """
 
 MAP_SCRIPT = r"""
@@ -2216,6 +2488,18 @@ def render_story(story, bydel_name=""):
     first_seen = story.get("first_seen_iso") or ""
     sid = _story_id(story, bydel_name)
     story["_html_id"] = sid
+    src_id_attr = story.get("source_id") or ""
+    src_name = story.get("source") or ""
+    if src_id_attr:
+        hide_btn_html = (
+            f'<button class="hide-src-btn" type="button" '
+            f'aria-label="Skjul saker fra denne kilden" '
+            f'title="Skjul saker fra {esc(src_name)}" '
+            f'data-src-id="{esc(src_id_attr)}" '
+            f'data-src-name="{esc(src_name)}">&#9881;</button>'
+        )
+    else:
+        hide_btn_html = ""
     # Ekstra kilder (kryss-kilde-dedup) under meta-raden
     extra_html = ""
     extras = story.get("extra_sources") or []
@@ -2247,7 +2531,7 @@ def render_story(story, bydel_name=""):
         )
     event_date = story.get("event_date") or ""
     return f"""
-    <article id="{sid}" class="story{' has-thumb' if img_url else ''}" data-category="{esc(cat)}" data-iso="{esc(date_iso)}" data-first-seen="{esc(first_seen)}" data-event-date="{esc(event_date)}">
+    <article id="{sid}" class="story{' has-thumb' if img_url else ''}" data-category="{esc(cat)}" data-iso="{esc(date_iso)}" data-first-seen="{esc(first_seen)}" data-event-date="{esc(event_date)}" data-source-id="{esc(src_id_attr)}" data-source-name="{esc(src_name)}">
       {thumb_html}
       <div class="story-body">
         <h3>{esc(story['title'])}{badge}<span class="new-badge" hidden>NYTT</span></h3>
@@ -2257,6 +2541,7 @@ def render_story(story, bydel_name=""):
           <span>{esc(story['date'])}</span>
           <span class="sep">&middot;</span>
           <span class="pill {esc(cat)}">{esc(cat_label)}</span>
+          {hide_btn_html}
         </div>
         <p>{esc(story['summary'])}</p>
         <a class="readmore" href="{esc(story['url'])}" target="_blank" rel="noopener">Les mer &rarr;</a>
@@ -2621,6 +2906,7 @@ def render_page(include_cowork_meta):
   <h1>Bydelsnytt Oslo</h1>
   <div class="subtitle">{esc(DATE_NO)} &middot; {total_stories} saker fra 15 bydeler &middot; {fresh_count} fersk{'' if fresh_count == 1 else 'e'} siste 24 timer</div>
   <div class="byline">Et lite prosjekt fra Thomas Elboth (<a href="mailto:t.elboth@gmail.com">t.elboth@gmail.com</a> eller jobb <a href="mailto:thomas.elboth@xlent.no">thomas.elboth@xlent.no</a>)</div>
+  <button id="open-prefs-btn" class="prefs-btn" type="button" title="Administrer skjulte kilder">&#9881; Preferanser</button>
 </header>
 {health_banner_html}
 <div class="controls">
