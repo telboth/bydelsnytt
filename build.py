@@ -1752,6 +1752,106 @@ footer a { color: #1862a8; }
   font-size: 12px;
 }
 .prefs-modal .clear-all:hover { background: #b32a2a; color: #fff; }
+/* --- Dark mode: variabler + override -------------------------- */
+:root {
+  --bn-bg: #fafafa;
+  --bn-fg: #1a1a1a;
+  --bn-card-bg: #fff;
+  --bn-border: #e5e5e4;
+  --bn-muted: #777;
+  --bn-link: #1862a8;
+  --bn-h2-bg: #ffffff;
+  --bn-input-bg: #fff;
+  --bn-input-border: #c8c8c8;
+  --bn-modal-bg: #fff;
+}
+body.dark {
+  --bn-bg: #15171a;
+  --bn-fg: #e8e8e8;
+  --bn-card-bg: #1f2227;
+  --bn-border: #2c3035;
+  --bn-muted: #999;
+  --bn-link: #6ab2ff;
+  --bn-h2-bg: #1f2227;
+  --bn-input-bg: #1f2227;
+  --bn-input-border: #3a3f47;
+  --bn-modal-bg: #1f2227;
+}
+@media (prefers-color-scheme: dark) {
+  body:not(.light) {
+    --bn-bg: #15171a;
+    --bn-fg: #e8e8e8;
+    --bn-card-bg: #1f2227;
+    --bn-border: #2c3035;
+    --bn-muted: #999;
+    --bn-link: #6ab2ff;
+    --bn-h2-bg: #1f2227;
+    --bn-input-bg: #1f2227;
+    --bn-input-border: #3a3f47;
+    --bn-modal-bg: #1f2227;
+  }
+}
+body { background: var(--bn-bg); color: var(--bn-fg); }
+.story { background: var(--bn-card-bg); border-color: var(--bn-border); }
+.story p { color: var(--bn-fg); }
+.story a.readmore { color: var(--bn-link); }
+.story .meta .source { color: var(--bn-muted); }
+section.bydel h2 { background: var(--bn-h2-bg); border-bottom-color: var(--bn-border); }
+.controls select, .controls input[type="search"] {
+  background: var(--bn-input-bg); color: var(--bn-fg);
+  border-color: var(--bn-input-border);
+}
+.prefs-modal-content { background: var(--bn-modal-bg); color: var(--bn-fg); }
+.about-modal-content p { color: var(--bn-fg); }
+.upcoming-list, .topp-saker { background: var(--bn-card-bg); border-color: var(--bn-border); }
+.upcoming-item, .topp-sak { border-color: var(--bn-border); }
+footer { color: var(--bn-muted); border-top-color: var(--bn-border); }
+.hide-src-btn { background: var(--bn-card-bg); color: var(--bn-muted); border-color: var(--bn-border); }
+.prefs-btn { background: var(--bn-card-bg); color: var(--bn-fg); border-color: var(--bn-border); }
+.prefs-empty { background: var(--bn-bg); color: var(--bn-muted); }
+.prefs-checkbox-grid label { color: var(--bn-fg); }
+.prefs-checkbox-grid label:hover { background: var(--bn-bg); }
+
+/* --- SVG/CSS-fallback for saker uten bilde --------------- */
+.thumb-fallback {
+  display: flex; align-items: center; justify-content: center;
+  font-size: 28px; color: rgba(255,255,255,0.95); font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.04em;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.25);
+}
+.thumb-fallback.cat-politikk { background: linear-gradient(135deg,#a648c2,#6f1f88); }
+.thumb-fallback.cat-skole    { background: linear-gradient(135deg,#3a8bd1,#1d5da3); }
+.thumb-fallback.cat-idrett   { background: linear-gradient(135deg,#3aaa61,#1f7a3d); }
+.thumb-fallback.cat-kultur   { background: linear-gradient(135deg,#d6a82c,#9b6c00); }
+.thumb-fallback.cat-trafikk  { background: linear-gradient(135deg,#dc6a3e,#a13408); }
+.thumb-fallback.cat-helse    { background: linear-gradient(135deg,#d23e90,#8e1452); }
+.thumb-fallback.cat-naering  { background: linear-gradient(135deg,#2caa92,#10705e); }
+.thumb-fallback.cat-sikkerhet { background: linear-gradient(135deg,#d23a3a,#8a0d0d); }
+.thumb-fallback.cat-arrangement { background: linear-gradient(135deg,#e08533,#a14e00); }
+.thumb-fallback.cat-annet    { background: linear-gradient(135deg,#7a8aa0,#4a5566); }
+
+/* --- Sokeforslag-chips ------------------------------------ */
+.search-suggestions {
+  display: flex; flex-wrap: wrap; gap: 4px 6px; margin-top: 6px;
+}
+.search-suggestion {
+  background: transparent; border: 1px solid var(--bn-border);
+  color: var(--bn-muted); border-radius: 12px;
+  padding: 2px 10px; font-size: 12px; cursor: pointer;
+}
+.search-suggestion:hover { background: var(--bn-card-bg); color: var(--bn-link); border-color: var(--bn-link); }
+.search-suggestions-toggle {
+  font-size: 11px; color: var(--bn-link); background: transparent;
+  border: none; cursor: pointer; padding: 0; margin-left: 6px;
+}
+
+/* --- Theme toggle ----------------------------------------- */
+.theme-btn {
+  background: transparent; border: 1px solid var(--bn-border);
+  border-radius: 6px; padding: 6px 10px; cursor: pointer;
+  font-size: 13px; color: var(--bn-fg); margin-top: 6px;
+}
+.theme-btn:hover { background: var(--bn-card-bg); }
 .about-modal-content p { line-height: 1.55; color: #333; margin: 8px 0 12px; }
 .about-modal-content .about-link { color: #0a66c2; text-decoration: none; font-weight: 500; }
 .about-modal-content .about-link:hover { text-decoration: underline; }
@@ -1872,6 +1972,25 @@ SCRIPT = r"""
     }
   }
 
+  // --- Sokeforslag (tag-cloud chips) -----------------------------------
+  try {
+    var TAG_CLOUD = __TAG_CLOUD__;
+    var ssBox = document.getElementById('search-suggestions');
+    if (ssBox && Array.isArray(TAG_CLOUD) && TAG_CLOUD.length) {
+      ssBox.hidden = false;
+      ssBox.innerHTML = TAG_CLOUD.map(function(t) {
+        return '<button type="button" class="search-suggestion" data-q="'
+          + t.replace(/"/g, '&quot;') + '">' + t + '</button>';
+      }).join('') + '<button type="button" class="search-suggestions-toggle" id="ssToggle">skjul</button>';
+      ssBox.addEventListener('click', function(e) {
+        var b = e.target.closest('.search-suggestion');
+        if (b) { search.value = b.dataset.q; apply(); search.focus(); savePrefs(); return; }
+        var t = e.target.closest('#ssToggle');
+        if (t) { ssBox.hidden = true; }
+      });
+    }
+  } catch (e) {}
+
   // --- Brukervalg huskes i localStorage -------------------------------
   var PREFS_KEY = 'bydelsnytt:filterState';
   function loadPrefs() {
@@ -1932,48 +2051,63 @@ SCRIPT = r"""
   syncChipUi();
   apply();
 
-  // --- "Min bydel": stjerne-toggle lagrer valget i localStorage og flytter
-  // den valgte bydelen til toppen av main ved side-lasting.
+  // --- "Mine bydeler": stjerne-toggle lagrer en LISTE av bydeler i localStorage.
+  // Bakoverkompatibel med gammel single-bydel-noekkel.
   try {
-    var MB_KEY = 'bydelsnytt:myBydel';
-    var myBydel = null;
-    try { myBydel = window.localStorage.getItem(MB_KEY); } catch (e) {}
-
+    var MB_KEY = 'bydelsnytt:myBydel';        // legacy single
+    var MBS_KEY = 'bydelsnytt:myBydeler';     // ny: array
+    var myBydeler = {};
+    try {
+      var raw = window.localStorage.getItem(MBS_KEY);
+      if (raw) {
+        var arr = JSON.parse(raw);
+        if (Array.isArray(arr)) arr.forEach(function(n) { if (n) myBydeler[n] = true; });
+      }
+    } catch (e) {}
+    // Migrer legacy single-key
+    try {
+      if (Object.keys(myBydeler).length === 0) {
+        var old = window.localStorage.getItem(MB_KEY);
+        if (old) {
+          myBydeler[old] = true;
+          window.localStorage.setItem(MBS_KEY, JSON.stringify([old]));
+        }
+      }
+    } catch (e) {}
+    function persistMine() {
+      try { window.localStorage.setItem(MBS_KEY, JSON.stringify(Object.keys(myBydeler))); } catch (e) {}
+    }
     var main = document.querySelector('main');
-    function applyPin(name) {
+    function applyPin() {
+      // Markerer alle pin-bydeler i settet og floater dem oeverst i main.
       sections.forEach(function(s) {
         var btn = s.querySelector('.pin-bydel');
-        if (s.dataset.name === name) {
+        if (myBydeler[s.dataset.name]) {
           s.classList.add('pinned');
-          if (btn) {
-            btn.classList.add('active');
-            btn.title = 'Fjern som min bydel';
-          }
-          if (main && s.parentNode === main && main.firstElementChild !== s) {
-            main.insertBefore(s, main.firstElementChild);
-          }
+          if (btn) { btn.classList.add('active'); btn.title = 'Fjern som mine bydeler'; }
         } else {
           s.classList.remove('pinned');
-          if (btn) {
-            btn.classList.remove('active');
-            btn.title = 'Sett som min bydel';
-          }
+          if (btn) { btn.classList.remove('active'); btn.title = 'Legg til mine bydeler'; }
         }
       });
+      // Flytt alle pinnede til toppen i opprinnelig rekkefoelge
+      if (main) {
+        var pinned = sections.filter(function(s) { return myBydeler[s.dataset.name]; });
+        // Sett inn i revers slik at forste i listen blir oeverst
+        pinned.reverse().forEach(function(s) {
+          main.insertBefore(s, main.firstElementChild);
+        });
+      }
     }
-    if (myBydel) applyPin(myBydel);
+    applyPin();
 
     document.querySelectorAll('.pin-bydel').forEach(function(btn) {
       btn.addEventListener('click', function() {
         var name = btn.dataset.bydel;
-        if (myBydel === name) {
-          myBydel = null;
-          try { window.localStorage.removeItem(MB_KEY); } catch (e) {}
-        } else {
-          myBydel = name;
-          try { window.localStorage.setItem(MB_KEY, name); } catch (e) {}
-        }
-        applyPin(myBydel);
+        if (myBydeler[name]) delete myBydeler[name];
+        else myBydeler[name] = true;
+        persistMine();
+        applyPin();
       });
     });
   } catch (e) {}
@@ -2506,6 +2640,34 @@ SCRIPT = r"""
   updatePrefsButton();
 })();
 
+
+(function() {
+  var TKEY = 'bydelsnytt:theme';
+  var btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+  function setIcon() {
+    var isDark = document.body.classList.contains('dark');
+    btn.innerHTML = isDark ? '&#9728;&#65038;' : '&#9790;&#65038;';
+    btn.title = isDark ? 'Bytt til lyst tema' : 'Bytt til morkt tema';
+  }
+  // Initial: legacy + system preference
+  try {
+    var saved = window.localStorage.getItem(TKEY);
+    if (saved === 'dark') document.body.classList.add('dark');
+    else if (saved === 'light') document.body.classList.add('light');
+  } catch (e) {}
+  setIcon();
+  btn.addEventListener('click', function() {
+    var isDark = document.body.classList.contains('dark');
+    document.body.classList.remove('dark');
+    document.body.classList.remove('light');
+    if (isDark) document.body.classList.add('light');
+    else document.body.classList.add('dark');
+    try { window.localStorage.setItem(TKEY, isDark ? 'light' : 'dark'); } catch (e) {}
+    setIcon();
+  });
+})();
+
 (function() {
   // Om denne siden-modal.
   var modal = document.createElement('div');
@@ -2692,6 +2854,48 @@ def _report_mailto(story, bydel_name, sid):
     return f"mailto:{REPORT_EMAIL}?{q}"
 
 
+def _build_tag_cloud(stories: list[dict], n: int = 14) -> list[str]:
+    """Bygg en lite tag-sky av populaere tokens fra titler + sammendrag.
+
+    Returnerer topp-N enkeltord (laereord, lengde >= 4) som kan brukes som
+    klikkbare sokeforslag. Skipper stoppord og generelle ord som ikke er
+    nyttige som sok.
+    """
+    import re
+    from collections import Counter
+    stop = set("""
+        ikke skal vil kommer kommet bare bare ogsa hadde noe noen mer
+        eller fra med pa pa det den dette dette dem som har vart vaert
+        gjort har har bare for til til fra fra ved av av en ei et og
+        eller men hva hvor naar nar man hun han ham henne det det dem
+        deg deg meg vi du oss seg hverandre vil ville skulle kunne
+        bydel bydelen oslos oslo kommune sak saker viser bli blir blitt
+        her det dette nytt nye gamle stor store store nylig flere mange
+        siden samme andre deres begge alle alt etter foer for for rundt
+        gjennom mellom over under uten ved siden sammen over over tre
+        ser ser sa siden side site nyhetsside nyheter nytt nye gammel
+        nylig tidligere senere snart akkurat samme andre annet alt
+    """.split())
+    rx = re.compile(r"[A-Za-zÀ-ÿ]+", re.UNICODE)
+    counter = Counter()
+    for s in stories:
+        text = (s.get("title", "") + " " + s.get("summary", "")).lower()
+        for tok in rx.findall(text):
+            if len(tok) < 4 or tok in stop:
+                continue
+            counter[tok] += 1
+    # Filtrer ut altfor vanlige (>30% av saker = ord-hver-tredje-sak)
+    threshold = max(2, len(stories) // 3)
+    out = []
+    for tok, c in counter.most_common(80):
+        if c > threshold:
+            continue
+        out.append(tok)
+        if len(out) >= n:
+            break
+    return out
+
+
 def render_story(story, bydel_name=""):
     fresh = is_fresh(story)
     badge = ' <span class="news-badge">news</span>' if fresh else ""
@@ -2739,12 +2943,20 @@ def render_story(story, bydel_name=""):
             f'rel="noopener" aria-hidden="true">'
             f'<img src="{esc(img_url)}" loading="lazy" alt="" '
             f'onerror="var a=this.closest(&quot;article&quot;);'
-            f'if(a)a.classList.remove(&quot;has-thumb&quot;);'
-            f'this.parentElement.remove()"></a>'
+            f'if(a)a.querySelector(&quot;.thumb&quot;).outerHTML=a.dataset.fallback||&quot;&quot;;'
+            f'"></a>'
+        )
+    else:
+        # CSS-gradient fallback med bydelsinitialer
+        bydel_init = (bydel_name[:1] if bydel_name else "?").upper()
+        thumb_html = (
+            f'<a class="thumb thumb-fallback cat-{esc(cat)}" href="{esc(story["url"])}" '
+            f'target="_blank" rel="noopener" aria-hidden="true">'
+            f'<span>{esc(bydel_init)}</span></a>'
         )
     event_date = story.get("event_date") or ""
     return f"""
-    <article id="{sid}" class="story{' has-thumb' if img_url else ''}" data-category="{esc(cat)}" data-iso="{esc(date_iso)}" data-first-seen="{esc(first_seen)}" data-event-date="{esc(event_date)}" data-source-id="{esc(src_id_attr)}" data-source-name="{esc(src_name)}">
+    <article id="{sid}" class="story has-thumb" data-category="{esc(cat)}" data-iso="{esc(date_iso)}" data-first-seen="{esc(first_seen)}" data-event-date="{esc(event_date)}" data-source-id="{esc(src_id_attr)}" data-source-name="{esc(src_name)}">
       {thumb_html}
       <div class="story-body">
         <h3>{esc(story['title'])}{badge}<span class="new-badge" hidden>NYTT</span></h3>
@@ -3098,7 +3310,8 @@ def render_page(include_cowork_meta):
     total_stories = sum(len(b['stories']) for b in BYDELER)
     fresh_count = sum(1 for b in BYDELER for s in b['stories'] if is_fresh(s))
 
-    script_js = SCRIPT.replace("__TODAY__", TODAY_ISO)
+    _all_for_cloud = [s for b in BYDELER for s in b["stories"]]
+    script_js = SCRIPT.replace("__TODAY__", TODAY_ISO).replace("__TAG_CLOUD__", json.dumps(_build_tag_cloud(_all_for_cloud), ensure_ascii=False))
     health_banner_html = _render_health_banner()
     topp_saker_html = _render_topp_saker(BYDELER, TODAY_ISO)
     upcoming_html = _render_upcoming_events(BYDELER, TODAY_ISO)
@@ -3121,6 +3334,7 @@ def render_page(include_cowork_meta):
   <div class="byline">Et lite prosjekt fra Thomas Elboth (<a href="mailto:t.elboth@gmail.com">t.elboth@gmail.com</a> eller jobb <a href="mailto:thomas.elboth@xlent.no">thomas.elboth@xlent.no</a>)</div>
   <button id="open-prefs-btn" class="prefs-btn" type="button" title="Administrer preferanser (skjul kilder, bydeler, kategorier)">&#9881; Preferanser</button>
   <button id="open-about-btn" class="prefs-btn" type="button" title="Om denne siden">&#9432; Om denne siden</button>
+  <button id="theme-toggle" class="theme-btn" type="button" title="Bytt mellom lyst og morkt tema" aria-label="Bytt tema">&#9728;&#65038;</button>
 </header>
 {health_banner_html}
 <div class="controls">
@@ -3145,6 +3359,7 @@ def render_page(include_cowork_meta):
   <div style="grid-column: 1 / -1;">
     <label for="story-search">Søk <span id="search-count" style="font-weight:400;text-transform:none;color:#1862a8;margin-left:6px;"></span></label>
     <input id="story-search" type="search" placeholder="Filtrer i innholdet (f.eks. &laquo;trikk&raquo;, &laquo;bibliotek&raquo;, &laquo;17. mai&raquo;)&hellip;">
+    <div id="search-suggestions" class="search-suggestions" hidden></div>
   </div>
 </div>
 {topp_saker_html}
@@ -3199,4 +3414,3 @@ with open(f"{out_dir}/bydelsnytt_publish.html", "w", encoding="utf-8") as f:
 
 print("artifact bytes:", os.path.getsize(f"{out_dir}/bydelsnytt_artifact.html"))
 print("publish  bytes:", os.path.getsize(f"{out_dir}/bydelsnytt_publish.html"))
- 
