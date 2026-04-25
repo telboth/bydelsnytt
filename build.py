@@ -1232,12 +1232,21 @@ def _ingest_cache(bydeler_list):
         by_name[bydel]["stories"].append(story)
         known[bydel].add(url_key)
 
-    # Sorter hver bydel — nyeste først basert på date_iso (None/tom til slutt)
+    # Sorter hver bydel: nyhetssaker foerst (nyeste), events sist.
+    # Python sort er stabil, saa vi gjor det i to pass:
+    #  1) etter dato (nyeste foerst)
+    #  2) etter event-flagg (events sist) — bevarer dato-rekkefoelgen i hver gruppe
+    def _is_event(s):
+        return (
+            s.get("category") == "arrangement"
+            or s.get("source_id") == "events"
+        )
     for b in bydeler_list:
         b["stories"].sort(
             key=lambda s: (s.get("date_iso") or "0000-00-00"),
             reverse=True,
         )
+        b["stories"].sort(key=lambda s: 1 if _is_event(s) else 0)
     return bydeler_list
 
 
@@ -3078,6 +3087,37 @@ def _build_tag_cloud(stories: list[dict], n: int = 14) -> list[str]:
     return out
 
 
+# Kjente logoer / fallback-bilder som forurenser saks-kortene.
+# Identifisert via stories.json-analyse (samme URL paa 3+ saker).
+_IMG_BLACKLIST_EXACT = {
+    "https://groruddalen.no/wp-content/uploads/2023/06/logo.jpeg",
+    "https://www.politiet.no/globalassets/forside-admin/politiet.png",
+}
+_IMG_BLACKLIST_SUBSTR = (
+    # Vart Oslo default-fallback: 100x100 crop, 0/0/100/100 panorama -> alltid logo
+    "cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100",
+    # Ukeweb fallback-bilde
+    "FallbackImage",
+    # Generiske logo-paths
+    "/logo.",
+    "/logo.jpg",
+    "/logo.png",
+    "/logo.svg",
+)
+
+
+def _is_blacklisted_image(url: str) -> bool:
+    if not url:
+        return False
+    if url in _IMG_BLACKLIST_EXACT:
+        return True
+    low = url.lower()
+    for s in _IMG_BLACKLIST_SUBSTR:
+        if s.lower() in low:
+            return True
+    return False
+
+
 def render_story(story, bydel_name=""):
     fresh = is_fresh(story)
     badge = ' <span class="news-badge">news</span>' if fresh else ""
@@ -3118,6 +3158,8 @@ def render_story(story, bydel_name=""):
                 + ", ".join(links) + "</div>"
             )
     img_url = story.get("image_url") or ""
+    if _is_blacklisted_image(img_url):
+        img_url = ""
     thumb_html = ""
     if img_url:
         thumb_html = (
@@ -3291,6 +3333,8 @@ def _render_topp_saker(bydeler_list, today_iso):
         cat_label = esc(CAT_LABEL.get(cat, cat))
         date_iso = esc((s.get("date_iso") or "")[:10])
         img_url = s.get("image_url") or ""
+        if _is_blacklisted_image(img_url):
+            img_url = ""
         img_html = ""
         if img_url:
             img_html = (
@@ -3588,4 +3632,5 @@ with open(f"{out_dir}/bydelsnytt_publish.html", "w", encoding="utf-8") as f:
     f.write(render_page(include_cowork_meta=False))
 
 print("artifact bytes:", os.path.getsize(f"{out_dir}/bydelsnytt_artifact.html"))
+
 print("publish  bytes:", os.path.getsize(f"{out_dir}/bydelsnytt_publish.html"))
