@@ -2445,13 +2445,13 @@ SCRIPT = r"""
     + '    <ul class="prefs-hidden-list" id="prefs-hidden-list"></ul>'
     + '  </div>'
     + '  <div class="prefs-section">'
-    + '    <h4>Skjul bydeler</h4>'
-    + '    <p class="prefs-section-hint">Huk av bydeler du ikke vil se saker fra.</p>'
+    + '    <h4>Vis bydeler</h4>'
+    + '    <p class="prefs-section-hint">Hak av bydelene du vil se. Alle er p&aring; som standard.</p>'
     + '    <div class="prefs-checkbox-grid" id="prefs-bydel-grid"></div>'
     + '  </div>'
     + '  <div class="prefs-section">'
-    + '    <h4>Skjul kategorier</h4>'
-    + '    <p class="prefs-section-hint">Huk av kategorier du ikke vil se.</p>'
+    + '    <h4>Vis kategorier</h4>'
+    + '    <p class="prefs-section-hint">Hak av kategoriene du vil se. Alle er p&aring; som standard.</p>'
     + '    <div class="prefs-checkbox-grid" id="prefs-cat-grid"></div>'
     + '  </div>'
     + '  <button class="clear-all" id="prefs-clear-all">Fjern alle preferanser</button>'
@@ -2515,7 +2515,8 @@ SCRIPT = r"""
   function renderBydelGrid() {
     var bs = discoverBydeler();
     bydelGrid.innerHTML = bs.map(function(name) {
-      var checked = hiddenBydeler[name] ? ' checked' : '';
+      // Checked = synlig (dvs IKKE i hiddenBydeler). Default: alt paa.
+      var checked = hiddenBydeler[name] ? '' : ' checked';
       return '<label><input type="checkbox" class="prefs-bydel-cb" value="'
         + escapeAttr(name) + '"' + checked + '> ' + escapeHtml(name) + '</label>';
     }).join('');
@@ -2524,7 +2525,8 @@ SCRIPT = r"""
   function renderCatGrid() {
     var cs = discoverCategories();
     catGrid.innerHTML = cs.map(function(c) {
-      var checked = hiddenCats[c.slug] ? ' checked' : '';
+      // Checked = synlig (dvs IKKE i hiddenCats). Default: alt paa.
+      var checked = hiddenCats[c.slug] ? '' : ' checked';
       return '<label><input type="checkbox" class="prefs-cat-cb" value="'
         + escapeAttr(c.slug) + '"' + checked + '> ' + escapeHtml(c.label) + '</label>';
     }).join('');
@@ -2641,8 +2643,9 @@ SCRIPT = r"""
     var cb = e.target.closest('.prefs-bydel-cb');
     if (!cb) return;
     var name = cb.value;
-    if (cb.checked) hiddenBydeler[name] = true;
-    else delete hiddenBydeler[name];
+    // cb.checked = synlig => fjern fra hidden-set
+    if (cb.checked) delete hiddenBydeler[name];
+    else hiddenBydeler[name] = true;
     saveSet(HB_KEY, hiddenBydeler);
     applyHidden();
   });
@@ -2652,8 +2655,9 @@ SCRIPT = r"""
     var cb = e.target.closest('.prefs-cat-cb');
     if (!cb) return;
     var slug = cb.value;
-    if (cb.checked) hiddenCats[slug] = true;
-    else delete hiddenCats[slug];
+    // cb.checked = synlig => fjern fra hidden-set
+    if (cb.checked) delete hiddenCats[slug];
+    else hiddenCats[slug] = true;
     saveSet(HC_KEY, hiddenCats);
     applyHidden();
   });
