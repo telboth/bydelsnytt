@@ -2523,7 +2523,7 @@ SCRIPT = r"""
     + 'eller kategorier du ikke vil se. Valgene dine lagres lokalt i nettleseren.</p>'
     + '  <p>Denne websiden er laget av Thomas Elboth. Den er et lite hobbyprosjekt for \u00e5 se hva en '
     + 'kan utvikle ved hjelp av moderne kodeverkt\u00f8y. '
-    + '<a class="about-link" href="' + 'https://www.linkedin.com/in/thomas-elboth/' + '" target="_blank" rel="noopener">Se min LinkedIn-profil</a>.</p>'
+    + '<a class="about-link" href="' + 'https://www.linkedin.com/in/thomaselboth/' + '" target="_blank" rel="noopener">Se min LinkedIn-profil</a>.</p>'
     + '  <p style="font-size:13px;color:#666;">Kildekoden ligger \u00e5pent p\u00e5 '
     + '<a class="about-link" href="https://github.com/telboth/bydelsnytt" target="_blank" rel="noopener">GitHub</a>. '
     + 'Funnet feil eller noe som mangler? Send en e-post til '
@@ -3199,3 +3199,4 @@ with open(f"{out_dir}/bydelsnytt_publish.html", "w", encoding="utf-8") as f:
 
 print("artifact bytes:", os.path.getsize(f"{out_dir}/bydelsnytt_artifact.html"))
 print("publish  bytes:", os.path.getsize(f"{out_dir}/bydelsnytt_publish.html"))
+ 
