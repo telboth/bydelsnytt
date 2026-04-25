@@ -1286,17 +1286,22 @@ h1 { margin: 0 0 4px 0; font-size: 26px; font-weight: 600; }
 .byline a { color: #1862a8; text-decoration: none; }
 .byline a:hover { text-decoration: underline; }
 .health-banner {
-  background: #fff4e5;
-  border: 1px solid #f5c27a;
-  color: #663c00;
-  padding: 10px 14px;
-  border-radius: 8px;
-  margin-bottom: 16px;
-  font-size: 13px;
+  background: #fff8ec;
+  border: 1px solid #f0d9a8;
+  color: #7a5a1a;
+  padding: 6px 12px;
+  border-radius: 6px;
+  margin-bottom: 14px;
+  font-size: 12px;
+  display: flex; align-items: center; gap: 8px;
+  flex-wrap: wrap;
 }
-.health-banner strong { color: #8a4a00; }
-.health-banner ul { margin: 6px 0 0 0; padding-left: 20px; }
-.health-banner li { margin: 2px 0; }
+.health-banner strong { color: #8a4a00; font-weight: 600; }
+.health-banner a {
+  color: #1862a8; text-decoration: none; font-weight: 500;
+  margin-left: auto;
+}
+.health-banner a:hover { text-decoration: underline; }
 .controls {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -1384,11 +1389,36 @@ h1 { margin: 0 0 4px 0; font-size: 26px; font-weight: 600; }
 }
 .topp-saker {
   margin: 0 0 26px 0;
-  padding: 16px 18px 14px;
+  padding: 0;
   background: linear-gradient(180deg, #fffbee 0%, #fff 100%);
   border: 1px solid #e8d68a;
   border-radius: 12px;
+  overflow: hidden;
 }
+.topp-saker > summary {
+  padding: 14px 18px;
+  cursor: pointer;
+  list-style: none;
+  font-size: 15px; font-weight: 700;
+  color: #7a5e00;
+  text-transform: uppercase; letter-spacing: 0.6px;
+  display: flex; align-items: baseline; gap: 10px;
+}
+.topp-saker > summary::-webkit-details-marker { display: none; }
+.topp-saker > summary::before {
+  content: "\25B6"; font-size: 10px; color: #7a5e00;
+  transform: translateY(-1px); transition: transform 0.15s;
+}
+.topp-saker[open] > summary::before { transform: rotate(90deg) translateX(-1px); }
+.topp-saker > summary small {
+  font-size: 11px; font-weight: 400; color: #a08947;
+  text-transform: none; letter-spacing: 0;
+}
+.topp-saker .topp-count {
+  font-size: 11px; font-weight: 400; color: #a08947;
+  text-transform: none; letter-spacing: 0; margin-left: auto;
+}
+.topp-saker > .topp-saker-body { padding: 4px 18px 16px 18px; }
 .upcoming {
   margin: 0 0 26px 0;
   padding: 0;
@@ -1549,6 +1579,11 @@ a.story-ics {
 @media (max-width: 540px) {
   .story.has-thumb { grid-template-columns: 88px 1fr; gap: 10px; }
 }
+/* Markert som lest: faded for raskere skanning av nye saker */
+.story.read { opacity: 0.5; }
+.story.read:hover { opacity: 0.95; }
+.story.read .new-badge,
+.story.read .news-badge { opacity: 0.7; }
 /* To-kolonners desktop-visning naar bruker har valgt det i Preferanser */
 @media (min-width: 768px) {
   body.two-cols .bydel {
@@ -2732,6 +2767,62 @@ SCRIPT = r"""
 
 
 (function() {
+  // Markér saker som lest: legger klassen .read paa saker bruker har klikket
+  // 'Les mer' paa, slik at de fader til 50% opacity neste gang siden lastes.
+  var KEY = 'bydelsnytt:readUrls';
+  var MAX = 1000;
+  var readSet = {};
+  var readOrder = [];
+  try {
+    var raw = window.localStorage.getItem(KEY);
+    if (raw) {
+      var arr = JSON.parse(raw);
+      if (Array.isArray(arr)) {
+        arr.forEach(function(u) { if (u && !readSet[u]) { readSet[u] = true; readOrder.push(u); } });
+      }
+    }
+  } catch (e) {}
+
+  function persist() {
+    try {
+      // Trim FIFO til MAX
+      while (readOrder.length > MAX) {
+        var dropped = readOrder.shift();
+        delete readSet[dropped];
+      }
+      window.localStorage.setItem(KEY, JSON.stringify(readOrder));
+    } catch (e) {}
+  }
+
+  function markStoryRead(storyEl, url) {
+    if (!storyEl || !url) return;
+    if (!readSet[url]) {
+      readSet[url] = true;
+      readOrder.push(url);
+      persist();
+    }
+    storyEl.classList.add('read');
+  }
+
+  // Initial pass: marker alle saker som finnes i lest-settet
+  document.querySelectorAll('article.story').forEach(function(st) {
+    var rm = st.querySelector('a.readmore');
+    if (!rm) return;
+    var url = rm.getAttribute('href');
+    if (url && readSet[url]) st.classList.add('read');
+  });
+
+  // Klikk paa 'Les mer' -> marker som lest
+  document.addEventListener('click', function(e) {
+    var rm = e.target.closest('a.readmore');
+    if (!rm) return;
+    var url = rm.getAttribute('href');
+    var st = rm.closest('article.story');
+    markStoryRead(st, url);
+  });
+})();
+
+(function() {
   var TKEY = 'bydelsnytt:theme';
   var btn = document.getElementById('theme-toggle');
   if (!btn) return;
@@ -3222,12 +3313,14 @@ def _render_topp_saker(bydeler_list, today_iso):
             f'</a>'
         )
     return (
-        '<section class="topp-saker" aria-label="Topp saker i dag">'
-        '<h2>Topp saker i dag <small>utvalgt av algoritmen</small></h2>'
-        '<div class="topp-grid">'
+        '<details class="topp-saker" id="topp-saker" aria-label="Topp saker i dag">'
+        '<summary>Topp saker i dag <small>utvalgt av algoritmen</small> '
+        f'<span class="topp-count">{len(cards)} saker</span>'
+        '</summary>'
+        '<div class="topp-saker-body"><div class="topp-grid">'
         + "".join(cards)
-        + '</div>'
-        '</section>'
+        + '</div></div>'
+        '</details>'
     )
 
 
@@ -3342,24 +3435,20 @@ def _render_health_banner() -> str:
     except Exception as e:
         print(f"[build] kunne ikke lese source_health.json: {e}", file=sys.stderr)
         return ""
-    stale = _health.stale_sources(data)
+    # Senk terskelen til 3 dager for at problemer skal fanges tidligere.
+    stale = _health.stale_sources(data, stale_days=3)
     if not stale:
         return ""
-    lis = []
-    for s in stale:
-        last = s.get("last_success_iso") or "aldri"
-        if last != "aldri":
-            last = last[:10]
-        lis.append(
-            f"<li><strong>{esc(s['name'])}</strong> "
-            f"(siste suksess: {esc(last)})</li>"
-        )
+    n = len(stale)
+    names = ", ".join(esc(s['name']) for s in stale[:3])
+    if n > 3:
+        names += f" + {n - 3} til"
     return (
-        '<div class="health-banner">'
+        '<div class="health-banner" role="status">'
         '<strong>Kildehelse:</strong> '
-        f'{len(stale)} kilde{"" if len(stale)==1 else "r"} har ikke levert saker '
-        'paa en uke. Sjekk om feedene fremdeles fungerer:'
-        f'<ul>{"".join(lis)}</ul>'
+        f'{n} kilde{"" if n == 1 else "r"} leverer ikke akkurat n&aring; '
+        f'<span style="color:#a07a3a;">({names})</span>'
+        '<a href="health.html">Mer info &rarr;</a>'
         '</div>'
     )
 
