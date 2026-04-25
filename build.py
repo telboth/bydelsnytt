@@ -3378,7 +3378,6 @@ def render_page(include_cowork_meta):
 <header>
   <h1>Bydelsnytt Oslo</h1>
   <div class="subtitle">{esc(DATE_NO)} &middot; {total_stories} saker fra 15 bydeler &middot; {fresh_count} fersk{'' if fresh_count == 1 else 'e'} siste 24 timer</div>
-  <div class="byline">Et lite prosjekt fra Thomas Elboth (<a href="mailto:t.elboth@gmail.com">t.elboth@gmail.com</a> eller jobb <a href="mailto:thomas.elboth@xlent.no">thomas.elboth@xlent.no</a>)</div>
   <button id="open-prefs-btn" class="prefs-btn" type="button" title="Administrer preferanser (skjul kilder, bydeler, kategorier)">&#9881; Preferanser</button>
   <button id="open-about-btn" class="prefs-btn" type="button" title="Om denne siden">&#9432; Om denne siden</button>
   <button id="theme-toggle" class="theme-btn" type="button" title="Bytt mellom lyst og morkt tema" aria-label="Bytt tema">&#9728;&#65038;</button>
