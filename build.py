@@ -1216,6 +1216,7 @@ def _ingest_cache(bydeler_list):
         # Map cache-struktur til build-skjema
         display_date = s.get("date_iso", "")[:10] or ""
         story = {
+            "id": s.get("id") or "",  # behoves av tldr.py for cache-key
             "title": s.get("title", ""),
             "source": s.get("source", ""),
             "source_id": s.get("source_id", ""),
