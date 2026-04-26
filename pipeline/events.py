@@ -65,9 +65,11 @@ EVENTS = [
 
     ("Grefsenkollen opp 2026",
      "https://www.grefsenkollenopp.no/",
-     "Nordre Aker", "2026-09-05", "idrett",
-     "Motbakkeløp fra Storo til Grefsenkollen restaurant. 4,7 km med "
-     "478 hm stigning. Klassiker hver høst."),
+     "Nordre Aker", "2026-05-20", "idrett",
+     "Motbakkeløp arrangert av Nydalens Skiklub. Fra Muselunden (110 moh) "
+     "via Kjelsåsveien og Grefsenkollveien til Grefsenkollen Restaurant "
+     "(380 moh). 4,7 km, 6 % stigning, 270 hm. Onsdag 20. mai 2026, "
+     "start kl 18:30."),
 
     ("Oslos bratteste 2026 (tidligere Tryvann opp)",
      "https://oslosbratteste.no/",
@@ -1101,7 +1103,8 @@ if __name__ == "__main__":
     per_cat = Counter(e["category"] for e in events)
     per_bydel = Counter(e["bydel"] for e in events)
     for k, v in per_cat.items():
-        print(f"  kategori {k}: {v}")
-    print("---")
+        print(f"  {k}: {v}")
+    print()
+    print("Per bydel:")
     for k, v in per_bydel.items():
-        print(f"  bydel {k}: {v}")
+        print(f"  {k}: {v}")

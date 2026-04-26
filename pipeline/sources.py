@@ -336,6 +336,16 @@ HTML_SOURCES = [
         "weight": 0.6,
     },
     {
+        # Nationaltheatret — Stortingsgata 15, sentrum (St. Hanshaugen-naer).
+        "id": "nationaltheatret",
+        "name": "Nationaltheatret",
+        "scraper": "nationaltheatret",
+        "bydel": "St. Hanshaugen",
+        "urls": ["https://www.nationaltheatret.no/forestillinger/"],
+        "limit": 15,
+        "weight": 0.6,
+    },
+    {
         "id": "iltry",
         "name": "IL Try",
         "scraper": "iltry",

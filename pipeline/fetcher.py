@@ -1083,6 +1083,101 @@ def fetch_from_html_kjelsaas(source: dict) -> Iterable[RawStory]:
         )
 
 
+# --- Nationaltheatret — forestillinger ------------------------------------
+# nationaltheatret.no/forestillinger/ er en Next.js-side med 22 forestillings-
+# lenker. Hver detaljside har <title>"<Tittel> | Nationaltheatret"</title>,
+# <h1> med samme tittel og inline norske datoer ("27. september 2026").
+# Tittel hentes fra <h1>; foerste fremtidige dato fra teksten.
+
+_NATIONAL_MONTH_FULL = {
+    "januar": "01", "februar": "02", "mars": "03", "april": "04",
+    "mai": "05", "juni": "06", "juli": "07", "august": "08",
+    "september": "09", "oktober": "10", "november": "11", "desember": "12",
+}
+
+
+def _national_first_date(html: str, current_year: int) -> str:
+    """Foerste dato >= i dag i ISO-format. Aksepterer 'dd. mai 2026' og kort."""
+    today = datetime.now(timezone.utc).date()
+    candidates = []
+    pat = (r"\b(\d{1,2})\.\s*(januar|februar|mars|april|mai|juni|juli|august|"
+           r"september|oktober|november|desember)\.?\s*(\d{4})?")
+    for m in re.finditer(pat, html, re.IGNORECASE):
+        day = int(m.group(1))
+        mon = _NATIONAL_MONTH_FULL[m.group(2).lower()]
+        year = int(m.group(3)) if m.group(3) else current_year
+        if year < current_year:
+            year = current_year + 1
+        try:
+            from datetime import date as _date
+            d = _date(year, int(mon), day)
+            if d >= today:
+                candidates.append(d)
+        except ValueError:
+            continue
+    return min(candidates).isoformat() if candidates else ""
+
+
+def fetch_from_html_nationaltheatret(source: dict) -> Iterable[RawStory]:
+    """Nationaltheatret forestillinger."""
+    fetched_at = datetime.now(timezone.utc).isoformat()
+    today = datetime.now(timezone.utc)
+    list_url = (source.get("urls") or
+                ["https://www.nationaltheatret.no/forestillinger/"])[0]
+    body = _fetch_html(list_url)
+    if not body:
+        return
+    paths = sorted(set(re.findall(
+        r'href="(/forestillinger/[a-z0-9-]+)"', body
+    )))
+    seen: set[str] = set()
+    count = 0
+    limit = source.get("limit", 12)
+    for path in paths:
+        if count >= limit:
+            break
+        if path in seen:
+            continue
+        seen.add(path)
+        full_url = f"https://www.nationaltheatret.no{path}"
+        detail = _fetch_html(full_url)
+        if not detail:
+            continue
+        # Tittel: <h1> eller <title>-prefix foer " | Nationaltheatret"
+        m_h1 = re.search(r'<h1[^>]*>(.*?)</h1>', detail, re.DOTALL)
+        title = ""
+        if m_h1:
+            title = re.sub(r'<[^>]+>', '', m_h1.group(1)).strip()
+        if not title:
+            mt = re.search(r'<title[^>]*>([^<|]+)', detail)
+            if mt:
+                title = mt.group(1).strip()
+        if not title:
+            continue
+        first_date = _national_first_date(detail, today.year)
+        date_iso = first_date or today.date().isoformat()
+        # Description: meta-description som fallback (kan vaere tom for SPA)
+        desc = ""
+        md = re.search(r'<meta name="description" content="([^"]+)"', detail)
+        if md:
+            from html import unescape as _unesc
+            desc = _unesc(md.group(1))
+        yield RawStory(
+            id=_make_id(full_url, title),
+            bydel="St. Hanshaugen",  # Stortingsgata 15, naermest St. Hanshaugen
+            title=title,
+            url=full_url,
+            source="Nationaltheatret",
+            source_id=source["id"],
+            published_iso=fetched_at,
+            date_iso=date_iso,
+            summary=desc[:500],
+            category="kultur",
+            event_date=first_date,
+        )
+        count += 1
+
+
 # --- Operaen.no — forestillinger og konserter -----------------------------
 # Den Norske Opera & Ballett: scrape /forestillinger/ for produksjons-lenker,
 # fetch hver detaljside for tittel, beskrivelse, bilde og foerste forestillings-
@@ -1288,18 +1383,13 @@ def fetch_from_html_skiforbundet(source: dict) -> Iterable[RawStory]:
 
 
 # --- Meetup Oslo scraper ---------------------------------------------------
-# Find-siden sluker en stor JSON-blob i __NEXT_DATA__ med 12+ event-objekter.
-# Vi henter tittel, dateTime (ISO), eventUrl og venue-navn derfra. Online-only
-# events filtreres bort siden de ikke er stedsbundne til Oslo.
-
 _MEETUP_VENUE_TO_BYDEL = {
-    # Co-working / events spaces — kjente Oslo-venues
-    "rebel": "St. Hanshaugen",       # Universitetsgata
+    "rebel": "St. Hanshaugen",
     "capra": "Sentrum / Frogner",
-    "knowit": "Sagene",              # Sandakerveien
+    "knowit": "Sagene",
     "schibsted": "Sentrum / Frogner",
-    "dnb": "Gamle Oslo",             # Bjorvika
-    "nav": "Sagene",                 # Sannergata
+    "dnb": "Gamle Oslo",
+    "nav": "Sagene",
     "spaces": "Frogner",
     "mesh": "Sentrum / Frogner",
     "epicenter": "Sentrum / Frogner",
@@ -1311,22 +1401,15 @@ _MEETUP_VENUE_TO_BYDEL = {
     "tøyen": "Gamle Oslo",
     "toyen": "Gamle Oslo",
     "grunerlokka": "Grünerløkka",
-    "grünerlokka": "Grünerløkka",
 }
 
 
 def _meetup_bydel(venue_name: str, address: str = "") -> str:
-    """Map venue/address til bydel. Default: Frogner (sentrumsnaert).
-
-    Vi gaar gjennom et nokkelord-sett, lengst foerst for praeferanse av
-    spesifikke navn over generelle.
-    """
     text = f"{venue_name} {address}".lower()
     for key, bydel in sorted(
         _MEETUP_VENUE_TO_BYDEL.items(), key=lambda kv: -len(kv[0])
     ):
         if key in text:
-            # "Sentrum / Frogner" rules: vi har ingen "Sentrum"-bydel; bruk Frogner
             if bydel.startswith("Sentrum"):
                 return "Frogner"
             return bydel
@@ -1349,15 +1432,12 @@ def fetch_from_html_meetup_oslo(source: dict) -> Iterable[RawStory]:
         body, re.DOTALL,
     )
     if not m:
-        print("  [meetup] kunne ikke finne __NEXT_DATA__")
         return
     try:
         data = json.loads(m.group(1))
-    except json.JSONDecodeError as e:
-        print(f"  [meetup] JSON parse: {e}")
+    except json.JSONDecodeError:
         return
 
-    # Walk JSON-treet og finn event-objekter
     def find_events(obj):
         if isinstance(obj, dict):
             if "title" in obj and "eventUrl" in obj and "dateTime" in obj:
@@ -1380,4 +1460,103 @@ def fetch_from_html_meetup_oslo(source: dict) -> Iterable[RawStory]:
         title = (ev.get("title") or "").strip()
         if not title:
             continue
-        venue = ev
+        venue = ev.get("venue") or {}
+        venue_name = ""
+        if isinstance(venue, dict):
+            venue_name = (venue.get("name") or "").strip()
+        if venue_name.lower() in ("online event", "online", "virtual"):
+            continue
+        when_iso = ev.get("dateTime") or ""
+        event_date = when_iso[:10] if when_iso else ""
+        date_iso = event_date or fetched_at[:10]
+        bydel = _meetup_bydel(venue_name)
+        summary_parts = []
+        if event_date:
+            summary_parts.append(f"Arrangement {event_date}")
+        if venue_name:
+            summary_parts.append(f"hos {venue_name}")
+        desc = (ev.get("description") or "").strip()
+        if desc:
+            summary_parts.append(desc[:300])
+        summary = ". ".join(summary_parts)
+        yield RawStory(
+            id=_make_id(url, title),
+            bydel=bydel,
+            title=title,
+            url=url,
+            source=source.get("name", "Meetup Oslo"),
+            source_id=source["id"],
+            published_iso=fetched_at,
+            date_iso=date_iso,
+            summary=summary,
+            category="arrangement",
+            event_date=event_date or "",
+        )
+        count += 1
+
+
+SCRAPERS = {
+    "iltry": fetch_from_html_iltry,
+    "kondis": fetch_from_html_kondis,
+    "politi-oslo": fetch_from_html_politi,
+    "ruter-sx": fetch_from_html_ruter,
+    "oslomet": fetch_from_html_oslomet,
+    "bi": fetch_from_html_bi,
+    "deichman": fetch_from_html_deichman,
+    "vartoslo": fetch_from_html_vartoslo,
+    "bym-kunngjoringer": fetch_from_html_bym_kunngjoringer,
+    "skiforeningen": fetch_from_html_skiforeningen,
+    "akersposten": fetch_from_html_akersposten,
+    "kjelsaas": fetch_from_html_kjelsaas,
+    "skiforbundet-terminliste": fetch_from_html_skiforbundet,
+    "meetup-oslo": fetch_from_html_meetup_oslo,
+    "operaen": fetch_from_html_operaen,
+    "nationaltheatret": fetch_from_html_nationaltheatret,
+}
+
+
+def fetch_from_html(source: dict) -> Iterable[RawStory]:
+    scraper = SCRAPERS.get(source.get("scraper"))
+    if scraper is None:
+        print(f"  [fetcher] WARN: no scraper for {source['id']}")
+        return
+    yield from scraper(source)
+
+
+def _fetch_one_rss(src: dict) -> tuple[dict, list[RawStory]]:
+    try:
+        return (src, list(fetch_from_rss(src)))
+    except Exception as e:
+        print(f"  [fetcher] rss {src['id']}: {type(e).__name__}: {e}")
+        return (src, [])
+
+
+def _fetch_one_html(src: dict) -> tuple[dict, list[RawStory]]:
+    try:
+        return (src, list(fetch_from_html(src)))
+    except Exception as e:
+        print(f"  [fetcher] html {src['id']}: {type(e).__name__}: {e}")
+        return (src, [])
+
+
+def fetch_all(health_data: dict | None = None,
+              max_workers: int = 8) -> Iterable[RawStory]:
+    from . import health as H
+    rss_sources = [s for s in S.RSS_SOURCES]
+    html_sources = [s for s in getattr(S, "HTML_SOURCES", [])]
+    out: list[RawStory] = []
+    with ThreadPoolExecutor(max_workers=max_workers) as pool:
+        rss_futs = {pool.submit(_fetch_one_rss, s): s for s in rss_sources}
+        html_futs = {pool.submit(_fetch_one_html, s): s for s in html_sources}
+        for fut in as_completed(list(rss_futs) + list(html_futs)):
+            src, stories = fut.result()
+            count = len(stories)
+            kind = "rss" if src in rss_sources else "html"
+            if kind == "rss":
+                print(f"[fetcher] rss {src['id']}: {count} saker mappet til bydel")
+            else:
+                print(f"[fetcher] html {src['id']}: {count} saker scrapet")
+            out.extend(stories)
+            if health_data is not None:
+                H.record(health_data, src["id"], src.get("name", src["id"]), count)
+    return out
