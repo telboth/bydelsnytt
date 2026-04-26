@@ -164,6 +164,117 @@ def deduplicate(stories: list[dict]) -> list[dict]:
     return stories
 
 
+# --- Topic-clustering: andre pass for nesten-duplikater ---------------------
+# deduplicate() over kjorer en konservativ pass innen samme bydel med Jaccard
+# >= 0.65 og 7-dagers vindu. Topic-clustering loosner kravet:
+#   - lavere terskel (0.50)
+#   - tightere dato-vindu (2 dager)
+#   - kan krysse bydel-grenser (samme NRK/dagsavisen-sak lander ofte under
+#     ulike bydeler avhengig av geo-keywords)
+#   - krever minst ett "anker-token": proper noun fra original-tittel
+#     (length >= 6, foerstebokstav stor i originalen)
+# I motsetning til deduplicate() skjuler topic_cluster IKKE saker — den
+# registrerer en "topic_id" og related[] slik at build.py kan vise en diskret
+# "Også omtalt"-chip uten å fjerne saker fra listen.
+
+TOPIC_THRESHOLD = 0.50
+TOPIC_WINDOW_DAYS = 2
+MIN_ANCHOR_LEN = 6
+
+
+def _anchor_tokens(title: str) -> set[str]:
+    """Returner proper-noun-anker: ord >= 6 tegn med stor forstebokstav i
+    originalen. Holmenkollen, Tinestafetten, Skiforeningen, Stortingsgata."""
+    if not title:
+        return set()
+    out = set()
+    for word in re.findall(r"[A-ZÆØÅ][a-zæøå]{5,}", title):
+        norm = (word.lower()
+                .replace("æ", "ae")
+                .replace("ø", "oe")
+                .replace("å", "aa"))
+        out.add(norm)
+    return out
+
+
+def cluster_topics(stories: list[dict]) -> list[dict]:
+    """Andre pass: koble sammen synlige saker som handler om samme tema.
+
+    Setter:
+      * topic_id paa hver story i en klynge (samme id for alle medlemmer)
+      * related: liste {id, title, source, url} til andre medlemmer
+        (ekskluderer extra_sources som allerede er knyttet til primaer-saken)
+
+    Stories som er hidden=True (alt skjult av deduplicate()) hoppes over.
+    """
+    visible = [s for s in stories if not s.get("hidden")]
+    # Pre-compute tokens og anker
+    tok = {s["id"]: _normalize(s.get("title", "")) for s in visible}
+    anchor = {s["id"]: _anchor_tokens(s.get("title", "")) for s in visible}
+
+    # Union-find for klynger
+    parent: dict[str, str] = {s["id"]: s["id"] for s in visible}
+
+    def find(x: str) -> str:
+        while parent[x] != x:
+            parent[x] = parent[parent[x]]
+            x = parent[x]
+        return x
+
+    def union(a: str, b: str) -> None:
+        ra, rb = find(a), find(b)
+        if ra != rb:
+            parent[rb] = ra
+
+    n = len(visible)
+    for i in range(n):
+        a = visible[i]
+        a_tok, a_anc = tok[a["id"]], anchor[a["id"]]
+        if len(a_tok) < 3:
+            continue
+        for j in range(i + 1, n):
+            b = visible[j]
+            if a.get("source_id") == b.get("source_id"):
+                continue
+            b_tok, b_anc = tok[b["id"]], anchor[b["id"]]
+            if len(b_tok) < 3:
+                continue
+            # krever felles anker-token
+            if not (a_anc & b_anc):
+                continue
+            if not _date_close(a.get("date_iso"), b.get("date_iso"),
+                               window=TOPIC_WINDOW_DAYS):
+                continue
+            sim = _jaccard(a_tok, b_tok)
+            if sim >= TOPIC_THRESHOLD:
+                union(a["id"], b["id"])
+
+    # Build clusters
+    groups: dict[str, list[dict]] = defaultdict(list)
+    for s in visible:
+        groups[find(s["id"])].append(s)
+
+    # Skriv tilbake topic_id og related[]
+    cluster_count = 0
+    for root, members in groups.items():
+        if len(members) < 2:
+            continue
+        cluster_count += 1
+        topic_id = f"t-{root[:12]}"
+        for s in members:
+            s["topic_id"] = topic_id
+            s["related"] = [
+                {
+                    "id": m["id"],
+                    "title": m.get("title", "")[:120],
+                    "source": m.get("source"),
+                    "url": m.get("url"),
+                }
+                for m in members if m["id"] != s["id"]
+            ][:5]
+    return stories
+
+
 if __name__ == "__main__":
     import json
     from pathlib import Path
@@ -174,4 +285,10 @@ if __name__ == "__main__":
     hidden = sum(1 for s in deduped if s.get("hidden"))
     primaries = sum(1 for s in deduped if s.get("dup_count"))
     print(f"Før: {before} saker")
-    print(f"Etter dedup: {hidden} markert som dublett, {primaries} primaersaker med ekstra kilder")
+    print(f"Etter dedup: {hidden} markert som dublett, "
+          f"{primaries} primaersaker med ekstra kilder")
+    clustered = cluster_topics(deduped)
+    topic_count = len({s["topic_id"] for s in clustered if s.get("topic_id")})
+    in_clusters = sum(1 for s in clustered if s.get("topic_id"))
+    print(f"Topic-clustering: {topic_count} klynger, "
+          f"{in_clusters} saker har topic_id")

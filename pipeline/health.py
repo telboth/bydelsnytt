@@ -75,39 +75,82 @@ def record(data: dict, source_id: str, name: str, count: int,
     sources[source_id] = entry
 
 
+def record_new_stories(data: dict, new_per_source: dict) -> None:
+    """Etter merge: oppdater last_new_story_iso for kilder som leverte
+    minst én genuint ny sak (id som ikke fantes i cache fra foer).
+
+    Stille-doed-deteksjon: en kilde som svarer 200 OK med samme 10 saker
+    hver dag har last_success_iso = i dag, men last_new_story_iso flere
+    uker tilbake — og er reelt "fryst".
+    """
+    now = datetime.now(timezone.utc).isoformat()
+    sources = data.setdefault("sources", {})
+    for sid, n in (new_per_source or {}).items():
+        if n <= 0:
+            continue
+        entry = sources.setdefault(sid, {"name": sid})
+        entry["last_new_story_iso"] = now
+        entry["last_new_story_count"] = int(n)
+
+
 def stale_sources(data: dict, stale_days: int = STALE_DAYS) -> list[dict]:
-    """Returner liste over kilder som ikke har levert på >= stale_days dager."""
+    """Returner liste over kilder som er "stale".
+
+    En kilde er stale enten naar:
+      - last_success_iso er eldre enn stale_days, ELLER
+      - last_new_story_iso er eldre enn stale_days * 2 (stille-doed-deteksjon
+        - kilden svarer OK, men leverer kun saker vi har sett foer)
+    """
     from datetime import datetime as dt
-    cutoff = dt.now(timezone.utc).timestamp() - stale_days * 86400
+    now_ts = dt.now(timezone.utc).timestamp()
+    cutoff_ok = now_ts - stale_days * 86400
+    cutoff_new = now_ts - stale_days * 2 * 86400
     out = []
     for sid, entry in (data.get("sources") or {}).items():
         last_ok = entry.get("last_success_iso")
+        last_new = entry.get("last_new_story_iso")
+        reason = None
         if not last_ok:
-            out.append({"id": sid, "name": entry.get("name", sid),
-                        "last_success_iso": None,
-                        "consecutive_empty_runs": entry.get(
-                            "consecutive_empty_runs", 0)})
-            continue
-        try:
-            last_ts = dt.fromisoformat(last_ok.replace("Z", "+00:00")).timestamp()
-        except ValueError:
-            continue
-        if last_ts < cutoff:
-            out.append({"id": sid, "name": entry.get("name", sid),
-                        "last_success_iso": last_ok,
-                        "consecutive_empty_runs": entry.get(
-                            "consecutive_empty_runs", 0)})
+            reason = "aldri_levert"
+        else:
+            try:
+                last_ok_ts = dt.fromisoformat(
+                    last_ok.replace("Z", "+00:00")
+                ).timestamp()
+                if last_ok_ts < cutoff_ok:
+                    reason = "ingen_kontakt"
+            except ValueError:
+                pass
+        if reason is None and last_new:
+            try:
+                last_new_ts = dt.fromisoformat(
+                    last_new.replace("Z", "+00:00")
+                ).timestamp()
+                if last_new_ts < cutoff_new:
+                    reason = "stille_doed"
+            except ValueError:
+                pass
+        if reason:
+            out.append({
+                "id": sid,
+                "name": entry.get("name", sid),
+                "last_success_iso": last_ok,
+                "last_new_story_iso": last_new,
+                "reason": reason,
+                "consecutive_empty_runs": entry.get(
+                    "consecutive_empty_runs", 0
+                ),
+            })
     return out
 
 
 if __name__ == "__main__":
     data = load()
     print(f"Kilder registrert: {len(data.get('sources') or {})}")
-    for sid, entry in (data.get("sources") or {}).items():
-        print(f"  {sid}: {entry.get('last_count')} saker, "
-              f"last_success={entry.get('last_success_iso')}")
     stale = stale_sources(data)
     if stale:
-        print(f"\n{len(stale)} kilder er stale (>{STALE_DAYS} dager):")
+        print(f"\n{len(stale)} kilder er stale:")
         for s in stale:
-            print(f"  - {s['name']} ({s['id']})")
+            print(f"  - {s['name']} ({s['id']}): {s['reason']}")
+    else:
+        print("Alle kilder leverer ferskt.")

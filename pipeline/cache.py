@@ -79,7 +79,30 @@ def prune(stories: list[dict], max_age_days: int = DEFAULT_MAX_AGE_DAYS) -> list
     return [s for s in stories if (s.get("date_iso") or "9999") >= cutoff]
 
 
+def count_new_per_source(existing: list[dict], incoming: Iterable[dict]) -> dict:
+    """Tell hvor mange GENUINT NYE saker (id ikke i cache fra foer) hver
+    source_id leverte. Brukes til stille-doed-deteksjon i health.py."""
+    seen = {s["id"] for s in existing}
+    out: dict = {}
+    for s in incoming:
+        if s.get("id") in seen:
+            continue
+        sid = s.get("source_id") or "unknown"
+        out[sid] = out.get(sid, 0) + 1
+    return out
+
+
 def replace_and_save(stories: list[dict]) -> None:
     """Bekvemmelighets-funksjon: erstatt hele listen og skriv."""
-    cache = {"schemaVersion": 1, "stories": stories}
-    save(cache)
+    DATA_PATH.write_text(
+        json.dumps(
+            {
+                "schemaVersion": 1,
+                "updatedAt": datetime.now(timezone.utc).isoformat(),
+                "stories": stories,
+            },
+            ensure_ascii=False,
+            indent=2,
+        ),
+        encoding="utf-8",
+    )

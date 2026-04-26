@@ -1547,6 +1547,17 @@ a.story-ics {
   display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;
   overflow: hidden;
 }
+.topp-tldr {
+  font-size: 11.5px; color: #4a5562; line-height: 1.4; margin-top: 4px;
+  display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.topp-tldr-tag {
+  display: inline-block; font-size: 9px; font-weight: 700;
+  padding: 1px 5px; border-radius: 3px; margin-right: 4px;
+  background: linear-gradient(135deg, #1862a8, #2a8dc7); color: #fff;
+  letter-spacing: 0.4px; vertical-align: 1px;
+}
 .topp-meta {
   display: flex; gap: 6px; align-items: center; flex-wrap: wrap;
   font-size: 11px; color: #888; margin-top: 2px;
@@ -1681,6 +1692,10 @@ a.story-ics {
 .leaflet-popup-content { font-size: 13px; line-height: 1.4; }
 .leaflet-popup-content strong { display: block; margin-bottom: 4px; font-size: 13px; }
 .leaflet-popup-content .popup-meta { color: #777; font-size: 11px; margin-top: 4px; }
+.leaflet-popup-content .popup-precision { color: #b0732a; font-size: 11px; margin-top: 4px; font-style: italic; }
+.leaflet-popup-content .popup-anchor { color: #888; font-size: 12px; }
+.leaflet-tooltip.leaflet-tooltip-top { font-size: 12px; padding: 6px 8px; max-width: 260px; }
+.map-disclaimer { color: #888; font-size: 11px; margin: 6px 2px 14px; line-height: 1.4; }
 footer { margin-top: 32px; padding-top: 16px; border-top: 1px solid #e5e5e4; color: #777; font-size: 12px; }
 footer a { color: #1862a8; }
 @media (max-width: 600px) {
@@ -2944,11 +2959,32 @@ MAP_SCRIPT = r"""
         radius: p.precise ? 7 : 5,
         color: '#fff', weight: 2, fillColor: color, fillOpacity: 0.9
       });
+      // Popup: alltid lenke til kilde (in-page-anker fungerer kun for de
+      // ~100 synlige kortene; resten av prikkene gikk tidligere til "intet")
+      var dateStr = p.date_iso ? ' &middot; ' + escapeHtml(p.date_iso) : '';
+      var precisionNote = p.precise ? '' :
+        '<div class="popup-precision">Omtrentlig plassering</div>';
+      var srcLink = p.url
+        ? '<a href="' + escapeHtml(p.url) + '" target="_blank" rel="noopener">' +
+          '&Aring;pne kilde &nearr;</a>'
+        : '';
+      var anchorLink = '<a href="#' + p.id + '" class="popup-anchor">' +
+                       'G&aring; til kort &darr;</a>';
       var popup = '<strong>' + escapeHtml(p.title) + '</strong>' +
                   '<div class="popup-meta">' + escapeHtml(p.bydel) + ' &middot; ' +
-                  escapeHtml(p.source) + '</div>' +
-                  '<div style="margin-top:6px;"><a href="#' + p.id + '">Gå til sak &rarr;</a></div>';
+                  escapeHtml(p.source) + dateStr + '</div>' +
+                  precisionNote +
+                  '<div style="margin-top:8px; display:flex; gap:10px; flex-wrap:wrap;">' +
+                  srcLink + anchorLink + '</div>';
       marker.bindPopup(popup);
+      // Hover-tooltip: kompakt info uten klikk
+      var tipDate = p.date_iso ? ' · ' + p.date_iso : '';
+      marker.bindTooltip(
+        '<strong>' + escapeHtml(p.title.length > 80
+          ? p.title.slice(0, 78) + '…' : p.title) + '</strong><br>' +
+          escapeHtml(p.bydel) + ' · ' + escapeHtml(p.source) + tipDate,
+        { direction: 'top', offset: [0, -6], sticky: false, opacity: 0.95 }
+      );
       marker._bydelsnytt = p;
       marker.addTo(map);
       allMarkers.push(marker);
@@ -3161,6 +3197,255 @@ def _is_orienteering(story) -> bool:
     return False
 
 
+
+# Bystyret-fallback: stilisert parlament. Brukes naar bystyre/komite-saker
+# mangler og:image (oslo.kommune.no eksponerer sjelden delbilde for sak-PDFer).
+_BYSTYRET_SVG_DATA_URI = (
+    "data:image/svg+xml;base64,"
+    "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxu"
+    "cz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MDAiIGhlaWdo"
+    "dD0iNTAwIiB2aWV3Qm94PSIwIDAgNTAwIDUwMCI+PHJlY3Qgd2lkdGg9IjUwMCIg"
+    "aGVpZ2h0PSI1MDAiIGZpbGw9IiNmMGYzZjciLz48cG9seWdvbiBwb2ludHM9IjI1"
+    "MCw5MCA5MCwxNzAgNDEwLDE3MCIgZmlsbD0iIzE4NjJhOCIvPjxyZWN0IHg9Ijkw"
+    "IiB5PSIxNzAiIHdpZHRoPSIzMjAiIGhlaWdodD0iMjIiIGZpbGw9IiMxODYyYTgi"
+    "Lz48cmVjdCB4PSIxMTUiIHk9IjIwMCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjIwMCIg"
+    "ZmlsbD0iIzE4NjJhOCIvPjxyZWN0IHg9IjE5MCIgeT0iMjAwIiB3aWR0aD0iNDAi"
+    "IGhlaWdodD0iMjAwIiBmaWxsPSIjMTg2MmE4Ii8+PHJlY3QgeD0iMjcwIiB5PSIy"
+    "MDAiIHdpZHRoPSI0MCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiMxODYyYTgiLz48cmVj"
+    "dCB4PSIzNDUiIHk9IjIwMCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjIwMCIgZmlsbD0i"
+    "IzE4NjJhOCIvPjxyZWN0IHg9IjgwIiB5PSI0MDUiIHdpZHRoPSIzNDAiIGhlaWdo"
+    "dD0iMjgiIGZpbGw9IiMxODYyYTgiLz48L3N2Zz4="
+)
+
+_BYSTYRET_KEYWORDS = (
+    "bystyret",
+    "bystyresak",
+    "bystyremoete",
+    "bystyremøte",
+    "byraadet",
+    "byrådet",
+    "kommunestyre",
+    "bydelsutvalg",
+    "bydelsutvalget",
+    "kommuneøkonomi",
+    "kommunal forvaltning",
+    "høringssvar",
+    "hoeringssvar",
+    "høring:",
+    "hoering:",
+    "kunngjøring",
+    "kunngjoering",
+)
+
+
+def _is_bystyret(story) -> bool:
+    """Politikk/forvaltning-saker: bystyret, byraadet, bydelsutvalg, hoeringer."""
+    title = (story.get("title") or "").lower()
+    summary = (story.get("summary") or "").lower()
+    cat = (story.get("category") or "").lower()
+    text = title + " " + summary
+    for kw in _BYSTYRET_KEYWORDS:
+        if kw in text:
+            return True
+    if cat in ("politikk", "kommunalt", "bystyret"):
+        return True
+    return False
+
+
+# Marka/tur-fallback: stilisert fjell + skog + sol.
+_MARKA_SVG_DATA_URI = (
+    "data:image/svg+xml;base64,"
+    "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxu"
+    "cz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MDAiIGhlaWdo"
+    "dD0iNTAwIiB2aWV3Qm94PSIwIDAgNTAwIDUwMCI+PHJlY3Qgd2lkdGg9IjUwMCIg"
+    "aGVpZ2h0PSI1MDAiIGZpbGw9IiNlOGYwZTYiLz48Y2lyY2xlIGN4PSIzODAiIGN5"
+    "PSIxMTAiIHI9IjM4IiBmaWxsPSIjZmZkOTY2Ii8+PHBvbHlnb24gcG9pbnRzPSI0"
+    "MCw0MjAgMTgwLDIwMCAzMjAsNDIwIiBmaWxsPSIjM2E1YTNhIi8+PHBvbHlnb24g"
+    "cG9pbnRzPSIyMDAsNDIwIDMyMCwxNDAgNDQwLDQyMCIgZmlsbD0iIzVhN2E0YSIv"
+    "Pjxwb2x5Z29uIHBvaW50cz0iMjg1LDIxMCAzMjAsMTQwIDM2MCwyMjAgMzQwLDIy"
+    "MCAzMjAsMjAwIDMwNSwyMjAiIGZpbGw9IiNmZmYiLz48cmVjdCB5PSI0MjAiIHdp"
+    "ZHRoPSI1MDAiIGhlaWdodD0iODAiIGZpbGw9IiM3YTlhNWEiLz48L3N2Zz4="
+)
+
+_MARKA_KEYWORDS = (
+    "nordmarka",
+    "oestmarka",
+    "østmarka",
+    "lillomarka",
+    "vestmarka",
+    "krokskogen",
+    "markastue",
+    "markast",
+    "skjennungstua",
+    "kikut",
+    "mariholtet",
+    "lilloseter",
+    "rustadsaga",
+    "sandbakken",
+    "sognsvann",
+    "ullevaalseter",
+    "ullevålseter",
+    "sinober",
+    "tryvann",
+    "frognerseteren",
+    "skogstur",
+    "fjelltur",
+    "merket løype",
+    "merket loeype",
+    "DNT",
+    "skiforen",
+    "soersamarbeidet",
+    "tursti",
+)
+
+
+def _is_marka(story) -> bool:
+    """Tur/marka-saker: stuer, loyper, naturreservater, friluftsliv."""
+    title = (story.get("title") or "").lower()
+    summary = (story.get("summary") or "").lower()
+    cat = (story.get("category") or "").lower()
+    text = title + " " + summary
+    for kw in _MARKA_KEYWORDS:
+        if kw.lower() in text:
+            return True
+    if cat in ("marka", "natur", "friluft", "tur"):
+        return True
+    return False
+
+
+# Skirenn-fallback: stilisert skiloeper i bakke.
+_SKIRENN_SVG_DATA_URI = (
+    "data:image/svg+xml;base64,"
+    "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxu"
+    "cz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MDAiIGhlaWdo"
+    "dD0iNTAwIiB2aWV3Qm94PSIwIDAgNTAwIDUwMCI+PHJlY3Qgd2lkdGg9IjUwMCIg"
+    "aGVpZ2h0PSI1MDAiIGZpbGw9IiNkZGU5ZjUiLz48cG9seWdvbiBwb2ludHM9IjAs"
+    "NTAwIDUwMCw1MDAgNTAwLDI2MCAwLDQwMCIgZmlsbD0iI2ZmZmZmZiIvPjxsaW5l"
+    "IHgxPSI2MCIgeTE9IjQ1MCIgeDI9IjQ1MCIgeTI9IjI4MCIgc3Ryb2tlPSIjMTg2"
+    "MmE4IiBzdHJva2Utd2lkdGg9IjE0IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48"
+    "bGluZSB4MT0iODAiIHkxPSI0NzUiIHgyPSI0NzAiIHkyPSIzMDUiIHN0cm9rZT0i"
+    "IzE4NjJhOCIgc3Ryb2tlLXdpZHRoPSIxNCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5k"
+    "Ii8+PGNpcmNsZSBjeD0iMjcwIiBjeT0iMjAwIiByPSIyOCIgZmlsbD0iI2M4MTAy"
+    "ZSIvPjxyZWN0IHg9IjI1MiIgeT0iMjI1IiB3aWR0aD0iMzYiIGhlaWdodD0iNjAi"
+    "IHJ4PSI2IiBmaWxsPSIjYzgxMDJlIi8+PC9zdmc+"
+)
+
+_SKIRENN_KEYWORDS = (
+    "skirenn",
+    "skiløper",
+    "skiloeper",
+    "langrenn",
+    "alpint",
+    "alpinrenn",
+    "freestyle",
+    "ungdoms-NM",
+    "junior-NM",
+    "klubbrenn",
+    "klassisk stil",
+    "skoeyte",
+    "skøyte",
+    "Holmenkollen",
+    "Wyller",
+    "Tryvannskleiva",
+    "Grefsenkleiva",
+    "Kirkerudbakken",
+    "skicross",
+    "snowboard",
+    "stafett ski",
+    "Birkebeiner",
+)
+
+
+def _is_skirenn(story) -> bool:
+    """Skirenn/alpine-saker: langrenn, alpint, NM-renn, klubbrenn."""
+    title = (story.get("title") or "").lower()
+    summary = (story.get("summary") or "").lower()
+    cat = (story.get("category") or "").lower()
+    text = title + " " + summary
+    for kw in _SKIRENN_KEYWORDS:
+        if kw.lower() in text:
+            return True
+    return False
+
+
+# Kollektiv-fallback: stilisert tram/buss.
+_KOLLEKTIV_SVG_DATA_URI = (
+    "data:image/svg+xml;base64,"
+    "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxu"
+    "cz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MDAiIGhlaWdo"
+    "dD0iNTAwIiB2aWV3Qm94PSIwIDAgNTAwIDUwMCI+PHJlY3Qgd2lkdGg9IjUwMCIg"
+    "aGVpZ2h0PSI1MDAiIGZpbGw9IiNmNWY1ZjUiLz48cmVjdCB4PSI2MCIgeT0iMTUw"
+    "IiB3aWR0aD0iMzgwIiBoZWlnaHQ9IjIwMCIgcng9IjIyIiBmaWxsPSIjYzgxMDJl"
+    "Ii8+PHJlY3QgeD0iODUiIHk9IjE4MCIgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiBm"
+    "aWxsPSIjY2ZlNWZmIi8+PHJlY3QgeD0iMTgwIiB5PSIxODAiIHdpZHRoPSI4MCIg"
+    "aGVpZ2h0PSI4MCIgZmlsbD0iI2NmZTVmZiIvPjxyZWN0IHg9IjI3NSIgeT0iMTgw"
+    "IiB3aWR0aD0iODAiIGhlaWdodD0iODAiIGZpbGw9IiNjZmU1ZmYiLz48cmVjdCB4"
+    "PSIzNzAiIHk9IjE4MCIgd2lkdGg9IjUwIiBoZWlnaHQ9IjgwIiBmaWxsPSIjY2Zl"
+    "NWZmIi8+PHJlY3QgeD0iNjAiIHk9IjM0NSIgd2lkdGg9IjM4MCIgaGVpZ2h0PSIx"
+    "NCIgZmlsbD0iIzVhMDAwMCIvPjxjaXJjbGUgY3g9IjE0MCIgY3k9IjM4MCIgcj0i"
+    "MzQiIGZpbGw9IiMxYTFhMWEiLz48Y2lyY2xlIGN4PSIzNjAiIGN5PSIzODAiIHI9"
+    "IjM0IiBmaWxsPSIjMWExYTFhIi8+PGNpcmNsZSBjeD0iMTQwIiBjeT0iMzgwIiBy"
+    "PSIxNCIgZmlsbD0iIzg4OCIvPjxjaXJjbGUgY3g9IjM2MCIgY3k9IjM4MCIgcj0i"
+    "MTQiIGZpbGw9IiM4ODgiLz48L3N2Zz4="
+)
+
+_KOLLEKTIV_KEYWORDS = (
+    "ruter",
+    "trikk",
+    "t-bane",
+    "tbane",
+    "metro",
+    "buss",
+    "linje ",
+    "linje-",
+    "togavvik",
+    "vy ",
+    "sporvogn",
+    "sporveien",
+    "kollektiv",
+    "innstilt",
+    "forsinkelse",
+    "ruteendring",
+    "trafikkmelding",
+    "buss for trikk",
+    "buss for bane",
+)
+
+
+def _is_kollektiv(story) -> bool:
+    """Kollektiv-saker: Ruter-avvik, T-bane, trikk, buss."""
+    title = (story.get("title") or "").lower()
+    summary = (story.get("summary") or "").lower()
+    cat = (story.get("category") or "").lower()
+    src = (story.get("source_id") or "").lower()
+    text = title + " " + summary
+    for kw in _KOLLEKTIV_KEYWORDS:
+        if kw.lower() in text:
+            return True
+    if "ruter" in src or "vy" in src:
+        return True
+    if cat in ("kollektiv", "trafikk", "transport"):
+        return True
+    return False
+
+
+def _category_fallback_svg(story) -> str:
+    """Returner data-URI for SVG-fallback basert paa kategori, ellers tom streng.
+    Sjekkes i prioritert rekkefolge: o-loep, skirenn, kollektiv, marka,
+    bystyret. Foerste match vinner."""
+    if _is_orienteering(story):
+        return _ORIENTEERING_SVG_DATA_URI
+    if _is_skirenn(story):
+        return _SKIRENN_SVG_DATA_URI
+    if _is_kollektiv(story):
+        return _KOLLEKTIV_SVG_DATA_URI
+    if _is_marka(story):
+        return _MARKA_SVG_DATA_URI
+    if _is_bystyret(story):
+        return _BYSTYRET_SVG_DATA_URI
+    return ""
+
+
 def render_story(story, bydel_name=""):
     fresh = is_fresh(story)
     badge = ' <span class="news-badge">news</span>' if fresh else ""
@@ -3204,8 +3489,8 @@ def render_story(story, bydel_name=""):
     if _is_blacklisted_image(img_url):
         img_url = ""
     # Fallback: bruk orienteringssymbol for o-loep-saker uten bilde
-    if not img_url and _is_orienteering(story):
-        img_url = _ORIENTEERING_SVG_DATA_URI
+    if not img_url:
+        img_url = _category_fallback_svg(story)
     thumb_html = ""
     if img_url:
         thumb_html = (
@@ -3370,6 +3655,15 @@ def _render_topp_saker(bydeler_list, today_iso):
     top = _pick_top_stories(bydeler_list, today_iso, n=5)
     if not top:
         return ""
+    # AI-TL;DR: best-effort. Hopper over hvis modulen ikke kan importeres
+    # eller hvis ANTHROPIC_API_KEY mangler — vi bruker da bare cache.
+    tldr_map: dict = {}
+    try:
+        from pipeline import tldr as _tldr
+        top_stories_only = [s for _, _, s in top]
+        tldr_map = _tldr.enrich_top_stories(top_stories_only)
+    except Exception as e:
+        print(f"[build] tldr-modul utilgjengelig: {e}", file=sys.stderr)
     cards = []
     for score, bname, s in top:
         title = esc(s.get("title", "") or "(uten tittel)")
@@ -3381,8 +3675,8 @@ def _render_topp_saker(bydeler_list, today_iso):
         img_url = s.get("image_url") or ""
         if _is_blacklisted_image(img_url):
             img_url = ""
-        if not img_url and _is_orienteering(s):
-            img_url = _ORIENTEERING_SVG_DATA_URI
+        if not img_url:
+            img_url = _category_fallback_svg(s)
         img_html = ""
         if img_url:
             img_html = (
@@ -3390,12 +3684,21 @@ def _render_topp_saker(bydeler_list, today_iso):
                 f'<img src="{esc(img_url)}" loading="lazy" alt="" '
                 f'onerror="this.parentElement.style.display=&quot;none&quot;"></span>'
             )
+        tldr_text = tldr_map.get(s.get("id", ""), "")
+        tldr_html = ""
+        if tldr_text:
+            tldr_html = (
+                f'<span class="topp-tldr" title="AI-generert sammendrag">'
+                f'<span class="topp-tldr-tag">TL;DR</span> {esc(tldr_text)}'
+                f'</span>'
+            )
         cards.append(
             f'<a class="topp-card" href="{url}" target="_blank" rel="noopener">'
             f'{img_html}'
             f'<span class="topp-body">'
             f'<span class="topp-bydel">{esc(bname)}</span>'
             f'<span class="topp-title">{title}</span>'
+            f'{tldr_html}'
             f'<span class="topp-meta">'
             f'<span class="topp-src">{source}</span>'
             f'<span class="topp-pill {esc(cat)}">{cat_label}</span>'
@@ -3512,6 +3815,8 @@ def _build_map_data(bydeler_list):
                 "title": s.get("title", ""),
                 "category": s.get("category", "annet"),
                 "source": s.get("source", ""),
+                "url": s.get("url", ""),
+                "date_iso": s.get("date_iso", "")[:10],
                 "precise": bool(s.get("location_precise")),
             })
     return data
@@ -3626,6 +3931,7 @@ def render_page(include_cowork_meta):
 {upcoming_html}
 <label class="map-toggle"><input type="checkbox" id="map-toggle" checked> Vis kart</label>
 <div id="map"></div>
+<p class="map-disclaimer">Merk: ikke alle saker er plassert n&oslash;yaktig. Saker uten egen adresse er pin-et p&aring; bydel-/venue-sentrum. Stor prikk = presis posisjon, liten prikk = omtrentlig.</p>
 <main>{body}
 <div id="no-results" class="no-results" style="display:none;">Ingen saker matcher filtrene dine. Prøv å huke av flere kategorier eller endre Bydel/Periode.</div>
 </main>
@@ -3634,7 +3940,7 @@ def render_page(include_cowork_meta):
   Kilde: automatiske RSS-feeds (Oslo kommune, Groruddalen, NRK Oslo/Viken) + håndkuratert innhold fra skoler og idrettslag.
   <br>
   <a href="feed.xml">RSS-feed</a> · <a href="weekly/">Ukesarkiv</a> · Live: <a href="https://telboth.github.io/bydelsnytt/">telboth.github.io/bydelsnytt</a>.
-  <span class="visit-counter" id="visit-counter" style="margin-left: 8px; padding-left: 8px; border-left: 1px solid #ddd; color: #888;">Besøk: <span id="visit-count">…</span></span>
+  <span class="visit-counter" id="visit-counter" style="margin-left: 8px; padding-left: 8px; border-left: 1px solid #ddd; color: #888;">Bes&oslash;k: <span id="visit-count">&hellip;</span></span>
 </footer>
 </div>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
@@ -3670,7 +3976,7 @@ if ('serviceWorker' in navigator) {{
 """
 
 
-out_dir = os.path.dirname(os.path.abspath(__file__))
+out_dir = "/sessions/fervent-admiring-sagan/mnt/outputs"
 os.makedirs(out_dir, exist_ok=True)
 
 with open(f"{out_dir}/bydelsnytt_artifact.html", "w", encoding="utf-8") as f:
@@ -3680,5 +3986,4 @@ with open(f"{out_dir}/bydelsnytt_publish.html", "w", encoding="utf-8") as f:
     f.write(render_page(include_cowork_meta=False))
 
 print("artifact bytes:", os.path.getsize(f"{out_dir}/bydelsnytt_artifact.html"))
-
 print("publish  bytes:", os.path.getsize(f"{out_dir}/bydelsnytt_publish.html"))

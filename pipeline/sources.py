@@ -394,8 +394,13 @@ HTML_SOURCES = [
         "name": "Akersposten",
         "scraper": "akersposten",
         "bydel": "Vestre Aker",
-        "urls": ["https://akersposten.no/"],
-        "limit": 18,
+        "urls": [
+            "https://akersposten.no/",
+            # /minakersposten har eget redaksjonelt utvalg som ofte ikke
+            # vises pa forsiden — ekstra dekning av kultur- og leserstoff.
+            "https://www.akersposten.no/minakersposten",
+        ],
+        "limit": 30,
         "weight": 0.6,
     },
 ]
@@ -491,10 +496,7 @@ def resolve_text_match_bydel_fallback(entry):
             return None  # None -> fetcher bruker source['bydel'] som fallback
     return SKIP
 
+
 RESOLVERS = {
     "oslo_kommune_tags": resolve_oslo_kommune_tags,
-    "groruddalen": resolve_groruddalen,
-    "text_match_bydel": resolve_text_match_bydel,
-    "text_match_bydel_fallback": resolve_text_match_bydel_fallback,
-    "fixed_bydel": resolve_fixed_bydel,
 }
