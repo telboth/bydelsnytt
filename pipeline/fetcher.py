@@ -1083,6 +1083,104 @@ def fetch_from_html_kjelsaas(source: dict) -> Iterable[RawStory]:
         )
 
 
+# --- Skiforbundet terminliste (Oslo Skikrets) -----------------------------
+# skiforbundet.no/terminliste/ har en embedded "events" JSON-blob i HTML-en
+# med startDate, eventName, arrangingOrgName, activityName, countyName og
+# eventUrl. Vi henter alle og filtrerer paa countyName = "Oslo Skikrets"
+# (som geografisk dekker Oslo + omegn).
+
+_SKIFORBUNDET_VENUE_TO_BYDEL = {
+    "holmenkollen": "Vestre Aker",
+    "tryvann": "Vestre Aker",
+    "wyller": "Vestre Aker",
+    "frognerseteren": "Vestre Aker",
+    "linderud": "Bjerke",
+    "linderudkollen": "Bjerke",
+    "grefsenkollen": "Nordre Aker",
+    "kjelsås": "Nordre Aker",
+    "kjelsaas": "Nordre Aker",
+    "lillomarka": "Bjerke",
+    "kirkerud": "Vestre Aker",
+    "rommen": "Stovner",
+    "voldsløkka": "Sagene",
+    "voldslokka": "Sagene",
+    "sagene": "Sagene",
+    "skullerud": "Østensjø",
+    "manglerud": "Østensjø",
+    "ekeberg": "Nordstrand",
+}
+
+
+def _skiforbundet_bydel(event_name: str, org_name: str) -> str:
+    text = (event_name + " " + org_name).lower()
+    for key, bydel in sorted(
+        _SKIFORBUNDET_VENUE_TO_BYDEL.items(), key=lambda kv: -len(kv[0])
+    ):
+        if key in text:
+            return bydel
+    # Default: Vestre Aker (Holmenkollen-tyngde i Oslo Skikrets)
+    return "Vestre Aker"
+
+
+def _parse_dmy(date_str: str) -> str:
+    """24.04.2026 -> 2026-04-24."""
+    m = re.match(r"(\d{2})\.(\d{2})\.(\d{4})", date_str or "")
+    if not m:
+        return ""
+    return f"{m.group(3)}-{m.group(2)}-{m.group(1)}"
+
+
+def fetch_from_html_skiforbundet(source: dict) -> Iterable[RawStory]:
+    """Skirenn fra skiforbundet.no/terminliste/ filtrert til Oslo Skikrets."""
+    fetched_at = datetime.now(timezone.utc).isoformat()
+    list_url = (source.get("urls") or
+                ["https://www.skiforbundet.no/terminliste/"])[0]
+    body = _fetch_html(list_url)
+    if not body:
+        return
+    m = re.search(r'"events":(\[.*?\])\s*[,}]', body, re.DOTALL)
+    if not m:
+        print("  [skiforbundet] kunne ikke finne events-array")
+        return
+    try:
+        events = json.loads(m.group(1))
+    except json.JSONDecodeError as e:
+        print(f"  [skiforbundet] JSON parse: {e}")
+        return
+    target_krets = source.get("krets", "Oslo Skikrets")
+    count = 0
+    for ev in events:
+        if ev.get("countyName") != target_krets:
+            continue
+        name = (ev.get("eventName") or "").strip()
+        org = (ev.get("arrangingOrgName") or "").strip()
+        url = (ev.get("eventUrl") or "").strip()
+        activity = (ev.get("activityName") or "").strip()
+        start = _parse_dmy(ev.get("startDate"))
+        if not name or not url or not start:
+            continue
+        bydel = _skiforbundet_bydel(name, org)
+        title = f"{name}" + (f" ({activity})" if activity else "")
+        summary = (
+            f"Skirenn {start}. Arrangoer: {org}. "
+            f"Aktivitet: {activity}. Krets: {target_krets}."
+        )
+        yield RawStory(
+            id=_make_id(url, title),
+            bydel=bydel,
+            title=title,
+            url=url,
+            source=source.get("name", "Skiforbundet"),
+            source_id=source["id"],
+            published_iso=fetched_at,
+            date_iso=start,
+            summary=summary,
+            category="idrett",
+            event_date=start,
+        )
+        count += 1
+
+
 # --- Meetup Oslo scraper ---------------------------------------------------
 # Find-siden sluker en stor JSON-blob i __NEXT_DATA__ med 12+ event-objekter.
 # Vi henter tittel, dateTime (ISO), eventUrl og venue-navn derfra. Online-only
@@ -1227,6 +1325,7 @@ SCRAPERS = {
     "skiforeningen": fetch_from_html_skiforeningen,
     "akersposten": fetch_from_html_akersposten,
     "kjelsaas": fetch_from_html_kjelsaas,
+    "skiforbundet-terminliste": fetch_from_html_skiforbundet,
     "meetup-oslo": fetch_from_html_meetup_oslo,
 }
 
@@ -1257,9 +1356,6 @@ def _fetch_one_html(src: dict) -> tuple[dict, list[RawStory]]:
 
 def fetch_all(health_data: dict | None = None,
               max_workers: int = 8) -> Iterable[RawStory]:
-    """Hent alle kilder parallelt. health_data oppdateres i en lock-fri made
-    siden vi appender entry-pr-source via H.record() som tar dict-mutasjon
-    sekvensielt under GIL — godt nok for vaart bruk."""
     from . import health as H
     rss_sources = [s for s in S.RSS_SOURCES]
     html_sources = [s for s in getattr(S, "HTML_SOURCES", [])]
@@ -1271,7 +1367,6 @@ def fetch_all(health_data: dict | None = None,
             src, stories = fut.result()
             count = len(stories)
             kind = "rss" if src in rss_sources else "html"
-            label = src.get("name", src["id"])
             if kind == "rss":
                 print(f"[fetcher] rss {src['id']}: {count} saker mappet til bydel")
             else:

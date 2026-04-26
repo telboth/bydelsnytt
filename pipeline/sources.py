@@ -314,6 +314,18 @@ HTML_SOURCES = [
         "weight": 0.4,
     },
     {
+        # Skiforbundet terminliste filtrert paa Oslo Skikrets. Henter
+        # alpinrenn, langrenn, hopp etc i Oslo + omegn.
+        "id": "skiforbundet-oslo",
+        "name": "Skiforbundet (Oslo Skikrets)",
+        "scraper": "skiforbundet-terminliste",
+        "krets": "Oslo Skikrets",
+        "bydel": "Vestre Aker",
+        "urls": ["https://www.skiforbundet.no/terminliste/"],
+        "limit": 30,
+        "weight": 0.5,
+    },
+    {
         "id": "iltry",
         "name": "IL Try",
         "scraper": "iltry",
