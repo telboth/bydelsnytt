@@ -326,6 +326,16 @@ HTML_SOURCES = [
         "weight": 0.5,
     },
     {
+        # Operaen i Bjorvika — opera + ballett + konserter.
+        "id": "operaen",
+        "name": "Operaen",
+        "scraper": "operaen",
+        "bydel": "Gamle Oslo",
+        "urls": ["https://operaen.no/forestillinger/"],
+        "limit": 12,
+        "weight": 0.6,
+    },
+    {
         "id": "iltry",
         "name": "IL Try",
         "scraper": "iltry",

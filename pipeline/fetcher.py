@@ -1083,6 +1083,112 @@ def fetch_from_html_kjelsaas(source: dict) -> Iterable[RawStory]:
         )
 
 
+# --- Operaen.no — forestillinger og konserter -----------------------------
+# Den Norske Opera & Ballett: scrape /forestillinger/ for produksjons-lenker,
+# fetch hver detaljside for tittel, beskrivelse, bilde og foerste forestillings-
+# dato. Bydel = Gamle Oslo (Bjorvika).
+
+_OPERAEN_MONTH = {
+    "jan": "01", "feb": "02", "mar": "03", "apr": "04", "mai": "05",
+    "jun": "06", "jul": "07", "aug": "08", "sep": "09", "okt": "10",
+    "nov": "11", "des": "12",
+}
+
+
+def _operaen_first_date(html: str, current_year: int) -> str:
+    """Returner foerste fremtidige dato i ISO-format (YYYY-MM-DD)."""
+    today = datetime.now(timezone.utc).date()
+    candidates = []
+    for m in re.finditer(
+        r"\b(\d{1,2})\.\s*(jan|feb|mar|apr|mai|jun|jul|aug|sep|okt|nov|des)"
+        r"\w*\s*(\d{4})?", html, re.IGNORECASE,
+    ):
+        day = int(m.group(1))
+        mon = _OPERAEN_MONTH[m.group(2).lower()[:3]]
+        year = int(m.group(3)) if m.group(3) else current_year
+        if year < current_year:
+            year = current_year + 1
+        try:
+            from datetime import date as _date
+            d = _date(year, int(mon), day)
+            if d >= today:
+                candidates.append(d)
+        except ValueError:
+            continue
+    if not candidates:
+        return ""
+    return min(candidates).isoformat()
+
+
+def fetch_from_html_operaen(source: dict) -> Iterable[RawStory]:
+    """Operaen forestillinger — fetch list, then each detail page."""
+    fetched_at = datetime.now(timezone.utc).isoformat()
+    today = datetime.now(timezone.utc)
+    list_url = (source.get("urls") or
+                ["https://operaen.no/forestillinger/"])[0]
+    body = _fetch_html(list_url)
+    if not body:
+        return
+    paths = sorted(set(re.findall(
+        r'href="(/forestillinger/[a-z0-9-]+/?)"', body
+    )))
+    seen: set[str] = set()
+    count = 0
+    limit = source.get("limit", 12)
+    for path in paths:
+        if count >= limit:
+            break
+        if path in seen:
+            continue
+        seen.add(path)
+        if "sesonglansering" in path:
+            continue  # info-side, ikke forestilling
+        full_url = f"https://operaen.no{path}"
+        detail = _fetch_html(full_url)
+        if not detail:
+            continue
+        og_title = re.search(
+            r'<meta property="og:title" content="([^"]+)"', detail,
+        )
+        og_desc = re.search(
+            r'<meta property="og:description" content="([^"]+)"', detail,
+        )
+        og_image = re.search(
+            r'<meta property="og:image" content="([^"]+)"', detail,
+        )
+        title = og_title.group(1).strip() if og_title else ""
+        if not title:
+            continue
+        from html import unescape as _unesc
+        title = _unesc(title)
+        desc = _unesc(og_desc.group(1)) if og_desc else ""
+        image = (og_image.group(1) if og_image else "").strip()
+        if image and not image.startswith("http"):
+            image = f"https://operaen.no{image}"
+        first_date = _operaen_first_date(detail, today.year)
+        date_iso = first_date or today.date().isoformat()
+        # Kategori basert paa tittel
+        cat = "kultur"
+        title_low = title.lower()
+        if "ballett" in title_low or "ballet" in title_low:
+            cat = "kultur"
+        story = RawStory(
+            id=_make_id(full_url, title),
+            bydel="Gamle Oslo",  # Operaen i Bjorvika
+            title=title,
+            url=full_url,
+            source="Operaen",
+            source_id=source["id"],
+            published_iso=fetched_at,
+            date_iso=date_iso,
+            summary=desc[:500],
+            category=cat,
+            event_date=first_date,
+        )
+        yield story
+        count += 1
+
+
 # --- Skiforbundet terminliste (Oslo Skikrets) -----------------------------
 # skiforbundet.no/terminliste/ har en embedded "events" JSON-blob i HTML-en
 # med startDate, eventName, arrangingOrgName, activityName, countyName og
@@ -1274,104 +1380,4 @@ def fetch_from_html_meetup_oslo(source: dict) -> Iterable[RawStory]:
         title = (ev.get("title") or "").strip()
         if not title:
             continue
-        venue = ev.get("venue") or {}
-        venue_name = ""
-        if isinstance(venue, dict):
-            venue_name = (venue.get("name") or "").strip()
-        # Skip rene online events
-        if venue_name.lower() in ("online event", "online", "virtual"):
-            continue
-        when_iso = ev.get("dateTime") or ""
-        # event_date er kun datoen
-        event_date = when_iso[:10] if when_iso else ""
-        date_iso = event_date or fetched_at[:10]
-        bydel = _meetup_bydel(venue_name)
-        # Summary med dato + venue
-        summary_parts = []
-        if event_date:
-            summary_parts.append(f"Arrangement {event_date}")
-        if venue_name:
-            summary_parts.append(f"hos {venue_name}")
-        desc = (ev.get("description") or "").strip()
-        if desc:
-            summary_parts.append(desc[:300])
-        summary = ". ".join(summary_parts)
-        yield RawStory(
-            id=_make_id(url, title),
-            bydel=bydel,
-            title=title,
-            url=url,
-            source=source.get("name", "Meetup Oslo"),
-            source_id=source["id"],
-            published_iso=fetched_at,
-            date_iso=date_iso,
-            summary=summary,
-            category="arrangement",
-            event_date=event_date or None,
-        )
-        count += 1
-
-
-SCRAPERS = {
-    "iltry": fetch_from_html_iltry,
-    "kondis": fetch_from_html_kondis,
-    "politi-oslo": fetch_from_html_politi,
-    "ruter-sx": fetch_from_html_ruter,
-    "oslomet": fetch_from_html_oslomet,
-    "bi": fetch_from_html_bi,
-    "deichman": fetch_from_html_deichman,
-    "vartoslo": fetch_from_html_vartoslo,
-    "bym-kunngjoringer": fetch_from_html_bym_kunngjoringer,
-    "skiforeningen": fetch_from_html_skiforeningen,
-    "akersposten": fetch_from_html_akersposten,
-    "kjelsaas": fetch_from_html_kjelsaas,
-    "skiforbundet-terminliste": fetch_from_html_skiforbundet,
-    "meetup-oslo": fetch_from_html_meetup_oslo,
-}
-
-
-def fetch_from_html(source: dict) -> Iterable[RawStory]:
-    scraper = SCRAPERS.get(source.get("scraper"))
-    if scraper is None:
-        print(f"  [fetcher] WARN: no scraper for {source['id']}")
-        return
-    yield from scraper(source)
-
-
-def _fetch_one_rss(src: dict) -> tuple[dict, list[RawStory]]:
-    try:
-        return (src, list(fetch_from_rss(src)))
-    except Exception as e:
-        print(f"  [fetcher] rss {src['id']}: {type(e).__name__}: {e}")
-        return (src, [])
-
-
-def _fetch_one_html(src: dict) -> tuple[dict, list[RawStory]]:
-    try:
-        return (src, list(fetch_from_html(src)))
-    except Exception as e:
-        print(f"  [fetcher] html {src['id']}: {type(e).__name__}: {e}")
-        return (src, [])
-
-
-def fetch_all(health_data: dict | None = None,
-              max_workers: int = 8) -> Iterable[RawStory]:
-    from . import health as H
-    rss_sources = [s for s in S.RSS_SOURCES]
-    html_sources = [s for s in getattr(S, "HTML_SOURCES", [])]
-    out: list[RawStory] = []
-    with ThreadPoolExecutor(max_workers=max_workers) as pool:
-        rss_futs = {pool.submit(_fetch_one_rss, s): s for s in rss_sources}
-        html_futs = {pool.submit(_fetch_one_html, s): s for s in html_sources}
-        for fut in as_completed(list(rss_futs) + list(html_futs)):
-            src, stories = fut.result()
-            count = len(stories)
-            kind = "rss" if src in rss_sources else "html"
-            if kind == "rss":
-                print(f"[fetcher] rss {src['id']}: {count} saker mappet til bydel")
-            else:
-                print(f"[fetcher] html {src['id']}: {count} saker scrapet")
-            out.extend(stories)
-            if health_data is not None:
-                H.record(health_data, src["id"], src.get("name", src["id"]), count)
-    return out
+        venue = ev

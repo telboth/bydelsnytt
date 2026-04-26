@@ -599,14 +599,14 @@ EVENTS = [
      "andre sentrumskinoer. Fra dokumentar til kunstfilm."),
     # --- Markastuer ---------------------------------------------------------
     ("Skjennungstua åpner sommersesongen",
-     "https://ut.no/hytte/3.2580/skjennungstua",
+     "https://no.wikipedia.org/wiki/Skjennungstua",
      "Nordre Aker", "2026-05-02", "arrangement",
      "Skjennungstua, Skiforeningens serveringsstue i Nordmarka nord for "
      "Sognsvann, åpner lørdags- og søndags-kafeen for sommeren. Vaffelduft "
      "og utsikt mot Skjennungen. Turstart fra Frognerseteren eller Sognsvann."),
 
     ("Kikutstua / Kikut (DNT-hytte)",
-     "https://ut.no/hytte/3.1166/kikut",
+     "https://ut.no/hytte/10647/kikutstua",
      "Nordre Aker", "2026-05-16", "arrangement",
      "DNT Oslo og Omegn sin hytte ved Kikut i Nordmarka. Overnatting, kafe "
      "og betjent servering på helger. Populær stoppestasjon på lange "
@@ -627,28 +627,28 @@ EVENTS = [
      "Turstart fra Movann eller Linderudkollen."),
 
     ("Sinober — markastue i Lillomarka",
-     "https://ut.no/turforslag/oslomarka/sinober",
+     "https://no.wikipedia.org/wiki/Sinober",
      "Grorud", "2026-05-16", "arrangement",
      "Sinober ligger i Lillomarka nord for Grorud — enkel markastue med "
      "servering i helgene. Turstart fra Movann eller Solemskogen. "
      "Betjent sesong fra mai."),
 
     ("Rustadsaga sportsstue",
-     "https://ut.no/hytte/3.2585/rustadsaga",
+     "https://no.wikipedia.org/wiki/Rustadsaga",
      "\u00d8stensj\u00f8", "2026-04-25", "arrangement",
      "Rustadsaga ved Nøklevann — serveringsstue og badeplass. "
      "Populær utgangsport for tur, jogging og bading i Østmarka. "
      "Kafeen er åpen hele sommeren."),
 
     ("Sandbakken sportsstue",
-     "https://ut.no/turforslag/oslomarka/sandbakken-oestmarka",
+     "https://www.google.com/maps/search/?api=1&query=Sandbakken+sportsstue+%C3%98stmarka",
      "Nordstrand", "2026-04-25", "arrangement",
      "Sandbakken i Østmarka — sportsstue og servering. "
      "Klassisk tur-mål fra Skullerud. Påsketradisjon og sommer-kafe. "
      "Grillplass og teltområde like ved."),
 
     ("Kobberhaughytta",
-     "https://ut.no/hytte/3.1183/kobberhaughytta",
+     "https://no.wikipedia.org/wiki/Kobberhaughytta",
      "Nordre Aker", "2026-06-01", "arrangement",
      "DNT Oslo og Omegn sin betjente hytte i Nordmarka. Overnatting, "
      "middag og frokost. Kort avstand fra Blåtårn og Kikutstua."),
