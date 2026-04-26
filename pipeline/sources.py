@@ -160,6 +160,15 @@ RSS_SOURCES = [
         "resolver": "fixed_bydel",
     },
     {
+        # Oslo Kajakklubb \u2014 flattvann/havpadling/surfski. Klubbhus paa Bygdoey.
+        "id": "okk",
+        "name": "Oslo Kajakklubb",
+        "url": "https://www.okk.org/feed/",
+        "bydel": "Frogner",
+        "weight": 0.5,
+        "resolver": "fixed_bydel",
+    },
+    {
         "id": "sageneif",
         "name": "Sagene IF",
         "url": "https://sageneif.no/rss-feed",
@@ -292,6 +301,17 @@ HTML_SOURCES = [
         "urls": ["https://www.kjelsaas.no/"],
         "limit": 12,
         "weight": 0.5,
+    },
+    {
+        # Meetup Oslo find-page \u2014 scraper __NEXT_DATA__ for inntil 15 events.
+        # Categori-fast = 'arrangement'; bydel utledes fra venue-navn.
+        "id": "meetup-oslo",
+        "name": "Meetup Oslo",
+        "scraper": "meetup-oslo",
+        "bydel": "Frogner",
+        "urls": ["https://www.meetup.com/find/?location=no--Oslo&source=EVENTS"],
+        "limit": 15,
+        "weight": 0.4,
     },
     {
         "id": "iltry",
@@ -490,13 +510,25 @@ def resolve_text_match_bydel_fallback(entry):
     b = resolve_text_match_bydel(entry)
     if b:
         return b
-    haystack = (entry.get("title", "") + " " + entry.get("summary", "")).lower()
-    for kw in _OSLO_KEYWORDS:
+    haystack = (
+        (entry.get("title") or "")
+        + " "
+        + (entry.get("summary") or "")
+    ).lower()
+    OSLO_KEYWORDS = (
+        "oslo", "groruddalen", "holmenkollen", "tøyen", "toyen",
+        "frogner", "ullern", "sentrum",
+    )
+    for kw in OSLO_KEYWORDS:
         if kw in haystack:
-            return None  # None -> fetcher bruker source['bydel'] som fallback
+            return None
     return SKIP
 
 
 RESOLVERS = {
     "oslo_kommune_tags": resolve_oslo_kommune_tags,
+    "groruddalen": resolve_groruddalen,
+    "text_match_bydel": resolve_text_match_bydel,
+    "text_match_bydel_fallback": resolve_text_match_bydel_fallback,
+    "fixed_bydel": resolve_fixed_bydel,
 }

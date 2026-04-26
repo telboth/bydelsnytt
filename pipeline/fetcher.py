@@ -8,6 +8,7 @@ import ssl
 import time
 import urllib.error
 import urllib.request
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from dataclasses import dataclass, asdict
 from datetime import datetime, timezone
 from typing import Iterable, Optional
@@ -1082,6 +1083,137 @@ def fetch_from_html_kjelsaas(source: dict) -> Iterable[RawStory]:
         )
 
 
+# --- Meetup Oslo scraper ---------------------------------------------------
+# Find-siden sluker en stor JSON-blob i __NEXT_DATA__ med 12+ event-objekter.
+# Vi henter tittel, dateTime (ISO), eventUrl og venue-navn derfra. Online-only
+# events filtreres bort siden de ikke er stedsbundne til Oslo.
+
+_MEETUP_VENUE_TO_BYDEL = {
+    # Co-working / events spaces — kjente Oslo-venues
+    "rebel": "St. Hanshaugen",       # Universitetsgata
+    "capra": "Sentrum / Frogner",
+    "knowit": "Sagene",              # Sandakerveien
+    "schibsted": "Sentrum / Frogner",
+    "dnb": "Gamle Oslo",             # Bjorvika
+    "nav": "Sagene",                 # Sannergata
+    "spaces": "Frogner",
+    "mesh": "Sentrum / Frogner",
+    "epicenter": "Sentrum / Frogner",
+    "sannergata": "Sagene",
+    "kongens gate": "Gamle Oslo",
+    "tjuvholmen": "Frogner",
+    "aker brygge": "Frogner",
+    "bjorvika": "Gamle Oslo",
+    "tøyen": "Gamle Oslo",
+    "toyen": "Gamle Oslo",
+    "grunerlokka": "Grünerløkka",
+    "grünerlokka": "Grünerløkka",
+}
+
+
+def _meetup_bydel(venue_name: str, address: str = "") -> str:
+    """Map venue/address til bydel. Default: Frogner (sentrumsnaert).
+
+    Vi gaar gjennom et nokkelord-sett, lengst foerst for praeferanse av
+    spesifikke navn over generelle.
+    """
+    text = f"{venue_name} {address}".lower()
+    for key, bydel in sorted(
+        _MEETUP_VENUE_TO_BYDEL.items(), key=lambda kv: -len(kv[0])
+    ):
+        if key in text:
+            # "Sentrum / Frogner" rules: vi har ingen "Sentrum"-bydel; bruk Frogner
+            if bydel.startswith("Sentrum"):
+                return "Frogner"
+            return bydel
+    return "Frogner"
+
+
+def fetch_from_html_meetup_oslo(source: dict) -> Iterable[RawStory]:
+    """Meetup Oslo find-side. Henter inntil source['limit'] events."""
+    fetched_at = datetime.now(timezone.utc).isoformat()
+    limit = source.get("limit", 15)
+    list_url = (
+        source.get("urls") or
+        ["https://www.meetup.com/find/?location=no--Oslo&source=EVENTS"]
+    )[0]
+    body = _fetch_html(list_url)
+    if not body:
+        return
+    m = re.search(
+        r'<script id="__NEXT_DATA__" type="application/json">(.*?)</script>',
+        body, re.DOTALL,
+    )
+    if not m:
+        print("  [meetup] kunne ikke finne __NEXT_DATA__")
+        return
+    try:
+        data = json.loads(m.group(1))
+    except json.JSONDecodeError as e:
+        print(f"  [meetup] JSON parse: {e}")
+        return
+
+    # Walk JSON-treet og finn event-objekter
+    def find_events(obj):
+        if isinstance(obj, dict):
+            if "title" in obj and "eventUrl" in obj and "dateTime" in obj:
+                yield obj
+            for v in obj.values():
+                yield from find_events(v)
+        elif isinstance(obj, list):
+            for x in obj:
+                yield from find_events(x)
+
+    seen: set[str] = set()
+    count = 0
+    for ev in find_events(data):
+        if count >= limit:
+            break
+        url = ev.get("eventUrl") or ""
+        if not url or url in seen:
+            continue
+        seen.add(url)
+        title = (ev.get("title") or "").strip()
+        if not title:
+            continue
+        venue = ev.get("venue") or {}
+        venue_name = ""
+        if isinstance(venue, dict):
+            venue_name = (venue.get("name") or "").strip()
+        # Skip rene online events
+        if venue_name.lower() in ("online event", "online", "virtual"):
+            continue
+        when_iso = ev.get("dateTime") or ""
+        # event_date er kun datoen
+        event_date = when_iso[:10] if when_iso else ""
+        date_iso = event_date or fetched_at[:10]
+        bydel = _meetup_bydel(venue_name)
+        # Summary med dato + venue
+        summary_parts = []
+        if event_date:
+            summary_parts.append(f"Arrangement {event_date}")
+        if venue_name:
+            summary_parts.append(f"hos {venue_name}")
+        desc = (ev.get("description") or "").strip()
+        if desc:
+            summary_parts.append(desc[:300])
+        summary = ". ".join(summary_parts)
+        yield RawStory(
+            id=_make_id(url, title),
+            bydel=bydel,
+            title=title,
+            url=url,
+            source=source.get("name", "Meetup Oslo"),
+            source_id=source["id"],
+            published_iso=fetched_at,
+            date_iso=date_iso,
+            summary=summary,
+            category="arrangement",
+            event_date=event_date or None,
+        )
+        count += 1
+
+
 SCRAPERS = {
     "iltry": fetch_from_html_iltry,
     "kondis": fetch_from_html_kondis,
@@ -1095,6 +1227,7 @@ SCRAPERS = {
     "skiforeningen": fetch_from_html_skiforeningen,
     "akersposten": fetch_from_html_akersposten,
     "kjelsaas": fetch_from_html_kjelsaas,
+    "meetup-oslo": fetch_from_html_meetup_oslo,
 }
 
 
@@ -1107,76 +1240,43 @@ def fetch_from_html(source: dict) -> Iterable[RawStory]:
 
 
 def _fetch_one_rss(src: dict) -> tuple[dict, list[RawStory]]:
-    """Worker: hent én RSS-kilde, returner (src, stories)."""
     try:
-        return src, list(fetch_from_rss(src))
-    except Exception as exc:
-        print(f"[fetcher] rss {src.get('id', '?')}: FEIL {exc}")
-        return src, []
+        return (src, list(fetch_from_rss(src)))
+    except Exception as e:
+        print(f"  [fetcher] rss {src['id']}: {type(e).__name__}: {e}")
+        return (src, [])
 
 
 def _fetch_one_html(src: dict) -> tuple[dict, list[RawStory]]:
-    """Worker: hent én HTML-kilde, returner (src, stories)."""
     try:
-        return src, list(fetch_from_html(src))
-    except Exception as exc:
-        print(f"[fetcher] html {src.get('id', '?')}: FEIL {exc}")
-        return src, []
+        return (src, list(fetch_from_html(src)))
+    except Exception as e:
+        print(f"  [fetcher] html {src['id']}: {type(e).__name__}: {e}")
+        return (src, [])
 
 
 def fetch_all(health_data: dict | None = None,
-              max_workers: int = 8) -> list[RawStory]:
-    """Hent alle kilder parallelt. Hvis health_data gis (dict fra
-    health.load()), blir per-kilde-statistikk registrert i den via
-    health.record().
-
-    Bruker ThreadPoolExecutor for å fyre RSS- og HTML-fetcher konkurrent.
-    Default 8 workers — tester viste 3-4x speedup over sekvensiell.
-    """
+              max_workers: int = 8) -> Iterable[RawStory]:
+    """Hent alle kilder parallelt. health_data oppdateres i en lock-fri made
+    siden vi appender entry-pr-source via H.record() som tar dict-mutasjon
+    sekvensielt under GIL — godt nok for vaart bruk."""
     from . import health as H
-    from concurrent.futures import ThreadPoolExecutor, as_completed
+    rss_sources = [s for s in S.RSS_SOURCES]
+    html_sources = [s for s in getattr(S, "HTML_SOURCES", [])]
     out: list[RawStory] = []
-    rss_sources = list(S.RSS_SOURCES)
-    html_sources = list(getattr(S, "HTML_SOURCES", []))
-
-    # RSS parallelt
     with ThreadPoolExecutor(max_workers=max_workers) as pool:
-        futs = {pool.submit(_fetch_one_rss, s): s for s in rss_sources}
-        for fut in as_completed(futs):
+        rss_futs = {pool.submit(_fetch_one_rss, s): s for s in rss_sources}
+        html_futs = {pool.submit(_fetch_one_html, s): s for s in html_sources}
+        for fut in as_completed(list(rss_futs) + list(html_futs)):
             src, stories = fut.result()
+            count = len(stories)
+            kind = "rss" if src in rss_sources else "html"
+            label = src.get("name", src["id"])
+            if kind == "rss":
+                print(f"[fetcher] rss {src['id']}: {count} saker mappet til bydel")
+            else:
+                print(f"[fetcher] html {src['id']}: {count} saker scrapet")
             out.extend(stories)
-            print(
-                f"[fetcher] rss {src['id']}: "
-                f"{len(stories)} saker mappet til bydel"
-            )
             if health_data is not None:
-                H.record(
-                    health_data, src["id"],
-                    src.get("name", src["id"]), len(stories),
-                )
-
-    # HTML parallelt (faerre workers - disse er ofte tyngre)
-    with ThreadPoolExecutor(max_workers=max(2, max_workers // 2)) as pool:
-        futs = {pool.submit(_fetch_one_html, s): s for s in html_sources}
-        for fut in as_completed(futs):
-            src, stories = fut.result()
-            out.extend(stories)
-            print(
-                f"[fetcher] html {src['id']}: "
-                f"{len(stories)} saker scrapet"
-            )
-            if health_data is not None:
-                H.record(
-                    health_data, src["id"],
-                    src.get("name", src["id"]), len(stories),
-                )
+                H.record(health_data, src["id"], src.get("name", src["id"]), count)
     return out
-
-
-if __name__ == "__main__":
-    stories = fetch_all()
-    print(f"\nTotalt: {len(stories)} saker")
-    from collections import Counter
-    per_bydel = Counter(s.bydel for s in stories)
-    for b, n in sorted(per_bydel.items(), key=lambda x: -x[1]):
-        print(f"  {b}: {n}")
