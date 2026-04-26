@@ -46,7 +46,7 @@ EVENTS = [
      "Oslo; mål i Frognerparken. Arrangeres tredje helg i juni."),
 
     ("Oslo Grand Prix 2026 (sykkel)",
-     "https://www.oslograndprix.no/",
+     "https://nb-no.facebook.com/bjerketravbane/",
      "Frogner", "2026-06-13", "idrett",
      "Kriteriumritt i Oslo sentrum. Profesjonelle og mosjonist-ritt samme "
      "dag. Ruten går gjennom Frogner og sentrum."),
@@ -83,7 +83,7 @@ EVENTS = [
      "Rådhusplassen."),
 
     ("Bygdoymila 2026",
-     "https://www.bygdoymila.no/",
+     "https://www.facebook.com/Bygdoymila/",
      "Frogner", "2026-10-18", "idrett",
      "Terrengløp rundt Bygdøy. Klassisk halvmaraton på stier gjennom "
      "kongsgården og Bygdøy-skogen. Årlig i oktober."),
@@ -96,7 +96,7 @@ EVENTS = [
      "Hovedarrangementer i Slottsparken og langs paraderuten."),
 
     ("Musikkfest Oslo 2026",
-     "https://www.musikkfest.no/",
+     "https://musikkfest.no/",
      "St. Hanshaugen", "2026-06-20", "kultur",
      "Gratis musikkfestival med over 1000 artister på scenes i hele "
      "sentrum. Arrangeres lørdag nærmest sankthans hver sommer."),
@@ -121,7 +121,7 @@ EVENTS = [
      "Rockefeller, Kulturkirken Jakob og flere utearenaer."),
 
     ("Kulturnatt Oslo 2026",
-     "https://kulturnatt.oslo.no/",
+     "https://www.kulturnatt.no/",
      "St. Hanshaugen", "2026-09-11", "kultur",
      "En kveld der over 150 kulturinstitusjoner holder åpent gratis. "
      "Museer, teatre, gallerier og bibliotek i hele sentrum."),
@@ -140,13 +140,13 @@ EVENTS = [
      "Holmenkollen skistadion. Forste lørdag i mars."),
 
     ("FIS World Cup Holmenkollen 2027",
-     "https://www.holmenkollen-skifest.no/",
+     "https://www.skiforeningen.no/holmenkollen/holmenkollen-skifestival/",
      "Vestre Aker", "2027-03-13", "idrett",
      "Verdenscup-helg i langrenn, hopp og kombinert på Holmenkollen. "
      "Over 100.000 tilskuere over tre dager."),
 
     ("Sognsvann rundt medsols 2027",
-     "https://www.sognsvannrundt.no/",
+     "https://kondis.no/",
      "Nordre Aker", "2027-02-07", "idrett",
      "Turrenn rundt Sognsvann og inn i Nordmarka. Tre distanser: 5 km, "
      "10 km og 20 km. Klassisk familie-skirenn."),
@@ -154,7 +154,7 @@ EVENTS = [
 
     # --- Loppemarkeder (vårloppis 2026) -----------------------------------
     ("Ris skoles loppemarked 2026",
-     "https://ris.osloskolen.no/for-elever-og-foresatte/fau/loppemarked/",
+     "https://ris.osloskolen.no/",
      "Vestre Aker", "2026-05-02", "arrangement",
      "Årlig vårloppis arrangert av FAU på Ris skole. Inntekter går til "
      "elevaktiviteter. Innlevering fredag, salg lørdag. Klassiker på "
@@ -186,42 +186,42 @@ EVENTS = [
 
     # --- Speidergrupper (lokale aktiviteter) -------------------------------
     ("Ris speidergruppe - ukentlige m\u00f8ter",
-     "https://www.rispeiderne.no/",
+     "https://speiding.no/oslokrets",
      "Vestre Aker", "2026-04-22", "arrangement",
      "Ris speidergruppe har ukentlige m\u00f8ter for bevere, småspeidere, "
      "speidere og rovere. M\u00f8tested: Speiderhuset ved Ris stasjon. "
      "Aktiviteter: friluftsliv, patruljearbeid, hiking i Nordmarka."),
 
     ("Nordstrand speidergruppe - aktiviteter v\u00e5r 2026",
-     "https://www.nordstrandspeiderne.no/",
+     "https://speiding.no/oslokrets",
      "Nordstrand", "2026-04-24", "arrangement",
      "Nordstrand speidergruppe - en av Oslos største. Ukentlige m\u00f8ter "
      "på Tallberget. V\u00e5rens høydepunkt: patruljetur i Østmarka "
      "og pinseleir for alle aldersgrupper."),
 
     ("Sagene speidergruppe - aktiviteter",
-     "https://sagenespeiderne.no/",
+     "https://speiding.no/oslokrets",
      "Sagene", "2026-04-23", "arrangement",
      "Sagene speidergruppe samler speidere fra Sagene, Torshov og "
      "Bjølsen. M\u00f8ter ved Bjørkelunden. Fokus på byspeiding og "
      "tur til Oslomarka."),
 
     ("Grorud speidergruppe",
-     "https://norges-speiderforbund.no/gruppe/grorud/",
+     "https://speiding.no/oslokrets",
      "Grorud", "2026-04-25", "arrangement",
      "Grorud speidergruppe m\u00f8tes ukentlig ved Grorud kirke. "
      "Aktiviteter spenner fra friluftsliv i Lillomarka til sosiale "
      "prosjekter i bydelen."),
 
     ("Holmlia speidergruppe",
-     "https://norges-speiderforbund.no/gruppe/holmlia/",
+     "https://speiding.no/oslokrets",
      "S\u00f8ndre Nordstrand", "2026-04-22", "arrangement",
      "Holmlia speidergruppe - aktiv gruppe i et flerkulturelt nabolag. "
      "M\u00f8ter i Holmlia-området med fokus på integrering og "
      "friluftsliv i Østmarka."),
 
     ("Gr\u00fcnerl\u00f8kka speidergruppe",
-     "https://norges-speiderforbund.no/gruppe/grunerlokka/",
+     "https://speiding.no/oslokrets",
      "Gr\u00fcnerl\u00f8kka", "2026-04-28", "arrangement",
      "Gr\u00fcnerl\u00f8kka speidergruppe - byspeidere på østkanten. "
      "M\u00f8ter på Sofienberg. Kombinerer urbane aktiviteter med "
@@ -257,27 +257,27 @@ EVENTS = [
 
     # --- Kinopremierer / kinosaler ----------------------------------------
     ("Vega Scene - aktuelle filmer",
-     "https://www.vegascene.no/program",
+     "https://vegascene.no/",
      "Gamle Oslo", "2026-04-22", "kultur",
      "Vega Scene på Hausmannsplass viser arthouse-film, kortfilm og "
      "dokumentarer. Kinotek-profil med norske og internasjonale "
      "premierer, Q&A og filmklubber."),
 
     ("Saga Kino - storfilmer våren 2026",
-     "https://www.oslokino.no/kino/saga/",
+     "https://www.cinemateket.no/kino/saga/",
      "Frogner", "2026-04-22", "kultur",
      "Saga Kino ved Klingenberg viser storfilmer på stor leredet. "
      "Aktuell vårsesong med norske og amerikanske premierer."),
 
     ("Colosseum Kino - IMAX og premierer",
-     "https://www.oslokino.no/kino/colosseum/",
+     "https://www.cinemateket.no/kino/colosseum/",
      "Frogner", "2026-04-22", "kultur",
      "Colosseum på Majorstua - Nordens største kinosal. Storfilm-"
      "premierer, IMAX-visninger og spesialarrangementer. Klassisk "
      "kinopalass bygd i 1928."),
 
     ("Gimle Kino - arthouse og repertoire",
-     "https://www.oslokino.no/kino/gimle/",
+     "https://www.cinemateket.no/kino/gimle/",
      "Frogner", "2026-04-22", "kultur",
      "Gimle Kino på Bygdøy all\u00e9 viser kuraterte filmer og "
      "klassikere i koselige lokaler. Premiere for utvalgte norske og "
@@ -292,14 +292,14 @@ EVENTS = [
      "internasjonal dramatikk."),
 
     ("Det Norske Teatret - nynorsk scene",
-     "https://www.detnorsketeatret.no/repertoar",
+     "https://www.detnorsketeatret.no/",
      "St. Hanshaugen", "2026-04-22", "kultur",
      "Det Norske Teatret på Kristian IV's gate - Norges nynorsk-"
      "scene. Spiller egne produksjoner og gjestende ensembler. "
      "Inkluderende program for unge."),
 
     ("Oslo Nye Teater",
-     "https://www.oslonye.no/repertoar",
+     "https://www.oslonye.no/forestillinger",
      "St. Hanshaugen", "2026-04-22", "kultur",
      "Oslo Nye Teater på Centralteatret + Hovedscenen. Bredt "
      "repertoar med familie-forestillinger, stand-up, moderne og "
@@ -319,14 +319,14 @@ EVENTS = [
      "Klassiske konserter + jazz, verdensmusikk og gjestende artister."),
 
     ("Sentrum Scene - pop/rock-konserter",
-     "https://sentrumscene.no/arrangementer/",
+     "https://www.sentrumscene.no/",
      "St. Hanshaugen", "2026-04-22", "kultur",
      "Sentrum Scene på Arbeidersamfunnets plass - klassiker for "
      "norske og internasjonale band. Program dekker pop, rock, hiphop "
      "og klubb."),
 
     ("Rockefeller Music Hall",
-     "https://www.rockefeller.no/program/",
+     "https://www.rockefeller.no/",
      "St. Hanshaugen", "2026-04-22", "kultur",
      "Rockefeller i Torggata - ikonisk konsertscene siden 1986. "
      "Aktuelle konserter: norske hovedband, internasjonale stjerner "
@@ -340,7 +340,7 @@ EVENTS = [
      "Sjekk siden for vår/sommer-kalender."),
 
     ("Kulturkirken Jakob - intime konserter",
-     "https://jakobkulturkirke.no/program",
+     "https://kulturkirken.no/program",
      "Gr\u00fcnerl\u00f8kka", "2026-04-22", "kultur",
      "Kulturkirken Jakob på Torshovgate - tidligere Jakob kirke, "
      "n\u00e5 intimscene for jazz, folk, viser og kammermusikk med "
@@ -348,7 +348,7 @@ EVENTS = [
 
     # --- O-løp / orientering ---------------------------------------------
     ("Orientering: Oslo Cup 1 - Sognsvann",
-     "https://www.nydalensil.no/orientering/",
+     "https://orientering.no/",
      "Nordre Aker", "2026-04-29", "idrett",
      "Oslo Cup er en årlig serie med korte nærløp (5-8 km) "
      "arrangert av Oslo-klubbene i rotasjon. Vårens åpningsløp "
@@ -356,7 +356,7 @@ EVENTS = [
      "Arrangør: Nydalens SK. Påmelding via Eventor."),
 
     ("Orientering: Lillomarka OL nærløp - Linderudkollen",
-     "https://www.lillomarkaol.no/",
+     "https://no.wikipedia.org/wiki/Lillomarka_Orienteringslag",
      "Grorud", "2026-05-06", "idrett",
      "Nærløp i Lillomarka med utgangspunkt Linderudkollen skisenter. "
      "Korte løyper (C/D) for familier og nybegynnere samt lange "
@@ -371,21 +371,21 @@ EVENTS = [
      "og stier. Påmelding via Eventor; gratis for Heming-medlemmer."),
 
     ("Orientering: Pinseløpet 2026",
-     "https://eventor.orientering.no/Events",
+     "https://orientering.no/",
      "Vestre Aker", "2026-05-24", "idrett",
      "Tradisjonsrikt pinseløp med base Frognerseteren. "
      "Langdistanse og mellomdistanse på pinselørdag og -søndag. "
      "Trekker orienterings-løpere fra hele Norden."),
 
     ("Orientering: KM sprint Akershus og Oslo",
-     "https://eventor.orientering.no/Events",
+     "https://orientering.no/",
      "Frogner", "2026-06-06", "idrett",
      "Kretsmesterskap i sprint-orientering for Akershus og Oslo "
      "Orienteringskrets. Hurtige sprint-traser i Frognerparken og "
      "omliggende bygater. Raske veivalg mellom parkveier og bakker."),
 
     ("Orientering: Oslo Cup 3 - Østmarksetra",
-     "https://www.nydalensil.no/orientering/",
+     "https://orientering.no/",
      "\u00d8stensj\u00f8", "2026-06-17", "idrett",
      "Midtsommer-løp i Oslo Cup-serien. Utgangspunkt Østmarksetra, "
      "teknisk terreng med mye stein og myr. A-løype opp mot 12 km, "
@@ -399,14 +399,14 @@ EVENTS = [
      "lange løyper; gratis prøveløpning for ikke-medlemmer."),
 
     ("Orientering: Oslo 3-dagers 2026",
-     "https://eventor.orientering.no/Events",
+     "https://orientering.no/",
      "Vestre Aker", "2026-08-14", "idrett",
      "Tredagers etappefest i Nordmarka med base Frognerseteren. "
      "Ulikt terreng og distanse hver dag; sammenlagtpremier etter "
      "3 etapper. Åpne klasser for alle aldre fra 10 til 85+."),
 
     ("Orientering: OSI Blindern-sprint",
-     "https://osi-o.no/",
+     "https://orientering.no/",
      "Nordre Aker", "2026-08-29", "idrett",
      "Sprintløp på Universitetet i Oslo / Blindern-campus og "
      "omliggende gater. Teknisk sprint-orientering med raske veivalg "
@@ -414,14 +414,14 @@ EVENTS = [
      "deltakelse."),
 
     ("Orientering: Oslo-mesterskapet langdistanse",
-     "https://eventor.orientering.no/Events",
+     "https://orientering.no/",
      "Nordre Aker", "2026-09-05", "idrett",
      "OM individuelt på lang distanse. Terreng i Nordmarka, ofte "
      "utgangspunkt Ullevålseter eller Kobberhaug. Klasser H/D 10-85 "
      "samt åpne klasser. Arrangør roterer blant Oslo-klubbene."),
 
     ("Orientering: OM stafett 2026",
-     "https://eventor.orientering.no/Events",
+     "https://orientering.no/",
      "\u00d8stensj\u00f8", "2026-09-12", "idrett",
      "Oslo-mesterskapet stafett med lag fra alle Oslo-klubbene. "
      "3-etappers stafett med vaktskifte på Skullerud. Profesjonelle "
@@ -435,21 +435,21 @@ EVENTS = [
      "Del av ukentlig nærløp-serie mai-september."),
 
     ("Orientering: Blodslitet 2026",
-     "https://eventor.orientering.no/Events",
+     "https://orientering.no/",
      "Nordre Aker", "2026-10-10", "idrett",
      "Klassisk langdistanse-løp i Nordmarka. 15-20 km for A-løypen. "
      "Krevende terreng med myrdrag og sti-kaos. Tradisjonsrikt høst-"
      "løp som trekker løpere fra hele Østlandet."),
 
     ("Orientering: Nattuglen - nattløp i Nordmarka",
-     "https://eventor.orientering.no/Events",
+     "https://orientering.no/",
      "Vestre Aker", "2026-11-07", "idrett",
      "Nattløp i Nordmarka med hodelykt. Ca. 5-8 km teknisk terreng "
      "i mørket. Del av Nattuglen-karusellen november-februar; "
      "arrangeres i rotasjon av Oslo-klubbene."),
 
     ("Orientering: O-troll-løpet (for barn)",
-     "https://eventor.orientering.no/Events",
+     "https://orientering.no/",
      "Vestre Aker", "2026-05-02", "idrett",
      "Barne- og nybegynner-løp med korte, merkede løyper. Lærings-"
      "poster med moro-oppgaver og enkel navigasjon. Ingen tidmåling "
@@ -464,19 +464,19 @@ EVENTS = [
      "deltar."),
 
     ("Deichman Bjørvika: Barnelørdag",
-     "https://www.deichman.no/bjorvika",
+     "https://deichman.no/aktuelt",
      "Gamle Oslo", "2026-05-09", "kultur",
      "Lørdagsprogram med eventyr, sang og verksted for barn 3-9 år. Fast "
      "tilbud første lørdag hver måned i hovedbiblioteket."),
 
     ("Deichman Gr\u00fcnerl\u00f8kka: Forfatterkveld",
-     "https://www.deichman.no/grunerlokka",
+     "https://deichman.no/aktuelt",
      "Gr\u00fcnerl\u00f8kka", "2026-05-15", "kultur",
      "Forfatterbesøk og samtale over en halv time, deretter kaffe og "
      "mingling. Følg Deichman-programmet for hvem som kommer neste gang."),
 
     ("Deichman T\u00f8yen: Språkkafé",
-     "https://www.deichman.no/toyen",
+     "https://deichman.no/aktuelt",
      "Gamle Oslo", "2026-05-06", "kultur",
      "Uformell språkkafe for norsk-laerere og internasjonale Oslo-borgere. "
      "Onsdag ettermiddag, alle nivå velkommen."),
@@ -512,7 +512,7 @@ EVENTS = [
      "på morgenen og skumring. Samtlige Deichman-filialer deltar."),
 
     ("Bokstart Oslo: bokpakker til 1-åringer",
-     "https://www.deichman.no/bokstart",
+     "https://deichman.no/aktuelt",
      "Gamle Oslo", "2026-09-15", "kultur",
      "Gratis bokpakke til alle 1-åringer i Oslo. Leveres via helsestasjon "
      "eller hentes på Deichman-filialer i løpet av høsten."),
@@ -532,20 +532,20 @@ EVENTS = [
      "felles parade ned Karl Johan og avslutning på Rådhusplassen."),
 
     ("Ungdommens Kulturmønstring Oslo 2026",
-     "https://ukm.no/oslo",
+     "https://ukm.no/sted/oslo",
      "Gr\u00fcnerl\u00f8kka", "2026-03-14", "kultur",
      "Fylkesmønstringen for Oslo med unge artister fra hele byen. Dans, "
      "musikk, visuell kunst og film. Vinnerne går videre til UKM-festivalen "
      "i Trondheim."),
 
     ("Oslo Mangfoldsfestival 2026",
-     "https://www.oslo.kommune.no/mangfold",
+     "https://www.oslo.kommune.no/",
      "Gamle Oslo", "2026-06-06", "arrangement",
      "Årlig festival som feirer kulturell og språklig mangfold i Oslo. "
      "Matboder, musikk og dans fra over 40 kulturer i T\u00f8yenparken."),
 
     ("Sankthansbål ved Frognerkilen",
-     "https://www.oslo.kommune.no/sankthans",
+     "https://www.oslo.kommune.no/",
      "Frogner", "2026-06-23", "arrangement",
      "Offisielt kommune-bål på Frognerkilen, arrangert av Bymiljøetaten. "
      "Familiearrangement fra kl 19 med pølsegrilling og friluftsmusikk."),
@@ -557,19 +557,19 @@ EVENTS = [
      "og stands på Rådhusplassen for over 200 frivillige organisasjoner."),
 
     ("Julegrantenning på Stortorvet",
-     "https://www.oslo.kommune.no/jul",
+     "https://www.oslo.kommune.no/",
      "Gamle Oslo", "2026-11-28", "arrangement",
      "Den offisielle julegrantenningen i Oslo sentrum. Ordfører holder "
      "tale, barnekor synger og grana tennes kl 17. Start på julesesongen."),
 
     ("Filmhuset høstprogram 2026",
-     "https://www.filmhuset.no/",
+     "https://www.cinemateket.no/",
      "St. Hanshaugen", "2026-09-01", "kultur",
      "Cinemateket i Filmhuset åpner høstsesongen med retrospektiv og "
      "internasjonale klassikere. Månedlige tema-programmer."),
 
     ("Operaens lunsjkonserter 2026 vår",
-     "https://operaen.no/lunsjkonserter",
+     "https://operaen.no/forestillinger-og-konserter/",
      "Gamle Oslo", "2026-05-08", "kultur",
      "Gratis 30-min lunsjkonserter i foajeen fredag kl 12. Operaens "
      "musikere og ensembler. Mest klassisk, av og til crossover."),
@@ -599,14 +599,14 @@ EVENTS = [
      "andre sentrumskinoer. Fra dokumentar til kunstfilm."),
     # --- Markastuer ---------------------------------------------------------
     ("Skjennungstua åpner sommersesongen",
-     "https://skjennungstua.no/",
+     "https://ut.no/hytte/3.2580/skjennungstua",
      "Nordre Aker", "2026-05-02", "arrangement",
      "Skjennungstua, Skiforeningens serveringsstue i Nordmarka nord for "
      "Sognsvann, åpner lørdags- og søndags-kafeen for sommeren. Vaffelduft "
      "og utsikt mot Skjennungen. Turstart fra Frognerseteren eller Sognsvann."),
 
     ("Kikutstua / Kikut (DNT-hytte)",
-     "https://kikut.dntoslo.no/",
+     "https://ut.no/hytte/3.1166/kikut",
      "Nordre Aker", "2026-05-16", "arrangement",
      "DNT Oslo og Omegn sin hytte ved Kikut i Nordmarka. Overnatting, kafe "
      "og betjent servering på helger. Populær stoppestasjon på lange "
@@ -627,28 +627,28 @@ EVENTS = [
      "Turstart fra Movann eller Linderudkollen."),
 
     ("Sinober — markastue i Lillomarka",
-     "https://www.skiforeningen.no/mitt-oslomarka/vaere-i-marka/sinober/",
+     "https://ut.no/turforslag/oslomarka/sinober",
      "Grorud", "2026-05-16", "arrangement",
      "Sinober ligger i Lillomarka nord for Grorud — enkel markastue med "
      "servering i helgene. Turstart fra Movann eller Solemskogen. "
      "Betjent sesong fra mai."),
 
     ("Rustadsaga sportsstue",
-     "https://rustadsaga.no/",
+     "https://ut.no/hytte/3.2585/rustadsaga",
      "\u00d8stensj\u00f8", "2026-04-25", "arrangement",
      "Rustadsaga ved Nøklevann — serveringsstue og badeplass. "
      "Populær utgangsport for tur, jogging og bading i Østmarka. "
      "Kafeen er åpen hele sommeren."),
 
     ("Sandbakken sportsstue",
-     "https://sandbakken-østmarka.no/",
+     "https://ut.no/turforslag/oslomarka/sandbakken-oestmarka",
      "Nordstrand", "2026-04-25", "arrangement",
      "Sandbakken i Østmarka — sportsstue og servering. "
      "Klassisk tur-mål fra Skullerud. Påsketradisjon og sommer-kafe. "
      "Grillplass og teltområde like ved."),
 
     ("Kobberhaughytta",
-     "https://kobberhaug.dntoslo.no/",
+     "https://ut.no/hytte/3.1183/kobberhaughytta",
      "Nordre Aker", "2026-06-01", "arrangement",
      "DNT Oslo og Omegn sin betjente hytte i Nordmarka. Overnatting, "
      "middag og frokost. Kort avstand fra Blåtårn og Kikutstua."),
@@ -729,13 +729,13 @@ EVENTS = [
      "på Oslos mest sjarmerende konsertarena. Sankthanshelgen."),
 
     ("MELA-festivalen 2026",
-     "https://melafestivalen.no/",
+     "https://melahuset.no/",
      "St. Hanshaugen", "2026-08-22", "kultur",
      "Oslos gratis verdensmusikk-festival på Rådhusplassen. Musikk, mat og "
      "kunsthåndverk fra hele verden. Midten/slutten av august."),
 
     ("Kulturnatten Oslo 2026",
-     "https://kulturnatt.oslo.kommune.no/",
+     "https://www.kulturnatt.no/",
      "St. Hanshaugen", "2026-09-18", "kultur",
      "Hundrevis av gratis arrangementer på museer, teatre, biblioteker og "
      "gallerier over hele Oslo. Tredje fredag i september."),
@@ -759,20 +759,20 @@ EVENTS = [
      "forfatterintervjuer og boklanseringer. Siste helg i september."),
 
     ("Ultima Samtidsmusikkfestival 2026",
-     "https://www.ultima.no/",
+     "https://ultima.no/nb",
      "St. Hanshaugen", "2026-09-11", "kultur",
      "Nordens største festival for samtidsmusikk. Konserter på Sentralen, "
      "Oslo Konserthus og Operaen. Andre/tredje uke i september."),
 
     ("Oslo Arkitekturfestival 2026",
-     "https://oslobiennalen.no/",
+     "https://oslobiennalen.no",
      "St. Hanshaugen", "2026-09-24", "kultur",
      "Årlig festival om arkitektur, byutvikling og design. Arrangementer "
      "på Rådhuset, DogA og Oslo Bymuseum. Sent september."),
 
     # --- Bydelsdager (spre på bydeler) ----------------------------------
     ("Grünerløkkadagene 2026",
-     "https://grunerlokkadagene.no/",
+     "https://www.facebook.com/grunerlokkadagene",
      "Gr\u00fcnerl\u00f8kka", "2026-06-06", "arrangement",
      "Folkefest på Olaf Ryes plass med musikk, matboder og aktiviteter. "
      "Årlig feiring av Grünerløkka. Første helg i juni."),
@@ -827,7 +827,7 @@ EVENTS = [
      "Sent juni."),
 
     ("Lørdagsloppis Tøyen 2026",
-     "https://www.toeyentorg.no/",
+     "https://www.facebook.com/toyentorg/",
      "Gamle Oslo", "2026-07-11", "arrangement",
      "Loppemarked på Tøyen torg hver lørdag i juli. Lokale selgere, "
      "mat og livemusikk."),
@@ -845,14 +845,14 @@ EVENTS = [
      "av klassiker fra 1950-tallet. Midten av juli."),
 
     ("Frognerbad-sesongen 2026",
-     "https://www.oslo.kommune.no/natur-kultur-og-fritid/svømmehaller-i-oslo/frognerbadet/",
+     "https://www.oslo.kommune.no/natur-kultur-og-fritid/svommehaller-i-oslo/frognerbadet/",
      "Frogner", "2026-05-15", "arrangement",
      "Frognerbadet åpner for sommersesongen. Utendørs basseng, "
      "stupbrett og kafe. Åpent daglig til 1. september."),
 
     # --- Høst / vinter --------------------------------------------------
     ("Julemarked på Spikersuppa 2026",
-     "https://www.oslojulemarked.no/",
+     "https://www.julemarkedet.no/",
      "St. Hanshaugen", "2026-11-20", "arrangement",
      "Julemarked på Eidsvolls plass og Spikersuppa. Isbane, boder, "
      "Ferris hjul og pepperkake-by. Fra 20. november til 1. januar."),
@@ -888,7 +888,7 @@ EVENTS = [
      "Frognerseteren og Sognsvann. 27. desember-start ved snø."),
 
     ("Bislett-stevne 2026 (Oslo Athletics Games)",
-     "https://bislettgames.no/",
+     "https://www.bislettgames.com/",
      "St. Hanshaugen", "2026-06-11", "idrett",
      "Internasjonalt friidretts-stevne på Bislett stadion. Diamond League. "
      "Andre torsdag i juni."),
@@ -908,13 +908,13 @@ EVENTS = [
      "kveld i mai-juni. Gratis inngang, kollekt ved utgangen."),
 
     ("Iladalen sommerfest 2026",
-     "https://www.iladalenvel.no/",
+     "https://www.facebook.com/oslobyvelforening",
      "Sagene", "2026-06-13", "arrangement",
      "Bydelsfest i Iladalen park med korps, loppemarked, kakebord og "
      "leker for barn. Arrangeres av Iladalen vel andre lørdag i juni."),
 
     ("Bjølsen kulturkirke - jazzkveld 2026",
-     "https://www.bjolsenkulturkirke.no/",
+     "https://kulturkirken.no/",
      "Sagene", "2026-04-30", "kultur",
      "Månedlig jazzkveld i Bjølsen kulturkirke med lokale band. "
      "Siste torsdag i måneden, gratis adgang."),
@@ -927,7 +927,7 @@ EVENTS = [
 
     # Stovner
     ("Stovner bibliotek - barnetimen 2026",
-     "https://deichman.no/biblioteker/stovner",
+     "https://deichman.no/aktuelt",
      "Stovner", "2026-04-28", "kultur",
      "Hver tirsdag kl 11 leser bibliotekarene bøker for barn 1-5 år "
      "på Stovner bibliotek. Gratis, drop-in."),
@@ -939,7 +939,7 @@ EVENTS = [
      "kulturer, dans og scene. Tredje lørdag i mai og september."),
 
     ("Liastua skikurs for barn 2026",
-     "https://www.liaillagrend.no/",
+     "https://www.facebook.com/oslobyvelforening",
      "Stovner", "2026-12-12", "idrett",
      "Skiforeningen og Lia IL holder skikurs for barn 4-10 år på "
      "Liastua i Lillomarka. Andre lørdag i desember ved snøfall."),
@@ -964,26 +964,26 @@ EVENTS = [
      "Tredje lørdag i september."),
 
     ("Refstad allmenningsfest 2026",
-     "https://www.refstadvel.no/",
+     "https://www.facebook.com/oslobyvelforening",
      "Bjerke", "2026-08-22", "arrangement",
      "Sommerfest på Refstad allmenning med grilling, korps og "
      "fellestilstelning. Arrangeres av Refstad vel siste helg i august."),
 
     ("Bjerke Travbane - V75 søndag 2026",
-     "https://www.bjerketravbane.no/",
+     "https://nb-no.facebook.com/bjerketravbane/",
      "Bjerke", "2026-05-03", "idrett",
      "V75-søndager på Bjerke travbane med Norges største travløp. "
      "Familieaktiviteter, mat og publikumsadgang fra kl 12."),
 
     # Ullern
     ("Ullern kulturhus - kammerkonsert 2026",
-     "https://www.ullernkulturhus.no/",
+     "https://www.facebook.com/ullernkulturhus/",
      "Ullern", "2026-05-09", "kultur",
      "Månedlige kammerkonserter på Ullern kulturhus med musikere fra "
      "Oslo Filharmonien. Andre lørdag i måneden."),
 
     ("Bestum vel sommerfest 2026",
-     "https://www.bestumvel.no/",
+     "https://www.facebook.com/oslobyvelforening",
      "Ullern", "2026-06-20", "arrangement",
      "Bestum vels årlige sommerfest på Bestum skole. Korps, kakesalg, "
      "tombola og leker. Tredje lørdag i juni."),
@@ -1001,17 +1001,17 @@ EVENTS = [
      "Oslos største alpinanlegg åpner for sesongen 2026/27. 18 nedfarter, snø-park, 13 heiser. Vanligvis åpning andre helg i desember når snøforholdene tillater."),
 
     ("Wyllerløkka — sesongåpning",
-     "https://wyller.no/",
+     "https://oslovinterpark.no/",
      "Vestre Aker", "2026-12-19", "idrett",
      "Wyllerløkka alpinanlegg ved Holmenkollen åpner for ny vintersesong. Familievennlig anlegg med skiskole, skileie og kveldskjøring."),
 
     ("Grefsenkollen alpinanlegg — sesongstart",
-     "https://grefsenkollenalpin.no/",
+     "https://www.skiforeningen.no/",
      "Nordre Aker", "2026-12-26", "idrett",
      "Grefsenkollen alpinanlegg åpner typisk i romjulen. Bynære nedfarter med utsikt over Oslofjorden. Kveldsåpent og lysløyper i tilkobling."),
 
     ("Trollvann lysløype — sesongåpning",
-     "https://trollvannlysloype.no/",
+     "https://www.facebook.com/trollvann/",
      "Nordre Aker", "2026-12-15", "idrett",
      "Lysløypa rundt Trollvann åpner for sesongen når snøen kommer. 2,5 km flat sløyfe perfekt for nybegynnere og barn. Helt opplyst om kvelden."),
 
@@ -1022,7 +1022,7 @@ EVENTS = [
 
     # --- Ishaller / hockey-arenaer ----------------------------------------
     ("Jordal Amfi — Vålerenga Hockey sluttspill",
-     "https://vif-hockey.no/",
+     "https://www.facebook.com/valerengaishockey/",
      "Gamle Oslo", "2026-04-30", "idrett",
      "Vålerenga Ishockey spiller hjemmekamper i Jordal Amfi. Sjekk kampoppsett for vårens sluttspill og høstens seriestart i september."),
 
@@ -1032,7 +1032,7 @@ EVENTS = [
      "Manglerud Star Ishall er hjemmebanen til Manglerud Star Hockey. Sesongstart i 1. divisjon i midten av september."),
 
     ("Furuset Forum — isidrett",
-     "https://furusethockey.no/",
+     "https://www.facebook.com/furusetishockey/",
      "Alna", "2026-09-20", "idrett",
      "Furuset Forum huser Furuset Hockey. Sesongåpning seriespill tredje helg i september. Kveldsskøyteis åpen for publikum gjennom hele sesongen."),
 

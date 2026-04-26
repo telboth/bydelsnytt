@@ -115,6 +115,24 @@ def _call_api(api_key: str, story: dict) -> str | None:
     return None
 
 
+def _resolve_api_key() -> str:
+    """Hent API-key fra env eller fra .anthropic_key-fil i repo-rot.
+
+    Filen er gitignored. Lar key vaere tilgjengelig for scheduled tasks
+    som ikke arver shell-env, uten aa committe noe sensitivt.
+    """
+    key = os.environ.get("ANTHROPIC_API_KEY", "").strip()
+    if key:
+        return key
+    key_file = Path(__file__).resolve().parent.parent / ".anthropic_key"
+    if key_file.exists():
+        try:
+            return key_file.read_text(encoding="utf-8").strip()
+        except OSError:
+            pass
+    return ""
+
+
 def enrich_top_stories(stories: Iterable[dict],
                        max_calls: int = MAX_PER_RUN) -> dict:
     """Generer/hent TL;DR for inntil max_calls saker. Returner dict
@@ -123,7 +141,7 @@ def enrich_top_stories(stories: Iterable[dict],
     Kalleren bestemmer hvilke saker som er "topp" — vi gjor ikke prioritering
     her, kun caching og API-call.
     """
-    api_key = os.environ.get("ANTHROPIC_API_KEY", "").strip()
+    api_key = _resolve_api_key()
     cache = _load_cache()
     items = cache.setdefault("items", {})
     out: dict[str, str] = {}

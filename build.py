@@ -2176,8 +2176,58 @@ SCRIPT = r"""
         else myBydeler[name] = true;
         persistMine();
         applyPin();
+        applyToppFilter();
       });
     });
+
+    // Topp-saker filter: hvis brukeren har pinnede bydeler, vis topp-5 fra
+    // de bydelene; ellers vis foerste 5 (global topp-5).
+    function applyToppFilter() {
+      var cards = document.querySelectorAll('.topp-saker .topp-card');
+      if (!cards.length) return;
+      var pinned = Object.keys(myBydeler);
+      var hasPinned = pinned.length > 0;
+      var shown = 0;
+      var maxShown = 5;
+      cards.forEach(function(card) {
+        var bydel = card.dataset.bydel || '';
+        var rank = parseInt(card.dataset.rank || '99', 10);
+        var match;
+        if (hasPinned) {
+          match = myBydeler[bydel] === true;
+        } else {
+          // Default: behold opprinnelig topp-5 (rank 0..4)
+          match = rank < 5;
+        }
+        if (match && shown < maxShown) {
+          card.style.display = '';
+          shown++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+      // Hvis ingen treff blant pinnede bydeler, fall tilbake til globalt topp-5
+      if (hasPinned && shown === 0) {
+        cards.forEach(function(card) {
+          var rank = parseInt(card.dataset.rank || '99', 10);
+          card.style.display = rank < maxShown ? '' : 'none';
+        });
+        shown = maxShown;
+      }
+      var countEl = document.getElementById('topp-count');
+      if (countEl) countEl.textContent = shown + ' saker';
+      var suffixEl = document.getElementById('topp-summary-suffix');
+      if (suffixEl) {
+        if (hasPinned && shown > 0 && shown === [].filter.call(cards, function(c) { return myBydeler[c.dataset.bydel]; }).length) {
+          suffixEl.textContent = 'fra ' + (pinned.length === 1
+            ? pinned[0]
+            : 'mine bydeler');
+        } else {
+          suffixEl.textContent = 'utvalgt av algoritmen';
+        }
+      }
+    }
+    applyToppFilter();
   } catch (e) {}
 
   // "Siden sist"-badge: merker saker som er dukket opp i cachen etter
@@ -3652,20 +3702,27 @@ def _pick_top_stories(bydeler_list, today_iso, n=5):
 
 
 def _render_topp_saker(bydeler_list, today_iso):
-    top = _pick_top_stories(bydeler_list, today_iso, n=5)
+    # Hentet top 15 i steden for 5 — JS-filteret nedenfor lar oss skjule
+    # over-skuddet og prioritere "Min bydel" naar lokalLagrede preferanser
+    # eksisterer. Default-rendering viser foerste 5 (samme oppfoerelsen som
+    # foer for brukere uten Min-bydel).
+    top = _pick_top_stories(bydeler_list, today_iso, n=15)
     if not top:
         return ""
     # AI-TL;DR: best-effort. Hopper over hvis modulen ikke kan importeres
     # eller hvis ANTHROPIC_API_KEY mangler — vi bruker da bare cache.
+    # Vi enricher kun de 5 foerste (de globale topp-5) for aa holde kost
+    # og latency lavt; resten faar TL;DR ved senere kjoeringer hvis de
+    # forblir i topp-15.
     tldr_map: dict = {}
     try:
         from pipeline import tldr as _tldr
-        top_stories_only = [s for _, _, s in top]
+        top_stories_only = [s for _, _, s in top[:5]]
         tldr_map = _tldr.enrich_top_stories(top_stories_only)
     except Exception as e:
         print(f"[build] tldr-modul utilgjengelig: {e}", file=sys.stderr)
     cards = []
-    for score, bname, s in top:
+    for idx, (score, bname, s) in enumerate(top):
         title = esc(s.get("title", "") or "(uten tittel)")
         url = esc(s.get("url", "") or "#")
         source = esc(s.get("source", "") or "")
@@ -3692,8 +3749,11 @@ def _render_topp_saker(bydeler_list, today_iso):
                 f'<span class="topp-tldr-tag">TL;DR</span> {esc(tldr_text)}'
                 f'</span>'
             )
+        # data-bydel + data-rank lar JS-filteret prioritere "Min bydel" og
+        # skjule over-skuddet til top-5 hvis ingen pinnede bydeler.
         cards.append(
-            f'<a class="topp-card" href="{url}" target="_blank" rel="noopener">'
+            f'<a class="topp-card" data-bydel="{esc(bname)}" data-rank="{idx}" '
+            f'href="{url}" target="_blank" rel="noopener">'
             f'{img_html}'
             f'<span class="topp-body">'
             f'<span class="topp-bydel">{esc(bname)}</span>'
@@ -3709,8 +3769,8 @@ def _render_topp_saker(bydeler_list, today_iso):
         )
     return (
         '<details class="topp-saker" id="topp-saker" aria-label="Topp saker i dag">'
-        '<summary>Topp saker i dag <small>utvalgt av algoritmen</small> '
-        f'<span class="topp-count">{len(cards)} saker</span>'
+        '<summary>Topp saker i dag <small id="topp-summary-suffix">utvalgt av algoritmen</small> '
+        f'<span class="topp-count" id="topp-count">5 saker</span>'
         '</summary>'
         '<div class="topp-saker-body"><div class="topp-grid">'
         + "".join(cards)
@@ -3933,13 +3993,13 @@ def render_page(include_cowork_meta):
 <div id="map"></div>
 <p class="map-disclaimer">Merk: ikke alle saker er plassert n&oslash;yaktig. Saker uten egen adresse er pin-et p&aring; bydel-/venue-sentrum. Stor prikk = presis posisjon, liten prikk = omtrentlig.</p>
 <main>{body}
-<div id="no-results" class="no-results" style="display:none;">Ingen saker matcher filtrene dine. Prøv å huke av flere kategorier eller endre Bydel/Periode.</div>
+<div id="no-results" class="no-results" style="display:none;">Ingen saker matcher filtrene dine. Pr&oslash;v &aring; huke av flere kategorier eller endre Bydel/Periode.</div>
 </main>
 <footer>
   Sist oppdatert {esc(TIMESTAMP_ISO)}. Oppdateres daglig 08:01.
-  Kilde: automatiske RSS-feeds (Oslo kommune, Groruddalen, NRK Oslo/Viken) + håndkuratert innhold fra skoler og idrettslag.
+  Kilde: automatiske RSS-feeds (Oslo kommune, Groruddalen, NRK Oslo/Viken) + h&aring;ndkuratert innhold fra skoler og idrettslag.
   <br>
-  <a href="feed.xml">RSS-feed</a> · <a href="weekly/">Ukesarkiv</a> · Live: <a href="https://telboth.github.io/bydelsnytt/">telboth.github.io/bydelsnytt</a>.
+  <a href="feed.xml">RSS-feed</a> &middot; <a href="weekly/">Ukesarkiv</a> &middot; Live: <a href="https://telboth.github.io/bydelsnytt/">telboth.github.io/bydelsnytt</a>.
   <span class="visit-counter" id="visit-counter" style="margin-left: 8px; padding-left: 8px; border-left: 1px solid #ddd; color: #888;">Bes&oslash;k: <span id="visit-count">&hellip;</span></span>
 </footer>
 </div>
@@ -3951,7 +4011,6 @@ def render_page(include_cowork_meta):
 (function() {{
   var el = document.getElementById('visit-count');
   if (!el) return;
-  // Abacus: counts each pageview but throttles per-visitor; no tracking cookies, no PII.
   fetch('https://abacus.jasoncameron.dev/hit/bydelsnytt/visits')
     .then(function(r) {{ return r.ok ? r.json() : null; }})
     .then(function(d) {{

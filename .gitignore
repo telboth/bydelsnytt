@@ -3,3 +3,5 @@ __pycache__/
 .DS_Store
 bydelsnytt_artifact.html
 bydelsnytt_publish.html
+.anthropic_key
+tldr.json
