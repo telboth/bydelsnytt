@@ -53,9 +53,10 @@ EVENTS = [
 
     ("Oslo Triathlon 2026",
      "https://oslotri.com/",
-     "Nordre Aker", "2026-08-22", "idrett",
+     "Nordre Aker", "2026-08-08", "idrett",
      "Byens største triatlon med svømming i Sognsvann, sykkel og løp "
-     "rundt Nordmarka/Nordre Aker. Sprint-, olympisk og halv-distanse."),
+     "rundt Nordmarka/Nordre Aker. Olympisk, sprint, lagkonkurranse/"
+     "stafett og barneklasser. Lørdag 8. august 2026."),
 
     ("Norway Cup 2026",
      "https://www.norwaycup.no/",
