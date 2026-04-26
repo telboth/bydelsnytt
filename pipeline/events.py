@@ -80,10 +80,10 @@ EVENTS = [
 
     ("Oslo Maraton 2026",
      "https://www.oslomaraton.no/",
-     "Frogner", "2026-09-19", "idrett",
-     "Norges største maraton. Maratonløp, halvmaraton, 10 km og barneløp "
-     "gjennom sentrum, Frogner, Bjørvika og Grünerløkka. Start/mål på "
-     "Rådhusplassen."),
+     "Frogner", "2026-09-12", "idrett",
+     "DNB Oslo Maraton — Norges største maraton. Maratonløp, halvmaraton, "
+     "10 km og barneløp gjennom sentrum, Frogner, Bjørvika og Grünerløkka. "
+     "Start/mål på Rådhusplassen. Lørdag 12. september 2026."),
 
     ("Bygdoymila 2026",
      "https://www.facebook.com/Bygdoymila/",
@@ -1103,6 +1103,10 @@ if __name__ == "__main__":
     from collections import Counter
     per_cat = Counter(e["category"] for e in events)
     per_bydel = Counter(e["bydel"] for e in events)
+    for k, v in per_cat.items():
+        print(f"  {k}: {v}")
+    print()
+    print("Per bydel:")
     for k, v in per_cat.items():
         print(f"  {k}: {v}")
     print()
