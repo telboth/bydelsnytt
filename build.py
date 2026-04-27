@@ -4001,7 +4001,7 @@ def render_page(include_cowork_meta):
   Kilde: automatiske RSS-feeds (Oslo kommune, Groruddalen, NRK Oslo/Viken) + h&aring;ndkuratert innhold fra skoler og idrettslag.
   <br>
   <a href="feed.xml">RSS-feed</a> &middot; <a href="weekly/">Ukesarkiv</a> &middot; Live: <a href="https://telboth.github.io/bydelsnytt/">telboth.github.io/bydelsnytt</a>.
-  <span class="visit-counter" id="visit-counter" style="margin-left: 8px; padding-left: 8px; border-left: 1px solid #ddd; color: #888;">Bes&oslash;k: <span id="visit-count">&hellip;</span></span>
+  <span class="visit-counter" id="visit-counter" style="margin-left: 8px; padding-left: 8px; border-left: 1px solid #ddd; color: #888;" title="Bes&oslash;k er totalt antall sidevisninger; unike er antall ulike nettlesere/enheter (lagret via localStorage, ingen IP-tracking).">Bes&oslash;k: <span id="visit-count">&hellip;</span> &middot; Unike: <span id="unique-count">&hellip;</span></span>
 </footer>
 </div>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
@@ -4010,18 +4010,48 @@ def render_page(include_cowork_meta):
 <script>{MAP_SCRIPT}</script>
 <script>
 (function() {{
-  var el = document.getElementById('visit-count');
-  if (!el) return;
+  var elVisits = document.getElementById('visit-count');
+  var elUnique = document.getElementById('unique-count');
+  var counter = document.getElementById('visit-counter');
+  if (!elVisits || !elUnique) return;
+
+  var fmt = function(n) {{ return n.toLocaleString('nb-NO'); }};
+  var setVal = function(el, n) {{ el.textContent = fmt(n); }};
+
+  // Total bes&oslash;k: bumpes hver gang siden lastes
   fetch('https://abacus.jasoncameron.dev/hit/bydelsnytt/visits')
     .then(function(r) {{ return r.ok ? r.json() : null; }})
     .then(function(d) {{
+      if (d && typeof d.value === 'number') setVal(elVisits, d.value);
+    }})
+    .catch(function() {{}});
+
+  // Unike: bumpes kun ved foerste besoek per nettleser. localStorage-flag
+  // sikrer at samme bruker ikke teller flere ganger. Ingen IP-tracking,
+  // ingen cookies — privacy-friendly.
+  var FIRST_KEY = 'bydelsnytt:countedAsUnique';
+  var counted = false;
+  try {{ counted = window.localStorage.getItem(FIRST_KEY) === '1'; }} catch (e) {{}}
+  var endpoint = counted
+    ? 'https://abacus.jasoncameron.dev/get/bydelsnytt/unique'
+    : 'https://abacus.jasoncameron.dev/hit/bydelsnytt/unique';
+  fetch(endpoint)
+    .then(function(r) {{ return r.ok ? r.json() : null; }})
+    .then(function(d) {{
       if (d && typeof d.value === 'number') {{
-        el.textContent = d.value.toLocaleString('nb-NO');
-      }} else {{
-        el.parentNode.style.display = 'none';
+        setVal(elUnique, d.value);
+        if (!counted) {{
+          try {{ window.localStorage.setItem(FIRST_KEY, '1'); }} catch (e) {{}}
+        }}
       }}
     }})
-    .catch(function() {{ el.parentNode.style.display = 'none'; }});
+    .catch(function() {{}});
+
+  setTimeout(function() {{
+    if (elVisits.textContent === '…' && elUnique.textContent === '…') {{
+      counter.style.display = 'none';
+    }}
+  }}, 4000);
 }})();
 </script>
 <script>
@@ -4036,7 +4066,7 @@ if ('serviceWorker' in navigator) {{
 """
 
 
-out_dir = os.path.dirname(os.path.abspath(__file__))
+out_dir = "/sessions/fervent-admiring-sagan/mnt/outputs"
 os.makedirs(out_dir, exist_ok=True)
 
 with open(f"{out_dir}/bydelsnytt_artifact.html", "w", encoding="utf-8") as f:
