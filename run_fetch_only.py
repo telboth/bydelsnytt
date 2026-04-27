@@ -1,5 +1,7 @@
 """Kjoer fetch + merge + save uten image-enrich (for hastighet i splittet kjoering)."""
-from pipeline import cache, classify, dedup, events, fetcher, health, locations
+from pipeline import (
+    cache, classify, corrections, dedup, events, fetcher, health, locations,
+)
 
 health_data = health.load()
 raw = [s.to_dict() for s in fetcher.fetch_all(health_data)]
@@ -15,10 +17,13 @@ merged = cache.merge(existing, enriched)
 pruned = cache.prune(merged)
 deduped = dedup.deduplicate(pruned)
 clustered = dedup.cluster_topics(deduped)
+# Anvend auto-genererte/manuelle event-dato-korreksjoner. Disse overlever
+# overskriving fra events.py paa hver pipeline-run.
+corr_count = corrections.apply(clustered)
 cache.replace_and_save(clustered)
 health.save(health_data)
 topic_count = len({s["topic_id"] for s in clustered if s.get("topic_id")})
 print(f"[fetch-only] lagret {len(clustered)} saker til stories.json "
-      f"({topic_count} topic-klynger)")
+      f"({topic_count} topic-klynger, {corr_count} korreksjoner anvendt)")
 print(f"[fetch-only] {sum(new_per_src.values())} genuint nye saker fra "
       f"{len(new_per_src)} kilder")

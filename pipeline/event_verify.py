@@ -322,8 +322,15 @@ def check_event(event: dict, claude_key: str = "",
     return base
 
 
-def verify_all_events(max_workers: int = 6, use_claude: bool = True) -> dict:
-    """Verifiser alle kuraterte events. Skriver til event_verify.json."""
+def verify_all_events(max_workers: int = 6, use_claude: bool = True,
+                      auto_correct: bool = True) -> dict:
+    """Verifiser alle kuraterte events. Skriver til event_verify.json.
+
+    Hvis auto_correct=True og Claude bekrefter en alternativ dato som
+    cross-validates med regex-funn, lagres korreksjonen i
+    event_corrections.json. Korreksjonene anvendes senere av cache.apply
+    i pipelinen.
+    """
     from . import events as ev_mod
     raw_events = ev_mod.load_events()
     claude_key = _resolve_claude_key() if use_claude else ""
@@ -350,31 +357,20 @@ def verify_all_events(max_workers: int = 6, use_claude: bool = True) -> dict:
     counts = {}
     for i in items:
         counts[i["status"]] = counts.get(i["status"], 0) + 1
-    report = {
-        "schemaVersion": 1,
-        "generatedAt": datetime.now(timezone.utc).isoformat(),
-        "total": len(items),
-        "counts": counts,
-        "claude_calls_remaining": budget[0],
-        "items": items,
-    }
-    REPORT_PATH.write_text(
-        json.dumps(report, ensure_ascii=False, indent=2),
-        encoding="utf-8",
-    )
-    return report
 
-
-if __name__ == "__main__":
-    rep = verify_all_events()
-    print(f"Verifisert {rep['total']} events:")
-    for status, n in rep["counts"].items():
-        print(f"  {status}: {n}")
-    mismatches = [i for i in rep["items"] if i["status"] == "mismatch"]
-    if mismatches:
-        print(f"\n{len(mismatches)} mismatches:")
-        for m in mismatches[:15]:
-            extra = m.get("claude_suggested") or m.get("note", "")
-            print(f"  {m['expected']} -> {extra}")
-            print(f"    {m['title'][:60]}")
-            print(f"    {m['url']}")
+    # Auto-correct: skriv korreksjoner for items der Claude er bekreftet av
+    # regex-funn (cross-validation). Vi gjor IKKE auto-correct hvis Claude
+    # foreslaar en dato som ikke ogsaa ble plukket opp av regex — for hoy
+    # risiko for hallusinasjon.
+    new_corrections = 0
+    if auto_correct:
+        from . import corrections as corr_mod
+        corr_data = corr_mod.load()
+        for it in items:
+            if it.get("status") != "mismatch":
+                continue
+            sug = it.get("claude_suggested")
+            if not sug:
+                continue
+            if sug not in (it.get("found") or []):
+                continue  # c
