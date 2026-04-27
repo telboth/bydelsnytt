@@ -602,7 +602,7 @@ EVENTS = [
      "andre sentrumskinoer. Fra dokumentar til kunstfilm."),
     # --- Markastuer ---------------------------------------------------------
     ("Skjennungstua åpner sommersesongen",
-     "https://no.wikipedia.org/wiki/Skjennungstua",
+     "https://ut.no/hytte/10640/skjennungstua",
      "Nordre Aker", "2026-05-02", "arrangement",
      "Skjennungstua, Skiforeningens serveringsstue i Nordmarka nord for "
      "Sognsvann, åpner lørdags- og søndags-kafeen for sommeren. Vaffelduft "
@@ -630,28 +630,28 @@ EVENTS = [
      "Turstart fra Movann eller Linderudkollen."),
 
     ("Sinober — markastue i Lillomarka",
-     "https://no.wikipedia.org/wiki/Sinober",
+     "https://ut.no/hytte/10638/sinober-sportsstue",
      "Grorud", "2026-05-16", "arrangement",
      "Sinober ligger i Lillomarka nord for Grorud — enkel markastue med "
      "servering i helgene. Turstart fra Movann eller Solemskogen. "
      "Betjent sesong fra mai."),
 
     ("Rustadsaga sportsstue",
-     "https://no.wikipedia.org/wiki/Rustadsaga",
+     "https://ut.no/hytte/10988/rustadsaga",
      "\u00d8stensj\u00f8", "2026-04-25", "arrangement",
      "Rustadsaga ved Nøklevann — serveringsstue og badeplass. "
      "Populær utgangsport for tur, jogging og bading i Østmarka. "
      "Kafeen er åpen hele sommeren."),
 
     ("Sandbakken sportsstue",
-     "https://www.google.com/maps/search/?api=1&query=Sandbakken+sportsstue+%C3%98stmarka",
+     "https://ut.no/hytte/10611/sandbakken-sportsstue",
      "Nordstrand", "2026-04-25", "arrangement",
      "Sandbakken i Østmarka — sportsstue og servering. "
      "Klassisk tur-mål fra Skullerud. Påsketradisjon og sommer-kafe. "
      "Grillplass og teltområde like ved."),
 
     ("Kobberhaughytta",
-     "https://no.wikipedia.org/wiki/Kobberhaughytta",
+     "https://ut.no/hytte/10645/kobberhaughytta",
      "Nordre Aker", "2026-06-01", "arrangement",
      "DNT Oslo og Omegn sin betjente hytte i Nordmarka. Overnatting, "
      "middag og frokost. Kort avstand fra Blåtårn og Kikutstua."),

@@ -169,6 +169,17 @@ RSS_SOURCES = [
         "resolver": "fixed_bydel",
     },
     {
+        # loppemarkeder.com \u2014 kuratert oversikt over alle FAU-loppiser i
+        # Oslo. RSS gir 20 forste, hver med skole-navn i tittel som vi
+        # mapper til bydel via text_match_bydel.
+        "id": "loppemarkeder",
+        "name": "Loppemarkeder i Oslo",
+        "url": "https://www.loppemarkeder.com/feed/",
+        "bydel": "Frogner",  # fallback hvis strok ikke matcher
+        "weight": 0.5,
+        "resolver": "text_match_bydel",
+    },
+    {
         "id": "sageneif",
         "name": "Sagene IF",
         "url": "https://sageneif.no/rss-feed",
