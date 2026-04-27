@@ -74,9 +74,10 @@ EVENTS = [
 
     ("Oslos bratteste 2026 (tidligere Tryvann opp)",
      "https://oslosbratteste.no/",
-     "Vestre Aker", "2026-09-12", "idrett",
+     "Vestre Aker", "2026-09-19", "idrett",
      "Motbakkeløp fra Frognerseteren til Tryvannstårnet. Kort men bratt, "
-     "ca 3,5 km. Tidligere kjent som Tryvann opp, omdøpt til Oslos bratteste."),
+     "ca 3,5 km. Tidligere kjent som Tryvann opp, omdøpt til Oslos bratteste. "
+     "Lørdag 19. september 2026."),
 
     ("Oslo Maraton 2026",
      "https://www.oslomaraton.no/",
@@ -148,11 +149,10 @@ EVENTS = [
      "Verdenscup-helg i langrenn, hopp og kombinert på Holmenkollen. "
      "Over 100.000 tilskuere over tre dager."),
 
-    ("Sognsvann rundt medsols 2027",
-     "https://kondis.no/",
-     "Nordre Aker", "2027-02-07", "idrett",
-     "Turrenn rundt Sognsvann og inn i Nordmarka. Tre distanser: 5 km, "
-     "10 km og 20 km. Klassisk familie-skirenn."),
+    # Sognsvann rundt medsols fjernet 2026-04-27: var feilaktig oppfoert
+    # som skirenn i februar — er egentlig et grusloep paa sommeren.
+    # Korrekt event vil dukke opp via kondis.no naar Tjalve publiserer
+    # neste utgaves dato.
 
 
     # --- Loppemarkeder (vårloppis 2026) -----------------------------------
@@ -1103,6 +1103,10 @@ if __name__ == "__main__":
     from collections import Counter
     per_cat = Counter(e["category"] for e in events)
     per_bydel = Counter(e["bydel"] for e in events)
+    for k, v in per_cat.items():
+        print(f"  {k}: {v}")
+    print()
+    print("Per bydel:")
     for k, v in per_cat.items():
         print(f"  {k}: {v}")
     print()
