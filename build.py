@@ -4036,7 +4036,7 @@ if ('serviceWorker' in navigator) {{
 """
 
 
-out_dir = "/sessions/fervent-admiring-sagan/mnt/outputs"
+out_dir = os.path.dirname(os.path.abspath(__file__))
 os.makedirs(out_dir, exist_ok=True)
 
 with open(f"{out_dir}/bydelsnytt_artifact.html", "w", encoding="utf-8") as f:

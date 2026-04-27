@@ -94,7 +94,7 @@ def count_new_per_source(existing: list[dict], incoming: Iterable[dict]) -> dict
 
 def replace_and_save(stories: list[dict]) -> None:
     """Bekvemmelighets-funksjon: erstatt hele listen og skriv."""
-    DATA_PATH.write_text(
+    CACHE_PATH.write_text(
         json.dumps(
             {
                 "schemaVersion": 1,
