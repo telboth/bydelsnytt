@@ -180,6 +180,66 @@ RSS_SOURCES = [
         "resolver": "text_match_bydel",
     },
     {
+        "id": "oppsalif", "name": "Oppsal IF",
+        "url": "https://oppsalif.no/feed/",
+        "bydel": "\u00d8stensj\u00f8", "weight": 0.5,
+        "resolver": "fixed_bydel",
+    },
+    {
+        "id": "holmliasport", "name": "Holmlia SK",
+        "url": "https://holmliasport.no/rss-feed",
+        "bydel": "S\u00f8ndre Nordstrand", "weight": 0.5,
+        "resolver": "fixed_bydel",
+    },
+    {
+        "id": "tjalve", "name": "IK Tjalve",
+        "url": "https://tjalve.no/feed/",
+        "bydel": "St. Hanshaugen", "weight": 0.6,
+        "resolver": "fixed_bydel",
+    },
+    {
+        "id": "frigg", "name": "Frigg Oslo",
+        "url": "https://web.frigg.no/feed/",
+        "bydel": "Frogner", "weight": 0.5,
+        "resolver": "fixed_bydel",
+    },
+    {
+        "id": "oslodomkor", "name": "Oslo Domkor",
+        "url": "https://www.oslodomkor.no/feed/",
+        "bydel": "St. Hanshaugen", "weight": 0.4,
+        "resolver": "fixed_bydel",
+    },
+    {
+        "id": "riksscenen", "name": "Riksscenen",
+        "url": "https://riksscenen.no/rss.php/cat/157243",
+        "bydel": "Gr\u00fcnerl\u00f8kka", "weight": 0.4,
+        "resolver": "fixed_bydel",
+    },
+    {
+        "id": "bekkelaget-bsk", "name": "B\u00e6kkelaget SK",
+        "url": "https://bekkelagets.no/feed/",
+        "bydel": "Nordstrand", "weight": 0.5,
+        "resolver": "fixed_bydel",
+    },
+    {
+        "id": "linderudil", "name": "Linderud IL",
+        "url": "https://linderudil.no/rss-feed",
+        "bydel": "Bjerke", "weight": 0.5,
+        "resolver": "fixed_bydel",
+    },
+    {
+        "id": "kaaffa", "name": "KFUM Kameratene fotball",
+        "url": "https://www.kaaffa.no/rss-nyheter",
+        "bydel": "St. Hanshaugen", "weight": 0.5,
+        "resolver": "fixed_bydel",
+    },
+    {
+        "id": "bygdoy-korps", "name": "Bygd\u00f8y skoles musikkorps",
+        "url": "https://korpsbygdoyskole.wordpress.com/feed/",
+        "bydel": "Frogner", "weight": 0.4,
+        "resolver": "fixed_bydel",
+    },
+    {
         "id": "sageneif",
         "name": "Sagene IF",
         "url": "https://sageneif.no/rss-feed",
@@ -357,6 +417,16 @@ HTML_SOURCES = [
         "weight": 0.6,
     },
     {
+        # Kulturkirken Jakob — konsertkirken paa Hausmannsgate
+        "id": "jakob",
+        "name": "Kulturkirken Jakob",
+        "scraper": "jakob",
+        "bydel": "St. Hanshaugen",
+        "urls": ["https://kulturkirken.no/program"],
+        "limit": 12,
+        "weight": 0.5,
+    },
+    {
         "id": "iltry",
         "name": "IL Try",
         "scraper": "iltry",
@@ -500,17 +570,12 @@ def _match_word(needle: str, haystack: str) -> bool:
 
 
 def resolve_text_match_bydel(entry):
-    """Match foerst paa bydel-navn, deretter paa stroek-tabell.
-
-    Bruker ord-grense slik at "Bjerke" ikke matcher "Bjerkeli".
-    """
+    """Match foerst paa bydel-navn, deretter paa stroek-tabell."""
     haystack = (entry.get("title", "") + " " + entry.get("summary", "")).lower()
-    # 1) Eksakt bydel-navn (lengst foerst for aa unngaa prefix-match)
     order = sorted(BYDELER, key=lambda b: -len(b))
     for b in order:
         if _match_word(b.lower(), haystack):
             return b
-    # 2) Stroek-tabell (lengst foerst)
     stroek_order = sorted(STROEK_TIL_BYDEL.keys(), key=lambda s: -len(s))
     for s in stroek_order:
         if _match_word(s, haystack):
@@ -518,38 +583,15 @@ def resolve_text_match_bydel(entry):
     return None
 
 
-
-
 def resolve_fixed_bydel(entry):
-    """Dummy-resolver: faktisk bydel settes av fetcher fra kilden.
-
-    Brukes naar en RSS-feed kun inneholder saker fra ett bestemt idrettslag
-    eller omraade, saa alle saker tilordnes samme bydel direkte.
-    """
-    return None  # fetcher bruker source['bydel'] direkte
-
-
-# Nasjonale kilder (vegvesen, politi, E24, TU, Kampanje, NHO) dekker hele
-# landet. Vi filtrerer paa Oslo-relevans: bydel-/stroek-treff foerst, deretter
-# stikkord som viser at saken handler om Oslo-omraadet.
-_OSLO_KEYWORDS = [
-    "oslo", "ring 1", "ring 2", "ring 3", "operatunnel", "svartdalstunnel",
-    "ekebergtunnel", "festningstunnel", "tasen", "\u00e5sen", "carl berner",
-    "majorstu", "grefsen", "storo", "br\u00f8bekk", "akershus", "stor-oslo",
-    "e6 oslo", "e18 oslo",
-    # Naering-relevante Oslo-stikkord
-    "oslo b\u00f8rs", "osloborsen", "aker brygge", "tjuvholmen", "barcode",
-    "bj\u00f8rvika", "sk\u00f8yen", "nydalen", "oslo kommune", "schibsted",
-    "dnb", "storebrand", "gjensidige", "aker asa", "equinor", "telenor",
-]
+    return None  # fetcher.py faller tilbake til source['bydel']
 
 
 SKIP = "__SKIP__"
 
 
 def resolve_text_match_bydel_fallback(entry):
-    """Som text_match_bydel, men returnerer SKIP naar saken ikke virker
-    Oslo-relevant i det hele tatt (slik at nasjonale RSS-feeds filtreres)."""
+    """Som text_match_bydel, men returnerer SKIP naar saken ikke er Oslo."""
     b = resolve_text_match_bydel(entry)
     if b:
         return b

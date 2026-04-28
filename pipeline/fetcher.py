@@ -1083,6 +1083,86 @@ def fetch_from_html_kjelsaas(source: dict) -> Iterable[RawStory]:
         )
 
 
+# --- Kulturkirken Jakob — konserter -----------------------------------------
+# kulturkirken.no/program lister event-lenker som peker til jakob.no/program/<slug>.
+# Hver detaljside har og:title og norske datoer ("17. desember 2026").
+
+def fetch_from_html_jakob(source: dict) -> Iterable[RawStory]:
+    """Kulturkirken Jakob konserter."""
+    fetched_at = datetime.now(timezone.utc).isoformat()
+    today = datetime.now(timezone.utc)
+    list_url = (source.get("urls") or
+                ["https://kulturkirken.no/program"])[0]
+    body = _fetch_html(list_url)
+    if not body:
+        return
+    urls = sorted(set(re.findall(
+        r'href="(https://www\.jakob\.no/program/[a-z0-9-]+)"', body
+    )))
+    seen: set[str] = set()
+    count = 0
+    limit = source.get("limit", 12)
+    for url in urls:
+        if count >= limit or url in seen:
+            continue
+        seen.add(url)
+        detail = _fetch_html(url)
+        if not detail:
+            continue
+        og_t = re.search(
+            r'<meta property="og:title" content="([^"]+)"', detail,
+        )
+        og_i = re.search(
+            r'<meta property="og:image" content="([^"]+)"', detail,
+        )
+        title = og_t.group(1).strip() if og_t else ""
+        if not title:
+            continue
+        from html import unescape as _unesc
+        title = _unesc(title)
+        # Foerste fremtidige dato
+        first_date = ""
+        candidates = []
+        from datetime import date as _date
+        _MND = {"jan":"01","feb":"02","mar":"03","apr":"04","mai":"05",
+                "jun":"06","jul":"07","aug":"08","sep":"09","okt":"10",
+                "nov":"11","des":"12","januar":"01","februar":"02","mars":"03",
+                "april":"04","juni":"06","juli":"07","august":"08",
+                "september":"09","oktober":"10","november":"11","desember":"12"}
+        for m in re.finditer(
+            r"\b(\d{1,2})\.\s*(jan|feb|mar|apr|mai|jun|jul|aug|sep|okt|nov|des|"
+            r"januar|februar|mars|april|juni|juli|august|september|oktober|"
+            r"november|desember)\.?\s*(\d{4})?", detail, re.IGNORECASE,
+        ):
+            try:
+                day = int(m.group(1))
+                mon = int(_MND[m.group(2).lower()])
+                year = int(m.group(3)) if m.group(3) else today.year
+                if year < today.year: year = today.year + 1
+                d = _date(year, mon, day)
+                if d >= today.date():
+                    candidates.append(d)
+            except (KeyError, ValueError):
+                pass
+        if candidates:
+            first_date = min(candidates).isoformat()
+        date_iso = first_date or today.date().isoformat()
+        yield RawStory(
+            id=_make_id(url, title),
+            bydel="St. Hanshaugen",  # Hausmannsgate
+            title=title,
+            url=url,
+            source="Kulturkirken Jakob",
+            source_id=source["id"],
+            published_iso=fetched_at,
+            date_iso=date_iso,
+            summary=f"Konsert/arrangement i Kulturkirken Jakob. {title[:200]}",
+            category="kultur",
+            event_date=first_date,
+        )
+        count += 1
+
+
 # --- Nationaltheatret — forestillinger ------------------------------------
 # nationaltheatret.no/forestillinger/ er en Next.js-side med 22 forestillings-
 # lenker. Hver detaljside har <title>"<Tittel> | Nationaltheatret"</title>,
@@ -1474,89 +1554,4 @@ def fetch_from_html_meetup_oslo(source: dict) -> Iterable[RawStory]:
         if event_date:
             summary_parts.append(f"Arrangement {event_date}")
         if venue_name:
-            summary_parts.append(f"hos {venue_name}")
-        desc = (ev.get("description") or "").strip()
-        if desc:
-            summary_parts.append(desc[:300])
-        summary = ". ".join(summary_parts)
-        yield RawStory(
-            id=_make_id(url, title),
-            bydel=bydel,
-            title=title,
-            url=url,
-            source=source.get("name", "Meetup Oslo"),
-            source_id=source["id"],
-            published_iso=fetched_at,
-            date_iso=date_iso,
-            summary=summary,
-            category="arrangement",
-            event_date=event_date or "",
-        )
-        count += 1
-
-
-SCRAPERS = {
-    "iltry": fetch_from_html_iltry,
-    "kondis": fetch_from_html_kondis,
-    "politi-oslo": fetch_from_html_politi,
-    "ruter-sx": fetch_from_html_ruter,
-    "oslomet": fetch_from_html_oslomet,
-    "bi": fetch_from_html_bi,
-    "deichman": fetch_from_html_deichman,
-    "vartoslo": fetch_from_html_vartoslo,
-    "bym-kunngjoringer": fetch_from_html_bym_kunngjoringer,
-    "skiforeningen": fetch_from_html_skiforeningen,
-    "akersposten": fetch_from_html_akersposten,
-    "kjelsaas": fetch_from_html_kjelsaas,
-    "skiforbundet-terminliste": fetch_from_html_skiforbundet,
-    "meetup-oslo": fetch_from_html_meetup_oslo,
-    "operaen": fetch_from_html_operaen,
-    "nationaltheatret": fetch_from_html_nationaltheatret,
-}
-
-
-def fetch_from_html(source: dict) -> Iterable[RawStory]:
-    scraper = SCRAPERS.get(source.get("scraper"))
-    if scraper is None:
-        print(f"  [fetcher] WARN: no scraper for {source['id']}")
-        return
-    yield from scraper(source)
-
-
-def _fetch_one_rss(src: dict) -> tuple[dict, list[RawStory]]:
-    try:
-        return (src, list(fetch_from_rss(src)))
-    except Exception as e:
-        print(f"  [fetcher] rss {src['id']}: {type(e).__name__}: {e}")
-        return (src, [])
-
-
-def _fetch_one_html(src: dict) -> tuple[dict, list[RawStory]]:
-    try:
-        return (src, list(fetch_from_html(src)))
-    except Exception as e:
-        print(f"  [fetcher] html {src['id']}: {type(e).__name__}: {e}")
-        return (src, [])
-
-
-def fetch_all(health_data: dict | None = None,
-              max_workers: int = 8) -> Iterable[RawStory]:
-    from . import health as H
-    rss_sources = [s for s in S.RSS_SOURCES]
-    html_sources = [s for s in getattr(S, "HTML_SOURCES", [])]
-    out: list[RawStory] = []
-    with ThreadPoolExecutor(max_workers=max_workers) as pool:
-        rss_futs = {pool.submit(_fetch_one_rss, s): s for s in rss_sources}
-        html_futs = {pool.submit(_fetch_one_html, s): s for s in html_sources}
-        for fut in as_completed(list(rss_futs) + list(html_futs)):
-            src, stories = fut.result()
-            count = len(stories)
-            kind = "rss" if src in rss_sources else "html"
-            if kind == "rss":
-                print(f"[fetcher] rss {src['id']}: {count} saker mappet til bydel")
-            else:
-                print(f"[fetcher] html {src['id']}: {count} saker scrapet")
-            out.extend(stories)
-            if health_data is not None:
-                H.record(health_data, src["id"], src.get("name", src["id"]), count)
-    return out
+            summary_parts.app
