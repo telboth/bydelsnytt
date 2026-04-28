@@ -160,11 +160,11 @@ RSS_SOURCES = [
         "resolver": "fixed_bydel",
     },
     {
-        # Oslo Kajakklubb \u2014 flattvann/havpadling/surfski. Klubbhus paa Bygdoey.
+        # Oslo Kajakklubb \u2014 flattvann/havpadling/surfski. Klubbhus paa Bestum.
         "id": "okk",
         "name": "Oslo Kajakklubb",
         "url": "https://www.okk.org/feed/",
-        "bydel": "Frogner",
+        "bydel": "Ullern",
         "weight": 0.5,
         "resolver": "fixed_bydel",
     },
