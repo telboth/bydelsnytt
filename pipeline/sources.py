@@ -427,6 +427,16 @@ HTML_SOURCES = [
         "weight": 0.5,
     },
     {
+        # Furuset IF — multisport Alna. /b/<slug>-artikler, ingen RSS
+        "id": "furuset",
+        "name": "Furuset IF",
+        "scraper": "furuset",
+        "bydel": "Alna",
+        "urls": ["https://www.furuset.no/"],
+        "limit": 15,
+        "weight": 0.5,
+    },
+    {
         "id": "iltry",
         "name": "IL Try",
         "scraper": "iltry",
@@ -607,13 +617,3 @@ def resolve_text_match_bydel_fallback(entry):
     for kw in OSLO_KEYWORDS:
         if kw in haystack:
             return None
-    return SKIP
-
-
-RESOLVERS = {
-    "oslo_kommune_tags": resolve_oslo_kommune_tags,
-    "groruddalen": resolve_groruddalen,
-    "text_match_bydel": resolve_text_match_bydel,
-    "text_match_bydel_fallback": resolve_text_match_bydel_fallback,
-    "fixed_bydel": resolve_fixed_bydel,
-}

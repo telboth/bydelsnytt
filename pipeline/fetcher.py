@@ -1083,6 +1083,58 @@ def fetch_from_html_kjelsaas(source: dict) -> Iterable[RawStory]:
         )
 
 
+# --- Furuset IF -------------------------------------------------------------
+# www.furuset.no har kun /b/<slug>-artikler uten RSS. Forsiden lister tittel +
+# subtitle direkte i HTML; detaljside har og:title og og:description.
+
+def fetch_from_html_furuset(source: dict) -> Iterable[RawStory]:
+    """Furuset IF — scraper /b/<slug>-artikler."""
+    fetched_at = datetime.now(timezone.utc).isoformat()
+    today_iso = datetime.now(timezone.utc).date().isoformat()
+    list_url = (source.get("urls") or ["https://www.furuset.no/"])[0]
+    body = _fetch_html(list_url)
+    if not body:
+        return
+    # Finner /b/<slug>-lenker med tittel
+    paths = sorted(set(re.findall(r'<a href="(/b/[a-z0-9-]+)"', body)))
+    seen: set[str] = set()
+    count = 0
+    limit = source.get("limit", 15)
+    for path in paths:
+        if count >= limit or path in seen:
+            continue
+        seen.add(path)
+        url = f"https://www.furuset.no{path}"
+        detail = _fetch_html(url)
+        if not detail:
+            continue
+        og_t = re.search(
+            r'<meta property="og:title" content="([^"]+)"', detail,
+        )
+        og_d = re.search(
+            r'<meta property="og:description" content="([^"]+)"', detail,
+        )
+        title = og_t.group(1).strip() if og_t else ""
+        if not title:
+            continue
+        from html import unescape as _unesc
+        title = _unesc(title)
+        desc = _unesc(og_d.group(1)) if og_d else ""
+        yield RawStory(
+            id=_make_id(url, title),
+            bydel="Alna",
+            title=title,
+            url=url,
+            source="Furuset IF",
+            source_id=source["id"],
+            published_iso=fetched_at,
+            date_iso=today_iso,
+            summary=desc[:500],
+            category="idrett",
+        )
+        count += 1
+
+
 # --- Kulturkirken Jakob — konserter -----------------------------------------
 # kulturkirken.no/program lister event-lenker som peker til jakob.no/program/<slug>.
 # Hver detaljside har og:title og norske datoer ("17. desember 2026").
@@ -1500,10 +1552,8 @@ def fetch_from_html_meetup_oslo(source: dict) -> Iterable[RawStory]:
     """Meetup Oslo find-side. Henter inntil source['limit'] events."""
     fetched_at = datetime.now(timezone.utc).isoformat()
     limit = source.get("limit", 15)
-    list_url = (
-        source.get("urls") or
-        ["https://www.meetup.com/find/?location=no--Oslo&source=EVENTS"]
-    )[0]
+    list_url = (source.get("urls") or
+                ["https://www.meetup.com/find/?location=no--Oslo&source=EVENTS"])[0]
     body = _fetch_html(list_url)
     if not body:
         return
@@ -1554,4 +1604,91 @@ def fetch_from_html_meetup_oslo(source: dict) -> Iterable[RawStory]:
         if event_date:
             summary_parts.append(f"Arrangement {event_date}")
         if venue_name:
-            summary_parts.app
+            summary_parts.append(f"hos {venue_name}")
+        desc = (ev.get("description") or "").strip()
+        if desc:
+            summary_parts.append(desc[:300])
+        summary = ". ".join(summary_parts)
+        yield RawStory(
+            id=_make_id(url, title),
+            bydel=bydel,
+            title=title,
+            url=url,
+            source=source.get("name", "Meetup Oslo"),
+            source_id=source["id"],
+            published_iso=fetched_at,
+            date_iso=date_iso,
+            summary=summary,
+            category="arrangement",
+            event_date=event_date or "",
+        )
+        count += 1
+
+
+SCRAPERS = {
+    "iltry": fetch_from_html_iltry,
+    "kondis": fetch_from_html_kondis,
+    "politi-oslo": fetch_from_html_politi,
+    "ruter-sx": fetch_from_html_ruter,
+    "oslomet": fetch_from_html_oslomet,
+    "bi": fetch_from_html_bi,
+    "deichman": fetch_from_html_deichman,
+    "vartoslo": fetch_from_html_vartoslo,
+    "bym-kunngjoringer": fetch_from_html_bym_kunngjoringer,
+    "skiforeningen": fetch_from_html_skiforeningen,
+    "akersposten": fetch_from_html_akersposten,
+    "kjelsaas": fetch_from_html_kjelsaas,
+    "skiforbundet-terminliste": fetch_from_html_skiforbundet,
+    "meetup-oslo": fetch_from_html_meetup_oslo,
+    "operaen": fetch_from_html_operaen,
+    "nationaltheatret": fetch_from_html_nationaltheatret,
+    "jakob": fetch_from_html_jakob,
+    "furuset": fetch_from_html_furuset,
+}
+
+
+def fetch_from_html(source: dict) -> Iterable[RawStory]:
+    scraper = SCRAPERS.get(source.get("scraper"))
+    if scraper is None:
+        print(f"  [fetcher] WARN: no scraper for {source['id']}")
+        return
+    yield from scraper(source)
+
+
+def _fetch_one_rss(src: dict) -> tuple[dict, list[RawStory]]:
+    try:
+        return (src, list(fetch_from_rss(src)))
+    except Exception as e:
+        print(f"  [fetcher] rss {src['id']}: {type(e).__name__}: {e}")
+        return (src, [])
+
+
+def _fetch_one_html(src: dict) -> tuple[dict, list[RawStory]]:
+    try:
+        return (src, list(fetch_from_html(src)))
+    except Exception as e:
+        print(f"  [fetcher] html {src['id']}: {type(e).__name__}: {e}")
+        return (src, [])
+
+
+def fetch_all(health_data: dict | None = None,
+              max_workers: int = 8) -> Iterable[RawStory]:
+    from . import health as H
+    rss_sources = [s for s in S.RSS_SOURCES]
+    html_sources = [s for s in getattr(S, "HTML_SOURCES", [])]
+    out: list[RawStory] = []
+    with ThreadPoolExecutor(max_workers=max_workers) as pool:
+        rss_futs = {pool.submit(_fetch_one_rss, s): s for s in rss_sources}
+        html_futs = {pool.submit(_fetch_one_html, s): s for s in html_sources}
+        for fut in as_completed(list(rss_futs) + list(html_futs)):
+            src, stories = fut.result()
+            count = len(stories)
+            kind = "rss" if src in rss_sources else "html"
+            if kind == "rss":
+                print(f"[fetcher] rss {src['id']}: {count} saker mappet til bydel")
+            else:
+                print(f"[fetcher] html {src['id']}: {count} saker scrapet")
+            out.extend(stories)
+            if health_data is not None:
+                H.record(health_data, src["id"], src.get("name", src["id"]), count)
+    return out
