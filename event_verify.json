@@ -1,6 +1,1675 @@
 {
-  "generatedAt": "2026-04-27T06:06:17.320937+00:00",
-  "note": "event_verify module incomplete in repo (verify_all_events truncated mid-function); skipped this run",
-  "counts": {},
-  "items": []
+  "generatedAt": "2026-05-04T06:20:00.422720+00:00",
+  "counts": {
+    "fetch_failed": 6,
+    "mismatch": 54,
+    "no_dates": 65,
+    "ok": 10,
+    "skipped": 21
+  },
+  "newCorrections": 0,
+  "items": [
+    {
+      "id": "4e68392e31fa7f16",
+      "title": "Bislett-stevne 2026 (Oslo Athletics Games)",
+      "url": "https://www.bislettgames.com/",
+      "expected": "2026-06-11",
+      "found": [],
+      "status": "fetch_failed",
+      "note": "kunne ikke hente URL"
+    },
+    {
+      "id": "d5550378d20cd624",
+      "title": "Colosseum Kino - IMAX og premierer",
+      "url": "https://www.cinemateket.no/kino/colosseum/",
+      "expected": "2026-04-22",
+      "found": [],
+      "status": "fetch_failed",
+      "note": "kunne ikke hente URL"
+    },
+    {
+      "id": "4302c880ea88f7af",
+      "title": "Gimle Kino - arthouse og repertoire",
+      "url": "https://www.cinemateket.no/kino/gimle/",
+      "expected": "2026-04-22",
+      "found": [],
+      "status": "fetch_failed",
+      "note": "kunne ikke hente URL"
+    },
+    {
+      "id": "83f362a5bdaedbb2",
+      "title": "Oslo Arkitekturfestival 2026",
+      "url": "https://oslobiennalen.no",
+      "expected": "2026-09-24",
+      "found": [],
+      "status": "fetch_failed",
+      "note": "kunne ikke hente URL"
+    },
+    {
+      "id": "ca4df588df9b679f",
+      "title": "Saga Kino - storfilmer våren 2026",
+      "url": "https://www.cinemateket.no/kino/saga/",
+      "expected": "2026-04-22",
+      "found": [],
+      "status": "fetch_failed",
+      "note": "kunne ikke hente URL"
+    },
+    {
+      "id": "f5a65890eee6faf0",
+      "title": "Sentrum Scene - pop/rock-konserter",
+      "url": "https://www.sentrumscene.no/",
+      "expected": "2026-04-22",
+      "found": [],
+      "status": "fetch_failed",
+      "note": "kunne ikke hente URL"
+    },
+    {
+      "id": "dca86c1c4679b4a3",
+      "title": "Bjølsen kulturkirke - jazzkveld 2026",
+      "url": "https://kulturkirken.no/",
+      "expected": "2026-04-30",
+      "found": [
+        "2026-05-08",
+        "2026-05-09",
+        "2026-05-15",
+        "2026-05-23",
+        "2026-05-24"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-05-08"
+    },
+    {
+      "id": "5504d878fe5d430d",
+      "title": "Bokstart Oslo: bokpakker til 1-åringer",
+      "url": "https://deichman.no/aktuelt",
+      "expected": "2026-09-15",
+      "found": [
+        "2026-05-25",
+        "2026-06-05"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-06-05"
+    },
+    {
+      "id": "e2df23ac79bb09f1",
+      "title": "Bøler bad",
+      "url": "https://www.oslo.kommune.no/natur-kultur-og-fritid/svommehaller-i-oslo/boler-bad/",
+      "expected": "2026-04-25",
+      "found": [
+        "2026-05-04",
+        "2026-05-10",
+        "2026-05-11",
+        "2026-05-17",
+        "2026-05-18"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-05-04"
+    },
+    {
+      "id": "d401ac12c6e89b03",
+      "title": "Deichman Bjørvika: Barnelørdag",
+      "url": "https://deichman.no/aktuelt",
+      "expected": "2026-05-09",
+      "found": [
+        "2026-05-25",
+        "2026-06-05"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-05-25"
+    },
+    {
+      "id": "baa38b6bc0eed96b",
+      "title": "Deichman Grünerløkka: Forfatterkveld",
+      "url": "https://deichman.no/aktuelt",
+      "expected": "2026-05-15",
+      "found": [
+        "2026-05-25",
+        "2026-06-05"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-05-25"
+    },
+    {
+      "id": "3dc32ca015d1345b",
+      "title": "Deichman Tøyen: Språkkafé",
+      "url": "https://deichman.no/aktuelt",
+      "expected": "2026-05-06",
+      "found": [
+        "2026-05-25",
+        "2026-06-05"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-05-25"
+    },
+    {
+      "id": "175c864df01599c8",
+      "title": "Ellingsrudåsen skoles høstloppis 2026",
+      "url": "https://ellingsrudasen.osloskolen.no/",
+      "expected": "2026-09-26",
+      "found": [
+        "2026-05-14",
+        "2026-05-17",
+        "2026-05-25",
+        "2026-06-19"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-06-19"
+    },
+    {
+      "id": "c48fb63704a3e1cf",
+      "title": "FIS World Cup Holmenkollen 2027",
+      "url": "https://www.skiforeningen.no/holmenkollen/holmenkollen-skifestival/",
+      "expected": "2027-03-13",
+      "found": [
+        "2026-05-17",
+        "2027-12-03"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2027-12-03"
+    },
+    {
+      "id": "85a06f285713ed5c",
+      "title": "Filmhuset høstprogram 2026",
+      "url": "https://www.cinemateket.no/",
+      "expected": "2026-09-01",
+      "found": [
+        "2026-05-06",
+        "2026-05-07",
+        "2026-05-09",
+        "2026-05-10",
+        "2026-05-12"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-06-13"
+    },
+    {
+      "id": "6a2a2294050e24de",
+      "title": "Frognerbad-sesongen 2026",
+      "url": "https://www.oslo.kommune.no/natur-kultur-og-fritid/svommehaller-i-oslo/frognerbadet/",
+      "expected": "2026-05-15",
+      "found": [
+        "2026-05-04",
+        "2026-05-10",
+        "2026-05-11",
+        "2026-05-17",
+        "2026-05-18"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-05-17"
+    },
+    {
+      "id": "87cdd1077d515f1e",
+      "title": "Frognerbadet åpner for sommeren",
+      "url": "https://www.oslo.kommune.no/natur-kultur-og-fritid/svommehaller-i-oslo/frognerbadet/",
+      "expected": "2026-05-22",
+      "found": [
+        "2026-05-04",
+        "2026-05-10",
+        "2026-05-11",
+        "2026-05-17",
+        "2026-05-18"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-05-24"
+    },
+    {
+      "id": "aec4cba7dce854da",
+      "title": "Furuset bad",
+      "url": "https://www.oslo.kommune.no/natur-kultur-og-fritid/svommehaller-i-oslo/furuset-bad/",
+      "expected": "2026-04-25",
+      "found": [
+        "2026-05-04",
+        "2026-05-10",
+        "2026-05-11",
+        "2026-05-17",
+        "2026-05-18"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-05-04"
+    },
+    {
+      "id": "e4296261cdf44c64",
+      "title": "Grefsenkollen alpinanlegg — sesongstart",
+      "url": "https://www.skiforeningen.no/",
+      "expected": "2026-12-26",
+      "found": [
+        "2026-05-05",
+        "2026-05-31"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-05-31"
+    },
+    {
+      "id": "cc989132160837a1",
+      "title": "Holmlia bad",
+      "url": "https://www.oslo.kommune.no/natur-kultur-og-fritid/svommehaller-i-oslo/holmlia-bad/",
+      "expected": "2026-04-25",
+      "found": [
+        "2026-05-04",
+        "2026-05-10",
+        "2026-05-11",
+        "2026-05-17"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-05-04"
+    },
+    {
+      "id": "0fccf076668118e6",
+      "title": "Kulturkirken Jakob - intime konserter",
+      "url": "https://kulturkirken.no/program",
+      "expected": "2026-04-22",
+      "found": [
+        "2026-05-08",
+        "2026-05-09",
+        "2026-05-15",
+        "2026-05-23",
+        "2026-05-24"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-05-08"
+    },
+    {
+      "id": "c564d1c97d2eb155",
+      "title": "Kulturnatt Oslo 2026",
+      "url": "https://www.kulturnatt.no/",
+      "expected": "2026-09-11",
+      "found": [
+        "2026-10-18",
+        "2026-10-24",
+        "2026-11-24",
+        "2027-09-28",
+        "2027-11-14"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-10-18"
+    },
+    {
+      "id": "c47eeab18961e662",
+      "title": "Kulturnatten Oslo 2026",
+      "url": "https://www.kulturnatt.no/",
+      "expected": "2026-09-18",
+      "found": [
+        "2026-10-18",
+        "2026-10-24",
+        "2026-11-24",
+        "2027-09-28",
+        "2027-11-14"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-10-18"
+    },
+    {
+      "id": "399f234f776ceb40",
+      "title": "Lions Club Oslo Nordstrand - aktiviteter",
+      "url": "https://www.lions.no/oslonordstrand/",
+      "expected": "2026-05-05",
+      "found": [
+        "2026-05-04",
+        "2026-05-29",
+        "2026-05-31"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-05-04"
+    },
+    {
+      "id": "c951ec6162350418",
+      "title": "Lions Club Oslo/Gamle Oslo",
+      "url": "https://www.lions.no/oslogamleoslo/",
+      "expected": "2026-05-26",
+      "found": [
+        "2026-05-04",
+        "2026-05-29",
+        "2026-05-31"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-05-29"
+    },
+    {
+      "id": "33aa708362f89473",
+      "title": "Lions Club Oslo/Groruddalen",
+      "url": "https://www.lions.no/oslogroruddalen/",
+      "expected": "2026-05-19",
+      "found": [
+        "2026-05-04",
+        "2026-05-29",
+        "2026-05-31"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-05-29"
+    },
+    {
+      "id": "97616474ee627f92",
+      "title": "Lions Club Oslo/Vestre Aker",
+      "url": "https://www.lions.no/oslovestreaker/",
+      "expected": "2026-05-12",
+      "found": [
+        "2026-05-04",
+        "2026-05-29",
+        "2026-05-31"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-05-04"
+    },
+    {
+      "id": "93887248798c1415",
+      "title": "Manglerud bad",
+      "url": "https://www.oslo.kommune.no/natur-kultur-og-fritid/svommehaller-i-oslo/manglerud-bad/",
+      "expected": "2026-04-25",
+      "found": [
+        "2026-05-04",
+        "2026-05-10",
+        "2026-05-11",
+        "2026-05-17",
+        "2026-05-18"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-05-04"
+    },
+    {
+      "id": "e7d31e00161d014f",
+      "title": "Mariholtet serveringsstue åpner",
+      "url": "https://mariholtet.no/",
+      "expected": "2026-04-25",
+      "found": [
+        "2026-05-17",
+        "2026-05-25"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-05-17"
+    },
+    {
+      "id": "0ad320d542039ded",
+      "title": "Munchmuseet: Sommersesong 2026",
+      "url": "https://www.munchmuseet.no/",
+      "expected": "2026-06-01",
+      "found": [
+        "2026-05-06",
+        "2026-05-17",
+        "2026-05-21",
+        "2026-05-26",
+        "2026-06-10"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-05-26"
+    },
+    {
+      "id": "236dfc5d4f3ee687",
+      "title": "Musikkfest Oslo 2026",
+      "url": "https://musikkfest.no/",
+      "expected": "2026-06-20",
+      "found": [
+        "2026-06-06"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-06-06"
+    },
+    {
+      "id": "abe5d79dc32d622d",
+      "title": "Nationaltheatret - aktuelt program",
+      "url": "https://www.nationaltheatret.no/forestillinger",
+      "expected": "2026-04-22",
+      "found": [
+        "2026-05-13",
+        "2026-05-15",
+        "2026-05-16",
+        "2026-05-20",
+        "2026-05-21"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-05-13"
+    },
+    {
+      "id": "c6cbfbb5a4c3e33d",
+      "title": "Nordberg skoles loppemarked 2026",
+      "url": "https://nordberg.osloskolen.no/",
+      "expected": "2026-05-09",
+      "found": [
+        "2026-05-14",
+        "2026-05-17",
+        "2026-05-25",
+        "2026-06-17"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-05-14"
+    },
+    {
+      "id": "8bfeb00e1849e6b9",
+      "title": "Nordisk bibliotekuke 2026",
+      "url": "https://www.deichman.no/",
+      "expected": "2026-11-09",
+      "found": [
+        "2026-05-04"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-05-04"
+    },
+    {
+      "id": "6e64cb0883dad758",
+      "title": "Norway Cup 2026",
+      "url": "https://www.norwaycup.no/",
+      "expected": "2026-07-26",
+      "found": [
+        "2026-07-25",
+        "2026-08-01"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-07-25"
+    },
+    {
+      "id": "51cafb5f0901801b",
+      "title": "Orientering: Fossum IF nærløp - Vestmarka",
+      "url": "https://www.fossumif.no/",
+      "expected": "2026-09-19",
+      "found": [
+        "2026-05-10",
+        "2026-06-22",
+        "2026-06-26"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-06-26"
+    },
+    {
+      "id": "6097499950049f84",
+      "title": "Orientering: Heming nærløp - Holmenkollen",
+      "url": "https://www.heming.no/orientering/",
+      "expected": "2026-05-13",
+      "found": [
+        "2027-01-25"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2027-01-25"
+    },
+    {
+      "id": "2eb24d2c2de44117",
+      "title": "Orientering: Koll nærløp - Skullerud",
+      "url": "https://koll.no/",
+      "expected": "2026-06-24",
+      "found": [
+        "2027-09-06"
+      ],
+      "status": "mismatch",
+      "note": "ingen narliggende dato funnet"
+    },
+    {
+      "id": "4b452eb704efb020",
+      "title": "Oslo Bokfestival 2026",
+      "url": "https://www.oslobokfestival.no/",
+      "expected": "2026-09-26",
+      "found": [
+        "2026-11-12"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-11-12"
+    },
+    {
+      "id": "f0cb0b595e49ce13",
+      "title": "Oslo Jazzfestival 2026",
+      "url": "https://www.oslojazz.no/",
+      "expected": "2026-08-17",
+      "found": [
+        "2026-08-15"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-08-15"
+    },
+    {
+      "id": "12d1af9b3ff5aecc",
+      "title": "Oslo Jazzfestival 2026",
+      "url": "https://oslojazz.no/",
+      "expected": "2026-08-17",
+      "found": [
+        "2026-08-15"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-08-15"
+    },
+    {
+      "id": "db1148f0877a3624",
+      "title": "Oslo Lucia-tog 2026",
+      "url": "https://www.oslodomkirke.no/",
+      "expected": "2026-12-13",
+      "found": [
+        "2026-05-04"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-05-04"
+    },
+    {
+      "id": "94477da2695444e1",
+      "title": "Oslo Skivinter 2026",
+      "url": "https://www.skiforeningen.no/",
+      "expected": "2026-12-27",
+      "found": [
+        "2026-05-05",
+        "2026-05-31"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-05-31"
+    },
+    {
+      "id": "51fa3ae35dc93c7e",
+      "title": "Oslo Spektrum - store konserter",
+      "url": "https://www.oslospektrum.no/arrangementer",
+      "expected": "2026-04-22",
+      "found": [
+        "2026-06-12",
+        "2026-09-07",
+        "2026-10-24",
+        "2026-10-25",
+        "2026-10-28"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-06-12"
+    },
+    {
+      "id": "bb61a462b833d30c",
+      "title": "Oslo World 2026",
+      "url": "https://osloworld.no/",
+      "expected": "2026-10-28",
+      "found": [
+        "2026-06-14",
+        "2026-10-18",
+        "2026-10-29",
+        "2026-10-30"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-10-29"
+    },
+    {
+      "id": "4796cdbbe10dae26",
+      "title": "Piknik i Parken 2026",
+      "url": "https://piknikiparken.no/",
+      "expected": "2026-06-26",
+      "found": [
+        "2026-06-13"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-06-13"
+    },
+    {
+      "id": "1f0858181de6ec63",
+      "title": "Ris skoles loppemarked 2026",
+      "url": "https://ris.osloskolen.no/",
+      "expected": "2026-05-02",
+      "found": [
+        "2026-05-08",
+        "2026-05-14",
+        "2026-05-17",
+        "2026-05-20"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-05-08"
+    },
+    {
+      "id": "513ace3386d15a56",
+      "title": "Romsås bad",
+      "url": "https://www.oslo.kommune.no/natur-kultur-og-fritid/svommehaller-i-oslo/romsas-bad/",
+      "expected": "2026-04-25",
+      "found": [
+        "2026-05-04",
+        "2026-05-10",
+        "2026-05-11",
+        "2026-05-17",
+        "2026-05-18"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-05-04"
+    },
+    {
+      "id": "7e00981cb455b698",
+      "title": "Sandbakken sportsstue",
+      "url": "https://ut.no/hytte/10611/sandbakken-sportsstue",
+      "expected": "2026-04-25",
+      "found": [
+        "2026-08-16",
+        "2027-07-01"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-08-16"
+    },
+    {
+      "id": "b34a89abc52bdc4c",
+      "title": "Skøyen Lions loppemarked 2026",
+      "url": "https://www.lions.no/",
+      "expected": "2026-04-25",
+      "found": [
+        "2026-05-04",
+        "2026-05-29",
+        "2026-05-31"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-05-04"
+    },
+    {
+      "id": "fb62862842243ee2",
+      "title": "Stovner bibliotek - barnetimen 2026",
+      "url": "https://deichman.no/aktuelt",
+      "expected": "2026-04-28",
+      "found": [
+        "2026-05-25",
+        "2026-06-05"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-05-25"
+    },
+    {
+      "id": "7144904c18ac6dac",
+      "title": "Styrkeprøven 2026 (Trondheim-Oslo)",
+      "url": "https://www.styrkeproven.no/",
+      "expected": "2026-06-20",
+      "found": [
+        "2026-06-17",
+        "2026-06-21",
+        "2027-04-06",
+        "2027-05-19",
+        "2027-06-13"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-06-21"
+    },
+    {
+      "id": "1ccd504fd21e07b8",
+      "title": "Tåsen skoles loppemarked 2026",
+      "url": "https://tasen.osloskolen.no/",
+      "expected": "2026-04-25",
+      "found": [
+        "2026-05-14",
+        "2026-05-17",
+        "2026-05-25",
+        "2026-06-19"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-05-14"
+    },
+    {
+      "id": "836984a16390af17",
+      "title": "Tøyenbadet — sommersesong 2026",
+      "url": "https://www.oslo.kommune.no/natur-kultur-og-fritid/svommehaller-i-oslo/toyenbadet/",
+      "expected": "2026-05-01",
+      "found": [
+        "2026-05-04",
+        "2026-05-10",
+        "2026-05-11",
+        "2026-05-17",
+        "2026-05-18"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-05-04"
+    },
+    {
+      "id": "28fa8f09240ce54a",
+      "title": "Ultima Samtidsmusikkfestival 2026",
+      "url": "https://ultima.no/nb",
+      "expected": "2026-09-11",
+      "found": [
+        "2026-09-19"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-09-19"
+    },
+    {
+      "id": "e9f4aa448a25b235",
+      "title": "Vaalerenga-Rosenborg 2026",
+      "url": "https://www.vif-fotball.no/",
+      "expected": "2026-08-09",
+      "found": [
+        "2026-05-08"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-05-08"
+    },
+    {
+      "id": "42cfbcf540ef9b4c",
+      "title": "Vahl skoles loppemarked 2026",
+      "url": "https://vahl.osloskolen.no/",
+      "expected": "2026-05-16",
+      "found": [
+        "2026-05-14",
+        "2026-05-17",
+        "2026-05-25",
+        "2026-06-19"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-05-17"
+    },
+    {
+      "id": "3c9906bbc6797718",
+      "title": "Økern bad",
+      "url": "https://www.oslo.kommune.no/natur-kultur-og-fritid/svommehaller-i-oslo/okern-bad/",
+      "expected": "2026-04-25",
+      "found": [
+        "2026-05-04",
+        "2026-05-10",
+        "2026-05-11",
+        "2026-05-17"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-05-04"
+    },
+    {
+      "id": "ce5369dfc6af77f6",
+      "title": "Øyafestivalen 2026",
+      "url": "https://www.oyafestivalen.no/",
+      "expected": "2026-08-04",
+      "found": [
+        "2026-05-21",
+        "2026-08-15"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-08-15"
+    },
+    {
+      "id": "ce5369dfc6af77f6",
+      "title": "Øyafestivalen 2026",
+      "url": "https://www.oyafestivalen.no/",
+      "expected": "2026-08-11",
+      "found": [
+        "2026-05-21",
+        "2026-08-15"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-08-15"
+    },
+    {
+      "id": "3a3b1da9f83cedc8",
+      "title": "Alnabyfest 2026",
+      "url": "https://www.oslo.kommune.no/bydel-alna/",
+      "expected": "2026-08-15",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst"
+    },
+    {
+      "id": "2e5d18c8c19b6106",
+      "title": "Bjerkedagen 2026",
+      "url": "https://www.oslo.kommune.no/bydel-bjerke/",
+      "expected": "2026-09-12",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst"
+    },
+    {
+      "id": "3c93271b49580cb1",
+      "title": "Byarkivets åpne dag 2026",
+      "url": "https://www.oslo.kommune.no/byarkivet",
+      "expected": "2026-10-17",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst"
+    },
+    {
+      "id": "d4ac76a7b2b736ad",
+      "title": "Deichman Furuset: Flerkulturell leseklubb",
+      "url": "https://www.deichman.no/furuset",
+      "expected": "2026-05-20",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst"
+    },
+    {
+      "id": "288311bc1e9830c9",
+      "title": "Deichman Lambertseter: Familiesøndag",
+      "url": "https://www.deichman.no/lambertseter",
+      "expected": "2026-05-03",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst"
+    },
+    {
+      "id": "eb40e3614f0343a6",
+      "title": "Deichman Majorstuen: Bokstrikk",
+      "url": "https://www.deichman.no/majorstuen",
+      "expected": "2026-05-14",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst"
+    },
+    {
+      "id": "2dc7cf1f8174fdce",
+      "title": "Deichman Torshov: Lokalhistorielauget",
+      "url": "https://www.deichman.no/torshov",
+      "expected": "2026-05-21",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst"
+    },
+    {
+      "id": "ecff156b40c1cfd8",
+      "title": "Den Norske Opera og Ballett - program",
+      "url": "https://operaen.no/forestillinger/",
+      "expected": "2026-04-22",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst"
+    },
+    {
+      "id": "1e622456a75987d5",
+      "title": "Det Norske Teatret - nynorsk scene",
+      "url": "https://www.detnorsketeatret.no/",
+      "expected": "2026-04-22",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst"
+    },
+    {
+      "id": "5cf1ee9302e199f5",
+      "title": "Elvelangs Akerselva 2026",
+      "url": "https://www.oslo.kommune.no/",
+      "expected": "2026-09-18",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst"
+    },
+    {
+      "id": "c7744c7feb809bf0",
+      "title": "Frivillighetsdagen 2026",
+      "url": "https://www.oslo.kommune.no/frivillighet",
+      "expected": "2026-12-05",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst"
+    },
+    {
+      "id": "06da4abb89f55f6f",
+      "title": "Gressbaneturnering IL Try sommer 2026",
+      "url": "https://il-try.no/",
+      "expected": "2026-07-04",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst"
+    },
+    {
+      "id": "4e0427243877bc8d",
+      "title": "Groruddagen 2026",
+      "url": "https://www.oslo.kommune.no/bydel-grorud/",
+      "expected": "2026-09-05",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst"
+    },
+    {
+      "id": "13cc19958ececa7a",
+      "title": "Holmenkollmarsjen 2027",
+      "url": "https://www.holmenkollmarsjen.no/",
+      "expected": "2027-03-06",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst"
+    },
+    {
+      "id": "3d7503aa7cb041fd",
+      "title": "Holmliadagen 2026",
+      "url": "https://www.oslo.kommune.no/bydel-sondre-nordstrand/",
+      "expected": "2026-06-13",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst"
+    },
+    {
+      "id": "30c9af95650e5d7a",
+      "title": "Hovedoeya kulturdag 2026",
+      "url": "https://www.hovedoya.no/",
+      "expected": "2026-08-29",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst"
+    },
+    {
+      "id": "06893ecd91fe81b7",
+      "title": "Inferno Metal Festival 2026",
+      "url": "https://infernofestival.net/",
+      "expected": "2026-04-29",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst"
+    },
+    {
+      "id": "3741e8192b6b5f38",
+      "title": "Julegrantenning på Stortorvet",
+      "url": "https://www.oslo.kommune.no/",
+      "expected": "2026-11-28",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst"
+    },
+    {
+      "id": "9877a490c26f9e41",
+      "title": "Julemarked på Spikersuppa 2026",
+      "url": "https://www.julemarkedet.no/",
+      "expected": "2026-11-20",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst"
+    },
+    {
+      "id": "4f585ba270c107e7",
+      "title": "Kikutstua / Kikut (DNT-hytte)",
+      "url": "https://ut.no/hytte/10647/kikutstua",
+      "expected": "2026-05-16",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst"
+    },
+    {
+      "id": "ba08f2eb88ba1430",
+      "title": "Klatreverket Løren",
+      "url": "https://klatreverket.no/loren/",
+      "expected": "2026-04-26",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst"
+    },
+    {
+      "id": "cfb58fbddd282457",
+      "title": "Kobberhaughytta",
+      "url": "https://ut.no/hytte/10645/kobberhaughytta",
+      "expected": "2026-06-01",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst"
+    },
+    {
+      "id": "7dcefdec6d3bba59",
+      "title": "Lilloseter serveringsstue",
+      "url": "https://lilloseter.no/",
+      "expected": "2026-05-02",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst"
+    },
+    {
+      "id": "4d686cebc7ae019c",
+      "title": "Linderud julemarked 2026",
+      "url": "https://www.linderudsenter.no/",
+      "expected": "2026-11-28",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst"
+    },
+    {
+      "id": "dac3b6865de606a7",
+      "title": "Linderudkollen skistadion — vintersesong",
+      "url": "https://linderudkollen.no/",
+      "expected": "2026-12-12",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst"
+    },
+    {
+      "id": "a0697d053ca3b123",
+      "title": "Lyn-Skeid 2026",
+      "url": "https://www.lynfotball.no/",
+      "expected": "2026-09-12",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst"
+    },
+    {
+      "id": "60c0e500398fe2e1",
+      "title": "MELA-festivalen 2026",
+      "url": "https://melahuset.no/",
+      "expected": "2026-08-22",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst"
+    },
+    {
+      "id": "0f8544ccdc84674d",
+      "title": "Manglerud Star — sesongstart hockey",
+      "url": "https://www.manglerudstar.no/",
+      "expected": "2026-09-15",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst"
+    },
+    {
+      "id": "df2d3b7815af5db3",
+      "title": "Nasjonalmuseets sommerutstilling 2026",
+      "url": "https://www.nasjonalmuseet.no/",
+      "expected": "2026-06-12",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst"
+    },
+    {
+      "id": "83d8d2b6ef249f4c",
+      "title": "Nordstranddagene 2026",
+      "url": "https://www.oslo.kommune.no/bydel-nordstrand/",
+      "expected": "2026-08-29",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst"
+    },
+    {
+      "id": "4a3cc4432e5a72c3",
+      "title": "Norwegian Wood 2026",
+      "url": "https://www.norwegianwood.no/",
+      "expected": "2026-06-13",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst"
+    },
+    {
+      "id": "ba87c41c456136ee",
+      "title": "Operaens lunsjkonserter 2026 vår",
+      "url": "https://operaen.no/forestillinger-og-konserter/",
+      "expected": "2026-05-08",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst"
+    },
+    {
+      "id": "de120652e9d47219",
+      "title": "Orientering: Blodslitet 2026",
+      "url": "https://orientering.no/",
+      "expected": "2026-10-10",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst"
+    },
+    {
+      "id": "7ee06b9ad778f5ed",
+      "title": "Orientering: KM sprint Akershus og Oslo",
+      "url": "https://orientering.no/",
+      "expected": "2026-06-06",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst"
+    },
+    {
+      "id": "d765f97a38fd3af1",
+      "title": "Orientering: Nattuglen - nattløp i Nordmarka",
+      "url": "https://orientering.no/",
+      "expected": "2026-11-07",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst"
+    },
+    {
+      "id": "640487fc97d5643f",
+      "title": "Orientering: O-troll-løpet (for barn)",
+      "url": "https://orientering.no/",
+      "expected": "2026-05-02",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst"
+    },
+    {
+      "id": "bfba7c62ec5c8a36",
+      "title": "Orientering: OM stafett 2026",
+      "url": "https://orientering.no/",
+      "expected": "2026-09-12",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst"
+    },
+    {
+      "id": "1db4770383ca2cc9",
+      "title": "Orientering: OSI Blindern-sprint",
+      "url": "https://orientering.no/",
+      "expected": "2026-08-29",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst"
+    },
+    {
+      "id": "cf8578f74fd7d042",
+      "title": "Orientering: Oslo 3-dagers 2026",
+      "url": "https://orientering.no/",
+      "expected": "2026-08-14",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst"
+    },
+    {
+      "id": "3a1b55fab626749b",
+      "title": "Orientering: Oslo Cup 1 - Sognsvann",
+      "url": "https://orientering.no/",
+      "expected": "2026-04-29",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst"
+    },
+    {
+      "id": "9ca7c061b4879f0f",
+      "title": "Orientering: Oslo Cup 3 - Østmarksetra",
+      "url": "https://orientering.no/",
+      "expected": "2026-06-17",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst"
+    },
+    {
+      "id": "d7065b72c00df6ff",
+      "title": "Orientering: Oslo-mesterskapet langdistanse",
+      "url": "https://orientering.no/",
+      "expected": "2026-09-05",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst"
+    },
+    {
+      "id": "4249b7cb070b16ff",
+      "title": "Orientering: Pinseløpet 2026",
+      "url": "https://orientering.no/",
+      "expected": "2026-05-24",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst"
+    },
+    {
+      "id": "d845142a1a352f4c",
+      "title": "Oslo Internasjonale Filmfestival 2026",
+      "url": "https://oslofilmfestival.com/",
+      "expected": "2026-10-28",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst"
+    },
+    {
+      "id": "f932813ae2ba0473",
+      "title": "Oslo Konserthus - klassiske konserter",
+      "url": "https://www.oslokonserthus.no/program/",
+      "expected": "2026-04-22",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst"
+    },
+    {
+      "id": "75cc25222d43888d",
+      "title": "Oslo Mangfoldsfestival 2026",
+      "url": "https://www.oslo.kommune.no/",
+      "expected": "2026-06-06",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst"
+    },
+    {
+      "id": "490ebfd79d2a7015",
+      "title": "Oslo Nye Teater",
+      "url": "https://www.oslonye.no/forestillinger",
+      "expected": "2026-04-22",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst"
+    },
+    {
+      "id": "d63dc1f84a18e6ec",
+      "title": "Oslo Vinterpark (Tryvann) — sesongåpning",
+      "url": "https://www.oslovinterpark.no/",
+      "expected": "2026-12-12",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst"
+    },
+    {
+      "id": "bcb0c47bc38d6f55",
+      "title": "Rockefeller Music Hall",
+      "url": "https://www.rockefeller.no/",
+      "expected": "2026-04-22",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst"
+    },
+    {
+      "id": "700ba630ce96b0c7",
+      "title": "Rustadsaga sportsstue",
+      "url": "https://ut.no/hytte/10988/rustadsaga",
+      "expected": "2026-04-25",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst"
+    },
+    {
+      "id": "8e15bcef1585dff6",
+      "title": "Sagene kirke konsertserie 2026",
+      "url": "https://kirken.no/sagene",
+      "expected": "2026-05-14",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst"
+    },
+    {
+      "id": "976aafbe75b4afaa",
+      "title": "Sankthansbål ved Frognerkilen",
+      "url": "https://www.oslo.kommune.no/",
+      "expected": "2026-06-23",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst"
+    },
+    {
+      "id": "8027b1840747bd75",
+      "title": "Sentrumsløpet 2026",
+      "url": "https://www.sentrumslopet.no/",
+      "expected": "2026-04-25",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst"
+    },
+    {
+      "id": "edc54faec3422b2a",
+      "title": "Sinober — markastue i Lillomarka",
+      "url": "https://ut.no/hytte/10638/sinober-sportsstue",
+      "expected": "2026-05-16",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst"
+    },
+    {
+      "id": "e367214b7e0c174d",
+      "title": "Skjennungstua åpner sommersesongen",
+      "url": "https://ut.no/hytte/10640/skjennungstua",
+      "expected": "2026-05-02",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst"
+    },
+    {
+      "id": "d23303142b16f715",
+      "title": "Sommerball Rådhusplassen 2026",
+      "url": "https://www.oslo.kommune.no/",
+      "expected": "2026-07-18",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst"
+    },
+    {
+      "id": "2b8388cc2d0531de",
+      "title": "Sommerles 2026: lesekampanje for barn",
+      "url": "https://www.sommerles.no/",
+      "expected": "2026-06-01",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst"
+    },
+    {
+      "id": "af0e8120b57ec6cb",
+      "title": "Stovner kirke - barnekor 2026",
+      "url": "https://kirken.no/stovner",
+      "expected": "2026-05-17",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst"
+    },
+    {
+      "id": "e9a378b43d8b6740",
+      "title": "Stovner senter mat- og kulturmarked 2026",
+      "url": "https://stovnersenter.no/",
+      "expected": "2026-05-23",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst"
+    },
+    {
+      "id": "14e0c42472cfc9a3",
+      "title": "Stovnerdagen 2026",
+      "url": "https://www.oslo.kommune.no/bydel-stovner/",
+      "expected": "2026-08-29",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst"
+    },
+    {
+      "id": "8819010d6cff358a",
+      "title": "Ullerndagen 2026",
+      "url": "https://www.oslo.kommune.no/bydel-ullern/",
+      "expected": "2026-09-05",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst"
+    },
+    {
+      "id": "0fb8e1ee2dfc41bc",
+      "title": "Vega Scene - aktuelle filmer",
+      "url": "https://vegascene.no/",
+      "expected": "2026-04-22",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst"
+    },
+    {
+      "id": "3372b44309f526c5",
+      "title": "Veitvet senter aktivitetsdag 2026",
+      "url": "https://www.veitvetsenter.no/",
+      "expected": "2026-09-19",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst"
+    },
+    {
+      "id": "22725011fd4c10c9",
+      "title": "Vulkan Klatresenter",
+      "url": "https://vulkanklatresenter.no/",
+      "expected": "2026-04-26",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst"
+    },
+    {
+      "id": "bc1707f789b2b063",
+      "title": "Wyllerløkka — sesongåpning",
+      "url": "https://oslovinterpark.no/",
+      "expected": "2026-12-19",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst"
+    },
+    {
+      "id": "d351525b0521592f",
+      "title": "17. mai-feiringen 2026",
+      "url": "https://www.oslo.kommune.no/17-mai/",
+      "expected": "2026-05-17",
+      "found": [
+        "2026-05-17"
+      ],
+      "status": "ok",
+      "note": ""
+    },
+    {
+      "id": "956dcbb8d1cdafb5",
+      "title": "17. mai: Barnetoget på Karl Johan",
+      "url": "https://www.oslo.kommune.no/17-mai",
+      "expected": "2026-05-17",
+      "found": [
+        "2026-05-17"
+      ],
+      "status": "ok",
+      "note": ""
+    },
+    {
+      "id": "25ed4fad94ae0917",
+      "title": "17. mai: Russeparaden gjennom sentrum",
+      "url": "https://www.oslo.kommune.no/17-mai",
+      "expected": "2026-05-17",
+      "found": [
+        "2026-05-17"
+      ],
+      "status": "ok",
+      "note": ""
+    },
+    {
+      "id": "cfc0192161a9b689",
+      "title": "Grefsenkollen opp 2026",
+      "url": "https://www.grefsenkollenopp.no/",
+      "expected": "2026-05-20",
+      "found": [
+        "2026-05-20",
+        "2026-05-25",
+        "2027-02-27",
+        "2027-05-08",
+        "2027-05-19"
+      ],
+      "status": "ok",
+      "note": ""
+    },
+    {
+      "id": "825088c200d31609",
+      "title": "Holmenkollstafetten 2026",
+      "url": "https://holmenkollstafetten.no/",
+      "expected": "2026-05-09",
+      "found": [
+        "2026-05-09",
+        "2026-05-10",
+        "2026-09-27"
+      ],
+      "status": "ok",
+      "note": ""
+    },
+    {
+      "id": "c3a438c27157cb2e",
+      "title": "Oslo Maraton 2026",
+      "url": "https://www.oslomaraton.no/",
+      "expected": "2026-09-12",
+      "found": [
+        "2026-09-12"
+      ],
+      "status": "ok",
+      "note": ""
+    },
+    {
+      "id": "944dfebb499ef33a",
+      "title": "Oslo Pride 2026",
+      "url": "https://www.oslopride.no/",
+      "expected": "2026-06-26",
+      "found": [
+        "2026-06-17",
+        "2026-06-21",
+        "2026-06-24",
+        "2026-06-26",
+        "2026-06-27"
+      ],
+      "status": "ok",
+      "note": ""
+    },
+    {
+      "id": "e71000fe903e0139",
+      "title": "Oslo Pride Parade 2026",
+      "url": "https://www.oslopride.no/",
+      "expected": "2026-06-27",
+      "found": [
+        "2026-06-17",
+        "2026-06-21",
+        "2026-06-24",
+        "2026-06-26",
+        "2026-06-27"
+      ],
+      "status": "ok",
+      "note": ""
+    },
+    {
+      "id": "da7a11c28e1b3af7",
+      "title": "Oslo Triathlon 2026",
+      "url": "https://oslotri.com/",
+      "expected": "2026-08-08",
+      "found": [
+        "2026-06-22",
+        "2026-08-08"
+      ],
+      "status": "ok",
+      "note": ""
+    },
+    {
+      "id": "82a6f2406ce6f28a",
+      "title": "Oslos bratteste 2026 (tidligere Tryvann opp)",
+      "url": "https://oslosbratteste.no/",
+      "expected": "2026-09-19",
+      "found": [
+        "2026-09-19",
+        "2027-07-17",
+        "2027-08-01"
+      ],
+      "status": "ok",
+      "note": ""
+    },
+    {
+      "id": "2f13da63467099de",
+      "title": "Bestum vel sommerfest 2026",
+      "url": "https://www.facebook.com/oslobyvelforening",
+      "expected": "2026-06-20",
+      "found": [],
+      "status": "skipped",
+      "note": "URL er social/wiki/maps - ingen kanonisk dato"
+    },
+    {
+      "id": "32c8c98abf7adda3",
+      "title": "Bjerke Travbane - V75 søndag 2026",
+      "url": "https://nb-no.facebook.com/bjerketravbane/",
+      "expected": "2026-05-03",
+      "found": [],
+      "status": "skipped",
+      "note": "URL er social/wiki/maps - ingen kanonisk dato"
+    },
+    {
+      "id": "5f901c25984b0f51",
+      "title": "Bygdoymila 2026",
+      "url": "https://www.facebook.com/Bygdoymila/",
+      "expected": "2026-10-18",
+      "found": [],
+      "status": "skipped",
+      "note": "URL er social/wiki/maps - ingen kanonisk dato"
+    },
+    {
+      "id": "eac1fadf83470c97",
+      "title": "Furuset Forum — isidrett",
+      "url": "https://www.facebook.com/furusetishockey/",
+      "expected": "2026-09-20",
+      "found": [],
+      "status": "skipped",
+      "note": "URL er social/wiki/maps - ingen kanonisk dato"
+    },
+    {
+      "id": "1a7a2689a7b7f450",
+      "title": "Grorud speidergruppe",
+      "url": "https://speiding.no/oslokrets",
+      "expected": "2026-04-25",
+      "found": [],
+      "status": "skipped",
+      "note": "URL er social/wiki/maps - ingen kanonisk dato"
+    },
+    {
+      "id": "3e32bd84a0851e75",
+      "title": "Grünerløkka speidergruppe",
+      "url": "https://speiding.no/oslokrets",
+      "expected": "2026-04-28",
+      "found": [],
+      "status": "skipped",
+      "note": "URL er social/wiki/maps - ingen kanonisk dato"
+    },
+    {
+      "id": "e084aa96d37aeca4",
+      "title": "Grünerløkkadagene 2026",
+      "url": "https://www.facebook.com/grunerlokkadagene",
+      "expected": "2026-06-06",
+      "found": [],
+      "status": "skipped",
+      "note": "URL er social/wiki/maps - ingen kanonisk dato"
+    },
+    {
+      "id": "6f6c9005ce637a84",
+      "title": "Holmlia speidergruppe",
+      "url": "https://speiding.no/oslokrets",
+      "expected": "2026-04-22",
+      "found": [],
+      "status": "skipped",
+      "note": "URL er social/wiki/maps - ingen kanonisk dato"
+    },
+    {
+      "id": "0867bfdc8cf4fdb1",
+      "title": "Iladalen sommerfest 2026",
+      "url": "https://www.facebook.com/oslobyvelforening",
+      "expected": "2026-06-13",
+      "found": [],
+      "status": "skipped",
+      "note": "URL er social/wiki/maps - ingen kanonisk dato"
+    },
+    {
+      "id": "de5cb9557c92adf3",
+      "title": "Jordal Amfi — Vålerenga Hockey sluttspill",
+      "url": "https://www.facebook.com/valerengaishockey/",
+      "expected": "2026-04-30",
+      "found": [],
+      "status": "skipped",
+      "note": "URL er social/wiki/maps - ingen kanonisk dato"
+    },
+    {
+      "id": "eea0108b6ae7baeb",
+      "title": "Liastua skikurs for barn 2026",
+      "url": "https://www.facebook.com/oslobyvelforening",
+      "expected": "2026-12-12",
+      "found": [],
+      "status": "skipped",
+      "note": "URL er social/wiki/maps - ingen kanonisk dato"
+    },
+    {
+      "id": "980491efa2d386af",
+      "title": "Lørdagsloppis Tøyen 2026",
+      "url": "https://www.facebook.com/toyentorg/",
+      "expected": "2026-07-11",
+      "found": [],
+      "status": "skipped",
+      "note": "URL er social/wiki/maps - ingen kanonisk dato"
+    },
+    {
+      "id": "558424ccebdddda6",
+      "title": "Nordstrand speidergruppe - aktiviteter vår 2026",
+      "url": "https://speiding.no/oslokrets",
+      "expected": "2026-04-24",
+      "found": [],
+      "status": "skipped",
+      "note": "URL er social/wiki/maps - ingen kanonisk dato"
+    },
+    {
+      "id": "19f66e4698ff0ac7",
+      "title": "Orientering: Lillomarka OL nærløp - Linderudkollen",
+      "url": "https://no.wikipedia.org/wiki/Lillomarka_Orienteringslag",
+      "expected": "2026-05-06",
+      "found": [],
+      "status": "skipped",
+      "note": "URL er social/wiki/maps - ingen kanonisk dato"
+    },
+    {
+      "id": "d417b8aa6830a4e1",
+      "title": "Oslo Grand Prix 2026 (sykkel)",
+      "url": "https://nb-no.facebook.com/bjerketravbane/",
+      "expected": "2026-06-13",
+      "found": [],
+      "status": "skipped",
+      "note": "URL er social/wiki/maps - ingen kanonisk dato"
+    },
+    {
+      "id": "88b3f27818839337",
+      "title": "Refstad allmenningsfest 2026",
+      "url": "https://www.facebook.com/oslobyvelforening",
+      "expected": "2026-08-22",
+      "found": [],
+      "status": "skipped",
+      "note": "URL er social/wiki/maps - ingen kanonisk dato"
+    },
+    {
+      "id": "fb07385f58678807",
+      "title": "Ris speidergruppe - ukentlige møter",
+      "url": "https://speiding.no/oslokrets",
+      "expected": "2026-04-22",
+      "found": [],
+      "status": "skipped",
+      "note": "URL er social/wiki/maps - ingen kanonisk dato"
+    },
+    {
+      "id": "099306ce9e77a34d",
+      "title": "Sagene speidergruppe - aktiviteter",
+      "url": "https://speiding.no/oslokrets",
+      "expected": "2026-04-23",
+      "found": [],
+      "status": "skipped",
+      "note": "URL er social/wiki/maps - ingen kanonisk dato"
+    },
+    {
+      "id": "ef1ce6040ded98a1",
+      "title": "Sagene torgs loppemarked 2026",
+      "url": "https://www.facebook.com/Sagenetorg/",
+      "expected": "2026-05-09",
+      "found": [],
+      "status": "skipped",
+      "note": "URL er social/wiki/maps - ingen kanonisk dato"
+    },
+    {
+      "id": "0bc2cc8c53ed0319",
+      "title": "Trollvann lysløype — sesongåpning",
+      "url": "https://www.facebook.com/trollvann/",
+      "expected": "2026-12-15",
+      "found": [],
+      "status": "skipped",
+      "note": "URL er social/wiki/maps - ingen kanonisk dato"
+    },
+    {
+      "id": "b456ea38b5d760d1",
+      "title": "Ullern kulturhus - kammerkonsert 2026",
+      "url": "https://www.facebook.com/ullernkulturhus/",
+      "expected": "2026-05-09",
+      "found": [],
+      "status": "skipped",
+      "note": "URL er social/wiki/maps - ingen kanonisk dato"
+    }
+  ]
 }
