@@ -144,14 +144,6 @@ RSS_SOURCES = [
         "resolver": "fixed_bydel",
     },
     {
-        "id": "ready",
-        "name": "Ready (tennis/curling)",
-        "url": "https://ready.no/feed/",
-        "bydel": "Vestre Aker",
-        "weight": 0.5,
-        "resolver": "fixed_bydel",
-    },
-    {
         "id": "klemetsrud",
         "name": "Klemetsrud IL",
         "url": "https://www.klemetsrudil.no/feed/",
@@ -186,12 +178,6 @@ RSS_SOURCES = [
         "resolver": "fixed_bydel",
     },
     {
-        "id": "holmliasport", "name": "Holmlia SK",
-        "url": "https://holmliasport.no/rss-feed",
-        "bydel": "S\u00f8ndre Nordstrand", "weight": 0.5,
-        "resolver": "fixed_bydel",
-    },
-    {
         "id": "tjalve", "name": "IK Tjalve",
         "url": "https://tjalve.no/feed/",
         "bydel": "St. Hanshaugen", "weight": 0.6,
@@ -210,12 +196,6 @@ RSS_SOURCES = [
         "resolver": "fixed_bydel",
     },
     {
-        "id": "riksscenen", "name": "Riksscenen",
-        "url": "https://riksscenen.no/rss.php/cat/157243",
-        "bydel": "Gr\u00fcnerl\u00f8kka", "weight": 0.4,
-        "resolver": "fixed_bydel",
-    },
-    {
         "id": "bekkelaget-bsk", "name": "B\u00e6kkelaget SK",
         "url": "https://bekkelagets.no/feed/",
         "bydel": "Nordstrand", "weight": 0.5,
@@ -231,12 +211,6 @@ RSS_SOURCES = [
         "id": "kaaffa", "name": "KFUM Kameratene fotball",
         "url": "https://www.kaaffa.no/rss-nyheter",
         "bydel": "St. Hanshaugen", "weight": 0.5,
-        "resolver": "fixed_bydel",
-    },
-    {
-        "id": "bygdoy-korps", "name": "Bygd\u00f8y skoles musikkorps",
-        "url": "https://korpsbygdoyskole.wordpress.com/feed/",
-        "bydel": "Frogner", "weight": 0.4,
         "resolver": "fixed_bydel",
     },
     {
@@ -617,3 +591,13 @@ def resolve_text_match_bydel_fallback(entry):
     for kw in OSLO_KEYWORDS:
         if kw in haystack:
             return None
+    return SKIP
+
+
+RESOLVERS = {
+    "oslo_kommune_tags": resolve_oslo_kommune_tags,
+    "groruddalen": resolve_groruddalen,
+    "text_match_bydel": resolve_text_match_bydel,
+    "text_match_bydel_fallback": resolve_text_match_bydel_fallback,
+    "fixed_bydel": resolve_fixed_bydel,
+}

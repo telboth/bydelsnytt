@@ -373,4 +373,50 @@ def verify_all_events(max_workers: int = 6, use_claude: bool = True,
             if not sug:
                 continue
             if sug not in (it.get("found") or []):
-                continue  # c
+                continue  # cross-validation feilet — Claude alene er for usikkert
+            sid = it.get("id")
+            if not sid:
+                continue
+            original = it.get("expected") or ""
+            reason = (
+                f"event_verify: regex fant {it.get('found')}, "
+                f"Claude bekreftet {sug}"
+            )
+            if corr_mod.add_correction(
+                corr_data, sid, "event_date", original, sug, reason
+            ):
+                new_corrections += 1
+        if new_corrections:
+            corr_mod.save(corr_data)
+
+    report = {
+        "generatedAt": datetime.now(timezone.utc).isoformat(),
+        "counts": counts,
+        "newCorrections": new_corrections,
+        "items": items,
+    }
+    REPORT_PATH.write_text(
+        json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
+    print(
+        f"[event_verify] {len(items)} events sjekket: "
+        + ", ".join(f"{k}={v}" for k, v in sorted(counts.items()))
+        + (f" | {new_corrections} nye korreksjoner" if new_corrections else "")
+    )
+    return report
+
+
+if __name__ == "__main__":
+    # Tillat overstyring via miljovariabler for testing/debug
+    workers = int(os.environ.get("EVENT_VERIFY_WORKERS", "6"))
+    use_claude = os.environ.get("EVENT_VERIFY_NO_CLAUDE", "") != "1"
+    auto_correct = os.environ.get("EVENT_VERIFY_NO_AUTOCORRECT", "") != "1"
+    try:
+        verify_all_events(
+            max_workers=workers,
+            use_claude=use_claude,
+            auto_correct=auto_correct,
+        )
+    except KeyboardInterrupt:
+        print("[event_verify] avbrutt av bruker", file=sys.stderr)
+        sys.exit(130)
