@@ -7,7 +7,7 @@ from __future__ import annotations
 
 from collections import Counter
 
-from . import cache, classify, dedup, events, fetcher, health, images, locations
+from . import cache, classify, corrections, dedup, events, fetcher, health, images, locations
 
 
 def run() -> dict:
@@ -19,9 +19,21 @@ def run() -> dict:
     enriched = locations.enrich(classified)
 
     existing = cache.load()["stories"]
+    # Stille-doed-deteksjon: tell hvor mange genuint nye saker hver kilde
+    # leverte for helse-rapportering.
+    new_per_src = cache.count_new_per_source(existing, enriched)
+    health.record_new_stories(health_data, new_per_src)
     merged = cache.merge(existing, enriched)
     pruned = cache.prune(merged)
     deduped = dedup.deduplicate(pruned)
+    clustered = dedup.cluster_topics(deduped)
+    # Anvend dato-korreksjoner fra event_corrections.json (oppdateres av
+    # event_verify.py). Disse overlever overskriving fra events.py paa
+    # hver pipeline-run.
+    corr_count = corrections.apply(clustered)
+    if corr_count:
+        print(f"[run] {corr_count} dato-korreksjoner anvendt fra event_corrections.json")
+    deduped = clustered
     image_stats = images.enrich_images(deduped)
     print(f"[run] image enrich: {image_stats}")
 
@@ -53,6 +65,7 @@ def run() -> dict:
                                  if s.get("location_precise") and not s.get("hidden")),
         "stale_sources": [s["id"] for s in stale],
         "image_enrich": image_stats,
+        "corrections_applied": corr_count,
     }
     return stats
 
