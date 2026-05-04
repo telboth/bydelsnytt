@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-05-04T06:26:17.274850+00:00",
+  "corrections": {
+    "0fccf076668118e6": {
+      "field": "event_date",
+      "original": "2026-04-22",
+      "corrected": "2026-05-09",
+      "reason": "event_verify: regex fant ['2026-05-08', '2026-05-09', '2026-05-15', '2026-05-23', '2026-05-24'], Claude bekreftet 2026-05-09",
+      "appliedAt": "2026-05-04T06:26:17.274748+00:00"
+    },
+    "c951ec6162350418": {
+      "field": "event_date",
+      "original": "2026-05-26",
+      "corrected": "2026-05-29",
+      "reason": "event_verify: regex fant ['2026-05-04', '2026-05-29', '2026-05-31'], Claude bekreftet 2026-05-29",
+      "appliedAt": "2026-05-04T06:26:17.274780+00:00"
+    },
+    "33aa708362f89473": {
+      "field": "event_date",
+      "original": "2026-05-19",
+      "corrected": "2026-05-29",
+      "reason": "event_verify: regex fant ['2026-05-04', '2026-05-29', '2026-05-31'], Claude bekreftet 2026-05-29",
+      "appliedAt": "2026-05-04T06:26:17.274789+00:00"
+    },
+    "97616474ee627f92": {
+      "field": "event_date",
+      "original": "2026-05-12",
+      "corrected": "2026-05-29",
+      "reason": "event_verify: regex fant ['2026-05-04', '2026-05-29', '2026-05-31'], Claude bekreftet 2026-05-29",
+      "appliedAt": "2026-05-04T06:26:17.274794+00:00"
+    },
+    "236dfc5d4f3ee687": {
+      "field": "event_date",
+      "original": "2026-06-20",
+      "corrected": "2026-06-06",
+      "reason": "event_verify: regex fant ['2026-06-06'], Claude bekreftet 2026-06-06",
+      "appliedAt": "2026-05-04T06:26:17.274805+00:00"
+    },
+    "6e64cb0883dad758": {
+      "field": "event_date",
+      "original": "2026-07-26",
+      "corrected": "2026-07-25",
+      "reason": "event_verify: regex fant ['2026-07-25', '2026-08-01'], Claude bekreftet 2026-07-25",
+      "appliedAt": "2026-05-04T06:26:17.274813+00:00"
+    }
+  }
+}

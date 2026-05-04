@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-05-04T06:20:00.422720+00:00",
+  "generatedAt": "2026-05-04T06:26:17.275103+00:00",
   "counts": {
     "fetch_failed": 6,
-    "mismatch": 54,
-    "no_dates": 65,
-    "ok": 10,
+    "mismatch": 53,
+    "no_dates": 64,
+    "ok": 12,
     "skipped": 21
   },
-  "newCorrections": 0,
+  "newCorrections": 6,
   "items": [
     {
       "id": "4e68392e31fa7f16",
@@ -88,7 +88,8 @@
         "2026-06-05"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-06-05"
+      "note": "regex foreslaar: 2026-06-05 | Claude: ukjent",
+      "claude_hash": "7b8c64380401e3ae"
     },
     {
       "id": "e2df23ac79bb09f1",
@@ -103,7 +104,8 @@
         "2026-05-18"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-05-04"
+      "note": "regex foreslaar: 2026-05-04 | Claude: ukjent",
+      "claude_hash": "a465b9bb27213b4f"
     },
     {
       "id": "d401ac12c6e89b03",
@@ -115,7 +117,8 @@
         "2026-06-05"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-05-25"
+      "note": "regex foreslaar: 2026-05-25 | Claude: ukjent",
+      "claude_hash": "7b8c64380401e3ae"
     },
     {
       "id": "baa38b6bc0eed96b",
@@ -127,7 +130,8 @@
         "2026-06-05"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-05-25"
+      "note": "regex foreslaar: 2026-05-25 | Claude: ukjent",
+      "claude_hash": "7b8c64380401e3ae"
     },
     {
       "id": "3dc32ca015d1345b",
@@ -139,7 +143,8 @@
         "2026-06-05"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-05-25"
+      "note": "regex foreslaar: 2026-05-25 | Claude: ukjent",
+      "claude_hash": "7b8c64380401e3ae"
     },
     {
       "id": "175c864df01599c8",
@@ -153,7 +158,8 @@
         "2026-06-19"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-06-19"
+      "note": "regex foreslaar: 2026-06-19 | Claude: ukjent",
+      "claude_hash": "dfbdbad113eb7206"
     },
     {
       "id": "c48fb63704a3e1cf",
@@ -165,7 +171,8 @@
         "2027-12-03"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2027-12-03"
+      "note": "regex foreslaar: 2027-12-03 | Claude: ukjent",
+      "claude_hash": "b8356d219283a2e3"
     },
     {
       "id": "85a06f285713ed5c",
@@ -180,7 +187,8 @@
         "2026-05-12"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-06-13"
+      "note": "regex foreslaar: 2026-06-13 | Claude: ukjent",
+      "claude_hash": "42ffb2228775ac74"
     },
     {
       "id": "6a2a2294050e24de",
@@ -210,7 +218,8 @@
         "2026-05-18"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-05-24"
+      "note": "regex foreslaar: 2026-05-24 | Claude: ukjent",
+      "claude_hash": "22ccb26b1b7946c4"
     },
     {
       "id": "aec4cba7dce854da",
@@ -225,7 +234,8 @@
         "2026-05-18"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-05-04"
+      "note": "regex foreslaar: 2026-05-04 | Claude: ukjent",
+      "claude_hash": "723e5a6e67d988c1"
     },
     {
       "id": "e4296261cdf44c64",
@@ -251,7 +261,8 @@
         "2026-05-17"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-05-04"
+      "note": "regex foreslaar: 2026-05-04 | Claude: ukjent",
+      "claude_hash": "f77a8185a62dbab0"
     },
     {
       "id": "0fccf076668118e6",
@@ -266,7 +277,9 @@
         "2026-05-24"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-05-08"
+      "note": "regex foreslaar: 2026-05-08 | Claude: 2026-05-09",
+      "claude_hash": "c1bbc48eb8165dc9",
+      "claude_suggested": "2026-05-09"
     },
     {
       "id": "c564d1c97d2eb155",
@@ -281,7 +294,8 @@
         "2027-11-14"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-10-18"
+      "note": "regex foreslaar: 2026-10-18 | Claude: ukjent",
+      "claude_hash": "df086b9d627c6390"
     },
     {
       "id": "c47eeab18961e662",
@@ -309,7 +323,9 @@
         "2026-05-31"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-05-04"
+      "note": "regex foreslaar: 2026-05-04 | Claude: 2026-04-25",
+      "claude_hash": "23ea6824c6b02299",
+      "claude_suggested": "2026-04-25"
     },
     {
       "id": "c951ec6162350418",
@@ -322,7 +338,9 @@
         "2026-05-31"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-05-29"
+      "note": "regex foreslaar: 2026-05-29 | Claude: 2026-05-29",
+      "claude_hash": "23ea6824c6b02299",
+      "claude_suggested": "2026-05-29"
     },
     {
       "id": "33aa708362f89473",
@@ -335,7 +353,9 @@
         "2026-05-31"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-05-29"
+      "note": "regex foreslaar: 2026-05-29 | Claude: 2026-05-29",
+      "claude_hash": "23ea6824c6b02299",
+      "claude_suggested": "2026-05-29"
     },
     {
       "id": "97616474ee627f92",
@@ -348,7 +368,9 @@
         "2026-05-31"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-05-04"
+      "note": "regex foreslaar: 2026-05-04 | Claude: 2026-05-29",
+      "claude_hash": "23ea6824c6b02299",
+      "claude_suggested": "2026-05-29"
     },
     {
       "id": "93887248798c1415",
@@ -363,7 +385,8 @@
         "2026-05-18"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-05-04"
+      "note": "regex foreslaar: 2026-05-04 | Claude: ukjent",
+      "claude_hash": "53ca39701c18d850"
     },
     {
       "id": "e7d31e00161d014f",
@@ -375,7 +398,9 @@
         "2026-05-25"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-05-17"
+      "note": "regex foreslaar: 2026-05-17 | Claude: 2026-05-01",
+      "claude_hash": "55ce88d0353d14f8",
+      "claude_suggested": "2026-05-01"
     },
     {
       "id": "0ad320d542039ded",
@@ -390,7 +415,9 @@
         "2026-06-10"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-05-26"
+      "note": "regex foreslaar: 2026-05-26 | Claude: 2026-04-24",
+      "claude_hash": "e0a3c965b304e35c",
+      "claude_suggested": "2026-04-24"
     },
     {
       "id": "236dfc5d4f3ee687",
@@ -401,7 +428,9 @@
         "2026-06-06"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-06-06"
+      "note": "regex foreslaar: 2026-06-06 | Claude: 2026-06-06",
+      "claude_hash": "88ac57de4de8cfa6",
+      "claude_suggested": "2026-06-06"
     },
     {
       "id": "abe5d79dc32d622d",
@@ -416,7 +445,9 @@
         "2026-05-21"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-05-13"
+      "note": "regex foreslaar: 2026-05-13 | Claude: 2026-03-26",
+      "claude_hash": "998eaa36eb38957f",
+      "claude_suggested": "2026-03-26"
     },
     {
       "id": "c6cbfbb5a4c3e33d",
@@ -430,7 +461,8 @@
         "2026-06-17"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-05-14"
+      "note": "regex foreslaar: 2026-05-14 | Claude: ukjent",
+      "claude_hash": "1b4ce9c81882f250"
     },
     {
       "id": "8bfeb00e1849e6b9",
@@ -441,7 +473,8 @@
         "2026-05-04"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-05-04"
+      "note": "regex foreslaar: 2026-05-04 | Claude: ukjent",
+      "claude_hash": "24e582058267804c"
     },
     {
       "id": "6e64cb0883dad758",
@@ -453,7 +486,9 @@
         "2026-08-01"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-07-25"
+      "note": "regex foreslaar: 2026-07-25 | Claude: 2026-07-25",
+      "claude_hash": "cbf2535058abd9c0",
+      "claude_suggested": "2026-07-25"
     },
     {
       "id": "51cafb5f0901801b",
@@ -466,7 +501,8 @@
         "2026-06-26"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-06-26"
+      "note": "regex foreslaar: 2026-06-26 | Claude: ukjent",
+      "claude_hash": "6f73decbebc7adaa"
     },
     {
       "id": "6097499950049f84",
@@ -477,7 +513,8 @@
         "2027-01-25"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2027-01-25"
+      "note": "regex foreslaar: 2027-01-25 | Claude: ukjent",
+      "claude_hash": "cc2cd79da6a31a2b"
     },
     {
       "id": "2eb24d2c2de44117",
@@ -488,7 +525,8 @@
         "2027-09-06"
       ],
       "status": "mismatch",
-      "note": "ingen narliggende dato funnet"
+      "note": "ingen narliggende dato funnet | Claude: ukjent",
+      "claude_hash": "fe2ce2f550d80550"
     },
     {
       "id": "4b452eb704efb020",
@@ -510,7 +548,9 @@
         "2026-08-15"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-08-15"
+      "note": "regex foreslaar: 2026-08-15 | Claude: 2026-08-09",
+      "claude_hash": "ee55d075f2cef485",
+      "claude_suggested": "2026-08-09"
     },
     {
       "id": "12d1af9b3ff5aecc",
@@ -521,7 +561,9 @@
         "2026-08-15"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-08-15"
+      "note": "regex foreslaar: 2026-08-15 | Claude: 2026-08-09",
+      "claude_hash": "ee55d075f2cef485",
+      "claude_suggested": "2026-08-09"
     },
     {
       "id": "db1148f0877a3624",
@@ -559,7 +601,9 @@
         "2026-10-28"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-06-12"
+      "note": "regex foreslaar: 2026-06-12 | Claude: 2027-04-17",
+      "claude_hash": "1e4dc34cb5097983",
+      "claude_suggested": "2027-04-17"
     },
     {
       "id": "bb61a462b833d30c",
@@ -598,7 +642,8 @@
         "2026-05-20"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-05-08"
+      "note": "regex foreslaar: 2026-05-08 | Claude: ukjent",
+      "claude_hash": "4d8c8802e58c3bbe"
     },
     {
       "id": "513ace3386d15a56",
@@ -613,7 +658,8 @@
         "2026-05-18"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-05-04"
+      "note": "regex foreslaar: 2026-05-04 | Claude: ukjent",
+      "claude_hash": "33a8cd3f4827b510"
     },
     {
       "id": "7e00981cb455b698",
@@ -625,7 +671,8 @@
         "2027-07-01"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-08-16"
+      "note": "regex foreslaar: 2026-08-16 | Claude: ukjent",
+      "claude_hash": "bb44ba3b8791ccc3"
     },
     {
       "id": "b34a89abc52bdc4c",
@@ -653,21 +700,6 @@
       "note": "regex foreslaar: 2026-05-25"
     },
     {
-      "id": "7144904c18ac6dac",
-      "title": "Styrkeprøven 2026 (Trondheim-Oslo)",
-      "url": "https://www.styrkeproven.no/",
-      "expected": "2026-06-20",
-      "found": [
-        "2026-06-17",
-        "2026-06-21",
-        "2027-04-06",
-        "2027-05-19",
-        "2027-06-13"
-      ],
-      "status": "mismatch",
-      "note": "regex foreslaar: 2026-06-21"
-    },
-    {
       "id": "1ccd504fd21e07b8",
       "title": "Tåsen skoles loppemarked 2026",
       "url": "https://tasen.osloskolen.no/",
@@ -679,7 +711,8 @@
         "2026-06-19"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-05-14"
+      "note": "regex foreslaar: 2026-05-14 | Claude: ukjent",
+      "claude_hash": "e1ba8adab3d45340"
     },
     {
       "id": "836984a16390af17",
@@ -694,7 +727,9 @@
         "2026-05-18"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-05-04"
+      "note": "regex foreslaar: 2026-05-04 | Claude: 2026-06-28",
+      "claude_hash": "e98452e15f530157",
+      "claude_suggested": "2026-06-28"
     },
     {
       "id": "28fa8f09240ce54a",
@@ -730,7 +765,8 @@
         "2026-06-19"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-05-17"
+      "note": "regex foreslaar: 2026-05-17 | Claude: ukjent",
+      "claude_hash": "9ebebf110ebda119"
     },
     {
       "id": "3c9906bbc6797718",
@@ -744,7 +780,8 @@
         "2026-05-17"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-05-04"
+      "note": "regex foreslaar: 2026-05-04 | Claude: ukjent",
+      "claude_hash": "d243a33b41270aa3"
     },
     {
       "id": "ce5369dfc6af77f6",
@@ -756,7 +793,9 @@
         "2026-08-15"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-08-15"
+      "note": "regex foreslaar: 2026-08-15 | Claude: 2026-08-12",
+      "claude_hash": "4c8e1de9c99c8ea7",
+      "claude_suggested": "2026-08-12"
     },
     {
       "id": "ce5369dfc6af77f6",
@@ -768,7 +807,9 @@
         "2026-08-15"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-08-15"
+      "note": "regex foreslaar: 2026-08-15 | Claude: 2026-08-12",
+      "claude_hash": "4c8e1de9c99c8ea7",
+      "claude_suggested": "2026-08-12"
     },
     {
       "id": "3a3b1da9f83cedc8",
@@ -795,7 +836,8 @@
       "expected": "2026-10-17",
       "found": [],
       "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
+      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
+      "claude_hash": "05d835408915e1fe"
     },
     {
       "id": "d4ac76a7b2b736ad",
@@ -804,7 +846,8 @@
       "expected": "2026-05-20",
       "found": [],
       "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
+      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
+      "claude_hash": "65a6aebf50321155"
     },
     {
       "id": "288311bc1e9830c9",
@@ -813,7 +856,8 @@
       "expected": "2026-05-03",
       "found": [],
       "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
+      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
+      "claude_hash": "d2199220d99afc25"
     },
     {
       "id": "eb40e3614f0343a6",
@@ -822,7 +866,8 @@
       "expected": "2026-05-14",
       "found": [],
       "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
+      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
+      "claude_hash": "4e729b4065565400"
     },
     {
       "id": "2dc7cf1f8174fdce",
@@ -831,7 +876,8 @@
       "expected": "2026-05-21",
       "found": [],
       "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
+      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
+      "claude_hash": "04d1cb9c59054596"
     },
     {
       "id": "ecff156b40c1cfd8",
@@ -840,7 +886,8 @@
       "expected": "2026-04-22",
       "found": [],
       "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
+      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
+      "claude_hash": "1ee1a6643f61a0ad"
     },
     {
       "id": "1e622456a75987d5",
@@ -849,7 +896,8 @@
       "expected": "2026-04-22",
       "found": [],
       "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
+      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
+      "claude_hash": "fc9a2bd51d67dd0a"
     },
     {
       "id": "5cf1ee9302e199f5",
@@ -867,7 +915,8 @@
       "expected": "2026-12-05",
       "found": [],
       "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
+      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
+      "claude_hash": "ef1692942c1476a4"
     },
     {
       "id": "06da4abb89f55f6f",
@@ -894,7 +943,9 @@
       "expected": "2027-03-06",
       "found": [],
       "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
+      "note": "ingen datoer funnet i synlig tekst | Claude: 2026-02-14",
+      "claude_hash": "2b6d95bd16ded946",
+      "claude_suggested": "2026-02-14"
     },
     {
       "id": "3d7503aa7cb041fd",
@@ -921,7 +972,9 @@
       "expected": "2026-04-29",
       "found": [],
       "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
+      "note": "ingen datoer funnet i synlig tekst | Claude: 2027-03-25",
+      "claude_hash": "53596c23581c0fa0",
+      "claude_suggested": "2027-03-25"
     },
     {
       "id": "3741e8192b6b5f38",
@@ -930,7 +983,8 @@
       "expected": "2026-11-28",
       "found": [],
       "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
+      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
+      "claude_hash": "43afa1d5a7863944"
     },
     {
       "id": "9877a490c26f9e41",
@@ -948,7 +1002,8 @@
       "expected": "2026-05-16",
       "found": [],
       "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
+      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
+      "claude_hash": "10fdf4a4912570de"
     },
     {
       "id": "ba08f2eb88ba1430",
@@ -966,7 +1021,8 @@
       "expected": "2026-06-01",
       "found": [],
       "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
+      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
+      "claude_hash": "8df53001ce9fc6dd"
     },
     {
       "id": "7dcefdec6d3bba59",
@@ -975,7 +1031,8 @@
       "expected": "2026-05-02",
       "found": [],
       "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
+      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
+      "claude_hash": "1278470afc8e1b46"
     },
     {
       "id": "4d686cebc7ae019c",
@@ -1029,7 +1086,8 @@
       "expected": "2026-06-12",
       "found": [],
       "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
+      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
+      "claude_hash": "e427440c6ec3f5c7"
     },
     {
       "id": "83d8d2b6ef249f4c",
@@ -1056,7 +1114,8 @@
       "expected": "2026-05-08",
       "found": [],
       "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
+      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
+      "claude_hash": "a6ec36ac67e2a0b7"
     },
     {
       "id": "de120652e9d47219",
@@ -1065,7 +1124,8 @@
       "expected": "2026-10-10",
       "found": [],
       "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
+      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
+      "claude_hash": "eda60a9460ead16f"
     },
     {
       "id": "7ee06b9ad778f5ed",
@@ -1074,7 +1134,8 @@
       "expected": "2026-06-06",
       "found": [],
       "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
+      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
+      "claude_hash": "eda60a9460ead16f"
     },
     {
       "id": "d765f97a38fd3af1",
@@ -1083,7 +1144,8 @@
       "expected": "2026-11-07",
       "found": [],
       "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
+      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
+      "claude_hash": "eda60a9460ead16f"
     },
     {
       "id": "640487fc97d5643f",
@@ -1092,7 +1154,8 @@
       "expected": "2026-05-02",
       "found": [],
       "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
+      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
+      "claude_hash": "eda60a9460ead16f"
     },
     {
       "id": "bfba7c62ec5c8a36",
@@ -1101,7 +1164,8 @@
       "expected": "2026-09-12",
       "found": [],
       "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
+      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
+      "claude_hash": "eda60a9460ead16f"
     },
     {
       "id": "1db4770383ca2cc9",
@@ -1110,7 +1174,8 @@
       "expected": "2026-08-29",
       "found": [],
       "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
+      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
+      "claude_hash": "eda60a9460ead16f"
     },
     {
       "id": "cf8578f74fd7d042",
@@ -1119,7 +1184,8 @@
       "expected": "2026-08-14",
       "found": [],
       "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
+      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
+      "claude_hash": "eda60a9460ead16f"
     },
     {
       "id": "3a1b55fab626749b",
@@ -1128,7 +1194,8 @@
       "expected": "2026-04-29",
       "found": [],
       "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
+      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
+      "claude_hash": "eda60a9460ead16f"
     },
     {
       "id": "9ca7c061b4879f0f",
@@ -1137,7 +1204,8 @@
       "expected": "2026-06-17",
       "found": [],
       "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
+      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
+      "claude_hash": "eda60a9460ead16f"
     },
     {
       "id": "d7065b72c00df6ff",
@@ -1146,7 +1214,8 @@
       "expected": "2026-09-05",
       "found": [],
       "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
+      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
+      "claude_hash": "eda60a9460ead16f"
     },
     {
       "id": "4249b7cb070b16ff",
@@ -1155,7 +1224,8 @@
       "expected": "2026-05-24",
       "found": [],
       "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
+      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
+      "claude_hash": "eda60a9460ead16f"
     },
     {
       "id": "d845142a1a352f4c",
@@ -1164,7 +1234,8 @@
       "expected": "2026-10-28",
       "found": [],
       "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
+      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
+      "claude_hash": "8e9790bc83fd46f7"
     },
     {
       "id": "f932813ae2ba0473",
@@ -1173,7 +1244,8 @@
       "expected": "2026-04-22",
       "found": [],
       "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
+      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
+      "claude_hash": "94e48fe5e53dd037"
     },
     {
       "id": "75cc25222d43888d",
@@ -1182,7 +1254,8 @@
       "expected": "2026-06-06",
       "found": [],
       "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
+      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
+      "claude_hash": "43afa1d5a7863944"
     },
     {
       "id": "490ebfd79d2a7015",
@@ -1191,7 +1264,8 @@
       "expected": "2026-04-22",
       "found": [],
       "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
+      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
+      "claude_hash": "5d71e97f65f58a29"
     },
     {
       "id": "d63dc1f84a18e6ec",
@@ -1209,7 +1283,8 @@
       "expected": "2026-04-22",
       "found": [],
       "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
+      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
+      "claude_hash": "f579c1f9f4166912"
     },
     {
       "id": "700ba630ce96b0c7",
@@ -1218,7 +1293,8 @@
       "expected": "2026-04-25",
       "found": [],
       "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
+      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
+      "claude_hash": "dd1b2fc07ad40079"
     },
     {
       "id": "8e15bcef1585dff6",
@@ -1236,7 +1312,8 @@
       "expected": "2026-06-23",
       "found": [],
       "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
+      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
+      "claude_hash": "43afa1d5a7863944"
     },
     {
       "id": "8027b1840747bd75",
@@ -1245,7 +1322,8 @@
       "expected": "2026-04-25",
       "found": [],
       "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
+      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
+      "claude_hash": "6c2ff06b369b5987"
     },
     {
       "id": "edc54faec3422b2a",
@@ -1254,7 +1332,8 @@
       "expected": "2026-05-16",
       "found": [],
       "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
+      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
+      "claude_hash": "1e25846473d09277"
     },
     {
       "id": "e367214b7e0c174d",
@@ -1263,22 +1342,14 @@
       "expected": "2026-05-02",
       "found": [],
       "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
+      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
+      "claude_hash": "107cc877e41ea100"
     },
     {
       "id": "d23303142b16f715",
       "title": "Sommerball Rådhusplassen 2026",
       "url": "https://www.oslo.kommune.no/",
       "expected": "2026-07-18",
-      "found": [],
-      "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
-    },
-    {
-      "id": "2b8388cc2d0531de",
-      "title": "Sommerles 2026: lesekampanje for barn",
-      "url": "https://www.sommerles.no/",
-      "expected": "2026-06-01",
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst"
@@ -1326,7 +1397,8 @@
       "expected": "2026-04-22",
       "found": [],
       "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
+      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
+      "claude_hash": "d131e95becaa6a13"
     },
     {
       "id": "3372b44309f526c5",
@@ -1481,6 +1553,34 @@
       ],
       "status": "ok",
       "note": ""
+    },
+    {
+      "id": "2b8388cc2d0531de",
+      "title": "Sommerles 2026: lesekampanje for barn",
+      "url": "https://www.sommerles.no/",
+      "expected": "2026-06-01",
+      "found": [],
+      "status": "ok",
+      "note": "bekreftet av Claude",
+      "claude_hash": "0f945779d4df88dd",
+      "claude_suggested": "2026-06-01"
+    },
+    {
+      "id": "7144904c18ac6dac",
+      "title": "Styrkeprøven 2026 (Trondheim-Oslo)",
+      "url": "https://www.styrkeproven.no/",
+      "expected": "2026-06-20",
+      "found": [
+        "2026-06-17",
+        "2026-06-21",
+        "2027-04-06",
+        "2027-05-19",
+        "2027-06-13"
+      ],
+      "status": "ok",
+      "note": "bekreftet av Claude",
+      "claude_hash": "36ebd6b599952753",
+      "claude_suggested": "2026-06-20"
     },
     {
       "id": "2f13da63467099de",
