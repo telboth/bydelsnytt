@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-05-04T06:26:17.274850+00:00",
+  "updatedAt": "2026-05-07T06:02:42.610823+00:00",
   "corrections": {
     "0fccf076668118e6": {
       "field": "event_date",
@@ -43,6 +43,13 @@
       "corrected": "2026-07-25",
       "reason": "event_verify: regex fant ['2026-07-25', '2026-08-01'], Claude bekreftet 2026-07-25",
       "appliedAt": "2026-05-04T06:26:17.274813+00:00"
+    },
+    "399f234f776ceb40": {
+      "field": "event_date",
+      "original": "2026-05-05",
+      "corrected": "2026-05-29",
+      "reason": "event_verify: regex fant ['2026-05-29', '2026-05-31'], Claude bekreftet 2026-05-29",
+      "appliedAt": "2026-05-07T06:02:42.610791+00:00"
     }
   }
 }
