@@ -915,16 +915,6 @@
       "note": "ingen datoer funnet i synlig tekst"
     },
     {
-      "id": "13cc19958ececa7a",
-      "title": "Holmenkollmarsjen 2027",
-      "url": "https://www.holmenkollmarsjen.no/",
-      "expected": "2027-03-06",
-      "found": [],
-      "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "ff279422a15e97d8"
-    },
-    {
       "id": "3d7503aa7cb041fd",
       "title": "Holmliadagen 2026",
       "url": "https://www.oslo.kommune.no/bydel-sondre-nordstrand/",
@@ -1316,6 +1306,17 @@
       ],
       "status": "ok",
       "note": ""
+    },
+    {
+      "id": "13cc19958ececa7a",
+      "title": "Holmenkollmarsjen 2027",
+      "url": "https://www.holmenkollmarsjen.no/",
+      "expected": "2027-03-06",
+      "found": [],
+      "status": "ok",
+      "note": "bekreftet av Claude",
+      "claude_hash": "ff279422a15e97d8",
+      "claude_suggested": "2027-03-06"
     },
     {
       "id": "825088c200d31609",
