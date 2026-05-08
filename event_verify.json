@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-05-07T06:02:42.611005+00:00",
+  "generatedAt": "2026-05-08T07:53:49.954687+00:00",
   "counts": {
     "fetch_failed": 2,
     "mismatch": 59,
     "no_dates": 51,
     "ok": 10,
-    "skipped": 19
+    "skipped": 18
   },
-  "newCorrections": 1,
+  "newCorrections": 0,
   "items": [
     {
       "id": "4e68392e31fa7f16",
@@ -36,8 +36,8 @@
         "2026-05-08",
         "2026-05-09",
         "2026-05-15",
-        "2026-05-23",
-        "2026-05-24"
+        "2026-05-19",
+        "2026-05-23"
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-05-08"
@@ -119,7 +119,7 @@
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-06-19 | Claude: ukjent",
-      "claude_hash": "ad590c05a5261ce1"
+      "claude_hash": "4acd7cbc2f660ad6"
     },
     {
       "id": "c48fb63704a3e1cf",
@@ -253,9 +253,9 @@
         "2026-05-31"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-05-29 | Claude: 2026-05-29",
-      "claude_hash": "da78c264d6e1a15b",
-      "claude_suggested": "2026-05-29"
+      "note": "regex foreslaar: 2026-05-29 | Claude: 2027-02-14",
+      "claude_hash": "ec3e62db669c4049",
+      "claude_suggested": "2027-02-14"
     },
     {
       "id": "c951ec6162350418",
@@ -267,9 +267,9 @@
         "2026-05-31"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-05-29 | Claude: 2026-05-29",
-      "claude_hash": "da78c264d6e1a15b",
-      "claude_suggested": "2026-05-29"
+      "note": "regex foreslaar: 2026-05-29 | Claude: 2027-02-14",
+      "claude_hash": "ec3e62db669c4049",
+      "claude_suggested": "2027-02-14"
     },
     {
       "id": "33aa708362f89473",
@@ -281,9 +281,9 @@
         "2026-05-31"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-05-29 | Claude: 2026-05-29",
-      "claude_hash": "da78c264d6e1a15b",
-      "claude_suggested": "2026-05-29"
+      "note": "regex foreslaar: 2026-05-29 | Claude: 2027-02-14",
+      "claude_hash": "ec3e62db669c4049",
+      "claude_suggested": "2027-02-14"
     },
     {
       "id": "97616474ee627f92",
@@ -295,9 +295,9 @@
         "2026-05-31"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-05-29 | Claude: 2026-05-29",
-      "claude_hash": "da78c264d6e1a15b",
-      "claude_suggested": "2026-05-29"
+      "note": "regex foreslaar: 2026-05-29 | Claude: 2027-02-14",
+      "claude_hash": "ec3e62db669c4049",
+      "claude_suggested": "2027-02-14"
     },
     {
       "id": "93887248798c1415",
@@ -367,7 +367,7 @@
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-05-14 | Claude: ukjent",
-      "claude_hash": "e416190560980706"
+      "claude_hash": "1b4ce9c81882f250"
     },
     {
       "id": "8bfeb00e1849e6b9",
@@ -375,10 +375,10 @@
       "url": "https://www.deichman.no/",
       "expected": "2026-11-09",
       "found": [
-        "2026-05-07"
+        "2026-05-08"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-05-07"
+      "note": "regex foreslaar: 2026-05-08"
     },
     {
       "id": "6e64cb0883dad758",
@@ -439,7 +439,8 @@
         "2026-05-21"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-05-21"
+      "note": "regex foreslaar: 2026-05-21 | Claude: ukjent",
+      "claude_hash": "7efc7aa1b615c1c3"
     },
     {
       "id": "2eb24d2c2de44117",
@@ -450,7 +451,8 @@
         "2027-09-06"
       ],
       "status": "mismatch",
-      "note": "ingen narliggende dato funnet"
+      "note": "ingen narliggende dato funnet | Claude: ukjent",
+      "claude_hash": "fe2ce2f550d80550"
     },
     {
       "id": "d765f97a38fd3af1",
@@ -517,7 +519,7 @@
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-05-21 | Claude: ukjent",
-      "claude_hash": "65b139a5df70db90"
+      "claude_hash": "7efc7aa1b615c1c3"
     },
     {
       "id": "9ca7c061b4879f0f",
@@ -528,7 +530,8 @@
         "2026-05-21"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-05-21"
+      "note": "regex foreslaar: 2026-05-21 | Claude: ukjent",
+      "claude_hash": "7efc7aa1b615c1c3"
     },
     {
       "id": "d7065b72c00df6ff",
@@ -550,7 +553,8 @@
         "2026-05-21"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-05-21"
+      "note": "regex foreslaar: 2026-05-21 | Claude: ukjent",
+      "claude_hash": "7efc7aa1b615c1c3"
     },
     {
       "id": "4b452eb704efb020",
@@ -624,7 +628,7 @@
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-05-08 | Claude: ukjent",
-      "claude_hash": "c0ea6adb5ef8eb21"
+      "claude_hash": "4d8c8802e58c3bbe"
     },
     {
       "id": "513ace3386d15a56",
@@ -707,7 +711,7 @@
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-05-14 | Claude: ukjent",
-      "claude_hash": "6f67fce2be83b471"
+      "claude_hash": "e1ba8adab3d45340"
     },
     {
       "id": "836984a16390af17",
@@ -759,7 +763,7 @@
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-05-17 | Claude: ukjent",
-      "claude_hash": "3d079b12694d6879"
+      "claude_hash": "0ae2c5f011fd1587"
     },
     {
       "id": "3c9906bbc6797718",
@@ -786,7 +790,7 @@
         "2026-08-15"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-08-15 | Claude: 2026-08-12",
+      "note": "regex foreslaar: 2026-08-15 | Claude (cached): 2026-08-12",
       "claude_hash": "9465a69ddb120ba3",
       "claude_suggested": "2026-08-12"
     },
@@ -1523,15 +1527,6 @@
       "title": "Refstad allmenningsfest 2026",
       "url": "https://www.facebook.com/oslobyvelforening",
       "expected": "2026-08-22",
-      "found": [],
-      "status": "skipped",
-      "note": "URL er social/wiki/maps - ingen kanonisk dato"
-    },
-    {
-      "id": "099306ce9e77a34d",
-      "title": "Sagene speidergruppe - aktiviteter",
-      "url": "https://speiding.no/oslokrets",
-      "expected": "2026-04-23",
       "found": [],
       "status": "skipped",
       "note": "URL er social/wiki/maps - ingen kanonisk dato"
