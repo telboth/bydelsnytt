@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-05-10T06:51:36.117219+00:00",
+  "generatedAt": "2026-05-11T06:02:29.563169+00:00",
   "counts": {
-    "fetch_failed": 5,
-    "mismatch": 39,
-    "no_dates": 58,
-    "ok": 8,
+    "fetch_failed": 2,
+    "mismatch": 40,
+    "no_dates": 57,
+    "ok": 9,
     "skipped": 16
   },
   "newCorrections": 0,
@@ -19,37 +19,10 @@
       "note": "kunne ikke hente URL"
     },
     {
-      "id": "7dcefdec6d3bba59",
-      "title": "Lilloseter serveringsstue",
-      "url": "https://lilloseter.no/",
-      "expected": "2026-05-02",
-      "found": [],
-      "status": "fetch_failed",
-      "note": "kunne ikke hente URL"
-    },
-    {
       "id": "83f362a5bdaedbb2",
       "title": "Oslo Arkitekturfestival 2026",
       "url": "https://oslobiennalen.no",
       "expected": "2026-09-24",
-      "found": [],
-      "status": "fetch_failed",
-      "note": "kunne ikke hente URL"
-    },
-    {
-      "id": "944dfebb499ef33a",
-      "title": "Oslo Pride 2026",
-      "url": "https://www.oslopride.no/",
-      "expected": "2026-06-26",
-      "found": [],
-      "status": "fetch_failed",
-      "note": "kunne ikke hente URL"
-    },
-    {
-      "id": "e71000fe903e0139",
-      "title": "Oslo Pride Parade 2026",
-      "url": "https://www.oslopride.no/",
-      "expected": "2026-06-27",
       "found": [],
       "status": "fetch_failed",
       "note": "kunne ikke hente URL"
@@ -142,7 +115,7 @@
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-06-19 | Claude: ukjent",
-      "claude_hash": "ad590c05a5261ce1"
+      "claude_hash": "4acd7cbc2f660ad6"
     },
     {
       "id": "c48fb63704a3e1cf",
@@ -166,14 +139,14 @@
       "url": "https://www.cinemateket.no/",
       "expected": "2026-09-01",
       "found": [
-        "2026-05-12",
         "2026-05-13",
         "2026-05-14",
         "2026-05-15",
-        "2026-05-19"
+        "2026-05-19",
+        "2026-05-23"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-06-13"
+      "note": "regex foreslaar: 2026-06-24"
     },
     {
       "id": "6a2a2294050e24de",
@@ -181,7 +154,6 @@
       "url": "https://www.oslo.kommune.no/natur-kultur-og-fritid/svommehaller-i-oslo/frognerbadet/",
       "expected": "2026-05-15",
       "found": [
-        "2026-05-10",
         "2026-05-11",
         "2026-05-17",
         "2026-05-18",
@@ -196,7 +168,6 @@
       "url": "https://www.oslo.kommune.no/natur-kultur-og-fritid/svommehaller-i-oslo/frognerbadet/",
       "expected": "2026-05-22",
       "found": [
-        "2026-05-10",
         "2026-05-11",
         "2026-05-17",
         "2026-05-18",
@@ -204,6 +175,19 @@
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-05-24"
+    },
+    {
+      "id": "825088c200d31609",
+      "title": "Holmenkollstafetten 2026",
+      "url": "https://holmenkollstafetten.no/",
+      "expected": "2026-05-09",
+      "found": [
+        "2026-09-27"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-09-27 | Claude (cached): 2026-05-09",
+      "claude_hash": "e91a720f899cd39a",
+      "claude_suggested": "2026-05-09"
     },
     {
       "id": "c564d1c97d2eb155",
@@ -316,7 +300,7 @@
         "2026-06-06"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-06-06 | Claude: 2026-06-06",
+      "note": "regex foreslaar: 2026-06-06 | Claude (cached): 2026-06-06",
       "claude_hash": "0f315070656ffed7",
       "claude_suggested": "2026-06-06"
     },
@@ -333,7 +317,7 @@
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-05-14 | Claude: ukjent",
-      "claude_hash": "e416190560980706"
+      "claude_hash": "1b4ce9c81882f250"
     },
     {
       "id": "8bfeb00e1849e6b9",
@@ -341,10 +325,10 @@
       "url": "https://www.deichman.no/",
       "expected": "2026-11-09",
       "found": [
-        "2026-05-10"
+        "2026-05-11"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-05-10"
+      "note": "regex foreslaar: 2026-05-11"
     },
     {
       "id": "6e64cb0883dad758",
@@ -366,7 +350,6 @@
       "url": "https://www.fossumif.no/",
       "expected": "2026-09-19",
       "found": [
-        "2026-05-10",
         "2026-06-22",
         "2026-06-26"
       ],
@@ -417,7 +400,7 @@
         "2026-08-15"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-08-15 | Claude: 2026-08-09",
+      "note": "regex foreslaar: 2026-08-15 | Claude (cached): 2026-08-09",
       "claude_hash": "5301adc374df586a",
       "claude_suggested": "2026-08-09"
     },
@@ -468,7 +451,7 @@
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-05-14 | Claude: ukjent",
-      "claude_hash": "c0ea6adb5ef8eb21"
+      "claude_hash": "4d8c8802e58c3bbe"
     },
     {
       "id": "fb62862842243ee2",
@@ -505,14 +488,14 @@
       "url": "https://www.oslo.kommune.no/natur-kultur-og-fritid/svommehaller-i-oslo/toyenbadet/",
       "expected": "2026-05-01",
       "found": [
-        "2026-05-10",
         "2026-05-11",
         "2026-05-17",
         "2026-05-18",
-        "2026-05-24"
+        "2026-05-24",
+        "2026-06-28"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-05-10"
+      "note": "regex foreslaar: 2026-05-11"
     },
     {
       "id": "28fa8f09240ce54a",
@@ -549,7 +532,7 @@
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-05-17 | Claude: ukjent",
-      "claude_hash": "3d079b12694d6879"
+      "claude_hash": "0ae2c5f011fd1587"
     },
     {
       "id": "ce5369dfc6af77f6",
@@ -744,19 +727,19 @@
       "note": "ingen datoer funnet i synlig tekst"
     },
     {
-      "id": "ba08f2eb88ba1430",
-      "title": "Klatreverket Løren",
-      "url": "https://klatreverket.no/loren/",
-      "expected": "2026-04-26",
+      "id": "cfb58fbddd282457",
+      "title": "Kobberhaughytta",
+      "url": "https://ut.no/hytte/10645/kobberhaughytta",
+      "expected": "2026-06-01",
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst"
     },
     {
-      "id": "cfb58fbddd282457",
-      "title": "Kobberhaughytta",
-      "url": "https://ut.no/hytte/10645/kobberhaughytta",
-      "expected": "2026-06-01",
+      "id": "7dcefdec6d3bba59",
+      "title": "Lilloseter serveringsstue",
+      "url": "https://lilloseter.no/",
+      "expected": "2026-05-02",
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst"
@@ -859,7 +842,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "db8b14dce861d508"
+      "claude_hash": "270b48c8e0d48f27"
     },
     {
       "id": "d765f97a38fd3af1",
@@ -887,7 +870,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "db8b14dce861d508"
+      "claude_hash": "270b48c8e0d48f27"
     },
     {
       "id": "1db4770383ca2cc9",
@@ -897,7 +880,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "db8b14dce861d508"
+      "claude_hash": "270b48c8e0d48f27"
     },
     {
       "id": "cf8578f74fd7d042",
@@ -907,7 +890,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "db8b14dce861d508"
+      "claude_hash": "270b48c8e0d48f27"
     },
     {
       "id": "3a1b55fab626749b",
@@ -917,7 +900,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "db8b14dce861d508"
+      "claude_hash": "270b48c8e0d48f27"
     },
     {
       "id": "9ca7c061b4879f0f",
@@ -927,7 +910,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "db8b14dce861d508"
+      "claude_hash": "270b48c8e0d48f27"
     },
     {
       "id": "d7065b72c00df6ff",
@@ -937,7 +920,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "db8b14dce861d508"
+      "claude_hash": "270b48c8e0d48f27"
     },
     {
       "id": "4249b7cb070b16ff",
@@ -947,7 +930,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "db8b14dce861d508"
+      "claude_hash": "270b48c8e0d48f27"
     },
     {
       "id": "d845142a1a352f4c",
@@ -1094,15 +1077,6 @@
       "note": "ingen datoer funnet i synlig tekst"
     },
     {
-      "id": "22725011fd4c10c9",
-      "title": "Vulkan Klatresenter",
-      "url": "https://vulkanklatresenter.no/",
-      "expected": "2026-04-26",
-      "found": [],
-      "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
-    },
-    {
       "id": "bc1707f789b2b063",
       "title": "Wyllerløkka — sesongåpning",
       "url": "https://oslovinterpark.no/",
@@ -1160,26 +1134,42 @@
       "note": ""
     },
     {
-      "id": "825088c200d31609",
-      "title": "Holmenkollstafetten 2026",
-      "url": "https://holmenkollstafetten.no/",
-      "expected": "2026-05-09",
-      "found": [
-        "2026-05-10",
-        "2026-09-27"
-      ],
-      "status": "ok",
-      "note": "bekreftet av Claude",
-      "claude_hash": "e91a720f899cd39a",
-      "claude_suggested": "2026-05-09"
-    },
-    {
       "id": "c3a438c27157cb2e",
       "title": "Oslo Maraton 2026",
       "url": "https://www.oslomaraton.no/",
       "expected": "2026-09-12",
       "found": [
         "2026-09-12"
+      ],
+      "status": "ok",
+      "note": ""
+    },
+    {
+      "id": "944dfebb499ef33a",
+      "title": "Oslo Pride 2026",
+      "url": "https://www.oslopride.no/",
+      "expected": "2026-06-26",
+      "found": [
+        "2026-06-17",
+        "2026-06-21",
+        "2026-06-24",
+        "2026-06-26",
+        "2026-06-27"
+      ],
+      "status": "ok",
+      "note": ""
+    },
+    {
+      "id": "e71000fe903e0139",
+      "title": "Oslo Pride Parade 2026",
+      "url": "https://www.oslopride.no/",
+      "expected": "2026-06-27",
+      "found": [
+        "2026-06-17",
+        "2026-06-21",
+        "2026-06-24",
+        "2026-06-26",
+        "2026-06-27"
       ],
       "status": "ok",
       "note": ""
