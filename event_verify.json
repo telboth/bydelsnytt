@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-05-11T06:02:29.563169+00:00",
+  "generatedAt": "2026-05-12T06:01:52.723940+00:00",
   "counts": {
-    "fetch_failed": 2,
-    "mismatch": 40,
-    "no_dates": 57,
-    "ok": 9,
+    "fetch_failed": 5,
+    "mismatch": 39,
+    "no_dates": 54,
+    "ok": 10,
     "skipped": 16
   },
   "newCorrections": 0,
@@ -23,6 +23,33 @@
       "title": "Oslo Arkitekturfestival 2026",
       "url": "https://oslobiennalen.no",
       "expected": "2026-09-24",
+      "found": [],
+      "status": "fetch_failed",
+      "note": "kunne ikke hente URL"
+    },
+    {
+      "id": "db1148f0877a3624",
+      "title": "Oslo Lucia-tog 2026",
+      "url": "https://www.oslodomkirke.no/",
+      "expected": "2026-12-13",
+      "found": [],
+      "status": "fetch_failed",
+      "note": "kunne ikke hente URL"
+    },
+    {
+      "id": "8e15bcef1585dff6",
+      "title": "Sagene kirke konsertserie 2026",
+      "url": "https://kirken.no/sagene",
+      "expected": "2026-05-14",
+      "found": [],
+      "status": "fetch_failed",
+      "note": "kunne ikke hente URL"
+    },
+    {
+      "id": "af0e8120b57ec6cb",
+      "title": "Stovner kirke - barnekor 2026",
+      "url": "https://kirken.no/stovner",
+      "expected": "2026-05-17",
       "found": [],
       "status": "fetch_failed",
       "note": "kunne ikke hente URL"
@@ -115,7 +142,7 @@
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-06-19 | Claude: ukjent",
-      "claude_hash": "4acd7cbc2f660ad6"
+      "claude_hash": "b1c89ab88598f3db"
     },
     {
       "id": "c48fb63704a3e1cf",
@@ -139,14 +166,14 @@
       "url": "https://www.cinemateket.no/",
       "expected": "2026-09-01",
       "found": [
-        "2026-05-13",
         "2026-05-14",
         "2026-05-15",
+        "2026-05-16",
         "2026-05-19",
-        "2026-05-23"
+        "2026-05-28"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-06-24"
+      "note": "regex foreslaar: 2026-05-29"
     },
     {
       "id": "6a2a2294050e24de",
@@ -154,7 +181,6 @@
       "url": "https://www.oslo.kommune.no/natur-kultur-og-fritid/svommehaller-i-oslo/frognerbadet/",
       "expected": "2026-05-15",
       "found": [
-        "2026-05-11",
         "2026-05-17",
         "2026-05-18",
         "2026-05-24"
@@ -168,26 +194,12 @@
       "url": "https://www.oslo.kommune.no/natur-kultur-og-fritid/svommehaller-i-oslo/frognerbadet/",
       "expected": "2026-05-22",
       "found": [
-        "2026-05-11",
         "2026-05-17",
         "2026-05-18",
         "2026-05-24"
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-05-24"
-    },
-    {
-      "id": "825088c200d31609",
-      "title": "Holmenkollstafetten 2026",
-      "url": "https://holmenkollstafetten.no/",
-      "expected": "2026-05-09",
-      "found": [
-        "2026-09-27"
-      ],
-      "status": "mismatch",
-      "note": "regex foreslaar: 2026-09-27 | Claude (cached): 2026-05-09",
-      "claude_hash": "e91a720f899cd39a",
-      "claude_suggested": "2026-05-09"
     },
     {
       "id": "c564d1c97d2eb155",
@@ -317,7 +329,7 @@
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-05-14 | Claude: ukjent",
-      "claude_hash": "1b4ce9c81882f250"
+      "claude_hash": "03f4abbc81eda9e4"
     },
     {
       "id": "8bfeb00e1849e6b9",
@@ -325,10 +337,10 @@
       "url": "https://www.deichman.no/",
       "expected": "2026-11-09",
       "found": [
-        "2026-05-11"
+        "2026-05-12"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-05-11"
+      "note": "regex foreslaar: 2026-05-12"
     },
     {
       "id": "6e64cb0883dad758",
@@ -400,8 +412,8 @@
         "2026-08-15"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-08-15 | Claude (cached): 2026-08-09",
-      "claude_hash": "5301adc374df586a",
+      "note": "regex foreslaar: 2026-08-15 | Claude: 2026-08-09",
+      "claude_hash": "9ba1ffa85f53e82e",
       "claude_suggested": "2026-08-09"
     },
     {
@@ -451,7 +463,7 @@
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-05-14 | Claude: ukjent",
-      "claude_hash": "4d8c8802e58c3bbe"
+      "claude_hash": "bf3cecfb9fd4529a"
     },
     {
       "id": "fb62862842243ee2",
@@ -471,16 +483,15 @@
       "url": "https://www.styrkeproven.no/",
       "expected": "2026-06-20",
       "found": [
+        "2026-05-12",
         "2026-06-17",
         "2026-06-21",
         "2027-04-06",
-        "2027-05-19",
-        "2027-06-13"
+        "2027-05-19"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-06-21 | Claude (cached): 2026-06-20",
-      "claude_hash": "36ebd6b599952753",
-      "claude_suggested": "2026-06-20"
+      "note": "regex foreslaar: 2026-06-21 | Claude: ukjent",
+      "claude_hash": "b7b80bda7e8d5d5b"
     },
     {
       "id": "836984a16390af17",
@@ -488,14 +499,14 @@
       "url": "https://www.oslo.kommune.no/natur-kultur-og-fritid/svommehaller-i-oslo/toyenbadet/",
       "expected": "2026-05-01",
       "found": [
-        "2026-05-11",
         "2026-05-17",
         "2026-05-18",
         "2026-05-24",
-        "2026-06-28"
+        "2026-06-28",
+        "2026-07-05"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-05-11"
+      "note": "regex foreslaar: 2026-05-17"
     },
     {
       "id": "28fa8f09240ce54a",
@@ -532,7 +543,7 @@
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-05-17 | Claude: ukjent",
-      "claude_hash": "0ae2c5f011fd1587"
+      "claude_hash": "c7ea9a969a5f5cfe"
     },
     {
       "id": "ce5369dfc6af77f6",
@@ -842,7 +853,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "270b48c8e0d48f27"
+      "claude_hash": "e3d09622aa7365e5"
     },
     {
       "id": "d765f97a38fd3af1",
@@ -870,7 +881,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "270b48c8e0d48f27"
+      "claude_hash": "e3d09622aa7365e5"
     },
     {
       "id": "1db4770383ca2cc9",
@@ -880,7 +891,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "270b48c8e0d48f27"
+      "claude_hash": "e3d09622aa7365e5"
     },
     {
       "id": "cf8578f74fd7d042",
@@ -890,7 +901,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "270b48c8e0d48f27"
+      "claude_hash": "e3d09622aa7365e5"
     },
     {
       "id": "3a1b55fab626749b",
@@ -900,7 +911,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "270b48c8e0d48f27"
+      "claude_hash": "e3d09622aa7365e5"
     },
     {
       "id": "9ca7c061b4879f0f",
@@ -910,7 +921,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "270b48c8e0d48f27"
+      "claude_hash": "e3d09622aa7365e5"
     },
     {
       "id": "d7065b72c00df6ff",
@@ -920,7 +931,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "270b48c8e0d48f27"
+      "claude_hash": "e3d09622aa7365e5"
     },
     {
       "id": "4249b7cb070b16ff",
@@ -930,22 +941,13 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "270b48c8e0d48f27"
+      "claude_hash": "e3d09622aa7365e5"
     },
     {
       "id": "d845142a1a352f4c",
       "title": "Oslo Internasjonale Filmfestival 2026",
       "url": "https://oslofilmfestival.com/",
       "expected": "2026-10-28",
-      "found": [],
-      "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
-    },
-    {
-      "id": "db1148f0877a3624",
-      "title": "Oslo Lucia-tog 2026",
-      "url": "https://www.oslodomkirke.no/",
-      "expected": "2026-12-13",
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst"
@@ -973,15 +975,6 @@
       "title": "Oslo Vinterpark (Tryvann) — sesongåpning",
       "url": "https://www.oslovinterpark.no/",
       "expected": "2026-12-12",
-      "found": [],
-      "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
-    },
-    {
-      "id": "8e15bcef1585dff6",
-      "title": "Sagene kirke konsertserie 2026",
-      "url": "https://kirken.no/sagene",
-      "expected": "2026-05-14",
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst"
@@ -1027,15 +1020,6 @@
       "title": "Sommerles 2026: lesekampanje for barn",
       "url": "https://www.sommerles.no/",
       "expected": "2026-06-01",
-      "found": [],
-      "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
-    },
-    {
-      "id": "af0e8120b57ec6cb",
-      "title": "Stovner kirke - barnekor 2026",
-      "url": "https://kirken.no/stovner",
-      "expected": "2026-05-17",
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst"
@@ -1132,6 +1116,20 @@
       ],
       "status": "ok",
       "note": ""
+    },
+    {
+      "id": "825088c200d31609",
+      "title": "Holmenkollstafetten 2026",
+      "url": "https://holmenkollstafetten.no/",
+      "expected": "2026-05-09",
+      "found": [
+        "2026-09-27",
+        "2027-05-08"
+      ],
+      "status": "ok",
+      "note": "bekreftet av Claude",
+      "claude_hash": "b403e5d37f16c8d3",
+      "claude_suggested": "2026-05-09"
     },
     {
       "id": "c3a438c27157cb2e",
