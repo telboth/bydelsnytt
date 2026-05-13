@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-05-12T06:01:52.723940+00:00",
+  "generatedAt": "2026-05-13T06:01:49.608110+00:00",
   "counts": {
-    "fetch_failed": 5,
-    "mismatch": 39,
-    "no_dates": 54,
-    "ok": 10,
-    "skipped": 16
+    "fetch_failed": 2,
+    "mismatch": 54,
+    "no_dates": 42,
+    "ok": 9,
+    "skipped": 15
   },
   "newCorrections": 0,
   "items": [
@@ -28,44 +28,6 @@
       "note": "kunne ikke hente URL"
     },
     {
-      "id": "db1148f0877a3624",
-      "title": "Oslo Lucia-tog 2026",
-      "url": "https://www.oslodomkirke.no/",
-      "expected": "2026-12-13",
-      "found": [],
-      "status": "fetch_failed",
-      "note": "kunne ikke hente URL"
-    },
-    {
-      "id": "8e15bcef1585dff6",
-      "title": "Sagene kirke konsertserie 2026",
-      "url": "https://kirken.no/sagene",
-      "expected": "2026-05-14",
-      "found": [],
-      "status": "fetch_failed",
-      "note": "kunne ikke hente URL"
-    },
-    {
-      "id": "af0e8120b57ec6cb",
-      "title": "Stovner kirke - barnekor 2026",
-      "url": "https://kirken.no/stovner",
-      "expected": "2026-05-17",
-      "found": [],
-      "status": "fetch_failed",
-      "note": "kunne ikke hente URL"
-    },
-    {
-      "id": "3a3b1da9f83cedc8",
-      "title": "Alnabyfest 2026",
-      "url": "https://www.oslo.kommune.no/bydel-alna/",
-      "expected": "2026-08-15",
-      "found": [
-        "2026-05-12"
-      ],
-      "status": "mismatch",
-      "note": "regex foreslaar: 2026-05-12"
-    },
-    {
       "id": "dca86c1c4679b4a3",
       "title": "Bjølsen kulturkirke - jazzkveld 2026",
       "url": "https://kulturkirken.no/",
@@ -86,6 +48,7 @@
       "url": "https://deichman.no/aktuelt",
       "expected": "2026-09-15",
       "found": [
+        "2026-05-17",
         "2026-05-25",
         "2026-06-05"
       ],
@@ -98,11 +61,12 @@
       "url": "https://deichman.no/aktuelt",
       "expected": "2026-05-09",
       "found": [
+        "2026-05-17",
         "2026-05-25",
         "2026-06-05"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-05-25"
+      "note": "regex foreslaar: 2026-05-17"
     },
     {
       "id": "baa38b6bc0eed96b",
@@ -110,11 +74,12 @@
       "url": "https://deichman.no/aktuelt",
       "expected": "2026-05-15",
       "found": [
+        "2026-05-17",
         "2026-05-25",
         "2026-06-05"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-05-25"
+      "note": "regex foreslaar: 2026-05-17"
     },
     {
       "id": "3dc32ca015d1345b",
@@ -122,11 +87,12 @@
       "url": "https://deichman.no/aktuelt",
       "expected": "2026-05-06",
       "found": [
+        "2026-05-17",
         "2026-05-25",
         "2026-06-05"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-05-25"
+      "note": "regex foreslaar: 2026-05-17"
     },
     {
       "id": "175c864df01599c8",
@@ -142,7 +108,18 @@
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-06-19 | Claude: ukjent",
-      "claude_hash": "b1c89ab88598f3db"
+      "claude_hash": "4acd7cbc2f660ad6"
+    },
+    {
+      "id": "5cf1ee9302e199f5",
+      "title": "Elvelangs Akerselva 2026",
+      "url": "https://www.oslo.kommune.no/",
+      "expected": "2026-09-18",
+      "found": [
+        "2026-05-17"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-05-17"
     },
     {
       "id": "c48fb63704a3e1cf",
@@ -150,7 +127,6 @@
       "url": "https://www.skiforeningen.no/holmenkollen/holmenkollen-skifestival/",
       "expected": "2027-03-13",
       "found": [
-        "2026-05-12",
         "2026-05-17",
         "2027-05-05",
         "2027-12-03"
@@ -166,11 +142,11 @@
       "url": "https://www.cinemateket.no/",
       "expected": "2026-09-01",
       "found": [
-        "2026-05-14",
         "2026-05-15",
         "2026-05-16",
         "2026-05-19",
-        "2026-05-28"
+        "2026-05-28",
+        "2026-05-29"
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-05-29"
@@ -183,7 +159,9 @@
       "found": [
         "2026-05-17",
         "2026-05-18",
-        "2026-05-24"
+        "2026-05-24",
+        "2026-05-25",
+        "2026-05-31"
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-05-17"
@@ -196,10 +174,37 @@
       "found": [
         "2026-05-17",
         "2026-05-18",
-        "2026-05-24"
+        "2026-05-24",
+        "2026-05-25",
+        "2026-05-31"
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-05-24"
+    },
+    {
+      "id": "825088c200d31609",
+      "title": "Holmenkollstafetten 2026",
+      "url": "https://holmenkollstafetten.no/",
+      "expected": "2026-05-09",
+      "found": [
+        "2026-09-27",
+        "2027-05-08"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-09-27 | Claude (cached): 2026-05-09",
+      "claude_hash": "b403e5d37f16c8d3",
+      "claude_suggested": "2026-05-09"
+    },
+    {
+      "id": "3741e8192b6b5f38",
+      "title": "Julegrantenning på Stortorvet",
+      "url": "https://www.oslo.kommune.no/",
+      "expected": "2026-11-28",
+      "found": [
+        "2026-05-17"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-05-17"
     },
     {
       "id": "c564d1c97d2eb155",
@@ -329,7 +334,7 @@
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-05-14 | Claude: ukjent",
-      "claude_hash": "03f4abbc81eda9e4"
+      "claude_hash": "1b4ce9c81882f250"
     },
     {
       "id": "8bfeb00e1849e6b9",
@@ -337,10 +342,11 @@
       "url": "https://www.deichman.no/",
       "expected": "2026-11-09",
       "found": [
-        "2026-05-12"
+        "2026-05-13",
+        "2026-05-17"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-05-12"
+      "note": "regex foreslaar: 2026-05-17"
     },
     {
       "id": "6e64cb0883dad758",
@@ -357,6 +363,18 @@
       "claude_suggested": "2026-07-25"
     },
     {
+      "id": "de120652e9d47219",
+      "title": "Orientering: Blodslitet 2026",
+      "url": "https://orientering.no/",
+      "expected": "2026-10-10",
+      "found": [
+        "2026-05-17",
+        "2026-05-21"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-05-21"
+    },
+    {
       "id": "51cafb5f0901801b",
       "title": "Orientering: Fossum IF nærløp - Vestmarka",
       "url": "https://www.fossumif.no/",
@@ -366,7 +384,8 @@
         "2026-06-26"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-06-26"
+      "note": "regex foreslaar: 2026-06-26 | Claude: ukjent",
+      "claude_hash": "7f49f67e1642b72d"
     },
     {
       "id": "6097499950049f84",
@@ -381,6 +400,19 @@
       "claude_hash": "cc2cd79da6a31a2b"
     },
     {
+      "id": "7ee06b9ad778f5ed",
+      "title": "Orientering: KM sprint Akershus og Oslo",
+      "url": "https://orientering.no/",
+      "expected": "2026-06-06",
+      "found": [
+        "2026-05-17",
+        "2026-05-21"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-05-21 | Claude: ukjent",
+      "claude_hash": "f68aa28bf52dc65e"
+    },
+    {
       "id": "2eb24d2c2de44117",
       "title": "Orientering: Koll nærløp - Skullerud",
       "url": "https://koll.no/",
@@ -391,6 +423,121 @@
       "status": "mismatch",
       "note": "ingen narliggende dato funnet | Claude: ukjent",
       "claude_hash": "fe2ce2f550d80550"
+    },
+    {
+      "id": "d765f97a38fd3af1",
+      "title": "Orientering: Nattuglen - nattløp i Nordmarka",
+      "url": "https://orientering.no/",
+      "expected": "2026-11-07",
+      "found": [
+        "2026-05-17",
+        "2026-05-21"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-05-21"
+    },
+    {
+      "id": "640487fc97d5643f",
+      "title": "Orientering: O-troll-løpet (for barn)",
+      "url": "https://orientering.no/",
+      "expected": "2026-05-02",
+      "found": [
+        "2026-05-17",
+        "2026-05-21"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-05-17"
+    },
+    {
+      "id": "bfba7c62ec5c8a36",
+      "title": "Orientering: OM stafett 2026",
+      "url": "https://orientering.no/",
+      "expected": "2026-09-12",
+      "found": [
+        "2026-05-17",
+        "2026-05-21"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-05-21 | Claude: ukjent",
+      "claude_hash": "f68aa28bf52dc65e"
+    },
+    {
+      "id": "1db4770383ca2cc9",
+      "title": "Orientering: OSI Blindern-sprint",
+      "url": "https://orientering.no/",
+      "expected": "2026-08-29",
+      "found": [
+        "2026-05-17",
+        "2026-05-21"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-05-21 | Claude: ukjent",
+      "claude_hash": "f68aa28bf52dc65e"
+    },
+    {
+      "id": "cf8578f74fd7d042",
+      "title": "Orientering: Oslo 3-dagers 2026",
+      "url": "https://orientering.no/",
+      "expected": "2026-08-14",
+      "found": [
+        "2026-05-17",
+        "2026-05-21"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-05-21 | Claude: ukjent",
+      "claude_hash": "f68aa28bf52dc65e"
+    },
+    {
+      "id": "3a1b55fab626749b",
+      "title": "Orientering: Oslo Cup 1 - Sognsvann",
+      "url": "https://orientering.no/",
+      "expected": "2026-04-29",
+      "found": [
+        "2026-05-17",
+        "2026-05-21"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-05-17 | Claude: ukjent",
+      "claude_hash": "f68aa28bf52dc65e"
+    },
+    {
+      "id": "9ca7c061b4879f0f",
+      "title": "Orientering: Oslo Cup 3 - Østmarksetra",
+      "url": "https://orientering.no/",
+      "expected": "2026-06-17",
+      "found": [
+        "2026-05-17",
+        "2026-05-21"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-05-21 | Claude: ukjent",
+      "claude_hash": "f68aa28bf52dc65e"
+    },
+    {
+      "id": "d7065b72c00df6ff",
+      "title": "Orientering: Oslo-mesterskapet langdistanse",
+      "url": "https://orientering.no/",
+      "expected": "2026-09-05",
+      "found": [
+        "2026-05-17",
+        "2026-05-21"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-05-21 | Claude: ukjent",
+      "claude_hash": "f68aa28bf52dc65e"
+    },
+    {
+      "id": "4249b7cb070b16ff",
+      "title": "Orientering: Pinseløpet 2026",
+      "url": "https://orientering.no/",
+      "expected": "2026-05-24",
+      "found": [
+        "2026-05-17",
+        "2026-05-21"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-05-21 | Claude: ukjent",
+      "claude_hash": "f68aa28bf52dc65e"
     },
     {
       "id": "4b452eb704efb020",
@@ -412,7 +559,7 @@
         "2026-08-15"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-08-15 | Claude: 2026-08-09",
+      "note": "regex foreslaar: 2026-08-15 | Claude (cached): 2026-08-09",
       "claude_hash": "9ba1ffa85f53e82e",
       "claude_suggested": "2026-08-09"
     },
@@ -426,6 +573,17 @@
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-08-15"
+    },
+    {
+      "id": "75cc25222d43888d",
+      "title": "Oslo Mangfoldsfestival 2026",
+      "url": "https://www.oslo.kommune.no/",
+      "expected": "2026-06-06",
+      "found": [
+        "2026-05-17"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-05-17"
     },
     {
       "id": "bb61a462b833d30c",
@@ -463,19 +621,29 @@
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-05-14 | Claude: ukjent",
-      "claude_hash": "bf3cecfb9fd4529a"
+      "claude_hash": "097c0c667d6ce2d7"
     },
     {
-      "id": "fb62862842243ee2",
-      "title": "Stovner bibliotek - barnetimen 2026",
-      "url": "https://deichman.no/aktuelt",
-      "expected": "2026-04-28",
+      "id": "976aafbe75b4afaa",
+      "title": "Sankthansbål ved Frognerkilen",
+      "url": "https://www.oslo.kommune.no/",
+      "expected": "2026-06-23",
       "found": [
-        "2026-05-25",
-        "2026-06-05"
+        "2026-05-17"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-05-25"
+      "note": "regex foreslaar: 2026-05-17"
+    },
+    {
+      "id": "d23303142b16f715",
+      "title": "Sommerball Rådhusplassen 2026",
+      "url": "https://www.oslo.kommune.no/",
+      "expected": "2026-07-18",
+      "found": [
+        "2026-05-17"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-05-17"
     },
     {
       "id": "7144904c18ac6dac",
@@ -483,11 +651,11 @@
       "url": "https://www.styrkeproven.no/",
       "expected": "2026-06-20",
       "found": [
-        "2026-05-12",
         "2026-06-17",
         "2026-06-21",
         "2027-04-06",
-        "2027-05-19"
+        "2027-05-19",
+        "2027-06-13"
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-06-21 | Claude: ukjent",
@@ -502,8 +670,8 @@
         "2026-05-17",
         "2026-05-18",
         "2026-05-24",
-        "2026-06-28",
-        "2026-07-05"
+        "2026-05-25",
+        "2026-05-31"
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-05-17"
@@ -543,7 +711,7 @@
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-05-17 | Claude: ukjent",
-      "claude_hash": "c7ea9a969a5f5cfe"
+      "claude_hash": "0ae2c5f011fd1587"
     },
     {
       "id": "ce5369dfc6af77f6",
@@ -552,11 +720,12 @@
       "expected": "2026-08-04",
       "found": [
         "2026-05-21",
+        "2026-08-13",
         "2026-08-15"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-08-15 | Claude (cached): 2026-08-12",
-      "claude_hash": "9465a69ddb120ba3",
+      "note": "regex foreslaar: 2026-08-13 | Claude: 2026-08-12",
+      "claude_hash": "1d50c0baf1e024d7",
       "claude_suggested": "2026-08-12"
     },
     {
@@ -566,10 +735,20 @@
       "expected": "2026-08-11",
       "found": [
         "2026-05-21",
+        "2026-08-13",
         "2026-08-15"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-08-15"
+      "note": "regex foreslaar: 2026-08-13"
+    },
+    {
+      "id": "3a3b1da9f83cedc8",
+      "title": "Alnabyfest 2026",
+      "url": "https://www.oslo.kommune.no/bydel-alna/",
+      "expected": "2026-08-15",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst"
     },
     {
       "id": "2e5d18c8c19b6106",
@@ -621,15 +800,6 @@
       "title": "Deichman Torshov: Lokalhistorielauget",
       "url": "https://www.deichman.no/torshov",
       "expected": "2026-05-21",
-      "found": [],
-      "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
-    },
-    {
-      "id": "5cf1ee9302e199f5",
-      "title": "Elvelangs Akerselva 2026",
-      "url": "https://www.oslo.kommune.no/",
-      "expected": "2026-09-18",
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst"
@@ -709,15 +879,6 @@
       "note": "ingen datoer funnet i synlig tekst | Claude (cached): 2027-03-25",
       "claude_hash": "53596c23581c0fa0",
       "claude_suggested": "2027-03-25"
-    },
-    {
-      "id": "3741e8192b6b5f38",
-      "title": "Julegrantenning på Stortorvet",
-      "url": "https://www.oslo.kommune.no/",
-      "expected": "2026-11-28",
-      "found": [],
-      "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
     },
     {
       "id": "9877a490c26f9e41",
@@ -837,113 +998,6 @@
       "note": "ingen datoer funnet i synlig tekst"
     },
     {
-      "id": "de120652e9d47219",
-      "title": "Orientering: Blodslitet 2026",
-      "url": "https://orientering.no/",
-      "expected": "2026-10-10",
-      "found": [],
-      "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
-    },
-    {
-      "id": "7ee06b9ad778f5ed",
-      "title": "Orientering: KM sprint Akershus og Oslo",
-      "url": "https://orientering.no/",
-      "expected": "2026-06-06",
-      "found": [],
-      "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "e3d09622aa7365e5"
-    },
-    {
-      "id": "d765f97a38fd3af1",
-      "title": "Orientering: Nattuglen - nattløp i Nordmarka",
-      "url": "https://orientering.no/",
-      "expected": "2026-11-07",
-      "found": [],
-      "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
-    },
-    {
-      "id": "640487fc97d5643f",
-      "title": "Orientering: O-troll-løpet (for barn)",
-      "url": "https://orientering.no/",
-      "expected": "2026-05-02",
-      "found": [],
-      "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
-    },
-    {
-      "id": "bfba7c62ec5c8a36",
-      "title": "Orientering: OM stafett 2026",
-      "url": "https://orientering.no/",
-      "expected": "2026-09-12",
-      "found": [],
-      "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "e3d09622aa7365e5"
-    },
-    {
-      "id": "1db4770383ca2cc9",
-      "title": "Orientering: OSI Blindern-sprint",
-      "url": "https://orientering.no/",
-      "expected": "2026-08-29",
-      "found": [],
-      "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "e3d09622aa7365e5"
-    },
-    {
-      "id": "cf8578f74fd7d042",
-      "title": "Orientering: Oslo 3-dagers 2026",
-      "url": "https://orientering.no/",
-      "expected": "2026-08-14",
-      "found": [],
-      "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "e3d09622aa7365e5"
-    },
-    {
-      "id": "3a1b55fab626749b",
-      "title": "Orientering: Oslo Cup 1 - Sognsvann",
-      "url": "https://orientering.no/",
-      "expected": "2026-04-29",
-      "found": [],
-      "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "e3d09622aa7365e5"
-    },
-    {
-      "id": "9ca7c061b4879f0f",
-      "title": "Orientering: Oslo Cup 3 - Østmarksetra",
-      "url": "https://orientering.no/",
-      "expected": "2026-06-17",
-      "found": [],
-      "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "e3d09622aa7365e5"
-    },
-    {
-      "id": "d7065b72c00df6ff",
-      "title": "Orientering: Oslo-mesterskapet langdistanse",
-      "url": "https://orientering.no/",
-      "expected": "2026-09-05",
-      "found": [],
-      "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "e3d09622aa7365e5"
-    },
-    {
-      "id": "4249b7cb070b16ff",
-      "title": "Orientering: Pinseløpet 2026",
-      "url": "https://orientering.no/",
-      "expected": "2026-05-24",
-      "found": [],
-      "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "e3d09622aa7365e5"
-    },
-    {
       "id": "d845142a1a352f4c",
       "title": "Oslo Internasjonale Filmfestival 2026",
       "url": "https://oslofilmfestival.com/",
@@ -953,10 +1007,10 @@
       "note": "ingen datoer funnet i synlig tekst"
     },
     {
-      "id": "75cc25222d43888d",
-      "title": "Oslo Mangfoldsfestival 2026",
-      "url": "https://www.oslo.kommune.no/",
-      "expected": "2026-06-06",
+      "id": "db1148f0877a3624",
+      "title": "Oslo Lucia-tog 2026",
+      "url": "https://www.oslodomkirke.no/",
+      "expected": "2026-12-13",
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst"
@@ -980,10 +1034,10 @@
       "note": "ingen datoer funnet i synlig tekst"
     },
     {
-      "id": "976aafbe75b4afaa",
-      "title": "Sankthansbål ved Frognerkilen",
-      "url": "https://www.oslo.kommune.no/",
-      "expected": "2026-06-23",
+      "id": "8e15bcef1585dff6",
+      "title": "Sagene kirke konsertserie 2026",
+      "url": "https://kirken.no/sagene",
+      "expected": "2026-05-14",
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst"
@@ -1007,19 +1061,19 @@
       "note": "ingen datoer funnet i synlig tekst"
     },
     {
-      "id": "d23303142b16f715",
-      "title": "Sommerball Rådhusplassen 2026",
-      "url": "https://www.oslo.kommune.no/",
-      "expected": "2026-07-18",
+      "id": "2b8388cc2d0531de",
+      "title": "Sommerles 2026: lesekampanje for barn",
+      "url": "https://www.sommerles.no/",
+      "expected": "2026-06-01",
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst"
     },
     {
-      "id": "2b8388cc2d0531de",
-      "title": "Sommerles 2026: lesekampanje for barn",
-      "url": "https://www.sommerles.no/",
-      "expected": "2026-06-01",
+      "id": "af0e8120b57ec6cb",
+      "title": "Stovner kirke - barnekor 2026",
+      "url": "https://kirken.no/stovner",
+      "expected": "2026-05-17",
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst"
@@ -1116,20 +1170,6 @@
       ],
       "status": "ok",
       "note": ""
-    },
-    {
-      "id": "825088c200d31609",
-      "title": "Holmenkollstafetten 2026",
-      "url": "https://holmenkollstafetten.no/",
-      "expected": "2026-05-09",
-      "found": [
-        "2026-09-27",
-        "2027-05-08"
-      ],
-      "status": "ok",
-      "note": "bekreftet av Claude",
-      "claude_hash": "b403e5d37f16c8d3",
-      "claude_suggested": "2026-05-09"
     },
     {
       "id": "c3a438c27157cb2e",
@@ -1229,15 +1269,6 @@
       "title": "Furuset Forum — isidrett",
       "url": "https://www.facebook.com/furusetishockey/",
       "expected": "2026-09-20",
-      "found": [],
-      "status": "skipped",
-      "note": "URL er social/wiki/maps - ingen kanonisk dato"
-    },
-    {
-      "id": "3e32bd84a0851e75",
-      "title": "Grünerløkka speidergruppe",
-      "url": "https://speiding.no/oslokrets",
-      "expected": "2026-04-28",
       "found": [],
       "status": "skipped",
       "note": "URL er social/wiki/maps - ingen kanonisk dato"
