@@ -218,7 +218,8 @@
   },
   "https://groruddalen.no/groruddalsdebatt/rodt-bjerke-stotter-de-streikende-pa-thon-hotel-linne/": {
     "fetched_at": "2026-04-23T17:55:07.367850+00:00",
-    "image": "https://groruddalen.no/wp-content/uploads/2023/06/logo.jpeg"
+    "image": "https://groruddalen.no/wp-content/uploads/2023/06/logo.jpeg",
+    "last_checked_at": "2026-05-17T06:03:52.318070+00:00"
   },
   "https://groruddalen.no/kultur/100-ar-med-korpsglede-feires-pa-nasjonaldagen/": {
     "fetched_at": "2026-05-13T06:02:14.415735+00:00",
@@ -268,11 +269,13 @@
   },
   "https://groruddalen.no/kultur/hkeem-aktuell-med-ny-lat-selv-om-det-ikke-er-lett-ma-man-klare-a-se-bort-fra-folelsene/": {
     "fetched_at": "2026-04-23T17:55:06.086221+00:00",
-    "image": "https://groruddalen.imgix.net/2026/04/hkeem-ny-singel.jpg?auto=format%2Ccompress&crop=faces&cs=srgb&fit=crop&h=819&ixlib=php-2.1.1&w=1560"
+    "image": "https://groruddalen.imgix.net/2026/04/hkeem-ny-singel.jpg?auto=format%2Ccompress&crop=faces&cs=srgb&fit=crop&h=819&ixlib=php-2.1.1&w=1560",
+    "last_checked_at": "2026-05-17T06:03:52.318070+00:00"
   },
   "https://groruddalen.no/kultur/kalbakken-profil-klar-for-mesternes-mester-team-de-tilforer-masse-energi-humor-og-spenning/": {
     "fetched_at": "2026-04-23T17:55:05.575045+00:00",
-    "image": "https://groruddalen.imgix.net/2026/04/Mesternes-mester-team.jpg?auto=format%2Ccompress&crop=faces&cs=srgb&fit=crop&h=819&ixlib=php-2.1.1&w=1560"
+    "image": "https://groruddalen.imgix.net/2026/04/Mesternes-mester-team.jpg?auto=format%2Ccompress&crop=faces&cs=srgb&fit=crop&h=819&ixlib=php-2.1.1&w=1560",
+    "last_checked_at": "2026-05-17T06:03:52.318070+00:00"
   },
   "https://groruddalen.no/kultur/klassisk-storverk-i-grorud-kirke-ble-skrevet-mens-europa-gikk-mot-krig-na-framfores-forkladd-gud-i-groruddalen/": {
     "fetched_at": "2026-05-14T06:26:38.834138+00:00",
@@ -372,6 +375,10 @@
     "fetched_at": "2026-05-14T06:26:44.321272+00:00",
     "image": "https://groruddalen.imgix.net/2026/05/17-mai-komiteen-2026.jpg?auto=format%2Ccompress&crop=faces&cs=srgb&fit=crop&h=819&ixlib=php-2.1.1&w=1560"
   },
+  "https://groruddalen.no/nyheter/30-plussgrader-forsvant-pa-ett-dogn-men-na-er-wulffern-klar-for-17-mai-i-groruddalen/": {
+    "fetched_at": "2026-05-17T06:03:58.754288+00:00",
+    "image": "https://groruddalen.imgix.net/2026/05/Wulff-fra-Malaysia-og-rett-pa-oppdrag.jpg?auto=format%2Ccompress&crop=faces&cs=srgb&fit=crop&h=819&ixlib=php-2.1.1&w=1560"
+  },
   "https://groruddalen.no/nyheter/4-divisjon-tung-kveld-for-stovner-arvoll-i-ny-malthriller/": {
     "fetched_at": "2026-05-14T06:26:43.786921+00:00",
     "image": "https://groruddalen.imgix.net/2026/05/TRG_6691-facebook.jpg?auto=format%2Ccompress&crop=faces&cs=srgb&fit=crop&h=819&ixlib=php-2.1.1&w=1560"
@@ -392,6 +399,10 @@
     "fetched_at": "2026-04-23T17:57:08.921137+00:00",
     "image": "https://groruddalen.no/wp-content/uploads/2023/06/logo.jpeg"
   },
+  "https://groruddalen.no/nyheter/arina-amir-driver-ikke-med-politisk-avledning/": {
+    "fetched_at": "2026-05-17T06:03:59.015718+00:00",
+    "image": "https://groruddalen.no/wp-content/uploads/2023/06/logo.jpeg"
+  },
   "https://groruddalen.no/nyheter/bazar-under-paraplyen-det-summer-godt-pa-grorud/": {
     "fetched_at": "2026-05-13T06:02:06.053626+00:00",
     "image": "https://groruddalen.imgix.net/2026/05/IMG_3134-kopi-e1778489984150.jpg?auto=format%2Ccompress&crop=faces&cs=srgb&fit=crop&h=819&ixlib=php-2.1.1&w=1560"
@@ -406,7 +417,8 @@
   },
   "https://groruddalen.no/nyheter/bil-kjorte-inn-i-stromstolpe-pa-hoybraten/": {
     "fetched_at": "2026-04-23T17:55:07.625264+00:00",
-    "image": "https://groruddalen.no/wp-content/uploads/2023/06/logo.jpeg"
+    "image": "https://groruddalen.no/wp-content/uploads/2023/06/logo.jpeg",
+    "last_checked_at": "2026-05-17T06:03:52.318070+00:00"
   },
   "https://groruddalen.no/nyheter/bilbrann-pa-ammerud-fare-for-spredning-til-garasje/": {
     "fetched_at": "2026-05-11T06:02:51.683768+00:00",
@@ -470,7 +482,8 @@
   },
   "https://groruddalen.no/nyheter/flattsesongen-er-i-gang/": {
     "fetched_at": "2026-04-23T17:55:06.606917+00:00",
-    "image": "https://groruddalen.no/wp-content/uploads/2023/06/logo.jpeg"
+    "image": "https://groruddalen.no/wp-content/uploads/2023/06/logo.jpeg",
+    "last_checked_at": "2026-05-17T06:03:52.318070+00:00"
   },
   "https://groruddalen.no/nyheter/for-darlige-til-a-sortere/": {
     "fetched_at": "2026-04-23T17:57:08.160998+00:00",
@@ -526,11 +539,16 @@
   },
   "https://groruddalen.no/nyheter/helsebyraden-uenig-i-kritikken-av-bydelsreformen-mener-grorud-arbeiderparti-bommer-grovt/": {
     "fetched_at": "2026-04-23T17:55:08.127051+00:00",
-    "image": "https://groruddalen.imgix.net/2026/04/IMG_9632.jpg?auto=format%2Ccompress&crop=faces&cs=srgb&fit=crop&h=819&ixlib=php-2.1.1&w=1560"
+    "image": "https://groruddalen.imgix.net/2026/04/IMG_9632.jpg?auto=format%2Ccompress&crop=faces&cs=srgb&fit=crop&h=819&ixlib=php-2.1.1&w=1560",
+    "last_checked_at": "2026-05-17T06:03:52.318070+00:00"
   },
   "https://groruddalen.no/nyheter/her-doper-naeringsministeren-maskinen-som-skal-gi-jevnere-togturer/": {
     "fetched_at": "2026-05-07T06:03:09.234610+00:00",
     "image": "https://groruddalen.imgix.net/2026/05/sporjusteringsmaskin-4.jpg?auto=format%2Ccompress&crop=faces&cs=srgb&fit=crop&h=819&ixlib=php-2.1.1&w=1560"
+  },
+  "https://groruddalen.no/nyheter/hipp-hipp-hurra-2/": {
+    "fetched_at": "2026-05-17T06:03:59.280603+00:00",
+    "image": "https://groruddalen.imgix.net/2026/05/skjonnhaug-flaggborg-6-1.jpg?auto=format%2Ccompress&crop=faces&cs=srgb&fit=crop&h=819&ixlib=php-2.1.1&w=1560"
   },
   "https://groruddalen.no/nyheter/hotellstreiken-trappes-opp/": {
     "fetched_at": "2026-05-14T06:26:40.109093+00:00",
@@ -596,7 +614,8 @@
   },
   "https://groruddalen.no/nyheter/lover-satsing-pa-tveita-senter/": {
     "fetched_at": "2026-04-23T17:55:06.856425+00:00",
-    "image": "https://groruddalen.no/wp-content/uploads/2023/06/logo.jpeg"
+    "image": "https://groruddalen.no/wp-content/uploads/2023/06/logo.jpeg",
+    "last_checked_at": "2026-05-17T06:03:52.318070+00:00"
   },
   "https://groruddalen.no/nyheter/mandag-morgen-er-kjolig-men-temperaturen-stiger-utover-formiddagen/": {
     "fetched_at": "2026-05-11T06:02:51.419704+00:00",
@@ -653,7 +672,8 @@
   },
   "https://groruddalen.no/nyheter/odd-arild-grefstad-blir-ny-styreleder-i-hafslund/": {
     "fetched_at": "2026-04-23T17:55:07.113238+00:00",
-    "image": "https://groruddalen.imgix.net/2026/04/odd-arild-grefstad-lr.jpg?auto=format%2Ccompress&crop=faces&cs=srgb&fit=crop&h=819&ixlib=php-2.1.1&w=1560"
+    "image": "https://groruddalen.imgix.net/2026/04/odd-arild-grefstad-lr.jpg?auto=format%2Ccompress&crop=faces&cs=srgb&fit=crop&h=819&ixlib=php-2.1.1&w=1560",
+    "last_checked_at": "2026-05-17T06:03:52.318070+00:00"
   },
   "https://groruddalen.no/nyheter/om-johan-falkberget-pa-ellingsrud/": {
     "fetched_at": "2026-05-10T06:52:07.125486+00:00",
@@ -730,7 +750,8 @@
   },
   "https://groruddalen.no/nyheter/slukking-pagar/": {
     "fetched_at": "2026-04-23T17:55:07.877470+00:00",
-    "image": "https://groruddalen.imgix.net/2026/04/IMG_8948.jpeg?auto=format%2Ccompress&crop=faces&cs=srgb&fit=crop&h=819&ixlib=php-2.1.1&w=1560"
+    "image": "https://groruddalen.imgix.net/2026/04/IMG_8948.jpeg?auto=format%2Ccompress&crop=faces&cs=srgb&fit=crop&h=819&ixlib=php-2.1.1&w=1560",
+    "last_checked_at": "2026-05-17T06:03:52.318070+00:00"
   },
   "https://groruddalen.no/nyheter/sol-fra-morgen-til-kveld-moderat-spredning-av-bjorkepollen/": {
     "fetched_at": "2026-05-07T06:03:08.974297+00:00",
@@ -754,7 +775,8 @@
   },
   "https://groruddalen.no/nyheter/ssb-vi-har-ikke-darligere-rad/": {
     "fetched_at": "2026-04-23T17:55:06.348059+00:00",
-    "image": "https://groruddalen.no/wp-content/uploads/2023/06/logo.jpeg"
+    "image": "https://groruddalen.no/wp-content/uploads/2023/06/logo.jpeg",
+    "last_checked_at": "2026-05-17T06:03:52.318070+00:00"
   },
   "https://groruddalen.no/nyheter/stolthet-og-presisjon-er-malet-nar-furuset-skole-forbereder-seg-til-karl-johan/": {
     "fetched_at": "2026-05-12T06:02:31.263281+00:00",
@@ -842,7 +864,8 @@
   },
   "https://groruddalen.no/sport/ga-kjempen-kamp-men-grei-tapte-til-slutt/": {
     "fetched_at": "2026-04-23T17:55:05.828291+00:00",
-    "image": "https://groruddalen.imgix.net/2026/04/Fotball-Grei-damer-Viking-15.jpg?auto=format%2Ccompress&crop=faces&cs=srgb&fit=crop&h=819&ixlib=php-2.1.1&w=1560"
+    "image": "https://groruddalen.imgix.net/2026/04/Fotball-Grei-damer-Viking-15.jpg?auto=format%2Ccompress&crop=faces&cs=srgb&fit=crop&h=819&ixlib=php-2.1.1&w=1560",
+    "last_checked_at": "2026-05-17T06:03:52.318070+00:00"
   },
   "https://groruddalen.no/sport/grei-lekte-seg-med-stovner-i-nm-kvalifiseringen/": {
     "fetched_at": "2026-05-10T06:52:10.590433+00:00",
@@ -915,7 +938,8 @@
   },
   "https://il-try.no/post/248": {
     "fetched_at": "2026-04-23T17:55:12.304975+00:00",
-    "image": "https://il-try.no/images/teaser/php1Luaj1.jpg"
+    "image": "https://il-try.no/images/teaser/php1Luaj1.jpg",
+    "last_checked_at": "2026-05-17T06:03:52.318070+00:00"
   },
   "https://il-try.no/post/251": {
     "fetched_at": "2026-05-08T07:53:10.728476+00:00",
@@ -923,11 +947,13 @@
   },
   "https://il-try.no/post/256": {
     "fetched_at": "2026-04-23T17:55:11.637907+00:00",
-    "image": "https://il-try.no/images/teaser/phpVLFmrF.png"
+    "image": "https://il-try.no/images/teaser/phpVLFmrF.png",
+    "last_checked_at": "2026-05-17T06:03:52.318070+00:00"
   },
   "https://il-try.no/post/259": {
     "fetched_at": "2026-04-23T17:55:11.297664+00:00",
-    "image": "https://il-try.no/images/teaser/phpB7EB39.jpg"
+    "image": "https://il-try.no/images/teaser/phpB7EB39.jpg",
+    "last_checked_at": "2026-05-17T06:03:52.318070+00:00"
   },
   "https://il-try.no/post/262": {
     "fetched_at": "2026-05-08T07:53:10.439957+00:00",
@@ -939,7 +965,8 @@
   },
   "https://il-try.no/post/272": {
     "fetched_at": "2026-04-23T17:55:10.278881+00:00",
-    "image": "https://il-try.no/images/teaser/php7copFB.jpg"
+    "image": "https://il-try.no/images/teaser/php7copFB.jpg",
+    "last_checked_at": "2026-05-17T06:03:52.318070+00:00"
   },
   "https://il-try.no/post/278": {
     "fetched_at": "2026-05-08T07:53:09.905133+00:00",
@@ -951,7 +978,8 @@
   },
   "https://il-try.no/post/285": {
     "fetched_at": "2026-04-23T17:55:09.174512+00:00",
-    "image": "https://il-try.no/images/teaser/phpCSVTgZ.png"
+    "image": "https://il-try.no/images/teaser/phpCSVTgZ.png",
+    "last_checked_at": "2026-05-17T06:03:52.318070+00:00"
   },
   "https://il-try.no/post/288": {
     "fetched_at": "2026-05-08T07:53:09.348250+00:00",
@@ -1361,9 +1389,17 @@
     "fetched_at": "2026-05-04T06:27:36.807170+00:00",
     "image": null
   },
+  "https://www.akersposten.no/100-ar-gammel-holmenkollen-villa-til-salgs-for-nar-34-millioner-interessen-har-vart-meget-bra/s/5-142-338980": {
+    "fetched_at": "2026-05-17T06:03:56.683651+00:00",
+    "image": "https://g.acdn.no/obscura/API/dynamic/r1/ece5/tr_2000_2000_s_f/1778682041000/akpo/2026/5/13/16/Skjermbilde%2B2026-05-13%2Bkl.%2B16.15.25.png?chk=F69CBE"
+  },
   "https://www.akersposten.no/82-500-lopere-skal-gi-stafettpinnen-videre/s/5-142-335799": {
     "fetched_at": "2026-05-07T06:03:16.643080+00:00",
     "image": "https://g.acdn.no/obscura/API/dynamic/r1/ece5/tr_2000_2000_s_f/1777987032000/akpo/2026/5/3/16/b38cac95-1632-4483-a780-6c6830381935.bin?chk=5ECA0D"
+  },
+  "https://www.akersposten.no/akutt-vannlekkasje-blir-trolig-uten-vann-pa-nasjonaldagen/s/5-142-339431": {
+    "fetched_at": "2026-05-17T06:04:02.820744+00:00",
+    "image": "https://r.acdn.no/local/v3/publications/www.akersposten.no/gfx/square_logo.jpg"
   },
   "https://www.akersposten.no/amalie-20-har-gjort-bevisst-grep-pa-roa-man-ma-vare-kreativ-og-fleksibel/s/5-142-337376": {
     "fetched_at": "2026-05-10T06:52:17.739935+00:00",
@@ -1448,6 +1484,14 @@
   "https://www.akersposten.no/denne-eneboligen-gikk-for-25-millioner/s/5-142-330857": {
     "fetched_at": "2026-04-24T19:20:46.269729+00:00",
     "image": "https://g.acdn.no/obscura/API/dynamic/r1/ece5/tr_2000_2000_s_f/1776083080000/akpo/2026/4/13/14/IMG_8795.JPG?chk=09845C"
+  },
+  "https://www.akersposten.no/denne-utviklingen-hadde-vart-helt-krise-for-ruter-men-de-har-en-god-unnskyldning-alvor/s/5-142-338719": {
+    "fetched_at": "2026-05-17T06:04:02.978481+00:00",
+    "image": "https://g.acdn.no/obscura/API/dynamic/r1/ece5/tr_2000_2000_s_f/1778665122000/akpo/2026/5/13/11/IMG_1058__1_.jpg?chk=943931"
+  },
+  "https://www.akersposten.no/dette-bor-du-ha-med-deg-pa-17-mai-det-er-ikke-helt-trygt/s/5-128-1317392": {
+    "fetched_at": "2026-05-17T06:03:56.815590+00:00",
+    "image": "https://g.acdn.no/obscura/API/dynamic/r1/ece5/tr_2000_2000_s_f/1778832379000/avio/2026/5/15/10/5_128_800207_NTB_81sA2NAecmY.jpg?chk=5F5504"
   },
   "https://www.akersposten.no/dette-bor-du-ha-med-deg-pa-17-mai-det-er-ikke-helt-trygt/s/5-142-339142": {
     "fetched_at": "2026-05-16T06:47:08.150111+00:00",
@@ -1548,6 +1592,10 @@
   "https://www.akersposten.no/forventer-diskusjon-om-skoyens-fremtid-det-er-helt-apenbart-hva-folk-her-mener/s/5-142-336094": {
     "fetched_at": "2026-05-07T06:03:05.300482+00:00",
     "image": "https://g.acdn.no/obscura/API/dynamic/r1/ece5/tr_2000_2000_s_f/1777927855000/akpo/2026/5/4/20/IMG_9295.jpg?chk=2CF134"
+  },
+  "https://www.akersposten.no/forventer-flere-tusen-besokende-na-setter-politiet-inn-ekstra-mannskap-de-far-sikkert-nok-a-gjore/s/5-142-338666": {
+    "fetched_at": "2026-05-17T06:03:57.777177+00:00",
+    "image": "https://g.acdn.no/obscura/API/dynamic/r1/ece5/tr_2000_2000_s_f/1769764472000/akpo/2026/1/30/10/5_142_192338_NTB_JNFM4SIrA5A.jpg?chk=59BAA8"
   },
   "https://www.akersposten.no/forventer-kokaos-pa-e18-la-bilen-sta/s/5-142-332753": {
     "fetched_at": "2026-04-24T19:20:47.501680+00:00",
@@ -1689,6 +1737,10 @@
     "fetched_at": "2026-04-29T06:03:19.252230+00:00",
     "image": "https://g.acdn.no/obscura/API/dynamic/r1/ece5/tr_2000_2000_s_f/1776777339000/akpo/2026/4/20/15/ac52be04-89ef-4831-b2ea-ffb7801330f9.bin?chk=CFBA32"
   },
+  "https://www.akersposten.no/kyststiprosjektet-til-52-millioner-stoppet-opp-na-er-det-ny-utvikling/s/5-142-338811": {
+    "fetched_at": "2026-05-17T06:03:56.317977+00:00",
+    "image": "https://g.acdn.no/obscura/API/dynamic/r1/ece5/tr_2000_2000_s_f/1778675725000/akpo/2026/5/13/14/Perspektiv_ved_Maritim_baatforening.jpg?chk=37F600"
+  },
   "https://www.akersposten.no/la-ned-blomsterbutikken-pa-roa-torg-na-er-ny-aktor-pa-plass/s/5-142-335503": {
     "fetched_at": "2026-05-04T06:19:19.502832+00:00",
     "image": "https://g.acdn.no/obscura/API/dynamic/r1/ece5/tr_2000_2000_s_f/1777554266000/akpo/2026/4/30/15/IMG_3400.JPG?chk=402952"
@@ -1777,6 +1829,10 @@
     "fetched_at": "2026-05-10T06:52:19.159140+00:00",
     "image": "https://g.acdn.no/obscura/API/dynamic/r1/ece5/tr_2000_2000_s_f/1778228582000/akpo/2026/5/8/10/BILDE%2B1.jpeg?chk=C417B9"
   },
+  "https://www.akersposten.no/nytt-samarbeid-for-elektronikkjeden-foles-helt-riktig/s/5-142-338312": {
+    "fetched_at": "2026-05-17T06:03:56.932094+00:00",
+    "image": "https://g.acdn.no/obscura/API/dynamic/r1/ece5/tr_2000_2000_s_f/1778577740000/akpo/2026/5/12/11/photo__5_-kopi.jpg?chk=2AB30D"
+  },
   "https://www.akersposten.no/obos-prisene-falt-i-oslo-oppgang-pa-landsbasis/s/5-142-335895": {
     "fetched_at": "2026-05-07T06:03:06.376483+00:00",
     "image": "https://g.acdn.no/obscura/API/dynamic/r1/ece5/tr_2000_2000_s_f/1777895334000/akpo/2026/5/4/13/DJI_0940.jpg?chk=041BB0"
@@ -1792,6 +1848,10 @@
   "https://www.akersposten.no/oppussingsobjekt-solgt-raskt-23-000-klikk-pa-annonsen/s/5-142-334476": {
     "fetched_at": "2026-04-29T06:03:17.087023+00:00",
     "image": "https://g.acdn.no/obscura/API/dynamic/r1/ece5/tr_2000_2000_s_f/1777365235000/akpo/2026/4/28/10/27_stuer_2.jpg?chk=A9E573"
+  },
+  "https://www.akersposten.no/oslo-vest-russebuss-totalskadd-i-brann-i-natt/s/5-142-339377": {
+    "fetched_at": "2026-05-17T06:04:03.347119+00:00",
+    "image": "https://g.acdn.no/obscura/API/dynamic/r1/ece5/tr_2000_2000_s_f/1778914850000/akpo/2026/5/16/9/Brann%2Bi%2Brussebuss%2BEidsvoll.jpg?chk=D20A37"
   },
   "https://www.akersposten.no/pa-ullern-skjuler-det-seg-et-serveringstilbud-for-hele-nabolaget-det-er-veldig-goy/s/5-142-337334": {
     "fetched_at": "2026-05-11T06:02:55.252457+00:00",
@@ -1841,9 +1901,17 @@
     "fetched_at": "2026-05-10T06:52:17.936639+00:00",
     "image": "https://g.acdn.no/obscura/API/dynamic/r1/ece5/tr_2000_2000_s_f/1778074581000/akpo/2026/5/6/15/IMG_0538%2B%25282%2529.jpg?chk=266D44"
   },
+  "https://www.akersposten.no/ruter-far-advarsel-klar-forventning/s/5-142-338643": {
+    "fetched_at": "2026-05-17T06:03:57.626600+00:00",
+    "image": "https://g.acdn.no/obscura/API/dynamic/r1/ece5/tr_2000_2000_s_f/1778659384000/akpo/2026/5/13/10/0A0A9272%2B%25282%2529.jpg?chk=067612"
+  },
   "https://www.akersposten.no/ruter-prisene-stuper-men-gleden-kan-bli-kortvarig/s/5-142-335832": {
     "fetched_at": "2026-05-04T06:07:21.098267+00:00",
     "image": "https://g.acdn.no/obscura/API/dynamic/r1/ece5/tr_2000_2000_s_f/1777835917000/akpo/2026/5/3/21/Tok%2Bgrep%2Bp%2Bden%2Blatterliggjorte%2Bbusslinja.%2BEtt%2Bproblem%2Bskaper%2Bfortsatt%2Bhodebry%2Bfor%2BRuter?chk=BF9CDC"
+  },
+  "https://www.akersposten.no/rykker-ut-til-roykutvikling-pa-ullernasen/s/5-142-339425": {
+    "fetched_at": "2026-05-17T06:04:03.103947+00:00",
+    "image": "https://r.acdn.no/local/v3/publications/www.akersposten.no/gfx/square_logo.jpg"
   },
   "https://www.akersposten.no/sara-19-ble-heiet-frem-av-familien-tror-ikke-helt-de-skjonner-hvorfor/s/5-142-337594": {
     "fetched_at": "2026-05-10T06:52:18.070617+00:00",
@@ -1881,6 +1949,10 @@
     "fetched_at": "2026-04-29T06:03:18.421239+00:00",
     "image": "https://g.acdn.no/obscura/API/dynamic/r1/ece5/tr_2000_2000_s_f/1777361111000/akpo/2026/4/28/9/f7b266f4-6db2-476b-a568-35cb83d54a9e.jpg?chk=BAF538"
   },
+  "https://www.akersposten.no/slik-henter-du-ut-de-siste-hundretusenene-styling-grepene-som-selger/s/5-142-338544": {
+    "fetched_at": "2026-05-17T06:03:57.047351+00:00",
+    "image": "https://g.acdn.no/obscura/API/dynamic/r1/ece5/tr_2000_2000_s_f/1778598417000/akpo/2026/5/12/17/EDELGRANVEIEN%2B76-031.jpg?chk=32BA49"
+  },
   "https://www.akersposten.no/slik-lykkes-du-med-boligdrommen-sarlig-ett-grep-kan-vare-avgjorende/s/5-142-334553": {
     "fetched_at": "2026-05-04T06:19:18.311471+00:00",
     "image": "https://g.acdn.no/obscura/API/dynamic/r1/ece5/tr_2000_2000_s_f/1777373340000/akpo/2026/4/28/12/Helene%2BSolberg.bin?chk=8F785D"
@@ -1896,6 +1968,10 @@
   "https://www.akersposten.no/stein-erik-hagen-er-dod/s/5-142-336032": {
     "fetched_at": "2026-05-07T06:03:07.282197+00:00",
     "image": "https://g.acdn.no/obscura/API/dynamic/r1/ece5/tr_2000_2000_s_f/1720161698000/akpo/2024/7/5/8/cueres_scp-qlysvmmafi_QL8YsvmMafI.jpg?chk=7387D2"
+  },
+  "https://www.akersposten.no/stenger-vannet-etter-vannlekkasje/s/5-142-339091": {
+    "fetched_at": "2026-05-17T06:03:56.557217+00:00",
+    "image": "https://r.acdn.no/local/v3/publications/www.akersposten.no/gfx/square_logo.jpg"
   },
   "https://www.akersposten.no/stenger-vannet-i-oslo-vest/s/5-142-335284": {
     "fetched_at": "2026-05-04T06:07:21.200780+00:00",
@@ -1984,6 +2060,10 @@
   "https://www.akersposten.no/ullern-mann-skal-ha-fyllekjort-sa-oppdaget-politiet-mer/s/5-142-334228": {
     "fetched_at": "2026-05-04T06:19:19.295743+00:00",
     "image": "https://g.acdn.no/obscura/API/dynamic/r1/ece5/tr_2000_2000_s_f/1777286804000/akpo/2026/4/27/12/cueres_scp-mangler_navn_OxjfzOikMa0.jpg?chk=7270F6"
+  },
+  "https://www.akersposten.no/ungdomskriminaliteten-har-blitt-mer-alvorlig/s/5-142-339196": {
+    "fetched_at": "2026-05-17T06:04:03.219556+00:00",
+    "image": "https://g.acdn.no/obscura/API/dynamic/r1/ece5/tr_2000_2000_s_f/1778844239000/akpo/2026/5/15/13/196645106_4457825830902895_950890728967208526_n.jpg?chk=74CA31"
   },
   "https://www.akersposten.no/unntakstilstand-pa-deler-av-t-banen-vil-vare-i-ti-dager/s/5-128-1309559": {
     "fetched_at": "2026-05-04T06:19:18.614396+00:00",
@@ -2112,6 +2192,10 @@
   "https://www.dagsavisen.no/kultur/rir-inn-i-soloppgangen-pa-rodeo/10302749": {
     "fetched_at": "2026-04-23T17:57:30.324313+00:00",
     "image": "https://image.dagsavisen.no/10303809.jpg?imageId=10303809&x=0&y=33.56&cropw=100&croph=59.72&panox=0&panoy=33.56&panow=100&panoh=59.72&width=1200&height=683"
+  },
+  "https://www.dagsavisen.no/kultur/sterke-sanger-om-tida-som-gar/10348328": {
+    "fetched_at": "2026-05-17T06:04:02.323392+00:00",
+    "image": "https://image.dagsavisen.no/10348340.jpg?imageId=10348340&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683"
   },
   "https://www.dagsavisen.no/nyheter/1-mai-er-julekvelden-17-mai-og-litt-til/10319413": {
     "fetched_at": "2026-05-06T06:03:13.587816+00:00",
@@ -2593,6 +2677,10 @@
     "fetched_at": "2026-05-04T06:27:25.746680+00:00",
     "image": "https://www.kaaffa.no/nyheter/den-satt-langt-inne/_/image/951366f9-2d2c-4625-a244-1f904300e22b:43b02fb9c3f40a5f9bd45f143259b576b42c4e38/block-1200-630/NTB_rxSzz6t7Kyw.jpg?quality=85"
   },
+  "https://www.kaaffa.no/nyheter/ekstremt-stolt-av-gutta": {
+    "fetched_at": "2026-05-17T06:03:59.440227+00:00",
+    "image": "https://www.kaaffa.no/nyheter/ekstremt-stolt-av-gutta/_/image/c9b262bc-24c2-4add-bd0b-3c5a18bec5cb:4c999d54562d292abd59e09f1e305d054adb4ff4/block-1200-630/NTB_EGEy0sbc6ms.jpg?quality=85"
+  },
   "https://www.kaaffa.no/nyheter/heltemodig-pa-aspmyra": {
     "fetched_at": "2026-05-04T06:27:26.024183+00:00",
     "image": "https://www.kaaffa.no/nyheter/heltemodig-pa-aspmyra/_/image/25a9266a-2d09-44bf-af80-9ff048c0eb44:eaa0e9e41da187ecfda9446cb72697b21c531c82/block-1200-630/NTB_hXeEsdPF7gg.jpg?quality=85"
@@ -2648,6 +2736,10 @@
   "https://www.kaaffa.no/nyheter/nffs-patalenemnd-suspenderer-kfum-spillere": {
     "fetched_at": "2026-05-04T06:27:27.583056+00:00",
     "image": "https://www.kaaffa.no/nyheter/nffs-patalenemnd-suspenderer-kfum-spillere/_/image/bb35ddb4-17c1-4a89-a683-e90677ee0dcc:97ea63234ab1675fd2af33215e2af0183b95b6a2/block-1200-630/DJI_0025.jpg?quality=85"
+  },
+  "https://www.kaaffa.no/nyheter/nytt-rodt-kort-odela-i-bergen": {
+    "fetched_at": "2026-05-17T06:03:59.581745+00:00",
+    "image": "https://www.kaaffa.no/nyheter/nytt-rodt-kort-odela-i-bergen/_/image/32bc94c0-cfe4-4552-8f96-40ea93b19a8c:5a199ffef3872b1fd0c486bb0189e9b872010c28/block-1200-630/NTB_L4dravVGaPU.jpg?quality=85"
   },
   "https://www.kaaffa.no/nyheter/obos-fanzone-kfum-s08-2026": {
     "fetched_at": "2026-05-04T06:27:26.293318+00:00",
@@ -2759,7 +2851,8 @@
   },
   "https://www.kondis.no/idrett/finsk-storloper-har-flytta-til-norge-og-loper-holmenkollstafetten-for-sk-vidar/1560039": {
     "fetched_at": "2026-04-23T17:55:13.162278+00:00",
-    "image": "https://image.kondis.no/1560041.jpg?imageId=1560041&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683"
+    "image": "https://image.kondis.no/1560041.jpg?imageId=1560041&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683",
+    "last_checked_at": "2026-05-17T06:03:52.318070+00:00"
   },
   "https://www.kondis.no/idrett/klare-seire-til-sk-vidar-og-ullensaker/kisa-il-i-den-storste-holmenkollstafetten/1565537": {
     "fetched_at": "2026-05-10T06:52:14.989274+00:00",
@@ -2767,7 +2860,8 @@
   },
   "https://www.kondis.no/idrett/nydalen-og-ntnui-med-stafettseier-i-halden-o-meeting/1560374": {
     "fetched_at": "2026-04-23T17:55:13.762852+00:00",
-    "image": "https://image.kondis.no/1560378.jpg?imageId=1560378&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683"
+    "image": "https://image.kondis.no/1560378.jpg?imageId=1560378&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683",
+    "last_checked_at": "2026-05-17T06:03:52.318070+00:00"
   },
   "https://www.kondis.no/idrett/se-alle-bildene-fra-raskinnet-rundt-sognsvann/1562086": {
     "fetched_at": "2026-05-06T06:03:22.427133+00:00",
@@ -2945,6 +3039,10 @@
     "fetched_at": "2026-05-04T06:27:33.773894+00:00",
     "image": "https://www.lyn1896.no/nyheter/tap-mot-stabaek/_/image/fbecda6d-0b82-45d5-897a-ba052507b0c3:a7220a5f33b410e384c10efc5660b5196f4fa85b/block-1200-630/IMG_1657.jpeg.jpg?quality=85"
   },
+  "https://www.lyn1896.no/nyheter/tung-kveld-pa-bislett": {
+    "fetched_at": "2026-05-17T06:03:59.732397+00:00",
+    "image": "https://www.lyn1896.no/nyheter/tung-kveld-pa-bislett/_/image/aa2c798a-3523-4c65-aaf9-2b220b3ec0d4:5ba6e859649189271091ee020ff42b00c5598a3a/block-1200-630/small_Lyn-Kongsvinger_0-3_OBOS2026_LarsOpstad_053.jpg?quality=85"
+  },
   "https://www.lyn1896.no/nyheter/waehler-med-obos-debut-noe-jeg-har-dromt-om-siden-jeg-var-liten": {
     "fetched_at": "2026-04-27T06:03:18.526118+00:00",
     "image": "https://www.lyn1896.no/nyheter/waehler-med-obos-debut-noe-jeg-har-dromt-om-siden-jeg-var-liten/_/image/0c27ffe7-297d-4cf7-a702-6c65efced90f:49919d52be5aeae00248b352a436ad8409baa559/block-1200-630/small_Sogndal-Lyn_0-3_OBOS-2026_LarsOpstad_212%20(1).jpg?quality=85"
@@ -3057,6 +3155,10 @@
     "fetched_at": "2026-05-10T06:52:13.456332+00:00",
     "image": "https://secure.meetupstatic.com/photos/event/8/2/a/2/600_534033442.jpeg"
   },
+  "https://www.meetup.com/takeaphotowalkoslo/events/314582709/": {
+    "fetched_at": "2026-05-17T06:04:02.167921+00:00",
+    "image": "https://secure.meetupstatic.com/photos/event/5/7/9/600_534001401.jpeg"
+  },
   "https://www.nationaltheatret.no/forestillinger/affekt": {
     "fetched_at": "2026-05-04T06:07:14.663049+00:00",
     "image": null
@@ -3163,11 +3265,13 @@
   },
   "https://www.nrk.no/stor-oslo/alvorlig-sykkelulykke-pa-bygdoy-1.17853526": {
     "fetched_at": "2026-04-23T17:55:14.212517+00:00",
-    "image": "https://gfx.nrk.no/K79A2opYaD0_HzegIMh6iwF9fqtFT-sa1u06kO0pk3UQ.jpg"
+    "image": "https://gfx.nrk.no/K79A2opYaD0_HzegIMh6iwF9fqtFT-sa1u06kO0pk3UQ.jpg",
+    "last_checked_at": "2026-05-17T06:03:52.318070+00:00"
   },
   "https://www.nrk.no/stor-oslo/brann-i-bygard-pa-majorstua-i-oslo-1.17856376": {
     "fetched_at": "2026-04-23T17:55:13.902107+00:00",
-    "image": "https://gfx.nrk.no/oonQQQwBaYd3E_ig5tDaugdrDUa6YRnau_gI1xitdH4g.jpg"
+    "image": "https://gfx.nrk.no/oonQQQwBaYd3E_ig5tDaugdrDUa6YRnau_gI1xitdH4g.jpg",
+    "last_checked_at": "2026-05-17T06:03:52.318070+00:00"
   },
   "https://www.nrk.no/stor-oslo/brannen-pa-vestli_-mann-bekreftet-dod-1.17858148": {
     "fetched_at": "2026-04-23T17:57:10.327927+00:00",
@@ -3179,15 +3283,18 @@
   },
   "https://www.nrk.no/stor-oslo/eliteserien-2026_-valerenga-lillestrom-derby-med-fullsatt-stadion-1.17851793": {
     "fetched_at": "2026-04-23T17:55:14.550887+00:00",
-    "image": "https://gfx.nrk.no/oytn5oh_8qANDFT0DbxjZQo98CiBUKwhZ5YQaMdI65lw.jpg"
+    "image": "https://gfx.nrk.no/oytn5oh_8qANDFT0DbxjZQo98CiBUKwhZ5YQaMdI65lw.jpg",
+    "last_checked_at": "2026-05-17T06:03:52.318070+00:00"
   },
   "https://www.nrk.no/stor-oslo/funn-av-dod-person-i-oslo-_-etterforskes-som-drap-1.17852637": {
     "fetched_at": "2026-04-23T17:55:14.425226+00:00",
-    "image": "https://gfx.nrk.no/-aWI4qXf8eUmjIPQ37dLawbyW9NOAtumFGZNAHu4xp2Q.jpg"
+    "image": "https://gfx.nrk.no/-aWI4qXf8eUmjIPQ37dLawbyW9NOAtumFGZNAHu4xp2Q.jpg",
+    "last_checked_at": "2026-05-17T06:03:52.318070+00:00"
   },
   "https://www.nrk.no/stor-oslo/i-dag-starter-bygginga---dette-er-kontroversene-rundt-oslos-nye-rikshospital-1.17849017": {
     "fetched_at": "2026-04-23T17:56:57.981049+00:00",
-    "image": "https://gfx.nrk.no/GRZ8ZG3RDi4xBcqflGo8LQTnhs-cgonZAQGQNeFt05Dg.jpg"
+    "image": "https://gfx.nrk.no/GRZ8ZG3RDi4xBcqflGo8LQTnhs-cgonZAQGQNeFt05Dg.jpg",
+    "last_checked_at": "2026-05-17T06:03:52.318070+00:00"
   },
   "https://www.nrk.no/stor-oslo/innbrudd-hos-urmaker-bjerke-1.17868156": {
     "fetched_at": "2026-05-04T06:19:22.945363+00:00",
@@ -3215,7 +3322,8 @@
   },
   "https://www.nrk.no/stor-oslo/ryktespredning-etter-drapet-pa-gronland_-_-svaert-uheldig-1.17849530": {
     "fetched_at": "2026-04-23T17:56:57.775989+00:00",
-    "image": "https://gfx.nrk.no/pnAKELWxwb59XxwGL-jskwz8fr-XcZP32PmVylEZ5F3w.jpg"
+    "image": "https://gfx.nrk.no/pnAKELWxwb59XxwGL-jskwz8fr-XcZP32PmVylEZ5F3w.jpg",
+    "last_checked_at": "2026-05-17T06:03:52.318070+00:00"
   },
   "https://www.nrk.no/stor-oslo/skytingen-pa-okern_-kan-ikke-utelukke-voldsoppdrag-1.17866073": {
     "fetched_at": "2026-05-04T06:19:23.303329+00:00",
@@ -3340,6 +3448,10 @@
   "https://www.oppsalhandball.no/2026/05/15/veriana-veliqi-klar-for-oppsal-et-prosjekt-jeg-virkelig-har-troen-pa/": {
     "fetched_at": "2026-05-16T06:47:02.778974+00:00",
     "image": "https://www.oppsalhandball.no/wp-content/uploads/sites/38/2026/05/Veriana-Veliqi-.jpg"
+  },
+  "https://www.oppsalhandball.no/2026/05/17/fredrikke-sundsby-kjolstad-klar-for-oppsal-et-sted-jeg-kan-utvikle-meg-og-bidra/": {
+    "fetched_at": "2026-05-17T06:04:00.483168+00:00",
+    "image": "https://www.oppsalhandball.no/wp-content/uploads/sites/38/2026/05/Fredrikke.jpg"
   },
   "https://www.oslo.kommune.no/kunngjoringer/bymiljoetaten-leier-ut-paviljong-i-spikersuppa-for-sommersesongen-2026/": {
     "fetched_at": "2026-04-24T11:17:10.180702+00:00",
@@ -3523,7 +3635,8 @@
   },
   "https://www.skeid.no/nyheter/arets-drakter-har-kommet": {
     "fetched_at": "2026-04-23T17:56:58.614484+00:00",
-    "image": "https://www.skeid.no/nyheter/arets-drakter-har-kommet/_/image/aecfa5bb-aa00-4470-9e6b-d514597fe288:4d412e69910318c0dde94877a4c6f6da0889a1dc/block-1200-630/20260417_125146.jpg?quality=85"
+    "image": "https://www.skeid.no/nyheter/arets-drakter-har-kommet/_/image/aecfa5bb-aa00-4470-9e6b-d514597fe288:4d412e69910318c0dde94877a4c6f6da0889a1dc/block-1200-630/20260417_125146.jpg?quality=85",
+    "last_checked_at": "2026-05-17T06:03:52.318070+00:00"
   },
   "https://www.skeid.no/nyheter/badiane-avgjor-i-stjordal": {
     "fetched_at": "2026-05-11T06:02:51.164345+00:00",
@@ -3551,7 +3664,8 @@
   },
   "https://www.skeid.no/nyheter/filip-forlenger": {
     "fetched_at": "2026-04-23T17:56:58.765125+00:00",
-    "image": "https://www.skeid.no/nyheter/filip-forlenger/_/image/b2e10cf3-15e4-4a5c-9275-7a322583bdd5:02155d874eb5b4edc8df03ae0458f854319556a1/block-1200-630/55203448300_3fa070815e_k.jpg?quality=85"
+    "image": "https://www.skeid.no/nyheter/filip-forlenger/_/image/b2e10cf3-15e4-4a5c-9275-7a322583bdd5:02155d874eb5b4edc8df03ae0458f854319556a1/block-1200-630/55203448300_3fa070815e_k.jpg?quality=85",
+    "last_checked_at": "2026-05-17T06:03:52.318070+00:00"
   },
   "https://www.skeid.no/nyheter/god-kamp-mot-grorud": {
     "fetched_at": "2026-05-13T06:02:06.402499+00:00",
@@ -3563,7 +3677,8 @@
   },
   "https://www.skeid.no/nyheter/kjemper-seg-til-uavgjort-mot-serielederen": {
     "fetched_at": "2026-04-23T17:56:58.296958+00:00",
-    "image": "https://www.skeid.no/nyheter/kjemper-seg-til-uavgjort-mot-serielederen/_/image/edbae89f-3c3f-47b5-ac60-c10dfadee70a:0262662a842a674dc0ca5cb47092f7aed98440c1/block-1200-630/Andrine_N.JPG.jpg?quality=85"
+    "image": "https://www.skeid.no/nyheter/kjemper-seg-til-uavgjort-mot-serielederen/_/image/edbae89f-3c3f-47b5-ac60-c10dfadee70a:0262662a842a674dc0ca5cb47092f7aed98440c1/block-1200-630/Andrine_N.JPG.jpg?quality=85",
+    "last_checked_at": "2026-05-17T06:03:52.318070+00:00"
   },
   "https://www.skeid.no/nyheter/kro-og-skeid-gjenopptar-sitt-historiske-samarbeid": {
     "fetched_at": "2026-04-23T17:57:10.477914+00:00",
@@ -3579,11 +3694,13 @@
   },
   "https://www.skeid.no/nyheter/poenget-glapp-i-sluttminuttene": {
     "fetched_at": "2026-04-23T17:56:58.474483+00:00",
-    "image": "https://www.skeid.no/nyheter/poenget-glapp-i-sluttminuttene/_/image/5688736d-0007-4f68-9c95-b8030a502225:0eb1fd1d3b41163d3db8799b037f9039d209d22d/block-1200-630/Fiksdal%20p%C3%A5%20straffe.jpg?quality=85"
+    "image": "https://www.skeid.no/nyheter/poenget-glapp-i-sluttminuttene/_/image/5688736d-0007-4f68-9c95-b8030a502225:0eb1fd1d3b41163d3db8799b037f9039d209d22d/block-1200-630/Fiksdal%20p%C3%A5%20straffe.jpg?quality=85",
+    "last_checked_at": "2026-05-17T06:03:52.318070+00:00"
   },
   "https://www.skeid.no/nyheter/polsemakermester-strom-larsen-er-med": {
     "fetched_at": "2026-04-23T17:56:58.151357+00:00",
-    "image": "https://www.skeid.no/nyheter/polsemakermester-strom-larsen-er-med/_/image/10d6edc7-ef11-4a98-a6b8-d526583bb620:9cff8bc3c7c3f5048a38a0c6f52f88fb913e88aa/block-1200-630/sl.jpg?quality=85"
+    "image": "https://www.skeid.no/nyheter/polsemakermester-strom-larsen-er-med/_/image/10d6edc7-ef11-4a98-a6b8-d526583bb620:9cff8bc3c7c3f5048a38a0c6f52f88fb913e88aa/block-1200-630/sl.jpg?quality=85",
+    "last_checked_at": "2026-05-17T06:03:52.318070+00:00"
   },
   "https://www.skeid.no/nyheter/seier-i-premieren": {
     "fetched_at": "2026-04-23T17:56:59.215695+00:00",
@@ -3595,7 +3712,8 @@
   },
   "https://www.skeid.no/nyheter/skeid-aktiv-med-en-hjelpende-hand": {
     "fetched_at": "2026-04-23T17:56:58.902238+00:00",
-    "image": "https://www.skeid.no/nyheter/skeid-aktiv-med-en-hjelpende-hand/_/image/27c00117-9527-4a51-ac23-9ab05bdfc2da:46e7387f2df0b943092ffa85dff5cf1ce444310b/block-1200-630/55203050016_d772542035_k.jpg?quality=85"
+    "image": "https://www.skeid.no/nyheter/skeid-aktiv-med-en-hjelpende-hand/_/image/27c00117-9527-4a51-ac23-9ab05bdfc2da:46e7387f2df0b943092ffa85dff5cf1ce444310b/block-1200-630/55203050016_d772542035_k.jpg?quality=85",
+    "last_checked_at": "2026-05-17T06:03:52.318070+00:00"
   },
   "https://www.skeid.no/nyheter/tap-i-attemalskamp-mot-ull-kisa": {
     "fetched_at": "2026-04-23T17:56:59.796660+00:00",
@@ -3604,6 +3722,10 @@
   "https://www.skeid.no/nyheter/tap-i-generalproven_": {
     "fetched_at": "2026-04-23T17:57:00.078318+00:00",
     "image": "https://www.skeid.no/nyheter/tap-i-generalproven_/_/image/9bf2acf6-38ee-4408-9883-b74a59051074:c9c1ed2769a808f5c7cf7288141d247761791826/block-1200-630/Filip_Stensland.jpg?quality=85"
+  },
+  "https://www.skeid.no/nyheter/tap-i-lokaloppgjoret": {
+    "fetched_at": "2026-05-17T06:03:57.922128+00:00",
+    "image": "https://www.skeid.no/nyheter/tap-i-lokaloppgjoret/_/image/e4102758-1f2e-48ad-9002-1b41632a258d:6b99c94fd1cc9573041dedc66286d6f1fc44710c/block-1200-630/52182813729_1e8765506e_k.jpg?quality=85"
   },
   "https://www.skeid.no/nyheter/tap-tross-nytt-musa-mal": {
     "fetched_at": "2026-05-04T06:19:28.750529+00:00",
@@ -3741,6 +3863,10 @@
     "fetched_at": "2026-05-14T06:26:47.458392+00:00",
     "image": "https://images.gfx.no/cx0,cy0,cw5457,ch3069,1200x/2922/2922983/original.jpg"
   },
+  "https://www.tu.no/artikler/finnes-det-en-grense-for-hvor-mye-penger-en-ny-oslotunnel-kan-koste/572207": {
+    "fetched_at": "2026-05-17T06:04:00.724631+00:00",
+    "image": "https://images.gfx.no/cx0,cy0,cw3898,ch2193,1200x/2923/2923460/Gillesvik%252C%2520Kjetil.jpg"
+  },
   "https://www.tu.no/artikler/leier-ut-batterier-gratis-kapasiteten-pa-hovedsikringen-avgjor-lonnsomheten/571027": {
     "fetched_at": "2026-05-13T06:02:07.585139+00:00",
     "image": "https://images.gfx.no/cx0,cy0,cw2900,ch1631,1200x/2919/2919868/Batteri%2520som%2520tjeneste%2520Sunday%2520Power%2520KLP%2520solceller%2520(50).jpg"
@@ -3809,6 +3935,10 @@
     "fetched_at": "2026-05-16T06:47:05.223138+00:00",
     "image": "https://image.vartoslo.no/1175556.jpg?imageId=1175556&x=0&y=7.28&cropw=100&croph=85.43&panox=0&panoy=7.28&panow=100&panoh=85.43&width=1200&height=683"
   },
+  "https://www.vartoslo.no/17-mai-anbefalt-bolt/her-blir-det-ikke-mulig-a-kjore-elsparkesykkel-pa-nasjonaldagen/793568": {
+    "fetched_at": "2026-05-17T06:04:02.658706+00:00",
+    "image": "https://image.vartoslo.no/1178289.jpg?imageId=1178289&x=1.42&y=11.12&cropw=96&croph=78.18&panox=1.42&panoy=11.12&panow=96&panoh=78.18&width=1200&height=683"
+  },
   "https://www.vartoslo.no/17-mai-anbefalt-eva-gullerud/fjerdeklassen-pa-ila-skole-skal-opptre-foran-tusenvis-pa-st-hanshaugen-tror-nok-folk-kommer-til-a-fa-litt-gasehud-sier-isak-9/1176776": {
     "fetched_at": "2026-05-16T06:47:05.014972+00:00",
     "image": "https://image.vartoslo.no/1176887.jpg?imageId=1176887&x=30.3&y=27.12&cropw=52&croph=37.28&panox=30.3&panoy=27.12&panow=52&panoh=37.28&width=1200&height=683"
@@ -3852,6 +3982,10 @@
   "https://www.vartoslo.no/amazonia-by-bar-anbefalt-bydel-frogner/ung-kvinne-trodd-av-retten-pa-alle-punkter-ble-voldtatt-pa-tjuvholmen-utestedets-hc-toalett/1160722": {
     "fetched_at": "2026-04-29T06:03:15.099331+00:00",
     "image": "https://image.vartoslo.no/1160728.jpg?imageId=1160728&x=0&y=10.51&cropw=100&croph=60.28&panox=0&panoy=10.51&panow=100&panoh=60.28&width=1200&height=683"
+  },
+  "https://www.vartoslo.no/amund-kveim-anbefalt-bydel-ostensjo/har-telt-oppimot-60-dode-fisker-i-ostensjovannet-dette-bor-vaere-et-varsko/1178533": {
+    "fetched_at": "2026-05-17T06:04:02.493457+00:00",
+    "image": "https://image.vartoslo.no/1178642.jpg?imageId=1178642&x=0&y=5.94&cropw=100&croph=80.63&panox=0&panoy=5.94&panow=100&panoh=80.63&width=1200&height=683"
   },
   "https://www.vartoslo.no/anbefalt-anita-leirvik-north-barn-og-unge/politikere-trodde-de-ga-idrettsmillioner-til-barn-nesten-alt-skal-ha-gatt-til-administrasjon-i-oslo-idrettskrets/1165334": {
     "fetched_at": "2026-05-06T06:03:22.997224+00:00",
@@ -4185,6 +4319,14 @@
     "fetched_at": "2026-05-07T06:03:11.880044+00:00",
     "image": "https://www.vif-fotball.no/nyheter/geir-bakke-slutter/_/image/378ced8d-596d-4ac6-8725-bab2308c8e8c:b5d5ceb1073b662c0de650da0200f66c20bd9c00/block-1200-630/NTB_MVV2bSHeVPs.jpg?quality=85"
   },
+  "https://www.vif-fotball.no/nyheter/godt-at-gutta-fikk-kjenne-pa-litt-good-times-til-slutt": {
+    "fetched_at": "2026-05-17T06:03:58.072805+00:00",
+    "image": "https://www.vif-fotball.no/nyheter/godt-at-gutta-fikk-kjenne-pa-litt-good-times-til-slutt/_/image/e4763bc7-32a8-4449-b282-a8aa69202d66:96829c988785ecbe07ece3cc76a537a041511786/block-1200-630/DSC03131.JPG.jpg?quality=85"
+  },
+  "https://www.vif-fotball.no/nyheter/grundetjern-avgjorde-foran-ostblokka": {
+    "fetched_at": "2026-05-17T06:03:58.350084+00:00",
+    "image": "https://www.vif-fotball.no/nyheter/grundetjern-avgjorde-foran-ostblokka/_/image/daf1179a-4549-4285-b118-d949f9e3e86e:dfd533192e0b2547f6cc0833b2a018e6ec2bec89/block-1200-630/DSC06802.jpg?quality=85"
+  },
   "https://www.vif-fotball.no/nyheter/han-er-valerengas-nye-sjef": {
     "fetched_at": "2026-05-14T06:26:34.097092+00:00",
     "image": "https://www.vif-fotball.no/nyheter/han-er-valerengas-nye-sjef/_/image/bdfc5ef0-777a-443c-845f-619b4e62bad0:a560513db935a66cdda373288c42250cab0cf51f/block-1200-630/36509.jpg?quality=85"
@@ -4292,6 +4434,10 @@
   "https://www.vif-fotball.no/nyheter/uavgjort-pa-fredrikstad-stadion": {
     "fetched_at": "2026-04-23T17:57:02.812516+00:00",
     "image": "https://www.vif-fotball.no/nyheter/uavgjort-pa-fredrikstad-stadion/_/image/23c7fa91-fc38-4b42-ae57-2d8e7b9d781e:0aacc2846bff326289fb1bf6224ae9fb650a1e1a/block-1200-630/DSC04813.JPG.jpg?quality=85"
+  },
+  "https://www.vif-fotball.no/nyheter/valerengas-xi-kongebla": {
+    "fetched_at": "2026-05-17T06:03:58.498557+00:00",
+    "image": "https://www.vif-fotball.no/nyheter/valerengas-xi-kongebla/_/image/6b3e971c-56f4-49b7-9ce8-7600af4ff193:a7e3f22527d86f54b885007f9b28f4c9025e97b7/block-1200-630/DSC02595.jpg?quality=85"
   },
   "https://www.vif-fotball.no/nyheter/valerengas-xi-pa-aker-stadion": {
     "fetched_at": "2026-05-04T06:27:24.167878+00:00",

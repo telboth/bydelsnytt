@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-05-16T06:45:50.184099+00:00",
+  "generatedAt": "2026-05-17T06:04:23.430908+00:00",
   "counts": {
     "fetch_failed": 2,
-    "mismatch": 47,
-    "no_dates": 44,
+    "mismatch": 46,
+    "no_dates": 41,
     "ok": 10,
     "skipped": 14
   },
@@ -95,15 +95,30 @@
       "claude_hash": "a9d69d9db2425809"
     },
     {
+      "id": "c48fb63704a3e1cf",
+      "title": "FIS World Cup Holmenkollen 2027",
+      "url": "https://www.skiforeningen.no/holmenkollen/holmenkollen-skifestival/",
+      "expected": "2027-03-13",
+      "found": [
+        "2026-05-17",
+        "2027-05-05",
+        "2027-12-03"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2027-05-05 | Claude (cached): 2027-03-13",
+      "claude_hash": "3d1e6bc62dd1e89b",
+      "claude_suggested": "2027-03-13"
+    },
+    {
       "id": "85a06f285713ed5c",
       "title": "Filmhuset høstprogram 2026",
       "url": "https://www.cinemateket.no/",
       "expected": "2026-09-01",
       "found": [
-        "2026-05-18",
         "2026-05-19",
         "2026-05-20",
         "2026-05-23",
+        "2026-05-27",
         "2026-05-28"
       ],
       "status": "mismatch",
@@ -300,7 +315,6 @@
       "url": "https://www.deichman.no/",
       "expected": "2026-11-09",
       "found": [
-        "2026-05-16",
         "2026-05-17"
       ],
       "status": "mismatch",
@@ -329,7 +343,8 @@
         "2026-05-21"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-05-21"
+      "note": "regex foreslaar: 2026-05-21 | Claude: ukjent",
+      "claude_hash": "0af8d8c80194421c"
     },
     {
       "id": "51cafb5f0901801b",
@@ -366,7 +381,7 @@
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-05-21 | Claude: ukjent",
-      "claude_hash": "5335690b3b90e487"
+      "claude_hash": "0af8d8c80194421c"
     },
     {
       "id": "2eb24d2c2de44117",
@@ -389,18 +404,8 @@
         "2026-05-21"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-05-21"
-    },
-    {
-      "id": "640487fc97d5643f",
-      "title": "Orientering: O-troll-løpet (for barn)",
-      "url": "https://orientering.no/",
-      "expected": "2026-05-02",
-      "found": [
-        "2026-05-21"
-      ],
-      "status": "mismatch",
-      "note": "regex foreslaar: 2026-05-21"
+      "note": "regex foreslaar: 2026-05-21 | Claude: ukjent",
+      "claude_hash": "0af8d8c80194421c"
     },
     {
       "id": "bfba7c62ec5c8a36",
@@ -411,7 +416,8 @@
         "2026-05-21"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-05-21"
+      "note": "regex foreslaar: 2026-05-21 | Claude: ukjent",
+      "claude_hash": "0af8d8c80194421c"
     },
     {
       "id": "1db4770383ca2cc9",
@@ -423,7 +429,7 @@
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-05-21 | Claude: ukjent",
-      "claude_hash": "5335690b3b90e487"
+      "claude_hash": "0af8d8c80194421c"
     },
     {
       "id": "cf8578f74fd7d042",
@@ -435,7 +441,7 @@
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-05-21 | Claude: ukjent",
-      "claude_hash": "5335690b3b90e487"
+      "claude_hash": "0af8d8c80194421c"
     },
     {
       "id": "9ca7c061b4879f0f",
@@ -447,7 +453,7 @@
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-05-21 | Claude: ukjent",
-      "claude_hash": "5335690b3b90e487"
+      "claude_hash": "0af8d8c80194421c"
     },
     {
       "id": "d7065b72c00df6ff",
@@ -459,7 +465,7 @@
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-05-21 | Claude: ukjent",
-      "claude_hash": "5335690b3b90e487"
+      "claude_hash": "0af8d8c80194421c"
     },
     {
       "id": "4249b7cb070b16ff",
@@ -471,7 +477,7 @@
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-05-21 | Claude: ukjent",
-      "claude_hash": "5335690b3b90e487"
+      "claude_hash": "0af8d8c80194421c"
     },
     {
       "id": "4b452eb704efb020",
@@ -545,20 +551,6 @@
       "note": "regex foreslaar: 2026-06-13"
     },
     {
-      "id": "1f0858181de6ec63",
-      "title": "Ris skoles loppemarked 2026",
-      "url": "https://ris.osloskolen.no/",
-      "expected": "2026-05-02",
-      "found": [
-        "2026-05-17",
-        "2026-05-20",
-        "2026-05-21"
-      ],
-      "status": "mismatch",
-      "note": "regex foreslaar: 2026-05-17 | Claude: ukjent",
-      "claude_hash": "99f2431607c99dd1"
-    },
-    {
       "id": "7144904c18ac6dac",
       "title": "Styrkeprøven 2026 (Trondheim-Oslo)",
       "url": "https://www.styrkeproven.no/",
@@ -591,10 +583,10 @@
       "url": "https://www.vif-fotball.no/",
       "expected": "2026-08-09",
       "found": [
-        "2026-05-16"
+        "2026-05-25"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-05-16"
+      "note": "regex foreslaar: 2026-05-25"
     },
     {
       "id": "42cfbcf540ef9b4c",
@@ -739,16 +731,6 @@
       "note": "ingen datoer funnet i synlig tekst"
     },
     {
-      "id": "13cc19958ececa7a",
-      "title": "Holmenkollmarsjen 2027",
-      "url": "https://www.holmenkollmarsjen.no/",
-      "expected": "2027-03-06",
-      "found": [],
-      "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "091f030f0f40ba34"
-    },
-    {
       "id": "3d7503aa7cb041fd",
       "title": "Holmliadagen 2026",
       "url": "https://www.oslo.kommune.no/bydel-sondre-nordstrand/",
@@ -798,15 +780,6 @@
       "title": "Kobberhaughytta",
       "url": "https://ut.no/hytte/10645/kobberhaughytta",
       "expected": "2026-06-01",
-      "found": [],
-      "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
-    },
-    {
-      "id": "7dcefdec6d3bba59",
-      "title": "Lilloseter serveringsstue",
-      "url": "https://lilloseter.no/",
-      "expected": "2026-05-02",
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst"
@@ -956,15 +929,6 @@
       "note": "ingen datoer funnet i synlig tekst"
     },
     {
-      "id": "e367214b7e0c174d",
-      "title": "Skjennungstua åpner sommersesongen",
-      "url": "https://ut.no/hytte/10640/skjennungstua",
-      "expected": "2026-05-02",
-      "found": [],
-      "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
-    },
-    {
       "id": "d23303142b16f715",
       "title": "Sommerball Rådhusplassen 2026",
       "url": "https://www.oslo.kommune.no/",
@@ -1070,21 +1034,6 @@
       "note": ""
     },
     {
-      "id": "c48fb63704a3e1cf",
-      "title": "FIS World Cup Holmenkollen 2027",
-      "url": "https://www.skiforeningen.no/holmenkollen/holmenkollen-skifestival/",
-      "expected": "2027-03-13",
-      "found": [
-        "2026-05-17",
-        "2027-05-05",
-        "2027-12-03"
-      ],
-      "status": "ok",
-      "note": "bekreftet av Claude",
-      "claude_hash": "3d1e6bc62dd1e89b",
-      "claude_suggested": "2027-03-13"
-    },
-    {
       "id": "cfc0192161a9b689",
       "title": "Grefsenkollen opp 2026",
       "url": "https://www.grefsenkollenopp.no/",
@@ -1095,6 +1044,17 @@
       ],
       "status": "ok",
       "note": ""
+    },
+    {
+      "id": "13cc19958ececa7a",
+      "title": "Holmenkollmarsjen 2027",
+      "url": "https://www.holmenkollmarsjen.no/",
+      "expected": "2027-03-06",
+      "found": [],
+      "status": "ok",
+      "note": "bekreftet av Claude",
+      "claude_hash": "091f030f0f40ba34",
+      "claude_suggested": "2027-03-06"
     },
     {
       "id": "c3a438c27157cb2e",
