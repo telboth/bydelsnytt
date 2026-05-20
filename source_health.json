@@ -1,20 +1,15 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-05-19T06:04:23.194197+00:00",
+  "updatedAt": "2026-05-20T06:05:24.083583+00:00",
   "sources": {
     "oslo-kommune-aktuelt": {
       "name": "oslo-kommune-aktuelt",
-      "last_attempt_iso": "2026-05-19T06:03:52.345092+00:00",
+      "last_attempt_iso": "2026-05-20T06:04:54.114712+00:00",
       "last_count": 14,
       "last_error": null,
-      "last_success_iso": "2026-05-19T06:03:52.345092+00:00",
+      "last_success_iso": "2026-05-20T06:04:54.114712+00:00",
       "consecutive_empty_runs": 0,
       "history": [
-        {
-          "at": "2026-05-04T06:19:07.675586+00:00",
-          "count": 21,
-          "error": null
-        },
         {
           "at": "2026-05-04T06:27:14.632321+00:00",
           "count": 21,
@@ -79,6 +74,11 @@
           "at": "2026-05-19T06:03:52.345092+00:00",
           "count": 14,
           "error": null
+        },
+        {
+          "at": "2026-05-20T06:04:54.114712+00:00",
+          "count": 14,
+          "error": null
         }
       ],
       "last_new_story_iso": "2026-05-18T06:03:18.217300+00:00",
@@ -86,17 +86,12 @@
     },
     "groruddalen": {
       "name": "groruddalen",
-      "last_attempt_iso": "2026-05-19T06:03:52.555950+00:00",
+      "last_attempt_iso": "2026-05-20T06:04:54.392079+00:00",
       "last_count": 20,
       "last_error": null,
-      "last_success_iso": "2026-05-19T06:03:52.555950+00:00",
+      "last_success_iso": "2026-05-20T06:04:54.392079+00:00",
       "consecutive_empty_runs": 0,
       "history": [
-        {
-          "at": "2026-05-04T06:19:07.945361+00:00",
-          "count": 20,
-          "error": null
-        },
         {
           "at": "2026-05-04T06:27:14.879134+00:00",
           "count": 20,
@@ -161,24 +156,24 @@
           "at": "2026-05-19T06:03:52.555950+00:00",
           "count": 20,
           "error": null
+        },
+        {
+          "at": "2026-05-20T06:04:54.392079+00:00",
+          "count": 20,
+          "error": null
         }
       ],
-      "last_new_story_iso": "2026-05-19T06:04:01.779723+00:00",
-      "last_new_story_count": 10
+      "last_new_story_iso": "2026-05-20T06:05:04.519255+00:00",
+      "last_new_story_count": 16
     },
     "nrk-oslo-viken": {
       "name": "nrk-oslo-viken",
-      "last_attempt_iso": "2026-05-19T06:03:52.345162+00:00",
+      "last_attempt_iso": "2026-05-20T06:04:54.145876+00:00",
       "last_count": 2,
       "last_error": null,
-      "last_success_iso": "2026-05-19T06:03:52.345162+00:00",
+      "last_success_iso": "2026-05-20T06:04:54.145876+00:00",
       "consecutive_empty_runs": 0,
       "history": [
-        {
-          "at": "2026-05-04T06:19:07.725032+00:00",
-          "count": 7,
-          "error": null
-        },
         {
           "at": "2026-05-04T06:27:14.646266+00:00",
           "count": 7,
@@ -243,29 +238,24 @@
           "at": "2026-05-19T06:03:52.345162+00:00",
           "count": 2,
           "error": null
+        },
+        {
+          "at": "2026-05-20T06:04:54.145876+00:00",
+          "count": 2,
+          "error": null
         }
       ],
-      "last_new_story_iso": "2026-05-16T06:46:48.393002+00:00",
-      "last_new_story_count": 2
+      "last_new_story_iso": "2026-05-20T06:05:04.519255+00:00",
+      "last_new_story_count": 1
     },
     "skeid": {
       "name": "Skeid",
-      "last_attempt_iso": "2026-05-19T06:03:53.212098+00:00",
+      "last_attempt_iso": "2026-05-20T06:04:55.437401+00:00",
       "last_count": 20,
       "last_error": null,
-      "last_success_iso": "2026-05-19T06:03:53.212098+00:00",
+      "last_success_iso": "2026-05-20T06:04:55.437401+00:00",
       "consecutive_empty_runs": 0,
       "history": [
-        {
-          "at": "2026-05-12T06:01:55.724488+00:00",
-          "count": 20,
-          "error": null
-        },
-        {
-          "at": "2026-05-12T06:01:56.914547+00:00",
-          "count": 20,
-          "error": null
-        },
         {
           "at": "2026-05-13T06:01:53.140166+00:00",
           "count": 20,
@@ -325,24 +315,29 @@
           "at": "2026-05-19T06:03:53.212098+00:00",
           "count": 20,
           "error": null
+        },
+        {
+          "at": "2026-05-20T06:04:54.418811+00:00",
+          "count": 20,
+          "error": null
+        },
+        {
+          "at": "2026-05-20T06:04:55.437401+00:00",
+          "count": 20,
+          "error": null
         }
       ],
-      "last_new_story_iso": "2026-05-17T06:03:52.118421+00:00",
+      "last_new_story_iso": "2026-05-20T06:05:04.519255+00:00",
       "last_new_story_count": 2
     },
     "vif-fotball": {
       "name": "Vålerenga Fotball",
-      "last_attempt_iso": "2026-05-19T06:03:52.647550+00:00",
+      "last_attempt_iso": "2026-05-20T06:04:54.418795+00:00",
       "last_count": 20,
       "last_error": null,
-      "last_success_iso": "2026-05-19T06:03:52.647550+00:00",
+      "last_success_iso": "2026-05-20T06:04:54.418795+00:00",
       "consecutive_empty_runs": 0,
       "history": [
-        {
-          "at": "2026-05-04T06:19:07.994142+00:00",
-          "count": 20,
-          "error": null
-        },
         {
           "at": "2026-05-04T06:27:14.917037+00:00",
           "count": 20,
@@ -407,6 +402,11 @@
           "at": "2026-05-19T06:03:52.647550+00:00",
           "count": 20,
           "error": null
+        },
+        {
+          "at": "2026-05-20T06:04:54.418795+00:00",
+          "count": 20,
+          "error": null
         }
       ],
       "last_new_story_iso": "2026-05-19T06:04:01.779723+00:00",
@@ -414,17 +414,12 @@
     },
     "boeler-if": {
       "name": "Bøler IF",
-      "last_attempt_iso": "2026-05-19T06:03:52.267426+00:00",
+      "last_attempt_iso": "2026-05-20T06:04:54.114756+00:00",
       "last_count": 0,
       "last_error": null,
       "last_success_iso": "2026-05-17T06:03:42.616383+00:00",
-      "consecutive_empty_runs": 2,
+      "consecutive_empty_runs": 3,
       "history": [
-        {
-          "at": "2026-05-04T06:19:07.663423+00:00",
-          "count": 0,
-          "error": null
-        },
         {
           "at": "2026-05-04T06:27:14.595430+00:00",
           "count": 0,
@@ -489,6 +484,11 @@
           "at": "2026-05-19T06:03:52.267426+00:00",
           "count": 0,
           "error": null
+        },
+        {
+          "at": "2026-05-20T06:04:54.114756+00:00",
+          "count": 0,
+          "error": null
         }
       ],
       "last_new_story_iso": "2026-05-17T06:03:52.118421+00:00",
@@ -496,17 +496,12 @@
     },
     "iltry": {
       "name": "IL Try",
-      "last_attempt_iso": "2026-05-19T06:03:54.748196+00:00",
+      "last_attempt_iso": "2026-05-20T06:04:57.601517+00:00",
       "last_count": 12,
       "last_error": null,
-      "last_success_iso": "2026-05-19T06:03:54.748196+00:00",
+      "last_success_iso": "2026-05-20T06:04:57.601517+00:00",
       "consecutive_empty_runs": 0,
       "history": [
-        {
-          "at": "2026-05-04T06:19:11.089475+00:00",
-          "count": 12,
-          "error": null
-        },
         {
           "at": "2026-05-04T06:27:17.103523+00:00",
           "count": 12,
@@ -571,6 +566,11 @@
           "at": "2026-05-19T06:03:54.748196+00:00",
           "count": 12,
           "error": null
+        },
+        {
+          "at": "2026-05-20T06:04:57.601517+00:00",
+          "count": 12,
+          "error": null
         }
       ],
       "last_new_story_iso": "2026-05-11T06:02:50.236991+00:00",
@@ -578,17 +578,12 @@
     },
     "kondis": {
       "name": "Kondis.no",
-      "last_attempt_iso": "2026-05-19T06:03:54.734490+00:00",
+      "last_attempt_iso": "2026-05-20T06:04:57.444932+00:00",
       "last_count": 2,
       "last_error": null,
-      "last_success_iso": "2026-05-19T06:03:54.734490+00:00",
+      "last_success_iso": "2026-05-20T06:04:57.444932+00:00",
       "consecutive_empty_runs": 0,
       "history": [
-        {
-          "at": "2026-05-04T06:19:10.782114+00:00",
-          "count": 0,
-          "error": null
-        },
         {
           "at": "2026-05-04T06:27:16.919644+00:00",
           "count": 0,
@@ -653,6 +648,11 @@
           "at": "2026-05-19T06:03:54.734490+00:00",
           "count": 2,
           "error": null
+        },
+        {
+          "at": "2026-05-20T06:04:57.444932+00:00",
+          "count": 2,
+          "error": null
         }
       ],
       "last_new_story_iso": "2026-05-19T06:04:01.779723+00:00",
@@ -660,17 +660,12 @@
     },
     "vegvesen": {
       "name": "Statens vegvesen",
-      "last_attempt_iso": "2026-05-19T06:03:53.421864+00:00",
+      "last_attempt_iso": "2026-05-20T06:04:56.206033+00:00",
       "last_count": 3,
       "last_error": null,
-      "last_success_iso": "2026-05-19T06:03:53.421864+00:00",
+      "last_success_iso": "2026-05-20T06:04:56.206033+00:00",
       "consecutive_empty_runs": 0,
       "history": [
-        {
-          "at": "2026-05-04T06:19:09.319320+00:00",
-          "count": 1,
-          "error": null
-        },
         {
           "at": "2026-05-04T06:27:15.862437+00:00",
           "count": 1,
@@ -735,6 +730,11 @@
           "at": "2026-05-19T06:03:53.421864+00:00",
           "count": 3,
           "error": null
+        },
+        {
+          "at": "2026-05-20T06:04:56.206033+00:00",
+          "count": 3,
+          "error": null
         }
       ],
       "last_new_story_iso": "2026-05-13T06:02:03.938720+00:00",
@@ -742,17 +742,12 @@
     },
     "politi-oslo": {
       "name": "Oslo politidistrikt",
-      "last_attempt_iso": "2026-05-19T06:03:54.834052+00:00",
+      "last_attempt_iso": "2026-05-20T06:04:57.351803+00:00",
       "last_count": 3,
       "last_error": null,
-      "last_success_iso": "2026-05-19T06:03:54.834052+00:00",
+      "last_success_iso": "2026-05-20T06:04:57.351803+00:00",
       "consecutive_empty_runs": 0,
       "history": [
-        {
-          "at": "2026-05-04T06:19:11.229552+00:00",
-          "count": 3,
-          "error": null
-        },
         {
           "at": "2026-05-04T06:27:17.243570+00:00",
           "count": 3,
@@ -817,6 +812,11 @@
           "at": "2026-05-19T06:03:54.834052+00:00",
           "count": 3,
           "error": null
+        },
+        {
+          "at": "2026-05-20T06:04:57.351803+00:00",
+          "count": 3,
+          "error": null
         }
       ],
       "last_new_story_iso": "2026-05-19T06:04:01.779723+00:00",
@@ -824,17 +824,12 @@
     },
     "ruter-avvik": {
       "name": "Ruter avvik",
-      "last_attempt_iso": "2026-05-19T06:03:54.954734+00:00",
+      "last_attempt_iso": "2026-05-20T06:04:57.597964+00:00",
       "last_count": 25,
       "last_error": null,
-      "last_success_iso": "2026-05-19T06:03:54.954734+00:00",
+      "last_success_iso": "2026-05-20T06:04:57.597964+00:00",
       "consecutive_empty_runs": 0,
       "history": [
-        {
-          "at": "2026-05-04T06:19:11.191702+00:00",
-          "count": 25,
-          "error": null
-        },
         {
           "at": "2026-05-04T06:27:17.242597+00:00",
           "count": 25,
@@ -899,24 +894,24 @@
           "at": "2026-05-19T06:03:54.954734+00:00",
           "count": 25,
           "error": null
+        },
+        {
+          "at": "2026-05-20T06:04:57.597964+00:00",
+          "count": 25,
+          "error": null
         }
       ],
-      "last_new_story_iso": "2026-05-19T06:04:01.779723+00:00",
-      "last_new_story_count": 11
+      "last_new_story_iso": "2026-05-20T06:05:04.519255+00:00",
+      "last_new_story_count": 18
     },
     "tu": {
       "name": "Teknisk Ukeblad",
-      "last_attempt_iso": "2026-05-19T06:03:53.509800+00:00",
+      "last_attempt_iso": "2026-05-20T06:04:56.152505+00:00",
       "last_count": 1,
       "last_error": null,
-      "last_success_iso": "2026-05-19T06:03:53.509800+00:00",
+      "last_success_iso": "2026-05-20T06:04:56.152505+00:00",
       "consecutive_empty_runs": 0,
       "history": [
-        {
-          "at": "2026-05-04T06:19:09.400492+00:00",
-          "count": 0,
-          "error": null
-        },
         {
           "at": "2026-05-04T06:27:15.868332+00:00",
           "count": 0,
@@ -981,6 +976,11 @@
           "at": "2026-05-19T06:03:53.509800+00:00",
           "count": 1,
           "error": null
+        },
+        {
+          "at": "2026-05-20T06:04:56.152505+00:00",
+          "count": 1,
+          "error": null
         }
       ],
       "last_new_story_iso": "2026-05-17T06:03:52.118421+00:00",
@@ -988,17 +988,12 @@
     },
     "kampanje": {
       "name": "Kampanje",
-      "last_attempt_iso": "2026-05-19T06:03:53.731611+00:00",
-      "last_count": 0,
+      "last_attempt_iso": "2026-05-20T06:04:56.301258+00:00",
+      "last_count": 3,
       "last_error": null,
-      "last_success_iso": "2026-05-18T06:03:09.616376+00:00",
-      "consecutive_empty_runs": 1,
+      "last_success_iso": "2026-05-20T06:04:56.301258+00:00",
+      "consecutive_empty_runs": 0,
       "history": [
-        {
-          "at": "2026-05-04T06:19:09.512842+00:00",
-          "count": 1,
-          "error": null
-        },
         {
           "at": "2026-05-04T06:27:16.117896+00:00",
           "count": 1,
@@ -1063,24 +1058,24 @@
           "at": "2026-05-19T06:03:53.731611+00:00",
           "count": 0,
           "error": null
+        },
+        {
+          "at": "2026-05-20T06:04:56.301258+00:00",
+          "count": 3,
+          "error": null
         }
       ],
-      "last_new_story_iso": "2026-05-14T06:26:26.165015+00:00",
-      "last_new_story_count": 1
+      "last_new_story_iso": "2026-05-20T06:05:04.519255+00:00",
+      "last_new_story_count": 3
     },
     "nho": {
       "name": "NHO",
-      "last_attempt_iso": "2026-05-19T06:03:53.727235+00:00",
-      "last_count": 5,
+      "last_attempt_iso": "2026-05-20T06:04:56.546141+00:00",
+      "last_count": 6,
       "last_error": null,
-      "last_success_iso": "2026-05-19T06:03:53.727235+00:00",
+      "last_success_iso": "2026-05-20T06:04:56.546141+00:00",
       "consecutive_empty_runs": 0,
       "history": [
-        {
-          "at": "2026-05-04T06:19:09.812271+00:00",
-          "count": 2,
-          "error": null
-        },
         {
           "at": "2026-05-04T06:27:16.281131+00:00",
           "count": 2,
@@ -1145,24 +1140,24 @@
           "at": "2026-05-19T06:03:53.727235+00:00",
           "count": 5,
           "error": null
+        },
+        {
+          "at": "2026-05-20T06:04:56.546141+00:00",
+          "count": 6,
+          "error": null
         }
       ],
-      "last_new_story_iso": "2026-05-16T06:46:48.393002+00:00",
-      "last_new_story_count": 1
+      "last_new_story_iso": "2026-05-20T06:05:04.519255+00:00",
+      "last_new_story_count": 2
     },
     "uio": {
       "name": "Universitetet i Oslo",
-      "last_attempt_iso": "2026-05-19T06:03:53.567471+00:00",
+      "last_attempt_iso": "2026-05-20T06:04:56.286862+00:00",
       "last_count": 25,
       "last_error": null,
-      "last_success_iso": "2026-05-19T06:03:53.567471+00:00",
+      "last_success_iso": "2026-05-20T06:04:56.286862+00:00",
       "consecutive_empty_runs": 0,
       "history": [
-        {
-          "at": "2026-05-04T06:19:09.665821+00:00",
-          "count": 25,
-          "error": null
-        },
         {
           "at": "2026-05-04T06:27:15.910142+00:00",
           "count": 25,
@@ -1227,24 +1222,24 @@
           "at": "2026-05-19T06:03:53.567471+00:00",
           "count": 25,
           "error": null
+        },
+        {
+          "at": "2026-05-20T06:04:56.286862+00:00",
+          "count": 25,
+          "error": null
         }
       ],
-      "last_new_story_iso": "2026-05-19T06:04:01.779723+00:00",
+      "last_new_story_iso": "2026-05-20T06:05:04.519255+00:00",
       "last_new_story_count": 13
     },
     "oslomet": {
       "name": "OsloMet",
-      "last_attempt_iso": "2026-05-19T06:03:55.215309+00:00",
+      "last_attempt_iso": "2026-05-20T06:04:57.876212+00:00",
       "last_count": 12,
       "last_error": null,
-      "last_success_iso": "2026-05-19T06:03:55.215309+00:00",
+      "last_success_iso": "2026-05-20T06:04:57.876212+00:00",
       "consecutive_empty_runs": 0,
       "history": [
-        {
-          "at": "2026-05-04T06:19:11.498899+00:00",
-          "count": 12,
-          "error": null
-        },
         {
           "at": "2026-05-04T06:27:17.594497+00:00",
           "count": 12,
@@ -1309,24 +1304,24 @@
           "at": "2026-05-19T06:03:55.215309+00:00",
           "count": 12,
           "error": null
+        },
+        {
+          "at": "2026-05-20T06:04:57.876212+00:00",
+          "count": 12,
+          "error": null
         }
       ],
-      "last_new_story_iso": "2026-05-16T06:46:48.393002+00:00",
+      "last_new_story_iso": "2026-05-20T06:05:04.519255+00:00",
       "last_new_story_count": 1
     },
     "bi-business-review": {
       "name": "BI Business Review",
-      "last_attempt_iso": "2026-05-19T06:03:54.960741+00:00",
+      "last_attempt_iso": "2026-05-20T06:04:57.599834+00:00",
       "last_count": 6,
       "last_error": null,
-      "last_success_iso": "2026-05-19T06:03:54.960741+00:00",
+      "last_success_iso": "2026-05-20T06:04:57.599834+00:00",
       "consecutive_empty_runs": 0,
       "history": [
-        {
-          "at": "2026-05-04T06:19:11.135282+00:00",
-          "count": 5,
-          "error": null
-        },
         {
           "at": "2026-05-04T06:27:17.376089+00:00",
           "count": 5,
@@ -1391,24 +1386,24 @@
           "at": "2026-05-19T06:03:54.960741+00:00",
           "count": 6,
           "error": null
+        },
+        {
+          "at": "2026-05-20T06:04:57.599834+00:00",
+          "count": 6,
+          "error": null
         }
       ],
-      "last_new_story_iso": "2026-05-19T06:04:01.779723+00:00",
+      "last_new_story_iso": "2026-05-20T06:05:04.519255+00:00",
       "last_new_story_count": 2
     },
     "deichman-aktuelt": {
       "name": "Deichman",
-      "last_attempt_iso": "2026-05-19T06:03:55.170615+00:00",
+      "last_attempt_iso": "2026-05-20T06:04:57.792866+00:00",
       "last_count": 15,
       "last_error": null,
-      "last_success_iso": "2026-05-19T06:03:55.170615+00:00",
+      "last_success_iso": "2026-05-20T06:04:57.792866+00:00",
       "consecutive_empty_runs": 0,
       "history": [
-        {
-          "at": "2026-05-04T06:19:11.327611+00:00",
-          "count": 15,
-          "error": null
-        },
         {
           "at": "2026-05-04T06:27:17.507662+00:00",
           "count": 15,
@@ -1473,24 +1468,24 @@
           "at": "2026-05-19T06:03:55.170615+00:00",
           "count": 15,
           "error": null
+        },
+        {
+          "at": "2026-05-20T06:04:57.792866+00:00",
+          "count": 15,
+          "error": null
         }
       ],
-      "last_new_story_iso": "2026-05-16T06:46:48.393002+00:00",
+      "last_new_story_iso": "2026-05-20T06:05:04.519255+00:00",
       "last_new_story_count": 1
     },
     "dagsavisen": {
       "name": "Dagsavisen",
-      "last_attempt_iso": "2026-05-19T06:03:53.910279+00:00",
-      "last_count": 23,
+      "last_attempt_iso": "2026-05-20T06:04:56.584869+00:00",
+      "last_count": 24,
       "last_error": null,
-      "last_success_iso": "2026-05-19T06:03:53.910279+00:00",
+      "last_success_iso": "2026-05-20T06:04:56.584869+00:00",
       "consecutive_empty_runs": 0,
       "history": [
-        {
-          "at": "2026-05-04T06:19:09.833373+00:00",
-          "count": 20,
-          "error": null
-        },
         {
           "at": "2026-05-04T06:27:16.315263+00:00",
           "count": 20,
@@ -1555,24 +1550,24 @@
           "at": "2026-05-19T06:03:53.910279+00:00",
           "count": 23,
           "error": null
+        },
+        {
+          "at": "2026-05-20T06:04:56.584869+00:00",
+          "count": 24,
+          "error": null
         }
       ],
-      "last_new_story_iso": "2026-05-19T06:04:01.779723+00:00",
+      "last_new_story_iso": "2026-05-20T06:05:04.519255+00:00",
       "last_new_story_count": 12
     },
     "vartoslo": {
       "name": "Vårt Oslo",
-      "last_attempt_iso": "2026-05-19T06:03:55.017332+00:00",
-      "last_count": 11,
+      "last_attempt_iso": "2026-05-20T06:04:57.771883+00:00",
+      "last_count": 12,
       "last_error": null,
-      "last_success_iso": "2026-05-19T06:03:55.017332+00:00",
+      "last_success_iso": "2026-05-20T06:04:57.771883+00:00",
       "consecutive_empty_runs": 0,
       "history": [
-        {
-          "at": "2026-05-04T06:19:11.198424+00:00",
-          "count": 14,
-          "error": null
-        },
         {
           "at": "2026-05-04T06:27:17.340094+00:00",
           "count": 14,
@@ -1637,24 +1632,24 @@
           "at": "2026-05-19T06:03:55.017332+00:00",
           "count": 11,
           "error": null
+        },
+        {
+          "at": "2026-05-20T06:04:57.771883+00:00",
+          "count": 12,
+          "error": null
         }
       ],
-      "last_new_story_iso": "2026-05-19T06:04:01.779723+00:00",
-      "last_new_story_count": 3
+      "last_new_story_iso": "2026-05-20T06:05:04.519255+00:00",
+      "last_new_story_count": 4
     },
     "grorud-il": {
       "name": "Grorud IL",
-      "last_attempt_iso": "2026-05-19T06:03:52.477607+00:00",
+      "last_attempt_iso": "2026-05-20T06:04:54.328569+00:00",
       "last_count": 20,
       "last_error": null,
-      "last_success_iso": "2026-05-19T06:03:52.477607+00:00",
+      "last_success_iso": "2026-05-20T06:04:54.328569+00:00",
       "consecutive_empty_runs": 0,
       "history": [
-        {
-          "at": "2026-05-04T06:19:07.904499+00:00",
-          "count": 20,
-          "error": null
-        },
         {
           "at": "2026-05-04T06:27:14.852103+00:00",
           "count": 20,
@@ -1719,24 +1714,24 @@
           "at": "2026-05-19T06:03:52.477607+00:00",
           "count": 20,
           "error": null
+        },
+        {
+          "at": "2026-05-20T06:04:54.328569+00:00",
+          "count": 20,
+          "error": null
         }
       ],
-      "last_new_story_iso": "2026-05-19T06:04:01.779723+00:00",
+      "last_new_story_iso": "2026-05-20T06:05:04.519255+00:00",
       "last_new_story_count": 4
     },
     "lyn": {
       "name": "Lyn (lyn.no)",
-      "last_attempt_iso": "2026-05-19T06:03:53.727353+00:00",
+      "last_attempt_iso": "2026-05-20T06:04:55.954841+00:00",
       "last_count": 20,
       "last_error": null,
-      "last_success_iso": "2026-05-19T06:03:53.727353+00:00",
+      "last_success_iso": "2026-05-20T06:04:55.954841+00:00",
       "consecutive_empty_runs": 0,
       "history": [
-        {
-          "at": "2026-05-04T06:19:09.235887+00:00",
-          "count": 20,
-          "error": null
-        },
         {
           "at": "2026-05-04T06:27:16.160370+00:00",
           "count": 20,
@@ -1801,29 +1796,24 @@
           "at": "2026-05-19T06:03:53.727353+00:00",
           "count": 20,
           "error": null
+        },
+        {
+          "at": "2026-05-20T06:04:55.954841+00:00",
+          "count": 20,
+          "error": null
         }
       ],
-      "last_new_story_iso": "2026-05-19T06:04:01.779723+00:00",
+      "last_new_story_iso": "2026-05-20T06:05:04.519255+00:00",
       "last_new_story_count": 20
     },
     "heming": {
       "name": "Heming",
-      "last_attempt_iso": "2026-05-19T06:03:55.411982+00:00",
+      "last_attempt_iso": "2026-05-20T06:04:57.237039+00:00",
       "last_count": 10,
       "last_error": null,
-      "last_success_iso": "2026-05-19T06:03:55.411982+00:00",
+      "last_success_iso": "2026-05-20T06:04:57.237039+00:00",
       "consecutive_empty_runs": 0,
       "history": [
-        {
-          "at": "2026-05-12T06:01:57.972401+00:00",
-          "count": 10,
-          "error": null
-        },
-        {
-          "at": "2026-05-12T06:01:58.886565+00:00",
-          "count": 10,
-          "error": null
-        },
         {
           "at": "2026-05-13T06:01:55.445883+00:00",
           "count": 10,
@@ -1883,6 +1873,16 @@
           "at": "2026-05-19T06:03:55.411982+00:00",
           "count": 10,
           "error": null
+        },
+        {
+          "at": "2026-05-20T06:04:56.221568+00:00",
+          "count": 10,
+          "error": null
+        },
+        {
+          "at": "2026-05-20T06:04:57.237039+00:00",
+          "count": 10,
+          "error": null
         }
       ],
       "last_new_story_iso": "2026-05-08T07:53:08.217218+00:00",
@@ -1890,17 +1890,12 @@
     },
     "oppsal-handball": {
       "name": "Oppsal Håndball",
-      "last_attempt_iso": "2026-05-19T06:03:53.302603+00:00",
+      "last_attempt_iso": "2026-05-20T06:04:55.985084+00:00",
       "last_count": 10,
       "last_error": null,
-      "last_success_iso": "2026-05-19T06:03:53.302603+00:00",
+      "last_success_iso": "2026-05-20T06:04:55.985084+00:00",
       "consecutive_empty_runs": 0,
       "history": [
-        {
-          "at": "2026-05-04T06:19:09.512862+00:00",
-          "count": 10,
-          "error": null
-        },
         {
           "at": "2026-05-04T06:27:15.669378+00:00",
           "count": 10,
@@ -1965,24 +1960,24 @@
           "at": "2026-05-19T06:03:53.302603+00:00",
           "count": 10,
           "error": null
+        },
+        {
+          "at": "2026-05-20T06:04:55.985084+00:00",
+          "count": 10,
+          "error": null
         }
       ],
-      "last_new_story_iso": "2026-05-19T06:04:01.779723+00:00",
+      "last_new_story_iso": "2026-05-20T06:05:04.519255+00:00",
       "last_new_story_count": 2
     },
     "bym-kunngjoringer": {
       "name": "Bymiljøetaten kunngjøringer",
-      "last_attempt_iso": "2026-05-19T06:03:55.224150+00:00",
+      "last_attempt_iso": "2026-05-20T06:04:57.848874+00:00",
       "last_count": 20,
       "last_error": null,
-      "last_success_iso": "2026-05-19T06:03:55.224150+00:00",
+      "last_success_iso": "2026-05-20T06:04:57.848874+00:00",
       "consecutive_empty_runs": 0,
       "history": [
-        {
-          "at": "2026-05-04T06:19:11.434869+00:00",
-          "count": 20,
-          "error": null
-        },
         {
           "at": "2026-05-04T06:27:17.543045+00:00",
           "count": 20,
@@ -2047,24 +2042,24 @@
           "at": "2026-05-19T06:03:55.224150+00:00",
           "count": 20,
           "error": null
+        },
+        {
+          "at": "2026-05-20T06:04:57.848874+00:00",
+          "count": 20,
+          "error": null
         }
       ],
-      "last_new_story_iso": "2026-05-19T06:04:01.779723+00:00",
-      "last_new_story_count": 17
+      "last_new_story_iso": "2026-05-20T06:05:04.519255+00:00",
+      "last_new_story_count": 18
     },
     "skiforeningen": {
       "name": "Skiforeningen",
-      "last_attempt_iso": "2026-05-19T06:03:55.163957+00:00",
+      "last_attempt_iso": "2026-05-20T06:04:58.047580+00:00",
       "last_count": 20,
       "last_error": null,
-      "last_success_iso": "2026-05-19T06:03:55.163957+00:00",
+      "last_success_iso": "2026-05-20T06:04:58.047580+00:00",
       "consecutive_empty_runs": 0,
       "history": [
-        {
-          "at": "2026-05-04T06:19:11.326356+00:00",
-          "count": 20,
-          "error": null
-        },
         {
           "at": "2026-05-04T06:27:17.451537+00:00",
           "count": 20,
@@ -2129,6 +2124,11 @@
           "at": "2026-05-19T06:03:55.163957+00:00",
           "count": 20,
           "error": null
+        },
+        {
+          "at": "2026-05-20T06:04:58.047580+00:00",
+          "count": 20,
+          "error": null
         }
       ],
       "last_new_story_iso": "2026-05-08T07:53:08.217218+00:00",
@@ -2136,17 +2136,12 @@
     },
     "akersposten": {
       "name": "Akersposten",
-      "last_attempt_iso": "2026-05-19T06:03:55.354638+00:00",
+      "last_attempt_iso": "2026-05-20T06:04:57.949948+00:00",
       "last_count": 30,
       "last_error": null,
-      "last_success_iso": "2026-05-19T06:03:55.354638+00:00",
+      "last_success_iso": "2026-05-20T06:04:57.949948+00:00",
       "consecutive_empty_runs": 0,
       "history": [
-        {
-          "at": "2026-05-04T06:19:11.388651+00:00",
-          "count": 30,
-          "error": null
-        },
         {
           "at": "2026-05-04T06:27:17.596403+00:00",
           "count": 30,
@@ -2211,24 +2206,24 @@
           "at": "2026-05-19T06:03:55.354638+00:00",
           "count": 30,
           "error": null
+        },
+        {
+          "at": "2026-05-20T06:04:57.949948+00:00",
+          "count": 30,
+          "error": null
         }
       ],
-      "last_new_story_iso": "2026-05-19T06:04:01.779723+00:00",
+      "last_new_story_iso": "2026-05-20T06:05:04.519255+00:00",
       "last_new_story_count": 9
     },
     "vif": {
       "name": "Vålerenga (klubben)",
-      "last_attempt_iso": "2026-05-19T06:03:52.375850+00:00",
+      "last_attempt_iso": "2026-05-20T06:04:54.253762+00:00",
       "last_count": 10,
       "last_error": null,
-      "last_success_iso": "2026-05-19T06:03:52.375850+00:00",
+      "last_success_iso": "2026-05-20T06:04:54.253762+00:00",
       "consecutive_empty_runs": 0,
       "history": [
-        {
-          "at": "2026-05-04T06:19:07.756543+00:00",
-          "count": 10,
-          "error": null
-        },
         {
           "at": "2026-05-04T06:27:14.665999+00:00",
           "count": 10,
@@ -2293,24 +2288,24 @@
           "at": "2026-05-19T06:03:52.375850+00:00",
           "count": 10,
           "error": null
+        },
+        {
+          "at": "2026-05-20T06:04:54.253762+00:00",
+          "count": 10,
+          "error": null
         }
       ],
-      "last_new_story_iso": "2026-05-19T06:04:01.779723+00:00",
+      "last_new_story_iso": "2026-05-20T06:05:04.519255+00:00",
       "last_new_story_count": 7
     },
     "klemetsrud": {
       "name": "Klemetsrud IL",
-      "last_attempt_iso": "2026-05-19T06:03:55.306575+00:00",
+      "last_attempt_iso": "2026-05-20T06:04:56.595820+00:00",
       "last_count": 10,
       "last_error": null,
-      "last_success_iso": "2026-05-19T06:03:55.306575+00:00",
+      "last_success_iso": "2026-05-20T06:04:56.595820+00:00",
       "consecutive_empty_runs": 0,
       "history": [
-        {
-          "at": "2026-05-04T06:19:11.000260+00:00",
-          "count": 10,
-          "error": null
-        },
         {
           "at": "2026-05-04T06:27:17.278651+00:00",
           "count": 10,
@@ -2375,24 +2370,24 @@
           "at": "2026-05-19T06:03:55.306575+00:00",
           "count": 10,
           "error": null
+        },
+        {
+          "at": "2026-05-20T06:04:56.595820+00:00",
+          "count": 10,
+          "error": null
         }
       ],
-      "last_new_story_iso": "2026-05-19T06:04:01.779723+00:00",
+      "last_new_story_iso": "2026-05-20T06:05:04.519255+00:00",
       "last_new_story_count": 4
     },
     "ofa": {
       "name": "OFA — Oslomarkas Fiskeadministrasjon",
-      "last_attempt_iso": "2026-05-19T06:03:53.751287+00:00",
+      "last_attempt_iso": "2026-05-20T06:04:55.996738+00:00",
       "last_count": 10,
       "last_error": null,
-      "last_success_iso": "2026-05-19T06:03:53.751287+00:00",
+      "last_success_iso": "2026-05-20T06:04:55.996738+00:00",
       "consecutive_empty_runs": 0,
       "history": [
-        {
-          "at": "2026-05-04T06:19:08.916275+00:00",
-          "count": 10,
-          "error": null
-        },
         {
           "at": "2026-05-04T06:27:15.644299+00:00",
           "count": 10,
@@ -2457,24 +2452,24 @@
           "at": "2026-05-19T06:03:53.751287+00:00",
           "count": 10,
           "error": null
+        },
+        {
+          "at": "2026-05-20T06:04:55.996738+00:00",
+          "count": 10,
+          "error": null
         }
       ],
-      "last_new_story_iso": "2026-05-19T06:04:01.779723+00:00",
+      "last_new_story_iso": "2026-05-20T06:05:04.519255+00:00",
       "last_new_story_count": 8
     },
     "lyn1896": {
       "name": "Lyn Fotball",
-      "last_attempt_iso": "2026-05-19T06:03:53.136257+00:00",
+      "last_attempt_iso": "2026-05-20T06:04:55.241202+00:00",
       "last_count": 20,
       "last_error": null,
-      "last_success_iso": "2026-05-19T06:03:53.136257+00:00",
+      "last_success_iso": "2026-05-20T06:04:55.241202+00:00",
       "consecutive_empty_runs": 0,
       "history": [
-        {
-          "at": "2026-05-04T06:19:08.617405+00:00",
-          "count": 20,
-          "error": null
-        },
         {
           "at": "2026-05-04T06:27:15.374278+00:00",
           "count": 20,
@@ -2539,24 +2534,24 @@
           "at": "2026-05-19T06:03:53.136257+00:00",
           "count": 20,
           "error": null
+        },
+        {
+          "at": "2026-05-20T06:04:55.241202+00:00",
+          "count": 20,
+          "error": null
         }
       ],
-      "last_new_story_iso": "2026-05-18T06:03:18.217300+00:00",
-      "last_new_story_count": 1
+      "last_new_story_iso": "2026-05-20T06:05:04.519255+00:00",
+      "last_new_story_count": 3
     },
     "sageneif": {
       "name": "Sagene IF",
-      "last_attempt_iso": "2026-05-19T06:03:53.509750+00:00",
+      "last_attempt_iso": "2026-05-20T06:04:55.656242+00:00",
       "last_count": 119,
       "last_error": null,
-      "last_success_iso": "2026-05-19T06:03:53.509750+00:00",
+      "last_success_iso": "2026-05-20T06:04:55.656242+00:00",
       "consecutive_empty_runs": 0,
       "history": [
-        {
-          "at": "2026-05-04T06:19:08.738282+00:00",
-          "count": 119,
-          "error": null
-        },
         {
           "at": "2026-05-04T06:27:15.531650+00:00",
           "count": 119,
@@ -2621,24 +2616,24 @@
           "at": "2026-05-19T06:03:53.509750+00:00",
           "count": 119,
           "error": null
+        },
+        {
+          "at": "2026-05-20T06:04:55.656242+00:00",
+          "count": 119,
+          "error": null
         }
       ],
-      "last_new_story_iso": "2026-05-19T06:04:01.779723+00:00",
+      "last_new_story_iso": "2026-05-20T06:05:04.519255+00:00",
       "last_new_story_count": 53
     },
     "ltsk": {
       "name": "Lille Tøyen SK",
-      "last_attempt_iso": "2026-05-19T06:03:53.198148+00:00",
+      "last_attempt_iso": "2026-05-20T06:04:57.052026+00:00",
       "last_count": 5,
       "last_error": null,
-      "last_success_iso": "2026-05-19T06:03:53.198148+00:00",
+      "last_success_iso": "2026-05-20T06:04:57.052026+00:00",
       "consecutive_empty_runs": 0,
       "history": [
-        {
-          "at": "2026-05-04T06:19:11.017818+00:00",
-          "count": 5,
-          "error": null
-        },
         {
           "at": "2026-05-04T06:27:15.581125+00:00",
           "count": 5,
@@ -2703,24 +2698,24 @@
           "at": "2026-05-19T06:03:53.198148+00:00",
           "count": 5,
           "error": null
+        },
+        {
+          "at": "2026-05-20T06:04:57.052026+00:00",
+          "count": 5,
+          "error": null
         }
       ],
-      "last_new_story_iso": "2026-05-19T06:04:01.779723+00:00",
+      "last_new_story_iso": "2026-05-20T06:05:04.519255+00:00",
       "last_new_story_count": 4
     },
     "kjelsaas": {
       "name": "Kjelsås IL",
-      "last_attempt_iso": "2026-05-19T06:03:54.701131+00:00",
+      "last_attempt_iso": "2026-05-20T06:05:00.287808+00:00",
       "last_count": 10,
       "last_error": null,
-      "last_success_iso": "2026-05-19T06:03:54.701131+00:00",
+      "last_success_iso": "2026-05-20T06:05:00.287808+00:00",
       "consecutive_empty_runs": 0,
       "history": [
-        {
-          "at": "2026-05-04T06:19:10.683809+00:00",
-          "count": 10,
-          "error": null
-        },
         {
           "at": "2026-05-04T06:27:17.044527+00:00",
           "count": 10,
@@ -2785,24 +2780,24 @@
           "at": "2026-05-19T06:03:54.701131+00:00",
           "count": 10,
           "error": null
+        },
+        {
+          "at": "2026-05-20T06:05:00.287808+00:00",
+          "count": 10,
+          "error": null
         }
       ],
-      "last_new_story_iso": "2026-05-19T06:04:01.779723+00:00",
+      "last_new_story_iso": "2026-05-20T06:05:04.519255+00:00",
       "last_new_story_count": 10
     },
     "okk": {
       "name": "Oslo Kajakklubb",
-      "last_attempt_iso": "2026-05-19T06:03:52.423822+00:00",
+      "last_attempt_iso": "2026-05-20T06:04:54.457912+00:00",
       "last_count": 10,
       "last_error": null,
-      "last_success_iso": "2026-05-19T06:03:52.423822+00:00",
+      "last_success_iso": "2026-05-20T06:04:54.457912+00:00",
       "consecutive_empty_runs": 0,
       "history": [
-        {
-          "at": "2026-05-04T06:19:08.295588+00:00",
-          "count": 10,
-          "error": null
-        },
         {
           "at": "2026-05-04T06:27:14.704086+00:00",
           "count": 10,
@@ -2867,6 +2862,11 @@
           "at": "2026-05-19T06:03:52.423822+00:00",
           "count": 10,
           "error": null
+        },
+        {
+          "at": "2026-05-20T06:04:54.457912+00:00",
+          "count": 10,
+          "error": null
         }
       ],
       "last_new_story_iso": "2026-05-19T06:04:01.779723+00:00",
@@ -2874,17 +2874,12 @@
     },
     "loppemarkeder": {
       "name": "Loppemarkeder i Oslo",
-      "last_attempt_iso": "2026-05-19T06:03:53.319053+00:00",
+      "last_attempt_iso": "2026-05-20T06:04:55.312928+00:00",
       "last_count": 3,
       "last_error": null,
-      "last_success_iso": "2026-05-19T06:03:53.319053+00:00",
+      "last_success_iso": "2026-05-20T06:04:55.312928+00:00",
       "consecutive_empty_runs": 0,
       "history": [
-        {
-          "at": "2026-05-04T06:19:08.846181+00:00",
-          "count": 6,
-          "error": null
-        },
         {
           "at": "2026-05-04T06:27:15.768543+00:00",
           "count": 6,
@@ -2949,24 +2944,24 @@
           "at": "2026-05-19T06:03:53.319053+00:00",
           "count": 3,
           "error": null
+        },
+        {
+          "at": "2026-05-20T06:04:55.312928+00:00",
+          "count": 3,
+          "error": null
         }
       ],
-      "last_new_story_iso": "2026-05-19T06:04:01.779723+00:00",
+      "last_new_story_iso": "2026-05-20T06:05:04.519255+00:00",
       "last_new_story_count": 1
     },
     "meetup-oslo": {
       "name": "Meetup Oslo",
-      "last_attempt_iso": "2026-05-19T06:03:53.870178+00:00",
-      "last_count": 9,
+      "last_attempt_iso": "2026-05-20T06:04:57.400069+00:00",
+      "last_count": 8,
       "last_error": null,
-      "last_success_iso": "2026-05-19T06:03:53.870178+00:00",
+      "last_success_iso": "2026-05-20T06:04:57.400069+00:00",
       "consecutive_empty_runs": 0,
       "history": [
-        {
-          "at": "2026-05-04T06:19:11.000284+00:00",
-          "count": 12,
-          "error": null
-        },
         {
           "at": "2026-05-04T06:27:16.315227+00:00",
           "count": 12,
@@ -3031,23 +3026,23 @@
           "at": "2026-05-19T06:03:53.870178+00:00",
           "count": 9,
           "error": null
+        },
+        {
+          "at": "2026-05-20T06:04:57.400069+00:00",
+          "count": 8,
+          "error": null
         }
       ],
-      "last_new_story_iso": "2026-05-19T06:04:01.779723+00:00",
-      "last_new_story_count": 1
+      "last_new_story_iso": "2026-05-20T06:05:04.519255+00:00",
+      "last_new_story_count": 2
     },
     "skiforbundet-oslo": {
       "name": "Skiforbundet (Oslo Skikrets)",
-      "last_attempt_iso": "2026-05-19T06:03:53.957119+00:00",
+      "last_attempt_iso": "2026-05-20T06:04:56.738294+00:00",
       "last_count": 0,
       "last_error": null,
-      "consecutive_empty_runs": 18,
+      "consecutive_empty_runs": 19,
       "history": [
-        {
-          "at": "2026-05-04T06:19:10.028149+00:00",
-          "count": 0,
-          "error": null
-        },
         {
           "at": "2026-05-04T06:27:16.469697+00:00",
           "count": 0,
@@ -3112,22 +3107,22 @@
           "at": "2026-05-19T06:03:53.957119+00:00",
           "count": 0,
           "error": null
+        },
+        {
+          "at": "2026-05-20T06:04:56.738294+00:00",
+          "count": 0,
+          "error": null
         }
       ]
     },
     "operaen": {
       "name": "Operaen",
-      "last_attempt_iso": "2026-05-19T06:03:54.447016+00:00",
+      "last_attempt_iso": "2026-05-20T06:04:57.243626+00:00",
       "last_count": 4,
       "last_error": null,
-      "last_success_iso": "2026-05-19T06:03:54.447016+00:00",
+      "last_success_iso": "2026-05-20T06:04:57.243626+00:00",
       "consecutive_empty_runs": 0,
       "history": [
-        {
-          "at": "2026-05-04T06:19:10.434601+00:00",
-          "count": 3,
-          "error": null
-        },
         {
           "at": "2026-05-04T06:27:16.843446+00:00",
           "count": 3,
@@ -3192,6 +3187,11 @@
           "at": "2026-05-19T06:03:54.447016+00:00",
           "count": 4,
           "error": null
+        },
+        {
+          "at": "2026-05-20T06:04:57.243626+00:00",
+          "count": 4,
+          "error": null
         }
       ],
       "last_new_story_iso": "2026-04-28T06:02:54.630331+00:00",
@@ -3199,17 +3199,12 @@
     },
     "nationaltheatret": {
       "name": "Nationaltheatret",
-      "last_attempt_iso": "2026-05-19T06:03:55.055447+00:00",
+      "last_attempt_iso": "2026-05-20T06:05:04.334647+00:00",
       "last_count": 15,
       "last_error": null,
-      "last_success_iso": "2026-05-19T06:03:55.055447+00:00",
+      "last_success_iso": "2026-05-20T06:05:04.334647+00:00",
       "consecutive_empty_runs": 0,
       "history": [
-        {
-          "at": "2026-05-04T06:19:11.535269+00:00",
-          "count": 15,
-          "error": null
-        },
         {
           "at": "2026-05-04T06:27:17.729368+00:00",
           "count": 15,
@@ -3274,6 +3269,11 @@
           "at": "2026-05-19T06:03:55.055447+00:00",
           "count": 15,
           "error": null
+        },
+        {
+          "at": "2026-05-20T06:05:04.334647+00:00",
+          "count": 15,
+          "error": null
         }
       ],
       "last_new_story_iso": "2026-04-28T06:02:54.630331+00:00",
@@ -3286,16 +3286,11 @@
     },
     "oppsalif": {
       "name": "Oppsal IF",
-      "last_attempt_iso": "2026-05-19T06:03:52.634212+00:00",
+      "last_attempt_iso": "2026-05-20T06:04:55.120117+00:00",
       "last_count": 10,
       "last_error": null,
       "consecutive_empty_runs": 0,
       "history": [
-        {
-          "at": "2026-05-04T06:19:07.986290+00:00",
-          "count": 10,
-          "error": null
-        },
         {
           "at": "2026-05-04T06:27:14.842896+00:00",
           "count": 10,
@@ -3360,24 +3355,24 @@
           "at": "2026-05-19T06:03:52.634212+00:00",
           "count": 10,
           "error": null
+        },
+        {
+          "at": "2026-05-20T06:04:55.120117+00:00",
+          "count": 10,
+          "error": null
         }
       ],
-      "last_success_iso": "2026-05-19T06:03:52.634212+00:00",
-      "last_new_story_iso": "2026-05-19T06:04:01.779723+00:00",
+      "last_success_iso": "2026-05-20T06:04:55.120117+00:00",
+      "last_new_story_iso": "2026-05-20T06:05:04.519255+00:00",
       "last_new_story_count": 9
     },
     "tjalve": {
       "name": "IK Tjalve",
-      "last_attempt_iso": "2026-05-19T06:03:52.634231+00:00",
+      "last_attempt_iso": "2026-05-20T06:04:54.593249+00:00",
       "last_count": 10,
       "last_error": null,
       "consecutive_empty_runs": 0,
       "history": [
-        {
-          "at": "2026-05-04T06:19:08.048495+00:00",
-          "count": 10,
-          "error": null
-        },
         {
           "at": "2026-05-04T06:27:14.818326+00:00",
           "count": 10,
@@ -3442,24 +3437,24 @@
           "at": "2026-05-19T06:03:52.634231+00:00",
           "count": 10,
           "error": null
+        },
+        {
+          "at": "2026-05-20T06:04:54.593249+00:00",
+          "count": 10,
+          "error": null
         }
       ],
-      "last_success_iso": "2026-05-19T06:03:52.634231+00:00",
-      "last_new_story_iso": "2026-05-19T06:04:01.779723+00:00",
+      "last_success_iso": "2026-05-20T06:04:54.593249+00:00",
+      "last_new_story_iso": "2026-05-20T06:05:04.519255+00:00",
       "last_new_story_count": 8
     },
     "bekkelaget-bsk": {
       "name": "Bækkelaget SK",
-      "last_attempt_iso": "2026-05-19T06:03:52.753543+00:00",
+      "last_attempt_iso": "2026-05-20T06:04:54.635254+00:00",
       "last_count": 2,
       "last_error": null,
       "consecutive_empty_runs": 0,
       "history": [
-        {
-          "at": "2026-05-04T06:19:08.218794+00:00",
-          "count": 1,
-          "error": null
-        },
         {
           "at": "2026-05-04T06:27:15.030975+00:00",
           "count": 1,
@@ -3524,24 +3519,24 @@
           "at": "2026-05-19T06:03:52.753543+00:00",
           "count": 2,
           "error": null
+        },
+        {
+          "at": "2026-05-20T06:04:54.635254+00:00",
+          "count": 2,
+          "error": null
         }
       ],
-      "last_success_iso": "2026-05-19T06:03:52.753543+00:00",
+      "last_success_iso": "2026-05-20T06:04:54.635254+00:00",
       "last_new_story_iso": "2026-05-12T06:02:06.458915+00:00",
       "last_new_story_count": 1
     },
     "kaaffa": {
       "name": "KFUM Kameratene fotball",
-      "last_attempt_iso": "2026-05-19T06:03:53.002498+00:00",
+      "last_attempt_iso": "2026-05-20T06:04:54.923720+00:00",
       "last_count": 20,
       "last_error": null,
       "consecutive_empty_runs": 0,
       "history": [
-        {
-          "at": "2026-05-04T06:19:08.340428+00:00",
-          "count": 20,
-          "error": null
-        },
         {
           "at": "2026-05-04T06:27:15.176105+00:00",
           "count": 20,
@@ -3606,24 +3601,24 @@
           "at": "2026-05-19T06:03:53.002498+00:00",
           "count": 20,
           "error": null
+        },
+        {
+          "at": "2026-05-20T06:04:54.923720+00:00",
+          "count": 20,
+          "error": null
         }
       ],
-      "last_success_iso": "2026-05-19T06:03:53.002498+00:00",
-      "last_new_story_iso": "2026-05-19T06:04:01.779723+00:00",
+      "last_success_iso": "2026-05-20T06:04:54.923720+00:00",
+      "last_new_story_iso": "2026-05-20T06:05:04.519255+00:00",
       "last_new_story_count": 1
     },
     "linderudil": {
       "name": "Linderud IL",
-      "last_attempt_iso": "2026-05-19T06:03:53.000756+00:00",
+      "last_attempt_iso": "2026-05-20T06:04:54.852241+00:00",
       "last_count": 26,
       "last_error": null,
       "consecutive_empty_runs": 0,
       "history": [
-        {
-          "at": "2026-05-04T06:19:08.585815+00:00",
-          "count": 24,
-          "error": null
-        },
         {
           "at": "2026-05-04T06:27:15.471459+00:00",
           "count": 24,
@@ -3688,24 +3683,24 @@
           "at": "2026-05-19T06:03:53.000756+00:00",
           "count": 26,
           "error": null
+        },
+        {
+          "at": "2026-05-20T06:04:54.852241+00:00",
+          "count": 26,
+          "error": null
         }
       ],
-      "last_success_iso": "2026-05-19T06:03:53.000756+00:00",
-      "last_new_story_iso": "2026-05-19T06:04:01.779723+00:00",
+      "last_success_iso": "2026-05-20T06:04:54.852241+00:00",
+      "last_new_story_iso": "2026-05-20T06:05:04.519255+00:00",
       "last_new_story_count": 13
     },
     "frigg": {
       "name": "Frigg Oslo",
-      "last_attempt_iso": "2026-05-19T06:03:52.914864+00:00",
+      "last_attempt_iso": "2026-05-20T06:04:55.848613+00:00",
       "last_count": 10,
       "last_error": null,
       "consecutive_empty_runs": 0,
       "history": [
-        {
-          "at": "2026-05-04T06:19:09.181488+00:00",
-          "count": 10,
-          "error": null
-        },
         {
           "at": "2026-05-04T06:27:15.868362+00:00",
           "count": 10,
@@ -3770,24 +3765,24 @@
           "at": "2026-05-19T06:03:52.914864+00:00",
           "count": 10,
           "error": null
+        },
+        {
+          "at": "2026-05-20T06:04:55.848613+00:00",
+          "count": 10,
+          "error": null
         }
       ],
-      "last_success_iso": "2026-05-19T06:03:52.914864+00:00",
-      "last_new_story_iso": "2026-05-19T06:04:01.779723+00:00",
+      "last_success_iso": "2026-05-20T06:04:55.848613+00:00",
+      "last_new_story_iso": "2026-05-20T06:05:04.519255+00:00",
       "last_new_story_count": 5
     },
     "oslodomkor": {
       "name": "Oslo Domkor",
-      "last_attempt_iso": "2026-05-19T06:03:52.838939+00:00",
+      "last_attempt_iso": "2026-05-20T06:04:57.290786+00:00",
       "last_count": 10,
       "last_error": null,
       "consecutive_empty_runs": 0,
       "history": [
-        {
-          "at": "2026-05-04T06:19:10.630677+00:00",
-          "count": 10,
-          "error": null
-        },
         {
           "at": "2026-05-04T06:27:15.102035+00:00",
           "count": 10,
@@ -3852,25 +3847,25 @@
           "at": "2026-05-19T06:03:52.838939+00:00",
           "count": 10,
           "error": null
+        },
+        {
+          "at": "2026-05-20T06:04:57.290786+00:00",
+          "count": 10,
+          "error": null
         }
       ],
-      "last_success_iso": "2026-05-19T06:03:52.838939+00:00",
-      "last_new_story_iso": "2026-05-19T06:04:01.779723+00:00",
+      "last_success_iso": "2026-05-20T06:04:57.290786+00:00",
+      "last_new_story_iso": "2026-05-20T06:05:04.519255+00:00",
       "last_new_story_count": 7
     },
     "jakob": {
       "name": "Kulturkirken Jakob",
-      "last_attempt_iso": "2026-05-19T06:04:01.669654+00:00",
+      "last_attempt_iso": "2026-05-20T06:05:04.441691+00:00",
       "last_count": 12,
       "last_error": null,
-      "last_success_iso": "2026-05-19T06:04:01.669654+00:00",
+      "last_success_iso": "2026-05-20T06:05:04.441691+00:00",
       "consecutive_empty_runs": 0,
       "history": [
-        {
-          "at": "2026-05-04T06:19:18.026688+00:00",
-          "count": 12,
-          "error": null
-        },
         {
           "at": "2026-05-04T06:27:23.917784+00:00",
           "count": 12,
@@ -3935,6 +3930,11 @@
           "at": "2026-05-19T06:04:01.669654+00:00",
           "count": 12,
           "error": null
+        },
+        {
+          "at": "2026-05-20T06:05:04.441691+00:00",
+          "count": 12,
+          "error": null
         }
       ],
       "last_new_story_iso": "2026-05-10T06:52:03.935924+00:00",
@@ -3942,17 +3942,12 @@
     },
     "furuset": {
       "name": "Furuset IF",
-      "last_attempt_iso": "2026-05-19T06:03:57.931169+00:00",
+      "last_attempt_iso": "2026-05-20T06:05:03.515943+00:00",
       "last_count": 15,
       "last_error": null,
-      "last_success_iso": "2026-05-19T06:03:57.931169+00:00",
+      "last_success_iso": "2026-05-20T06:05:03.515943+00:00",
       "consecutive_empty_runs": 0,
       "history": [
-        {
-          "at": "2026-05-04T06:19:13.653801+00:00",
-          "count": 15,
-          "error": null
-        },
         {
           "at": "2026-05-04T06:27:19.684380+00:00",
           "count": 15,
@@ -4015,6 +4010,11 @@
         },
         {
           "at": "2026-05-19T06:03:57.931169+00:00",
+          "count": 15,
+          "error": null
+        },
+        {
+          "at": "2026-05-20T06:05:03.515943+00:00",
           "count": 15,
           "error": null
         }

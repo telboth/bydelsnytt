@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-05-19T06:02:28.037938+00:00",
+  "generatedAt": "2026-05-20T06:03:23.275557+00:00",
   "counts": {
     "fetch_failed": 2,
-    "mismatch": 44,
-    "no_dates": 42,
-    "ok": 10,
+    "mismatch": 43,
+    "no_dates": 44,
+    "ok": 8,
     "skipped": 13
   },
-  "newCorrections": 0,
+  "newCorrections": 1,
   "items": [
     {
       "id": "4e68392e31fa7f16",
@@ -49,8 +49,7 @@
         "2026-06-05"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-05-25 | Claude: ukjent",
-      "claude_hash": "9a7d0b837d2ad166"
+      "note": "regex foreslaar: 2026-05-25"
     },
     {
       "id": "baa38b6bc0eed96b",
@@ -77,29 +76,16 @@
       "note": "regex foreslaar: 2026-05-25"
     },
     {
-      "id": "c48fb63704a3e1cf",
-      "title": "FIS World Cup Holmenkollen 2027",
-      "url": "https://www.skiforeningen.no/holmenkollen/holmenkollen-skifestival/",
-      "expected": "2027-03-13",
-      "found": [
-        "2027-05-05",
-        "2027-12-03"
-      ],
-      "status": "mismatch",
-      "note": "regex foreslaar: 2027-05-05 | Claude: ukjent",
-      "claude_hash": "4159a935e273d94a"
-    },
-    {
       "id": "85a06f285713ed5c",
       "title": "Filmhuset høstprogram 2026",
       "url": "https://www.cinemateket.no/",
       "expected": "2026-09-01",
       "found": [
+        "2026-05-22",
         "2026-05-23",
         "2026-05-27",
         "2026-05-28",
-        "2026-05-29",
-        "2026-06-20"
+        "2026-05-29"
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-06-24"
@@ -191,20 +177,6 @@
       "note": "regex foreslaar: 2026-10-18"
     },
     {
-      "id": "399f234f776ceb40",
-      "title": "Lions Club Oslo Nordstrand - aktiviteter",
-      "url": "https://www.lions.no/oslonordstrand/",
-      "expected": "2026-05-05",
-      "found": [
-        "2026-05-29",
-        "2026-05-31"
-      ],
-      "status": "mismatch",
-      "note": "regex foreslaar: 2026-05-29 | Claude (cached): 2027-02-14",
-      "claude_hash": "ec3e62db669c4049",
-      "claude_suggested": "2027-02-14"
-    },
-    {
       "id": "c951ec6162350418",
       "title": "Lions Club Oslo/Gamle Oslo",
       "url": "https://www.lions.no/oslogamleoslo/",
@@ -214,8 +186,8 @@
         "2026-05-31"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-05-29 | Claude (cached): 2027-02-14",
-      "claude_hash": "ec3e62db669c4049",
+      "note": "regex foreslaar: 2026-05-29 | Claude: 2027-02-14",
+      "claude_hash": "c6fdfb788ed4a372",
       "claude_suggested": "2027-02-14"
     },
     {
@@ -228,8 +200,8 @@
         "2026-05-31"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-05-29 | Claude (cached): 2027-02-14",
-      "claude_hash": "ec3e62db669c4049",
+      "note": "regex foreslaar: 2026-05-29 | Claude: 2027-02-14",
+      "claude_hash": "c6fdfb788ed4a372",
       "claude_suggested": "2027-02-14"
     },
     {
@@ -242,8 +214,8 @@
         "2026-05-31"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-05-29 | Claude (cached): 2027-02-14",
-      "claude_hash": "ec3e62db669c4049",
+      "note": "regex foreslaar: 2026-05-29 | Claude: 2027-02-14",
+      "claude_hash": "c6fdfb788ed4a372",
       "claude_suggested": "2027-02-14"
     },
     {
@@ -287,7 +259,7 @@
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-05-25 | Claude: ukjent",
-      "claude_hash": "bff932ca6e0e44f7"
+      "claude_hash": "458191865bee9cf6"
     },
     {
       "id": "8bfeb00e1849e6b9",
@@ -295,7 +267,7 @@
       "url": "https://www.deichman.no/",
       "expected": "2026-11-09",
       "found": [
-        "2026-05-19",
+        "2026-05-20",
         "2026-05-25",
         "2026-06-05"
       ],
@@ -322,11 +294,10 @@
       "url": "https://orientering.no/",
       "expected": "2026-10-10",
       "found": [
-        "2026-05-24"
+        "2026-05-21"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-05-24 | Claude: ukjent",
-      "claude_hash": "a606c5ba3bbdb173"
+      "note": "regex foreslaar: 2026-05-21"
     },
     {
       "id": "51cafb5f0901801b",
@@ -358,11 +329,11 @@
       "url": "https://orientering.no/",
       "expected": "2026-06-06",
       "found": [
-        "2026-05-24"
+        "2026-05-21"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-05-24 | Claude: ukjent",
-      "claude_hash": "a606c5ba3bbdb173"
+      "note": "regex foreslaar: 2026-05-21 | Claude: ukjent",
+      "claude_hash": "606142f4ce291921"
     },
     {
       "id": "2eb24d2c2de44117",
@@ -382,11 +353,10 @@
       "url": "https://orientering.no/",
       "expected": "2026-11-07",
       "found": [
-        "2026-05-24"
+        "2026-05-21"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-05-24 | Claude: ukjent",
-      "claude_hash": "a606c5ba3bbdb173"
+      "note": "regex foreslaar: 2026-05-21"
     },
     {
       "id": "bfba7c62ec5c8a36",
@@ -394,11 +364,10 @@
       "url": "https://orientering.no/",
       "expected": "2026-09-12",
       "found": [
-        "2026-05-24"
+        "2026-05-21"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-05-24 | Claude: ukjent",
-      "claude_hash": "a606c5ba3bbdb173"
+      "note": "regex foreslaar: 2026-05-21"
     },
     {
       "id": "1db4770383ca2cc9",
@@ -406,11 +375,11 @@
       "url": "https://orientering.no/",
       "expected": "2026-08-29",
       "found": [
-        "2026-05-24"
+        "2026-05-21"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-05-24 | Claude: ukjent",
-      "claude_hash": "a606c5ba3bbdb173"
+      "note": "regex foreslaar: 2026-05-21 | Claude: ukjent",
+      "claude_hash": "606142f4ce291921"
     },
     {
       "id": "cf8578f74fd7d042",
@@ -418,11 +387,11 @@
       "url": "https://orientering.no/",
       "expected": "2026-08-14",
       "found": [
-        "2026-05-24"
+        "2026-05-21"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-05-24 | Claude: ukjent",
-      "claude_hash": "a606c5ba3bbdb173"
+      "note": "regex foreslaar: 2026-05-21 | Claude: ukjent",
+      "claude_hash": "606142f4ce291921"
     },
     {
       "id": "9ca7c061b4879f0f",
@@ -430,11 +399,11 @@
       "url": "https://orientering.no/",
       "expected": "2026-06-17",
       "found": [
-        "2026-05-24"
+        "2026-05-21"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-05-24 | Claude: ukjent",
-      "claude_hash": "a606c5ba3bbdb173"
+      "note": "regex foreslaar: 2026-05-21 | Claude: ukjent",
+      "claude_hash": "606142f4ce291921"
     },
     {
       "id": "d7065b72c00df6ff",
@@ -442,11 +411,22 @@
       "url": "https://orientering.no/",
       "expected": "2026-09-05",
       "found": [
-        "2026-05-24"
+        "2026-05-21"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-05-24 | Claude: ukjent",
-      "claude_hash": "a606c5ba3bbdb173"
+      "note": "regex foreslaar: 2026-05-21"
+    },
+    {
+      "id": "4249b7cb070b16ff",
+      "title": "Orientering: Pinseløpet 2026",
+      "url": "https://orientering.no/",
+      "expected": "2026-05-24",
+      "found": [
+        "2026-05-21"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-05-21 | Claude: ukjent",
+      "claude_hash": "606142f4ce291921"
     },
     {
       "id": "4b452eb704efb020",
@@ -571,7 +551,7 @@
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-05-25 | Claude: ukjent",
-      "claude_hash": "b79ae6d198b4de9d"
+      "claude_hash": "0c6e9eea044fa461"
     },
     {
       "id": "ce5369dfc6af77f6",
@@ -580,12 +560,14 @@
       "expected": "2026-08-04",
       "found": [
         "2026-05-21",
+        "2026-08-12",
         "2026-08-13",
+        "2026-08-14",
         "2026-08-15"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-08-13 | Claude (cached): 2026-08-12",
-      "claude_hash": "066f79513365714d",
+      "note": "regex foreslaar: 2026-08-12 | Claude: 2026-08-12",
+      "claude_hash": "3b36f6e71f3d3cf9",
       "claude_suggested": "2026-08-12"
     },
     {
@@ -595,11 +577,24 @@
       "expected": "2026-08-11",
       "found": [
         "2026-05-21",
+        "2026-08-12",
         "2026-08-13",
+        "2026-08-14",
         "2026-08-15"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-08-13"
+      "note": "regex foreslaar: 2026-08-12"
+    },
+    {
+      "id": "d351525b0521592f",
+      "title": "17. mai-feiringen 2026",
+      "url": "https://www.oslo.kommune.no/17-mai/",
+      "expected": "2026-05-17",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst | Claude (cached): 2026-05-17",
+      "claude_hash": "939485ac40282961",
+      "claude_suggested": "2026-05-17"
     },
     {
       "id": "956dcbb8d1cdafb5",
@@ -928,6 +923,15 @@
       "note": "ingen datoer funnet i synlig tekst"
     },
     {
+      "id": "2b8388cc2d0531de",
+      "title": "Sommerles 2026: lesekampanje for barn",
+      "url": "https://www.sommerles.no/",
+      "expected": "2026-06-01",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst"
+    },
+    {
       "id": "af0e8120b57ec6cb",
       "title": "Stovner kirke - barnekor 2026",
       "url": "https://kirken.no/stovner",
@@ -982,17 +986,6 @@
       "note": "ingen datoer funnet i synlig tekst"
     },
     {
-      "id": "d351525b0521592f",
-      "title": "17. mai-feiringen 2026",
-      "url": "https://www.oslo.kommune.no/17-mai/",
-      "expected": "2026-05-17",
-      "found": [],
-      "status": "ok",
-      "note": "bekreftet av Claude",
-      "claude_hash": "939485ac40282961",
-      "claude_suggested": "2026-05-17"
-    },
-    {
       "id": "175c864df01599c8",
       "title": "Ellingsrudåsen skoles høstloppis 2026",
       "url": "https://ellingsrudasen.osloskolen.no/",
@@ -1006,8 +999,22 @@
       ],
       "status": "ok",
       "note": "bekreftet av Claude",
-      "claude_hash": "6fee5599aa7db83c",
+      "claude_hash": "4adcee5b96a25df9",
       "claude_suggested": "2026-09-26"
+    },
+    {
+      "id": "c48fb63704a3e1cf",
+      "title": "FIS World Cup Holmenkollen 2027",
+      "url": "https://www.skiforeningen.no/holmenkollen/holmenkollen-skifestival/",
+      "expected": "2027-03-13",
+      "found": [
+        "2027-05-05",
+        "2027-12-03"
+      ],
+      "status": "ok",
+      "note": "bekreftet av Claude",
+      "claude_hash": "4159a935e273d94a",
+      "claude_suggested": "2027-03-13"
     },
     {
       "id": "cfc0192161a9b689",
@@ -1017,17 +1024,6 @@
       "found": [
         "2026-05-20",
         "2027-05-28"
-      ],
-      "status": "ok",
-      "note": ""
-    },
-    {
-      "id": "4249b7cb070b16ff",
-      "title": "Orientering: Pinseløpet 2026",
-      "url": "https://orientering.no/",
-      "expected": "2026-05-24",
-      "found": [
-        "2026-05-24"
       ],
       "status": "ok",
       "note": ""
@@ -1097,17 +1093,6 @@
       ],
       "status": "ok",
       "note": ""
-    },
-    {
-      "id": "2b8388cc2d0531de",
-      "title": "Sommerles 2026: lesekampanje for barn",
-      "url": "https://www.sommerles.no/",
-      "expected": "2026-06-01",
-      "found": [],
-      "status": "ok",
-      "note": "bekreftet av Claude",
-      "claude_hash": "0f945779d4df88dd",
-      "claude_suggested": "2026-06-01"
     },
     {
       "id": "2f13da63467099de",
