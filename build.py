@@ -1229,6 +1229,7 @@ def _ingest_cache(bydeler_list):
             "extra_sources": s.get("extra_sources") or [],
             "image_url": s.get("image_url") or "",
             "event_date": s.get("event_date") or "",
+            "paywalled": bool(s.get("paywalled")),
         }
         by_name[bydel]["stories"].append(story)
         known[bydel].add(url_key)
@@ -1685,6 +1686,22 @@ a.story-ics {
   box-shadow: 0 1px 2px rgba(0,0,0,0.05);
 }
 .map-legend .dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 4px; vertical-align: middle; }
+.paywall-badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  color: #8a5a00;
+  background: #fff3d6;
+  border: 1px solid #f0d68a;
+  border-radius: 10px;
+  padding: 1px 7px;
+  white-space: nowrap;
+}
+body.dark .paywall-badge {
+  color: #f0c97a;
+  background: #3a2f12;
+  border-color: #5c4a1e;
+}
 .map-toggle {
   display: inline-flex; gap: 8px; align-items: center; margin-bottom: 12px;
   font-size: 13px; color: #555;
@@ -1939,6 +1956,7 @@ SCRIPT = r"""
   var btnAll = document.getElementById('cat-chip-all');
   var btnNone = document.getElementById('cat-chip-none');
   var selPer   = document.getElementById('period-filter');
+  var pwToggle = document.getElementById('paywall-toggle');
   var search   = document.getElementById('story-search');
   var searchCount = document.getElementById('search-count');
   var sections = Array.from(document.querySelectorAll('.bydel'));
@@ -1988,6 +2006,7 @@ SCRIPT = r"""
   function storyMatches(story, cats, period, q) {
     var dataset = story.dataset;
     if (story.classList.contains('is-hidden')) return false;
+    if (pwToggle && pwToggle.checked && dataset.paywalled === '1') return false;
     if (!cats[dataset.category]) return false;
     if (period === '12h' && !inPastHours(dataset.firstSeen, 12)) return false;
     if (period === '1d' && !inPastWindow(dataset.iso, 1)) return false;
@@ -2075,6 +2094,7 @@ SCRIPT = r"""
         bydel: selBydel ? selBydel.value : null,
         period: selPer ? selPer.value : null,
         cats: catInputs.filter(function(cb) { return cb.checked; }).map(function(cb) { return cb.value; }),
+        hidePaywall: pwToggle ? pwToggle.checked : true,
         v: 1
       };
       window.localStorage.setItem(PREFS_KEY, JSON.stringify(state));
@@ -2100,9 +2120,12 @@ SCRIPT = r"""
       prefs.cats.forEach(function(c) { set[c] = true; });
       catInputs.forEach(function(cb) { cb.checked = !!set[cb.value]; });
     }
+    if (typeof prefs.hidePaywall === 'boolean' && pwToggle) {
+      pwToggle.checked = prefs.hidePaywall;
+    }
   })();
 
-  [selBydel, selPer].forEach(function(el) {
+  [selBydel, selPer, pwToggle].forEach(function(el) {
     if (el) el.addEventListener('change', function() { apply(); savePrefs(); });
   });
   catInputs.forEach(function(cb) {
@@ -3504,6 +3527,11 @@ def render_story(story, bydel_name=""):
     cat_label = CAT_LABEL.get(cat, "Annet")
     date_iso = story.get("date_iso") or ""
     first_seen = story.get("first_seen_iso") or ""
+    paywalled = bool(story.get("paywalled"))
+    paywall_badge = (
+        '<span class="paywall-badge" title="Bak betalingsmur">'
+        '&#128274; Betalingsmur</span>' if paywalled else ""
+    )
     sid = _story_id(story, bydel_name)
     story["_html_id"] = sid
     src_id_attr = story.get("source_id") or ""
@@ -3562,7 +3590,7 @@ def render_story(story, bydel_name=""):
         )
     event_date = story.get("event_date") or ""
     return f"""
-    <article id="{sid}" class="story has-thumb" data-category="{esc(cat)}" data-iso="{esc(date_iso)}" data-first-seen="{esc(first_seen)}" data-event-date="{esc(event_date)}" data-source-id="{esc(src_id_attr)}" data-source-name="{esc(src_name)}">
+    <article id="{sid}" class="story has-thumb" data-category="{esc(cat)}" data-iso="{esc(date_iso)}" data-first-seen="{esc(first_seen)}" data-event-date="{esc(event_date)}" data-source-id="{esc(src_id_attr)}" data-source-name="{esc(src_name)}" data-paywalled="{'1' if paywalled else '0'}">
       {thumb_html}
       <div class="story-body">
         <h3>{esc(story['title'])}{badge}<span class="new-badge" hidden>NYTT</span></h3>
@@ -3572,6 +3600,7 @@ def render_story(story, bydel_name=""):
           <span>{esc(story['date'])}</span>
           <span class="sep">&middot;</span>
           <span class="pill {esc(cat)}">{esc(cat_label)}</span>
+          {paywall_badge}
           {hide_btn_html}
         </div>
         <p>{esc(story['summary'])}</p>
@@ -3990,6 +4019,7 @@ def render_page(include_cowork_meta):
 </div>
 {topp_saker_html}
 {upcoming_html}
+<label class="map-toggle"><input type="checkbox" id="paywall-toggle" checked> Skjul saker bak betalingsmur</label>
 <label class="map-toggle"><input type="checkbox" id="map-toggle" checked> Vis kart</label>
 <div id="map"></div>
 <p class="map-disclaimer">Merk: ikke alle saker er plassert n&oslash;yaktig. Saker uten egen adresse er pin-et p&aring; bydel-/venue-sentrum. Stor prikk = presis posisjon, liten prikk = omtrentlig.</p>

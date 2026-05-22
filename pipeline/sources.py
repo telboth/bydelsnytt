@@ -365,6 +365,7 @@ HTML_SOURCES = [
         "name": "Skiforbundet (Oslo Skikrets)",
         "scraper": "skiforbundet-terminliste",
         "krets": "Oslo Skikrets",
+        "api_url": "https://www.skiforbundet.no/api/EventSearchApi/events",
         "bydel": "Vestre Aker",
         "urls": ["https://www.skiforbundet.no/terminliste/"],
         "limit": 30,

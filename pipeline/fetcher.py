@@ -10,7 +10,7 @@ import urllib.error
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from dataclasses import dataclass, asdict
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from typing import Iterable, Optional
 
 import feedparser
@@ -37,6 +37,7 @@ class RawStory:
     category: str = "annet"
     fetched_at_iso: str = ""
     event_date: str = ""  # ISO-timestamp for arrangement (valgfri)
+    paywalled: bool = False  # True hvis saken ligger bak betalingsmur
 
     def to_dict(self):
         return asdict(self)
@@ -969,6 +970,27 @@ def _akersposten_bydel_from_text(text: str, default: str) -> str:
     return default
 
 
+def _akersposten_paywall_ids(html_txt):
+    """Finn artikkel-ID-er som ligger bak betalingsmur.
+
+    Amedia-maler merker hver teaser med microdata: en
+    <meta itemprop="identifier"> like foer en
+    <meta itemprop="contentModel" content="free|paywall">. Vi parer dem
+    og returnerer settet av ID-er (siste tall-segment) der contentModel
+    ikke er "free".
+    """
+    paywalled = set()
+    for m in re.finditer(
+            r'itemprop="identifier"\s+content="([0-9\-]+)"', html_txt):
+        ident = m.group(1)
+        window = html_txt[m.end():m.end() + 400]
+        cm = re.search(
+            r'itemprop="contentModel"\s+content="([^"]+)"', window)
+        if cm and cm.group(1).strip().lower() not in ("free", "open", ""):
+            paywalled.add(ident.rsplit("-", 1)[-1])
+    return paywalled
+
+
 def fetch_from_html_akersposten(source: dict):
     """Akersposten - lokalavis for Oslo vest.
 
@@ -985,6 +1007,7 @@ def fetch_from_html_akersposten(source: dict):
         html_txt = _fetch_html(list_url)
         if not html_txt:
             continue
+        paywall_ids = _akersposten_paywall_ids(html_txt)
         for m in _AKERSPOSTEN_URL_RE.finditer(html_txt):
             path = m.group(1)
             slug = m.group(2)
@@ -1011,6 +1034,7 @@ def fetch_from_html_akersposten(source: dict):
                 summary="",
                 category="annet",
                 fetched_at_iso=fetched_at,
+                paywalled=story_id in paywall_ids,
             )
             count += 1
             if count >= limit:
@@ -1368,8 +1392,8 @@ def fetch_from_html_operaen(source: dict) -> Iterable[RawStory]:
         if path in seen:
             continue
         seen.add(path)
-        if "sesonglansering" in path:
-            continue  # info-side, ikke forestilling
+        if any(x in path for x in ("sesonglansering", "mitt-valg", "sesong")):
+            continue  # info-/abonnementssider, ikke en enkelt forestilling
         full_url = f"https://operaen.no{path}"
         detail = _fetch_html(full_url)
         if not detail:
@@ -1417,10 +1441,9 @@ def fetch_from_html_operaen(source: dict) -> Iterable[RawStory]:
 
 
 # --- Skiforbundet terminliste (Oslo Skikrets) -----------------------------
-# skiforbundet.no/terminliste/ har en embedded "events" JSON-blob i HTML-en
-# med startDate, eventName, arrangingOrgName, activityName, countyName og
-# eventUrl. Vi henter alle og filtrerer paa countyName = "Oslo Skikrets"
-# (som geografisk dekker Oslo + omegn).
+# skiforbundet.no/terminliste/ er en React-app som henter terminlista fra
+# POST /api/EventSearchApi/events. Vi spoer API-et direkte med et dato-vindu
+# og filtrerer paa countyName = "Oslo Skikrets" (Oslo + omegn).
 
 _SKIFORBUNDET_VENUE_TO_BYDEL = {
     "holmenkollen": "Vestre Aker",
@@ -1463,26 +1486,49 @@ def _parse_dmy(date_str: str) -> str:
     return f"{m.group(3)}-{m.group(2)}-{m.group(1)}"
 
 
-def fetch_from_html_skiforbundet(source: dict) -> Iterable[RawStory]:
-    """Skirenn fra skiforbundet.no/terminliste/ filtrert til Oslo Skikrets."""
-    fetched_at = datetime.now(timezone.utc).isoformat()
-    list_url = (source.get("urls") or
-                ["https://www.skiforbundet.no/terminliste/"])[0]
-    body = _fetch_html(list_url)
-    if not body:
-        return
-    m = re.search(r'"events":(\[.*?\])\s*[,}]', body, re.DOTALL)
-    if not m:
-        print("  [skiforbundet] kunne ikke finne events-array")
-        return
+def _fetch_json_post(url, payload, timeout=15):
+    """POST en JSON-body og returner parset JSON, eller None ved feil."""
+    data = json.dumps(payload).encode("utf-8")
+    req = urllib.request.Request(
+        url, data=data, method="POST",
+        headers={"User-Agent": UA, "Content-Type": "application/json",
+                 "Accept": "application/json"},
+    )
     try:
-        events = json.loads(m.group(1))
-    except json.JSONDecodeError as e:
-        print(f"  [skiforbundet] JSON parse: {e}")
+        with urllib.request.urlopen(req, timeout=timeout, context=SSL_CTX) as r:
+            return json.loads(r.read().decode("utf-8", errors="replace"))
+    except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError,
+            OSError, json.JSONDecodeError) as e:
+        print(f"  [fetcher] WARN: POST {url} feilet: {e}")
+        return None
+
+
+def fetch_from_html_skiforbundet(source: dict) -> Iterable[RawStory]:
+    """Skirenn fra skiforbundet.no terminliste, filtrert til Oslo Skikrets.
+
+    Terminlista lastes klient-side fra POST /api/EventSearchApi/events.
+    Vi spoer API-et direkte med et dato-vindu og filtrerer paa countyName.
+    """
+    fetched_at = datetime.now(timezone.utc).isoformat()
+    today = datetime.now(timezone.utc).date()
+    api_url = source.get(
+        "api_url", "https://www.skiforbundet.no/api/EventSearchApi/events")
+    payload = {"fromDate": today.isoformat(),
+               "toDate": (today + timedelta(days=400)).isoformat()}
+    events = _fetch_json_post(api_url, payload)
+    if isinstance(events, dict):
+        events = events.get("events") or events.get("results") or []
+    if not events:
+        print("  [skiforbundet] ingen events fra API")
         return
     target_krets = source.get("krets", "Oslo Skikrets")
+    limit = source.get("limit", 50)
     count = 0
     for ev in events:
+        if count >= limit:
+            break
+        if not isinstance(ev, dict):
+            continue
         if ev.get("countyName") != target_krets:
             continue
         name = (ev.get("eventName") or "").strip()

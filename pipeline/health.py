@@ -34,6 +34,11 @@ HEALTH_PATH = Path(__file__).resolve().parent.parent / "source_health.json"
 MAX_HISTORY = 14
 STALE_DAYS = 7
 
+# Kilder med lav, men normal, oppdateringsfrekvens (program-/forestillings-
+# sider der de samme oppfoeringene staar i ukevis). Skal IKKE flagges som
+# "stille doed" naar de leverer kjente saker - de svarer fortsatt OK.
+LOW_VELOCITY_SOURCES = {"operaen", "nationaltheatret"}
+
 
 def load() -> dict:
     if not HEALTH_PATH.exists():
@@ -121,7 +126,7 @@ def stale_sources(data: dict, stale_days: int = STALE_DAYS) -> list[dict]:
                     reason = "ingen_kontakt"
             except ValueError:
                 pass
-        if reason is None and last_new:
+        if reason is None and last_new and sid not in LOW_VELOCITY_SOURCES:
             try:
                 last_new_ts = dt.fromisoformat(
                     last_new.replace("Z", "+00:00")
