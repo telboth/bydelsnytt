@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-05-20T06:03:23.275557+00:00",
+  "generatedAt": "2026-05-22T06:03:02.923594+00:00",
   "counts": {
     "fetch_failed": 2,
-    "mismatch": 43,
-    "no_dates": 44,
-    "ok": 8,
-    "skipped": 13
+    "mismatch": 42,
+    "no_dates": 43,
+    "ok": 9,
+    "skipped": 12
   },
-  "newCorrections": 1,
+  "newCorrections": 0,
   "items": [
     {
       "id": "4e68392e31fa7f16",
@@ -64,16 +64,18 @@
       "note": "regex foreslaar: 2026-05-25"
     },
     {
-      "id": "3dc32ca015d1345b",
-      "title": "Deichman Tøyen: Språkkafé",
-      "url": "https://deichman.no/aktuelt",
-      "expected": "2026-05-06",
+      "id": "c48fb63704a3e1cf",
+      "title": "FIS World Cup Holmenkollen 2027",
+      "url": "https://www.skiforeningen.no/holmenkollen/holmenkollen-skifestival/",
+      "expected": "2027-03-13",
       "found": [
-        "2026-05-25",
-        "2026-06-05"
+        "2027-05-05",
+        "2027-12-03"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-05-25"
+      "note": "regex foreslaar: 2027-05-05 | Claude (cached): 2027-03-13",
+      "claude_hash": "4159a935e273d94a",
+      "claude_suggested": "2027-03-13"
     },
     {
       "id": "85a06f285713ed5c",
@@ -81,11 +83,11 @@
       "url": "https://www.cinemateket.no/",
       "expected": "2026-09-01",
       "found": [
-        "2026-05-22",
-        "2026-05-23",
+        "2026-05-26",
         "2026-05-27",
         "2026-05-28",
-        "2026-05-29"
+        "2026-05-29",
+        "2026-06-24"
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-06-24"
@@ -186,7 +188,7 @@
         "2026-05-31"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-05-29 | Claude: 2027-02-14",
+      "note": "regex foreslaar: 2026-05-29 | Claude (cached): 2027-02-14",
       "claude_hash": "c6fdfb788ed4a372",
       "claude_suggested": "2027-02-14"
     },
@@ -200,7 +202,7 @@
         "2026-05-31"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-05-29 | Claude: 2027-02-14",
+      "note": "regex foreslaar: 2026-05-29 | Claude (cached): 2027-02-14",
       "claude_hash": "c6fdfb788ed4a372",
       "claude_suggested": "2027-02-14"
     },
@@ -214,7 +216,7 @@
         "2026-05-31"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-05-29 | Claude: 2027-02-14",
+      "note": "regex foreslaar: 2026-05-29 | Claude (cached): 2027-02-14",
       "claude_hash": "c6fdfb788ed4a372",
       "claude_suggested": "2027-02-14"
     },
@@ -224,11 +226,11 @@
       "url": "https://www.munchmuseet.no/",
       "expected": "2026-06-01",
       "found": [
-        "2026-05-21",
         "2026-05-26",
         "2026-06-07",
         "2026-06-10",
-        "2026-08-02"
+        "2026-08-02",
+        "2026-08-12"
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-05-26"
@@ -259,7 +261,7 @@
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-05-25 | Claude: ukjent",
-      "claude_hash": "458191865bee9cf6"
+      "claude_hash": "bff932ca6e0e44f7"
     },
     {
       "id": "8bfeb00e1849e6b9",
@@ -267,12 +269,10 @@
       "url": "https://www.deichman.no/",
       "expected": "2026-11-09",
       "found": [
-        "2026-05-20",
-        "2026-05-25",
-        "2026-06-05"
+        "2026-05-22"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-06-05"
+      "note": "regex foreslaar: 2026-05-22"
     },
     {
       "id": "6e64cb0883dad758",
@@ -294,10 +294,10 @@
       "url": "https://orientering.no/",
       "expected": "2026-10-10",
       "found": [
-        "2026-05-21"
+        "2026-05-22"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-05-21"
+      "note": "regex foreslaar: 2026-05-22"
     },
     {
       "id": "51cafb5f0901801b",
@@ -309,7 +309,8 @@
         "2026-06-26"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-06-26"
+      "note": "regex foreslaar: 2026-06-26 | Claude: ukjent",
+      "claude_hash": "7f49f67e1642b72d"
     },
     {
       "id": "6097499950049f84",
@@ -329,11 +330,11 @@
       "url": "https://orientering.no/",
       "expected": "2026-06-06",
       "found": [
-        "2026-05-21"
+        "2026-05-22"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-05-21 | Claude: ukjent",
-      "claude_hash": "606142f4ce291921"
+      "note": "regex foreslaar: 2026-05-22 | Claude: ukjent",
+      "claude_hash": "d0c891aeb0c5368b"
     },
     {
       "id": "2eb24d2c2de44117",
@@ -353,10 +354,10 @@
       "url": "https://orientering.no/",
       "expected": "2026-11-07",
       "found": [
-        "2026-05-21"
+        "2026-05-22"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-05-21"
+      "note": "regex foreslaar: 2026-05-22"
     },
     {
       "id": "bfba7c62ec5c8a36",
@@ -364,10 +365,11 @@
       "url": "https://orientering.no/",
       "expected": "2026-09-12",
       "found": [
-        "2026-05-21"
+        "2026-05-22"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-05-21"
+      "note": "regex foreslaar: 2026-05-22 | Claude: ukjent",
+      "claude_hash": "d0c891aeb0c5368b"
     },
     {
       "id": "1db4770383ca2cc9",
@@ -375,11 +377,11 @@
       "url": "https://orientering.no/",
       "expected": "2026-08-29",
       "found": [
-        "2026-05-21"
+        "2026-05-22"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-05-21 | Claude: ukjent",
-      "claude_hash": "606142f4ce291921"
+      "note": "regex foreslaar: 2026-05-22 | Claude: ukjent",
+      "claude_hash": "d0c891aeb0c5368b"
     },
     {
       "id": "cf8578f74fd7d042",
@@ -387,11 +389,11 @@
       "url": "https://orientering.no/",
       "expected": "2026-08-14",
       "found": [
-        "2026-05-21"
+        "2026-05-22"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-05-21 | Claude: ukjent",
-      "claude_hash": "606142f4ce291921"
+      "note": "regex foreslaar: 2026-05-22 | Claude: ukjent",
+      "claude_hash": "d0c891aeb0c5368b"
     },
     {
       "id": "9ca7c061b4879f0f",
@@ -399,11 +401,11 @@
       "url": "https://orientering.no/",
       "expected": "2026-06-17",
       "found": [
-        "2026-05-21"
+        "2026-05-22"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-05-21 | Claude: ukjent",
-      "claude_hash": "606142f4ce291921"
+      "note": "regex foreslaar: 2026-05-22 | Claude: ukjent",
+      "claude_hash": "d0c891aeb0c5368b"
     },
     {
       "id": "d7065b72c00df6ff",
@@ -411,22 +413,11 @@
       "url": "https://orientering.no/",
       "expected": "2026-09-05",
       "found": [
-        "2026-05-21"
+        "2026-05-22"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-05-21"
-    },
-    {
-      "id": "4249b7cb070b16ff",
-      "title": "Orientering: Pinseløpet 2026",
-      "url": "https://orientering.no/",
-      "expected": "2026-05-24",
-      "found": [
-        "2026-05-21"
-      ],
-      "status": "mismatch",
-      "note": "regex foreslaar: 2026-05-21 | Claude: ukjent",
-      "claude_hash": "606142f4ce291921"
+      "note": "regex foreslaar: 2026-05-22 | Claude: ukjent",
+      "claude_hash": "d0c891aeb0c5368b"
     },
     {
       "id": "4b452eb704efb020",
@@ -551,7 +542,7 @@
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-05-25 | Claude: ukjent",
-      "claude_hash": "0c6e9eea044fa461"
+      "claude_hash": "17a402891d360f58"
     },
     {
       "id": "ce5369dfc6af77f6",
@@ -559,7 +550,6 @@
       "url": "https://www.oyafestivalen.no/",
       "expected": "2026-08-04",
       "found": [
-        "2026-05-21",
         "2026-08-12",
         "2026-08-13",
         "2026-08-14",
@@ -567,7 +557,7 @@
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-08-12 | Claude: 2026-08-12",
-      "claude_hash": "3b36f6e71f3d3cf9",
+      "claude_hash": "d08d46603db4c6a5",
       "claude_suggested": "2026-08-12"
     },
     {
@@ -576,7 +566,6 @@
       "url": "https://www.oyafestivalen.no/",
       "expected": "2026-08-11",
       "found": [
-        "2026-05-21",
         "2026-08-12",
         "2026-08-13",
         "2026-08-14",
@@ -584,17 +573,6 @@
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-08-12"
-    },
-    {
-      "id": "d351525b0521592f",
-      "title": "17. mai-feiringen 2026",
-      "url": "https://www.oslo.kommune.no/17-mai/",
-      "expected": "2026-05-17",
-      "found": [],
-      "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst | Claude (cached): 2026-05-17",
-      "claude_hash": "939485ac40282961",
-      "claude_suggested": "2026-05-17"
     },
     {
       "id": "956dcbb8d1cdafb5",
@@ -986,6 +964,17 @@
       "note": "ingen datoer funnet i synlig tekst"
     },
     {
+      "id": "d351525b0521592f",
+      "title": "17. mai-feiringen 2026",
+      "url": "https://www.oslo.kommune.no/17-mai/",
+      "expected": "2026-05-17",
+      "found": [],
+      "status": "ok",
+      "note": "bekreftet av Claude",
+      "claude_hash": "b258cac6a6ead2a0",
+      "claude_suggested": "2026-05-17"
+    },
+    {
       "id": "175c864df01599c8",
       "title": "Ellingsrudåsen skoles høstloppis 2026",
       "url": "https://ellingsrudasen.osloskolen.no/",
@@ -999,22 +988,8 @@
       ],
       "status": "ok",
       "note": "bekreftet av Claude",
-      "claude_hash": "4adcee5b96a25df9",
+      "claude_hash": "ced5323f07070404",
       "claude_suggested": "2026-09-26"
-    },
-    {
-      "id": "c48fb63704a3e1cf",
-      "title": "FIS World Cup Holmenkollen 2027",
-      "url": "https://www.skiforeningen.no/holmenkollen/holmenkollen-skifestival/",
-      "expected": "2027-03-13",
-      "found": [
-        "2027-05-05",
-        "2027-12-03"
-      ],
-      "status": "ok",
-      "note": "bekreftet av Claude",
-      "claude_hash": "4159a935e273d94a",
-      "claude_suggested": "2027-03-13"
     },
     {
       "id": "cfc0192161a9b689",
@@ -1022,11 +997,25 @@
       "url": "https://www.grefsenkollenopp.no/",
       "expected": "2026-05-20",
       "found": [
-        "2026-05-20",
         "2027-05-28"
       ],
       "status": "ok",
-      "note": ""
+      "note": "bekreftet av Claude",
+      "claude_hash": "80cbc6267ffcd57c",
+      "claude_suggested": "2026-05-20"
+    },
+    {
+      "id": "4249b7cb070b16ff",
+      "title": "Orientering: Pinseløpet 2026",
+      "url": "https://orientering.no/",
+      "expected": "2026-05-24",
+      "found": [
+        "2026-05-22"
+      ],
+      "status": "ok",
+      "note": "bekreftet av Claude",
+      "claude_hash": "d0c891aeb0c5368b",
+      "claude_suggested": "2026-05-24"
     },
     {
       "id": "c3a438c27157cb2e",
@@ -1153,15 +1142,6 @@
       "title": "Lørdagsloppis Tøyen 2026",
       "url": "https://www.facebook.com/toyentorg/",
       "expected": "2026-07-11",
-      "found": [],
-      "status": "skipped",
-      "note": "URL er social/wiki/maps - ingen kanonisk dato"
-    },
-    {
-      "id": "19f66e4698ff0ac7",
-      "title": "Orientering: Lillomarka OL nærløp - Linderudkollen",
-      "url": "https://no.wikipedia.org/wiki/Lillomarka_Orienteringslag",
-      "expected": "2026-05-06",
       "found": [],
       "status": "skipped",
       "note": "URL er social/wiki/maps - ingen kanonisk dato"
