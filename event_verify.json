@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-05-26T06:04:30.170487+00:00",
+  "generatedAt": "2026-05-27T06:01:53.459464+00:00",
   "counts": {
     "fetch_failed": 3,
     "mismatch": 31,
-    "no_dates": 50,
-    "ok": 8,
+    "no_dates": 51,
+    "ok": 6,
     "skipped": 10
   },
   "newCorrections": 0,
@@ -57,7 +57,7 @@
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-06-05 | Claude: ukjent",
-      "claude_hash": "3960168c7f85f0b0"
+      "claude_hash": "5d9a2af3aa4f2365"
     },
     {
       "id": "c48fb63704a3e1cf",
@@ -79,10 +79,10 @@
       "url": "https://www.cinemateket.no/",
       "expected": "2026-09-01",
       "found": [
-        "2026-05-28",
         "2026-05-29",
         "2026-05-30",
         "2026-06-02",
+        "2026-06-03",
         "2026-06-04"
       ],
       "status": "mismatch",
@@ -198,33 +198,19 @@
       "claude_suggested": "2027-02-14"
     },
     {
-      "id": "97616474ee627f92",
-      "title": "Lions Club Oslo/Vestre Aker",
-      "url": "https://www.lions.no/oslovestreaker/",
-      "expected": "2026-05-12",
-      "found": [
-        "2026-05-29",
-        "2026-05-31"
-      ],
-      "status": "mismatch",
-      "note": "regex foreslaar: 2026-05-29 | Claude (cached): 2027-02-14",
-      "claude_hash": "c6fdfb788ed4a372",
-      "claude_suggested": "2027-02-14"
-    },
-    {
       "id": "0ad320d542039ded",
       "title": "Munchmuseet: Sommersesong 2026",
       "url": "https://www.munchmuseet.no/",
       "expected": "2026-06-01",
       "found": [
-        "2026-05-26",
         "2026-06-07",
         "2026-06-10",
         "2026-08-02",
-        "2026-08-12"
+        "2026-08-12",
+        "2026-08-13"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-05-26"
+      "note": "regex foreslaar: 2026-06-07"
     },
     {
       "id": "236dfc5d4f3ee687",
@@ -245,10 +231,10 @@
       "url": "https://www.deichman.no/",
       "expected": "2026-11-09",
       "found": [
-        "2026-05-26"
+        "2026-05-27"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-05-26"
+      "note": "regex foreslaar: 2026-05-27"
     },
     {
       "id": "6e64cb0883dad758",
@@ -260,8 +246,8 @@
         "2026-08-01"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-07-25 | Claude (cached): 2026-07-25",
-      "claude_hash": "eee60fd0f4e7bd3c",
+      "note": "regex foreslaar: 2026-07-25 | Claude: 2026-07-25",
+      "claude_hash": "84929bf3448ca07a",
       "claude_suggested": "2026-07-25"
     },
     {
@@ -321,8 +307,8 @@
         "2026-08-15"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-08-15 | Claude (cached): 2026-08-09",
-      "claude_hash": "9ba1ffa85f53e82e",
+      "note": "regex foreslaar: 2026-08-15 | Claude: 2026-08-09",
+      "claude_hash": "ea3b8a84f56e3ba5",
       "claude_suggested": "2026-08-09"
     },
     {
@@ -373,6 +359,23 @@
       "note": "regex foreslaar: 2026-06-13"
     },
     {
+      "id": "7144904c18ac6dac",
+      "title": "Styrkeprøven 2026 (Trondheim-Oslo)",
+      "url": "https://www.styrkeproven.no/",
+      "expected": "2026-06-20",
+      "found": [
+        "2026-06-17",
+        "2026-06-21",
+        "2027-04-06",
+        "2027-05-19",
+        "2027-06-13"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-06-21 | Claude (cached): 2026-06-20",
+      "claude_hash": "34ce7411d2d867ef",
+      "claude_suggested": "2026-06-20"
+    },
+    {
       "id": "28fa8f09240ce54a",
       "title": "Ultima Samtidsmusikkfestival 2026",
       "url": "https://ultima.no/nb",
@@ -408,7 +411,7 @@
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-06-19 | Claude: ukjent",
-      "claude_hash": "4cc5208769113877"
+      "claude_hash": "89359a205907c3e2"
     },
     {
       "id": "ce5369dfc6af77f6",
@@ -513,7 +516,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "0ef737b75e940c4b"
+      "claude_hash": "d4c5aaaca95a9445"
     },
     {
       "id": "2dc7cf1f8174fdce",
@@ -522,8 +525,7 @@
       "expected": "2026-05-21",
       "found": [],
       "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "e867ba8c24979381"
+      "note": "ingen datoer funnet i synlig tekst"
     },
     {
       "id": "5cf1ee9302e199f5",
@@ -697,7 +699,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "a6286d571694c7d3"
+      "claude_hash": "455ee999da0c87fe"
     },
     {
       "id": "7ee06b9ad778f5ed",
@@ -707,7 +709,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "a6286d571694c7d3"
+      "claude_hash": "455ee999da0c87fe"
     },
     {
       "id": "d765f97a38fd3af1",
@@ -717,7 +719,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "a6286d571694c7d3"
+      "claude_hash": "455ee999da0c87fe"
     },
     {
       "id": "bfba7c62ec5c8a36",
@@ -727,7 +729,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "a6286d571694c7d3"
+      "claude_hash": "455ee999da0c87fe"
     },
     {
       "id": "1db4770383ca2cc9",
@@ -737,7 +739,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "a6286d571694c7d3"
+      "claude_hash": "455ee999da0c87fe"
     },
     {
       "id": "cf8578f74fd7d042",
@@ -747,7 +749,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "a6286d571694c7d3"
+      "claude_hash": "455ee999da0c87fe"
     },
     {
       "id": "9ca7c061b4879f0f",
@@ -757,7 +759,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "a6286d571694c7d3"
+      "claude_hash": "455ee999da0c87fe"
     },
     {
       "id": "d7065b72c00df6ff",
@@ -767,7 +769,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "a6286d571694c7d3"
+      "claude_hash": "455ee999da0c87fe"
     },
     {
       "id": "4249b7cb070b16ff",
@@ -777,7 +779,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "a6286d571694c7d3"
+      "claude_hash": "455ee999da0c87fe"
     },
     {
       "id": "d845142a1a352f4c",
@@ -852,6 +854,17 @@
       "note": "ingen datoer funnet i synlig tekst"
     },
     {
+      "id": "2b8388cc2d0531de",
+      "title": "Sommerles 2026: lesekampanje for barn",
+      "url": "https://www.sommerles.no/",
+      "expected": "2026-06-01",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst | Claude (cached): 2026-06-01",
+      "claude_hash": "0f945779d4df88dd",
+      "claude_suggested": "2026-06-01"
+    },
+    {
       "id": "af0e8120b57ec6cb",
       "title": "Stovner kirke - barnekor 2026",
       "url": "https://kirken.no/stovner",
@@ -919,7 +932,7 @@
       ],
       "status": "ok",
       "note": "bekreftet av Claude",
-      "claude_hash": "d38fac6cac68fc76",
+      "claude_hash": "4474e94e66baa822",
       "claude_suggested": "2026-09-26"
     },
     {
@@ -987,34 +1000,6 @@
       ],
       "status": "ok",
       "note": ""
-    },
-    {
-      "id": "2b8388cc2d0531de",
-      "title": "Sommerles 2026: lesekampanje for barn",
-      "url": "https://www.sommerles.no/",
-      "expected": "2026-06-01",
-      "found": [],
-      "status": "ok",
-      "note": "bekreftet av Claude",
-      "claude_hash": "0f945779d4df88dd",
-      "claude_suggested": "2026-06-01"
-    },
-    {
-      "id": "7144904c18ac6dac",
-      "title": "Styrkeprøven 2026 (Trondheim-Oslo)",
-      "url": "https://www.styrkeproven.no/",
-      "expected": "2026-06-20",
-      "found": [
-        "2026-06-17",
-        "2026-06-21",
-        "2027-04-06",
-        "2027-05-19",
-        "2027-06-13"
-      ],
-      "status": "ok",
-      "note": "bekreftet av Claude",
-      "claude_hash": "34ce7411d2d867ef",
-      "claude_suggested": "2026-06-20"
     },
     {
       "id": "2f13da63467099de",
