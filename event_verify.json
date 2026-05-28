@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-05-27T06:01:53.459464+00:00",
+  "generatedAt": "2026-05-28T06:01:25.768138+00:00",
   "counts": {
-    "fetch_failed": 3,
-    "mismatch": 31,
+    "fetch_failed": 4,
+    "mismatch": 30,
     "no_dates": 51,
-    "ok": 6,
+    "ok": 5,
     "skipped": 10
   },
   "newCorrections": 0,
@@ -28,6 +28,15 @@
       "note": "kunne ikke hente URL"
     },
     {
+      "id": "0ad320d542039ded",
+      "title": "Munchmuseet: Sommersesong 2026",
+      "url": "https://www.munchmuseet.no/",
+      "expected": "2026-06-01",
+      "found": [],
+      "status": "fetch_failed",
+      "note": "kunne ikke hente URL"
+    },
+    {
       "id": "83f362a5bdaedbb2",
       "title": "Oslo Arkitekturfestival 2026",
       "url": "https://oslobiennalen.no",
@@ -42,6 +51,7 @@
       "url": "https://deichman.no/aktuelt",
       "expected": "2026-09-15",
       "found": [
+        "2026-05-31",
         "2026-06-05"
       ],
       "status": "mismatch",
@@ -53,11 +63,29 @@
       "url": "https://deichman.no/aktuelt",
       "expected": "2026-05-15",
       "found": [
+        "2026-05-31",
         "2026-06-05"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-06-05 | Claude: ukjent",
-      "claude_hash": "5d9a2af3aa4f2365"
+      "note": "regex foreslaar: 2026-05-31 | Claude: ukjent",
+      "claude_hash": "e76fadab2bb0652e"
+    },
+    {
+      "id": "175c864df01599c8",
+      "title": "Ellingsrudåsen skoles høstloppis 2026",
+      "url": "https://ellingsrudasen.osloskolen.no/",
+      "expected": "2026-09-26",
+      "found": [
+        "2026-06-19",
+        "2026-08-17",
+        "2026-09-28",
+        "2026-10-02",
+        "2026-12-21"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-09-28 | Claude (cached): 2026-09-26",
+      "claude_hash": "4474e94e66baa822",
+      "claude_suggested": "2026-09-26"
     },
     {
       "id": "c48fb63704a3e1cf",
@@ -79,11 +107,11 @@
       "url": "https://www.cinemateket.no/",
       "expected": "2026-09-01",
       "found": [
-        "2026-05-29",
         "2026-05-30",
         "2026-06-02",
         "2026-06-03",
-        "2026-06-04"
+        "2026-06-04",
+        "2026-06-07"
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-06-24"
@@ -198,21 +226,6 @@
       "claude_suggested": "2027-02-14"
     },
     {
-      "id": "0ad320d542039ded",
-      "title": "Munchmuseet: Sommersesong 2026",
-      "url": "https://www.munchmuseet.no/",
-      "expected": "2026-06-01",
-      "found": [
-        "2026-06-07",
-        "2026-06-10",
-        "2026-08-02",
-        "2026-08-12",
-        "2026-08-13"
-      ],
-      "status": "mismatch",
-      "note": "regex foreslaar: 2026-06-07"
-    },
-    {
       "id": "236dfc5d4f3ee687",
       "title": "Musikkfest Oslo 2026",
       "url": "https://musikkfest.no/",
@@ -231,10 +244,13 @@
       "url": "https://www.deichman.no/",
       "expected": "2026-11-09",
       "found": [
-        "2026-05-27"
+        "2026-05-28",
+        "2026-05-31",
+        "2026-06-01",
+        "2026-08-31"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-05-27"
+      "note": "regex foreslaar: 2026-08-31"
     },
     {
       "id": "6e64cb0883dad758",
@@ -247,7 +263,7 @@
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-07-25 | Claude: 2026-07-25",
-      "claude_hash": "84929bf3448ca07a",
+      "claude_hash": "97468e5a64ad81df",
       "claude_suggested": "2026-07-25"
     },
     {
@@ -262,18 +278,6 @@
       "status": "mismatch",
       "note": "regex foreslaar: 2026-06-26 | Claude: ukjent",
       "claude_hash": "699f3a06a6f1b987"
-    },
-    {
-      "id": "6097499950049f84",
-      "title": "Orientering: Heming nærløp - Holmenkollen",
-      "url": "https://www.heming.no/orientering/",
-      "expected": "2026-05-13",
-      "found": [
-        "2027-01-25"
-      ],
-      "status": "mismatch",
-      "note": "regex foreslaar: 2027-01-25 | Claude: ukjent",
-      "claude_hash": "cc2cd79da6a31a2b"
     },
     {
       "id": "2eb24d2c2de44117",
@@ -307,7 +311,7 @@
         "2026-08-15"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-08-15 | Claude: 2026-08-09",
+      "note": "regex foreslaar: 2026-08-15 | Claude (cached): 2026-08-09",
       "claude_hash": "ea3b8a84f56e3ba5",
       "claude_suggested": "2026-08-09"
     },
@@ -516,7 +520,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "d4c5aaaca95a9445"
+      "claude_hash": "0ef737b75e940c4b"
     },
     {
       "id": "2dc7cf1f8174fdce",
@@ -525,7 +529,8 @@
       "expected": "2026-05-21",
       "found": [],
       "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
+      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
+      "claude_hash": "e867ba8c24979381"
     },
     {
       "id": "5cf1ee9302e199f5",
@@ -699,7 +704,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "455ee999da0c87fe"
+      "claude_hash": "9f8c727f4ece7e7e"
     },
     {
       "id": "7ee06b9ad778f5ed",
@@ -709,7 +714,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "455ee999da0c87fe"
+      "claude_hash": "9f8c727f4ece7e7e"
     },
     {
       "id": "d765f97a38fd3af1",
@@ -719,7 +724,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "455ee999da0c87fe"
+      "claude_hash": "9f8c727f4ece7e7e"
     },
     {
       "id": "bfba7c62ec5c8a36",
@@ -729,7 +734,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "455ee999da0c87fe"
+      "claude_hash": "9f8c727f4ece7e7e"
     },
     {
       "id": "1db4770383ca2cc9",
@@ -739,7 +744,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "455ee999da0c87fe"
+      "claude_hash": "9f8c727f4ece7e7e"
     },
     {
       "id": "cf8578f74fd7d042",
@@ -749,7 +754,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "455ee999da0c87fe"
+      "claude_hash": "9f8c727f4ece7e7e"
     },
     {
       "id": "9ca7c061b4879f0f",
@@ -759,7 +764,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "455ee999da0c87fe"
+      "claude_hash": "9f8c727f4ece7e7e"
     },
     {
       "id": "d7065b72c00df6ff",
@@ -769,7 +774,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "455ee999da0c87fe"
+      "claude_hash": "9f8c727f4ece7e7e"
     },
     {
       "id": "4249b7cb070b16ff",
@@ -779,7 +784,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "455ee999da0c87fe"
+      "claude_hash": "9f8c727f4ece7e7e"
     },
     {
       "id": "d845142a1a352f4c",
@@ -917,23 +922,6 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst"
-    },
-    {
-      "id": "175c864df01599c8",
-      "title": "Ellingsrudåsen skoles høstloppis 2026",
-      "url": "https://ellingsrudasen.osloskolen.no/",
-      "expected": "2026-09-26",
-      "found": [
-        "2026-06-19",
-        "2026-08-17",
-        "2026-09-28",
-        "2026-10-02",
-        "2026-12-21"
-      ],
-      "status": "ok",
-      "note": "bekreftet av Claude",
-      "claude_hash": "4474e94e66baa822",
-      "claude_suggested": "2026-09-26"
     },
     {
       "id": "c3a438c27157cb2e",
