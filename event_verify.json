@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-05-28T06:01:25.768138+00:00",
+  "generatedAt": "2026-05-29T06:01:41.458916+00:00",
   "counts": {
     "fetch_failed": 4,
-    "mismatch": 30,
-    "no_dates": 51,
-    "ok": 5,
+    "mismatch": 34,
+    "no_dates": 44,
+    "ok": 6,
     "skipped": 10
   },
   "newCorrections": 0,
@@ -68,7 +68,7 @@
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-05-31 | Claude: ukjent",
-      "claude_hash": "e76fadab2bb0652e"
+      "claude_hash": "5e66f61751601d03"
     },
     {
       "id": "175c864df01599c8",
@@ -83,9 +83,19 @@
         "2026-12-21"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-09-28 | Claude (cached): 2026-09-26",
-      "claude_hash": "4474e94e66baa822",
-      "claude_suggested": "2026-09-26"
+      "note": "regex foreslaar: 2026-09-28 | Claude: ukjent",
+      "claude_hash": "d38fac6cac68fc76"
+    },
+    {
+      "id": "5cf1ee9302e199f5",
+      "title": "Elvelangs Akerselva 2026",
+      "url": "https://www.oslo.kommune.no/",
+      "expected": "2026-09-18",
+      "found": [
+        "2026-06-19"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-06-19"
     },
     {
       "id": "c48fb63704a3e1cf",
@@ -107,7 +117,7 @@
       "url": "https://www.cinemateket.no/",
       "expected": "2026-09-01",
       "found": [
-        "2026-05-30",
+        "2026-05-31",
         "2026-06-02",
         "2026-06-03",
         "2026-06-04",
@@ -165,6 +175,17 @@
       "note": "ingen narliggende dato funnet | Claude (cached): 2026-05-20",
       "claude_hash": "80cbc6267ffcd57c",
       "claude_suggested": "2026-05-20"
+    },
+    {
+      "id": "3741e8192b6b5f38",
+      "title": "Julegrantenning på Stortorvet",
+      "url": "https://www.oslo.kommune.no/",
+      "expected": "2026-11-28",
+      "found": [
+        "2026-06-19"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-06-19"
     },
     {
       "id": "c564d1c97d2eb155",
@@ -244,7 +265,7 @@
       "url": "https://www.deichman.no/",
       "expected": "2026-11-09",
       "found": [
-        "2026-05-28",
+        "2026-05-29",
         "2026-05-31",
         "2026-06-01",
         "2026-08-31"
@@ -262,7 +283,7 @@
         "2026-08-01"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-07-25 | Claude: 2026-07-25",
+      "note": "regex foreslaar: 2026-07-25 | Claude (cached): 2026-07-25",
       "claude_hash": "97468e5a64ad81df",
       "claude_suggested": "2026-07-25"
     },
@@ -273,11 +294,13 @@
       "expected": "2026-09-19",
       "found": [
         "2026-06-22",
-        "2026-06-26"
+        "2026-06-26",
+        "2026-08-10",
+        "2026-08-14",
+        "2026-08-16"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-06-26 | Claude: ukjent",
-      "claude_hash": "699f3a06a6f1b987"
+      "note": "regex foreslaar: 2026-08-26"
     },
     {
       "id": "2eb24d2c2de44117",
@@ -327,6 +350,17 @@
       "note": "regex foreslaar: 2026-08-15"
     },
     {
+      "id": "75cc25222d43888d",
+      "title": "Oslo Mangfoldsfestival 2026",
+      "url": "https://www.oslo.kommune.no/",
+      "expected": "2026-06-06",
+      "found": [
+        "2026-06-19"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-06-19"
+    },
+    {
       "id": "94477da2695444e1",
       "title": "Oslo Skivinter 2026",
       "url": "https://www.skiforeningen.no/",
@@ -338,20 +372,6 @@
       "note": "regex foreslaar: 2026-05-31"
     },
     {
-      "id": "bb61a462b833d30c",
-      "title": "Oslo World 2026",
-      "url": "https://osloworld.no/",
-      "expected": "2026-10-28",
-      "found": [
-        "2026-10-18",
-        "2026-10-29",
-        "2026-10-30",
-        "2026-10-31"
-      ],
-      "status": "mismatch",
-      "note": "regex foreslaar: 2026-10-29"
-    },
-    {
       "id": "4796cdbbe10dae26",
       "title": "Piknik i Parken 2026",
       "url": "https://piknikiparken.no/",
@@ -361,6 +381,28 @@
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-06-13"
+    },
+    {
+      "id": "976aafbe75b4afaa",
+      "title": "Sankthansbål ved Frognerkilen",
+      "url": "https://www.oslo.kommune.no/",
+      "expected": "2026-06-23",
+      "found": [
+        "2026-06-19"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-06-19"
+    },
+    {
+      "id": "d23303142b16f715",
+      "title": "Sommerball Rådhusplassen 2026",
+      "url": "https://www.oslo.kommune.no/",
+      "expected": "2026-07-18",
+      "found": [
+        "2026-06-19"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-06-19"
     },
     {
       "id": "7144904c18ac6dac",
@@ -415,7 +457,7 @@
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-06-19 | Claude: ukjent",
-      "claude_hash": "89359a205907c3e2"
+      "claude_hash": "4cc5208769113877"
     },
     {
       "id": "ce5369dfc6af77f6",
@@ -429,8 +471,8 @@
         "2026-08-15"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-08-12 | Claude (cached): 2026-08-12",
-      "claude_hash": "31a922ba957c24d0",
+      "note": "regex foreslaar: 2026-08-12 | Claude: 2026-08-12",
+      "claude_hash": "98510c385ccdae73",
       "claude_suggested": "2026-08-12"
     },
     {
@@ -510,17 +552,8 @@
       "expected": "2026-05-20",
       "found": [],
       "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
-    },
-    {
-      "id": "eb40e3614f0343a6",
-      "title": "Deichman Majorstuen: Bokstrikk",
-      "url": "https://www.deichman.no/majorstuen",
-      "expected": "2026-05-14",
-      "found": [],
-      "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "0ef737b75e940c4b"
+      "claude_hash": "b93e37c29f1eee27"
     },
     {
       "id": "2dc7cf1f8174fdce",
@@ -530,16 +563,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "e867ba8c24979381"
-    },
-    {
-      "id": "5cf1ee9302e199f5",
-      "title": "Elvelangs Akerselva 2026",
-      "url": "https://www.oslo.kommune.no/",
-      "expected": "2026-09-18",
-      "found": [],
-      "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
+      "claude_hash": "163b5eb0fc1b6ab6"
     },
     {
       "id": "c7744c7feb809bf0",
@@ -593,15 +617,6 @@
       "title": "Hovedoeya kulturdag 2026",
       "url": "https://www.hovedoya.no/",
       "expected": "2026-08-29",
-      "found": [],
-      "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
-    },
-    {
-      "id": "3741e8192b6b5f38",
-      "title": "Julegrantenning på Stortorvet",
-      "url": "https://www.oslo.kommune.no/",
-      "expected": "2026-11-28",
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst"
@@ -704,7 +719,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "9f8c727f4ece7e7e"
+      "claude_hash": "0811dab2fe961022"
     },
     {
       "id": "7ee06b9ad778f5ed",
@@ -714,7 +729,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "9f8c727f4ece7e7e"
+      "claude_hash": "0811dab2fe961022"
     },
     {
       "id": "d765f97a38fd3af1",
@@ -724,7 +739,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "9f8c727f4ece7e7e"
+      "claude_hash": "0811dab2fe961022"
     },
     {
       "id": "bfba7c62ec5c8a36",
@@ -734,7 +749,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "9f8c727f4ece7e7e"
+      "claude_hash": "0811dab2fe961022"
     },
     {
       "id": "1db4770383ca2cc9",
@@ -744,7 +759,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "9f8c727f4ece7e7e"
+      "claude_hash": "0811dab2fe961022"
     },
     {
       "id": "cf8578f74fd7d042",
@@ -754,7 +769,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "9f8c727f4ece7e7e"
+      "claude_hash": "0811dab2fe961022"
     },
     {
       "id": "9ca7c061b4879f0f",
@@ -764,7 +779,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "9f8c727f4ece7e7e"
+      "claude_hash": "0811dab2fe961022"
     },
     {
       "id": "d7065b72c00df6ff",
@@ -774,7 +789,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "9f8c727f4ece7e7e"
+      "claude_hash": "0811dab2fe961022"
     },
     {
       "id": "4249b7cb070b16ff",
@@ -784,7 +799,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "9f8c727f4ece7e7e"
+      "claude_hash": "0811dab2fe961022"
     },
     {
       "id": "d845142a1a352f4c",
@@ -805,15 +820,6 @@
       "note": "ingen datoer funnet i synlig tekst"
     },
     {
-      "id": "75cc25222d43888d",
-      "title": "Oslo Mangfoldsfestival 2026",
-      "url": "https://www.oslo.kommune.no/",
-      "expected": "2026-06-06",
-      "found": [],
-      "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
-    },
-    {
       "id": "d63dc1f84a18e6ec",
       "title": "Oslo Vinterpark (Tryvann) — sesongåpning",
       "url": "https://www.oslovinterpark.no/",
@@ -823,37 +829,10 @@
       "note": "ingen datoer funnet i synlig tekst"
     },
     {
-      "id": "8e15bcef1585dff6",
-      "title": "Sagene kirke konsertserie 2026",
-      "url": "https://kirken.no/sagene",
-      "expected": "2026-05-14",
-      "found": [],
-      "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
-    },
-    {
-      "id": "976aafbe75b4afaa",
-      "title": "Sankthansbål ved Frognerkilen",
-      "url": "https://www.oslo.kommune.no/",
-      "expected": "2026-06-23",
-      "found": [],
-      "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
-    },
-    {
       "id": "edc54faec3422b2a",
       "title": "Sinober — markastue i Lillomarka",
       "url": "https://ut.no/hytte/10638/sinober-sportsstue",
       "expected": "2026-05-16",
-      "found": [],
-      "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
-    },
-    {
-      "id": "d23303142b16f715",
-      "title": "Sommerball Rådhusplassen 2026",
-      "url": "https://www.oslo.kommune.no/",
-      "expected": "2026-07-18",
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst"
@@ -972,6 +951,21 @@
       "found": [
         "2026-06-22",
         "2026-08-08"
+      ],
+      "status": "ok",
+      "note": ""
+    },
+    {
+      "id": "bb61a462b833d30c",
+      "title": "Oslo World 2026",
+      "url": "https://osloworld.no/",
+      "expected": "2026-10-28",
+      "found": [
+        "2026-10-18",
+        "2026-10-28",
+        "2026-10-29",
+        "2026-10-30",
+        "2026-10-31"
       ],
       "status": "ok",
       "note": ""
