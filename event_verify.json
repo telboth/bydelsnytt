@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-05T06:15:50.073085+00:00",
+  "generatedAt": "2026-06-06T06:01:38.150227+00:00",
   "counts": {
     "fetch_failed": 4,
-    "mismatch": 22,
+    "mismatch": 20,
     "no_dates": 43,
-    "ok": 6,
+    "ok": 7,
     "skipped": 10
   },
   "newCorrections": 0,
@@ -46,18 +46,6 @@
       "note": "kunne ikke hente URL"
     },
     {
-      "id": "5504d878fe5d430d",
-      "title": "Bokstart Oslo: bokpakker til 1-åringer",
-      "url": "https://deichman.no/aktuelt",
-      "expected": "2026-09-15",
-      "found": [
-        "2026-06-05"
-      ],
-      "status": "mismatch",
-      "note": "regex foreslaar: 2026-06-05 | Claude: ukjent",
-      "claude_hash": "5154f520cbd85446"
-    },
-    {
       "id": "175c864df01599c8",
       "title": "Ellingsrudåsen skoles høstloppis 2026",
       "url": "https://ellingsrudasen.osloskolen.no/",
@@ -86,21 +74,6 @@
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-06-24"
-    },
-    {
-      "id": "87cdd1077d515f1e",
-      "title": "Frognerbadet åpner for sommeren",
-      "url": "https://www.oslo.kommune.no/natur-kultur-og-fritid/svommehaller-i-oslo/frognerbadet/",
-      "expected": "2026-05-22",
-      "found": [
-        "2026-06-07",
-        "2026-06-08",
-        "2026-06-14",
-        "2026-06-15",
-        "2026-06-21"
-      ],
-      "status": "mismatch",
-      "note": "regex foreslaar: 2026-06-07"
     },
     {
       "id": "c564d1c97d2eb155",
@@ -142,8 +115,8 @@
         "2026-06-06"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-06-06 | Claude (cached): 2026-06-06",
-      "claude_hash": "0f315070656ffed7",
+      "note": "regex foreslaar: 2026-06-06 | Claude: 2026-06-06",
+      "claude_hash": "f1550134682d3fac",
       "claude_suggested": "2026-06-06"
     },
     {
@@ -152,12 +125,11 @@
       "url": "https://www.deichman.no/",
       "expected": "2026-11-09",
       "found": [
-        "2026-06-05",
+        "2026-06-06",
         "2026-08-31"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-08-31 | Claude: ukjent",
-      "claude_hash": "f804df70c467eb2c"
+      "note": "regex foreslaar: 2026-08-31"
     },
     {
       "id": "6e64cb0883dad758",
@@ -169,7 +141,7 @@
         "2026-08-01"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-07-25 | Claude: 2026-07-25",
+      "note": "regex foreslaar: 2026-07-25 | Claude (cached): 2026-07-25",
       "claude_hash": "7339173ecbde4cac",
       "claude_suggested": "2026-07-25"
     },
@@ -186,9 +158,7 @@
         "2026-08-16"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-08-26 | Claude: 2026-08-16",
-      "claude_hash": "f84571950c41cb2a",
-      "claude_suggested": "2026-08-16"
+      "note": "regex foreslaar: 2026-08-26"
     },
     {
       "id": "2eb24d2c2de44117",
@@ -222,8 +192,8 @@
         "2026-08-15"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-08-15 | Claude (cached): 2026-08-09",
-      "claude_hash": "ea5b69291b69af99",
+      "note": "regex foreslaar: 2026-08-15 | Claude: 2026-08-09",
+      "claude_hash": "8ebc968cc2da7561",
       "claude_suggested": "2026-08-09"
     },
     {
@@ -322,7 +292,7 @@
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-08-12 | Claude: 2026-08-12",
-      "claude_hash": "f1870f7c2d9a2448",
+      "claude_hash": "d2322efb07147ee6",
       "claude_suggested": "2026-08-12"
     },
     {
@@ -358,6 +328,15 @@
       "note": "ingen datoer funnet i synlig tekst"
     },
     {
+      "id": "5504d878fe5d430d",
+      "title": "Bokstart Oslo: bokpakker til 1-åringer",
+      "url": "https://deichman.no/aktuelt",
+      "expected": "2026-09-15",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst"
+    },
+    {
       "id": "3c93271b49580cb1",
       "title": "Byarkivets åpne dag 2026",
       "url": "https://www.oslo.kommune.no/byarkivet",
@@ -374,17 +353,6 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst"
-    },
-    {
-      "id": "c48fb63704a3e1cf",
-      "title": "FIS World Cup Holmenkollen 2027",
-      "url": "https://www.skiforeningen.no/holmenkollen/holmenkollen-skifestival/",
-      "expected": "2027-03-13",
-      "found": [],
-      "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst | Claude (cached): 2027-03-13",
-      "claude_hash": "c72c58de3258a5be",
-      "claude_suggested": "2027-03-13"
     },
     {
       "id": "c7744c7feb809bf0",
@@ -494,9 +462,8 @@
       "expected": "2026-05-26",
       "found": [],
       "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst | Claude: 2027-02-14",
-      "claude_hash": "03ed8a934b4cbbae",
-      "claude_suggested": "2027-02-14"
+      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
+      "claude_hash": "6c2df74b63c0cced"
     },
     {
       "id": "a0697d053ca3b123",
@@ -559,8 +526,7 @@
       "expected": "2026-10-10",
       "found": [],
       "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "37d5c90ef9dbfc6e"
+      "note": "ingen datoer funnet i synlig tekst"
     },
     {
       "id": "7ee06b9ad778f5ed",
@@ -570,7 +536,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "37d5c90ef9dbfc6e"
+      "claude_hash": "845ff634579c7589"
     },
     {
       "id": "d765f97a38fd3af1",
@@ -579,8 +545,7 @@
       "expected": "2026-11-07",
       "found": [],
       "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "37d5c90ef9dbfc6e"
+      "note": "ingen datoer funnet i synlig tekst"
     },
     {
       "id": "bfba7c62ec5c8a36",
@@ -590,7 +555,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "37d5c90ef9dbfc6e"
+      "claude_hash": "845ff634579c7589"
     },
     {
       "id": "1db4770383ca2cc9",
@@ -600,7 +565,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "37d5c90ef9dbfc6e"
+      "claude_hash": "845ff634579c7589"
     },
     {
       "id": "cf8578f74fd7d042",
@@ -610,7 +575,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "37d5c90ef9dbfc6e"
+      "claude_hash": "845ff634579c7589"
     },
     {
       "id": "9ca7c061b4879f0f",
@@ -620,7 +585,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "37d5c90ef9dbfc6e"
+      "claude_hash": "845ff634579c7589"
     },
     {
       "id": "d7065b72c00df6ff",
@@ -630,7 +595,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "37d5c90ef9dbfc6e"
+      "claude_hash": "845ff634579c7589"
     },
     {
       "id": "4249b7cb070b16ff",
@@ -640,7 +605,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "37d5c90ef9dbfc6e"
+      "claude_hash": "845ff634579c7589"
     },
     {
       "id": "d845142a1a352f4c",
@@ -667,8 +632,7 @@
       "expected": "2026-06-06",
       "found": [],
       "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "89fb1f240a0e8785"
+      "note": "ingen datoer funnet i synlig tekst"
     },
     {
       "id": "94477da2695444e1",
@@ -695,8 +659,7 @@
       "expected": "2026-06-23",
       "found": [],
       "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "89fb1f240a0e8785"
+      "note": "ingen datoer funnet i synlig tekst"
     },
     {
       "id": "d23303142b16f715",
@@ -714,9 +677,7 @@
       "expected": "2026-06-01",
       "found": [],
       "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst | Claude (cached): 2026-06-01",
-      "claude_hash": "0f945779d4df88dd",
-      "claude_suggested": "2026-06-01"
+      "note": "ingen datoer funnet i synlig tekst"
     },
     {
       "id": "8819010d6cff358a",
@@ -744,6 +705,17 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst"
+    },
+    {
+      "id": "c48fb63704a3e1cf",
+      "title": "FIS World Cup Holmenkollen 2027",
+      "url": "https://www.skiforeningen.no/holmenkollen/holmenkollen-skifestival/",
+      "expected": "2027-03-13",
+      "found": [],
+      "status": "ok",
+      "note": "bekreftet av Claude",
+      "claude_hash": "450b4e1bb2acb817",
+      "claude_suggested": "2027-03-13"
     },
     {
       "id": "c3a438c27157cb2e",
