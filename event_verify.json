@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-07T06:02:01.575102+00:00",
+  "generatedAt": "2026-06-08T06:02:11.528824+00:00",
   "counts": {
     "fetch_failed": 4,
     "mismatch": 18,
     "no_dates": 44,
-    "ok": 7,
+    "ok": 6,
     "skipped": 10
   },
   "newCorrections": 0,
@@ -67,11 +67,11 @@
       "url": "https://www.cinemateket.no/",
       "expected": "2026-09-01",
       "found": [
-        "2026-06-07",
-        "2026-06-09",
+        "2026-06-11",
+        "2026-06-13",
         "2026-06-14",
-        "2026-06-19",
-        "2026-06-24"
+        "2026-06-16",
+        "2026-06-19"
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-06-24"
@@ -113,12 +113,12 @@
       "url": "https://www.deichman.no/",
       "expected": "2026-11-09",
       "found": [
-        "2026-06-07",
+        "2026-06-08",
         "2026-08-31"
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-08-31 | Claude: ukjent",
-      "claude_hash": "5188f97a71ae3da5"
+      "claude_hash": "8c840ca4d5fae5e8"
     },
     {
       "id": "6e64cb0883dad758",
@@ -147,7 +147,7 @@
         "2026-08-16"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-08-26 | Claude: 2026-08-16",
+      "note": "regex foreslaar: 2026-08-26 | Claude (cached): 2026-08-16",
       "claude_hash": "aed38213bfd10ae5",
       "claude_suggested": "2026-08-16"
     },
@@ -353,7 +353,8 @@
       "expected": "2026-12-05",
       "found": [],
       "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
+      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
+      "claude_hash": "ef1692942c1476a4"
     },
     {
       "id": "e4296261cdf44c64",
@@ -418,7 +419,8 @@
       "expected": "2026-11-28",
       "found": [],
       "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
+      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
+      "claude_hash": "89fb1f240a0e8785"
     },
     {
       "id": "9877a490c26f9e41",
@@ -530,7 +532,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "1ffd252bc6f9b31b"
+      "claude_hash": "387a520507abe859"
     },
     {
       "id": "7ee06b9ad778f5ed",
@@ -540,7 +542,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "1ffd252bc6f9b31b"
+      "claude_hash": "387a520507abe859"
     },
     {
       "id": "d765f97a38fd3af1",
@@ -550,7 +552,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "1ffd252bc6f9b31b"
+      "claude_hash": "387a520507abe859"
     },
     {
       "id": "bfba7c62ec5c8a36",
@@ -560,7 +562,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "1ffd252bc6f9b31b"
+      "claude_hash": "387a520507abe859"
     },
     {
       "id": "1db4770383ca2cc9",
@@ -570,7 +572,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "1ffd252bc6f9b31b"
+      "claude_hash": "387a520507abe859"
     },
     {
       "id": "cf8578f74fd7d042",
@@ -580,7 +582,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "1ffd252bc6f9b31b"
+      "claude_hash": "387a520507abe859"
     },
     {
       "id": "9ca7c061b4879f0f",
@@ -590,7 +592,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "1ffd252bc6f9b31b"
+      "claude_hash": "387a520507abe859"
     },
     {
       "id": "d7065b72c00df6ff",
@@ -600,17 +602,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "1ffd252bc6f9b31b"
-    },
-    {
-      "id": "4249b7cb070b16ff",
-      "title": "Orientering: Pinseløpet 2026",
-      "url": "https://orientering.no/",
-      "expected": "2026-05-24",
-      "found": [],
-      "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "1ffd252bc6f9b31b"
+      "claude_hash": "387a520507abe859"
     },
     {
       "id": "d845142a1a352f4c",
@@ -665,7 +657,8 @@
       "expected": "2026-06-23",
       "found": [],
       "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
+      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
+      "claude_hash": "89fb1f240a0e8785"
     },
     {
       "id": "d23303142b16f715",
@@ -675,6 +668,17 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst"
+    },
+    {
+      "id": "2b8388cc2d0531de",
+      "title": "Sommerles 2026: lesekampanje for barn",
+      "url": "https://www.sommerles.no/",
+      "expected": "2026-06-01",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst | Claude (cached): 2026-06-01",
+      "claude_hash": "0f945779d4df88dd",
+      "claude_suggested": "2026-06-01"
     },
     {
       "id": "8819010d6cff358a",
@@ -783,17 +787,6 @@
       ],
       "status": "ok",
       "note": ""
-    },
-    {
-      "id": "2b8388cc2d0531de",
-      "title": "Sommerles 2026: lesekampanje for barn",
-      "url": "https://www.sommerles.no/",
-      "expected": "2026-06-01",
-      "found": [],
-      "status": "ok",
-      "note": "bekreftet av Claude",
-      "claude_hash": "0f945779d4df88dd",
-      "claude_suggested": "2026-06-01"
     },
     {
       "id": "2f13da63467099de",
