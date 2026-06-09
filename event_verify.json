@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-06-08T06:02:11.528824+00:00",
+  "generatedAt": "2026-06-09T06:01:26.502216+00:00",
   "counts": {
     "fetch_failed": 4,
-    "mismatch": 18,
-    "no_dates": 44,
-    "ok": 6,
+    "mismatch": 19,
+    "no_dates": 42,
+    "ok": 7,
     "skipped": 10
   },
-  "newCorrections": 0,
+  "newCorrections": 1,
   "items": [
     {
       "id": "4e68392e31fa7f16",
@@ -59,7 +59,7 @@
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-09-28 | Claude: ukjent",
-      "claude_hash": "88ae35caa28e5c16"
+      "claude_hash": "1bddc755e7453017"
     },
     {
       "id": "85a06f285713ed5c",
@@ -108,17 +108,29 @@
       "note": "regex foreslaar: 2026-10-18"
     },
     {
-      "id": "8bfeb00e1849e6b9",
-      "title": "Nordisk bibliotekuke 2026",
-      "url": "https://www.deichman.no/",
-      "expected": "2026-11-09",
+      "id": "4d686cebc7ae019c",
+      "title": "Linderud julemarked 2026",
+      "url": "https://www.linderudsenter.no/",
+      "expected": "2026-11-28",
       "found": [
-        "2026-06-08",
-        "2026-08-31"
+        "2026-06-30",
+        "2026-08-01"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-08-31 | Claude: ukjent",
-      "claude_hash": "8c840ca4d5fae5e8"
+      "note": "regex foreslaar: 2026-08-01"
+    },
+    {
+      "id": "236dfc5d4f3ee687",
+      "title": "Musikkfest Oslo 2026",
+      "url": "https://musikkfest.no/",
+      "expected": "2026-06-20",
+      "found": [
+        "2027-06-05"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2027-06-05 | Claude: 2027-06-05",
+      "claude_hash": "776f67962e9e5eca",
+      "claude_suggested": "2027-06-05"
     },
     {
       "id": "6e64cb0883dad758",
@@ -130,8 +142,8 @@
         "2026-08-01"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-07-25 | Claude (cached): 2026-07-25",
-      "claude_hash": "7339173ecbde4cac",
+      "note": "regex foreslaar: 2026-07-25 | Claude: 2026-07-25",
+      "claude_hash": "173091c1a2e81719",
       "claude_suggested": "2026-07-25"
     },
     {
@@ -147,8 +159,8 @@
         "2026-08-16"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-08-26 | Claude (cached): 2026-08-16",
-      "claude_hash": "aed38213bfd10ae5",
+      "note": "regex foreslaar: 2026-08-26 | Claude: 2026-08-16",
+      "claude_hash": "0a4374877efb89db",
       "claude_suggested": "2026-08-16"
     },
     {
@@ -271,8 +283,8 @@
         "2026-08-15"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-08-12 | Claude (cached): 2026-08-12",
-      "claude_hash": "d2322efb07147ee6",
+      "note": "regex foreslaar: 2026-08-12 | Claude: 2026-08-12",
+      "claude_hash": "daf7942ff09b9246",
       "claude_suggested": "2026-08-12"
     },
     {
@@ -315,7 +327,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "5154f520cbd85446"
+      "claude_hash": "6f0950b28cddd742"
     },
     {
       "id": "3c93271b49580cb1",
@@ -353,8 +365,7 @@
       "expected": "2026-12-05",
       "found": [],
       "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "ef1692942c1476a4"
+      "note": "ingen datoer funnet i synlig tekst"
     },
     {
       "id": "e4296261cdf44c64",
@@ -419,8 +430,7 @@
       "expected": "2026-11-28",
       "found": [],
       "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "89fb1f240a0e8785"
+      "note": "ingen datoer funnet i synlig tekst"
     },
     {
       "id": "9877a490c26f9e41",
@@ -436,15 +446,6 @@
       "title": "Kobberhaughytta",
       "url": "https://ut.no/hytte/10645/kobberhaughytta",
       "expected": "2026-06-01",
-      "found": [],
-      "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
-    },
-    {
-      "id": "4d686cebc7ae019c",
-      "title": "Linderud julemarked 2026",
-      "url": "https://www.linderudsenter.no/",
-      "expected": "2026-11-28",
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst"
@@ -487,17 +488,6 @@
       "note": "ingen datoer funnet i synlig tekst"
     },
     {
-      "id": "236dfc5d4f3ee687",
-      "title": "Musikkfest Oslo 2026",
-      "url": "https://musikkfest.no/",
-      "expected": "2026-06-20",
-      "found": [],
-      "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst | Claude (cached): 2026-06-06",
-      "claude_hash": "f1550134682d3fac",
-      "claude_suggested": "2026-06-06"
-    },
-    {
       "id": "df2d3b7815af5db3",
       "title": "Nasjonalmuseets sommerutstilling 2026",
       "url": "https://www.nasjonalmuseet.no/",
@@ -532,7 +522,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "387a520507abe859"
+      "claude_hash": "d480ad7464ab5bce"
     },
     {
       "id": "7ee06b9ad778f5ed",
@@ -542,7 +532,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "387a520507abe859"
+      "claude_hash": "d480ad7464ab5bce"
     },
     {
       "id": "d765f97a38fd3af1",
@@ -552,7 +542,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "387a520507abe859"
+      "claude_hash": "d480ad7464ab5bce"
     },
     {
       "id": "bfba7c62ec5c8a36",
@@ -562,7 +552,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "387a520507abe859"
+      "claude_hash": "d480ad7464ab5bce"
     },
     {
       "id": "1db4770383ca2cc9",
@@ -572,7 +562,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "387a520507abe859"
+      "claude_hash": "d480ad7464ab5bce"
     },
     {
       "id": "cf8578f74fd7d042",
@@ -582,7 +572,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "387a520507abe859"
+      "claude_hash": "d480ad7464ab5bce"
     },
     {
       "id": "9ca7c061b4879f0f",
@@ -592,7 +582,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "387a520507abe859"
+      "claude_hash": "d480ad7464ab5bce"
     },
     {
       "id": "d7065b72c00df6ff",
@@ -602,7 +592,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "387a520507abe859"
+      "claude_hash": "d480ad7464ab5bce"
     },
     {
       "id": "d845142a1a352f4c",
@@ -630,7 +620,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "89fb1f240a0e8785"
+      "claude_hash": "26e60989bbe595bb"
     },
     {
       "id": "94477da2695444e1",
@@ -657,8 +647,7 @@
       "expected": "2026-06-23",
       "found": [],
       "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "89fb1f240a0e8785"
+      "note": "ingen datoer funnet i synlig tekst"
     },
     {
       "id": "d23303142b16f715",
@@ -706,6 +695,21 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst"
+    },
+    {
+      "id": "8bfeb00e1849e6b9",
+      "title": "Nordisk bibliotekuke 2026",
+      "url": "https://www.deichman.no/",
+      "expected": "2026-11-09",
+      "found": [
+        "2026-06-09",
+        "2026-06-13",
+        "2026-08-31"
+      ],
+      "status": "ok",
+      "note": "bekreftet av Claude",
+      "claude_hash": "294b419ec5d1cc50",
+      "claude_suggested": "2026-11-09"
     },
     {
       "id": "c3a438c27157cb2e",
