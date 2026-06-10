@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-09T06:01:26.502216+00:00",
+  "generatedAt": "2026-06-10T14:20:37.421246+00:00",
   "counts": {
     "fetch_failed": 4,
     "mismatch": 19,
-    "no_dates": 42,
-    "ok": 7,
+    "no_dates": 40,
+    "ok": 8,
     "skipped": 10
   },
   "newCorrections": 1,
@@ -28,10 +28,10 @@
       "note": "kunne ikke hente URL"
     },
     {
-      "id": "0ad320d542039ded",
-      "title": "Munchmuseet: Sommersesong 2026",
-      "url": "https://www.munchmuseet.no/",
-      "expected": "2026-06-01",
+      "id": "2eb24d2c2de44117",
+      "title": "Orientering: Koll nærløp - Skullerud",
+      "url": "https://koll.no/",
+      "expected": "2026-06-24",
       "found": [],
       "status": "fetch_failed",
       "note": "kunne ikke hente URL"
@@ -59,7 +59,7 @@
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-09-28 | Claude: ukjent",
-      "claude_hash": "1bddc755e7453017"
+      "claude_hash": "d07a794b4b0b3e02"
     },
     {
       "id": "85a06f285713ed5c",
@@ -67,14 +67,27 @@
       "url": "https://www.cinemateket.no/",
       "expected": "2026-09-01",
       "found": [
-        "2026-06-11",
+        "2026-06-10",
+        "2026-06-12",
         "2026-06-13",
         "2026-06-14",
-        "2026-06-16",
-        "2026-06-19"
+        "2026-06-15"
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-06-24"
+    },
+    {
+      "id": "13cc19958ececa7a",
+      "title": "Holmenkollmarsjen 2027",
+      "url": "https://www.holmenkollmarsjen.no/",
+      "expected": "2027-03-06",
+      "found": [
+        "2027-02-20"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2027-02-20 | Claude: 2027-02-20",
+      "claude_hash": "0959e878a490b2d8",
+      "claude_suggested": "2027-02-20"
     },
     {
       "id": "c564d1c97d2eb155",
@@ -120,6 +133,21 @@
       "note": "regex foreslaar: 2026-08-01"
     },
     {
+      "id": "0ad320d542039ded",
+      "title": "Munchmuseet: Sommersesong 2026",
+      "url": "https://www.munchmuseet.no/",
+      "expected": "2026-06-01",
+      "found": [
+        "2026-06-10",
+        "2026-06-24",
+        "2026-08-02",
+        "2026-08-12",
+        "2026-08-13"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-06-10"
+    },
+    {
       "id": "236dfc5d4f3ee687",
       "title": "Musikkfest Oslo 2026",
       "url": "https://musikkfest.no/",
@@ -128,7 +156,7 @@
         "2027-06-05"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2027-06-05 | Claude: 2027-06-05",
+      "note": "regex foreslaar: 2027-06-05 | Claude (cached): 2027-06-05",
       "claude_hash": "776f67962e9e5eca",
       "claude_suggested": "2027-06-05"
     },
@@ -143,7 +171,7 @@
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-07-25 | Claude: 2026-07-25",
-      "claude_hash": "173091c1a2e81719",
+      "claude_hash": "15ddb5d9b5d5fea0",
       "claude_suggested": "2026-07-25"
     },
     {
@@ -159,21 +187,9 @@
         "2026-08-16"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-08-26 | Claude: 2026-08-16",
+      "note": "regex foreslaar: 2026-08-26 | Claude (cached): 2026-08-16",
       "claude_hash": "0a4374877efb89db",
       "claude_suggested": "2026-08-16"
-    },
-    {
-      "id": "2eb24d2c2de44117",
-      "title": "Orientering: Koll nærløp - Skullerud",
-      "url": "https://koll.no/",
-      "expected": "2026-06-24",
-      "found": [
-        "2027-09-06"
-      ],
-      "status": "mismatch",
-      "note": "ingen narliggende dato funnet | Claude: ukjent",
-      "claude_hash": "fe2ce2f550d80550"
     },
     {
       "id": "4b452eb704efb020",
@@ -233,23 +249,6 @@
       "note": "regex foreslaar: 2026-06-10"
     },
     {
-      "id": "7144904c18ac6dac",
-      "title": "Styrkeprøven 2026 (Trondheim-Oslo)",
-      "url": "https://www.styrkeproven.no/",
-      "expected": "2026-06-20",
-      "found": [
-        "2026-06-17",
-        "2026-06-21",
-        "2027-04-06",
-        "2027-05-19",
-        "2027-06-13"
-      ],
-      "status": "mismatch",
-      "note": "regex foreslaar: 2026-06-21 | Claude (cached): 2026-06-20",
-      "claude_hash": "0dd3022673e81295",
-      "claude_suggested": "2026-06-20"
-    },
-    {
       "id": "28fa8f09240ce54a",
       "title": "Ultima Samtidsmusikkfestival 2026",
       "url": "https://ultima.no/nb",
@@ -284,7 +283,7 @@
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-08-12 | Claude: 2026-08-12",
-      "claude_hash": "daf7942ff09b9246",
+      "claude_hash": "f173f60703d2223a",
       "claude_suggested": "2026-08-12"
     },
     {
@@ -365,7 +364,8 @@
       "expected": "2026-12-05",
       "found": [],
       "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
+      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
+      "claude_hash": "ef1692942c1476a4"
     },
     {
       "id": "e4296261cdf44c64",
@@ -393,17 +393,6 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst"
-    },
-    {
-      "id": "13cc19958ececa7a",
-      "title": "Holmenkollmarsjen 2027",
-      "url": "https://www.holmenkollmarsjen.no/",
-      "expected": "2027-03-06",
-      "found": [],
-      "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst | Claude (cached): 2027-03-06",
-      "claude_hash": "091f030f0f40ba34",
-      "claude_suggested": "2027-03-06"
     },
     {
       "id": "3d7503aa7cb041fd",
@@ -449,16 +438,6 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst"
-    },
-    {
-      "id": "c951ec6162350418",
-      "title": "Lions Club Oslo/Gamle Oslo",
-      "url": "https://www.lions.no/oslogamleoslo/",
-      "expected": "2026-05-26",
-      "found": [],
-      "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "6c2df74b63c0cced"
     },
     {
       "id": "a0697d053ca3b123",
@@ -522,7 +501,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "d480ad7464ab5bce"
+      "claude_hash": "7c10debc2472b9fc"
     },
     {
       "id": "7ee06b9ad778f5ed",
@@ -532,7 +511,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "d480ad7464ab5bce"
+      "claude_hash": "7c10debc2472b9fc"
     },
     {
       "id": "d765f97a38fd3af1",
@@ -542,7 +521,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "d480ad7464ab5bce"
+      "claude_hash": "7c10debc2472b9fc"
     },
     {
       "id": "bfba7c62ec5c8a36",
@@ -552,7 +531,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "d480ad7464ab5bce"
+      "claude_hash": "7c10debc2472b9fc"
     },
     {
       "id": "1db4770383ca2cc9",
@@ -562,7 +541,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "d480ad7464ab5bce"
+      "claude_hash": "7c10debc2472b9fc"
     },
     {
       "id": "cf8578f74fd7d042",
@@ -572,7 +551,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "d480ad7464ab5bce"
+      "claude_hash": "7c10debc2472b9fc"
     },
     {
       "id": "9ca7c061b4879f0f",
@@ -582,7 +561,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "d480ad7464ab5bce"
+      "claude_hash": "7c10debc2472b9fc"
     },
     {
       "id": "d7065b72c00df6ff",
@@ -592,7 +571,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "d480ad7464ab5bce"
+      "claude_hash": "7c10debc2472b9fc"
     },
     {
       "id": "d845142a1a352f4c",
@@ -647,7 +626,8 @@
       "expected": "2026-06-23",
       "found": [],
       "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
+      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
+      "claude_hash": "26e60989bbe595bb"
     },
     {
       "id": "d23303142b16f715",
@@ -702,13 +682,12 @@
       "url": "https://www.deichman.no/",
       "expected": "2026-11-09",
       "found": [
-        "2026-06-09",
-        "2026-06-13",
-        "2026-08-31"
+        "2026-06-10",
+        "2026-06-13"
       ],
       "status": "ok",
       "note": "bekreftet av Claude",
-      "claude_hash": "294b419ec5d1cc50",
+      "claude_hash": "ba9be45a5b81ca2b",
       "claude_suggested": "2026-11-09"
     },
     {
@@ -791,6 +770,23 @@
       ],
       "status": "ok",
       "note": ""
+    },
+    {
+      "id": "7144904c18ac6dac",
+      "title": "Styrkeprøven 2026 (Trondheim-Oslo)",
+      "url": "https://www.styrkeproven.no/",
+      "expected": "2026-06-20",
+      "found": [
+        "2026-06-17",
+        "2026-06-21",
+        "2027-04-06",
+        "2027-05-19",
+        "2027-06-13"
+      ],
+      "status": "ok",
+      "note": "bekreftet av Claude",
+      "claude_hash": "89e7bdf1af9ef7d3",
+      "claude_suggested": "2026-06-20"
     },
     {
       "id": "2f13da63467099de",
