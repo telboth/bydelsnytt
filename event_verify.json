@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-06-11T06:02:24.206131+00:00",
+  "generatedAt": "2026-06-12T06:02:36.941211+00:00",
   "counts": {
     "fetch_failed": 4,
-    "mismatch": 20,
-    "no_dates": 40,
+    "mismatch": 19,
+    "no_dates": 41,
     "ok": 7,
     "skipped": 10
   },
-  "newCorrections": 2,
+  "newCorrections": 0,
   "items": [
     {
       "id": "4e68392e31fa7f16",
@@ -59,7 +59,7 @@
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-09-28 | Claude: ukjent",
-      "claude_hash": "f52d6834ffa15a8d"
+      "claude_hash": "e9bbca261534e7c1"
     },
     {
       "id": "85a06f285713ed5c",
@@ -67,16 +67,13 @@
       "url": "https://www.cinemateket.no/",
       "expected": "2026-09-01",
       "found": [
-        "2026-06-13",
         "2026-06-14",
-        "2026-06-15",
         "2026-06-16",
-        "2026-06-19"
+        "2026-06-19",
+        "2026-06-24"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-06-24 | Claude: 2026-06-13",
-      "claude_hash": "724d299de3fab89f",
-      "claude_suggested": "2026-06-13"
+      "note": "regex foreslaar: 2026-06-24"
     },
     {
       "id": "13cc19958ececa7a",
@@ -148,20 +145,6 @@
       "claude_suggested": "2027-06-05"
     },
     {
-      "id": "8bfeb00e1849e6b9",
-      "title": "Nordisk bibliotekuke 2026",
-      "url": "https://www.deichman.no/",
-      "expected": "2026-11-09",
-      "found": [
-        "2026-06-11",
-        "2026-06-13"
-      ],
-      "status": "mismatch",
-      "note": "regex foreslaar: 2026-06-13 | Claude: 2026-06-11",
-      "claude_hash": "89df7682a63bf725",
-      "claude_suggested": "2026-06-11"
-    },
-    {
       "id": "6e64cb0883dad758",
       "title": "Norway Cup 2026",
       "url": "https://www.norwaycup.no/",
@@ -188,8 +171,8 @@
         "2026-08-16"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-08-26 | Claude (cached): 2026-08-16",
-      "claude_hash": "0a4374877efb89db",
+      "note": "regex foreslaar: 2026-08-27 | Claude: 2026-08-16",
+      "claude_hash": "ec1f2dcbf4db19f3",
       "claude_suggested": "2026-08-16"
     },
     {
@@ -301,8 +284,8 @@
         "2026-08-15"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-08-12 | Claude (cached): 2026-08-12",
-      "claude_hash": "f173f60703d2223a",
+      "note": "regex foreslaar: 2026-08-12 | Claude: 2026-08-12",
+      "claude_hash": "92a4de41cb52d84f",
       "claude_suggested": "2026-08-12"
     },
     {
@@ -336,6 +319,17 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst"
+    },
+    {
+      "id": "5504d878fe5d430d",
+      "title": "Bokstart Oslo: bokpakker til 1-åringer",
+      "url": "https://deichman.no/aktuelt",
+      "expected": "2026-09-15",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst | Claude (cached): 2026-09-15",
+      "claude_hash": "6f0950b28cddd742",
+      "claude_suggested": "2026-09-15"
     },
     {
       "id": "3c93271b49580cb1",
@@ -373,8 +367,7 @@
       "expected": "2026-12-05",
       "found": [],
       "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "ef1692942c1476a4"
+      "note": "ingen datoer funnet i synlig tekst"
     },
     {
       "id": "e4296261cdf44c64",
@@ -428,8 +421,7 @@
       "expected": "2026-11-28",
       "found": [],
       "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "26e60989bbe595bb"
+      "note": "ingen datoer funnet i synlig tekst"
     },
     {
       "id": "9877a490c26f9e41",
@@ -511,7 +503,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "9b2163f69c1751c3"
+      "claude_hash": "41f6caa46a60db04"
     },
     {
       "id": "7ee06b9ad778f5ed",
@@ -521,7 +513,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "9b2163f69c1751c3"
+      "claude_hash": "41f6caa46a60db04"
     },
     {
       "id": "d765f97a38fd3af1",
@@ -531,7 +523,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "9b2163f69c1751c3"
+      "claude_hash": "41f6caa46a60db04"
     },
     {
       "id": "bfba7c62ec5c8a36",
@@ -541,7 +533,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "9b2163f69c1751c3"
+      "claude_hash": "41f6caa46a60db04"
     },
     {
       "id": "1db4770383ca2cc9",
@@ -551,7 +543,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "9b2163f69c1751c3"
+      "claude_hash": "41f6caa46a60db04"
     },
     {
       "id": "cf8578f74fd7d042",
@@ -561,7 +553,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "9b2163f69c1751c3"
+      "claude_hash": "41f6caa46a60db04"
     },
     {
       "id": "9ca7c061b4879f0f",
@@ -571,7 +563,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "9b2163f69c1751c3"
+      "claude_hash": "41f6caa46a60db04"
     },
     {
       "id": "d7065b72c00df6ff",
@@ -581,7 +573,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "9b2163f69c1751c3"
+      "claude_hash": "41f6caa46a60db04"
     },
     {
       "id": "d845142a1a352f4c",
@@ -696,15 +688,18 @@
       "note": "ingen datoer funnet i synlig tekst"
     },
     {
-      "id": "5504d878fe5d430d",
-      "title": "Bokstart Oslo: bokpakker til 1-åringer",
-      "url": "https://deichman.no/aktuelt",
-      "expected": "2026-09-15",
-      "found": [],
+      "id": "8bfeb00e1849e6b9",
+      "title": "Nordisk bibliotekuke 2026",
+      "url": "https://www.deichman.no/",
+      "expected": "2026-11-09",
+      "found": [
+        "2026-06-12",
+        "2026-06-13"
+      ],
       "status": "ok",
       "note": "bekreftet av Claude",
-      "claude_hash": "6f0950b28cddd742",
-      "claude_suggested": "2026-09-15"
+      "claude_hash": "bcf5bf3419521692",
+      "claude_suggested": "2026-11-09"
     },
     {
       "id": "c3a438c27157cb2e",
@@ -724,10 +719,10 @@
       "expected": "2026-06-26",
       "found": [
         "2026-06-17",
+        "2026-06-20",
         "2026-06-21",
         "2026-06-24",
-        "2026-06-26",
-        "2026-06-27"
+        "2026-06-26"
       ],
       "status": "ok",
       "note": ""
@@ -739,10 +734,10 @@
       "expected": "2026-06-27",
       "found": [
         "2026-06-17",
+        "2026-06-20",
         "2026-06-21",
         "2026-06-24",
-        "2026-06-26",
-        "2026-06-27"
+        "2026-06-26"
       ],
       "status": "ok",
       "note": ""
