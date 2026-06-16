@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-06-15T06:02:08.085150+00:00",
+  "generatedAt": "2026-06-16T06:02:45.977744+00:00",
   "counts": {
-    "fetch_failed": 4,
-    "mismatch": 26,
-    "no_dates": 34,
+    "fetch_failed": 3,
+    "mismatch": 18,
+    "no_dates": 40,
     "ok": 7,
     "skipped": 10
   },
@@ -23,15 +23,6 @@
       "title": "Linderudkollen skistadion — vintersesong",
       "url": "https://linderudkollen.no/",
       "expected": "2026-12-12",
-      "found": [],
-      "status": "fetch_failed",
-      "note": "kunne ikke hente URL"
-    },
-    {
-      "id": "0ad320d542039ded",
-      "title": "Munchmuseet: Sommersesong 2026",
-      "url": "https://www.munchmuseet.no/",
-      "expected": "2026-06-01",
       "found": [],
       "status": "fetch_failed",
       "note": "kunne ikke hente URL"
@@ -59,7 +50,7 @@
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-09-28 | Claude: ukjent",
-      "claude_hash": "7dfbf7f68bfb1b82"
+      "claude_hash": "48c1aff4c2afa7f8"
     },
     {
       "id": "85a06f285713ed5c",
@@ -67,15 +58,14 @@
       "url": "https://www.cinemateket.no/",
       "expected": "2026-09-01",
       "found": [
-        "2026-06-17",
         "2026-06-18",
         "2026-06-19",
         "2026-06-20",
-        "2026-06-21"
+        "2026-06-21",
+        "2026-07-17"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-06-28 | Claude: ukjent",
-      "claude_hash": "32b97be655f36ef2"
+      "note": "regex foreslaar: 2026-07-17"
     },
     {
       "id": "13cc19958ececa7a",
@@ -86,9 +76,7 @@
         "2027-02-20"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2027-02-20 | Claude (cached): 2027-02-20",
-      "claude_hash": "0959e878a490b2d8",
-      "claude_suggested": "2027-02-20"
+      "note": "regex foreslaar: 2027-02-20"
     },
     {
       "id": "c564d1c97d2eb155",
@@ -142,7 +130,7 @@
         "2027-06-05"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2027-06-05 | Claude: 2027-06-05",
+      "note": "regex foreslaar: 2027-06-05 | Claude (cached): 2027-06-05",
       "claude_hash": "9a16afc1d62764df",
       "claude_suggested": "2027-06-05"
     },
@@ -152,11 +140,11 @@
       "url": "https://www.deichman.no/",
       "expected": "2026-11-09",
       "found": [
-        "2026-06-15"
+        "2026-06-16"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-06-15 | Claude: ukjent",
-      "claude_hash": "d548b85b3a03309b"
+      "note": "regex foreslaar: 2026-06-16 | Claude: ukjent",
+      "claude_hash": "1cc0d3885f4dbfb2"
     },
     {
       "id": "6e64cb0883dad758",
@@ -168,22 +156,9 @@
         "2026-08-01"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-07-25 | Claude (cached): 2026-07-25",
-      "claude_hash": "d7dad940f2578985",
+      "note": "regex foreslaar: 2026-07-25 | Claude: 2026-07-25",
+      "claude_hash": "7a9be0bddcd02a03",
       "claude_suggested": "2026-07-25"
-    },
-    {
-      "id": "de120652e9d47219",
-      "title": "Orientering: Blodslitet 2026",
-      "url": "https://orientering.no/",
-      "expected": "2026-10-10",
-      "found": [
-        "2026-06-15",
-        "2026-06-17"
-      ],
-      "status": "mismatch",
-      "note": "regex foreslaar: 2026-06-17 | Claude: ukjent",
-      "claude_hash": "bdf73438f97657e7"
     },
     {
       "id": "51cafb5f0901801b",
@@ -201,96 +176,6 @@
       "note": "regex foreslaar: 2026-08-27 | Claude (cached): 2026-08-16",
       "claude_hash": "ec1f2dcbf4db19f3",
       "claude_suggested": "2026-08-16"
-    },
-    {
-      "id": "7ee06b9ad778f5ed",
-      "title": "Orientering: KM sprint Akershus og Oslo",
-      "url": "https://orientering.no/",
-      "expected": "2026-06-06",
-      "found": [
-        "2026-06-15",
-        "2026-06-17"
-      ],
-      "status": "mismatch",
-      "note": "regex foreslaar: 2026-06-15 | Claude: ukjent",
-      "claude_hash": "bdf73438f97657e7"
-    },
-    {
-      "id": "2eb24d2c2de44117",
-      "title": "Orientering: Koll nærløp - Skullerud",
-      "url": "https://koll.no/",
-      "expected": "2026-06-24",
-      "found": [
-        "2027-09-06"
-      ],
-      "status": "mismatch",
-      "note": "ingen narliggende dato funnet | Claude: ukjent",
-      "claude_hash": "fe2ce2f550d80550"
-    },
-    {
-      "id": "d765f97a38fd3af1",
-      "title": "Orientering: Nattuglen - nattløp i Nordmarka",
-      "url": "https://orientering.no/",
-      "expected": "2026-11-07",
-      "found": [
-        "2026-06-15",
-        "2026-06-17"
-      ],
-      "status": "mismatch",
-      "note": "regex foreslaar: 2026-06-17 | Claude: ukjent",
-      "claude_hash": "bdf73438f97657e7"
-    },
-    {
-      "id": "bfba7c62ec5c8a36",
-      "title": "Orientering: OM stafett 2026",
-      "url": "https://orientering.no/",
-      "expected": "2026-09-12",
-      "found": [
-        "2026-06-15",
-        "2026-06-17"
-      ],
-      "status": "mismatch",
-      "note": "regex foreslaar: 2026-06-17 | Claude: ukjent",
-      "claude_hash": "bdf73438f97657e7"
-    },
-    {
-      "id": "1db4770383ca2cc9",
-      "title": "Orientering: OSI Blindern-sprint",
-      "url": "https://orientering.no/",
-      "expected": "2026-08-29",
-      "found": [
-        "2026-06-15",
-        "2026-06-17"
-      ],
-      "status": "mismatch",
-      "note": "regex foreslaar: 2026-06-17 | Claude: ukjent",
-      "claude_hash": "bdf73438f97657e7"
-    },
-    {
-      "id": "cf8578f74fd7d042",
-      "title": "Orientering: Oslo 3-dagers 2026",
-      "url": "https://orientering.no/",
-      "expected": "2026-08-14",
-      "found": [
-        "2026-06-15",
-        "2026-06-17"
-      ],
-      "status": "mismatch",
-      "note": "regex foreslaar: 2026-06-17 | Claude: ukjent",
-      "claude_hash": "bdf73438f97657e7"
-    },
-    {
-      "id": "d7065b72c00df6ff",
-      "title": "Orientering: Oslo-mesterskapet langdistanse",
-      "url": "https://orientering.no/",
-      "expected": "2026-09-05",
-      "found": [
-        "2026-06-15",
-        "2026-06-17"
-      ],
-      "status": "mismatch",
-      "note": "regex foreslaar: 2026-06-17 | Claude: ukjent",
-      "claude_hash": "bdf73438f97657e7"
     },
     {
       "id": "4b452eb704efb020",
@@ -378,7 +263,7 @@
         "2026-08-15"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-08-12 | Claude: 2026-08-12",
+      "note": "regex foreslaar: 2026-08-12 | Claude (cached): 2026-08-12",
       "claude_hash": "2ac155959cb1ee2e",
       "claude_suggested": "2026-08-12"
     },
@@ -422,7 +307,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "ccf04c610785d015"
+      "claude_hash": "c09dabef075ee2ce"
     },
     {
       "id": "3c93271b49580cb1",
@@ -431,8 +316,7 @@
       "expected": "2026-10-17",
       "found": [],
       "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "05d835408915e1fe"
+      "note": "ingen datoer funnet i synlig tekst"
     },
     {
       "id": "5cf1ee9302e199f5",
@@ -516,23 +400,13 @@
       "expected": "2026-11-28",
       "found": [],
       "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "b3d519a75bfc60ce"
+      "note": "ingen datoer funnet i synlig tekst"
     },
     {
       "id": "9877a490c26f9e41",
       "title": "Julemarked på Spikersuppa 2026",
       "url": "https://www.julemarkedet.no/",
       "expected": "2026-11-20",
-      "found": [],
-      "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
-    },
-    {
-      "id": "cfb58fbddd282457",
-      "title": "Kobberhaughytta",
-      "url": "https://ut.no/hytte/10645/kobberhaughytta",
-      "expected": "2026-06-01",
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst"
@@ -592,6 +466,96 @@
       "note": "ingen datoer funnet i synlig tekst"
     },
     {
+      "id": "de120652e9d47219",
+      "title": "Orientering: Blodslitet 2026",
+      "url": "https://orientering.no/",
+      "expected": "2026-10-10",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
+      "claude_hash": "a6808fd5092e2ed8"
+    },
+    {
+      "id": "7ee06b9ad778f5ed",
+      "title": "Orientering: KM sprint Akershus og Oslo",
+      "url": "https://orientering.no/",
+      "expected": "2026-06-06",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
+      "claude_hash": "a6808fd5092e2ed8"
+    },
+    {
+      "id": "2eb24d2c2de44117",
+      "title": "Orientering: Koll nærløp - Skullerud",
+      "url": "https://koll.no/",
+      "expected": "2026-06-24",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
+      "claude_hash": "65a7e73f044d7b85"
+    },
+    {
+      "id": "d765f97a38fd3af1",
+      "title": "Orientering: Nattuglen - nattløp i Nordmarka",
+      "url": "https://orientering.no/",
+      "expected": "2026-11-07",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
+      "claude_hash": "a6808fd5092e2ed8"
+    },
+    {
+      "id": "bfba7c62ec5c8a36",
+      "title": "Orientering: OM stafett 2026",
+      "url": "https://orientering.no/",
+      "expected": "2026-09-12",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
+      "claude_hash": "a6808fd5092e2ed8"
+    },
+    {
+      "id": "1db4770383ca2cc9",
+      "title": "Orientering: OSI Blindern-sprint",
+      "url": "https://orientering.no/",
+      "expected": "2026-08-29",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
+      "claude_hash": "a6808fd5092e2ed8"
+    },
+    {
+      "id": "cf8578f74fd7d042",
+      "title": "Orientering: Oslo 3-dagers 2026",
+      "url": "https://orientering.no/",
+      "expected": "2026-08-14",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
+      "claude_hash": "a6808fd5092e2ed8"
+    },
+    {
+      "id": "9ca7c061b4879f0f",
+      "title": "Orientering: Oslo Cup 3 - Østmarksetra",
+      "url": "https://orientering.no/",
+      "expected": "2026-06-17",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
+      "claude_hash": "a6808fd5092e2ed8"
+    },
+    {
+      "id": "d7065b72c00df6ff",
+      "title": "Orientering: Oslo-mesterskapet langdistanse",
+      "url": "https://orientering.no/",
+      "expected": "2026-09-05",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
+      "claude_hash": "a6808fd5092e2ed8"
+    },
+    {
       "id": "d845142a1a352f4c",
       "title": "Oslo Internasjonale Filmfestival 2026",
       "url": "https://oslofilmfestival.com/",
@@ -608,16 +572,6 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst"
-    },
-    {
-      "id": "75cc25222d43888d",
-      "title": "Oslo Mangfoldsfestival 2026",
-      "url": "https://www.oslo.kommune.no/",
-      "expected": "2026-06-06",
-      "found": [],
-      "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "b3d519a75bfc60ce"
     },
     {
       "id": "94477da2695444e1",
@@ -654,7 +608,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "b3d519a75bfc60ce"
+      "claude_hash": "d5bccf52e7065153"
     },
     {
       "id": "d23303142b16f715",
@@ -664,17 +618,6 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst"
-    },
-    {
-      "id": "2b8388cc2d0531de",
-      "title": "Sommerles 2026: lesekampanje for barn",
-      "url": "https://www.sommerles.no/",
-      "expected": "2026-06-01",
-      "found": [],
-      "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst | Claude (cached): 2026-06-01",
-      "claude_hash": "0f945779d4df88dd",
-      "claude_suggested": "2026-06-01"
     },
     {
       "id": "14e0c42472cfc9a3",
@@ -713,16 +656,15 @@
       "note": "ingen datoer funnet i synlig tekst"
     },
     {
-      "id": "9ca7c061b4879f0f",
-      "title": "Orientering: Oslo Cup 3 - Østmarksetra",
-      "url": "https://orientering.no/",
-      "expected": "2026-06-17",
-      "found": [
-        "2026-06-15",
-        "2026-06-17"
-      ],
+      "id": "75cc25222d43888d",
+      "title": "Oslo Mangfoldsfestival 2026",
+      "url": "https://www.oslo.kommune.no/",
+      "expected": "2026-06-06",
+      "found": [],
       "status": "ok",
-      "note": ""
+      "note": "bekreftet av Claude",
+      "claude_hash": "d5bccf52e7065153",
+      "claude_suggested": "2026-06-06"
     },
     {
       "id": "c3a438c27157cb2e",
@@ -742,10 +684,10 @@
       "expected": "2026-06-26",
       "found": [
         "2026-06-17",
+        "2026-06-19",
         "2026-06-20",
         "2026-06-21",
-        "2026-06-24",
-        "2026-06-26"
+        "2026-06-24"
       ],
       "status": "ok",
       "note": ""
@@ -757,10 +699,10 @@
       "expected": "2026-06-27",
       "found": [
         "2026-06-17",
+        "2026-06-19",
         "2026-06-20",
         "2026-06-21",
-        "2026-06-24",
-        "2026-06-26"
+        "2026-06-24"
       ],
       "status": "ok",
       "note": ""
@@ -783,11 +725,11 @@
       "url": "https://osloworld.no/",
       "expected": "2026-10-28",
       "found": [
+        "2026-06-26",
+        "2026-10-17",
         "2026-10-18",
         "2026-10-28",
-        "2026-10-29",
-        "2026-10-30",
-        "2026-10-31"
+        "2026-10-29"
       ],
       "status": "ok",
       "note": ""
@@ -799,7 +741,6 @@
       "expected": "2026-09-19",
       "found": [
         "2026-09-19",
-        "2027-07-17",
         "2027-08-01"
       ],
       "status": "ok",
