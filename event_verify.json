@@ -1,19 +1,37 @@
 {
-  "generatedAt": "2026-07-01T08:05:21.814569+00:00",
+  "generatedAt": "2026-07-02T06:58:04.890477+00:00",
   "counts": {
-    "fetch_failed": 1,
-    "mismatch": 22,
-    "no_dates": 35,
-    "ok": 4,
+    "fetch_failed": 3,
+    "mismatch": 21,
+    "no_dates": 31,
+    "ok": 6,
     "skipped": 7
   },
   "newCorrections": 1,
   "items": [
     {
+      "id": "9877a490c26f9e41",
+      "title": "Julemarked på Spikersuppa 2026",
+      "url": "https://www.julemarkedet.no/",
+      "expected": "2026-11-20",
+      "found": [],
+      "status": "fetch_failed",
+      "note": "kunne ikke hente URL"
+    },
+    {
       "id": "83f362a5bdaedbb2",
       "title": "Oslo Arkitekturfestival 2026",
       "url": "https://oslobiennalen.no",
       "expected": "2026-09-24",
+      "found": [],
+      "status": "fetch_failed",
+      "note": "kunne ikke hente URL"
+    },
+    {
+      "id": "3372b44309f526c5",
+      "title": "Veitvet senter aktivitetsdag 2026",
+      "url": "https://www.veitvetsenter.no/",
+      "expected": "2026-09-19",
       "found": [],
       "status": "fetch_failed",
       "note": "kunne ikke hente URL"
@@ -30,37 +48,20 @@
       "note": "regex foreslaar: 2026-08-10"
     },
     {
-      "id": "175c864df01599c8",
-      "title": "Ellingsrudåsen skoles høstloppis 2026",
-      "url": "https://ellingsrudasen.osloskolen.no/",
-      "expected": "2026-09-26",
-      "found": [
-        "2026-08-17",
-        "2026-09-28",
-        "2026-10-02",
-        "2026-12-21",
-        "2027-01-01"
-      ],
-      "status": "mismatch",
-      "note": "regex foreslaar: 2026-09-28 | Claude (cached): 2026-09-26",
-      "claude_hash": "cc798070046d24f7",
-      "claude_suggested": "2026-09-26"
-    },
-    {
       "id": "85a06f285713ed5c",
       "title": "Filmhuset høstprogram 2026",
       "url": "https://www.cinemateket.no/",
       "expected": "2026-09-01",
       "found": [
+        "2026-07-16",
         "2026-07-17",
         "2026-07-18",
         "2026-07-19",
-        "2026-07-25",
-        "2026-08-02"
+        "2026-07-22"
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-08-20 | Claude: 2026-07-17",
-      "claude_hash": "104ebf3b2aec0204",
+      "claude_hash": "0261bc785d64e5f2",
       "claude_suggested": "2026-07-17"
     },
     {
@@ -85,7 +86,7 @@
         "2027-02-20"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2027-02-20 | Claude: 2027-02-20",
+      "note": "regex foreslaar: 2027-02-20 | Claude (cached): 2027-02-20",
       "claude_hash": "39101d09906301f8",
       "claude_suggested": "2027-02-20"
     },
@@ -150,11 +151,11 @@
       "url": "https://www.deichman.no/",
       "expected": "2026-11-09",
       "found": [
-        "2026-07-01"
+        "2026-07-02"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-07-01 | Claude: ukjent",
-      "claude_hash": "19da994820a69cd5"
+      "note": "regex foreslaar: 2026-07-02 | Claude: ukjent",
+      "claude_hash": "1ee29cba19a3cc03"
     },
     {
       "id": "6e64cb0883dad758",
@@ -219,7 +220,9 @@
         "2026-08-15"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-08-15"
+      "note": "regex foreslaar: 2026-08-15 | Claude: 2026-08-09",
+      "claude_hash": "d10fd858320e492e",
+      "claude_suggested": "2026-08-09"
     },
     {
       "id": "944dfebb499ef33a",
@@ -231,7 +234,9 @@
         "2027-06-26"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2027-06-20"
+      "note": "regex foreslaar: 2027-06-20 | Claude: 2027-06-26",
+      "claude_hash": "8fb44fb8a18fb13e",
+      "claude_suggested": "2027-06-26"
     },
     {
       "id": "e71000fe903e0139",
@@ -243,7 +248,7 @@
         "2027-06-26"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2027-06-20 | Claude: 2026-06-26",
+      "note": "regex foreslaar: 2027-06-20 | Claude (cached): 2026-06-26",
       "claude_hash": "8fb44fb8a18fb13e",
       "claude_suggested": "2026-06-26"
     },
@@ -298,7 +303,7 @@
         "2026-08-15"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-08-12 | Claude: 2026-08-12",
+      "note": "regex foreslaar: 2026-08-12 | Claude (cached): 2026-08-12",
       "claude_hash": "8b221c8766ffeb90",
       "claude_suggested": "2026-08-12"
     },
@@ -314,7 +319,9 @@
         "2026-08-15"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-08-12"
+      "note": "regex foreslaar: 2026-08-12 | Claude (cached): 2026-08-12",
+      "claude_hash": "8b221c8766ffeb90",
+      "claude_suggested": "2026-08-12"
     },
     {
       "id": "3a3b1da9f83cedc8",
@@ -412,15 +419,6 @@
       "claude_hash": "b99617aafaa916b2"
     },
     {
-      "id": "9877a490c26f9e41",
-      "title": "Julemarked på Spikersuppa 2026",
-      "url": "https://www.julemarkedet.no/",
-      "expected": "2026-11-20",
-      "found": [],
-      "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
-    },
-    {
       "id": "dac3b6865de606a7",
       "title": "Linderudkollen skistadion — vintersesong",
       "url": "https://linderudkollen.no/",
@@ -445,7 +443,8 @@
       "expected": "2026-08-22",
       "found": [],
       "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
+      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
+      "claude_hash": "de5a904b00dc48cc"
     },
     {
       "id": "0f8544ccdc84674d",
@@ -473,7 +472,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "0654214ed0cdb3b6"
+      "claude_hash": "988749cda898139a"
     },
     {
       "id": "2eb24d2c2de44117",
@@ -493,7 +492,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "0654214ed0cdb3b6"
+      "claude_hash": "988749cda898139a"
     },
     {
       "id": "bfba7c62ec5c8a36",
@@ -503,7 +502,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "0654214ed0cdb3b6"
+      "claude_hash": "988749cda898139a"
     },
     {
       "id": "1db4770383ca2cc9",
@@ -513,7 +512,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "0654214ed0cdb3b6"
+      "claude_hash": "988749cda898139a"
     },
     {
       "id": "cf8578f74fd7d042",
@@ -523,17 +522,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "0654214ed0cdb3b6"
-    },
-    {
-      "id": "9ca7c061b4879f0f",
-      "title": "Orientering: Oslo Cup 3 - Østmarksetra",
-      "url": "https://orientering.no/",
-      "expected": "2026-06-17",
-      "found": [],
-      "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "0654214ed0cdb3b6"
+      "claude_hash": "988749cda898139a"
     },
     {
       "id": "d7065b72c00df6ff",
@@ -543,7 +532,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "0654214ed0cdb3b6"
+      "claude_hash": "988749cda898139a"
     },
     {
       "id": "d845142a1a352f4c",
@@ -591,16 +580,6 @@
       "note": "ingen datoer funnet i synlig tekst"
     },
     {
-      "id": "976aafbe75b4afaa",
-      "title": "Sankthansbål ved Frognerkilen",
-      "url": "https://www.oslo.kommune.no/",
-      "expected": "2026-06-23",
-      "found": [],
-      "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "b99617aafaa916b2"
-    },
-    {
       "id": "d23303142b16f715",
       "title": "Sommerball Rådhusplassen 2026",
       "url": "https://www.oslo.kommune.no/",
@@ -628,15 +607,6 @@
       "note": "ingen datoer funnet i synlig tekst"
     },
     {
-      "id": "3372b44309f526c5",
-      "title": "Veitvet senter aktivitetsdag 2026",
-      "url": "https://www.veitvetsenter.no/",
-      "expected": "2026-09-19",
-      "found": [],
-      "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
-    },
-    {
       "id": "bc1707f789b2b063",
       "title": "Wyllerløkka — sesongåpning",
       "url": "https://oslovinterpark.no/",
@@ -644,6 +614,23 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst"
+    },
+    {
+      "id": "175c864df01599c8",
+      "title": "Ellingsrudåsen skoles høstloppis 2026",
+      "url": "https://ellingsrudasen.osloskolen.no/",
+      "expected": "2026-09-26",
+      "found": [
+        "2026-08-17",
+        "2026-09-28",
+        "2026-10-02",
+        "2026-12-21",
+        "2027-01-01"
+      ],
+      "status": "ok",
+      "note": "bekreftet av Claude",
+      "claude_hash": "3e1e81c5376c14c2",
+      "claude_suggested": "2026-09-26"
     },
     {
       "id": "c3a438c27157cb2e",
@@ -688,12 +675,25 @@
       "url": "https://oslosbratteste.no/",
       "expected": "2026-09-19",
       "found": [
+        "2026-08-06",
+        "2026-08-19",
         "2026-09-19",
         "2027-07-17",
         "2027-08-01"
       ],
       "status": "ok",
       "note": ""
+    },
+    {
+      "id": "976aafbe75b4afaa",
+      "title": "Sankthansbål ved Frognerkilen",
+      "url": "https://www.oslo.kommune.no/",
+      "expected": "2026-06-23",
+      "found": [],
+      "status": "ok",
+      "note": "bekreftet av Claude",
+      "claude_hash": "b99617aafaa916b2",
+      "claude_suggested": "2026-06-23"
     },
     {
       "id": "2f13da63467099de",
