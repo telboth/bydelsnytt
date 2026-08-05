@@ -1,19 +1,19 @@
 {
-  "generatedAt": "2026-07-02T06:58:04.890477+00:00",
+  "generatedAt": "2026-08-05T05:44:40.185913+00:00",
   "counts": {
-    "fetch_failed": 3,
-    "mismatch": 21,
-    "no_dates": 31,
-    "ok": 6,
-    "skipped": 7
+    "fetch_failed": 4,
+    "mismatch": 23,
+    "no_dates": 18,
+    "ok": 7,
+    "skipped": 5
   },
-  "newCorrections": 1,
+  "newCorrections": 0,
   "items": [
     {
-      "id": "9877a490c26f9e41",
-      "title": "Julemarked på Spikersuppa 2026",
-      "url": "https://www.julemarkedet.no/",
-      "expected": "2026-11-20",
+      "id": "dac3b6865de606a7",
+      "title": "Linderudkollen skistadion — vintersesong",
+      "url": "https://linderudkollen.no/",
+      "expected": "2026-12-12",
       "found": [],
       "status": "fetch_failed",
       "note": "kunne ikke hente URL"
@@ -28,10 +28,19 @@
       "note": "kunne ikke hente URL"
     },
     {
-      "id": "3372b44309f526c5",
-      "title": "Veitvet senter aktivitetsdag 2026",
-      "url": "https://www.veitvetsenter.no/",
-      "expected": "2026-09-19",
+      "id": "d63dc1f84a18e6ec",
+      "title": "Oslo Vinterpark (Tryvann) — sesongåpning",
+      "url": "https://www.oslovinterpark.no/",
+      "expected": "2026-12-12",
+      "found": [],
+      "status": "fetch_failed",
+      "note": "kunne ikke hente URL"
+    },
+    {
+      "id": "bc1707f789b2b063",
+      "title": "Wyllerløkka — sesongåpning",
+      "url": "https://oslovinterpark.no/",
+      "expected": "2026-12-19",
       "found": [],
       "status": "fetch_failed",
       "note": "kunne ikke hente URL"
@@ -48,23 +57,6 @@
       "note": "regex foreslaar: 2026-08-10"
     },
     {
-      "id": "85a06f285713ed5c",
-      "title": "Filmhuset høstprogram 2026",
-      "url": "https://www.cinemateket.no/",
-      "expected": "2026-09-01",
-      "found": [
-        "2026-07-16",
-        "2026-07-17",
-        "2026-07-18",
-        "2026-07-19",
-        "2026-07-22"
-      ],
-      "status": "mismatch",
-      "note": "regex foreslaar: 2026-08-20 | Claude: 2026-07-17",
-      "claude_hash": "0261bc785d64e5f2",
-      "claude_suggested": "2026-07-17"
-    },
-    {
       "id": "c7744c7feb809bf0",
       "title": "Frivillighetsdagen 2026",
       "url": "https://www.oslo.kommune.no/frivillighet",
@@ -76,6 +68,18 @@
       "note": "regex foreslaar: 2026-08-31 | Claude (cached): 2026-05-20",
       "claude_hash": "5246bd3e4b02bafe",
       "claude_suggested": "2026-05-20"
+    },
+    {
+      "id": "e4296261cdf44c64",
+      "title": "Grefsenkollen alpinanlegg — sesongstart",
+      "url": "https://www.skiforeningen.no/",
+      "expected": "2026-12-26",
+      "found": [
+        "2026-08-14",
+        "2026-09-01"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-09-01"
     },
     {
       "id": "13cc19958ececa7a",
@@ -122,40 +126,16 @@
       "note": "regex foreslaar: 2026-10-18"
     },
     {
-      "id": "4d686cebc7ae019c",
-      "title": "Linderud julemarked 2026",
-      "url": "https://www.linderudsenter.no/",
-      "expected": "2026-11-28",
-      "found": [
-        "2026-08-01"
-      ],
-      "status": "mismatch",
-      "note": "regex foreslaar: 2026-08-01"
-    },
-    {
-      "id": "236dfc5d4f3ee687",
-      "title": "Musikkfest Oslo 2026",
-      "url": "https://musikkfest.no/",
-      "expected": "2026-06-20",
-      "found": [
-        "2027-06-05"
-      ],
-      "status": "mismatch",
-      "note": "regex foreslaar: 2027-06-05 | Claude (cached): 2027-06-05",
-      "claude_hash": "9a16afc1d62764df",
-      "claude_suggested": "2027-06-05"
-    },
-    {
       "id": "8bfeb00e1849e6b9",
       "title": "Nordisk bibliotekuke 2026",
       "url": "https://www.deichman.no/",
       "expected": "2026-11-09",
       "found": [
-        "2026-07-02"
+        "2026-08-05"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-07-02 | Claude: ukjent",
-      "claude_hash": "1ee29cba19a3cc03"
+      "note": "regex foreslaar: 2026-08-05 | Claude: ukjent",
+      "claude_hash": "90636389b55d3965"
     },
     {
       "id": "6e64cb0883dad758",
@@ -163,13 +143,24 @@
       "url": "https://www.norwaycup.no/",
       "expected": "2026-07-26",
       "found": [
-        "2026-07-25",
-        "2026-08-01"
+        "2026-08-07"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-07-25 | Claude (cached): 2026-07-25",
-      "claude_hash": "7a9be0bddcd02a03",
-      "claude_suggested": "2026-07-25"
+      "note": "regex foreslaar: 2026-08-07 | Claude: 2027-07-31",
+      "claude_hash": "3f44076ba9c6112d",
+      "claude_suggested": "2027-07-31"
+    },
+    {
+      "id": "de120652e9d47219",
+      "title": "Orientering: Blodslitet 2026",
+      "url": "https://orientering.no/",
+      "expected": "2026-10-10",
+      "found": [
+        "2026-10-30"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-10-30 | Claude: ukjent",
+      "claude_hash": "2af266119f8603a6"
     },
     {
       "id": "51cafb5f0901801b",
@@ -186,6 +177,66 @@
       "note": "regex foreslaar: 2026-08-27 | Claude (cached): 2026-08-16",
       "claude_hash": "5fcbcae810bfdb70",
       "claude_suggested": "2026-08-16"
+    },
+    {
+      "id": "d765f97a38fd3af1",
+      "title": "Orientering: Nattuglen - nattløp i Nordmarka",
+      "url": "https://orientering.no/",
+      "expected": "2026-11-07",
+      "found": [
+        "2026-10-30"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-10-30 | Claude: ukjent",
+      "claude_hash": "2af266119f8603a6"
+    },
+    {
+      "id": "bfba7c62ec5c8a36",
+      "title": "Orientering: OM stafett 2026",
+      "url": "https://orientering.no/",
+      "expected": "2026-09-12",
+      "found": [
+        "2026-10-30"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-10-30 | Claude: ukjent",
+      "claude_hash": "2af266119f8603a6"
+    },
+    {
+      "id": "1db4770383ca2cc9",
+      "title": "Orientering: OSI Blindern-sprint",
+      "url": "https://orientering.no/",
+      "expected": "2026-08-29",
+      "found": [
+        "2026-10-30"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-10-30 | Claude: ukjent",
+      "claude_hash": "2af266119f8603a6"
+    },
+    {
+      "id": "cf8578f74fd7d042",
+      "title": "Orientering: Oslo 3-dagers 2026",
+      "url": "https://orientering.no/",
+      "expected": "2026-08-14",
+      "found": [
+        "2026-10-30"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-10-30 | Claude: ukjent",
+      "claude_hash": "2af266119f8603a6"
+    },
+    {
+      "id": "d7065b72c00df6ff",
+      "title": "Orientering: Oslo-mesterskapet langdistanse",
+      "url": "https://orientering.no/",
+      "expected": "2026-09-05",
+      "found": [
+        "2026-10-30"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-10-30 | Claude: ukjent",
+      "claude_hash": "2af266119f8603a6"
     },
     {
       "id": "4b452eb704efb020",
@@ -207,8 +258,8 @@
         "2026-08-15"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-08-15 | Claude (cached): 2026-08-09",
-      "claude_hash": "d10fd858320e492e",
+      "note": "regex foreslaar: 2026-08-15 | Claude: 2026-08-09",
+      "claude_hash": "68562b13577c1f31",
       "claude_suggested": "2026-08-09"
     },
     {
@@ -220,54 +271,19 @@
         "2026-08-15"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-08-15 | Claude: 2026-08-09",
-      "claude_hash": "d10fd858320e492e",
-      "claude_suggested": "2026-08-09"
+      "note": "regex foreslaar: 2026-08-15"
     },
     {
-      "id": "944dfebb499ef33a",
-      "title": "Oslo Pride 2026",
-      "url": "https://www.oslopride.no/",
-      "expected": "2026-06-26",
+      "id": "94477da2695444e1",
+      "title": "Oslo Skivinter 2026",
+      "url": "https://www.skiforeningen.no/",
+      "expected": "2026-12-27",
       "found": [
-        "2027-06-20",
-        "2027-06-26"
+        "2026-08-14",
+        "2026-09-01"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2027-06-20 | Claude: 2027-06-26",
-      "claude_hash": "8fb44fb8a18fb13e",
-      "claude_suggested": "2027-06-26"
-    },
-    {
-      "id": "e71000fe903e0139",
-      "title": "Oslo Pride Parade 2026",
-      "url": "https://www.oslopride.no/",
-      "expected": "2026-06-27",
-      "found": [
-        "2027-06-20",
-        "2027-06-26"
-      ],
-      "status": "mismatch",
-      "note": "regex foreslaar: 2027-06-20 | Claude (cached): 2026-06-26",
-      "claude_hash": "8fb44fb8a18fb13e",
-      "claude_suggested": "2026-06-26"
-    },
-    {
-      "id": "7144904c18ac6dac",
-      "title": "Styrkeprøven 2026 (Trondheim-Oslo)",
-      "url": "https://www.styrkeproven.no/",
-      "expected": "2026-06-20",
-      "found": [
-        "2027-04-06",
-        "2027-05-19",
-        "2027-06-13",
-        "2027-06-19",
-        "2027-06-20"
-      ],
-      "status": "mismatch",
-      "note": "regex foreslaar: 2027-04-06 | Claude (cached): 2027-06-18",
-      "claude_hash": "f1119246e3e74ab2",
-      "claude_suggested": "2027-06-18"
+      "note": "regex foreslaar: 2026-09-01"
     },
     {
       "id": "28fa8f09240ce54a",
@@ -286,10 +302,10 @@
       "url": "https://www.vif-fotball.no/",
       "expected": "2026-08-09",
       "found": [
-        "2026-07-11"
+        "2026-08-08"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-07-11"
+      "note": "regex foreslaar: 2026-08-08"
     },
     {
       "id": "ce5369dfc6af77f6",
@@ -303,8 +319,8 @@
         "2026-08-15"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-08-12 | Claude (cached): 2026-08-12",
-      "claude_hash": "8b221c8766ffeb90",
+      "note": "regex foreslaar: 2026-08-12 | Claude: 2026-08-12",
+      "claude_hash": "a1d223170e22ede9",
       "claude_suggested": "2026-08-12"
     },
     {
@@ -319,9 +335,7 @@
         "2026-08-15"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-08-12 | Claude (cached): 2026-08-12",
-      "claude_hash": "8b221c8766ffeb90",
-      "claude_suggested": "2026-08-12"
+      "note": "regex foreslaar: 2026-08-12"
     },
     {
       "id": "3a3b1da9f83cedc8",
@@ -340,7 +354,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "5f9d78a08c3bcf0d"
+      "claude_hash": "24f0efc61ef596c9"
     },
     {
       "id": "3c93271b49580cb1",
@@ -357,35 +371,6 @@
       "title": "Elvelangs Akerselva 2026",
       "url": "https://www.oslo.kommune.no/",
       "expected": "2026-09-18",
-      "found": [],
-      "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
-    },
-    {
-      "id": "c48fb63704a3e1cf",
-      "title": "FIS World Cup Holmenkollen 2027",
-      "url": "https://www.skiforeningen.no/holmenkollen/holmenkollen-skifestival/",
-      "expected": "2027-03-13",
-      "found": [],
-      "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst | Claude (cached): 2027-03-13",
-      "claude_hash": "0e871ee4d1aecfee",
-      "claude_suggested": "2027-03-13"
-    },
-    {
-      "id": "e4296261cdf44c64",
-      "title": "Grefsenkollen alpinanlegg — sesongstart",
-      "url": "https://www.skiforeningen.no/",
-      "expected": "2026-12-26",
-      "found": [],
-      "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
-    },
-    {
-      "id": "06da4abb89f55f6f",
-      "title": "Gressbaneturnering IL Try sommer 2026",
-      "url": "https://il-try.no/",
-      "expected": "2026-07-04",
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst"
@@ -416,13 +401,22 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "b99617aafaa916b2"
+      "claude_hash": "32d01053f6199966"
     },
     {
-      "id": "dac3b6865de606a7",
-      "title": "Linderudkollen skistadion — vintersesong",
-      "url": "https://linderudkollen.no/",
-      "expected": "2026-12-12",
+      "id": "9877a490c26f9e41",
+      "title": "Julemarked på Spikersuppa 2026",
+      "url": "https://www.julemarkedet.no/",
+      "expected": "2026-11-20",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst"
+    },
+    {
+      "id": "4d686cebc7ae019c",
+      "title": "Linderud julemarked 2026",
+      "url": "https://www.linderudsenter.no/",
+      "expected": "2026-11-28",
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst"
@@ -443,8 +437,7 @@
       "expected": "2026-08-22",
       "found": [],
       "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "de5a904b00dc48cc"
+      "note": "ingen datoer funnet i synlig tekst"
     },
     {
       "id": "0f8544ccdc84674d",
@@ -465,76 +458,6 @@
       "note": "ingen datoer funnet i synlig tekst"
     },
     {
-      "id": "de120652e9d47219",
-      "title": "Orientering: Blodslitet 2026",
-      "url": "https://orientering.no/",
-      "expected": "2026-10-10",
-      "found": [],
-      "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "988749cda898139a"
-    },
-    {
-      "id": "2eb24d2c2de44117",
-      "title": "Orientering: Koll nærløp - Skullerud",
-      "url": "https://koll.no/",
-      "expected": "2026-06-24",
-      "found": [],
-      "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "65a7e73f044d7b85"
-    },
-    {
-      "id": "d765f97a38fd3af1",
-      "title": "Orientering: Nattuglen - nattløp i Nordmarka",
-      "url": "https://orientering.no/",
-      "expected": "2026-11-07",
-      "found": [],
-      "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "988749cda898139a"
-    },
-    {
-      "id": "bfba7c62ec5c8a36",
-      "title": "Orientering: OM stafett 2026",
-      "url": "https://orientering.no/",
-      "expected": "2026-09-12",
-      "found": [],
-      "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "988749cda898139a"
-    },
-    {
-      "id": "1db4770383ca2cc9",
-      "title": "Orientering: OSI Blindern-sprint",
-      "url": "https://orientering.no/",
-      "expected": "2026-08-29",
-      "found": [],
-      "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "988749cda898139a"
-    },
-    {
-      "id": "cf8578f74fd7d042",
-      "title": "Orientering: Oslo 3-dagers 2026",
-      "url": "https://orientering.no/",
-      "expected": "2026-08-14",
-      "found": [],
-      "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "988749cda898139a"
-    },
-    {
-      "id": "d7065b72c00df6ff",
-      "title": "Orientering: Oslo-mesterskapet langdistanse",
-      "url": "https://orientering.no/",
-      "expected": "2026-09-05",
-      "found": [],
-      "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "988749cda898139a"
-    },
-    {
       "id": "d845142a1a352f4c",
       "title": "Oslo Internasjonale Filmfestival 2026",
       "url": "https://oslofilmfestival.com/",
@@ -548,42 +471,6 @@
       "title": "Oslo Lucia-tog 2026",
       "url": "https://www.oslodomkirke.no/",
       "expected": "2026-12-13",
-      "found": [],
-      "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
-    },
-    {
-      "id": "94477da2695444e1",
-      "title": "Oslo Skivinter 2026",
-      "url": "https://www.skiforeningen.no/",
-      "expected": "2026-12-27",
-      "found": [],
-      "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
-    },
-    {
-      "id": "d63dc1f84a18e6ec",
-      "title": "Oslo Vinterpark (Tryvann) — sesongåpning",
-      "url": "https://www.oslovinterpark.no/",
-      "expected": "2026-12-12",
-      "found": [],
-      "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
-    },
-    {
-      "id": "4796cdbbe10dae26",
-      "title": "Piknik i Parken 2026",
-      "url": "https://piknikiparken.no/",
-      "expected": "2026-06-26",
-      "found": [],
-      "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
-    },
-    {
-      "id": "d23303142b16f715",
-      "title": "Sommerball Rådhusplassen 2026",
-      "url": "https://www.oslo.kommune.no/",
-      "expected": "2026-07-18",
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst"
@@ -607,10 +494,10 @@
       "note": "ingen datoer funnet i synlig tekst"
     },
     {
-      "id": "bc1707f789b2b063",
-      "title": "Wyllerløkka — sesongåpning",
-      "url": "https://oslovinterpark.no/",
-      "expected": "2026-12-19",
+      "id": "3372b44309f526c5",
+      "title": "Veitvet senter aktivitetsdag 2026",
+      "url": "https://www.veitvetsenter.no/",
+      "expected": "2026-09-19",
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst"
@@ -629,8 +516,36 @@
       ],
       "status": "ok",
       "note": "bekreftet av Claude",
-      "claude_hash": "3e1e81c5376c14c2",
+      "claude_hash": "93e69f5e2bf34a2b",
       "claude_suggested": "2026-09-26"
+    },
+    {
+      "id": "c48fb63704a3e1cf",
+      "title": "FIS World Cup Holmenkollen 2027",
+      "url": "https://www.skiforeningen.no/holmenkollen/holmenkollen-skifestival/",
+      "expected": "2027-03-13",
+      "found": [],
+      "status": "ok",
+      "note": "bekreftet av Claude",
+      "claude_hash": "3a6ec9a71a08e54c",
+      "claude_suggested": "2027-03-13"
+    },
+    {
+      "id": "85a06f285713ed5c",
+      "title": "Filmhuset høstprogram 2026",
+      "url": "https://www.cinemateket.no/",
+      "expected": "2026-09-01",
+      "found": [
+        "2026-08-08",
+        "2026-08-09",
+        "2026-08-14",
+        "2026-08-20",
+        "2026-08-22"
+      ],
+      "status": "ok",
+      "note": "bekreftet av Claude",
+      "claude_hash": "d36c4385d8c7b38d",
+      "claude_suggested": "2026-09-01"
     },
     {
       "id": "c3a438c27157cb2e",
@@ -685,26 +600,6 @@
       "note": ""
     },
     {
-      "id": "976aafbe75b4afaa",
-      "title": "Sankthansbål ved Frognerkilen",
-      "url": "https://www.oslo.kommune.no/",
-      "expected": "2026-06-23",
-      "found": [],
-      "status": "ok",
-      "note": "bekreftet av Claude",
-      "claude_hash": "b99617aafaa916b2",
-      "claude_suggested": "2026-06-23"
-    },
-    {
-      "id": "2f13da63467099de",
-      "title": "Bestum vel sommerfest 2026",
-      "url": "https://www.facebook.com/oslobyvelforening",
-      "expected": "2026-06-20",
-      "found": [],
-      "status": "skipped",
-      "note": "URL er social/wiki/maps - ingen kanonisk dato"
-    },
-    {
       "id": "5f901c25984b0f51",
       "title": "Bygdoymila 2026",
       "url": "https://www.facebook.com/Bygdoymila/",
@@ -727,15 +622,6 @@
       "title": "Liastua skikurs for barn 2026",
       "url": "https://www.facebook.com/oslobyvelforening",
       "expected": "2026-12-12",
-      "found": [],
-      "status": "skipped",
-      "note": "URL er social/wiki/maps - ingen kanonisk dato"
-    },
-    {
-      "id": "980491efa2d386af",
-      "title": "Lørdagsloppis Tøyen 2026",
-      "url": "https://www.facebook.com/toyentorg/",
-      "expected": "2026-07-11",
       "found": [],
       "status": "skipped",
       "note": "URL er social/wiki/maps - ingen kanonisk dato"
