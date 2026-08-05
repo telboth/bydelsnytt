@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-08-05T05:44:40.185913+00:00",
+  "generatedAt": "2026-08-05T06:01:59.405904+00:00",
   "counts": {
-    "fetch_failed": 4,
-    "mismatch": 23,
-    "no_dates": 18,
-    "ok": 7,
+    "fetch_failed": 3,
+    "mismatch": 25,
+    "no_dates": 20,
+    "ok": 4,
     "skipped": 5
   },
   "newCorrections": 0,
@@ -28,15 +28,6 @@
       "note": "kunne ikke hente URL"
     },
     {
-      "id": "d63dc1f84a18e6ec",
-      "title": "Oslo Vinterpark (Tryvann) — sesongåpning",
-      "url": "https://www.oslovinterpark.no/",
-      "expected": "2026-12-12",
-      "found": [],
-      "status": "fetch_failed",
-      "note": "kunne ikke hente URL"
-    },
-    {
       "id": "bc1707f789b2b063",
       "title": "Wyllerløkka — sesongåpning",
       "url": "https://oslovinterpark.no/",
@@ -55,6 +46,40 @@
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-08-10"
+    },
+    {
+      "id": "175c864df01599c8",
+      "title": "Ellingsrudåsen skoles høstloppis 2026",
+      "url": "https://ellingsrudasen.osloskolen.no/",
+      "expected": "2026-09-26",
+      "found": [
+        "2026-08-17",
+        "2026-09-28",
+        "2026-10-02",
+        "2026-12-21",
+        "2027-01-01"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-09-28 | Claude (cached): 2026-09-26",
+      "claude_hash": "93e69f5e2bf34a2b",
+      "claude_suggested": "2026-09-26"
+    },
+    {
+      "id": "85a06f285713ed5c",
+      "title": "Filmhuset høstprogram 2026",
+      "url": "https://www.cinemateket.no/",
+      "expected": "2026-09-01",
+      "found": [
+        "2026-08-08",
+        "2026-08-09",
+        "2026-08-14",
+        "2026-08-20",
+        "2026-08-22"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-08-31 | Claude (cached): 2026-09-01",
+      "claude_hash": "d36c4385d8c7b38d",
+      "claude_suggested": "2026-09-01"
     },
     {
       "id": "c7744c7feb809bf0",
@@ -123,7 +148,8 @@
         "2027-11-14"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-10-18"
+      "note": "regex foreslaar: 2026-10-18 | Claude: ukjent",
+      "claude_hash": "df086b9d627c6390"
     },
     {
       "id": "8bfeb00e1849e6b9",
@@ -135,7 +161,7 @@
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-08-05 | Claude: ukjent",
-      "claude_hash": "90636389b55d3965"
+      "claude_hash": "3959080c20066514"
     },
     {
       "id": "6e64cb0883dad758",
@@ -146,7 +172,7 @@
         "2026-08-07"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-08-07 | Claude: 2027-07-31",
+      "note": "regex foreslaar: 2026-08-07 | Claude (cached): 2027-07-31",
       "claude_hash": "3f44076ba9c6112d",
       "claude_suggested": "2027-07-31"
     },
@@ -247,7 +273,9 @@
         "2026-11-12"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-11-12"
+      "note": "regex foreslaar: 2026-11-12 | Claude: 2026-11-10",
+      "claude_hash": "e1162f79b784e0c1",
+      "claude_suggested": "2026-11-10"
     },
     {
       "id": "f0cb0b595e49ce13",
@@ -258,7 +286,7 @@
         "2026-08-15"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-08-15 | Claude: 2026-08-09",
+      "note": "regex foreslaar: 2026-08-15 | Claude (cached): 2026-08-09",
       "claude_hash": "68562b13577c1f31",
       "claude_suggested": "2026-08-09"
     },
@@ -271,7 +299,9 @@
         "2026-08-15"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-08-15"
+      "note": "regex foreslaar: 2026-08-15 | Claude: 2026-08-09",
+      "claude_hash": "68562b13577c1f31",
+      "claude_suggested": "2026-08-09"
     },
     {
       "id": "94477da2695444e1",
@@ -294,7 +324,9 @@
         "2026-09-19"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-09-19"
+      "note": "regex foreslaar: 2026-09-19 | Claude: 2026-09-10",
+      "claude_hash": "f615ab4af2e4cad7",
+      "claude_suggested": "2026-09-10"
     },
     {
       "id": "e9f4aa448a25b235",
@@ -319,7 +351,7 @@
         "2026-08-15"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-08-12 | Claude: 2026-08-12",
+      "note": "regex foreslaar: 2026-08-12 | Claude (cached): 2026-08-12",
       "claude_hash": "a1d223170e22ede9",
       "claude_suggested": "2026-08-12"
     },
@@ -335,7 +367,9 @@
         "2026-08-15"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-08-12"
+      "note": "regex foreslaar: 2026-08-12 | Claude (cached): 2026-08-12",
+      "claude_hash": "a1d223170e22ede9",
+      "claude_suggested": "2026-08-12"
     },
     {
       "id": "3a3b1da9f83cedc8",
@@ -373,7 +407,19 @@
       "expected": "2026-09-18",
       "found": [],
       "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
+      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
+      "claude_hash": "32d01053f6199966"
+    },
+    {
+      "id": "c48fb63704a3e1cf",
+      "title": "FIS World Cup Holmenkollen 2027",
+      "url": "https://www.skiforeningen.no/holmenkollen/holmenkollen-skifestival/",
+      "expected": "2027-03-13",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst | Claude (cached): 2027-03-13",
+      "claude_hash": "3a6ec9a71a08e54c",
+      "claude_suggested": "2027-03-13"
     },
     {
       "id": "4e0427243877bc8d",
@@ -437,7 +483,8 @@
       "expected": "2026-08-22",
       "found": [],
       "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
+      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
+      "claude_hash": "de5a904b00dc48cc"
     },
     {
       "id": "0f8544ccdc84674d",
@@ -464,13 +511,23 @@
       "expected": "2026-10-28",
       "found": [],
       "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
+      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
+      "claude_hash": "6b58eff04165fa0b"
     },
     {
       "id": "db1148f0877a3624",
       "title": "Oslo Lucia-tog 2026",
       "url": "https://www.oslodomkirke.no/",
       "expected": "2026-12-13",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst"
+    },
+    {
+      "id": "d63dc1f84a18e6ec",
+      "title": "Oslo Vinterpark (Tryvann) — sesongåpning",
+      "url": "https://www.oslovinterpark.no/",
+      "expected": "2026-12-12",
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst"
@@ -501,51 +558,6 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst"
-    },
-    {
-      "id": "175c864df01599c8",
-      "title": "Ellingsrudåsen skoles høstloppis 2026",
-      "url": "https://ellingsrudasen.osloskolen.no/",
-      "expected": "2026-09-26",
-      "found": [
-        "2026-08-17",
-        "2026-09-28",
-        "2026-10-02",
-        "2026-12-21",
-        "2027-01-01"
-      ],
-      "status": "ok",
-      "note": "bekreftet av Claude",
-      "claude_hash": "93e69f5e2bf34a2b",
-      "claude_suggested": "2026-09-26"
-    },
-    {
-      "id": "c48fb63704a3e1cf",
-      "title": "FIS World Cup Holmenkollen 2027",
-      "url": "https://www.skiforeningen.no/holmenkollen/holmenkollen-skifestival/",
-      "expected": "2027-03-13",
-      "found": [],
-      "status": "ok",
-      "note": "bekreftet av Claude",
-      "claude_hash": "3a6ec9a71a08e54c",
-      "claude_suggested": "2027-03-13"
-    },
-    {
-      "id": "85a06f285713ed5c",
-      "title": "Filmhuset høstprogram 2026",
-      "url": "https://www.cinemateket.no/",
-      "expected": "2026-09-01",
-      "found": [
-        "2026-08-08",
-        "2026-08-09",
-        "2026-08-14",
-        "2026-08-20",
-        "2026-08-22"
-      ],
-      "status": "ok",
-      "note": "bekreftet av Claude",
-      "claude_hash": "d36c4385d8c7b38d",
-      "claude_suggested": "2026-09-01"
     },
     {
       "id": "c3a438c27157cb2e",
