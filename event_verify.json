@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-08-07T06:03:52.433207+00:00",
+  "generatedAt": "2026-08-08T10:47:15.425198+00:00",
   "counts": {
-    "fetch_failed": 4,
-    "mismatch": 24,
+    "fetch_failed": 8,
+    "mismatch": 20,
     "no_dates": 19,
     "ok": 5,
     "skipped": 5
@@ -10,10 +10,46 @@
   "newCorrections": 0,
   "items": [
     {
+      "id": "4e0427243877bc8d",
+      "title": "Groruddagen 2026",
+      "url": "https://www.oslo.kommune.no/bydel-grorud/",
+      "expected": "2026-09-05",
+      "found": [],
+      "status": "fetch_failed",
+      "note": "kunne ikke hente URL"
+    },
+    {
       "id": "dac3b6865de606a7",
       "title": "Linderudkollen skistadion — vintersesong",
       "url": "https://linderudkollen.no/",
       "expected": "2026-12-12",
+      "found": [],
+      "status": "fetch_failed",
+      "note": "kunne ikke hente URL"
+    },
+    {
+      "id": "1db4770383ca2cc9",
+      "title": "Orientering: OSI Blindern-sprint",
+      "url": "https://orientering.no/",
+      "expected": "2026-08-29",
+      "found": [],
+      "status": "fetch_failed",
+      "note": "kunne ikke hente URL"
+    },
+    {
+      "id": "cf8578f74fd7d042",
+      "title": "Orientering: Oslo 3-dagers 2026",
+      "url": "https://orientering.no/",
+      "expected": "2026-08-14",
+      "found": [],
+      "status": "fetch_failed",
+      "note": "kunne ikke hente URL"
+    },
+    {
+      "id": "d7065b72c00df6ff",
+      "title": "Orientering: Oslo-mesterskapet langdistanse",
+      "url": "https://orientering.no/",
+      "expected": "2026-09-05",
       "found": [],
       "status": "fetch_failed",
       "note": "kunne ikke hente URL"
@@ -139,7 +175,8 @@
         "2027-11-14"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-10-18"
+      "note": "regex foreslaar: 2026-10-18 | Claude: ukjent",
+      "claude_hash": "df086b9d627c6390"
     },
     {
       "id": "8bfeb00e1849e6b9",
@@ -147,24 +184,11 @@
       "url": "https://www.deichman.no/",
       "expected": "2026-11-09",
       "found": [
-        "2026-08-07"
+        "2026-08-08"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-08-07 | Claude: ukjent",
-      "claude_hash": "e07bf95c45700a1d"
-    },
-    {
-      "id": "6e64cb0883dad758",
-      "title": "Norway Cup 2026",
-      "url": "https://www.norwaycup.no/",
-      "expected": "2026-07-26",
-      "found": [
-        "2026-08-07"
-      ],
-      "status": "mismatch",
-      "note": "regex foreslaar: 2026-08-07 | Claude (cached): 2027-07-31",
-      "claude_hash": "3f44076ba9c6112d",
-      "claude_suggested": "2027-07-31"
+      "note": "regex foreslaar: 2026-08-08 | Claude: ukjent",
+      "claude_hash": "4a9f961e4e83b0e7"
     },
     {
       "id": "de120652e9d47219",
@@ -219,42 +243,6 @@
       "claude_hash": "a5ae38016223f20c"
     },
     {
-      "id": "1db4770383ca2cc9",
-      "title": "Orientering: OSI Blindern-sprint",
-      "url": "https://orientering.no/",
-      "expected": "2026-08-29",
-      "found": [
-        "2026-10-30"
-      ],
-      "status": "mismatch",
-      "note": "regex foreslaar: 2026-10-30 | Claude: ukjent",
-      "claude_hash": "a5ae38016223f20c"
-    },
-    {
-      "id": "cf8578f74fd7d042",
-      "title": "Orientering: Oslo 3-dagers 2026",
-      "url": "https://orientering.no/",
-      "expected": "2026-08-14",
-      "found": [
-        "2026-10-30"
-      ],
-      "status": "mismatch",
-      "note": "regex foreslaar: 2026-10-30 | Claude: ukjent",
-      "claude_hash": "a5ae38016223f20c"
-    },
-    {
-      "id": "d7065b72c00df6ff",
-      "title": "Orientering: Oslo-mesterskapet langdistanse",
-      "url": "https://orientering.no/",
-      "expected": "2026-09-05",
-      "found": [
-        "2026-10-30"
-      ],
-      "status": "mismatch",
-      "note": "regex foreslaar: 2026-10-30 | Claude: ukjent",
-      "claude_hash": "a5ae38016223f20c"
-    },
-    {
       "id": "4b452eb704efb020",
       "title": "Oslo Bokfestival 2026",
       "url": "https://www.oslobokfestival.no/",
@@ -263,7 +251,9 @@
         "2026-11-12"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-11-12"
+      "note": "regex foreslaar: 2026-11-12 | Claude: 2026-11-10",
+      "claude_hash": "e1162f79b784e0c1",
+      "claude_suggested": "2026-11-10"
     },
     {
       "id": "f0cb0b595e49ce13",
@@ -337,7 +327,7 @@
         "2026-08-15"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-08-12 | Claude: 2026-08-12",
+      "note": "regex foreslaar: 2026-08-12 | Claude (cached): 2026-08-12",
       "claude_hash": "c0c75a837fa3d1db",
       "claude_suggested": "2026-08-12"
     },
@@ -353,7 +343,7 @@
         "2026-08-15"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-08-12 | Claude: 2026-08-12",
+      "note": "regex foreslaar: 2026-08-12 | Claude (cached): 2026-08-12",
       "claude_hash": "c0c75a837fa3d1db",
       "claude_suggested": "2026-08-12"
     },
@@ -406,15 +396,6 @@
       "note": "ingen datoer funnet i synlig tekst | Claude (cached): 2027-03-13",
       "claude_hash": "3a6ec9a71a08e54c",
       "claude_suggested": "2027-03-13"
-    },
-    {
-      "id": "4e0427243877bc8d",
-      "title": "Groruddagen 2026",
-      "url": "https://www.oslo.kommune.no/bydel-grorud/",
-      "expected": "2026-09-05",
-      "found": [],
-      "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
     },
     {
       "id": "30c9af95650e5d7a",
@@ -491,6 +472,17 @@
       "note": "ingen datoer funnet i synlig tekst"
     },
     {
+      "id": "6e64cb0883dad758",
+      "title": "Norway Cup 2026",
+      "url": "https://www.norwaycup.no/",
+      "expected": "2026-07-26",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst | Claude (cached): 2027-07-31",
+      "claude_hash": "3f44076ba9c6112d",
+      "claude_suggested": "2027-07-31"
+    },
+    {
       "id": "d845142a1a352f4c",
       "title": "Oslo Internasjonale Filmfestival 2026",
       "url": "https://oslofilmfestival.com/",
@@ -542,15 +534,15 @@
       "url": "https://www.cinemateket.no/",
       "expected": "2026-09-01",
       "found": [
-        "2026-08-09",
         "2026-08-11",
         "2026-08-14",
         "2026-08-19",
-        "2026-08-20"
+        "2026-08-20",
+        "2026-08-22"
       ],
       "status": "ok",
       "note": "bekreftet av Claude",
-      "claude_hash": "9015f5e336d4a582",
+      "claude_hash": "966cbb6ed3830503",
       "claude_suggested": "2026-09-01"
     },
     {
