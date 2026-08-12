@@ -1,19 +1,19 @@
 {
-  "generatedAt": "2026-08-08T10:47:15.425198+00:00",
+  "generatedAt": "2026-08-12T05:34:56.142712+00:00",
   "counts": {
-    "fetch_failed": 8,
+    "fetch_failed": 6,
     "mismatch": 20,
-    "no_dates": 19,
-    "ok": 5,
+    "no_dates": 21,
+    "ok": 4,
     "skipped": 5
   },
   "newCorrections": 0,
   "items": [
     {
-      "id": "4e0427243877bc8d",
-      "title": "Groruddagen 2026",
-      "url": "https://www.oslo.kommune.no/bydel-grorud/",
-      "expected": "2026-09-05",
+      "id": "c48fb63704a3e1cf",
+      "title": "FIS World Cup Holmenkollen 2027",
+      "url": "https://www.skiforeningen.no/holmenkollen/holmenkollen-skifestival/",
+      "expected": "2027-03-13",
       "found": [],
       "status": "fetch_failed",
       "note": "kunne ikke hente URL"
@@ -28,37 +28,19 @@
       "note": "kunne ikke hente URL"
     },
     {
-      "id": "1db4770383ca2cc9",
-      "title": "Orientering: OSI Blindern-sprint",
-      "url": "https://orientering.no/",
-      "expected": "2026-08-29",
-      "found": [],
-      "status": "fetch_failed",
-      "note": "kunne ikke hente URL"
-    },
-    {
-      "id": "cf8578f74fd7d042",
-      "title": "Orientering: Oslo 3-dagers 2026",
-      "url": "https://orientering.no/",
-      "expected": "2026-08-14",
-      "found": [],
-      "status": "fetch_failed",
-      "note": "kunne ikke hente URL"
-    },
-    {
-      "id": "d7065b72c00df6ff",
-      "title": "Orientering: Oslo-mesterskapet langdistanse",
-      "url": "https://orientering.no/",
-      "expected": "2026-09-05",
-      "found": [],
-      "status": "fetch_failed",
-      "note": "kunne ikke hente URL"
-    },
-    {
       "id": "83f362a5bdaedbb2",
       "title": "Oslo Arkitekturfestival 2026",
       "url": "https://oslobiennalen.no",
       "expected": "2026-09-24",
+      "found": [],
+      "status": "fetch_failed",
+      "note": "kunne ikke hente URL"
+    },
+    {
+      "id": "4b452eb704efb020",
+      "title": "Oslo Bokfestival 2026",
+      "url": "https://www.oslobokfestival.no/",
+      "expected": "2026-09-26",
       "found": [],
       "status": "fetch_failed",
       "note": "kunne ikke hente URL"
@@ -82,17 +64,6 @@
       "note": "kunne ikke hente URL"
     },
     {
-      "id": "2e5d18c8c19b6106",
-      "title": "Bjerkedagen 2026",
-      "url": "https://www.oslo.kommune.no/bydel-bjerke/",
-      "expected": "2026-09-12",
-      "found": [
-        "2026-08-10"
-      ],
-      "status": "mismatch",
-      "note": "regex foreslaar: 2026-08-10"
-    },
-    {
       "id": "175c864df01599c8",
       "title": "Ellingsrudåsen skoles høstloppis 2026",
       "url": "https://ellingsrudasen.osloskolen.no/",
@@ -106,7 +77,24 @@
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-09-28 | Claude: ukjent",
-      "claude_hash": "3e1e81c5376c14c2"
+      "claude_hash": "93e69f5e2bf34a2b"
+    },
+    {
+      "id": "85a06f285713ed5c",
+      "title": "Filmhuset høstprogram 2026",
+      "url": "https://www.cinemateket.no/",
+      "expected": "2026-09-01",
+      "found": [
+        "2026-08-14",
+        "2026-08-15",
+        "2026-08-16",
+        "2026-08-19",
+        "2026-08-20"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-08-31 | Claude: 2026-07-17",
+      "claude_hash": "608fae5631bc61e2",
+      "claude_suggested": "2026-07-17"
     },
     {
       "id": "c7744c7feb809bf0",
@@ -117,9 +105,7 @@
         "2026-08-31"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-08-31 | Claude (cached): 2026-05-20",
-      "claude_hash": "5246bd3e4b02bafe",
-      "claude_suggested": "2026-05-20"
+      "note": "regex foreslaar: 2026-08-31"
     },
     {
       "id": "e4296261cdf44c64",
@@ -147,48 +133,16 @@
       "claude_suggested": "2027-02-20"
     },
     {
-      "id": "c564d1c97d2eb155",
-      "title": "Kulturnatt Oslo 2026",
-      "url": "https://www.kulturnatt.no/",
-      "expected": "2026-09-11",
-      "found": [
-        "2026-10-18",
-        "2026-10-24",
-        "2026-11-24",
-        "2027-09-28",
-        "2027-11-14"
-      ],
-      "status": "mismatch",
-      "note": "regex foreslaar: 2026-10-18 | Claude: ukjent",
-      "claude_hash": "df086b9d627c6390"
-    },
-    {
-      "id": "c47eeab18961e662",
-      "title": "Kulturnatten Oslo 2026",
-      "url": "https://www.kulturnatt.no/",
-      "expected": "2026-09-18",
-      "found": [
-        "2026-10-18",
-        "2026-10-24",
-        "2026-11-24",
-        "2027-09-28",
-        "2027-11-14"
-      ],
-      "status": "mismatch",
-      "note": "regex foreslaar: 2026-10-18 | Claude: ukjent",
-      "claude_hash": "df086b9d627c6390"
-    },
-    {
       "id": "8bfeb00e1849e6b9",
       "title": "Nordisk bibliotekuke 2026",
       "url": "https://www.deichman.no/",
       "expected": "2026-11-09",
       "found": [
-        "2026-08-08"
+        "2026-08-12"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-08-08 | Claude: ukjent",
-      "claude_hash": "4a9f961e4e83b0e7"
+      "note": "regex foreslaar: 2026-08-12 | Claude: ukjent",
+      "claude_hash": "4c62fbfd66eb7622"
     },
     {
       "id": "de120652e9d47219",
@@ -200,7 +154,7 @@
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-10-30 | Claude: ukjent",
-      "claude_hash": "a5ae38016223f20c"
+      "claude_hash": "607560bc78c5ac35"
     },
     {
       "id": "51cafb5f0901801b",
@@ -208,14 +162,12 @@
       "url": "https://www.fossumif.no/",
       "expected": "2026-09-19",
       "found": [
-        "2026-08-10",
-        "2026-08-14",
         "2026-08-16",
         "2026-08-27"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-08-27 | Claude (cached): 2026-08-16",
-      "claude_hash": "5fcbcae810bfdb70",
+      "note": "regex foreslaar: 2026-08-27 | Claude: 2026-08-16",
+      "claude_hash": "ab59c0604024aff9",
       "claude_suggested": "2026-08-16"
     },
     {
@@ -228,7 +180,7 @@
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-10-30 | Claude: ukjent",
-      "claude_hash": "a5ae38016223f20c"
+      "claude_hash": "607560bc78c5ac35"
     },
     {
       "id": "bfba7c62ec5c8a36",
@@ -240,20 +192,43 @@
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-10-30 | Claude: ukjent",
-      "claude_hash": "a5ae38016223f20c"
+      "claude_hash": "607560bc78c5ac35"
     },
     {
-      "id": "4b452eb704efb020",
-      "title": "Oslo Bokfestival 2026",
-      "url": "https://www.oslobokfestival.no/",
-      "expected": "2026-09-26",
+      "id": "1db4770383ca2cc9",
+      "title": "Orientering: OSI Blindern-sprint",
+      "url": "https://orientering.no/",
+      "expected": "2026-08-29",
       "found": [
-        "2026-11-12"
+        "2026-10-30"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-11-12 | Claude: 2026-11-10",
-      "claude_hash": "e1162f79b784e0c1",
-      "claude_suggested": "2026-11-10"
+      "note": "regex foreslaar: 2026-10-30 | Claude: ukjent",
+      "claude_hash": "607560bc78c5ac35"
+    },
+    {
+      "id": "cf8578f74fd7d042",
+      "title": "Orientering: Oslo 3-dagers 2026",
+      "url": "https://orientering.no/",
+      "expected": "2026-08-14",
+      "found": [
+        "2026-10-30"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-10-30 | Claude: ukjent",
+      "claude_hash": "607560bc78c5ac35"
+    },
+    {
+      "id": "d7065b72c00df6ff",
+      "title": "Orientering: Oslo-mesterskapet langdistanse",
+      "url": "https://orientering.no/",
+      "expected": "2026-09-05",
+      "found": [
+        "2026-10-30"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-10-30 | Claude: ukjent",
+      "claude_hash": "607560bc78c5ac35"
     },
     {
       "id": "f0cb0b595e49ce13",
@@ -264,8 +239,8 @@
         "2026-08-15"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-08-15 | Claude (cached): 2026-08-09",
-      "claude_hash": "68562b13577c1f31",
+      "note": "regex foreslaar: 2026-08-15 | Claude: 2026-08-09",
+      "claude_hash": "3ce0add840b9f75a",
       "claude_suggested": "2026-08-09"
     },
     {
@@ -277,9 +252,7 @@
         "2026-08-15"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-08-15 | Claude (cached): 2026-08-09",
-      "claude_hash": "68562b13577c1f31",
-      "claude_suggested": "2026-08-09"
+      "note": "regex foreslaar: 2026-08-15"
     },
     {
       "id": "94477da2695444e1",
@@ -310,10 +283,10 @@
       "url": "https://www.vif-fotball.no/",
       "expected": "2026-08-09",
       "found": [
-        "2026-08-08"
+        "2026-08-16"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-08-08"
+      "note": "regex foreslaar: 2026-08-16"
     },
     {
       "id": "ce5369dfc6af77f6",
@@ -321,14 +294,11 @@
       "url": "https://www.oyafestivalen.no/",
       "expected": "2026-08-04",
       "found": [
-        "2026-08-12",
-        "2026-08-13",
-        "2026-08-14",
         "2026-08-15"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-08-12 | Claude (cached): 2026-08-12",
-      "claude_hash": "c0c75a837fa3d1db",
+      "note": "regex foreslaar: 2026-08-15 | Claude: 2026-08-12",
+      "claude_hash": "04cc62cd472fd103",
       "claude_suggested": "2026-08-12"
     },
     {
@@ -337,21 +307,25 @@
       "url": "https://www.oyafestivalen.no/",
       "expected": "2026-08-11",
       "found": [
-        "2026-08-12",
-        "2026-08-13",
-        "2026-08-14",
         "2026-08-15"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-08-12 | Claude (cached): 2026-08-12",
-      "claude_hash": "c0c75a837fa3d1db",
-      "claude_suggested": "2026-08-12"
+      "note": "regex foreslaar: 2026-08-15"
     },
     {
       "id": "3a3b1da9f83cedc8",
       "title": "Alnabyfest 2026",
       "url": "https://www.oslo.kommune.no/bydel-alna/",
       "expected": "2026-08-15",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst"
+    },
+    {
+      "id": "2e5d18c8c19b6106",
+      "title": "Bjerkedagen 2026",
+      "url": "https://www.oslo.kommune.no/bydel-bjerke/",
+      "expected": "2026-09-12",
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst"
@@ -364,7 +338,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "17f77c3ddd6e9837"
+      "claude_hash": "33084e730ccb442b"
     },
     {
       "id": "3c93271b49580cb1",
@@ -373,8 +347,7 @@
       "expected": "2026-10-17",
       "found": [],
       "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "05d835408915e1fe"
+      "note": "ingen datoer funnet i synlig tekst"
     },
     {
       "id": "5cf1ee9302e199f5",
@@ -383,19 +356,16 @@
       "expected": "2026-09-18",
       "found": [],
       "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "8d33f4576062ce53"
+      "note": "ingen datoer funnet i synlig tekst"
     },
     {
-      "id": "c48fb63704a3e1cf",
-      "title": "FIS World Cup Holmenkollen 2027",
-      "url": "https://www.skiforeningen.no/holmenkollen/holmenkollen-skifestival/",
-      "expected": "2027-03-13",
+      "id": "4e0427243877bc8d",
+      "title": "Groruddagen 2026",
+      "url": "https://www.oslo.kommune.no/bydel-grorud/",
+      "expected": "2026-09-05",
       "found": [],
       "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst | Claude (cached): 2027-03-13",
-      "claude_hash": "3a6ec9a71a08e54c",
-      "claude_suggested": "2027-03-13"
+      "note": "ingen datoer funnet i synlig tekst"
     },
     {
       "id": "30c9af95650e5d7a",
@@ -414,13 +384,32 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "8d33f4576062ce53"
+      "claude_hash": "ec3fd10cf67cbeb4"
     },
     {
       "id": "9877a490c26f9e41",
       "title": "Julemarked på Spikersuppa 2026",
       "url": "https://www.julemarkedet.no/",
       "expected": "2026-11-20",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst"
+    },
+    {
+      "id": "c564d1c97d2eb155",
+      "title": "Kulturnatt Oslo 2026",
+      "url": "https://www.kulturnatt.no/",
+      "expected": "2026-09-11",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
+      "claude_hash": "ef5acc121bbe2468"
+    },
+    {
+      "id": "c47eeab18961e662",
+      "title": "Kulturnatten Oslo 2026",
+      "url": "https://www.kulturnatt.no/",
+      "expected": "2026-09-18",
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst"
@@ -450,8 +439,7 @@
       "expected": "2026-08-22",
       "found": [],
       "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "de5a904b00dc48cc"
+      "note": "ingen datoer funnet i synlig tekst"
     },
     {
       "id": "0f8544ccdc84674d",
@@ -472,25 +460,13 @@
       "note": "ingen datoer funnet i synlig tekst"
     },
     {
-      "id": "6e64cb0883dad758",
-      "title": "Norway Cup 2026",
-      "url": "https://www.norwaycup.no/",
-      "expected": "2026-07-26",
-      "found": [],
-      "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst | Claude (cached): 2027-07-31",
-      "claude_hash": "3f44076ba9c6112d",
-      "claude_suggested": "2027-07-31"
-    },
-    {
       "id": "d845142a1a352f4c",
       "title": "Oslo Internasjonale Filmfestival 2026",
       "url": "https://oslofilmfestival.com/",
       "expected": "2026-10-28",
       "found": [],
       "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "6b58eff04165fa0b"
+      "note": "ingen datoer funnet i synlig tekst"
     },
     {
       "id": "db1148f0877a3624",
@@ -529,23 +505,6 @@
       "note": "ingen datoer funnet i synlig tekst"
     },
     {
-      "id": "85a06f285713ed5c",
-      "title": "Filmhuset høstprogram 2026",
-      "url": "https://www.cinemateket.no/",
-      "expected": "2026-09-01",
-      "found": [
-        "2026-08-11",
-        "2026-08-14",
-        "2026-08-19",
-        "2026-08-20",
-        "2026-08-22"
-      ],
-      "status": "ok",
-      "note": "bekreftet av Claude",
-      "claude_hash": "966cbb6ed3830503",
-      "claude_suggested": "2026-09-01"
-    },
-    {
       "id": "c3a438c27157cb2e",
       "title": "Oslo Maraton 2026",
       "url": "https://www.oslomaraton.no/",
@@ -562,10 +521,12 @@
       "url": "https://oslotri.com/",
       "expected": "2026-08-08",
       "found": [
-        "2026-08-08"
+        "2027-08-14"
       ],
       "status": "ok",
-      "note": ""
+      "note": "bekreftet av Claude",
+      "claude_hash": "fd2a5ec9c43ac634",
+      "claude_suggested": "2026-08-08"
     },
     {
       "id": "bb61a462b833d30c",
