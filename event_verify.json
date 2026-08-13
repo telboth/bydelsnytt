@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-08-12T06:03:25.566085+00:00",
+  "generatedAt": "2026-08-13T06:04:56.401861+00:00",
   "counts": {
     "fetch_failed": 6,
-    "mismatch": 21,
+    "mismatch": 19,
     "no_dates": 21,
-    "ok": 3,
+    "ok": 5,
     "skipped": 5
   },
   "newCorrections": 0,
@@ -77,24 +77,7 @@
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-09-28 | Claude: ukjent",
-      "claude_hash": "cc798070046d24f7"
-    },
-    {
-      "id": "85a06f285713ed5c",
-      "title": "Filmhuset høstprogram 2026",
-      "url": "https://www.cinemateket.no/",
-      "expected": "2026-09-01",
-      "found": [
-        "2026-08-14",
-        "2026-08-15",
-        "2026-08-16",
-        "2026-08-19",
-        "2026-08-20"
-      ],
-      "status": "mismatch",
-      "note": "regex foreslaar: 2026-08-31 | Claude (cached): 2026-07-17",
-      "claude_hash": "608fae5631bc61e2",
-      "claude_suggested": "2026-07-17"
+      "claude_hash": "aaec548e0f3a3098"
     },
     {
       "id": "c7744c7feb809bf0",
@@ -105,7 +88,7 @@
         "2026-08-31"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-08-31 | Claude: 2026-05-20",
+      "note": "regex foreslaar: 2026-08-31 | Claude (cached): 2026-05-20",
       "claude_hash": "5246bd3e4b02bafe",
       "claude_suggested": "2026-05-20"
     },
@@ -140,11 +123,11 @@
       "url": "https://www.deichman.no/",
       "expected": "2026-11-09",
       "found": [
-        "2026-08-12"
+        "2026-08-13"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-08-12 | Claude: ukjent",
-      "claude_hash": "4f01a9b39b403c1a"
+      "note": "regex foreslaar: 2026-08-13 | Claude: ukjent",
+      "claude_hash": "1a230a140c2ed3c5"
     },
     {
       "id": "de120652e9d47219",
@@ -156,7 +139,7 @@
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-10-30 | Claude: ukjent",
-      "claude_hash": "607560bc78c5ac35"
+      "claude_hash": "e8aca3af15ebce05"
     },
     {
       "id": "51cafb5f0901801b",
@@ -182,7 +165,7 @@
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-10-30 | Claude: ukjent",
-      "claude_hash": "607560bc78c5ac35"
+      "claude_hash": "e8aca3af15ebce05"
     },
     {
       "id": "bfba7c62ec5c8a36",
@@ -194,7 +177,7 @@
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-10-30 | Claude: ukjent",
-      "claude_hash": "607560bc78c5ac35"
+      "claude_hash": "e8aca3af15ebce05"
     },
     {
       "id": "1db4770383ca2cc9",
@@ -206,7 +189,7 @@
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-10-30 | Claude: ukjent",
-      "claude_hash": "607560bc78c5ac35"
+      "claude_hash": "e8aca3af15ebce05"
     },
     {
       "id": "cf8578f74fd7d042",
@@ -218,7 +201,7 @@
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-10-30 | Claude: ukjent",
-      "claude_hash": "607560bc78c5ac35"
+      "claude_hash": "e8aca3af15ebce05"
     },
     {
       "id": "d7065b72c00df6ff",
@@ -230,7 +213,7 @@
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-10-30 | Claude: ukjent",
-      "claude_hash": "607560bc78c5ac35"
+      "claude_hash": "e8aca3af15ebce05"
     },
     {
       "id": "f0cb0b595e49ce13",
@@ -254,7 +237,7 @@
         "2026-08-15"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-08-15 | Claude: 2026-08-09",
+      "note": "regex foreslaar: 2026-08-15 | Claude (cached): 2026-08-09",
       "claude_hash": "3ce0add840b9f75a",
       "claude_suggested": "2026-08-09"
     },
@@ -269,19 +252,6 @@
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-09-01"
-    },
-    {
-      "id": "da7a11c28e1b3af7",
-      "title": "Oslo Triathlon 2026",
-      "url": "https://oslotri.com/",
-      "expected": "2026-08-08",
-      "found": [
-        "2027-08-14"
-      ],
-      "status": "mismatch",
-      "note": "ingen narliggende dato funnet | Claude (cached): 2026-08-08",
-      "claude_hash": "fd2a5ec9c43ac634",
-      "claude_suggested": "2026-08-08"
     },
     {
       "id": "28fa8f09240ce54a",
@@ -357,7 +327,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "33084e730ccb442b"
+      "claude_hash": "406cb0b75e84b619"
     },
     {
       "id": "3c93271b49580cb1",
@@ -376,8 +346,7 @@
       "expected": "2026-09-18",
       "found": [],
       "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "ec3fd10cf67cbeb4"
+      "note": "ingen datoer funnet i synlig tekst"
     },
     {
       "id": "4e0427243877bc8d",
@@ -405,7 +374,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "ec3fd10cf67cbeb4"
+      "claude_hash": "7604eb46f5467753"
     },
     {
       "id": "9877a490c26f9e41",
@@ -489,8 +458,7 @@
       "expected": "2026-10-28",
       "found": [],
       "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "6b58eff04165fa0b"
+      "note": "ingen datoer funnet i synlig tekst"
     },
     {
       "id": "db1148f0877a3624",
@@ -529,6 +497,23 @@
       "note": "ingen datoer funnet i synlig tekst"
     },
     {
+      "id": "85a06f285713ed5c",
+      "title": "Filmhuset høstprogram 2026",
+      "url": "https://www.cinemateket.no/",
+      "expected": "2026-09-01",
+      "found": [
+        "2026-08-15",
+        "2026-08-16",
+        "2026-08-19",
+        "2026-08-20",
+        "2026-08-22"
+      ],
+      "status": "ok",
+      "note": "bekreftet av Claude",
+      "claude_hash": "2a5795bb15772cdc",
+      "claude_suggested": "2026-09-01"
+    },
+    {
       "id": "c3a438c27157cb2e",
       "title": "Oslo Maraton 2026",
       "url": "https://www.oslomaraton.no/",
@@ -538,6 +523,19 @@
       ],
       "status": "ok",
       "note": ""
+    },
+    {
+      "id": "da7a11c28e1b3af7",
+      "title": "Oslo Triathlon 2026",
+      "url": "https://oslotri.com/",
+      "expected": "2026-08-08",
+      "found": [
+        "2027-08-14"
+      ],
+      "status": "ok",
+      "note": "bekreftet av Claude",
+      "claude_hash": "88e2a659297306f2",
+      "claude_suggested": "2026-08-08"
     },
     {
       "id": "bb61a462b833d30c",
