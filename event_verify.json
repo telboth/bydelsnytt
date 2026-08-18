@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-08-13T06:04:56.401861+00:00",
+  "generatedAt": "2026-08-18T07:10:30.473304+00:00",
   "counts": {
-    "fetch_failed": 6,
+    "fetch_failed": 7,
     "mismatch": 19,
-    "no_dates": 21,
-    "ok": 5,
+    "no_dates": 22,
+    "ok": 3,
     "skipped": 5
   },
-  "newCorrections": 0,
+  "newCorrections": 1,
   "items": [
     {
       "id": "c48fb63704a3e1cf",
@@ -23,6 +23,15 @@
       "title": "Linderudkollen skistadion — vintersesong",
       "url": "https://linderudkollen.no/",
       "expected": "2026-12-12",
+      "found": [],
+      "status": "fetch_failed",
+      "note": "kunne ikke hente URL"
+    },
+    {
+      "id": "1db4770383ca2cc9",
+      "title": "Orientering: OSI Blindern-sprint",
+      "url": "https://orientering.no/",
+      "expected": "2026-08-29",
       "found": [],
       "status": "fetch_failed",
       "note": "kunne ikke hente URL"
@@ -64,20 +73,49 @@
       "note": "kunne ikke hente URL"
     },
     {
+      "id": "3a3b1da9f83cedc8",
+      "title": "Alnabyfest 2026",
+      "url": "https://www.oslo.kommune.no/bydel-alna/",
+      "expected": "2026-08-15",
+      "found": [
+        "2026-08-20",
+        "2026-08-23"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-08-20"
+    },
+    {
       "id": "175c864df01599c8",
       "title": "Ellingsrudåsen skoles høstloppis 2026",
       "url": "https://ellingsrudasen.osloskolen.no/",
       "expected": "2026-09-26",
       "found": [
-        "2026-08-17",
         "2026-09-28",
         "2026-10-02",
         "2026-12-21",
-        "2027-01-01"
+        "2027-01-01",
+        "2027-02-22"
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-09-28 | Claude: ukjent",
-      "claude_hash": "aaec548e0f3a3098"
+      "claude_hash": "a5e0aeb477454d8e"
+    },
+    {
+      "id": "85a06f285713ed5c",
+      "title": "Filmhuset høstprogram 2026",
+      "url": "https://www.cinemateket.no/",
+      "expected": "2026-09-01",
+      "found": [
+        "2026-08-20",
+        "2026-08-22",
+        "2026-08-23",
+        "2026-08-24",
+        "2026-08-29"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-08-31 | Claude: 2026-07-17",
+      "claude_hash": "6471f99b28a57811",
+      "claude_suggested": "2026-07-17"
     },
     {
       "id": "c7744c7feb809bf0",
@@ -98,7 +136,6 @@
       "url": "https://www.skiforeningen.no/",
       "expected": "2026-12-26",
       "found": [
-        "2026-08-14",
         "2026-09-01"
       ],
       "status": "mismatch",
@@ -123,11 +160,11 @@
       "url": "https://www.deichman.no/",
       "expected": "2026-11-09",
       "found": [
-        "2026-08-13"
+        "2026-08-18"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-08-13 | Claude: ukjent",
-      "claude_hash": "1a230a140c2ed3c5"
+      "note": "regex foreslaar: 2026-08-18 | Claude: ukjent",
+      "claude_hash": "0a3da3d726da37ae"
     },
     {
       "id": "de120652e9d47219",
@@ -135,11 +172,12 @@
       "url": "https://orientering.no/",
       "expected": "2026-10-10",
       "found": [
+        "2026-08-24",
         "2026-10-30"
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-10-30 | Claude: ukjent",
-      "claude_hash": "e8aca3af15ebce05"
+      "claude_hash": "87adb0e35dbaf7a2"
     },
     {
       "id": "51cafb5f0901801b",
@@ -147,13 +185,12 @@
       "url": "https://www.fossumif.no/",
       "expected": "2026-09-19",
       "found": [
-        "2026-08-16",
         "2026-08-27"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-08-27 | Claude (cached): 2026-08-16",
-      "claude_hash": "ab59c0604024aff9",
-      "claude_suggested": "2026-08-16"
+      "note": "regex foreslaar: 2026-08-27 | Claude: 2026-08-27",
+      "claude_hash": "cea15e95f50a38c0",
+      "claude_suggested": "2026-08-27"
     },
     {
       "id": "d765f97a38fd3af1",
@@ -161,11 +198,12 @@
       "url": "https://orientering.no/",
       "expected": "2026-11-07",
       "found": [
+        "2026-08-24",
         "2026-10-30"
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-10-30 | Claude: ukjent",
-      "claude_hash": "e8aca3af15ebce05"
+      "claude_hash": "87adb0e35dbaf7a2"
     },
     {
       "id": "bfba7c62ec5c8a36",
@@ -173,23 +211,12 @@
       "url": "https://orientering.no/",
       "expected": "2026-09-12",
       "found": [
+        "2026-08-24",
         "2026-10-30"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-10-30 | Claude: ukjent",
-      "claude_hash": "e8aca3af15ebce05"
-    },
-    {
-      "id": "1db4770383ca2cc9",
-      "title": "Orientering: OSI Blindern-sprint",
-      "url": "https://orientering.no/",
-      "expected": "2026-08-29",
-      "found": [
-        "2026-10-30"
-      ],
-      "status": "mismatch",
-      "note": "regex foreslaar: 2026-10-30 | Claude: ukjent",
-      "claude_hash": "e8aca3af15ebce05"
+      "note": "regex foreslaar: 2026-08-24 | Claude: ukjent",
+      "claude_hash": "87adb0e35dbaf7a2"
     },
     {
       "id": "cf8578f74fd7d042",
@@ -197,11 +224,12 @@
       "url": "https://orientering.no/",
       "expected": "2026-08-14",
       "found": [
+        "2026-08-24",
         "2026-10-30"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-10-30 | Claude: ukjent",
-      "claude_hash": "e8aca3af15ebce05"
+      "note": "regex foreslaar: 2026-08-24 | Claude: ukjent",
+      "claude_hash": "87adb0e35dbaf7a2"
     },
     {
       "id": "d7065b72c00df6ff",
@@ -209,37 +237,12 @@
       "url": "https://orientering.no/",
       "expected": "2026-09-05",
       "found": [
+        "2026-08-24",
         "2026-10-30"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-10-30 | Claude: ukjent",
-      "claude_hash": "e8aca3af15ebce05"
-    },
-    {
-      "id": "f0cb0b595e49ce13",
-      "title": "Oslo Jazzfestival 2026",
-      "url": "https://www.oslojazz.no/",
-      "expected": "2026-08-17",
-      "found": [
-        "2026-08-15"
-      ],
-      "status": "mismatch",
-      "note": "regex foreslaar: 2026-08-15 | Claude (cached): 2026-08-09",
-      "claude_hash": "3ce0add840b9f75a",
-      "claude_suggested": "2026-08-09"
-    },
-    {
-      "id": "12d1af9b3ff5aecc",
-      "title": "Oslo Jazzfestival 2026",
-      "url": "https://oslojazz.no/",
-      "expected": "2026-08-17",
-      "found": [
-        "2026-08-15"
-      ],
-      "status": "mismatch",
-      "note": "regex foreslaar: 2026-08-15 | Claude (cached): 2026-08-09",
-      "claude_hash": "3ce0add840b9f75a",
-      "claude_suggested": "2026-08-09"
+      "note": "regex foreslaar: 2026-08-24 | Claude: ukjent",
+      "claude_hash": "87adb0e35dbaf7a2"
     },
     {
       "id": "94477da2695444e1",
@@ -247,11 +250,23 @@
       "url": "https://www.skiforeningen.no/",
       "expected": "2026-12-27",
       "found": [
-        "2026-08-14",
         "2026-09-01"
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-09-01"
+    },
+    {
+      "id": "da7a11c28e1b3af7",
+      "title": "Oslo Triathlon 2026",
+      "url": "https://oslotri.com/",
+      "expected": "2026-08-08",
+      "found": [
+        "2027-08-14"
+      ],
+      "status": "mismatch",
+      "note": "ingen narliggende dato funnet | Claude (cached): 2026-08-08",
+      "claude_hash": "88e2a659297306f2",
+      "claude_suggested": "2026-08-08"
     },
     {
       "id": "28fa8f09240ce54a",
@@ -270,10 +285,10 @@
       "url": "https://www.vif-fotball.no/",
       "expected": "2026-08-09",
       "found": [
-        "2026-08-16"
+        "2026-08-23"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-08-16"
+      "note": "regex foreslaar: 2026-08-23"
     },
     {
       "id": "ce5369dfc6af77f6",
@@ -281,12 +296,12 @@
       "url": "https://www.oyafestivalen.no/",
       "expected": "2026-08-04",
       "found": [
-        "2026-08-15"
+        "2027-08-14"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-08-15 | Claude (cached): 2026-08-12",
-      "claude_hash": "04cc62cd472fd103",
-      "claude_suggested": "2026-08-12"
+      "note": "ingen narliggende dato funnet | Claude: 2027-08-11",
+      "claude_hash": "2ae7b11870cbcc95",
+      "claude_suggested": "2027-08-11"
     },
     {
       "id": "ce5369dfc6af77f6",
@@ -294,21 +309,12 @@
       "url": "https://www.oyafestivalen.no/",
       "expected": "2026-08-11",
       "found": [
-        "2026-08-15"
+        "2027-08-14"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-08-15 | Claude (cached): 2026-08-12",
-      "claude_hash": "04cc62cd472fd103",
-      "claude_suggested": "2026-08-12"
-    },
-    {
-      "id": "3a3b1da9f83cedc8",
-      "title": "Alnabyfest 2026",
-      "url": "https://www.oslo.kommune.no/bydel-alna/",
-      "expected": "2026-08-15",
-      "found": [],
-      "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
+      "note": "ingen narliggende dato funnet | Claude: 2027-08-11",
+      "claude_hash": "2ae7b11870cbcc95",
+      "claude_suggested": "2027-08-11"
     },
     {
       "id": "2e5d18c8c19b6106",
@@ -327,7 +333,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "406cb0b75e84b619"
+      "claude_hash": "9970e4bc515480fb"
     },
     {
       "id": "3c93271b49580cb1",
@@ -374,7 +380,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "7604eb46f5467753"
+      "claude_hash": "f769b567b3a26172"
     },
     {
       "id": "9877a490c26f9e41",
@@ -402,8 +408,7 @@
       "expected": "2026-09-18",
       "found": [],
       "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "ef5acc121bbe2468"
+      "note": "ingen datoer funnet i synlig tekst"
     },
     {
       "id": "4d686cebc7ae019c",
@@ -458,7 +463,30 @@
       "expected": "2026-10-28",
       "found": [],
       "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
+      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
+      "claude_hash": "6b58eff04165fa0b"
+    },
+    {
+      "id": "f0cb0b595e49ce13",
+      "title": "Oslo Jazzfestival 2026",
+      "url": "https://www.oslojazz.no/",
+      "expected": "2026-08-17",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst | Claude (cached): 2026-08-09",
+      "claude_hash": "3ce0add840b9f75a",
+      "claude_suggested": "2026-08-09"
+    },
+    {
+      "id": "12d1af9b3ff5aecc",
+      "title": "Oslo Jazzfestival 2026",
+      "url": "https://oslojazz.no/",
+      "expected": "2026-08-17",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst | Claude (cached): 2026-08-09",
+      "claude_hash": "3ce0add840b9f75a",
+      "claude_suggested": "2026-08-09"
     },
     {
       "id": "db1148f0877a3624",
@@ -497,23 +525,6 @@
       "note": "ingen datoer funnet i synlig tekst"
     },
     {
-      "id": "85a06f285713ed5c",
-      "title": "Filmhuset høstprogram 2026",
-      "url": "https://www.cinemateket.no/",
-      "expected": "2026-09-01",
-      "found": [
-        "2026-08-15",
-        "2026-08-16",
-        "2026-08-19",
-        "2026-08-20",
-        "2026-08-22"
-      ],
-      "status": "ok",
-      "note": "bekreftet av Claude",
-      "claude_hash": "2a5795bb15772cdc",
-      "claude_suggested": "2026-09-01"
-    },
-    {
       "id": "c3a438c27157cb2e",
       "title": "Oslo Maraton 2026",
       "url": "https://www.oslomaraton.no/",
@@ -523,19 +534,6 @@
       ],
       "status": "ok",
       "note": ""
-    },
-    {
-      "id": "da7a11c28e1b3af7",
-      "title": "Oslo Triathlon 2026",
-      "url": "https://oslotri.com/",
-      "expected": "2026-08-08",
-      "found": [
-        "2027-08-14"
-      ],
-      "status": "ok",
-      "note": "bekreftet av Claude",
-      "claude_hash": "88e2a659297306f2",
-      "claude_suggested": "2026-08-08"
     },
     {
       "id": "bb61a462b833d30c",
