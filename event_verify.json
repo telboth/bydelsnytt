@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-08-18T07:10:30.473304+00:00",
+  "generatedAt": "2026-08-19T06:03:23.119423+00:00",
   "counts": {
-    "fetch_failed": 7,
-    "mismatch": 19,
-    "no_dates": 22,
+    "fetch_failed": 6,
+    "mismatch": 20,
+    "no_dates": 21,
     "ok": 3,
     "skipped": 5
   },
-  "newCorrections": 1,
+  "newCorrections": 0,
   "items": [
     {
       "id": "c48fb63704a3e1cf",
@@ -23,15 +23,6 @@
       "title": "Linderudkollen skistadion — vintersesong",
       "url": "https://linderudkollen.no/",
       "expected": "2026-12-12",
-      "found": [],
-      "status": "fetch_failed",
-      "note": "kunne ikke hente URL"
-    },
-    {
-      "id": "1db4770383ca2cc9",
-      "title": "Orientering: OSI Blindern-sprint",
-      "url": "https://orientering.no/",
-      "expected": "2026-08-29",
       "found": [],
       "status": "fetch_failed",
       "note": "kunne ikke hente URL"
@@ -98,7 +89,7 @@
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-09-28 | Claude: ukjent",
-      "claude_hash": "a5e0aeb477454d8e"
+      "claude_hash": "5afb2bf05f93d5a6"
     },
     {
       "id": "85a06f285713ed5c",
@@ -106,15 +97,15 @@
       "url": "https://www.cinemateket.no/",
       "expected": "2026-09-01",
       "found": [
-        "2026-08-20",
+        "2026-08-21",
         "2026-08-22",
         "2026-08-23",
         "2026-08-24",
-        "2026-08-29"
+        "2026-08-27"
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-08-31 | Claude: 2026-07-17",
-      "claude_hash": "6471f99b28a57811",
+      "claude_hash": "d49a0d2c2aa6957a",
       "claude_suggested": "2026-07-17"
     },
     {
@@ -155,16 +146,27 @@
       "claude_suggested": "2027-02-20"
     },
     {
+      "id": "a0697d053ca3b123",
+      "title": "Lyn-Skeid 2026",
+      "url": "https://www.lynfotball.no/",
+      "expected": "2026-09-12",
+      "found": [
+        "2026-08-19"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-08-19"
+    },
+    {
       "id": "8bfeb00e1849e6b9",
       "title": "Nordisk bibliotekuke 2026",
       "url": "https://www.deichman.no/",
       "expected": "2026-11-09",
       "found": [
-        "2026-08-18"
+        "2026-08-19"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-08-18 | Claude: ukjent",
-      "claude_hash": "0a3da3d726da37ae"
+      "note": "regex foreslaar: 2026-08-19 | Claude: ukjent",
+      "claude_hash": "c8e4ad32b19e7d7c"
     },
     {
       "id": "de120652e9d47219",
@@ -177,7 +179,7 @@
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-10-30 | Claude: ukjent",
-      "claude_hash": "87adb0e35dbaf7a2"
+      "claude_hash": "a3ede958475cfd49"
     },
     {
       "id": "51cafb5f0901801b",
@@ -189,7 +191,7 @@
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-08-27 | Claude: 2026-08-27",
-      "claude_hash": "cea15e95f50a38c0",
+      "claude_hash": "b4138757fe045ef2",
       "claude_suggested": "2026-08-27"
     },
     {
@@ -203,7 +205,7 @@
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-10-30 | Claude: ukjent",
-      "claude_hash": "87adb0e35dbaf7a2"
+      "claude_hash": "a3ede958475cfd49"
     },
     {
       "id": "bfba7c62ec5c8a36",
@@ -216,7 +218,20 @@
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-08-24 | Claude: ukjent",
-      "claude_hash": "87adb0e35dbaf7a2"
+      "claude_hash": "a3ede958475cfd49"
+    },
+    {
+      "id": "1db4770383ca2cc9",
+      "title": "Orientering: OSI Blindern-sprint",
+      "url": "https://orientering.no/",
+      "expected": "2026-08-29",
+      "found": [
+        "2026-08-24",
+        "2026-10-30"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-08-24 | Claude: ukjent",
+      "claude_hash": "a3ede958475cfd49"
     },
     {
       "id": "cf8578f74fd7d042",
@@ -229,7 +244,7 @@
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-08-24 | Claude: ukjent",
-      "claude_hash": "87adb0e35dbaf7a2"
+      "claude_hash": "a3ede958475cfd49"
     },
     {
       "id": "d7065b72c00df6ff",
@@ -242,7 +257,7 @@
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-08-24 | Claude: ukjent",
-      "claude_hash": "87adb0e35dbaf7a2"
+      "claude_hash": "a3ede958475cfd49"
     },
     {
       "id": "94477da2695444e1",
@@ -294,25 +309,12 @@
       "id": "ce5369dfc6af77f6",
       "title": "Øyafestivalen 2026",
       "url": "https://www.oyafestivalen.no/",
-      "expected": "2026-08-04",
-      "found": [
-        "2027-08-14"
-      ],
-      "status": "mismatch",
-      "note": "ingen narliggende dato funnet | Claude: 2027-08-11",
-      "claude_hash": "2ae7b11870cbcc95",
-      "claude_suggested": "2027-08-11"
-    },
-    {
-      "id": "ce5369dfc6af77f6",
-      "title": "Øyafestivalen 2026",
-      "url": "https://www.oyafestivalen.no/",
       "expected": "2026-08-11",
       "found": [
         "2027-08-14"
       ],
       "status": "mismatch",
-      "note": "ingen narliggende dato funnet | Claude: 2027-08-11",
+      "note": "ingen narliggende dato funnet | Claude (cached): 2027-08-11",
       "claude_hash": "2ae7b11870cbcc95",
       "claude_suggested": "2027-08-11"
     },
@@ -333,7 +335,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "9970e4bc515480fb"
+      "claude_hash": "d1377c28e4828f8b"
     },
     {
       "id": "3c93271b49580cb1",
@@ -352,7 +354,8 @@
       "expected": "2026-09-18",
       "found": [],
       "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
+      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
+      "claude_hash": "f769b567b3a26172"
     },
     {
       "id": "4e0427243877bc8d",
@@ -408,22 +411,14 @@
       "expected": "2026-09-18",
       "found": [],
       "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
+      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
+      "claude_hash": "ef5acc121bbe2468"
     },
     {
       "id": "4d686cebc7ae019c",
       "title": "Linderud julemarked 2026",
       "url": "https://www.linderudsenter.no/",
       "expected": "2026-11-28",
-      "found": [],
-      "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
-    },
-    {
-      "id": "a0697d053ca3b123",
-      "title": "Lyn-Skeid 2026",
-      "url": "https://www.lynfotball.no/",
-      "expected": "2026-09-12",
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst"
