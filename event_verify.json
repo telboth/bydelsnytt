@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-08-21T06:03:02.446822+00:00",
+  "generatedAt": "2026-08-24T06:06:14.454309+00:00",
   "counts": {
     "fetch_failed": 6,
-    "mismatch": 19,
-    "no_dates": 22,
+    "mismatch": 16,
+    "no_dates": 23,
     "ok": 3,
     "skipped": 5
   },
-  "newCorrections": 1,
+  "newCorrections": 0,
   "items": [
     {
       "id": "c48fb63704a3e1cf",
@@ -64,17 +64,6 @@
       "note": "kunne ikke hente URL"
     },
     {
-      "id": "3a3b1da9f83cedc8",
-      "title": "Alnabyfest 2026",
-      "url": "https://www.oslo.kommune.no/bydel-alna/",
-      "expected": "2026-08-15",
-      "found": [
-        "2026-08-23"
-      ],
-      "status": "mismatch",
-      "note": "regex foreslaar: 2026-08-23"
-    },
-    {
       "id": "175c864df01599c8",
       "title": "Ellingsrudåsen skoles høstloppis 2026",
       "url": "https://ellingsrudasen.osloskolen.no/",
@@ -88,7 +77,7 @@
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-09-28 | Claude: ukjent",
-      "claude_hash": "64addf8d4eca5f97"
+      "claude_hash": "37998ffad3227099"
     },
     {
       "id": "85a06f285713ed5c",
@@ -96,15 +85,15 @@
       "url": "https://www.cinemateket.no/",
       "expected": "2026-09-01",
       "found": [
-        "2026-08-23",
         "2026-08-24",
-        "2026-08-25",
+        "2026-08-26",
         "2026-08-27",
-        "2026-08-29"
+        "2026-08-29",
+        "2026-08-30"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-08-31 | Claude: 2026-08-24",
-      "claude_hash": "c50d916809483647",
+      "note": "regex foreslaar: 2026-08-30 | Claude: 2026-08-24",
+      "claude_hash": "3825067d28d2500b",
       "claude_suggested": "2026-08-24"
     },
     {
@@ -125,10 +114,12 @@
       "url": "https://www.skiforeningen.no/",
       "expected": "2026-12-26",
       "found": [
-        "2026-09-01"
+        "2026-09-01",
+        "2026-11-18",
+        "2026-11-25"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-09-01"
+      "note": "regex foreslaar: 2026-11-25"
     },
     {
       "id": "13cc19958ececa7a",
@@ -149,11 +140,11 @@
       "url": "https://www.deichman.no/",
       "expected": "2026-11-09",
       "found": [
-        "2026-08-21"
+        "2026-08-24"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-08-21 | Claude: ukjent",
-      "claude_hash": "c30e9049886570e6"
+      "note": "regex foreslaar: 2026-08-24 | Claude: ukjent",
+      "claude_hash": "30ad1abb4c704c10"
     },
     {
       "id": "de120652e9d47219",
@@ -161,11 +152,12 @@
       "url": "https://orientering.no/",
       "expected": "2026-10-10",
       "found": [
+        "2026-08-24",
         "2026-10-30"
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-10-30 | Claude: ukjent",
-      "claude_hash": "5ff5893d30e5e887"
+      "claude_hash": "8b842018332188f0"
     },
     {
       "id": "51cafb5f0901801b",
@@ -178,7 +170,7 @@
         "2026-09-13"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-09-13 | Claude: 2026-08-27",
+      "note": "regex foreslaar: 2026-09-13 | Claude (cached): 2026-08-27",
       "claude_hash": "ea14b388d97b36d6",
       "claude_suggested": "2026-08-27"
     },
@@ -188,11 +180,12 @@
       "url": "https://orientering.no/",
       "expected": "2026-11-07",
       "found": [
+        "2026-08-24",
         "2026-10-30"
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-10-30 | Claude: ukjent",
-      "claude_hash": "5ff5893d30e5e887"
+      "claude_hash": "8b842018332188f0"
     },
     {
       "id": "bfba7c62ec5c8a36",
@@ -200,11 +193,12 @@
       "url": "https://orientering.no/",
       "expected": "2026-09-12",
       "found": [
+        "2026-08-24",
         "2026-10-30"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-10-30 | Claude: ukjent",
-      "claude_hash": "5ff5893d30e5e887"
+      "note": "regex foreslaar: 2026-08-24 | Claude: ukjent",
+      "claude_hash": "8b842018332188f0"
     },
     {
       "id": "1db4770383ca2cc9",
@@ -212,11 +206,12 @@
       "url": "https://orientering.no/",
       "expected": "2026-08-29",
       "found": [
+        "2026-08-24",
         "2026-10-30"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-10-30 | Claude: ukjent",
-      "claude_hash": "5ff5893d30e5e887"
+      "note": "regex foreslaar: 2026-08-24 | Claude: ukjent",
+      "claude_hash": "8b842018332188f0"
     },
     {
       "id": "cf8578f74fd7d042",
@@ -224,11 +219,12 @@
       "url": "https://orientering.no/",
       "expected": "2026-08-14",
       "found": [
+        "2026-08-24",
         "2026-10-30"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-10-30 | Claude: ukjent",
-      "claude_hash": "5ff5893d30e5e887"
+      "note": "regex foreslaar: 2026-08-24 | Claude: ukjent",
+      "claude_hash": "8b842018332188f0"
     },
     {
       "id": "d7065b72c00df6ff",
@@ -236,11 +232,12 @@
       "url": "https://orientering.no/",
       "expected": "2026-09-05",
       "found": [
+        "2026-08-24",
         "2026-10-30"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-10-30 | Claude: ukjent",
-      "claude_hash": "5ff5893d30e5e887"
+      "note": "regex foreslaar: 2026-08-24 | Claude: ukjent",
+      "claude_hash": "8b842018332188f0"
     },
     {
       "id": "94477da2695444e1",
@@ -248,23 +245,12 @@
       "url": "https://www.skiforeningen.no/",
       "expected": "2026-12-27",
       "found": [
-        "2026-09-01"
+        "2026-09-01",
+        "2026-11-18",
+        "2026-11-25"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-09-01"
-    },
-    {
-      "id": "da7a11c28e1b3af7",
-      "title": "Oslo Triathlon 2026",
-      "url": "https://oslotri.com/",
-      "expected": "2026-08-08",
-      "found": [
-        "2027-08-14"
-      ],
-      "status": "mismatch",
-      "note": "ingen narliggende dato funnet | Claude (cached): 2026-08-08",
-      "claude_hash": "88e2a659297306f2",
-      "claude_suggested": "2026-08-08"
+      "note": "regex foreslaar: 2026-11-25"
     },
     {
       "id": "28fa8f09240ce54a",
@@ -278,17 +264,6 @@
       "note": "regex foreslaar: 2026-09-19"
     },
     {
-      "id": "e9f4aa448a25b235",
-      "title": "Vaalerenga-Rosenborg 2026",
-      "url": "https://www.vif-fotball.no/",
-      "expected": "2026-08-09",
-      "found": [
-        "2026-08-23"
-      ],
-      "status": "mismatch",
-      "note": "regex foreslaar: 2026-08-23"
-    },
-    {
       "id": "ce5369dfc6af77f6",
       "title": "Øyafestivalen 2026",
       "url": "https://www.oyafestivalen.no/",
@@ -297,7 +272,18 @@
         "2027-08-14"
       ],
       "status": "mismatch",
-      "note": "ingen narliggende dato funnet"
+      "note": "ingen narliggende dato funnet | Claude: 2027-08-11",
+      "claude_hash": "dd1d643b9e66ae3d",
+      "claude_suggested": "2027-08-11"
+    },
+    {
+      "id": "3a3b1da9f83cedc8",
+      "title": "Alnabyfest 2026",
+      "url": "https://www.oslo.kommune.no/bydel-alna/",
+      "expected": "2026-08-15",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst"
     },
     {
       "id": "2e5d18c8c19b6106",
@@ -316,7 +302,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "431c3b28785cf07a"
+      "claude_hash": "723b556c50bc95bf"
     },
     {
       "id": "3c93271b49580cb1",
@@ -335,7 +321,8 @@
       "expected": "2026-09-18",
       "found": [],
       "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
+      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
+      "claude_hash": "c140d1f94429d732"
     },
     {
       "id": "4e0427243877bc8d",
@@ -391,7 +378,8 @@
       "expected": "2026-09-18",
       "found": [],
       "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
+      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
+      "claude_hash": "ef5acc121bbe2468"
     },
     {
       "id": "4d686cebc7ae019c",
@@ -446,7 +434,8 @@
       "expected": "2026-10-28",
       "found": [],
       "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
+      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
+      "claude_hash": "6b58eff04165fa0b"
     },
     {
       "id": "f0cb0b595e49ce13",
