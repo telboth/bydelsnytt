@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-08-29T10:54:17.448038+00:00",
+  "generatedAt": "2026-08-31T10:48:08.652076+00:00",
   "counts": {
-    "fetch_failed": 6,
+    "fetch_failed": 5,
     "mismatch": 15,
     "no_dates": 21,
     "ok": 4,
@@ -41,15 +41,6 @@
       "title": "Oslo Bokfestival 2026",
       "url": "https://www.oslobokfestival.no/",
       "expected": "2026-09-26",
-      "found": [],
-      "status": "fetch_failed",
-      "note": "kunne ikke hente URL"
-    },
-    {
-      "id": "d63dc1f84a18e6ec",
-      "title": "Oslo Vinterpark (Tryvann) — sesongåpning",
-      "url": "https://www.oslovinterpark.no/",
-      "expected": "2026-12-12",
       "found": [],
       "status": "fetch_failed",
       "note": "kunne ikke hente URL"
@@ -123,11 +114,11 @@
       "url": "https://www.deichman.no/",
       "expected": "2026-11-09",
       "found": [
-        "2026-08-29"
+        "2026-08-31"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-08-29 | Claude: ukjent",
-      "claude_hash": "9d7c332d770c4d5e"
+      "note": "regex foreslaar: 2026-08-31 | Claude: ukjent",
+      "claude_hash": "0d95406cae76ced2"
     },
     {
       "id": "de120652e9d47219",
@@ -135,11 +126,12 @@
       "url": "https://orientering.no/",
       "expected": "2026-10-10",
       "found": [
+        "2026-08-31",
         "2026-10-30"
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-10-30 | Claude: ukjent",
-      "claude_hash": "85a7defc2672a648"
+      "claude_hash": "da46efae2da9857f"
     },
     {
       "id": "51cafb5f0901801b",
@@ -159,11 +151,12 @@
       "url": "https://orientering.no/",
       "expected": "2026-11-07",
       "found": [
+        "2026-08-31",
         "2026-10-30"
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-10-30 | Claude: ukjent",
-      "claude_hash": "85a7defc2672a648"
+      "claude_hash": "da46efae2da9857f"
     },
     {
       "id": "bfba7c62ec5c8a36",
@@ -171,11 +164,12 @@
       "url": "https://orientering.no/",
       "expected": "2026-09-12",
       "found": [
+        "2026-08-31",
         "2026-10-30"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-10-30 | Claude: ukjent",
-      "claude_hash": "85a7defc2672a648"
+      "note": "regex foreslaar: 2026-08-31 | Claude: ukjent",
+      "claude_hash": "da46efae2da9857f"
     },
     {
       "id": "1db4770383ca2cc9",
@@ -183,11 +177,12 @@
       "url": "https://orientering.no/",
       "expected": "2026-08-29",
       "found": [
+        "2026-08-31",
         "2026-10-30"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-10-30 | Claude: ukjent",
-      "claude_hash": "85a7defc2672a648"
+      "note": "regex foreslaar: 2026-08-31 | Claude: ukjent",
+      "claude_hash": "da46efae2da9857f"
     },
     {
       "id": "d7065b72c00df6ff",
@@ -195,11 +190,12 @@
       "url": "https://orientering.no/",
       "expected": "2026-09-05",
       "found": [
+        "2026-08-31",
         "2026-10-30"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-10-30 | Claude: ukjent",
-      "claude_hash": "85a7defc2672a648"
+      "note": "regex foreslaar: 2026-08-31 | Claude: ukjent",
+      "claude_hash": "da46efae2da9857f"
     },
     {
       "id": "f0cb0b595e49ce13",
@@ -252,15 +248,6 @@
       "note": "regex foreslaar: 2026-09-19"
     },
     {
-      "id": "3a3b1da9f83cedc8",
-      "title": "Alnabyfest 2026",
-      "url": "https://www.oslo.kommune.no/bydel-alna/",
-      "expected": "2026-08-15",
-      "found": [],
-      "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
-    },
-    {
       "id": "2e5d18c8c19b6106",
       "title": "Bjerkedagen 2026",
       "url": "https://www.oslo.kommune.no/bydel-bjerke/",
@@ -297,7 +284,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "094834b81271673e"
+      "claude_hash": "6823dd570545531c"
     },
     {
       "id": "4e0427243877bc8d",
@@ -325,7 +312,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "094834b81271673e"
+      "claude_hash": "6823dd570545531c"
     },
     {
       "id": "9877a490c26f9e41",
@@ -421,6 +408,15 @@
       "note": "ingen datoer funnet i synlig tekst"
     },
     {
+      "id": "d63dc1f84a18e6ec",
+      "title": "Oslo Vinterpark (Tryvann) — sesongåpning",
+      "url": "https://www.oslovinterpark.no/",
+      "expected": "2026-12-12",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst"
+    },
+    {
       "id": "14e0c42472cfc9a3",
       "title": "Stovnerdagen 2026",
       "url": "https://www.oslo.kommune.no/bydel-stovner/",
@@ -453,11 +449,11 @@
       "url": "https://www.cinemateket.no/",
       "expected": "2026-09-01",
       "found": [
-        "2026-08-30",
-        "2026-08-31",
         "2026-09-01",
         "2026-09-02",
-        "2026-09-03"
+        "2026-09-03",
+        "2026-09-05",
+        "2026-09-06"
       ],
       "status": "ok",
       "note": ""
