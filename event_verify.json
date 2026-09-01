@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-08-31T10:48:08.652076+00:00",
+  "generatedAt": "2026-09-01T06:08:58.520153+00:00",
   "counts": {
-    "fetch_failed": 5,
-    "mismatch": 15,
-    "no_dates": 21,
+    "fetch_failed": 6,
+    "mismatch": 13,
+    "no_dates": 20,
     "ok": 4,
     "skipped": 5
   },
@@ -46,6 +46,15 @@
       "note": "kunne ikke hente URL"
     },
     {
+      "id": "d63dc1f84a18e6ec",
+      "title": "Oslo Vinterpark (Tryvann) — sesongåpning",
+      "url": "https://www.oslovinterpark.no/",
+      "expected": "2026-12-12",
+      "found": [],
+      "status": "fetch_failed",
+      "note": "kunne ikke hente URL"
+    },
+    {
       "id": "bc1707f789b2b063",
       "title": "Wyllerløkka — sesongåpning",
       "url": "https://oslovinterpark.no/",
@@ -69,18 +78,6 @@
       "status": "mismatch",
       "note": "regex foreslaar: 2026-09-28 | Claude: ukjent",
       "claude_hash": "d6c2d1917c1ae6ea"
-    },
-    {
-      "id": "c7744c7feb809bf0",
-      "title": "Frivillighetsdagen 2026",
-      "url": "https://www.oslo.kommune.no/frivillighet",
-      "expected": "2026-12-05",
-      "found": [
-        "2026-08-31"
-      ],
-      "status": "mismatch",
-      "note": "regex foreslaar: 2026-08-31 | Claude: ukjent",
-      "claude_hash": "0eb710bf7f64ca1e"
     },
     {
       "id": "e4296261cdf44c64",
@@ -109,16 +106,28 @@
       "claude_suggested": "2027-02-20"
     },
     {
+      "id": "4d686cebc7ae019c",
+      "title": "Linderud julemarked 2026",
+      "url": "https://www.linderudsenter.no/",
+      "expected": "2026-11-28",
+      "found": [
+        "2026-09-05"
+      ],
+      "status": "mismatch",
+      "note": "regex foreslaar: 2026-09-05"
+    },
+    {
       "id": "8bfeb00e1849e6b9",
       "title": "Nordisk bibliotekuke 2026",
       "url": "https://www.deichman.no/",
       "expected": "2026-11-09",
       "found": [
-        "2026-08-31"
+        "2026-09-01",
+        "2026-09-11"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-08-31 | Claude: ukjent",
-      "claude_hash": "0d95406cae76ced2"
+      "note": "regex foreslaar: 2026-09-11 | Claude: ukjent",
+      "claude_hash": "65670924314b8471"
     },
     {
       "id": "de120652e9d47219",
@@ -126,12 +135,11 @@
       "url": "https://orientering.no/",
       "expected": "2026-10-10",
       "found": [
-        "2026-08-31",
         "2026-10-30"
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-10-30 | Claude: ukjent",
-      "claude_hash": "da46efae2da9857f"
+      "claude_hash": "8f2e29de2ca6fc39"
     },
     {
       "id": "51cafb5f0901801b",
@@ -151,12 +159,11 @@
       "url": "https://orientering.no/",
       "expected": "2026-11-07",
       "found": [
-        "2026-08-31",
         "2026-10-30"
       ],
       "status": "mismatch",
       "note": "regex foreslaar: 2026-10-30 | Claude: ukjent",
-      "claude_hash": "da46efae2da9857f"
+      "claude_hash": "8f2e29de2ca6fc39"
     },
     {
       "id": "bfba7c62ec5c8a36",
@@ -164,12 +171,11 @@
       "url": "https://orientering.no/",
       "expected": "2026-09-12",
       "found": [
-        "2026-08-31",
         "2026-10-30"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-08-31 | Claude: ukjent",
-      "claude_hash": "da46efae2da9857f"
+      "note": "regex foreslaar: 2026-10-30 | Claude: ukjent",
+      "claude_hash": "8f2e29de2ca6fc39"
     },
     {
       "id": "1db4770383ca2cc9",
@@ -177,12 +183,11 @@
       "url": "https://orientering.no/",
       "expected": "2026-08-29",
       "found": [
-        "2026-08-31",
         "2026-10-30"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-08-31 | Claude: ukjent",
-      "claude_hash": "da46efae2da9857f"
+      "note": "regex foreslaar: 2026-10-30 | Claude: ukjent",
+      "claude_hash": "8f2e29de2ca6fc39"
     },
     {
       "id": "d7065b72c00df6ff",
@@ -190,38 +195,11 @@
       "url": "https://orientering.no/",
       "expected": "2026-09-05",
       "found": [
-        "2026-08-31",
         "2026-10-30"
       ],
       "status": "mismatch",
-      "note": "regex foreslaar: 2026-08-31 | Claude: ukjent",
-      "claude_hash": "da46efae2da9857f"
-    },
-    {
-      "id": "f0cb0b595e49ce13",
-      "title": "Oslo Jazzfestival 2026",
-      "url": "https://www.oslojazz.no/",
-      "expected": "2026-08-17",
-      "found": [
-        "2027-08-21"
-      ],
-      "status": "mismatch",
-      "note": "ingen narliggende dato funnet | Claude (cached): 2027-08-16",
-      "claude_hash": "b266557eedf08ff6",
-      "claude_suggested": "2027-08-16"
-    },
-    {
-      "id": "12d1af9b3ff5aecc",
-      "title": "Oslo Jazzfestival 2026",
-      "url": "https://oslojazz.no/",
-      "expected": "2026-08-17",
-      "found": [
-        "2027-08-21"
-      ],
-      "status": "mismatch",
-      "note": "ingen narliggende dato funnet | Claude (cached): 2027-08-16",
-      "claude_hash": "b266557eedf08ff6",
-      "claude_suggested": "2027-08-16"
+      "note": "regex foreslaar: 2026-10-30 | Claude: ukjent",
+      "claude_hash": "8f2e29de2ca6fc39"
     },
     {
       "id": "94477da2695444e1",
@@ -264,7 +242,7 @@
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
-      "claude_hash": "b9e55269755389de"
+      "claude_hash": "5163ac28cfbc7899"
     },
     {
       "id": "3c93271b49580cb1",
@@ -285,6 +263,16 @@
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
       "claude_hash": "6823dd570545531c"
+    },
+    {
+      "id": "c7744c7feb809bf0",
+      "title": "Frivillighetsdagen 2026",
+      "url": "https://www.oslo.kommune.no/frivillighet",
+      "expected": "2026-12-05",
+      "found": [],
+      "status": "no_dates",
+      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
+      "claude_hash": "0eb710bf7f64ca1e"
     },
     {
       "id": "4e0427243877bc8d",
@@ -344,15 +332,6 @@
       "claude_hash": "ef5acc121bbe2468"
     },
     {
-      "id": "4d686cebc7ae019c",
-      "title": "Linderud julemarked 2026",
-      "url": "https://www.linderudsenter.no/",
-      "expected": "2026-11-28",
-      "found": [],
-      "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
-    },
-    {
       "id": "a0697d053ca3b123",
       "title": "Lyn-Skeid 2026",
       "url": "https://www.lynfotball.no/",
@@ -396,22 +375,14 @@
       "expected": "2026-10-28",
       "found": [],
       "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
+      "note": "ingen datoer funnet i synlig tekst | Claude: ukjent",
+      "claude_hash": "6b58eff04165fa0b"
     },
     {
       "id": "db1148f0877a3624",
       "title": "Oslo Lucia-tog 2026",
       "url": "https://www.oslodomkirke.no/",
       "expected": "2026-12-13",
-      "found": [],
-      "status": "no_dates",
-      "note": "ingen datoer funnet i synlig tekst"
-    },
-    {
-      "id": "d63dc1f84a18e6ec",
-      "title": "Oslo Vinterpark (Tryvann) — sesongåpning",
-      "url": "https://www.oslovinterpark.no/",
-      "expected": "2026-12-12",
       "found": [],
       "status": "no_dates",
       "note": "ingen datoer funnet i synlig tekst"
@@ -450,10 +421,10 @@
       "expected": "2026-09-01",
       "found": [
         "2026-09-01",
-        "2026-09-02",
         "2026-09-03",
         "2026-09-05",
-        "2026-09-06"
+        "2026-09-06",
+        "2026-09-07"
       ],
       "status": "ok",
       "note": ""
